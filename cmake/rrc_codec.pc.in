@@ -1,0 +1,11 @@
+prefix=@RRC_CODEC_PC_PREFIX@
+exec_prefix=${prefix}
+libdir=@RRC_CODEC_PC_LIBDIR@
+includedir=@RRC_CODEC_PC_INCLUDEDIR@
+
+Name: rrc_codec
+Description: 3GPP TS 38.331 v18.10.0 RRC UPER codec (C ABI)
+Version: @PROJECT_VERSION@
+Cflags: -I${includedir} @RRC_CODEC_PC_CFLAGS_PRIVATE@
+Libs: -L${libdir} -lrrc_codec
+Libs.private: @RRC_CODEC_PC_LIBS_PRIVATE@

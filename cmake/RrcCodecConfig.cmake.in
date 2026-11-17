@@ -1,0 +1,17 @@
+@PACKAGE_INIT@
+
+# ============================================================================
+# RrcCodecConfig.cmake — find_package(RrcCodec 2 CONFIG REQUIRED) 的消费入口
+#
+# 导出目标：RrcCodec::rrc_codec（含头文件目录与 RRC_CODEC_MAX_* 安全上限定义）。
+# 版本号由 RrcCodecConfigVersion.cmake 提供（SameMajorVersion），头文件中的
+# RRC_CODEC_VERSION_* / RRC_CODEC_ASN1_VERSION_* 宏给出精确版本。
+#
+# 用法：
+#   find_package(RrcCodec 2 CONFIG REQUIRED)
+#   target_link_libraries(app PRIVATE RrcCodec::rrc_codec)
+# ============================================================================
+
+include("${CMAKE_CURRENT_LIST_DIR}/RrcCodecTargets.cmake")
+
+check_required_components(RrcCodec)

@@ -1,0 +1,4 @@
+add_executable(rrc_golden_tests GoldenVectorTests.cpp)
+target_link_libraries(rrc_golden_tests PRIVATE RrcCodec::rrc_codec)
+target_compile_features(rrc_golden_tests PRIVATE cxx_std_17)
+add_test(NAME golden.mib_bcch_bch COMMAND rrc_golden_tests)

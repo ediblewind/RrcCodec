@@ -229,6 +229,8 @@ public:
 
   // -- CONTAINING 深度 --------------------------------------------------------
   int ContainingDepth() const { return containing_depth_; }
+  /** 设置 CONTAINING 深度（子 Encoder 从父 Encoder 继承，保证嵌套计数连续）。 */
+  void SetContainingDepth(int depth) { containing_depth_ = depth; }
   /** 进入一层 CONTAINING；超过 RRC_CODEC_MAX_CONTAINING_DEPTH 返回 false 并置错。 */
   bool PushContaining();
   /** 退出一层 CONTAINING。 */
@@ -347,6 +349,8 @@ public:
 
   // -- CONTAINING 深度 --------------------------------------------------------
   int ContainingDepth() const { return containing_depth_; }
+  /** 设置 CONTAINING 深度（子 Decoder 从父 Decoder 继承，保证嵌套计数连续）。 */
+  void SetContainingDepth(int depth) { containing_depth_ = depth; }
   bool PushContaining();
   void PopContaining();
 
