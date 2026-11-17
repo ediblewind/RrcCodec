@@ -18,6 +18,10 @@
 namespace rrc {
 namespace v1810 {
 
+// --------------------------------------------------------------------------
+// MAC_ParametersCommon_ExtGroup1：ASN.1 MAC_ParametersCommon_ExtGroup1；源文件第 17399 行；扩展添加组 [[ ]]。
+// Encode_MAC_ParametersCommon_ExtGroup1 只读不分配；Decode_MAC_ParametersCommon_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_MAC_ParametersCommon_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersCommon_ExtGroup1(Encoder& enc, const MAC_ParametersCommon_ExtGroup1& value)
 {
     (void)value;
@@ -63,6 +67,10 @@ void Free_MAC_ParametersCommon_ExtGroup1(MAC_ParametersCommon_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MAC_ParametersCommon_ExtGroup2：ASN.1 MAC_ParametersCommon_ExtGroup2；源文件第 17403 行；扩展添加组 [[ ]]。
+// Encode_MAC_ParametersCommon_ExtGroup2 只读不分配；Decode_MAC_ParametersCommon_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_MAC_ParametersCommon_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersCommon_ExtGroup2(Encoder& enc, const MAC_ParametersCommon_ExtGroup2& value)
 {
     (void)value;
@@ -196,6 +204,10 @@ void Free_MAC_ParametersCommon_ExtGroup2(MAC_ParametersCommon_ExtGroup2& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MAC_ParametersCommon_ExtGroup3：ASN.1 MAC_ParametersCommon_ExtGroup3；源文件第 17416 行；扩展添加组 [[ ]]。
+// Encode_MAC_ParametersCommon_ExtGroup3 只读不分配；Decode_MAC_ParametersCommon_ExtGroup3 可能 malloc（失败时内部已释放并清零）；Free_MAC_ParametersCommon_ExtGroup3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersCommon_ExtGroup3(Encoder& enc, const MAC_ParametersCommon_ExtGroup3& value)
 {
     (void)value;
@@ -230,6 +242,10 @@ void Free_MAC_ParametersCommon_ExtGroup3(MAC_ParametersCommon_ExtGroup3& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MAC_ParametersCommon_ExtGroup4：ASN.1 MAC_ParametersCommon_ExtGroup4；源文件第 17419 行；扩展添加组 [[ ]]。
+// Encode_MAC_ParametersCommon_ExtGroup4 只读不分配；Decode_MAC_ParametersCommon_ExtGroup4 可能 malloc（失败时内部已释放并清零）；Free_MAC_ParametersCommon_ExtGroup4 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersCommon_ExtGroup4(Encoder& enc, const MAC_ParametersCommon_ExtGroup4& value)
 {
     (void)value;
@@ -264,6 +280,10 @@ void Free_MAC_ParametersCommon_ExtGroup4(MAC_ParametersCommon_ExtGroup4& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MAC_ParametersCommon_ExtGroup5：ASN.1 MAC_ParametersCommon_ExtGroup5；源文件第 17422 行；扩展添加组 [[ ]]。
+// Encode_MAC_ParametersCommon_ExtGroup5 只读不分配；Decode_MAC_ParametersCommon_ExtGroup5 可能 malloc（失败时内部已释放并清零）；Free_MAC_ParametersCommon_ExtGroup5 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersCommon_ExtGroup5(Encoder& enc, const MAC_ParametersCommon_ExtGroup5& value)
 {
     (void)value;
@@ -430,6 +450,10 @@ void Free_MAC_ParametersCommon_ExtGroup5(MAC_ParametersCommon_ExtGroup5& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MAC_ParametersCommon_ExtGroup6：ASN.1 MAC_ParametersCommon_ExtGroup6；源文件第 17439 行；扩展添加组 [[ ]]。
+// Encode_MAC_ParametersCommon_ExtGroup6 只读不分配；Decode_MAC_ParametersCommon_ExtGroup6 可能 malloc（失败时内部已释放并清零）；Free_MAC_ParametersCommon_ExtGroup6 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersCommon_ExtGroup6(Encoder& enc, const MAC_ParametersCommon_ExtGroup6& value)
 {
     (void)value;
@@ -530,6 +554,10 @@ void Free_MAC_ParametersCommon_ExtGroup6(MAC_ParametersCommon_ExtGroup6& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MAC_ParametersCommon：ASN.1 MAC-ParametersCommon；源文件第 17394 行；SEQUENCE。
+// Encode_MAC_ParametersCommon 只读不分配；Decode_MAC_ParametersCommon 可能 malloc（失败时内部已释放并清零）；Free_MAC_ParametersCommon 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersCommon(Encoder& enc, const MAC_ParametersCommon& value)
 {
     (void)value;
@@ -744,6 +772,10 @@ void Free_MAC_ParametersCommon(MAC_ParametersCommon& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MAC_ParametersXDD_Diff_ExtGroup1：ASN.1 MAC_ParametersXDD_Diff_ExtGroup1；源文件第 17484 行；扩展添加组 [[ ]]。
+// Encode_MAC_ParametersXDD_Diff_ExtGroup1 只读不分配；Decode_MAC_ParametersXDD_Diff_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_MAC_ParametersXDD_Diff_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersXDD_Diff_ExtGroup1(Encoder& enc, const MAC_ParametersXDD_Diff_ExtGroup1& value)
 {
     (void)value;
@@ -778,6 +810,10 @@ void Free_MAC_ParametersXDD_Diff_ExtGroup1(MAC_ParametersXDD_Diff_ExtGroup1& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MAC_ParametersXDD_Diff_ExtGroup2：ASN.1 MAC_ParametersXDD_Diff_ExtGroup2；源文件第 17487 行；扩展添加组 [[ ]]。
+// Encode_MAC_ParametersXDD_Diff_ExtGroup2 只读不分配；Decode_MAC_ParametersXDD_Diff_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_MAC_ParametersXDD_Diff_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersXDD_Diff_ExtGroup2(Encoder& enc, const MAC_ParametersXDD_Diff_ExtGroup2& value)
 {
     (void)value;
@@ -823,6 +859,10 @@ void Free_MAC_ParametersXDD_Diff_ExtGroup2(MAC_ParametersXDD_Diff_ExtGroup2& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MAC_ParametersXDD_Diff_ExtGroup3：ASN.1 MAC_ParametersXDD_Diff_ExtGroup3；源文件第 17491 行；扩展添加组 [[ ]]。
+// Encode_MAC_ParametersXDD_Diff_ExtGroup3 只读不分配；Decode_MAC_ParametersXDD_Diff_ExtGroup3 可能 malloc（失败时内部已释放并清零）；Free_MAC_ParametersXDD_Diff_ExtGroup3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersXDD_Diff_ExtGroup3(Encoder& enc, const MAC_ParametersXDD_Diff_ExtGroup3& value)
 {
     (void)value;
@@ -868,6 +908,10 @@ void Free_MAC_ParametersXDD_Diff_ExtGroup3(MAC_ParametersXDD_Diff_ExtGroup3& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MAC_ParametersXDD_Diff：ASN.1 MAC-ParametersXDD-Diff；源文件第 17476 行；SEQUENCE。
+// Encode_MAC_ParametersXDD_Diff 只读不分配；Decode_MAC_ParametersXDD_Diff 可能 malloc（失败时内部已释放并清零）；Free_MAC_ParametersXDD_Diff 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersXDD_Diff(Encoder& enc, const MAC_ParametersXDD_Diff& value)
 {
     (void)value;
@@ -1046,6 +1090,10 @@ void Free_MAC_ParametersXDD_Diff(MAC_ParametersXDD_Diff& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MAC_Parameters：ASN.1 MAC-Parameters；源文件第 17381 行；SEQUENCE。
+// Encode_MAC_Parameters 只读不分配；Decode_MAC_Parameters 可能 malloc（失败时内部已释放并清零）；Free_MAC_Parameters 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MAC_Parameters(Encoder& enc, const MAC_Parameters& value)
 {
     (void)value;
@@ -1093,6 +1141,10 @@ void Free_MAC_Parameters(MAC_Parameters& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MinTimeGap_r16：ASN.1 MinTimeGap-r16；源文件第 17497 行；SEQUENCE。
+// Encode_MinTimeGap_r16 只读不分配；Decode_MinTimeGap_r16 可能 malloc（失败时内部已释放并清零）；Free_MinTimeGap_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MinTimeGap_r16(Encoder& enc, const MinTimeGap_r16& value)
 {
     (void)value;
@@ -1168,6 +1220,10 @@ void Free_MinTimeGap_r16(MinTimeGap_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MAC_ParametersFRX_Diff_r16_Drx_Adaptation_r16：ASN.1 drx-Adaptation-r16；源文件第 17457 行；SEQUENCE。
+// Encode_MAC_ParametersFRX_Diff_r16_Drx_Adaptation_r16 只读不分配；Decode_MAC_ParametersFRX_Diff_r16_Drx_Adaptation_r16 可能 malloc（失败时内部已释放并清零）；Free_MAC_ParametersFRX_Diff_r16_Drx_Adaptation_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersFRX_Diff_r16_Drx_Adaptation_r16(Encoder& enc, const MAC_ParametersFRX_Diff_r16_Drx_Adaptation_r16& value)
 {
     (void)value;
@@ -1215,6 +1271,10 @@ void Free_MAC_ParametersFRX_Diff_r16_Drx_Adaptation_r16(MAC_ParametersFRX_Diff_r
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MAC_ParametersFRX_Diff_r16：ASN.1 MAC-ParametersFRX-Diff-r16；源文件第 17451 行；SEQUENCE。
+// Encode_MAC_ParametersFRX_Diff_r16 只读不分配；Decode_MAC_ParametersFRX_Diff_r16 可能 malloc（失败时内部已释放并清零）；Free_MAC_ParametersFRX_Diff_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersFRX_Diff_r16(Encoder& enc, const MAC_ParametersFRX_Diff_r16& value)
 {
     (void)value;
@@ -1301,6 +1361,10 @@ void Free_MAC_ParametersFRX_Diff_r16(MAC_ParametersFRX_Diff_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MAC_Parameters_v1610：ASN.1 MAC-Parameters-v1610；源文件第 17386 行；SEQUENCE。
+// Encode_MAC_Parameters_v1610 只读不分配；Decode_MAC_Parameters_v1610 可能 malloc（失败时内部已释放并清零）；Free_MAC_Parameters_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MAC_Parameters_v1610(Encoder& enc, const MAC_Parameters_v1610& value)
 {
     (void)value;
@@ -1336,6 +1400,10 @@ void Free_MAC_Parameters_v1610(MAC_Parameters_v1610& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MinTimeGapFR2_2_r17：ASN.1 MinTimeGapFR2-2-r17；源文件第 17504 行；SEQUENCE。
+// Encode_MinTimeGapFR2_2_r17 只读不分配；Decode_MinTimeGapFR2_2_r17 可能 malloc（失败时内部已释放并清零）；Free_MinTimeGapFR2_2_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MinTimeGapFR2_2_r17(Encoder& enc, const MinTimeGapFR2_2_r17& value)
 {
     (void)value;
@@ -1398,6 +1466,10 @@ void Free_MinTimeGapFR2_2_r17(MinTimeGapFR2_2_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MAC_ParametersFR2_2_r17_Drx_Adaptation_r17：ASN.1 drx-Adaptation-r17；源文件第 17469 行；SEQUENCE。
+// Encode_MAC_ParametersFR2_2_r17_Drx_Adaptation_r17 只读不分配；Decode_MAC_ParametersFR2_2_r17_Drx_Adaptation_r17 可能 malloc（失败时内部已释放并清零）；Free_MAC_ParametersFR2_2_r17_Drx_Adaptation_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersFR2_2_r17_Drx_Adaptation_r17(Encoder& enc, const MAC_ParametersFR2_2_r17_Drx_Adaptation_r17& value)
 {
     (void)value;
@@ -1445,6 +1517,10 @@ void Free_MAC_ParametersFR2_2_r17_Drx_Adaptation_r17(MAC_ParametersFR2_2_r17_Drx
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MAC_ParametersFR2_2_r17：ASN.1 MAC-ParametersFR2-2-r17；源文件第 17464 行；SEQUENCE。
+// Encode_MAC_ParametersFR2_2_r17 只读不分配；Decode_MAC_ParametersFR2_2_r17 可能 malloc（失败时内部已释放并清零）；Free_MAC_ParametersFR2_2_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersFR2_2_r17(Encoder& enc, const MAC_ParametersFR2_2_r17& value)
 {
     (void)value;
@@ -1531,6 +1607,10 @@ void Free_MAC_ParametersFR2_2_r17(MAC_ParametersFR2_2_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MAC_Parameters_v1700：ASN.1 MAC-Parameters-v1700；源文件第 17390 行；SEQUENCE。
+// Encode_MAC_Parameters_v1700 只读不分配；Decode_MAC_Parameters_v1700 可能 malloc（失败时内部已释放并清零）；Free_MAC_Parameters_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MAC_Parameters_v1700(Encoder& enc, const MAC_Parameters_v1700& value)
 {
     (void)value;
@@ -1566,6 +1646,10 @@ void Free_MAC_Parameters_v1700(MAC_Parameters_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersCommon_ExtGroup1：ASN.1 MeasAndMobParametersCommon_ExtGroup1；源文件第 17528 行；扩展添加组 [[ ]]。
+// Encode_MeasAndMobParametersCommon_ExtGroup1 只读不分配；Decode_MeasAndMobParametersCommon_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersCommon_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup1(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup1& value)
 {
     (void)value;
@@ -1633,6 +1717,10 @@ void Free_MeasAndMobParametersCommon_ExtGroup1(MeasAndMobParametersCommon_ExtGro
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersCommon_ExtGroup2：ASN.1 MeasAndMobParametersCommon_ExtGroup2；源文件第 17534 行；扩展添加组 [[ ]]。
+// Encode_MeasAndMobParametersCommon_ExtGroup2 只读不分配；Decode_MeasAndMobParametersCommon_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersCommon_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup2(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup2& value)
 {
     (void)value;
@@ -1702,6 +1790,10 @@ void Free_MeasAndMobParametersCommon_ExtGroup2(MeasAndMobParametersCommon_ExtGro
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersCommon_ExtGroup3：ASN.1 MeasAndMobParametersCommon_ExtGroup3；源文件第 17540 行；扩展添加组 [[ ]]。
+// Encode_MeasAndMobParametersCommon_ExtGroup3 只读不分配；Decode_MeasAndMobParametersCommon_ExtGroup3 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersCommon_ExtGroup3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup3(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup3& value)
 {
     (void)value;
@@ -1736,6 +1828,10 @@ void Free_MeasAndMobParametersCommon_ExtGroup3(MeasAndMobParametersCommon_ExtGro
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersCommon_ExtGroup4：ASN.1 MeasAndMobParametersCommon_ExtGroup4；源文件第 17543 行；扩展添加组 [[ ]]。
+// Encode_MeasAndMobParametersCommon_ExtGroup4 只读不分配；Decode_MeasAndMobParametersCommon_ExtGroup4 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersCommon_ExtGroup4 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup4(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup4& value)
 {
     (void)value;
@@ -1803,6 +1899,10 @@ void Free_MeasAndMobParametersCommon_ExtGroup4(MeasAndMobParametersCommon_ExtGro
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersCommon_ExtGroup5_CondHandoverParametersCommon_r16：ASN.1 condHandoverParametersCommon-r16；源文件第 17551 行；SEQUENCE。
+// Encode_MeasAndMobParametersCommon_ExtGroup5_CondHandoverParametersCommon_r16 只读不分配；Decode_MeasAndMobParametersCommon_ExtGroup5_CondHandoverParametersCommon_r16 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersCommon_ExtGroup5_CondHandoverParametersCommon_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup5_CondHandoverParametersCommon_r16(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup5_CondHandoverParametersCommon_r16& value)
 {
     (void)value;
@@ -1848,6 +1948,10 @@ void Free_MeasAndMobParametersCommon_ExtGroup5_CondHandoverParametersCommon_r16(
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersCommon_ExtGroup5：ASN.1 MeasAndMobParametersCommon_ExtGroup5；源文件第 17549 行；扩展添加组 [[ ]]。
+// Encode_MeasAndMobParametersCommon_ExtGroup5 只读不分配；Decode_MeasAndMobParametersCommon_ExtGroup5 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersCommon_ExtGroup5 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup5(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup5& value)
 {
     (void)value;
@@ -2092,6 +2196,10 @@ void Free_MeasAndMobParametersCommon_ExtGroup5(MeasAndMobParametersCommon_ExtGro
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersCommon_ExtGroup6_ConcurrentMeasGap_r17：ASN.1 concurrentMeasGap-r17；源文件第 17574 行；CHOICE。
+// Encode_MeasAndMobParametersCommon_ExtGroup6_ConcurrentMeasGap_r17 只读不分配；Decode_MeasAndMobParametersCommon_ExtGroup6_ConcurrentMeasGap_r17 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersCommon_ExtGroup6_ConcurrentMeasGap_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup6_ConcurrentMeasGap_r17(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup6_ConcurrentMeasGap_r17& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -2150,6 +2258,10 @@ void Free_MeasAndMobParametersCommon_ExtGroup6_ConcurrentMeasGap_r17(MeasAndMobP
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersCommon_ExtGroup6：ASN.1 MeasAndMobParametersCommon_ExtGroup6；源文件第 17572 行；扩展添加组 [[ ]]。
+// Encode_MeasAndMobParametersCommon_ExtGroup6 只读不分配；Decode_MeasAndMobParametersCommon_ExtGroup6 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersCommon_ExtGroup6 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup6(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup6& value)
 {
     (void)value;
@@ -2399,6 +2511,10 @@ void Free_MeasAndMobParametersCommon_ExtGroup6(MeasAndMobParametersCommon_ExtGro
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersCommon_ExtGroup7：ASN.1 MeasAndMobParametersCommon_ExtGroup7；源文件第 17605 行；扩展添加组 [[ ]]。
+// Encode_MeasAndMobParametersCommon_ExtGroup7 只读不分配；Decode_MeasAndMobParametersCommon_ExtGroup7 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersCommon_ExtGroup7 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup7(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup7& value)
 {
     (void)value;
@@ -2466,6 +2582,10 @@ void Free_MeasAndMobParametersCommon_ExtGroup7(MeasAndMobParametersCommon_ExtGro
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersCommon_ExtGroup8_IndependentGapConfig_maxCC_r17：ASN.1 independentGapConfig-maxCC-r17；源文件第 17616 行；SEQUENCE。
+// Encode_MeasAndMobParametersCommon_ExtGroup8_IndependentGapConfig_maxCC_r17 只读不分配；Decode_MeasAndMobParametersCommon_ExtGroup8_IndependentGapConfig_maxCC_r17 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersCommon_ExtGroup8_IndependentGapConfig_maxCC_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup8_IndependentGapConfig_maxCC_r17(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup8_IndependentGapConfig_maxCC_r17& value)
 {
     (void)value;
@@ -2528,6 +2648,10 @@ void Free_MeasAndMobParametersCommon_ExtGroup8_IndependentGapConfig_maxCC_r17(Me
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersCommon_ExtGroup8：ASN.1 MeasAndMobParametersCommon_ExtGroup8；源文件第 17614 行；扩展添加组 [[ ]]。
+// Encode_MeasAndMobParametersCommon_ExtGroup8 只读不分配；Decode_MeasAndMobParametersCommon_ExtGroup8 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersCommon_ExtGroup8 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup8(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup8& value)
 {
     (void)value;
@@ -2574,6 +2698,10 @@ void Free_MeasAndMobParametersCommon_ExtGroup8(MeasAndMobParametersCommon_ExtGro
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersCommon_ExtGroup9：ASN.1 MeasAndMobParametersCommon_ExtGroup9；源文件第 17622 行；扩展添加组 [[ ]]。
+// Encode_MeasAndMobParametersCommon_ExtGroup9 只读不分配；Decode_MeasAndMobParametersCommon_ExtGroup9 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersCommon_ExtGroup9 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup9(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup9& value)
 {
     (void)value;
@@ -2619,6 +2747,10 @@ void Free_MeasAndMobParametersCommon_ExtGroup9(MeasAndMobParametersCommon_ExtGro
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersCommon_ExtGroup10_Ltm_FastUE_Processing_r18：ASN.1 ltm-FastUE-Processing-r18；源文件第 17655 行；SEQUENCE。
+// Encode_MeasAndMobParametersCommon_ExtGroup10_Ltm_FastUE_Processing_r18 只读不分配；Decode_MeasAndMobParametersCommon_ExtGroup10_Ltm_FastUE_Processing_r18 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersCommon_ExtGroup10_Ltm_FastUE_Processing_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup10_Ltm_FastUE_Processing_r18(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup10_Ltm_FastUE_Processing_r18& value)
 {
     (void)value;
@@ -2660,6 +2792,10 @@ void Free_MeasAndMobParametersCommon_ExtGroup10_Ltm_FastUE_Processing_r18(MeasAn
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersCommon_ExtGroup10：ASN.1 MeasAndMobParametersCommon_ExtGroup10；源文件第 17626 行；扩展添加组 [[ ]]。
+// Encode_MeasAndMobParametersCommon_ExtGroup10 只读不分配；Decode_MeasAndMobParametersCommon_ExtGroup10 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersCommon_ExtGroup10 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup10(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup10& value)
 {
     (void)value;
@@ -2934,6 +3070,10 @@ void Free_MeasAndMobParametersCommon_ExtGroup10(MeasAndMobParametersCommon_ExtGr
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersCommon：ASN.1 MeasAndMobParametersCommon；源文件第 17523 行；SEQUENCE。
+// Encode_MeasAndMobParametersCommon 只读不分配；Decode_MeasAndMobParametersCommon 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersCommon 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon(Encoder& enc, const MeasAndMobParametersCommon& value)
 {
     (void)value;
@@ -3248,6 +3388,10 @@ void Free_MeasAndMobParametersCommon(MeasAndMobParametersCommon& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersXDD_Diff_ExtGroup1：ASN.1 MeasAndMobParametersXDD_Diff_ExtGroup1；源文件第 17671 行；扩展添加组 [[ ]]。
+// Encode_MeasAndMobParametersXDD_Diff_ExtGroup1 只读不分配；Decode_MeasAndMobParametersXDD_Diff_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersXDD_Diff_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersXDD_Diff_ExtGroup1(Encoder& enc, const MeasAndMobParametersXDD_Diff_ExtGroup1& value)
 {
     (void)value;
@@ -3304,6 +3448,10 @@ void Free_MeasAndMobParametersXDD_Diff_ExtGroup1(MeasAndMobParametersXDD_Diff_Ex
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersXDD_Diff_ExtGroup2：ASN.1 MeasAndMobParametersXDD_Diff_ExtGroup2；源文件第 17676 行；扩展添加组 [[ ]]。
+// Encode_MeasAndMobParametersXDD_Diff_ExtGroup2 只读不分配；Decode_MeasAndMobParametersXDD_Diff_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersXDD_Diff_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersXDD_Diff_ExtGroup2(Encoder& enc, const MeasAndMobParametersXDD_Diff_ExtGroup2& value)
 {
     (void)value;
@@ -3349,6 +3497,10 @@ void Free_MeasAndMobParametersXDD_Diff_ExtGroup2(MeasAndMobParametersXDD_Diff_Ex
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersXDD_Diff_ExtGroup3：ASN.1 MeasAndMobParametersXDD_Diff_ExtGroup3；源文件第 17680 行；扩展添加组 [[ ]]。
+// Encode_MeasAndMobParametersXDD_Diff_ExtGroup3 只读不分配；Decode_MeasAndMobParametersXDD_Diff_ExtGroup3 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersXDD_Diff_ExtGroup3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersXDD_Diff_ExtGroup3(Encoder& enc, const MeasAndMobParametersXDD_Diff_ExtGroup3& value)
 {
     (void)value;
@@ -3383,6 +3535,10 @@ void Free_MeasAndMobParametersXDD_Diff_ExtGroup3(MeasAndMobParametersXDD_Diff_Ex
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersXDD_Diff：ASN.1 MeasAndMobParametersXDD-Diff；源文件第 17667 行；SEQUENCE。
+// Encode_MeasAndMobParametersXDD_Diff 只读不分配；Decode_MeasAndMobParametersXDD_Diff 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersXDD_Diff 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersXDD_Diff(Encoder& enc, const MeasAndMobParametersXDD_Diff& value)
 {
     (void)value;
@@ -3517,6 +3673,10 @@ void Free_MeasAndMobParametersXDD_Diff(MeasAndMobParametersXDD_Diff& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersFRX_Diff_ExtGroup1：ASN.1 MeasAndMobParametersFRX_Diff_ExtGroup1；源文件第 17692 行；扩展添加组 [[ ]]。
+// Encode_MeasAndMobParametersFRX_Diff_ExtGroup1 只读不分配；Decode_MeasAndMobParametersFRX_Diff_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersFRX_Diff_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersFRX_Diff_ExtGroup1(Encoder& enc, const MeasAndMobParametersFRX_Diff_ExtGroup1& value)
 {
     (void)value;
@@ -3573,6 +3733,10 @@ void Free_MeasAndMobParametersFRX_Diff_ExtGroup1(MeasAndMobParametersFRX_Diff_Ex
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersFRX_Diff_ExtGroup2：ASN.1 MeasAndMobParametersFRX_Diff_ExtGroup2；源文件第 17697 行；扩展添加组 [[ ]]。
+// Encode_MeasAndMobParametersFRX_Diff_ExtGroup2 只读不分配；Decode_MeasAndMobParametersFRX_Diff_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersFRX_Diff_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersFRX_Diff_ExtGroup2(Encoder& enc, const MeasAndMobParametersFRX_Diff_ExtGroup2& value)
 {
     (void)value;
@@ -3609,6 +3773,10 @@ void Free_MeasAndMobParametersFRX_Diff_ExtGroup2(MeasAndMobParametersFRX_Diff_Ex
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersFRX_Diff_ExtGroup3：ASN.1 MeasAndMobParametersFRX_Diff_ExtGroup3；源文件第 17700 行；扩展添加组 [[ ]]。
+// Encode_MeasAndMobParametersFRX_Diff_ExtGroup3 只读不分配；Decode_MeasAndMobParametersFRX_Diff_ExtGroup3 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersFRX_Diff_ExtGroup3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersFRX_Diff_ExtGroup3(Encoder& enc, const MeasAndMobParametersFRX_Diff_ExtGroup3& value)
 {
     (void)value;
@@ -3643,6 +3811,10 @@ void Free_MeasAndMobParametersFRX_Diff_ExtGroup3(MeasAndMobParametersFRX_Diff_Ex
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersFRX_Diff_ExtGroup4：ASN.1 MeasAndMobParametersFRX_Diff_ExtGroup4；源文件第 17703 行；扩展添加组 [[ ]]。
+// Encode_MeasAndMobParametersFRX_Diff_ExtGroup4 只读不分配；Decode_MeasAndMobParametersFRX_Diff_ExtGroup4 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersFRX_Diff_ExtGroup4 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersFRX_Diff_ExtGroup4(Encoder& enc, const MeasAndMobParametersFRX_Diff_ExtGroup4& value)
 {
     (void)value;
@@ -3787,6 +3959,10 @@ void Free_MeasAndMobParametersFRX_Diff_ExtGroup4(MeasAndMobParametersFRX_Diff_Ex
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersFRX_Diff_ExtGroup5：ASN.1 MeasAndMobParametersFRX_Diff_ExtGroup5；源文件第 17717 行；扩展添加组 [[ ]]。
+// Encode_MeasAndMobParametersFRX_Diff_ExtGroup5 只读不分配；Decode_MeasAndMobParametersFRX_Diff_ExtGroup5 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersFRX_Diff_ExtGroup5 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersFRX_Diff_ExtGroup5(Encoder& enc, const MeasAndMobParametersFRX_Diff_ExtGroup5& value)
 {
     (void)value;
@@ -3821,6 +3997,10 @@ void Free_MeasAndMobParametersFRX_Diff_ExtGroup5(MeasAndMobParametersFRX_Diff_Ex
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersFRX_Diff：ASN.1 MeasAndMobParametersFRX-Diff；源文件第 17685 行；SEQUENCE。
+// Encode_MeasAndMobParametersFRX_Diff 只读不分配；Decode_MeasAndMobParametersFRX_Diff 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersFRX_Diff 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersFRX_Diff(Encoder& enc, const MeasAndMobParametersFRX_Diff& value)
 {
     (void)value;
@@ -4034,6 +4214,10 @@ void Free_MeasAndMobParametersFRX_Diff(MeasAndMobParametersFRX_Diff& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParameters：ASN.1 MeasAndMobParameters；源文件第 17513 行；SEQUENCE。
+// Encode_MeasAndMobParameters 只读不分配；Decode_MeasAndMobParameters 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParameters 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParameters(Encoder& enc, const MeasAndMobParameters& value)
 {
     (void)value;
@@ -4093,6 +4277,10 @@ void Free_MeasAndMobParameters(MeasAndMobParameters& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersFR2_2_r17：ASN.1 MeasAndMobParametersFR2-2-r17；源文件第 17722 行；SEQUENCE。
+// Encode_MeasAndMobParametersFR2_2_r17 只读不分配；Decode_MeasAndMobParametersFR2_2_r17 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersFR2_2_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersFR2_2_r17(Encoder& enc, const MeasAndMobParametersFR2_2_r17& value)
 {
     (void)value;
@@ -4167,6 +4355,10 @@ void Free_MeasAndMobParametersFR2_2_r17(MeasAndMobParametersFR2_2_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParameters_v1700：ASN.1 MeasAndMobParameters-v1700；源文件第 17519 行；SEQUENCE。
+// Encode_MeasAndMobParameters_v1700 只读不分配；Decode_MeasAndMobParameters_v1700 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParameters_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParameters_v1700(Encoder& enc, const MeasAndMobParameters_v1700& value)
 {
     (void)value;
@@ -4202,6 +4394,10 @@ void Free_MeasAndMobParameters_v1700(MeasAndMobParameters_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersMRDC_Common：ASN.1 MeasAndMobParametersMRDC-Common；源文件第 17760 行；SEQUENCE。
+// Encode_MeasAndMobParametersMRDC_Common 只读不分配；Decode_MeasAndMobParametersMRDC_Common 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersMRDC_Common 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_Common(Encoder& enc, const MeasAndMobParametersMRDC_Common& value)
 {
     (void)value;
@@ -4236,6 +4432,10 @@ void Free_MeasAndMobParametersMRDC_Common(MeasAndMobParametersMRDC_Common& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersMRDC_XDD_Diff：ASN.1 MeasAndMobParametersMRDC-XDD-Diff；源文件第 17806 行；SEQUENCE。
+// Encode_MeasAndMobParametersMRDC_XDD_Diff 只读不分配；Decode_MeasAndMobParametersMRDC_XDD_Diff 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersMRDC_XDD_Diff 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_XDD_Diff(Encoder& enc, const MeasAndMobParametersMRDC_XDD_Diff& value)
 {
     (void)value;
@@ -4281,6 +4481,10 @@ void Free_MeasAndMobParametersMRDC_XDD_Diff(MeasAndMobParametersMRDC_XDD_Diff& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersMRDC_FRX_Diff：ASN.1 MeasAndMobParametersMRDC-FRX-Diff；源文件第 17815 行；SEQUENCE。
+// Encode_MeasAndMobParametersMRDC_FRX_Diff 只读不分配；Decode_MeasAndMobParametersMRDC_FRX_Diff 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersMRDC_FRX_Diff 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_FRX_Diff(Encoder& enc, const MeasAndMobParametersMRDC_FRX_Diff& value)
 {
     (void)value;
@@ -4315,6 +4519,10 @@ void Free_MeasAndMobParametersMRDC_FRX_Diff(MeasAndMobParametersMRDC_FRX_Diff& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersMRDC：ASN.1 MeasAndMobParametersMRDC；源文件第 17733 行；SEQUENCE。
+// Encode_MeasAndMobParametersMRDC 只读不分配；Decode_MeasAndMobParametersMRDC 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersMRDC 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC(Encoder& enc, const MeasAndMobParametersMRDC& value)
 {
     (void)value;
@@ -4374,6 +4582,10 @@ void Free_MeasAndMobParametersMRDC(MeasAndMobParametersMRDC& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersMRDC_XDD_Diff_v1560：ASN.1 MeasAndMobParametersMRDC-XDD-Diff-v1560；源文件第 17811 行；SEQUENCE。
+// Encode_MeasAndMobParametersMRDC_XDD_Diff_v1560 只读不分配；Decode_MeasAndMobParametersMRDC_XDD_Diff_v1560 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersMRDC_XDD_Diff_v1560 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_XDD_Diff_v1560(Encoder& enc, const MeasAndMobParametersMRDC_XDD_Diff_v1560& value)
 {
     (void)value;
@@ -4408,6 +4620,10 @@ void Free_MeasAndMobParametersMRDC_XDD_Diff_v1560(MeasAndMobParametersMRDC_XDD_D
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersMRDC_v1560：ASN.1 MeasAndMobParametersMRDC-v1560；源文件第 17739 行；SEQUENCE。
+// Encode_MeasAndMobParametersMRDC_v1560 只读不分配；Decode_MeasAndMobParametersMRDC_v1560 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersMRDC_v1560 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_v1560(Encoder& enc, const MeasAndMobParametersMRDC_v1560& value)
 {
     (void)value;
@@ -4443,6 +4659,10 @@ void Free_MeasAndMobParametersMRDC_v1560(MeasAndMobParametersMRDC_v1560& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersMRDC_Common_v1610_CondPSCellChangeParametersCommon_r16：ASN.1 condPSCellChangeParametersCommon-r16；源文件第 17765 行；SEQUENCE。
+// Encode_MeasAndMobParametersMRDC_Common_v1610_CondPSCellChangeParametersCommon_r16 只读不分配；Decode_MeasAndMobParametersMRDC_Common_v1610_CondPSCellChangeParametersCommon_r16 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersMRDC_Common_v1610_CondPSCellChangeParametersCommon_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_Common_v1610_CondPSCellChangeParametersCommon_r16(Encoder& enc, const MeasAndMobParametersMRDC_Common_v1610_CondPSCellChangeParametersCommon_r16& value)
 {
     (void)value;
@@ -4488,6 +4708,10 @@ void Free_MeasAndMobParametersMRDC_Common_v1610_CondPSCellChangeParametersCommon
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersMRDC_Common_v1610：ASN.1 MeasAndMobParametersMRDC-Common-v1610；源文件第 17764 行；SEQUENCE。
+// Encode_MeasAndMobParametersMRDC_Common_v1610 只读不分配；Decode_MeasAndMobParametersMRDC_Common_v1610 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersMRDC_Common_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_Common_v1610(Encoder& enc, const MeasAndMobParametersMRDC_Common_v1610& value)
 {
     (void)value;
@@ -4534,6 +4758,10 @@ void Free_MeasAndMobParametersMRDC_Common_v1610(MeasAndMobParametersMRDC_Common_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersMRDC_v1610：ASN.1 MeasAndMobParametersMRDC-v1610；源文件第 17743 行；SEQUENCE。
+// Encode_MeasAndMobParametersMRDC_v1610 只读不分配；Decode_MeasAndMobParametersMRDC_v1610 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersMRDC_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_v1610(Encoder& enc, const MeasAndMobParametersMRDC_v1610& value)
 {
     (void)value;
@@ -4580,6 +4808,10 @@ void Free_MeasAndMobParametersMRDC_v1610(MeasAndMobParametersMRDC_v1610& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersMRDC_Common_v1700_CondPSCellChangeParameters_r17：ASN.1 condPSCellChangeParameters-r17；源文件第 17773 行；SEQUENCE。
+// Encode_MeasAndMobParametersMRDC_Common_v1700_CondPSCellChangeParameters_r17 只读不分配；Decode_MeasAndMobParametersMRDC_Common_v1700_CondPSCellChangeParameters_r17 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersMRDC_Common_v1700_CondPSCellChangeParameters_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_Common_v1700_CondPSCellChangeParameters_r17(Encoder& enc, const MeasAndMobParametersMRDC_Common_v1700_CondPSCellChangeParameters_r17& value)
 {
     (void)value;
@@ -4713,6 +4945,10 @@ void Free_MeasAndMobParametersMRDC_Common_v1700_CondPSCellChangeParameters_r17(M
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersMRDC_Common_v1700：ASN.1 MeasAndMobParametersMRDC-Common-v1700；源文件第 17772 行；SEQUENCE。
+// Encode_MeasAndMobParametersMRDC_Common_v1700 只读不分配；Decode_MeasAndMobParametersMRDC_Common_v1700 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersMRDC_Common_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_Common_v1700(Encoder& enc, const MeasAndMobParametersMRDC_Common_v1700& value)
 {
     (void)value;
@@ -4770,6 +5006,10 @@ void Free_MeasAndMobParametersMRDC_Common_v1700(MeasAndMobParametersMRDC_Common_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersMRDC_v1700：ASN.1 MeasAndMobParametersMRDC-v1700；源文件第 17748 行；SEQUENCE。
+// Encode_MeasAndMobParametersMRDC_v1700 只读不分配；Decode_MeasAndMobParametersMRDC_v1700 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersMRDC_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_v1700(Encoder& enc, const MeasAndMobParametersMRDC_v1700& value)
 {
     (void)value;
@@ -4805,6 +5045,10 @@ void Free_MeasAndMobParametersMRDC_v1700(MeasAndMobParametersMRDC_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersMRDC_Common_v1730_IndependentGapConfig_maxCC_r17：ASN.1 independentGapConfig-maxCC-r17；源文件第 17790 行；SEQUENCE。
+// Encode_MeasAndMobParametersMRDC_Common_v1730_IndependentGapConfig_maxCC_r17 只读不分配；Decode_MeasAndMobParametersMRDC_Common_v1730_IndependentGapConfig_maxCC_r17 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersMRDC_Common_v1730_IndependentGapConfig_maxCC_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_Common_v1730_IndependentGapConfig_maxCC_r17(Encoder& enc, const MeasAndMobParametersMRDC_Common_v1730_IndependentGapConfig_maxCC_r17& value)
 {
     (void)value;
@@ -4867,6 +5111,10 @@ void Free_MeasAndMobParametersMRDC_Common_v1730_IndependentGapConfig_maxCC_r17(M
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersMRDC_Common_v1730：ASN.1 MeasAndMobParametersMRDC-Common-v1730；源文件第 17789 行；SEQUENCE。
+// Encode_MeasAndMobParametersMRDC_Common_v1730 只读不分配；Decode_MeasAndMobParametersMRDC_Common_v1730 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersMRDC_Common_v1730 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_Common_v1730(Encoder& enc, const MeasAndMobParametersMRDC_Common_v1730& value)
 {
     (void)value;
@@ -4895,6 +5143,10 @@ void Free_MeasAndMobParametersMRDC_Common_v1730(MeasAndMobParametersMRDC_Common_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersMRDC_v1730：ASN.1 MeasAndMobParametersMRDC-v1730；源文件第 17752 行；SEQUENCE。
+// Encode_MeasAndMobParametersMRDC_v1730 只读不分配；Decode_MeasAndMobParametersMRDC_v1730 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersMRDC_v1730 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_v1730(Encoder& enc, const MeasAndMobParametersMRDC_v1730& value)
 {
     (void)value;
@@ -4930,6 +5182,10 @@ void Free_MeasAndMobParametersMRDC_v1730(MeasAndMobParametersMRDC_v1730& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersMRDC_Common_v1810：ASN.1 MeasAndMobParametersMRDC-Common-v1810；源文件第 17797 行；SEQUENCE。
+// Encode_MeasAndMobParametersMRDC_Common_v1810 只读不分配；Decode_MeasAndMobParametersMRDC_Common_v1810 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersMRDC_Common_v1810 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_Common_v1810(Encoder& enc, const MeasAndMobParametersMRDC_Common_v1810& value)
 {
     (void)value;
@@ -5019,6 +5275,10 @@ void Free_MeasAndMobParametersMRDC_Common_v1810(MeasAndMobParametersMRDC_Common_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasAndMobParametersMRDC_v1810：ASN.1 MeasAndMobParametersMRDC-v1810；源文件第 17756 行；SEQUENCE。
+// Encode_MeasAndMobParametersMRDC_v1810 只读不分配；Decode_MeasAndMobParametersMRDC_v1810 可能 malloc（失败时内部已释放并清零）；Free_MeasAndMobParametersMRDC_v1810 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_v1810(Encoder& enc, const MeasAndMobParametersMRDC_v1810& value)
 {
     (void)value;
@@ -5054,6 +5314,10 @@ void Free_MeasAndMobParametersMRDC_v1810(MeasAndMobParametersMRDC_v1810& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BeamManagementSSB_CSI_RS：ASN.1 BeamManagementSSB-CSI-RS；源文件第 18428 行；SEQUENCE。
+// Encode_BeamManagementSSB_CSI_RS 只读不分配；Decode_BeamManagementSSB_CSI_RS 可能 malloc（失败时内部已释放并清零）；Free_BeamManagementSSB_CSI_RS 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BeamManagementSSB_CSI_RS(Encoder& enc, const BeamManagementSSB_CSI_RS& value)
 {
     (void)value;
@@ -5114,6 +5378,10 @@ void Free_BeamManagementSSB_CSI_RS(BeamManagementSSB_CSI_RS& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CSI_RS_ForTracking：ASN.1 CSI-RS-ForTracking；源文件第 18443 行；SEQUENCE。
+// Encode_CSI_RS_ForTracking 只读不分配；Decode_CSI_RS_ForTracking 可能 malloc（失败时内部已释放并清零）；Free_CSI_RS_ForTracking 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CSI_RS_ForTracking(Encoder& enc, const CSI_RS_ForTracking& value)
 {
     (void)value;
@@ -5161,6 +5429,10 @@ void Free_CSI_RS_ForTracking(CSI_RS_ForTracking& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CSI_RS_IM_ReceptionForFeedback：ASN.1 CSI-RS-IM-ReceptionForFeedback；源文件第 18450 行；SEQUENCE。
+// Encode_CSI_RS_IM_ReceptionForFeedback 只读不分配；Decode_CSI_RS_IM_ReceptionForFeedback 可能 malloc（失败时内部已释放并清零）；Free_CSI_RS_IM_ReceptionForFeedback 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CSI_RS_IM_ReceptionForFeedback(Encoder& enc, const CSI_RS_IM_ReceptionForFeedback& value)
 {
     (void)value;
@@ -5214,6 +5486,10 @@ void Free_CSI_RS_IM_ReceptionForFeedback(CSI_RS_IM_ReceptionForFeedback& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CSI_RS_ProcFrameworkForSRS：ASN.1 CSI-RS-ProcFrameworkForSRS；源文件第 18458 行；SEQUENCE。
+// Encode_CSI_RS_ProcFrameworkForSRS 只读不分配；Decode_CSI_RS_ProcFrameworkForSRS 可能 malloc（失败时内部已释放并清零）；Free_CSI_RS_ProcFrameworkForSRS 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CSI_RS_ProcFrameworkForSRS(Encoder& enc, const CSI_RS_ProcFrameworkForSRS& value)
 {
     (void)value;
@@ -5261,6 +5537,10 @@ void Free_CSI_RS_ProcFrameworkForSRS(CSI_RS_ProcFrameworkForSRS& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CSI_ReportFramework：ASN.1 CSI-ReportFramework；源文件第 18465 行；SEQUENCE。
+// Encode_CSI_ReportFramework 只读不分配；Decode_CSI_ReportFramework 可能 malloc（失败时内部已释放并清零）；Free_CSI_ReportFramework 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportFramework(Encoder& enc, const CSI_ReportFramework& value)
 {
     (void)value;
@@ -5332,6 +5612,10 @@ void Free_CSI_ReportFramework(CSI_ReportFramework& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SpatialRelations：ASN.1 SpatialRelations；源文件第 18501 行；SEQUENCE。
+// Encode_SpatialRelations 只读不分配；Decode_SpatialRelations 可能 malloc（失败时内部已释放并清零）；Free_SpatialRelations 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SpatialRelations(Encoder& enc, const SpatialRelations& value)
 {
     (void)value;
@@ -5384,6 +5668,10 @@ void Free_SpatialRelations(SpatialRelations& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup1_BeamSwitchTiming：ASN.1 beamSwitchTiming；源文件第 17887 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup1_BeamSwitchTiming 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup1_BeamSwitchTiming 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup1_BeamSwitchTiming 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup1_BeamSwitchTiming(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup1_BeamSwitchTiming& value)
 {
     (void)value;
@@ -5433,6 +5721,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup1_BeamSwitchTiming(MIMO_ParametersPerBa
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup1：ASN.1 MIMO_ParametersPerBand_ExtGroup1；源文件第 17884 行；扩展添加组 [[ ]]。
+// Encode_MIMO_ParametersPerBand_ExtGroup1 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup1(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup1& value)
 {
     (void)value;
@@ -5596,6 +5888,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup1(MIMO_ParametersPerBand_ExtGroup1& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CSI_ReportFrameworkExt_r16：ASN.1 CSI-ReportFrameworkExt-r16；源文件第 18476 行；SEQUENCE。
+// Encode_CSI_ReportFrameworkExt_r16 只读不分配；Decode_CSI_ReportFrameworkExt_r16 可能 malloc（失败时内部已释放并清零）；Free_CSI_ReportFrameworkExt_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportFrameworkExt_r16(Encoder& enc, const CSI_ReportFrameworkExt_r16& value)
 {
     (void)value;
@@ -5625,6 +5921,10 @@ void Free_CSI_ReportFrameworkExt_r16(CSI_ReportFrameworkExt_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup2_Ssb_csirs_SINR_measurement_r16：ASN.1 ssb-csirs-SINR-measurement-r16；源文件第 17912 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup2_Ssb_csirs_SINR_measurement_r16 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup2_Ssb_csirs_SINR_measurement_r16 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup2_Ssb_csirs_SINR_measurement_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup2_Ssb_csirs_SINR_measurement_r16(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup2_Ssb_csirs_SINR_measurement_r16& value)
 {
     (void)value;
@@ -5703,6 +6003,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup2_Ssb_csirs_SINR_measurement_r16(MIMO_P
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_OutOfOrderOperationDL_r16：ASN.1 multiDCI-multiTRP-Parameters-r16/outOfOrderOperationDL-r16；源文件第 17933 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_OutOfOrderOperationDL_r16 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_OutOfOrderOperationDL_r16 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_OutOfOrderOperationDL_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_OutOfOrderOperationDL_r16(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_OutOfOrderOperationDL_r16& value)
 {
     (void)value;
@@ -5748,6 +6052,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_OutO
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_MaxNumberActivatedTCI_States_r16：ASN.1 multiDCI-multiTRP-Parameters-r16/maxNumberActivatedTCI-States-r16；源文件第 17944 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_MaxNumberActivatedTCI_States_r16 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_MaxNumberActivatedTCI_States_r16 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_MaxNumberActivatedTCI_States_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_MaxNumberActivatedTCI_States_r16(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_MaxNumberActivatedTCI_States_r16& value)
 {
     (void)value;
@@ -5783,6 +6091,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_MaxN
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16：ASN.1 multiDCI-multiTRP-Parameters-r16；源文件第 17927 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16& value)
 {
     (void)value;
@@ -5887,6 +6199,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16(MIMO
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup2_SingleDCI_SDM_scheme_Parameters_r16：ASN.1 singleDCI-SDM-scheme-Parameters-r16；源文件第 17949 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup2_SingleDCI_SDM_scheme_Parameters_r16 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup2_SingleDCI_SDM_scheme_Parameters_r16 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup2_SingleDCI_SDM_scheme_Parameters_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup2_SingleDCI_SDM_scheme_Parameters_r16(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup2_SingleDCI_SDM_scheme_Parameters_r16& value)
 {
     (void)value;
@@ -5934,6 +6250,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup2_SingleDCI_SDM_scheme_Parameters_r16(M
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup2_SupportInter_slotTDM_r16：ASN.1 supportInter-slotTDM-r16；源文件第 17962 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup2_SupportInter_slotTDM_r16 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup2_SupportInter_slotTDM_r16 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup2_SupportInter_slotTDM_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup2_SupportInter_slotTDM_r16(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup2_SupportInter_slotTDM_r16& value)
 {
     (void)value;
@@ -5975,6 +6295,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup2_SupportInter_slotTDM_r16(MIMO_Paramet
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup2_BeamSwitchTiming_r16：ASN.1 beamSwitchTiming-r16；源文件第 17985 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup2_BeamSwitchTiming_r16 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup2_BeamSwitchTiming_r16 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup2_BeamSwitchTiming_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup2_BeamSwitchTiming_r16(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup2_BeamSwitchTiming_r16& value)
 {
     (void)value;
@@ -6024,6 +6348,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup2_BeamSwitchTiming_r16(MIMO_ParametersP
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup2：ASN.1 MIMO_ParametersPerBand_ExtGroup2；源文件第 17899 行；扩展添加组 [[ ]]。
+// Encode_MIMO_ParametersPerBand_ExtGroup2 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup2(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup2& value)
 {
     (void)value;
@@ -6326,6 +6654,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup2(MIMO_ParametersPerBand_ExtGroup2& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup3_Semi_PersistentL1_SINR_Report_PUCCH_r16：ASN.1 semi-PersistentL1-SINR-Report-PUCCH-r16；源文件第 17992 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup3_Semi_PersistentL1_SINR_Report_PUCCH_r16 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup3_Semi_PersistentL1_SINR_Report_PUCCH_r16 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup3_Semi_PersistentL1_SINR_Report_PUCCH_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup3_Semi_PersistentL1_SINR_Report_PUCCH_r16(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup3_Semi_PersistentL1_SINR_Report_PUCCH_r16& value)
 {
     (void)value;
@@ -6371,6 +6703,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup3_Semi_PersistentL1_SINR_Report_PUCCH_r
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup3：ASN.1 MIMO_ParametersPerBand_ExtGroup3；源文件第 17990 行；扩展添加组 [[ ]]。
+// Encode_MIMO_ParametersPerBand_ExtGroup3 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup3 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup3(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup3& value)
 {
     (void)value;
@@ -6417,6 +6753,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup3(MIMO_ParametersPerBand_ExtGroup3& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup4_SpatialRelations_v1640：ASN.1 spatialRelations-v1640；源文件第 18001 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup4_SpatialRelations_v1640 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup4_SpatialRelations_v1640 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup4_SpatialRelations_v1640 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup4_SpatialRelations_v1640(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup4_SpatialRelations_v1640& value)
 {
     (void)value;
@@ -6446,6 +6786,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup4_SpatialRelations_v1640(MIMO_Parameter
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup4：ASN.1 MIMO_ParametersPerBand_ExtGroup4；源文件第 17999 行；扩展添加组 [[ ]]。
+// Encode_MIMO_ParametersPerBand_ExtGroup4 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup4 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup4 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup4(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup4& value)
 {
     (void)value;
@@ -6492,6 +6836,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup4(MIMO_ParametersPerBand_ExtGroup4& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup5：ASN.1 MIMO_ParametersPerBand_ExtGroup5；源文件第 18007 行；扩展添加组 [[ ]]。
+// Encode_MIMO_ParametersPerBand_ExtGroup5 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup5 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup5 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup5(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup5& value)
 {
     (void)value;
@@ -6526,6 +6874,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup5(MIMO_ParametersPerBand_ExtGroup5& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup6：ASN.1 MIMO_ParametersPerBand_ExtGroup6；源文件第 18011 行；扩展添加组 [[ ]]。
+// Encode_MIMO_ParametersPerBand_ExtGroup6 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup6 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup6 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup6(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup6& value)
 {
     (void)value;
@@ -6568,6 +6920,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup6(MIMO_ParametersPerBand_ExtGroup6& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7_MTRP_BFR_twoBFD_RS_Set_r17：ASN.1 mTRP-BFR-twoBFD-RS-Set-r17；源文件第 18034 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup7_MTRP_BFR_twoBFD_RS_Set_r17 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7_MTRP_BFR_twoBFD_RS_Set_r17 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7_MTRP_BFR_twoBFD_RS_Set_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_MTRP_BFR_twoBFD_RS_Set_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_MTRP_BFR_twoBFD_RS_Set_r17& value)
 {
     (void)value;
@@ -6609,6 +6965,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_MTRP_BFR_twoBFD_RS_Set_r17(MIMO_Param
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_r17：ASN.1 unifiedJointTCI-r17；源文件第 18056 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_r17 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_r17 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_r17& value)
 {
     (void)value;
@@ -6644,6 +7004,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_r17(MIMO_ParametersPe
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_multiMAC_CE_r17：ASN.1 unifiedJointTCI-multiMAC-CE-r17；源文件第 18061 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_multiMAC_CE_r17 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_multiMAC_CE_r17 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_multiMAC_CE_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_multiMAC_CE_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_multiMAC_CE_r17& value)
 {
     (void)value;
@@ -6686,6 +7050,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_multiMAC_CE_r17(MIMO_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_InterCell_r17：ASN.1 unifiedJointTCI-InterCell-r17；源文件第 18085 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_InterCell_r17 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_InterCell_r17 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_InterCell_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_InterCell_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_InterCell_r17& value)
 {
     (void)value;
@@ -6721,6 +7089,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_InterCell_r17(MIMO_Pa
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_r17：ASN.1 unifiedSeparateTCI-r17；源文件第 18090 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_r17 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_r17 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_r17& value)
 {
     (void)value;
@@ -6768,6 +7140,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_r17(MIMO_Parameter
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_multiMAC_CE_r17：ASN.1 unifiedSeparateTCI-multiMAC-CE-r17；源文件第 18097 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_multiMAC_CE_r17 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_multiMAC_CE_r17 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_multiMAC_CE_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_multiMAC_CE_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_multiMAC_CE_r17& value)
 {
     (void)value;
@@ -6809,6 +7185,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_multiMAC_CE_r17(MI
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_ListSharingCA_r17：ASN.1 unifiedSeparateTCI-ListSharingCA-r17；源文件第 18105 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_ListSharingCA_r17 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_ListSharingCA_r17 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_ListSharingCA_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_ListSharingCA_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_ListSharingCA_r17& value)
 {
     (void)value;
@@ -6858,6 +7238,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_ListSharingCA_r17(
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_InterCell_r17：ASN.1 unifiedSeparateTCI-InterCell-r17；源文件第 18112 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_InterCell_r17 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_InterCell_r17 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_InterCell_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_InterCell_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_InterCell_r17& value)
 {
     (void)value;
@@ -6905,6 +7289,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_InterCell_r17(MIMO
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_mTRP_InterCell_BM_r17：ASN.1 unifiedJointTCI-mTRP-InterCell-BM-r17；源文件第 18119 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_mTRP_InterCell_BM_r17 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_mTRP_InterCell_BM_r17 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_mTRP_InterCell_BM_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_mTRP_InterCell_BM_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_mTRP_InterCell_BM_r17& value)
 {
     (void)value;
@@ -6940,6 +7328,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_mTRP_InterCell_BM_r17
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7_Mpe_Mitigation_r17：ASN.1 mpe-Mitigation-r17；源文件第 18124 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup7_Mpe_Mitigation_r17 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7_Mpe_Mitigation_r17 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7_Mpe_Mitigation_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_Mpe_Mitigation_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_Mpe_Mitigation_r17& value)
 {
     (void)value;
@@ -6975,6 +7367,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_Mpe_Mitigation_r17(MIMO_ParametersPer
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7_Srs_PortReport_r17：ASN.1 srs-PortReport-r17；源文件第 18129 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup7_Srs_PortReport_r17 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7_Srs_PortReport_r17 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7_Srs_PortReport_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_Srs_PortReport_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_Srs_PortReport_r17& value)
 {
     (void)value;
@@ -7050,6 +7446,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_Srs_PortReport_r17(MIMO_ParametersPer
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7_MTRP_PUSCH_CSI_RS_r17：ASN.1 mTRP-PUSCH-CSI-RS-r17；源文件第 18142 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup7_MTRP_PUSCH_CSI_RS_r17 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7_MTRP_PUSCH_CSI_RS_r17 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7_MTRP_PUSCH_CSI_RS_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_MTRP_PUSCH_CSI_RS_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_MTRP_PUSCH_CSI_RS_r17& value)
 {
     (void)value;
@@ -7103,6 +7503,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_MTRP_PUSCH_CSI_RS_r17(MIMO_Parameters
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7_MTRP_inter_Cell_r17：ASN.1 mTRP-inter-Cell-r17；源文件第 18166 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup7_MTRP_inter_Cell_r17 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7_MTRP_inter_Cell_r17 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7_MTRP_inter_Cell_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_MTRP_inter_Cell_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_MTRP_inter_Cell_r17& value)
 {
     (void)value;
@@ -7138,6 +7542,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_MTRP_inter_Cell_r17(MIMO_ParametersPe
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7_MTRP_GroupBasedL1_RSRP_r17：ASN.1 mTRP-GroupBasedL1-RSRP-r17；源文件第 18171 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup7_MTRP_GroupBasedL1_RSRP_r17 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7_MTRP_GroupBasedL1_RSRP_r17 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7_MTRP_GroupBasedL1_RSRP_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_MTRP_GroupBasedL1_RSRP_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_MTRP_GroupBasedL1_RSRP_r17& value)
 {
     (void)value;
@@ -7179,6 +7587,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_MTRP_GroupBasedL1_RSRP_r17(MIMO_Param
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7_MTRP_CSI_EnhancementPerBand_r17：ASN.1 mTRP-CSI-EnhancementPerBand-r17；源文件第 18179 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup7_MTRP_CSI_EnhancementPerBand_r17 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7_MTRP_CSI_EnhancementPerBand_r17 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7_MTRP_CSI_EnhancementPerBand_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_MTRP_CSI_EnhancementPerBand_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_MTRP_CSI_EnhancementPerBand_r17& value)
 {
     (void)value;
@@ -7246,6 +7658,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_MTRP_CSI_EnhancementPerBand_r17(MIMO_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_v1710：ASN.1 beamSwitchTiming-v1710；源文件第 18196 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_v1710 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_v1710 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_v1710 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_v1710(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_v1710& value)
 {
     (void)value;
@@ -7295,6 +7711,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_v1710(MIMO_Parameter
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_r17：ASN.1 beamSwitchTiming-r17；源文件第 18201 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_r17 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_r17 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_r17& value)
 {
     (void)value;
@@ -7344,6 +7764,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_r17(MIMO_ParametersP
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7_BeamReportTiming_v1710：ASN.1 beamReportTiming-v1710；源文件第 18206 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup7_BeamReportTiming_v1710 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7_BeamReportTiming_v1710 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7_BeamReportTiming_v1710 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_BeamReportTiming_v1710(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_BeamReportTiming_v1710& value)
 {
     (void)value;
@@ -7393,6 +7817,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_BeamReportTiming_v1710(MIMO_Parameter
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7_MaxNumberRxTxBeamSwitchDL_v1710：ASN.1 maxNumberRxTxBeamSwitchDL-v1710；源文件第 18211 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup7_MaxNumberRxTxBeamSwitchDL_v1710 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7_MaxNumberRxTxBeamSwitchDL_v1710 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7_MaxNumberRxTxBeamSwitchDL_v1710 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_MaxNumberRxTxBeamSwitchDL_v1710(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_MaxNumberRxTxBeamSwitchDL_v1710& value)
 {
     (void)value;
@@ -7442,6 +7870,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_MaxNumberRxTxBeamSwitchDL_v1710(MIMO_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup7：ASN.1 MIMO_ParametersPerBand_ExtGroup7；源文件第 18014 行；扩展添加组 [[ ]]。
+// Encode_MIMO_ParametersPerBand_ExtGroup7 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup7 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup7 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7& value)
 {
     (void)value;
@@ -8207,6 +8639,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup7(MIMO_ParametersPerBand_ExtGroup7& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup8：ASN.1 MIMO_ParametersPerBand_ExtGroup8；源文件第 18216 行；扩展添加组 [[ ]]。
+// Encode_MIMO_ParametersPerBand_ExtGroup8 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup8 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup8 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup8(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup8& value)
 {
     (void)value;
@@ -8289,6 +8725,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup8(MIMO_ParametersPerBand_ExtGroup8& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup9：ASN.1 MIMO_ParametersPerBand_ExtGroup9；源文件第 18227 行；扩展添加组 [[ ]]。
+// Encode_MIMO_ParametersPerBand_ExtGroup9 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup9 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup9 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup9(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup9& value)
 {
     (void)value;
@@ -8325,6 +8765,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup9(MIMO_ParametersPerBand_ExtGroup9& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_PerCC_r18：ASN.1 tci-JointTCI-UpdateSingleActiveTCI-PerCC-r18；源文件第 18239 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_PerCC_r18 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_PerCC_r18 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_PerCC_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_PerCC_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_PerCC_r18& value)
 {
     (void)value;
@@ -8360,6 +8804,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_P
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateMultiActiveTCI_PerCC_r18：ASN.1 tci-JointTCI-UpdateMultiActiveTCI-PerCC-r18；源文件第 18245 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateMultiActiveTCI_PerCC_r18 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateMultiActiveTCI_PerCC_r18 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateMultiActiveTCI_PerCC_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateMultiActiveTCI_PerCC_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateMultiActiveTCI_PerCC_r18& value)
 {
     (void)value;
@@ -8395,6 +8843,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateMultiActiveTCI_Pe
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTCI_PerCC_r18：ASN.1 tci-SeparateTCI-UpdateSingleActiveTCI-PerCC-r18；源文件第 18253 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTCI_PerCC_r18 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTCI_PerCC_r18 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTCI_PerCC_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTCI_PerCC_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTCI_PerCC_r18& value)
 {
     (void)value;
@@ -8442,6 +8894,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTC
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI_PerCC_r18：ASN.1 tci-SeparateTCI-UpdateMultiActiveTCI-PerCC-r18；源文件第 18261 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI_PerCC_r18 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI_PerCC_r18 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI_PerCC_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI_PerCC_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI_PerCC_r18& value)
 {
     (void)value;
@@ -8477,6 +8933,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_PerCC_PerCORESET_r18：ASN.1 tci-JointTCI-UpdateSingleActiveTCI-PerCC-PerCORESET-r18；源文件第 18271 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_PerCC_PerCORESET_r18 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_PerCC_PerCORESET_r18 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_PerCC_PerCORESET_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_PerCC_PerCORESET_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_PerCC_PerCORESET_r18& value)
 {
     (void)value;
@@ -8518,6 +8978,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_P
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTCI_PerCC_PerCORESET_r18：ASN.1 tci-SeparateTCI-UpdateSingleActiveTCI-PerCC-PerCORESET-r18；源文件第 18283 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTCI_PerCC_PerCORESET_r18 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTCI_PerCC_PerCORESET_r18 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTCI_PerCC_PerCORESET_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTCI_PerCC_PerCORESET_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTCI_PerCC_PerCORESET_r18& value)
 {
     (void)value;
@@ -8571,6 +9035,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTC
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI_PerCC_PerCORESET_r18：ASN.1 tci-SeparateTCI-UpdateMultiActiveTCI-PerCC-PerCORESET-r18；源文件第 18292 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI_PerCC_PerCORESET_r18 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI_PerCC_PerCORESET_r18 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI_PerCC_PerCORESET_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI_PerCC_PerCORESET_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI_PerCC_PerCORESET_r18& value)
 {
     (void)value;
@@ -8606,6 +9074,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup10_Tdcp_Report_r18：ASN.1 tdcp-Report-r18；源文件第 18311 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup10_Tdcp_Report_r18 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup10_Tdcp_Report_r18 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup10_Tdcp_Report_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Tdcp_Report_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Tdcp_Report_r18& value)
 {
     (void)value;
@@ -8641,6 +9113,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup10_Tdcp_Report_r18(MIMO_ParametersPerBa
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup10_Tdcp_Resource_r18：ASN.1 tdcp-Resource-r18；源文件第 18316 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup10_Tdcp_Resource_r18 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup10_Tdcp_Resource_r18 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup10_Tdcp_Resource_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Tdcp_Resource_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Tdcp_Resource_r18& value)
 {
     (void)value;
@@ -8682,6 +9158,10 @@ void Free_MIMO_ParametersPerBand_ExtGroup10_Tdcp_Resource_r18(MIMO_ParametersPer
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MIMO_ParametersPerBand_ExtGroup10_Pusch_NonCB_SingleDCI_STx2P_SDM_CSI_RS_SRS_r18：ASN.1 pusch-NonCB-SingleDCI-STx2P-SDM-CSI-RS-SRS-r18；源文件第 18349 行；SEQUENCE。
+// Encode_MIMO_ParametersPerBand_ExtGroup10_Pusch_NonCB_SingleDCI_STx2P_SDM_CSI_RS_SRS_r18 只读不分配；Decode_MIMO_ParametersPerBand_ExtGroup10_Pusch_NonCB_SingleDCI_STx2P_SDM_CSI_RS_SRS_r18 可能 malloc（失败时内部已释放并清零）；Free_MIMO_ParametersPerBand_ExtGroup10_Pusch_NonCB_SingleDCI_STx2P_SDM_CSI_RS_SRS_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Pusch_NonCB_SingleDCI_STx2P_SDM_CSI_RS_SRS_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Pusch_NonCB_SingleDCI_STx2P_SDM_CSI_RS_SRS_r18& value)
 {
     (void)value;

@@ -29,6 +29,14 @@ from .c_common import generated_banner, sanitize_comment
 
 INTERNAL_HEADER = "codec_internal.h"
 
+_KIND_TEXT = {
+    "sequence": "SEQUENCE",
+    "choice": "CHOICE",
+    "empty": "空 SEQUENCE{}",
+    "seqof": "SEQUENCE OF",
+    "group": "扩展添加组 [[ ]]",
+}
+
 
 class CodecEmitter:
     def __init__(self, cmodel: CModel, chunk_size: int = 120) -> None:
@@ -201,6 +209,16 @@ class CodecEmitter:
 
     def _emit_struct_functions(self, struct: StructDef) -> List[str]:
         lines: List[str] = []
+        lines.append("// " + "-" * 74)
+        lines.append(
+            f"// {struct.cname}：ASN.1 {struct.asn_name or '匿名类型'}；"
+            f"源文件第 {struct.line} 行；{_KIND_TEXT.get(struct.kind, struct.kind)}。"
+        )
+        lines.append(
+            f"// Encode_{struct.cname} 只读不分配；Decode_{struct.cname} 可能 malloc"
+            f"（失败时内部已释放并清零）；Free_{struct.cname} 递归释放并清零。"
+        )
+        lines.append("// " + "-" * 74)
         if struct.kind == "empty":
             lines.extend(self._emit_empty_functions(struct))
         elif struct.kind == "group":
@@ -1590,6 +1608,8 @@ class CodecEmitter:
 
     def _emit_one_containing(self, cname: str) -> List[str]:
         return [
+            "// CONTAINING 开放类型包装：编码内层并写长度行列式；解码递归解析内层；"
+            "受深度上限保护。",
             f"ErrorCode EncodeContained_{cname}(Encoder& enc, const {cname}& value)",
             "{",
             "    if (enc.ContainingDepth() >= RRC_CODEC_MAX_CONTAINING_DEPTH) {",
@@ -1643,6 +1663,20 @@ class CodecEmitter:
     def _emit_message_functions(self) -> List[str]:
         lines: List[str] = []
         for message in self.cm.messages:
+            path_text = " → ".join(
+                f"{level.index}/{level.count}" for level in message.path
+            )
+            lines.append("// " + "-" * 74)
+            lines.append(
+                f"// 消息入口 {message.kind_name}：ASN.1 {message.asn_name}；"
+                f"结构体 {message.struct_cname}；信道 {message.channel_name}；"
+                f"包装位 {len(message.path)} 级（{path_text}）。"
+            )
+            lines.append(
+                "// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；"
+                "DecodeMessage_* 反向校验包装位。"
+            )
+            lines.append("// " + "-" * 74)
             lines.extend(self._emit_message_encode(message))
             lines.append("")
             lines.extend(self._emit_message_decode(message))

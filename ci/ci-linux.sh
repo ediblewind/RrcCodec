@@ -43,6 +43,9 @@ configure_and_build "${BUILD_ROOT}/ci-shared" \
   -DRRC_CODEC_WARNINGS_AS_ERRORS=ON
 ctest --test-dir "${BUILD_ROOT}/ci-shared" --output-on-failure
 
+echo "== Generator unit tests =="
+python3 -m unittest discover -s "${REPO_ROOT}/tools/rrcgen/tests"
+
 echo "== Generated code consistency =="
 (
   cd "${REPO_ROOT}/tools/rrcgen"

@@ -56,6 +56,15 @@ bool BuildGoldenMib(MIB& mib) {
   return true;
 }
 
+void TestVersionAndNullSafety() {
+  CHECK(std::strcmp(GetVersionString(), "2.0.0") == 0);
+  CHECK(std::strcmp(GetAsn1VersionString(), "18.10.0") == 0);
+  FreeEncodedMessage(nullptr); /* 空操作 */
+  FreeMessage(MessageKind_MIB, nullptr);
+  SetErrorHandler(nullptr, nullptr); /* 接口预留：只保存，不触发 */
+  SetErrorHandler(nullptr, nullptr);
+}
+
 void TestGoldenEncode() {
   MIB mib;
   CHECK(BuildGoldenMib(mib));
@@ -169,6 +178,7 @@ void TestTruncatedInput() {
 }  // namespace
 
 int main() {
+  TestVersionAndNullSafety();
   TestGoldenEncode();
   TestGoldenDecodeRoundTrip();
   TestTrailingBitsIgnored();

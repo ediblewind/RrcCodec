@@ -18,6 +18,10 @@
 namespace rrc {
 namespace v1810 {
 
+// --------------------------------------------------------------------------
+// UAC_BarringInfoSet：ASN.1 UAC-BarringInfoSet；源文件第 13831 行；SEQUENCE。
+// Encode_UAC_BarringInfoSet 只读不分配；Decode_UAC_BarringInfoSet 可能 malloc（失败时内部已释放并清零）；Free_UAC_BarringInfoSet 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UAC_BarringInfoSet(Encoder& enc, const UAC_BarringInfoSet& value)
 {
     (void)value;
@@ -65,6 +69,10 @@ void Free_UAC_BarringInfoSet(UAC_BarringInfoSet& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// UAC_BarringInfoSet_v1700：ASN.1 UAC-BarringInfoSet-v1700；源文件第 13838 行；SEQUENCE。
+// Encode_UAC_BarringInfoSet_v1700 只读不分配；Decode_UAC_BarringInfoSet_v1700 可能 malloc（失败时内部已释放并清零）；Free_UAC_BarringInfoSet_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UAC_BarringInfoSet_v1700(Encoder& enc, const UAC_BarringInfoSet_v1700& value)
 {
     (void)value;
@@ -101,6 +109,10 @@ void Free_UAC_BarringInfoSet_v1700(UAC_BarringInfoSet_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// UAC_BarringPerCat：ASN.1 UAC-BarringPerCat；源文件第 13848 行；SEQUENCE。
+// Encode_UAC_BarringPerCat 只读不分配；Decode_UAC_BarringPerCat 可能 malloc（失败时内部已释放并清零）；Free_UAC_BarringPerCat 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UAC_BarringPerCat(Encoder& enc, const UAC_BarringPerCat& value)
 {
     (void)value;
@@ -136,6 +148,10 @@ void Free_UAC_BarringPerCat(UAC_BarringPerCat& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// UAC_BarringPerPLMN_Uac_ACBarringListType_Uac_ImplicitACBarringList：ASN.1 uac-ACBarringListType/uac-ImplicitACBarringList；源文件第 13861 行；SEQUENCE OF。
+// Encode_UAC_BarringPerPLMN_Uac_ACBarringListType_Uac_ImplicitACBarringList 只读不分配；Decode_UAC_BarringPerPLMN_Uac_ACBarringListType_Uac_ImplicitACBarringList 可能 malloc（失败时内部已释放并清零）；Free_UAC_BarringPerPLMN_Uac_ACBarringListType_Uac_ImplicitACBarringList 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UAC_BarringPerPLMN_Uac_ACBarringListType_Uac_ImplicitACBarringList(Encoder& enc, const UAC_BarringPerPLMN_Uac_ACBarringListType_Uac_ImplicitACBarringList& value)
 {
     (void)value;
@@ -185,6 +201,10 @@ void Free_UAC_BarringPerPLMN_Uac_ACBarringListType_Uac_ImplicitACBarringList(UAC
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// UAC_BarringPerPLMN_Uac_ACBarringListType：ASN.1 uac-ACBarringListType；源文件第 13860 行；CHOICE。
+// Encode_UAC_BarringPerPLMN_Uac_ACBarringListType 只读不分配；Decode_UAC_BarringPerPLMN_Uac_ACBarringListType 可能 malloc（失败时内部已释放并清零）；Free_UAC_BarringPerPLMN_Uac_ACBarringListType 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UAC_BarringPerPLMN_Uac_ACBarringListType(Encoder& enc, const UAC_BarringPerPLMN_Uac_ACBarringListType& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -245,6 +265,10 @@ void Free_UAC_BarringPerPLMN_Uac_ACBarringListType(UAC_BarringPerPLMN_Uac_ACBarr
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// UAC_BarringPerPLMN：ASN.1 UAC-BarringPerPLMN；源文件第 13858 行；SEQUENCE。
+// Encode_UAC_BarringPerPLMN 只读不分配；Decode_UAC_BarringPerPLMN 可能 malloc（失败时内部已释放并清零）；Free_UAC_BarringPerPLMN 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UAC_BarringPerPLMN(Encoder& enc, const UAC_BarringPerPLMN& value)
 {
     (void)value;
@@ -286,6 +310,10 @@ void Free_UAC_BarringPerPLMN(UAC_BarringPerPLMN& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ExcessDelay_DRB_IdentityInfo_r17：ASN.1 ExcessDelay-DRB-IdentityInfo-r17；源文件第 13904 行；SEQUENCE。
+// Encode_ExcessDelay_DRB_IdentityInfo_r17 只读不分配；Decode_ExcessDelay_DRB_IdentityInfo_r17 可能 malloc（失败时内部已释放并清零）；Free_ExcessDelay_DRB_IdentityInfo_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ExcessDelay_DRB_IdentityInfo_r17(Encoder& enc, const ExcessDelay_DRB_IdentityInfo_r17& value)
 {
     (void)value;
@@ -342,6 +370,10 @@ void Free_ExcessDelay_DRB_IdentityInfo_r17(ExcessDelay_DRB_IdentityInfo_r17& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CI_ConfigurationPerServingCell_r16_TimeFrequencyRegion_r16：ASN.1 timeFrequencyRegion-r16；源文件第 13935 行；SEQUENCE。
+// Encode_CI_ConfigurationPerServingCell_r16_TimeFrequencyRegion_r16 只读不分配；Decode_CI_ConfigurationPerServingCell_r16_TimeFrequencyRegion_r16 可能 malloc（失败时内部已释放并清零）；Free_CI_ConfigurationPerServingCell_r16_TimeFrequencyRegion_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CI_ConfigurationPerServingCell_r16_TimeFrequencyRegion_r16(Encoder& enc, const CI_ConfigurationPerServingCell_r16_TimeFrequencyRegion_r16& value)
 {
     (void)value;
@@ -403,6 +435,10 @@ void Free_CI_ConfigurationPerServingCell_r16_TimeFrequencyRegion_r16(CI_Configur
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CI_ConfigurationPerServingCell_r16：ASN.1 CI-ConfigurationPerServingCell-r16；源文件第 13930 行；SEQUENCE。
+// Encode_CI_ConfigurationPerServingCell_r16 只读不分配；Decode_CI_ConfigurationPerServingCell_r16 可能 malloc（失败时内部已释放并清零）；Free_CI_ConfigurationPerServingCell_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CI_ConfigurationPerServingCell_r16(Encoder& enc, const CI_ConfigurationPerServingCell_r16& value)
 {
     (void)value;
@@ -473,6 +509,10 @@ void Free_CI_ConfigurationPerServingCell_r16(CI_ConfigurationPerServingCell_r16&
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// P0AlphaSet_r17：ASN.1 P0AlphaSet-r17；源文件第 13985 行；SEQUENCE。
+// Encode_P0AlphaSet_r17 只读不分配；Decode_P0AlphaSet_r17 可能 malloc（失败时内部已释放并清零）；Free_P0AlphaSet_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_P0AlphaSet_r17(Encoder& enc, const P0AlphaSet_r17& value)
 {
     (void)value;
@@ -528,6 +568,10 @@ void Free_P0AlphaSet_r17(P0AlphaSet_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// Uplink_powerControl_r17：ASN.1 Uplink-powerControl-r17；源文件第 13978 行；SEQUENCE。
+// Encode_Uplink_powerControl_r17 只读不分配；Decode_Uplink_powerControl_r17 可能 malloc（失败时内部已释放并清零）；Free_Uplink_powerControl_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_Uplink_powerControl_r17(Encoder& enc, const Uplink_powerControl_r17& value)
 {
     (void)value;
@@ -593,6 +637,10 @@ void Free_Uplink_powerControl_r17(Uplink_powerControl_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// Uu_RelayRLC_ChannelConfig_r17：ASN.1 Uu-RelayRLC-ChannelConfig-r17；源文件第 13996 行；SEQUENCE。
+// Encode_Uu_RelayRLC_ChannelConfig_r17 只读不分配；Decode_Uu_RelayRLC_ChannelConfig_r17 可能 malloc（失败时内部已释放并清零）；Free_Uu_RelayRLC_ChannelConfig_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_Uu_RelayRLC_ChannelConfig_r17(Encoder& enc, const Uu_RelayRLC_ChannelConfig_r17& value)
 {
     (void)value;
@@ -677,6 +725,10 @@ void Free_Uu_RelayRLC_ChannelConfig_r17(Uu_RelayRLC_ChannelConfig_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// UplinkTxDirectCurrentCell_ExtGroup1：ASN.1 UplinkTxDirectCurrentCell_ExtGroup1；源文件第 14019 行；扩展添加组 [[ ]]。
+// Encode_UplinkTxDirectCurrentCell_ExtGroup1 只读不分配；Decode_UplinkTxDirectCurrentCell_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_UplinkTxDirectCurrentCell_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UplinkTxDirectCurrentCell_ExtGroup1(Encoder& enc, const UplinkTxDirectCurrentCell_ExtGroup1& value)
 {
     (void)value;
@@ -733,6 +785,10 @@ void Free_UplinkTxDirectCurrentCell_ExtGroup1(UplinkTxDirectCurrentCell_ExtGroup
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// UplinkTxDirectCurrentCell：ASN.1 UplinkTxDirectCurrentCell；源文件第 14015 行；SEQUENCE。
+// Encode_UplinkTxDirectCurrentCell 只读不分配；Decode_UplinkTxDirectCurrentCell 可能 malloc（失败时内部已释放并清零）；Free_UplinkTxDirectCurrentCell 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UplinkTxDirectCurrentCell(Encoder& enc, const UplinkTxDirectCurrentCell& value)
 {
     (void)value;
@@ -831,6 +887,10 @@ void Free_UplinkTxDirectCurrentCell(UplinkTxDirectCurrentCell& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// UplinkTxDirectCurrentBWP：ASN.1 UplinkTxDirectCurrentBWP；源文件第 14024 行；SEQUENCE。
+// Encode_UplinkTxDirectCurrentBWP 只读不分配；Decode_UplinkTxDirectCurrentBWP 可能 malloc（失败时内部已释放并清零）；Free_UplinkTxDirectCurrentBWP 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UplinkTxDirectCurrentBWP(Encoder& enc, const UplinkTxDirectCurrentBWP& value)
 {
     (void)value;
@@ -872,6 +932,10 @@ void Free_UplinkTxDirectCurrentBWP(UplinkTxDirectCurrentBWP& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DefaultDC_Location_r17：ASN.1 DefaultDC-Location-r17；源文件第 14051 行；CHOICE。
+// Encode_DefaultDC_Location_r17 只读不分配；Decode_DefaultDC_Location_r17 可能 malloc（失败时内部已释放并清零）；Free_DefaultDC_Location_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DefaultDC_Location_r17(Encoder& enc, const DefaultDC_Location_r17& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 2);
@@ -945,6 +1009,10 @@ void Free_DefaultDC_Location_r17(DefaultDC_Location_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// OffsetValue_r17：ASN.1 OffsetValue-r17；源文件第 14046 行；SEQUENCE。
+// Encode_OffsetValue_r17 只读不分配；Decode_OffsetValue_r17 可能 malloc（失败时内部已释放并清零）；Free_OffsetValue_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_OffsetValue_r17(Encoder& enc, const OffsetValue_r17& value)
 {
     (void)value;
@@ -980,6 +1048,10 @@ void Free_OffsetValue_r17(OffsetValue_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CC_Group_r17_OffsetToDefault_r17_Offsetlist：ASN.1 offsetToDefault-r17/offsetlist；源文件第 14041 行；SEQUENCE OF。
+// Encode_CC_Group_r17_OffsetToDefault_r17_Offsetlist 只读不分配；Decode_CC_Group_r17_OffsetToDefault_r17_Offsetlist 可能 malloc（失败时内部已释放并清零）；Free_CC_Group_r17_OffsetToDefault_r17_Offsetlist 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CC_Group_r17_OffsetToDefault_r17_Offsetlist(Encoder& enc, const CC_Group_r17_OffsetToDefault_r17_Offsetlist& value)
 {
     (void)value;
@@ -1025,6 +1097,10 @@ void Free_CC_Group_r17_OffsetToDefault_r17_Offsetlist(CC_Group_r17_OffsetToDefau
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CC_Group_r17_OffsetToDefault_r17：ASN.1 offsetToDefault-r17；源文件第 14039 行；CHOICE。
+// Encode_CC_Group_r17_OffsetToDefault_r17 只读不分配；Decode_CC_Group_r17_OffsetToDefault_r17 可能 malloc（失败时内部已释放并清零）；Free_CC_Group_r17_OffsetToDefault_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CC_Group_r17_OffsetToDefault_r17(Encoder& enc, const CC_Group_r17_OffsetToDefault_r17& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -1085,6 +1161,10 @@ void Free_CC_Group_r17_OffsetToDefault_r17(CC_Group_r17_OffsetToDefault_r17& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CC_Group_r17：ASN.1 CC-Group-r17；源文件第 14035 行；SEQUENCE。
+// Encode_CC_Group_r17 只读不分配；Decode_CC_Group_r17 可能 malloc（失败时内部已释放并清零）；Free_CC_Group_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CC_Group_r17(Encoder& enc, const CC_Group_r17& value)
 {
     (void)value;
@@ -1144,6 +1224,10 @@ void Free_CC_Group_r17(CC_Group_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// UplinkTxDirectCurrentCarrierInfo_r16_ServCellInfo_r16：ASN.1 servCellInfo-r16；源文件第 14073 行；CHOICE。
+// Encode_UplinkTxDirectCurrentCarrierInfo_r16_ServCellInfo_r16 只读不分配；Decode_UplinkTxDirectCurrentCarrierInfo_r16_ServCellInfo_r16 可能 malloc（失败时内部已释放并清零）；Free_UplinkTxDirectCurrentCarrierInfo_r16_ServCellInfo_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UplinkTxDirectCurrentCarrierInfo_r16_ServCellInfo_r16(Encoder& enc, const UplinkTxDirectCurrentCarrierInfo_r16_ServCellInfo_r16& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -1204,6 +1288,10 @@ void Free_UplinkTxDirectCurrentCarrierInfo_r16_ServCellInfo_r16(UplinkTxDirectCu
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// UplinkTxDirectCurrentCarrierInfo_r16：ASN.1 UplinkTxDirectCurrentCarrierInfo-r16；源文件第 14071 行；SEQUENCE。
+// Encode_UplinkTxDirectCurrentCarrierInfo_r16 只读不分配；Decode_UplinkTxDirectCurrentCarrierInfo_r16 可能 malloc（失败时内部已释放并清零）；Free_UplinkTxDirectCurrentCarrierInfo_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UplinkTxDirectCurrentCarrierInfo_r16(Encoder& enc, const UplinkTxDirectCurrentCarrierInfo_r16& value)
 {
     (void)value;
@@ -1238,6 +1326,10 @@ void Free_UplinkTxDirectCurrentCarrierInfo_r16(UplinkTxDirectCurrentCarrierInfo_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// UplinkTxDirectCurrentTwoCarrierInfo_r16：ASN.1 UplinkTxDirectCurrentTwoCarrierInfo-r16；源文件第 14079 行；SEQUENCE。
+// Encode_UplinkTxDirectCurrentTwoCarrierInfo_r16 只读不分配；Decode_UplinkTxDirectCurrentTwoCarrierInfo_r16 可能 malloc（失败时内部已释放并清零）；Free_UplinkTxDirectCurrentTwoCarrierInfo_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UplinkTxDirectCurrentTwoCarrierInfo_r16(Encoder& enc, const UplinkTxDirectCurrentTwoCarrierInfo_r16& value)
 {
     (void)value;
@@ -1279,6 +1371,10 @@ void Free_UplinkTxDirectCurrentTwoCarrierInfo_r16(UplinkTxDirectCurrentTwoCarrie
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// UplinkTxDirectCurrentTwoCarrier_r16：ASN.1 UplinkTxDirectCurrentTwoCarrier-r16；源文件第 14064 行；SEQUENCE。
+// Encode_UplinkTxDirectCurrentTwoCarrier_r16 只读不分配；Decode_UplinkTxDirectCurrentTwoCarrier_r16 可能 malloc（失败时内部已释放并清零）；Free_UplinkTxDirectCurrentTwoCarrier_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UplinkTxDirectCurrentTwoCarrier_r16(Encoder& enc, const UplinkTxDirectCurrentTwoCarrier_r16& value)
 {
     (void)value;
@@ -1329,6 +1425,10 @@ void Free_UplinkTxDirectCurrentTwoCarrier_r16(UplinkTxDirectCurrentTwoCarrier_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ZP_CSI_RS_Resource：ASN.1 ZP-CSI-RS-Resource；源文件第 14088 行；SEQUENCE。
+// Encode_ZP_CSI_RS_Resource 只读不分配；Decode_ZP_CSI_RS_Resource 可能 malloc（失败时内部已释放并清零）；Free_ZP_CSI_RS_Resource 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ZP_CSI_RS_Resource(Encoder& enc, const ZP_CSI_RS_Resource& value)
 {
     (void)value;
@@ -1382,6 +1482,10 @@ void Free_ZP_CSI_RS_Resource(ZP_CSI_RS_Resource& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// AerialParameters_r18：ASN.1 AerialParameters-r18；源文件第 14120 行；SEQUENCE。
+// Encode_AerialParameters_r18 只读不分配；Decode_AerialParameters_r18 可能 malloc（失败时内部已释放并清零）；Free_AerialParameters_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_AerialParameters_r18(Encoder& enc, const AerialParameters_r18& value)
 {
     (void)value;
@@ -1524,6 +1628,10 @@ void Free_AerialParameters_r18(AerialParameters_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// AppLayerMeasParameters_r17_ExtGroup1：ASN.1 AppLayerMeasParameters_r17_ExtGroup1；源文件第 14158 行；扩展添加组 [[ ]]。
+// Encode_AppLayerMeasParameters_r17_ExtGroup1 只读不分配；Decode_AppLayerMeasParameters_r17_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_AppLayerMeasParameters_r17_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_AppLayerMeasParameters_r17_ExtGroup1(Encoder& enc, const AppLayerMeasParameters_r17_ExtGroup1& value)
 {
     (void)value;
@@ -1604,6 +1712,10 @@ void Free_AppLayerMeasParameters_r17_ExtGroup1(AppLayerMeasParameters_r17_ExtGro
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// AppLayerMeasParameters_r17：ASN.1 AppLayerMeasParameters-r17；源文件第 14150 行；SEQUENCE。
+// Encode_AppLayerMeasParameters_r17 只读不分配；Decode_AppLayerMeasParameters_r17 可能 malloc（失败时内部已释放并清零）；Free_AppLayerMeasParameters_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_AppLayerMeasParameters_r17(Encoder& enc, const AppLayerMeasParameters_r17& value)
 {
     (void)value;
@@ -1736,6 +1848,10 @@ void Free_AppLayerMeasParameters_r17(AppLayerMeasParameters_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList：ASN.1 BandCombinationList；源文件第 14170 行；SEQUENCE OF。
+// Encode_BandCombinationList 只读不分配；Decode_BandCombinationList 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList(Encoder& enc, const BandCombinationList& value)
 {
     (void)value;
@@ -1813,6 +1929,10 @@ void Free_BandCombinationList(BandCombinationList& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1540：ASN.1 BandCombinationList-v1540；源文件第 14172 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1540 只读不分配；Decode_BandCombinationList_v1540 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1540 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1540(Encoder& enc, const BandCombinationList_v1540& value)
 {
     (void)value;
@@ -1890,6 +2010,10 @@ void Free_BandCombinationList_v1540(BandCombinationList_v1540& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1550：ASN.1 BandCombinationList-v1550；源文件第 14174 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1550 只读不分配；Decode_BandCombinationList_v1550 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1550 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1550(Encoder& enc, const BandCombinationList_v1550& value)
 {
     (void)value;
@@ -1967,6 +2091,10 @@ void Free_BandCombinationList_v1550(BandCombinationList_v1550& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1560：ASN.1 BandCombinationList-v1560；源文件第 14176 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1560 只读不分配；Decode_BandCombinationList_v1560 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1560 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1560(Encoder& enc, const BandCombinationList_v1560& value)
 {
     (void)value;
@@ -2044,6 +2172,10 @@ void Free_BandCombinationList_v1560(BandCombinationList_v1560& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1570：ASN.1 BandCombinationList-v1570；源文件第 14178 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1570 只读不分配；Decode_BandCombinationList_v1570 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1570 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1570(Encoder& enc, const BandCombinationList_v1570& value)
 {
     (void)value;
@@ -2121,6 +2253,10 @@ void Free_BandCombinationList_v1570(BandCombinationList_v1570& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1580：ASN.1 BandCombinationList-v1580；源文件第 14180 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1580 只读不分配；Decode_BandCombinationList_v1580 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1580 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1580(Encoder& enc, const BandCombinationList_v1580& value)
 {
     (void)value;
@@ -2198,6 +2334,10 @@ void Free_BandCombinationList_v1580(BandCombinationList_v1580& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1590：ASN.1 BandCombinationList-v1590；源文件第 14182 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1590 只读不分配；Decode_BandCombinationList_v1590 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1590 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1590(Encoder& enc, const BandCombinationList_v1590& value)
 {
     (void)value;
@@ -2275,6 +2415,10 @@ void Free_BandCombinationList_v1590(BandCombinationList_v1590& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v15g0：ASN.1 BandCombinationList-v15g0；源文件第 14184 行；SEQUENCE OF。
+// Encode_BandCombinationList_v15g0 只读不分配；Decode_BandCombinationList_v15g0 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v15g0 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v15g0(Encoder& enc, const BandCombinationList_v15g0& value)
 {
     (void)value;
@@ -2352,6 +2496,10 @@ void Free_BandCombinationList_v15g0(BandCombinationList_v15g0& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v15n0：ASN.1 BandCombinationList-v15n0；源文件第 14186 行；SEQUENCE OF。
+// Encode_BandCombinationList_v15n0 只读不分配；Decode_BandCombinationList_v15n0 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v15n0 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v15n0(Encoder& enc, const BandCombinationList_v15n0& value)
 {
     (void)value;
@@ -2429,6 +2577,10 @@ void Free_BandCombinationList_v15n0(BandCombinationList_v15n0& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1610：ASN.1 BandCombinationList-v1610；源文件第 14188 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1610 只读不分配；Decode_BandCombinationList_v1610 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1610(Encoder& enc, const BandCombinationList_v1610& value)
 {
     (void)value;
@@ -2506,6 +2658,10 @@ void Free_BandCombinationList_v1610(BandCombinationList_v1610& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1630：ASN.1 BandCombinationList-v1630；源文件第 14190 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1630 只读不分配；Decode_BandCombinationList_v1630 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1630 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1630(Encoder& enc, const BandCombinationList_v1630& value)
 {
     (void)value;
@@ -2583,6 +2739,10 @@ void Free_BandCombinationList_v1630(BandCombinationList_v1630& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1640：ASN.1 BandCombinationList-v1640；源文件第 14192 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1640 只读不分配；Decode_BandCombinationList_v1640 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1640 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1640(Encoder& enc, const BandCombinationList_v1640& value)
 {
     (void)value;
@@ -2660,6 +2820,10 @@ void Free_BandCombinationList_v1640(BandCombinationList_v1640& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1650：ASN.1 BandCombinationList-v1650；源文件第 14194 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1650 只读不分配；Decode_BandCombinationList_v1650 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1650 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1650(Encoder& enc, const BandCombinationList_v1650& value)
 {
     (void)value;
@@ -2737,6 +2901,10 @@ void Free_BandCombinationList_v1650(BandCombinationList_v1650& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1680：ASN.1 BandCombinationList-v1680；源文件第 14196 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1680 只读不分配；Decode_BandCombinationList_v1680 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1680 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1680(Encoder& enc, const BandCombinationList_v1680& value)
 {
     (void)value;
@@ -2814,6 +2982,10 @@ void Free_BandCombinationList_v1680(BandCombinationList_v1680& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1690：ASN.1 BandCombinationList-v1690；源文件第 14198 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1690 只读不分配；Decode_BandCombinationList_v1690 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1690 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1690(Encoder& enc, const BandCombinationList_v1690& value)
 {
     (void)value;
@@ -2891,6 +3063,10 @@ void Free_BandCombinationList_v1690(BandCombinationList_v1690& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v16a0：ASN.1 BandCombinationList-v16a0；源文件第 14200 行；SEQUENCE OF。
+// Encode_BandCombinationList_v16a0 只读不分配；Decode_BandCombinationList_v16a0 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v16a0 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v16a0(Encoder& enc, const BandCombinationList_v16a0& value)
 {
     (void)value;
@@ -2968,6 +3144,10 @@ void Free_BandCombinationList_v16a0(BandCombinationList_v16a0& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1700：ASN.1 BandCombinationList-v1700；源文件第 14202 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1700 只读不分配；Decode_BandCombinationList_v1700 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1700(Encoder& enc, const BandCombinationList_v1700& value)
 {
     (void)value;
@@ -3045,6 +3225,10 @@ void Free_BandCombinationList_v1700(BandCombinationList_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1720：ASN.1 BandCombinationList-v1720；源文件第 14204 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1720 只读不分配；Decode_BandCombinationList_v1720 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1720 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1720(Encoder& enc, const BandCombinationList_v1720& value)
 {
     (void)value;
@@ -3122,6 +3306,10 @@ void Free_BandCombinationList_v1720(BandCombinationList_v1720& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1730：ASN.1 BandCombinationList-v1730；源文件第 14206 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1730 只读不分配；Decode_BandCombinationList_v1730 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1730 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1730(Encoder& enc, const BandCombinationList_v1730& value)
 {
     (void)value;
@@ -3199,6 +3387,10 @@ void Free_BandCombinationList_v1730(BandCombinationList_v1730& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1740：ASN.1 BandCombinationList-v1740；源文件第 14208 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1740 只读不分配；Decode_BandCombinationList_v1740 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1740 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1740(Encoder& enc, const BandCombinationList_v1740& value)
 {
     (void)value;
@@ -3276,6 +3468,10 @@ void Free_BandCombinationList_v1740(BandCombinationList_v1740& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1760：ASN.1 BandCombinationList-v1760；源文件第 14210 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1760 只读不分配；Decode_BandCombinationList_v1760 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1760 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1760(Encoder& enc, const BandCombinationList_v1760& value)
 {
     (void)value;
@@ -3353,6 +3549,10 @@ void Free_BandCombinationList_v1760(BandCombinationList_v1760& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1770：ASN.1 BandCombinationList-v1770；源文件第 14212 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1770 只读不分配；Decode_BandCombinationList_v1770 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1770 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1770(Encoder& enc, const BandCombinationList_v1770& value)
 {
     (void)value;
@@ -3430,6 +3630,10 @@ void Free_BandCombinationList_v1770(BandCombinationList_v1770& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1780：ASN.1 BandCombinationList-v1780；源文件第 14214 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1780 只读不分配；Decode_BandCombinationList_v1780 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1780 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1780(Encoder& enc, const BandCombinationList_v1780& value)
 {
     (void)value;
@@ -3507,6 +3711,10 @@ void Free_BandCombinationList_v1780(BandCombinationList_v1780& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_v1800：ASN.1 BandCombinationList-v1800；源文件第 14216 行；SEQUENCE OF。
+// Encode_BandCombinationList_v1800 只读不分配；Decode_BandCombinationList_v1800 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_v1800 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1800(Encoder& enc, const BandCombinationList_v1800& value)
 {
     (void)value;
@@ -3584,6 +3792,10 @@ void Free_BandCombinationList_v1800(BandCombinationList_v1800& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_UplinkTxSwitch_r16：ASN.1 BandCombinationList-UplinkTxSwitch-r16；源文件第 14218 行；SEQUENCE OF。
+// Encode_BandCombinationList_UplinkTxSwitch_r16 只读不分配；Decode_BandCombinationList_UplinkTxSwitch_r16 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_UplinkTxSwitch_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_r16(Encoder& enc, const BandCombinationList_UplinkTxSwitch_r16& value)
 {
     (void)value;
@@ -3661,6 +3873,10 @@ void Free_BandCombinationList_UplinkTxSwitch_r16(BandCombinationList_UplinkTxSwi
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_UplinkTxSwitch_v1630：ASN.1 BandCombinationList-UplinkTxSwitch-v1630；源文件第 14220 行；SEQUENCE OF。
+// Encode_BandCombinationList_UplinkTxSwitch_v1630 只读不分配；Decode_BandCombinationList_UplinkTxSwitch_v1630 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_UplinkTxSwitch_v1630 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1630(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1630& value)
 {
     (void)value;
@@ -3738,6 +3954,10 @@ void Free_BandCombinationList_UplinkTxSwitch_v1630(BandCombinationList_UplinkTxS
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_UplinkTxSwitch_v1640：ASN.1 BandCombinationList-UplinkTxSwitch-v1640；源文件第 14222 行；SEQUENCE OF。
+// Encode_BandCombinationList_UplinkTxSwitch_v1640 只读不分配；Decode_BandCombinationList_UplinkTxSwitch_v1640 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_UplinkTxSwitch_v1640 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1640(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1640& value)
 {
     (void)value;
@@ -3815,6 +4035,10 @@ void Free_BandCombinationList_UplinkTxSwitch_v1640(BandCombinationList_UplinkTxS
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_UplinkTxSwitch_v1650：ASN.1 BandCombinationList-UplinkTxSwitch-v1650；源文件第 14224 行；SEQUENCE OF。
+// Encode_BandCombinationList_UplinkTxSwitch_v1650 只读不分配；Decode_BandCombinationList_UplinkTxSwitch_v1650 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_UplinkTxSwitch_v1650 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1650(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1650& value)
 {
     (void)value;
@@ -3892,6 +4116,10 @@ void Free_BandCombinationList_UplinkTxSwitch_v1650(BandCombinationList_UplinkTxS
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_UplinkTxSwitch_v1670：ASN.1 BandCombinationList-UplinkTxSwitch-v1670；源文件第 14226 行；SEQUENCE OF。
+// Encode_BandCombinationList_UplinkTxSwitch_v1670 只读不分配；Decode_BandCombinationList_UplinkTxSwitch_v1670 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_UplinkTxSwitch_v1670 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1670(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1670& value)
 {
     (void)value;
@@ -3969,6 +4197,10 @@ void Free_BandCombinationList_UplinkTxSwitch_v1670(BandCombinationList_UplinkTxS
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_UplinkTxSwitch_v1690：ASN.1 BandCombinationList-UplinkTxSwitch-v1690；源文件第 14228 行；SEQUENCE OF。
+// Encode_BandCombinationList_UplinkTxSwitch_v1690 只读不分配；Decode_BandCombinationList_UplinkTxSwitch_v1690 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_UplinkTxSwitch_v1690 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1690(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1690& value)
 {
     (void)value;
@@ -4046,6 +4278,10 @@ void Free_BandCombinationList_UplinkTxSwitch_v1690(BandCombinationList_UplinkTxS
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_UplinkTxSwitch_v16a0：ASN.1 BandCombinationList-UplinkTxSwitch-v16a0；源文件第 14230 行；SEQUENCE OF。
+// Encode_BandCombinationList_UplinkTxSwitch_v16a0 只读不分配；Decode_BandCombinationList_UplinkTxSwitch_v16a0 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_UplinkTxSwitch_v16a0 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v16a0(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v16a0& value)
 {
     (void)value;
@@ -4123,6 +4359,10 @@ void Free_BandCombinationList_UplinkTxSwitch_v16a0(BandCombinationList_UplinkTxS
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_UplinkTxSwitch_v16e0：ASN.1 BandCombinationList-UplinkTxSwitch-v16e0；源文件第 14232 行；SEQUENCE OF。
+// Encode_BandCombinationList_UplinkTxSwitch_v16e0 只读不分配；Decode_BandCombinationList_UplinkTxSwitch_v16e0 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_UplinkTxSwitch_v16e0 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v16e0(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v16e0& value)
 {
     (void)value;
@@ -4200,6 +4440,10 @@ void Free_BandCombinationList_UplinkTxSwitch_v16e0(BandCombinationList_UplinkTxS
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_UplinkTxSwitch_v1700：ASN.1 BandCombinationList-UplinkTxSwitch-v1700；源文件第 14234 行；SEQUENCE OF。
+// Encode_BandCombinationList_UplinkTxSwitch_v1700 只读不分配；Decode_BandCombinationList_UplinkTxSwitch_v1700 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_UplinkTxSwitch_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1700(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1700& value)
 {
     (void)value;
@@ -4277,6 +4521,10 @@ void Free_BandCombinationList_UplinkTxSwitch_v1700(BandCombinationList_UplinkTxS
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_UplinkTxSwitch_v1720：ASN.1 BandCombinationList-UplinkTxSwitch-v1720；源文件第 14236 行；SEQUENCE OF。
+// Encode_BandCombinationList_UplinkTxSwitch_v1720 只读不分配；Decode_BandCombinationList_UplinkTxSwitch_v1720 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_UplinkTxSwitch_v1720 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1720(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1720& value)
 {
     (void)value;
@@ -4354,6 +4602,10 @@ void Free_BandCombinationList_UplinkTxSwitch_v1720(BandCombinationList_UplinkTxS
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_UplinkTxSwitch_v1730：ASN.1 BandCombinationList-UplinkTxSwitch-v1730；源文件第 14238 行；SEQUENCE OF。
+// Encode_BandCombinationList_UplinkTxSwitch_v1730 只读不分配；Decode_BandCombinationList_UplinkTxSwitch_v1730 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_UplinkTxSwitch_v1730 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1730(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1730& value)
 {
     (void)value;
@@ -4431,6 +4683,10 @@ void Free_BandCombinationList_UplinkTxSwitch_v1730(BandCombinationList_UplinkTxS
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_UplinkTxSwitch_v1740：ASN.1 BandCombinationList-UplinkTxSwitch-v1740；源文件第 14240 行；SEQUENCE OF。
+// Encode_BandCombinationList_UplinkTxSwitch_v1740 只读不分配；Decode_BandCombinationList_UplinkTxSwitch_v1740 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_UplinkTxSwitch_v1740 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1740(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1740& value)
 {
     (void)value;
@@ -4508,6 +4764,10 @@ void Free_BandCombinationList_UplinkTxSwitch_v1740(BandCombinationList_UplinkTxS
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_UplinkTxSwitch_v1760：ASN.1 BandCombinationList-UplinkTxSwitch-v1760；源文件第 14242 行；SEQUENCE OF。
+// Encode_BandCombinationList_UplinkTxSwitch_v1760 只读不分配；Decode_BandCombinationList_UplinkTxSwitch_v1760 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_UplinkTxSwitch_v1760 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1760(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1760& value)
 {
     (void)value;
@@ -4585,6 +4845,10 @@ void Free_BandCombinationList_UplinkTxSwitch_v1760(BandCombinationList_UplinkTxS
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_UplinkTxSwitch_v1770：ASN.1 BandCombinationList-UplinkTxSwitch-v1770；源文件第 14244 行；SEQUENCE OF。
+// Encode_BandCombinationList_UplinkTxSwitch_v1770 只读不分配；Decode_BandCombinationList_UplinkTxSwitch_v1770 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_UplinkTxSwitch_v1770 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1770(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1770& value)
 {
     (void)value;
@@ -4662,6 +4926,10 @@ void Free_BandCombinationList_UplinkTxSwitch_v1770(BandCombinationList_UplinkTxS
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_UplinkTxSwitch_v1780：ASN.1 BandCombinationList-UplinkTxSwitch-v1780；源文件第 14246 行；SEQUENCE OF。
+// Encode_BandCombinationList_UplinkTxSwitch_v1780 只读不分配；Decode_BandCombinationList_UplinkTxSwitch_v1780 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_UplinkTxSwitch_v1780 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1780(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1780& value)
 {
     (void)value;
@@ -4739,6 +5007,10 @@ void Free_BandCombinationList_UplinkTxSwitch_v1780(BandCombinationList_UplinkTxS
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationList_UplinkTxSwitch_v1800：ASN.1 BandCombinationList-UplinkTxSwitch-v1800；源文件第 14248 行；SEQUENCE OF。
+// Encode_BandCombinationList_UplinkTxSwitch_v1800 只读不分配；Decode_BandCombinationList_UplinkTxSwitch_v1800 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationList_UplinkTxSwitch_v1800 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1800(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1800& value)
 {
     (void)value;
@@ -4816,6 +5088,10 @@ void Free_BandCombinationList_UplinkTxSwitch_v1800(BandCombinationList_UplinkTxS
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersEUTRA：ASN.1 CA-ParametersEUTRA；源文件第 14732 行；SEQUENCE。
+// Encode_CA_ParametersEUTRA 只读不分配；Decode_CA_ParametersEUTRA 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersEUTRA 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersEUTRA(Encoder& enc, const CA_ParametersEUTRA& value)
 {
     (void)value;
@@ -4926,6 +5202,10 @@ void Free_CA_ParametersEUTRA(CA_ParametersEUTRA& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNR：ASN.1 CA-ParametersNR；源文件第 14753 行；SEQUENCE。
+// Encode_CA_ParametersNR 只读不分配；Decode_CA_ParametersNR 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNR 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR(Encoder& enc, const CA_ParametersNR& value)
 {
     (void)value;
@@ -5046,6 +5326,10 @@ void Free_CA_ParametersNR(CA_ParametersNR& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MRDC_Parameters_ExtGroup1：ASN.1 MRDC_Parameters_ExtGroup1；源文件第 18536 行；扩展添加组 [[ ]]。
+// Encode_MRDC_Parameters_ExtGroup1 只读不分配；Decode_MRDC_Parameters_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_MRDC_Parameters_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_ExtGroup1(Encoder& enc, const MRDC_Parameters_ExtGroup1& value)
 {
     (void)value;
@@ -5104,6 +5388,10 @@ void Free_MRDC_Parameters_ExtGroup1(MRDC_Parameters_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MRDC_Parameters：ASN.1 MRDC-Parameters；源文件第 18527 行；SEQUENCE。
+// Encode_MRDC_Parameters 只读不分配；Decode_MRDC_Parameters 可能 malloc（失败时内部已释放并清零）；Free_MRDC_Parameters 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters(Encoder& enc, const MRDC_Parameters& value)
 {
     (void)value;
@@ -5251,6 +5539,10 @@ void Free_MRDC_Parameters(MRDC_Parameters& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombination：ASN.1 BandCombination；源文件第 14250 行；SEQUENCE。
+// Encode_BandCombination 只读不分配；Decode_BandCombination 可能 malloc（失败时内部已释放并清零）；Free_BandCombination 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination(Encoder& enc, const BandCombination& value)
 {
     (void)value;
@@ -5371,6 +5663,10 @@ void Free_BandCombination(BandCombination& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNR_v1540_Csi_RS_IM_ReceptionForFeedbackPerBandComb：ASN.1 csi-RS-IM-ReceptionForFeedbackPerBandComb；源文件第 14767 行；SEQUENCE。
+// Encode_CA_ParametersNR_v1540_Csi_RS_IM_ReceptionForFeedbackPerBandComb 只读不分配；Decode_CA_ParametersNR_v1540_Csi_RS_IM_ReceptionForFeedbackPerBandComb 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNR_v1540_Csi_RS_IM_ReceptionForFeedbackPerBandComb 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1540_Csi_RS_IM_ReceptionForFeedbackPerBandComb(Encoder& enc, const CA_ParametersNR_v1540_Csi_RS_IM_ReceptionForFeedbackPerBandComb& value)
 {
     (void)value;
@@ -5420,6 +5716,10 @@ void Free_CA_ParametersNR_v1540_Csi_RS_IM_ReceptionForFeedbackPerBandComb(CA_Par
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNR_v1540：ASN.1 CA-ParametersNR-v1540；源文件第 14765 行；SEQUENCE。
+// Encode_CA_ParametersNR_v1540 只读不分配；Decode_CA_ParametersNR_v1540 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNR_v1540 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1540(Encoder& enc, const CA_ParametersNR_v1540& value)
 {
     (void)value;
@@ -5492,6 +5792,10 @@ void Free_CA_ParametersNR_v1540(CA_ParametersNR_v1540& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombination_v1540：ASN.1 BandCombination-v1540；源文件第 14260 行；SEQUENCE。
+// Encode_BandCombination_v1540 只读不分配；Decode_BandCombination_v1540 可能 malloc（失败时内部已释放并清零）；Free_BandCombination_v1540 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1540(Encoder& enc, const BandCombination_v1540& value)
 {
     (void)value;
@@ -5553,6 +5857,10 @@ void Free_BandCombination_v1540(BandCombination_v1540& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNR_v1550：ASN.1 CA-ParametersNR-v1550；源文件第 14775 行；SEQUENCE。
+// Encode_CA_ParametersNR_v1550 只读不分配；Decode_CA_ParametersNR_v1550 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNR_v1550 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1550(Encoder& enc, const CA_ParametersNR_v1550& value)
 {
     (void)value;
@@ -5587,6 +5895,10 @@ void Free_CA_ParametersNR_v1550(CA_ParametersNR_v1550& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombination_v1550：ASN.1 BandCombination-v1550；源文件第 14265 行；SEQUENCE。
+// Encode_BandCombination_v1550 只读不分配；Decode_BandCombination_v1550 可能 malloc（失败时内部已释放并清零）；Free_BandCombination_v1550 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1550(Encoder& enc, const BandCombination_v1550& value)
 {
     (void)value;
@@ -5615,6 +5927,10 @@ void Free_BandCombination_v1550(BandCombination_v1550& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersEUTRA_v1560：ASN.1 CA-ParametersEUTRA-v1560；源文件第 14742 行；SEQUENCE。
+// Encode_CA_ParametersEUTRA_v1560 只读不分配；Decode_CA_ParametersEUTRA_v1560 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersEUTRA_v1560 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersEUTRA_v1560(Encoder& enc, const CA_ParametersEUTRA_v1560& value)
 {
     (void)value;
@@ -5651,6 +5967,10 @@ void Free_CA_ParametersEUTRA_v1560(CA_ParametersEUTRA_v1560& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNR_v1560：ASN.1 CA-ParametersNR-v1560；源文件第 14779 行；SEQUENCE。
+// Encode_CA_ParametersNR_v1560 只读不分配；Decode_CA_ParametersNR_v1560 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNR_v1560 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1560(Encoder& enc, const CA_ParametersNR_v1560& value)
 {
     (void)value;
@@ -5685,6 +6005,10 @@ void Free_CA_ParametersNR_v1560(CA_ParametersNR_v1560& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNRDC：ASN.1 CA-ParametersNRDC；源文件第 15457 行；SEQUENCE。
+// Encode_CA_ParametersNRDC 只读不分配；Decode_CA_ParametersNRDC 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNRDC 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNRDC(Encoder& enc, const CA_ParametersNRDC& value)
 {
     (void)value;
@@ -5769,6 +6093,10 @@ void Free_CA_ParametersNRDC(CA_ParametersNRDC& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombination_v1560：ASN.1 BandCombination-v1560；源文件第 14268 行；SEQUENCE。
+// Encode_BandCombination_v1560 只读不分配；Decode_BandCombination_v1560 可能 malloc（失败时内部已释放并清零）；Free_BandCombination_v1560 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1560(Encoder& enc, const BandCombination_v1560& value)
 {
     (void)value;
@@ -5839,6 +6167,10 @@ void Free_BandCombination_v1560(BandCombination_v1560& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersEUTRA_v1570：ASN.1 CA-ParametersEUTRA-v1570；源文件第 14746 行；SEQUENCE。
+// Encode_CA_ParametersEUTRA_v1570 只读不分配；Decode_CA_ParametersEUTRA_v1570 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersEUTRA_v1570 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersEUTRA_v1570(Encoder& enc, const CA_ParametersEUTRA_v1570& value)
 {
     (void)value;
@@ -5875,6 +6207,10 @@ void Free_CA_ParametersEUTRA_v1570(CA_ParametersEUTRA_v1570& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombination_v1570：ASN.1 BandCombination-v1570；源文件第 14275 行；SEQUENCE。
+// Encode_BandCombination_v1570 只读不分配；Decode_BandCombination_v1570 可能 malloc（失败时内部已释放并清零）；Free_BandCombination_v1570 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1570(Encoder& enc, const BandCombination_v1570& value)
 {
     (void)value;
@@ -5903,6 +6239,10 @@ void Free_BandCombination_v1570(BandCombination_v1570& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MRDC_Parameters_v1580：ASN.1 MRDC-Parameters-v1580；源文件第 18543 行；SEQUENCE。
+// Encode_MRDC_Parameters_v1580 只读不分配；Decode_MRDC_Parameters_v1580 可能 malloc（失败时内部已释放并清零）；Free_MRDC_Parameters_v1580 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_v1580(Encoder& enc, const MRDC_Parameters_v1580& value)
 {
     (void)value;
@@ -5937,6 +6277,10 @@ void Free_MRDC_Parameters_v1580(MRDC_Parameters_v1580& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombination_v1580：ASN.1 BandCombination-v1580；源文件第 14279 行；SEQUENCE。
+// Encode_BandCombination_v1580 只读不分配；Decode_BandCombination_v1580 可能 malloc（失败时内部已释放并清零）；Free_BandCombination_v1580 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1580(Encoder& enc, const BandCombination_v1580& value)
 {
     (void)value;
@@ -5965,6 +6309,10 @@ void Free_BandCombination_v1580(BandCombination_v1580& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MRDC_Parameters_v1590：ASN.1 MRDC-Parameters-v1590；源文件第 18547 行；SEQUENCE。
+// Encode_MRDC_Parameters_v1590 只读不分配；Decode_MRDC_Parameters_v1590 可能 malloc（失败时内部已释放并清零）；Free_MRDC_Parameters_v1590 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_v1590(Encoder& enc, const MRDC_Parameters_v1590& value)
 {
     (void)value;
@@ -5999,6 +6347,10 @@ void Free_MRDC_Parameters_v1590(MRDC_Parameters_v1590& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombination_v1590：ASN.1 BandCombination-v1590；源文件第 14283 行；SEQUENCE。
+// Encode_BandCombination_v1590 只读不分配；Decode_BandCombination_v1590 可能 malloc（失败时内部已释放并清零）；Free_BandCombination_v1590 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1590(Encoder& enc, const BandCombination_v1590& value)
 {
     (void)value;
@@ -6045,6 +6397,10 @@ void Free_BandCombination_v1590(BandCombination_v1590& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNR_v15g0：ASN.1 CA-ParametersNR-v15g0；源文件第 14783 行；SEQUENCE。
+// Encode_CA_ParametersNR_v15g0 只读不分配；Decode_CA_ParametersNR_v15g0 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNR_v15g0 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v15g0(Encoder& enc, const CA_ParametersNR_v15g0& value)
 {
     (void)value;
@@ -6104,6 +6460,10 @@ void Free_CA_ParametersNR_v15g0(CA_ParametersNR_v15g0& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNRDC_v15g0：ASN.1 CA-ParametersNRDC-v15g0；源文件第 15465 行；SEQUENCE。
+// Encode_CA_ParametersNRDC_v15g0 只读不分配；Decode_CA_ParametersNRDC_v15g0 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNRDC_v15g0 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNRDC_v15g0(Encoder& enc, const CA_ParametersNRDC_v15g0& value)
 {
     (void)value;
@@ -6139,6 +6499,10 @@ void Free_CA_ParametersNRDC_v15g0(CA_ParametersNRDC_v15g0& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MRDC_Parameters_v15g0：ASN.1 MRDC-Parameters-v15g0；源文件第 18551 行；SEQUENCE。
+// Encode_MRDC_Parameters_v15g0 只读不分配；Decode_MRDC_Parameters_v15g0 可能 malloc（失败时内部已释放并清零）；Free_MRDC_Parameters_v15g0 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_v15g0(Encoder& enc, const MRDC_Parameters_v15g0& value)
 {
     (void)value;
@@ -6180,6 +6544,10 @@ void Free_MRDC_Parameters_v15g0(MRDC_Parameters_v15g0& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombination_v15g0：ASN.1 BandCombination-v15g0；源文件第 14288 行；SEQUENCE。
+// Encode_BandCombination_v15g0 只读不分配；Decode_BandCombination_v15g0 可能 malloc（失败时内部已释放并清零）；Free_BandCombination_v15g0 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v15g0(Encoder& enc, const BandCombination_v15g0& value)
 {
     (void)value;
@@ -6239,6 +6607,10 @@ void Free_BandCombination_v15g0(BandCombination_v15g0& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MRDC_Parameters_v15n0：ASN.1 MRDC-Parameters-v15n0；源文件第 18555 行；SEQUENCE。
+// Encode_MRDC_Parameters_v15n0 只读不分配；Decode_MRDC_Parameters_v15n0 可能 malloc（失败时内部已释放并清零）；Free_MRDC_Parameters_v15n0 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_v15n0(Encoder& enc, const MRDC_Parameters_v15n0& value)
 {
     (void)value;
@@ -6275,6 +6647,10 @@ void Free_MRDC_Parameters_v15n0(MRDC_Parameters_v15n0& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombination_v15n0：ASN.1 BandCombination-v15n0；源文件第 14294 行；SEQUENCE。
+// Encode_BandCombination_v15n0 只读不分配；Decode_BandCombination_v15n0 可能 malloc（失败时内部已释放并清零）；Free_BandCombination_v15n0 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v15n0(Encoder& enc, const BandCombination_v15n0& value)
 {
     (void)value;
@@ -6303,6 +6679,10 @@ void Free_BandCombination_v15n0(BandCombination_v15n0& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookParameters_v1610_SupportedCSI_RS_ResourceListAlt_r16：ASN.1 supportedCSI-RS-ResourceListAlt-r16；源文件第 15583 行；SEQUENCE。
+// Encode_CodebookParameters_v1610_SupportedCSI_RS_ResourceListAlt_r16 只读不分配；Decode_CodebookParameters_v1610_SupportedCSI_RS_ResourceListAlt_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookParameters_v1610_SupportedCSI_RS_ResourceListAlt_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParameters_v1610_SupportedCSI_RS_ResourceListAlt_r16(Encoder& enc, const CodebookParameters_v1610_SupportedCSI_RS_ResourceListAlt_r16& value)
 {
     (void)value;
@@ -6462,6 +6842,10 @@ void Free_CodebookParameters_v1610_SupportedCSI_RS_ResourceListAlt_r16(CodebookP
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookParameters_v1610：ASN.1 CodebookParameters-v1610；源文件第 15582 行；SEQUENCE。
+// Encode_CodebookParameters_v1610 只读不分配；Decode_CodebookParameters_v1610 可能 malloc（失败时内部已释放并清零）；Free_CodebookParameters_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParameters_v1610(Encoder& enc, const CodebookParameters_v1610& value)
 {
     (void)value;
@@ -6497,6 +6881,10 @@ void Free_CodebookParameters_v1610(CodebookParameters_v1610& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookParametersAdditionPerBC_r16：ASN.1 CodebookParametersAdditionPerBC-r16；源文件第 15784 行；SEQUENCE。
+// Encode_CodebookParametersAdditionPerBC_r16 只读不分配；Decode_CodebookParametersAdditionPerBC_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookParametersAdditionPerBC_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersAdditionPerBC_r16(Encoder& enc, const CodebookParametersAdditionPerBC_r16& value)
 {
     (void)value;
@@ -6656,6 +7044,10 @@ void Free_CodebookParametersAdditionPerBC_r16(CodebookParametersAdditionPerBC_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookComboParametersAdditionPerBC_r16：ASN.1 CodebookComboParametersAdditionPerBC-r16；源文件第 15799 行；SEQUENCE。
+// Encode_CodebookComboParametersAdditionPerBC_r16 只读不分配；Decode_CodebookComboParametersAdditionPerBC_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookComboParametersAdditionPerBC_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParametersAdditionPerBC_r16(Encoder& enc, const CodebookComboParametersAdditionPerBC_r16& value)
 {
     (void)value;
@@ -7155,6 +7547,10 @@ void Free_CodebookComboParametersAdditionPerBC_r16(CodebookComboParametersAdditi
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNR_v1610_InterFreqDAPS_r16：ASN.1 interFreqDAPS-r16；源文件第 14808 行；SEQUENCE。
+// Encode_CA_ParametersNR_v1610_InterFreqDAPS_r16 只读不分配；Decode_CA_ParametersNR_v1610_InterFreqDAPS_r16 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNR_v1610_InterFreqDAPS_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1610_InterFreqDAPS_r16(Encoder& enc, const CA_ParametersNR_v1610_InterFreqDAPS_r16& value)
 {
     (void)value;
@@ -7257,6 +7653,10 @@ void Free_CA_ParametersNR_v1610_InterFreqDAPS_r16(CA_ParametersNR_v1610_InterFre
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNR_v1610_Pdcch_MonitoringCA_r16：ASN.1 pdcch-MonitoringCA-r16；源文件第 14822 行；SEQUENCE。
+// Encode_CA_ParametersNR_v1610_Pdcch_MonitoringCA_r16 只读不分配；Decode_CA_ParametersNR_v1610_Pdcch_MonitoringCA_r16 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNR_v1610_Pdcch_MonitoringCA_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1610_Pdcch_MonitoringCA_r16(Encoder& enc, const CA_ParametersNR_v1610_Pdcch_MonitoringCA_r16& value)
 {
     (void)value;
@@ -7292,6 +7692,10 @@ void Free_CA_ParametersNR_v1610_Pdcch_MonitoringCA_r16(CA_ParametersNR_v1610_Pdc
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNR_v1610_Pdcch_BlindDetectionCA_Mixed_r16：ASN.1 pdcch-BlindDetectionCA-Mixed-r16；源文件第 14828 行；SEQUENCE。
+// Encode_CA_ParametersNR_v1610_Pdcch_BlindDetectionCA_Mixed_r16 只读不分配；Decode_CA_ParametersNR_v1610_Pdcch_BlindDetectionCA_Mixed_r16 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNR_v1610_Pdcch_BlindDetectionCA_Mixed_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1610_Pdcch_BlindDetectionCA_Mixed_r16(Encoder& enc, const CA_ParametersNR_v1610_Pdcch_BlindDetectionCA_Mixed_r16& value)
 {
     (void)value;
@@ -7333,6 +7737,10 @@ void Free_CA_ParametersNR_v1610_Pdcch_BlindDetectionCA_Mixed_r16(CA_ParametersNR
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNR_v1610_Pdcch_BlindDetectionMCG_UE_Mixed_r16：ASN.1 pdcch-BlindDetectionMCG-UE-Mixed-r16；源文件第 14839 行；SEQUENCE。
+// Encode_CA_ParametersNR_v1610_Pdcch_BlindDetectionMCG_UE_Mixed_r16 只读不分配；Decode_CA_ParametersNR_v1610_Pdcch_BlindDetectionMCG_UE_Mixed_r16 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNR_v1610_Pdcch_BlindDetectionMCG_UE_Mixed_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1610_Pdcch_BlindDetectionMCG_UE_Mixed_r16(Encoder& enc, const CA_ParametersNR_v1610_Pdcch_BlindDetectionMCG_UE_Mixed_r16& value)
 {
     (void)value;
@@ -7368,6 +7776,10 @@ void Free_CA_ParametersNR_v1610_Pdcch_BlindDetectionMCG_UE_Mixed_r16(CA_Paramete
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNR_v1610_Pdcch_BlindDetectionSCG_UE_Mixed_r16：ASN.1 pdcch-BlindDetectionSCG-UE-Mixed-r16；源文件第 14843 行；SEQUENCE。
+// Encode_CA_ParametersNR_v1610_Pdcch_BlindDetectionSCG_UE_Mixed_r16 只读不分配；Decode_CA_ParametersNR_v1610_Pdcch_BlindDetectionSCG_UE_Mixed_r16 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNR_v1610_Pdcch_BlindDetectionSCG_UE_Mixed_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1610_Pdcch_BlindDetectionSCG_UE_Mixed_r16(Encoder& enc, const CA_ParametersNR_v1610_Pdcch_BlindDetectionSCG_UE_Mixed_r16& value)
 {
     (void)value;
@@ -7403,6 +7815,10 @@ void Free_CA_ParametersNR_v1610_Pdcch_BlindDetectionSCG_UE_Mixed_r16(CA_Paramete
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNR_v1610：ASN.1 CA-ParametersNR-v1610；源文件第 14788 行；SEQUENCE。
+// Encode_CA_ParametersNR_v1610 只读不分配；Decode_CA_ParametersNR_v1610 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNR_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1610(Encoder& enc, const CA_ParametersNR_v1610& value)
 {
     (void)value;
@@ -7725,6 +8141,10 @@ void Free_CA_ParametersNR_v1610(CA_ParametersNR_v1610& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNRDC_v1610：ASN.1 CA-ParametersNRDC-v1610；源文件第 15469 行；SEQUENCE。
+// Encode_CA_ParametersNRDC_v1610 只读不分配；Decode_CA_ParametersNRDC_v1610 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNRDC_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNRDC_v1610(Encoder& enc, const CA_ParametersNRDC_v1610& value)
 {
     (void)value;
@@ -7794,6 +8214,10 @@ void Free_CA_ParametersNRDC_v1610(CA_ParametersNRDC_v1610& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MRDC_Parameters_v1620_MaxUplinkDutyCycle_interBandENDC_TDD_PC2_r16：ASN.1 maxUplinkDutyCycle-interBandENDC-TDD-PC2-r16；源文件第 18560 行；SEQUENCE。
+// Encode_MRDC_Parameters_v1620_MaxUplinkDutyCycle_interBandENDC_TDD_PC2_r16 只读不分配；Decode_MRDC_Parameters_v1620_MaxUplinkDutyCycle_interBandENDC_TDD_PC2_r16 可能 malloc（失败时内部已释放并清零）；Free_MRDC_Parameters_v1620_MaxUplinkDutyCycle_interBandENDC_TDD_PC2_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_v1620_MaxUplinkDutyCycle_interBandENDC_TDD_PC2_r16(Encoder& enc, const MRDC_Parameters_v1620_MaxUplinkDutyCycle_interBandENDC_TDD_PC2_r16& value)
 {
     (void)value;
@@ -7908,6 +8332,10 @@ void Free_MRDC_Parameters_v1620_MaxUplinkDutyCycle_interBandENDC_TDD_PC2_r16(MRD
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MRDC_Parameters_v1620：ASN.1 MRDC-Parameters-v1620；源文件第 18559 行；SEQUENCE。
+// Encode_MRDC_Parameters_v1620 只读不分配；Decode_MRDC_Parameters_v1620 可能 malloc（失败时内部已释放并清零）；Free_MRDC_Parameters_v1620 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_v1620(Encoder& enc, const MRDC_Parameters_v1620& value)
 {
     (void)value;
@@ -7987,6 +8415,10 @@ void Free_MRDC_Parameters_v1620(MRDC_Parameters_v1620& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombination_v1610：ASN.1 BandCombination-v1610；源文件第 14298 行；SEQUENCE。
+// Encode_BandCombination_v1610 只读不分配；Decode_BandCombination_v1610 可能 malloc（失败时内部已释放并清零）；Free_BandCombination_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1610(Encoder& enc, const BandCombination_v1610& value)
 {
     (void)value;
@@ -8116,6 +8548,10 @@ void Free_BandCombination_v1610(BandCombination_v1610& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SimulSRS_ForAntennaSwitching_r16：ASN.1 SimulSRS-ForAntennaSwitching-r16；源文件第 15409 行；SEQUENCE。
+// Encode_SimulSRS_ForAntennaSwitching_r16 只读不分配；Decode_SimulSRS_ForAntennaSwitching_r16 可能 malloc（失败时内部已释放并清零）；Free_SimulSRS_ForAntennaSwitching_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SimulSRS_ForAntennaSwitching_r16(Encoder& enc, const SimulSRS_ForAntennaSwitching_r16& value)
 {
     (void)value;
@@ -8172,6 +8608,10 @@ void Free_SimulSRS_ForAntennaSwitching_r16(SimulSRS_ForAntennaSwitching_r16& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNR_v1630：ASN.1 CA-ParametersNR-v1630；源文件第 14861 行；SEQUENCE。
+// Encode_CA_ParametersNR_v1630 只读不分配；Decode_CA_ParametersNR_v1630 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNR_v1630 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1630(Encoder& enc, const CA_ParametersNR_v1630& value)
 {
     (void)value;
@@ -8244,6 +8684,10 @@ void Free_CA_ParametersNR_v1630(CA_ParametersNR_v1630& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNRDC_v1630：ASN.1 CA-ParametersNRDC-v1630；源文件第 15479 行；SEQUENCE。
+// Encode_CA_ParametersNRDC_v1630 只读不分配；Decode_CA_ParametersNRDC_v1630 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNRDC_v1630 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNRDC_v1630(Encoder& enc, const CA_ParametersNRDC_v1630& value)
 {
     (void)value;
@@ -8291,6 +8735,10 @@ void Free_CA_ParametersNRDC_v1630(CA_ParametersNRDC_v1630& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MRDC_Parameters_v1630_MaxUplinkDutyCycle_interBandENDC_FDD_TDD_PC2_r16：ASN.1 maxUplinkDutyCycle-interBandENDC-FDD-TDD-PC2-r16；源文件第 18581 行；SEQUENCE。
+// Encode_MRDC_Parameters_v1630_MaxUplinkDutyCycle_interBandENDC_FDD_TDD_PC2_r16 只读不分配；Decode_MRDC_Parameters_v1630_MaxUplinkDutyCycle_interBandENDC_FDD_TDD_PC2_r16 可能 malloc（失败时内部已释放并清零）；Free_MRDC_Parameters_v1630_MaxUplinkDutyCycle_interBandENDC_FDD_TDD_PC2_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_v1630_MaxUplinkDutyCycle_interBandENDC_FDD_TDD_PC2_r16(Encoder& enc, const MRDC_Parameters_v1630_MaxUplinkDutyCycle_interBandENDC_FDD_TDD_PC2_r16& value)
 {
     (void)value;
@@ -8340,6 +8788,10 @@ void Free_MRDC_Parameters_v1630_MaxUplinkDutyCycle_interBandENDC_FDD_TDD_PC2_r16
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MRDC_Parameters_v1630：ASN.1 MRDC-Parameters-v1630；源文件第 18579 行；SEQUENCE。
+// Encode_MRDC_Parameters_v1630 只读不分配；Decode_MRDC_Parameters_v1630 可能 malloc（失败时内部已释放并清零）；Free_MRDC_Parameters_v1630 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_v1630(Encoder& enc, const MRDC_Parameters_v1630& value)
 {
     (void)value;
@@ -8386,6 +8838,10 @@ void Free_MRDC_Parameters_v1630(MRDC_Parameters_v1630& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombination_v1630：ASN.1 BandCombination-v1630；源文件第 14308 行；SEQUENCE。
+// Encode_BandCombination_v1630 只读不分配；Decode_BandCombination_v1630 可能 malloc（失败时内部已释放并清零）；Free_BandCombination_v1630 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1630(Encoder& enc, const BandCombination_v1630& value)
 {
     (void)value;
@@ -8549,6 +9005,10 @@ void Free_BandCombination_v1630(BandCombination_v1630& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PUCCH_Grp_CarrierTypes_r16：ASN.1 PUCCH-Grp-CarrierTypes-r16；源文件第 15436 行；SEQUENCE。
+// Encode_PUCCH_Grp_CarrierTypes_r16 只读不分配；Decode_PUCCH_Grp_CarrierTypes_r16 可能 malloc（失败时内部已释放并清零）；Free_PUCCH_Grp_CarrierTypes_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PUCCH_Grp_CarrierTypes_r16(Encoder& enc, const PUCCH_Grp_CarrierTypes_r16& value)
 {
     (void)value;
@@ -8616,6 +9076,10 @@ void Free_PUCCH_Grp_CarrierTypes_r16(PUCCH_Grp_CarrierTypes_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNR_v1640_Pdcch_BlindDetectionCA_Mixed_NonAlignedSpan_r16：ASN.1 pdcch-BlindDetectionCA-Mixed-NonAlignedSpan-r16；源文件第 14894 行；SEQUENCE。
+// Encode_CA_ParametersNR_v1640_Pdcch_BlindDetectionCA_Mixed_NonAlignedSpan_r16 只读不分配；Decode_CA_ParametersNR_v1640_Pdcch_BlindDetectionCA_Mixed_NonAlignedSpan_r16 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNR_v1640_Pdcch_BlindDetectionCA_Mixed_NonAlignedSpan_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1640_Pdcch_BlindDetectionCA_Mixed_NonAlignedSpan_r16(Encoder& enc, const CA_ParametersNR_v1640_Pdcch_BlindDetectionCA_Mixed_NonAlignedSpan_r16& value)
 {
     (void)value;
@@ -8651,6 +9115,10 @@ void Free_CA_ParametersNR_v1640_Pdcch_BlindDetectionCA_Mixed_NonAlignedSpan_r16(
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNR_v1640：ASN.1 CA-ParametersNR-v1640；源文件第 14873 行；SEQUENCE。
+// Encode_CA_ParametersNR_v1640 只读不分配；Decode_CA_ParametersNR_v1640 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNR_v1640 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1640(Encoder& enc, const CA_ParametersNR_v1640& value)
 {
     (void)value;
@@ -8800,6 +9268,10 @@ void Free_CA_ParametersNR_v1640(CA_ParametersNR_v1640& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNRDC_v1640：ASN.1 CA-ParametersNRDC-v1640；源文件第 15484 行；SEQUENCE。
+// Encode_CA_ParametersNRDC_v1640 只读不分配；Decode_CA_ParametersNRDC_v1640 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNRDC_v1640 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNRDC_v1640(Encoder& enc, const CA_ParametersNRDC_v1640& value)
 {
     (void)value;
@@ -8835,6 +9307,10 @@ void Free_CA_ParametersNRDC_v1640(CA_ParametersNRDC_v1640& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombination_v1640：ASN.1 BandCombination-v1640；源文件第 14318 行；SEQUENCE。
+// Encode_BandCombination_v1640 只读不分配；Decode_BandCombination_v1640 可能 malloc（失败时内部已释放并清零）；Free_BandCombination_v1640 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1640(Encoder& enc, const BandCombination_v1640& value)
 {
     (void)value;
@@ -8882,6 +9358,10 @@ void Free_BandCombination_v1640(BandCombination_v1640& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CA_ParametersNRDC_v1650：ASN.1 CA-ParametersNRDC-v1650；源文件第 15488 行；SEQUENCE。
+// Encode_CA_ParametersNRDC_v1650 只读不分配；Decode_CA_ParametersNRDC_v1650 可能 malloc（失败时内部已释放并清零）；Free_CA_ParametersNRDC_v1650 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNRDC_v1650(Encoder& enc, const CA_ParametersNRDC_v1650& value)
 {
     (void)value;

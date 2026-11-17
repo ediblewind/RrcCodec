@@ -18,6 +18,10 @@
 namespace rrc {
 namespace v1810 {
 
+// --------------------------------------------------------------------------
+// ULInformationTransferMRDC_CriticalExtensions_C1：ASN.1 criticalExtensions/c1；源文件第 3298 行；CHOICE。
+// Encode_ULInformationTransferMRDC_CriticalExtensions_C1 只读不分配；Decode_ULInformationTransferMRDC_CriticalExtensions_C1 可能 malloc（失败时内部已释放并清零）；Free_ULInformationTransferMRDC_CriticalExtensions_C1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ULInformationTransferMRDC_CriticalExtensions_C1(Encoder& enc, const ULInformationTransferMRDC_CriticalExtensions_C1& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 3);
@@ -95,6 +99,10 @@ void Free_ULInformationTransferMRDC_CriticalExtensions_C1(ULInformationTransferM
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ULInformationTransferMRDC_CriticalExtensionsFuture：ASN.1 criticalExtensions/criticalExtensionsFuture；源文件第 3302 行；空 SEQUENCE{}。
+// Encode_ULInformationTransferMRDC_CriticalExtensionsFuture 只读不分配；Decode_ULInformationTransferMRDC_CriticalExtensionsFuture 可能 malloc（失败时内部已释放并清零）；Free_ULInformationTransferMRDC_CriticalExtensionsFuture 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ULInformationTransferMRDC_CriticalExtensionsFuture(Encoder& enc, const ULInformationTransferMRDC_CriticalExtensionsFuture& value)
 {
     (void)value;
@@ -112,6 +120,10 @@ void Free_ULInformationTransferMRDC_CriticalExtensionsFuture(ULInformationTransf
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ULInformationTransferMRDC_CriticalExtensions：ASN.1 criticalExtensions；源文件第 3297 行；CHOICE。
+// Encode_ULInformationTransferMRDC_CriticalExtensions 只读不分配；Decode_ULInformationTransferMRDC_CriticalExtensions 可能 malloc（失败时内部已释放并清零）；Free_ULInformationTransferMRDC_CriticalExtensions 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ULInformationTransferMRDC_CriticalExtensions(Encoder& enc, const ULInformationTransferMRDC_CriticalExtensions& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -172,6 +184,10 @@ void Free_ULInformationTransferMRDC_CriticalExtensions(ULInformationTransferMRDC
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ULInformationTransferMRDC：ASN.1 ULInformationTransferMRDC；源文件第 3296 行；SEQUENCE。
+// Encode_ULInformationTransferMRDC 只读不分配；Decode_ULInformationTransferMRDC 可能 malloc（失败时内部已释放并清零）；Free_ULInformationTransferMRDC 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ULInformationTransferMRDC(Encoder& enc, const ULInformationTransferMRDC& value)
 {
     (void)value;
@@ -200,6 +216,10 @@ void Free_ULInformationTransferMRDC(ULInformationTransferMRDC& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2_ExtGroup1_RelaxedMeasurement_r16_LowMobilityEvaluation_r16：ASN.1 relaxedMeasurement-r16/lowMobilityEvaluation-r16；源文件第 3389 行；SEQUENCE。
+// Encode_SIB2_ExtGroup1_RelaxedMeasurement_r16_LowMobilityEvaluation_r16 只读不分配；Decode_SIB2_ExtGroup1_RelaxedMeasurement_r16_LowMobilityEvaluation_r16 可能 malloc（失败时内部已释放并清零）；Free_SIB2_ExtGroup1_RelaxedMeasurement_r16_LowMobilityEvaluation_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_ExtGroup1_RelaxedMeasurement_r16_LowMobilityEvaluation_r16(Encoder& enc, const SIB2_ExtGroup1_RelaxedMeasurement_r16_LowMobilityEvaluation_r16& value)
 {
     (void)value;
@@ -235,6 +255,10 @@ void Free_SIB2_ExtGroup1_RelaxedMeasurement_r16_LowMobilityEvaluation_r16(SIB2_E
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2_ExtGroup1_RelaxedMeasurement_r16_CellEdgeEvaluation_r16：ASN.1 relaxedMeasurement-r16/cellEdgeEvaluation-r16；源文件第 3398 行；SEQUENCE。
+// Encode_SIB2_ExtGroup1_RelaxedMeasurement_r16_CellEdgeEvaluation_r16 只读不分配；Decode_SIB2_ExtGroup1_RelaxedMeasurement_r16_CellEdgeEvaluation_r16 可能 malloc（失败时内部已释放并清零）；Free_SIB2_ExtGroup1_RelaxedMeasurement_r16_CellEdgeEvaluation_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_ExtGroup1_RelaxedMeasurement_r16_CellEdgeEvaluation_r16(Encoder& enc, const SIB2_ExtGroup1_RelaxedMeasurement_r16_CellEdgeEvaluation_r16& value)
 {
     (void)value;
@@ -277,6 +301,10 @@ void Free_SIB2_ExtGroup1_RelaxedMeasurement_r16_CellEdgeEvaluation_r16(SIB2_ExtG
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2_ExtGroup1_RelaxedMeasurement_r16：ASN.1 relaxedMeasurement-r16；源文件第 3388 行；SEQUENCE。
+// Encode_SIB2_ExtGroup1_RelaxedMeasurement_r16 只读不分配；Decode_SIB2_ExtGroup1_RelaxedMeasurement_r16 可能 malloc（失败时内部已释放并清零）；Free_SIB2_ExtGroup1_RelaxedMeasurement_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_ExtGroup1_RelaxedMeasurement_r16(Encoder& enc, const SIB2_ExtGroup1_RelaxedMeasurement_r16& value)
 {
     (void)value;
@@ -346,6 +374,10 @@ void Free_SIB2_ExtGroup1_RelaxedMeasurement_r16(SIB2_ExtGroup1_RelaxedMeasuremen
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2_ExtGroup1：ASN.1 SIB2_ExtGroup1；源文件第 3387 行；扩展添加组 [[ ]]。
+// Encode_SIB2_ExtGroup1 只读不分配；Decode_SIB2_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_SIB2_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_ExtGroup1(Encoder& enc, const SIB2_ExtGroup1& value)
 {
     (void)value;
@@ -381,6 +413,10 @@ void Free_SIB2_ExtGroup1(SIB2_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2_ExtGroup2_RelaxedMeasurement_r17_StationaryMobilityEvaluation_r17：ASN.1 relaxedMeasurement-r17/stationaryMobilityEvaluation-r17；源文件第 3409 行；SEQUENCE。
+// Encode_SIB2_ExtGroup2_RelaxedMeasurement_r17_StationaryMobilityEvaluation_r17 只读不分配；Decode_SIB2_ExtGroup2_RelaxedMeasurement_r17_StationaryMobilityEvaluation_r17 可能 malloc（失败时内部已释放并清零）；Free_SIB2_ExtGroup2_RelaxedMeasurement_r17_StationaryMobilityEvaluation_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_ExtGroup2_RelaxedMeasurement_r17_StationaryMobilityEvaluation_r17(Encoder& enc, const SIB2_ExtGroup2_RelaxedMeasurement_r17_StationaryMobilityEvaluation_r17& value)
 {
     (void)value;
@@ -416,6 +452,10 @@ void Free_SIB2_ExtGroup2_RelaxedMeasurement_r17_StationaryMobilityEvaluation_r17
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2_ExtGroup2_RelaxedMeasurement_r17_CellEdgeEvaluationWhileStationary_r17：ASN.1 relaxedMeasurement-r17/cellEdgeEvaluationWhileStationary-r17；源文件第 3414 行；SEQUENCE。
+// Encode_SIB2_ExtGroup2_RelaxedMeasurement_r17_CellEdgeEvaluationWhileStationary_r17 只读不分配；Decode_SIB2_ExtGroup2_RelaxedMeasurement_r17_CellEdgeEvaluationWhileStationary_r17 可能 malloc（失败时内部已释放并清零）；Free_SIB2_ExtGroup2_RelaxedMeasurement_r17_CellEdgeEvaluationWhileStationary_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_ExtGroup2_RelaxedMeasurement_r17_CellEdgeEvaluationWhileStationary_r17(Encoder& enc, const SIB2_ExtGroup2_RelaxedMeasurement_r17_CellEdgeEvaluationWhileStationary_r17& value)
 {
     (void)value;
@@ -458,6 +498,10 @@ void Free_SIB2_ExtGroup2_RelaxedMeasurement_r17_CellEdgeEvaluationWhileStationar
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2_ExtGroup2_RelaxedMeasurement_r17：ASN.1 relaxedMeasurement-r17；源文件第 3408 行；SEQUENCE。
+// Encode_SIB2_ExtGroup2_RelaxedMeasurement_r17 只读不分配；Decode_SIB2_ExtGroup2_RelaxedMeasurement_r17 可能 malloc（失败时内部已释放并清零）；Free_SIB2_ExtGroup2_RelaxedMeasurement_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_ExtGroup2_RelaxedMeasurement_r17(Encoder& enc, const SIB2_ExtGroup2_RelaxedMeasurement_r17& value)
 {
     (void)value;
@@ -509,6 +553,10 @@ void Free_SIB2_ExtGroup2_RelaxedMeasurement_r17(SIB2_ExtGroup2_RelaxedMeasuremen
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2_ExtGroup2：ASN.1 SIB2_ExtGroup2；源文件第 3406 行；扩展添加组 [[ ]]。
+// Encode_SIB2_ExtGroup2 只读不分配；Decode_SIB2_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_SIB2_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_ExtGroup2(Encoder& enc, const SIB2_ExtGroup2& value)
 {
     (void)value;
@@ -557,6 +605,10 @@ void Free_SIB2_ExtGroup2(SIB2_ExtGroup2& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ThresholdNR：ASN.1 ThresholdNR；源文件第 7796 行；SEQUENCE。
+// Encode_ThresholdNR 只读不分配；Decode_ThresholdNR 可能 malloc（失败时内部已释放并清零）；Free_ThresholdNR 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ThresholdNR(Encoder& enc, const ThresholdNR& value)
 {
     (void)value;
@@ -619,6 +671,10 @@ void Free_ThresholdNR(ThresholdNR& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MobilityStateParameters：ASN.1 MobilityStateParameters；源文件第 8306 行；SEQUENCE。
+// Encode_MobilityStateParameters 只读不分配；Decode_MobilityStateParameters 可能 malloc（失败时内部已释放并清零）；Free_MobilityStateParameters 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MobilityStateParameters(Encoder& enc, const MobilityStateParameters& value)
 {
     (void)value;
@@ -666,6 +722,10 @@ void Free_MobilityStateParameters(MobilityStateParameters& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars_Q_HystSF：ASN.1 cellReselectionInfoCommon/speedStateReselectionPars/q-HystSF；源文件第 3334 行；SEQUENCE。
+// Encode_SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars_Q_HystSF 只读不分配；Decode_SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars_Q_HystSF 可能 malloc（失败时内部已释放并清零）；Free_SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars_Q_HystSF 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars_Q_HystSF(Encoder& enc, const SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars_Q_HystSF& value)
 {
     (void)value;
@@ -701,6 +761,10 @@ void Free_SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars_Q_HystSF(SIB2
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars：ASN.1 cellReselectionInfoCommon/speedStateReselectionPars；源文件第 3332 行；SEQUENCE。
+// Encode_SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars 只读不分配；Decode_SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars 可能 malloc（失败时内部已释放并清零）；Free_SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars(Encoder& enc, const SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars& value)
 {
     (void)value;
@@ -734,6 +798,10 @@ void Free_SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars(SIB2_CellRese
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2_CellReselectionInfoCommon：ASN.1 cellReselectionInfoCommon；源文件第 3325 行；SEQUENCE。
+// Encode_SIB2_CellReselectionInfoCommon 只读不分配；Decode_SIB2_CellReselectionInfoCommon 可能 malloc（失败时内部已释放并清零）；Free_SIB2_CellReselectionInfoCommon 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_CellReselectionInfoCommon(Encoder& enc, const SIB2_CellReselectionInfoCommon& value)
 {
     (void)value;
@@ -820,6 +888,10 @@ void Free_SIB2_CellReselectionInfoCommon(SIB2_CellReselectionInfoCommon& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2_CellReselectionServingFreqInfo：ASN.1 cellReselectionServingFreqInfo；源文件第 3341 行；SEQUENCE。
+// Encode_SIB2_CellReselectionServingFreqInfo 只读不分配；Decode_SIB2_CellReselectionServingFreqInfo 可能 malloc（失败时内部已释放并清零）；Free_SIB2_CellReselectionServingFreqInfo 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_CellReselectionServingFreqInfo(Encoder& enc, const SIB2_CellReselectionServingFreqInfo& value)
 {
     (void)value;
@@ -914,6 +986,10 @@ void Free_SIB2_CellReselectionServingFreqInfo(SIB2_CellReselectionServingFreqInf
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SSB_ToMeasure：ASN.1 SSB-ToMeasure；源文件第 13605 行；CHOICE。
+// Encode_SSB_ToMeasure 只读不分配；Decode_SSB_ToMeasure 可能 malloc（失败时内部已释放并清零）；Free_SSB_ToMeasure 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SSB_ToMeasure(Encoder& enc, const SSB_ToMeasure& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 2);
@@ -999,6 +1075,10 @@ void Free_SSB_ToMeasure(SSB_ToMeasure& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SS_RSSI_Measurement：ASN.1 SS-RSSI-Measurement；源文件第 13614 行；SEQUENCE。
+// Encode_SS_RSSI_Measurement 只读不分配；Decode_SS_RSSI_Measurement 可能 malloc（失败时内部已释放并清零）；Free_SS_RSSI_Measurement 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SS_RSSI_Measurement(Encoder& enc, const SS_RSSI_Measurement& value)
 {
     (void)value;
@@ -1039,6 +1119,10 @@ void Free_SS_RSSI_Measurement(SS_RSSI_Measurement& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SpeedStateScaleFactors：ASN.1 SpeedStateScaleFactors；源文件第 12973 行；SEQUENCE。
+// Encode_SpeedStateScaleFactors 只读不分配；Decode_SpeedStateScaleFactors 可能 malloc（失败时内部已释放并清零）；Free_SpeedStateScaleFactors 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SpeedStateScaleFactors(Encoder& enc, const SpeedStateScaleFactors& value)
 {
     (void)value;
@@ -1074,6 +1158,10 @@ void Free_SpeedStateScaleFactors(SpeedStateScaleFactors& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2_IntraFreqCellReselectionInfo_ExtGroup1：ASN.1 SIB2_IntraFreqCellReselectionInfo_ExtGroup1；源文件第 3365 行；扩展添加组 [[ ]]。
+// Encode_SIB2_IntraFreqCellReselectionInfo_ExtGroup1 只读不分配；Decode_SIB2_IntraFreqCellReselectionInfo_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_SIB2_IntraFreqCellReselectionInfo_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_IntraFreqCellReselectionInfo_ExtGroup1(Encoder& enc, const SIB2_IntraFreqCellReselectionInfo_ExtGroup1& value)
 {
     (void)value;
@@ -1109,6 +1197,10 @@ void Free_SIB2_IntraFreqCellReselectionInfo_ExtGroup1(SIB2_IntraFreqCellReselect
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SSB_MTC2_LP_r16：ASN.1 SSB-MTC2-LP-r16；源文件第 13554 行；SEQUENCE。
+// Encode_SSB_MTC2_LP_r16 只读不分配；Decode_SSB_MTC2_LP_r16 可能 malloc（失败时内部已释放并清零）；Free_SSB_MTC2_LP_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SSB_MTC2_LP_r16(Encoder& enc, const SSB_MTC2_LP_r16& value)
 {
     (void)value;
@@ -1172,6 +1264,10 @@ void Free_SSB_MTC2_LP_r16(SSB_MTC2_LP_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2_IntraFreqCellReselectionInfo_ExtGroup2：ASN.1 SIB2_IntraFreqCellReselectionInfo_ExtGroup2；源文件第 3368 行；扩展添加组 [[ ]]。
+// Encode_SIB2_IntraFreqCellReselectionInfo_ExtGroup2 只读不分配；Decode_SIB2_IntraFreqCellReselectionInfo_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_SIB2_IntraFreqCellReselectionInfo_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_IntraFreqCellReselectionInfo_ExtGroup2(Encoder& enc, const SIB2_IntraFreqCellReselectionInfo_ExtGroup2& value)
 {
     (void)value;
@@ -1220,6 +1316,10 @@ void Free_SIB2_IntraFreqCellReselectionInfo_ExtGroup2(SIB2_IntraFreqCellReselect
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2_IntraFreqCellReselectionInfo_ExtGroup3：ASN.1 SIB2_IntraFreqCellReselectionInfo_ExtGroup3；源文件第 3372 行；扩展添加组 [[ ]]。
+// Encode_SIB2_IntraFreqCellReselectionInfo_ExtGroup3 只读不分配；Decode_SIB2_IntraFreqCellReselectionInfo_ExtGroup3 可能 malloc（失败时内部已释放并清零）；Free_SIB2_IntraFreqCellReselectionInfo_ExtGroup3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_IntraFreqCellReselectionInfo_ExtGroup3(Encoder& enc, const SIB2_IntraFreqCellReselectionInfo_ExtGroup3& value)
 {
     (void)value;
@@ -1256,6 +1356,10 @@ void Free_SIB2_IntraFreqCellReselectionInfo_ExtGroup3(SIB2_IntraFreqCellReselect
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SSB_MTC4List_r17：ASN.1 SSB-MTC4List-r17；源文件第 7753 行；SEQUENCE OF。
+// Encode_SSB_MTC4List_r17 只读不分配；Decode_SSB_MTC4List_r17 可能 malloc（失败时内部已释放并清零）；Free_SSB_MTC4List_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SSB_MTC4List_r17(Encoder& enc, const SSB_MTC4List_r17& value)
 {
     (void)value;
@@ -1301,6 +1405,10 @@ void Free_SSB_MTC4List_r17(SSB_MTC4List_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2_IntraFreqCellReselectionInfo_ExtGroup4：ASN.1 SIB2_IntraFreqCellReselectionInfo_ExtGroup4；源文件第 3375 行；扩展添加组 [[ ]]。
+// Encode_SIB2_IntraFreqCellReselectionInfo_ExtGroup4 只读不分配；Decode_SIB2_IntraFreqCellReselectionInfo_ExtGroup4 可能 malloc（失败时内部已释放并清零）；Free_SIB2_IntraFreqCellReselectionInfo_ExtGroup4 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_IntraFreqCellReselectionInfo_ExtGroup4(Encoder& enc, const SIB2_IntraFreqCellReselectionInfo_ExtGroup4& value)
 {
     (void)value;
@@ -1336,6 +1444,10 @@ void Free_SIB2_IntraFreqCellReselectionInfo_ExtGroup4(SIB2_IntraFreqCellReselect
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2_IntraFreqCellReselectionInfo_ExtGroup5：ASN.1 SIB2_IntraFreqCellReselectionInfo_ExtGroup5；源文件第 3378 行；扩展添加组 [[ ]]。
+// Encode_SIB2_IntraFreqCellReselectionInfo_ExtGroup5 只读不分配；Decode_SIB2_IntraFreqCellReselectionInfo_ExtGroup5 可能 malloc（失败时内部已释放并清零）；Free_SIB2_IntraFreqCellReselectionInfo_ExtGroup5 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_IntraFreqCellReselectionInfo_ExtGroup5(Encoder& enc, const SIB2_IntraFreqCellReselectionInfo_ExtGroup5& value)
 {
     (void)value;
@@ -1383,6 +1495,10 @@ void Free_SIB2_IntraFreqCellReselectionInfo_ExtGroup5(SIB2_IntraFreqCellReselect
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2_IntraFreqCellReselectionInfo_ExtGroup6：ASN.1 SIB2_IntraFreqCellReselectionInfo_ExtGroup6；源文件第 3382 行；扩展添加组 [[ ]]。
+// Encode_SIB2_IntraFreqCellReselectionInfo_ExtGroup6 只读不分配；Decode_SIB2_IntraFreqCellReselectionInfo_ExtGroup6 可能 malloc（失败时内部已释放并清零）；Free_SIB2_IntraFreqCellReselectionInfo_ExtGroup6 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_IntraFreqCellReselectionInfo_ExtGroup6(Encoder& enc, const SIB2_IntraFreqCellReselectionInfo_ExtGroup6& value)
 {
     (void)value;
@@ -1418,6 +1534,10 @@ void Free_SIB2_IntraFreqCellReselectionInfo_ExtGroup6(SIB2_IntraFreqCellReselect
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2_IntraFreqCellReselectionInfo：ASN.1 intraFreqCellReselectionInfo；源文件第 3350 行；SEQUENCE。
+// Encode_SIB2_IntraFreqCellReselectionInfo 只读不分配；Decode_SIB2_IntraFreqCellReselectionInfo 可能 malloc（失败时内部已释放并清零）；Free_SIB2_IntraFreqCellReselectionInfo 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_IntraFreqCellReselectionInfo(Encoder& enc, const SIB2_IntraFreqCellReselectionInfo& value)
 {
     (void)value;
@@ -1735,6 +1855,10 @@ void Free_SIB2_IntraFreqCellReselectionInfo(SIB2_IntraFreqCellReselectionInfo& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB2：ASN.1 SIB2；源文件第 3324 行；SEQUENCE。
+// Encode_SIB2 只读不分配；Decode_SIB2 可能 malloc（失败时内部已释放并清零）；Free_SIB2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB2(Encoder& enc, const SIB2& value)
 {
     (void)value;
@@ -1839,6 +1963,10 @@ void Free_SIB2(SIB2& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IntraFreqNeighCellList_v1610：ASN.1 IntraFreqNeighCellList-v1610；源文件第 3449 行；SEQUENCE OF。
+// Encode_IntraFreqNeighCellList_v1610 只读不分配；Decode_IntraFreqNeighCellList_v1610 可能 malloc（失败时内部已释放并清零）；Free_IntraFreqNeighCellList_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqNeighCellList_v1610(Encoder& enc, const IntraFreqNeighCellList_v1610& value)
 {
     (void)value;
@@ -1884,6 +2012,10 @@ void Free_IntraFreqNeighCellList_v1610(IntraFreqNeighCellList_v1610& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IntraFreqAllowedCellList_r16：ASN.1 IntraFreqAllowedCellList-r16；源文件第 3472 行；SEQUENCE OF。
+// Encode_IntraFreqAllowedCellList_r16 只读不分配；Decode_IntraFreqAllowedCellList_r16 可能 malloc（失败时内部已释放并清零）；Free_IntraFreqAllowedCellList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqAllowedCellList_r16(Encoder& enc, const IntraFreqAllowedCellList_r16& value)
 {
     (void)value;
@@ -1929,6 +2061,10 @@ void Free_IntraFreqAllowedCellList_r16(IntraFreqAllowedCellList_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB3_ExtGroup1：ASN.1 SIB3_ExtGroup1；源文件第 3433 行；扩展添加组 [[ ]]。
+// Encode_SIB3_ExtGroup1 只读不分配；Decode_SIB3_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_SIB3_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB3_ExtGroup1(Encoder& enc, const SIB3_ExtGroup1& value)
 {
     (void)value;
@@ -2009,6 +2145,10 @@ void Free_SIB3_ExtGroup1(SIB3_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IntraFreqNeighCellList_v1710：ASN.1 IntraFreqNeighCellList-v1710；源文件第 3451 行；SEQUENCE OF。
+// Encode_IntraFreqNeighCellList_v1710 只读不分配；Decode_IntraFreqNeighCellList_v1710 可能 malloc（失败时内部已释放并清零）；Free_IntraFreqNeighCellList_v1710 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqNeighCellList_v1710(Encoder& enc, const IntraFreqNeighCellList_v1710& value)
 {
     (void)value;
@@ -2054,6 +2194,10 @@ void Free_IntraFreqNeighCellList_v1710(IntraFreqNeighCellList_v1710& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IntraFreqNeighHSDN_CellList_r17：ASN.1 IntraFreqNeighHSDN-CellList-r17；源文件第 3479 行；SEQUENCE OF。
+// Encode_IntraFreqNeighHSDN_CellList_r17 只读不分配；Decode_IntraFreqNeighHSDN_CellList_r17 可能 malloc（失败时内部已释放并清零）；Free_IntraFreqNeighHSDN_CellList_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqNeighHSDN_CellList_r17(Encoder& enc, const IntraFreqNeighHSDN_CellList_r17& value)
 {
     (void)value;
@@ -2099,6 +2243,10 @@ void Free_IntraFreqNeighHSDN_CellList_r17(IntraFreqNeighHSDN_CellList_r17& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB3_ExtGroup2：ASN.1 SIB3_ExtGroup2；源文件第 3438 行；扩展添加组 [[ ]]。
+// Encode_SIB3_ExtGroup2 只读不分配；Decode_SIB3_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_SIB3_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB3_ExtGroup2(Encoder& enc, const SIB3_ExtGroup2& value)
 {
     (void)value;
@@ -2146,6 +2294,10 @@ void Free_SIB3_ExtGroup2(SIB3_ExtGroup2& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB3_ExtGroup3：ASN.1 SIB3_ExtGroup3；源文件第 3442 行；扩展添加组 [[ ]]。
+// Encode_SIB3_ExtGroup3 只读不分配；Decode_SIB3_ExtGroup3 可能 malloc（失败时内部已释放并清零）；Free_SIB3_ExtGroup3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB3_ExtGroup3(Encoder& enc, const SIB3_ExtGroup3& value)
 {
     (void)value;
@@ -2180,6 +2332,10 @@ void Free_SIB3_ExtGroup3(SIB3_ExtGroup3& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IntraFreqNeighCellList：ASN.1 IntraFreqNeighCellList；源文件第 3447 行；SEQUENCE OF。
+// Encode_IntraFreqNeighCellList 只读不分配；Decode_IntraFreqNeighCellList 可能 malloc（失败时内部已释放并清零）；Free_IntraFreqNeighCellList 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqNeighCellList(Encoder& enc, const IntraFreqNeighCellList& value)
 {
     (void)value;
@@ -2225,6 +2381,10 @@ void Free_IntraFreqNeighCellList(IntraFreqNeighCellList& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IntraFreqExcludedCellList：ASN.1 IntraFreqExcludedCellList；源文件第 3470 行；SEQUENCE OF。
+// Encode_IntraFreqExcludedCellList 只读不分配；Decode_IntraFreqExcludedCellList 可能 malloc（失败时内部已释放并清零）；Free_IntraFreqExcludedCellList 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqExcludedCellList(Encoder& enc, const IntraFreqExcludedCellList& value)
 {
     (void)value;
@@ -2270,6 +2430,10 @@ void Free_IntraFreqExcludedCellList(IntraFreqExcludedCellList& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB3：ASN.1 SIB3；源文件第 3428 行；SEQUENCE。
+// Encode_SIB3 只读不分配；Decode_SIB3 可能 malloc（失败时内部已释放并清零）；Free_SIB3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB3(Encoder& enc, const SIB3& value)
 {
     (void)value;
@@ -2424,6 +2588,10 @@ void Free_SIB3(SIB3& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IntraFreqNeighCellInfo：ASN.1 IntraFreqNeighCellInfo；源文件第 3453 行；SEQUENCE。
+// Encode_IntraFreqNeighCellInfo 只读不分配；Decode_IntraFreqNeighCellInfo 可能 malloc（失败时内部已释放并清零）；Free_IntraFreqNeighCellInfo 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqNeighCellInfo(Encoder& enc, const IntraFreqNeighCellInfo& value)
 {
     (void)value;
@@ -2505,6 +2673,10 @@ void Free_IntraFreqNeighCellInfo(IntraFreqNeighCellInfo& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IntraFreqNeighCellInfo_v1610：ASN.1 IntraFreqNeighCellInfo-v1610；源文件第 3462 行；SEQUENCE。
+// Encode_IntraFreqNeighCellInfo_v1610 只读不分配；Decode_IntraFreqNeighCellInfo_v1610 可能 malloc（失败时内部已释放并清零）；Free_IntraFreqNeighCellInfo_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqNeighCellInfo_v1610(Encoder& enc, const IntraFreqNeighCellInfo_v1610& value)
 {
     (void)value;
@@ -2541,6 +2713,10 @@ void Free_IntraFreqNeighCellInfo_v1610(IntraFreqNeighCellInfo_v1610& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IntraFreqNeighCellInfo_v1710：ASN.1 IntraFreqNeighCellInfo-v1710；源文件第 3466 行；SEQUENCE。
+// Encode_IntraFreqNeighCellInfo_v1710 只读不分配；Decode_IntraFreqNeighCellInfo_v1710 可能 malloc（失败时内部已释放并清零）；Free_IntraFreqNeighCellInfo_v1710 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqNeighCellInfo_v1710(Encoder& enc, const IntraFreqNeighCellInfo_v1710& value)
 {
     (void)value;
@@ -2577,6 +2753,10 @@ void Free_IntraFreqNeighCellInfo_v1710(IntraFreqNeighCellInfo_v1710& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IntraFreqCAG_CellListPerPLMN_r16：ASN.1 IntraFreqCAG-CellListPerPLMN-r16；源文件第 3474 行；SEQUENCE。
+// Encode_IntraFreqCAG_CellListPerPLMN_r16 只读不分配；Decode_IntraFreqCAG_CellListPerPLMN_r16 可能 malloc（失败时内部已释放并清零）；Free_IntraFreqCAG_CellListPerPLMN_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqCAG_CellListPerPLMN_r16(Encoder& enc, const IntraFreqCAG_CellListPerPLMN_r16& value)
 {
     (void)value;
@@ -2632,6 +2812,10 @@ void Free_IntraFreqCAG_CellListPerPLMN_r16(IntraFreqCAG_CellListPerPLMN_r16& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqCarrierFreqList_v1610：ASN.1 InterFreqCarrierFreqList-v1610；源文件第 3510 行；SEQUENCE OF。
+// Encode_InterFreqCarrierFreqList_v1610 只读不分配；Decode_InterFreqCarrierFreqList_v1610 可能 malloc（失败时内部已释放并清零）；Free_InterFreqCarrierFreqList_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqList_v1610(Encoder& enc, const InterFreqCarrierFreqList_v1610& value)
 {
     (void)value;
@@ -2677,6 +2861,10 @@ void Free_InterFreqCarrierFreqList_v1610(InterFreqCarrierFreqList_v1610& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB4_ExtGroup1：ASN.1 SIB4_ExtGroup1；源文件第 3488 行；扩展添加组 [[ ]]。
+// Encode_SIB4_ExtGroup1 只读不分配；Decode_SIB4_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_SIB4_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB4_ExtGroup1(Encoder& enc, const SIB4_ExtGroup1& value)
 {
     (void)value;
@@ -2712,6 +2900,10 @@ void Free_SIB4_ExtGroup1(SIB4_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqCarrierFreqList_v1700：ASN.1 InterFreqCarrierFreqList-v1700；源文件第 3512 行；SEQUENCE OF。
+// Encode_InterFreqCarrierFreqList_v1700 只读不分配；Decode_InterFreqCarrierFreqList_v1700 可能 malloc（失败时内部已释放并清零）；Free_InterFreqCarrierFreqList_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqList_v1700(Encoder& enc, const InterFreqCarrierFreqList_v1700& value)
 {
     (void)value;
@@ -2757,6 +2949,10 @@ void Free_InterFreqCarrierFreqList_v1700(InterFreqCarrierFreqList_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB4_ExtGroup2：ASN.1 SIB4_ExtGroup2；源文件第 3491 行；扩展添加组 [[ ]]。
+// Encode_SIB4_ExtGroup2 只读不分配；Decode_SIB4_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_SIB4_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB4_ExtGroup2(Encoder& enc, const SIB4_ExtGroup2& value)
 {
     (void)value;
@@ -2792,6 +2988,10 @@ void Free_SIB4_ExtGroup2(SIB4_ExtGroup2& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqCarrierFreqList_v1720：ASN.1 InterFreqCarrierFreqList-v1720；源文件第 3514 行；SEQUENCE OF。
+// Encode_InterFreqCarrierFreqList_v1720 只读不分配；Decode_InterFreqCarrierFreqList_v1720 可能 malloc（失败时内部已释放并清零）；Free_InterFreqCarrierFreqList_v1720 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqList_v1720(Encoder& enc, const InterFreqCarrierFreqList_v1720& value)
 {
     (void)value;
@@ -2837,6 +3037,10 @@ void Free_InterFreqCarrierFreqList_v1720(InterFreqCarrierFreqList_v1720& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB4_ExtGroup3：ASN.1 SIB4_ExtGroup3；源文件第 3494 行；扩展添加组 [[ ]]。
+// Encode_SIB4_ExtGroup3 只读不分配；Decode_SIB4_ExtGroup3 可能 malloc（失败时内部已释放并清零）；Free_SIB4_ExtGroup3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB4_ExtGroup3(Encoder& enc, const SIB4_ExtGroup3& value)
 {
     (void)value;
@@ -2872,6 +3076,10 @@ void Free_SIB4_ExtGroup3(SIB4_ExtGroup3& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqCarrierFreqList_v1730：ASN.1 InterFreqCarrierFreqList-v1730；源文件第 3516 行；SEQUENCE OF。
+// Encode_InterFreqCarrierFreqList_v1730 只读不分配；Decode_InterFreqCarrierFreqList_v1730 可能 malloc（失败时内部已释放并清零）；Free_InterFreqCarrierFreqList_v1730 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqList_v1730(Encoder& enc, const InterFreqCarrierFreqList_v1730& value)
 {
     (void)value;
@@ -2917,6 +3125,10 @@ void Free_InterFreqCarrierFreqList_v1730(InterFreqCarrierFreqList_v1730& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB4_ExtGroup4：ASN.1 SIB4_ExtGroup4；源文件第 3497 行；扩展添加组 [[ ]]。
+// Encode_SIB4_ExtGroup4 只读不分配；Decode_SIB4_ExtGroup4 可能 malloc（失败时内部已释放并清零）；Free_SIB4_ExtGroup4 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB4_ExtGroup4(Encoder& enc, const SIB4_ExtGroup4& value)
 {
     (void)value;
@@ -2952,6 +3164,10 @@ void Free_SIB4_ExtGroup4(SIB4_ExtGroup4& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqCarrierFreqList_v1760：ASN.1 InterFreqCarrierFreqList-v1760；源文件第 3518 行；SEQUENCE OF。
+// Encode_InterFreqCarrierFreqList_v1760 只读不分配；Decode_InterFreqCarrierFreqList_v1760 可能 malloc（失败时内部已释放并清零）；Free_InterFreqCarrierFreqList_v1760 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqList_v1760(Encoder& enc, const InterFreqCarrierFreqList_v1760& value)
 {
     (void)value;
@@ -2997,6 +3213,10 @@ void Free_InterFreqCarrierFreqList_v1760(InterFreqCarrierFreqList_v1760& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB4_ExtGroup5：ASN.1 SIB4_ExtGroup5；源文件第 3500 行；扩展添加组 [[ ]]。
+// Encode_SIB4_ExtGroup5 只读不分配；Decode_SIB4_ExtGroup5 可能 malloc（失败时内部已释放并清零）；Free_SIB4_ExtGroup5 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB4_ExtGroup5(Encoder& enc, const SIB4_ExtGroup5& value)
 {
     (void)value;
@@ -3032,6 +3252,10 @@ void Free_SIB4_ExtGroup5(SIB4_ExtGroup5& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqCarrierFreqList_v1800：ASN.1 InterFreqCarrierFreqList-v1800；源文件第 3520 行；SEQUENCE OF。
+// Encode_InterFreqCarrierFreqList_v1800 只读不分配；Decode_InterFreqCarrierFreqList_v1800 可能 malloc（失败时内部已释放并清零）；Free_InterFreqCarrierFreqList_v1800 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqList_v1800(Encoder& enc, const InterFreqCarrierFreqList_v1800& value)
 {
     (void)value;
@@ -3077,6 +3301,10 @@ void Free_InterFreqCarrierFreqList_v1800(InterFreqCarrierFreqList_v1800& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB4_ExtGroup6：ASN.1 SIB4_ExtGroup6；源文件第 3503 行；扩展添加组 [[ ]]。
+// Encode_SIB4_ExtGroup6 只读不分配；Decode_SIB4_ExtGroup6 可能 malloc（失败时内部已释放并清零）；Free_SIB4_ExtGroup6 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB4_ExtGroup6(Encoder& enc, const SIB4_ExtGroup6& value)
 {
     (void)value;
@@ -3112,6 +3340,10 @@ void Free_SIB4_ExtGroup6(SIB4_ExtGroup6& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqCarrierFreqList：ASN.1 InterFreqCarrierFreqList；源文件第 3508 行；SEQUENCE OF。
+// Encode_InterFreqCarrierFreqList 只读不分配；Decode_InterFreqCarrierFreqList 可能 malloc（失败时内部已释放并清零）；Free_InterFreqCarrierFreqList 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqList(Encoder& enc, const InterFreqCarrierFreqList& value)
 {
     (void)value;
@@ -3157,6 +3389,10 @@ void Free_InterFreqCarrierFreqList(InterFreqCarrierFreqList& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB4：ASN.1 SIB4；源文件第 3484 行；SEQUENCE。
+// Encode_SIB4 只读不分配；Decode_SIB4 可能 malloc（失败时内部已释放并清零）；Free_SIB4 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB4(Encoder& enc, const SIB4& value)
 {
     (void)value;
@@ -3361,6 +3597,10 @@ void Free_SIB4(SIB4& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqNeighCellList：ASN.1 InterFreqNeighCellList；源文件第 3594 行；SEQUENCE OF。
+// Encode_InterFreqNeighCellList 只读不分配；Decode_InterFreqNeighCellList 可能 malloc（失败时内部已释放并清零）；Free_InterFreqNeighCellList 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqNeighCellList(Encoder& enc, const InterFreqNeighCellList& value)
 {
     (void)value;
@@ -3406,6 +3646,10 @@ void Free_InterFreqNeighCellList(InterFreqNeighCellList& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqExcludedCellList：ASN.1 InterFreqExcludedCellList；源文件第 3617 行；SEQUENCE OF。
+// Encode_InterFreqExcludedCellList 只读不分配；Decode_InterFreqExcludedCellList 可能 malloc（失败时内部已释放并清零）；Free_InterFreqExcludedCellList 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqExcludedCellList(Encoder& enc, const InterFreqExcludedCellList& value)
 {
     (void)value;
@@ -3451,6 +3695,10 @@ void Free_InterFreqExcludedCellList(InterFreqExcludedCellList& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqCarrierFreqInfo_ThreshX_Q：ASN.1 threshX-Q；源文件第 3541 行；SEQUENCE。
+// Encode_InterFreqCarrierFreqInfo_ThreshX_Q 只读不分配；Decode_InterFreqCarrierFreqInfo_ThreshX_Q 可能 malloc（失败时内部已释放并清零）；Free_InterFreqCarrierFreqInfo_ThreshX_Q 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqInfo_ThreshX_Q(Encoder& enc, const InterFreqCarrierFreqInfo_ThreshX_Q& value)
 {
     (void)value;
@@ -3486,6 +3734,10 @@ void Free_InterFreqCarrierFreqInfo_ThreshX_Q(InterFreqCarrierFreqInfo_ThreshX_Q&
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqCarrierFreqInfo：ASN.1 InterFreqCarrierFreqInfo；源文件第 3522 行；SEQUENCE。
+// Encode_InterFreqCarrierFreqInfo 只读不分配；Decode_InterFreqCarrierFreqInfo 可能 malloc（失败时内部已释放并清零）；Free_InterFreqCarrierFreqInfo 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqInfo(Encoder& enc, const InterFreqCarrierFreqInfo& value)
 {
     (void)value;
@@ -3769,6 +4021,10 @@ void Free_InterFreqCarrierFreqInfo(InterFreqCarrierFreqInfo& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqNeighCellList_v1610：ASN.1 InterFreqNeighCellList-v1610；源文件第 3596 行；SEQUENCE OF。
+// Encode_InterFreqNeighCellList_v1610 只读不分配；Decode_InterFreqNeighCellList_v1610 可能 malloc（失败时内部已释放并清零）；Free_InterFreqNeighCellList_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqNeighCellList_v1610(Encoder& enc, const InterFreqNeighCellList_v1610& value)
 {
     (void)value;
@@ -3814,6 +4070,10 @@ void Free_InterFreqNeighCellList_v1610(InterFreqNeighCellList_v1610& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqAllowedCellList_r16：ASN.1 InterFreqAllowedCellList-r16；源文件第 3619 行；SEQUENCE OF。
+// Encode_InterFreqAllowedCellList_r16 只读不分配；Decode_InterFreqAllowedCellList_r16 可能 malloc（失败时内部已释放并清零）；Free_InterFreqAllowedCellList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqAllowedCellList_r16(Encoder& enc, const InterFreqAllowedCellList_r16& value)
 {
     (void)value;
@@ -3859,6 +4119,10 @@ void Free_InterFreqAllowedCellList_r16(InterFreqAllowedCellList_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqCarrierFreqInfo_v1610：ASN.1 InterFreqCarrierFreqInfo-v1610；源文件第 3554 行；SEQUENCE。
+// Encode_InterFreqCarrierFreqInfo_v1610 只读不分配；Decode_InterFreqCarrierFreqInfo_v1610 可能 malloc（失败时内部已释放并清零）；Free_InterFreqCarrierFreqInfo_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqInfo_v1610(Encoder& enc, const InterFreqCarrierFreqInfo_v1610& value)
 {
     (void)value;
@@ -3964,6 +4228,10 @@ void Free_InterFreqCarrierFreqInfo_v1610(InterFreqCarrierFreqInfo_v1610& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqNeighHSDN_CellList_r17：ASN.1 InterFreqNeighHSDN-CellList-r17；源文件第 3592 行；SEQUENCE OF。
+// Encode_InterFreqNeighHSDN_CellList_r17 只读不分配；Decode_InterFreqNeighHSDN_CellList_r17 可能 malloc（失败时内部已释放并清零）；Free_InterFreqNeighHSDN_CellList_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqNeighHSDN_CellList_r17(Encoder& enc, const InterFreqNeighHSDN_CellList_r17& value)
 {
     (void)value;
@@ -4009,6 +4277,10 @@ void Free_InterFreqNeighHSDN_CellList_r17(InterFreqNeighHSDN_CellList_r17& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqNeighCellList_v1710：ASN.1 InterFreqNeighCellList-v1710；源文件第 3598 行；SEQUENCE OF。
+// Encode_InterFreqNeighCellList_v1710 只读不分配；Decode_InterFreqNeighCellList_v1710 可能 malloc（失败时内部已释放并清零）；Free_InterFreqNeighCellList_v1710 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqNeighCellList_v1710(Encoder& enc, const InterFreqNeighCellList_v1710& value)
 {
     (void)value;
@@ -4054,6 +4326,10 @@ void Free_InterFreqNeighCellList_v1710(InterFreqNeighCellList_v1710& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqCarrierFreqInfo_v1700：ASN.1 InterFreqCarrierFreqInfo-v1700；源文件第 3562 行；SEQUENCE。
+// Encode_InterFreqCarrierFreqInfo_v1700 只读不分配；Decode_InterFreqCarrierFreqInfo_v1700 可能 malloc（失败时内部已释放并清零）；Free_InterFreqCarrierFreqInfo_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqInfo_v1700(Encoder& enc, const InterFreqCarrierFreqInfo_v1700& value)
 {
     (void)value;
@@ -4136,6 +4412,10 @@ void Free_InterFreqCarrierFreqInfo_v1700(InterFreqCarrierFreqInfo_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqCarrierFreqInfo_v1720：ASN.1 InterFreqCarrierFreqInfo-v1720；源文件第 3570 行；SEQUENCE。
+// Encode_InterFreqCarrierFreqInfo_v1720 只读不分配；Decode_InterFreqCarrierFreqInfo_v1720 可能 malloc（失败时内部已释放并清零）；Free_InterFreqCarrierFreqInfo_v1720 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqInfo_v1720(Encoder& enc, const InterFreqCarrierFreqInfo_v1720& value)
 {
     (void)value;
@@ -4171,6 +4451,10 @@ void Free_InterFreqCarrierFreqInfo_v1720(InterFreqCarrierFreqInfo_v1720& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqCarrierFreqInfo_v1730：ASN.1 InterFreqCarrierFreqInfo-v1730；源文件第 3574 行；SEQUENCE。
+// Encode_InterFreqCarrierFreqInfo_v1730 只读不分配；Decode_InterFreqCarrierFreqInfo_v1730 可能 malloc（失败时内部已释放并清零）；Free_InterFreqCarrierFreqInfo_v1730 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqInfo_v1730(Encoder& enc, const InterFreqCarrierFreqInfo_v1730& value)
 {
     (void)value;
@@ -4205,6 +4489,10 @@ void Free_InterFreqCarrierFreqInfo_v1730(InterFreqCarrierFreqInfo_v1730& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqCarrierFreqInfo_v1760：ASN.1 InterFreqCarrierFreqInfo-v1760；源文件第 3578 行；SEQUENCE。
+// Encode_InterFreqCarrierFreqInfo_v1760 只读不分配；Decode_InterFreqCarrierFreqInfo_v1760 可能 malloc（失败时内部已释放并清零）；Free_InterFreqCarrierFreqInfo_v1760 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqInfo_v1760(Encoder& enc, const InterFreqCarrierFreqInfo_v1760& value)
 {
     (void)value;
@@ -4252,6 +4540,10 @@ void Free_InterFreqCarrierFreqInfo_v1760(InterFreqCarrierFreqInfo_v1760& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PCI_Range：ASN.1 PCI-Range；源文件第 9117 行；SEQUENCE。
+// Encode_PCI_Range 只读不分配；Decode_PCI_Range 可能 malloc（失败时内部已释放并清零）；Free_PCI_Range 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PCI_Range(Encoder& enc, const PCI_Range& value)
 {
     (void)value;
@@ -4294,6 +4586,10 @@ void Free_PCI_Range(PCI_Range& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqCarrierFreqInfo_v1800：ASN.1 InterFreqCarrierFreqInfo-v1800；源文件第 3583 行；SEQUENCE。
+// Encode_InterFreqCarrierFreqInfo_v1800 只读不分配；Decode_InterFreqCarrierFreqInfo_v1800 可能 malloc（失败时内部已释放并清零）；Free_InterFreqCarrierFreqInfo_v1800 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqInfo_v1800(Encoder& enc, const InterFreqCarrierFreqInfo_v1800& value)
 {
     (void)value;
@@ -4408,6 +4704,10 @@ void Free_InterFreqCarrierFreqInfo_v1800(InterFreqCarrierFreqInfo_v1800& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqNeighCellInfo：ASN.1 InterFreqNeighCellInfo；源文件第 3600 行；SEQUENCE。
+// Encode_InterFreqNeighCellInfo 只读不分配；Decode_InterFreqNeighCellInfo 可能 malloc（失败时内部已释放并清零）；Free_InterFreqNeighCellInfo 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqNeighCellInfo(Encoder& enc, const InterFreqNeighCellInfo& value)
 {
     (void)value;
@@ -4489,6 +4789,10 @@ void Free_InterFreqNeighCellInfo(InterFreqNeighCellInfo& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqNeighCellInfo_v1610：ASN.1 InterFreqNeighCellInfo-v1610；源文件第 3609 行；SEQUENCE。
+// Encode_InterFreqNeighCellInfo_v1610 只读不分配；Decode_InterFreqNeighCellInfo_v1610 可能 malloc（失败时内部已释放并清零）；Free_InterFreqNeighCellInfo_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqNeighCellInfo_v1610(Encoder& enc, const InterFreqNeighCellInfo_v1610& value)
 {
     (void)value;
@@ -4525,6 +4829,10 @@ void Free_InterFreqNeighCellInfo_v1610(InterFreqNeighCellInfo_v1610& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqNeighCellInfo_v1710：ASN.1 InterFreqNeighCellInfo-v1710；源文件第 3613 行；SEQUENCE。
+// Encode_InterFreqNeighCellInfo_v1710 只读不分配；Decode_InterFreqNeighCellInfo_v1710 可能 malloc（失败时内部已释放并清零）；Free_InterFreqNeighCellInfo_v1710 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqNeighCellInfo_v1710(Encoder& enc, const InterFreqNeighCellInfo_v1710& value)
 {
     (void)value;
@@ -4561,6 +4869,10 @@ void Free_InterFreqNeighCellInfo_v1710(InterFreqNeighCellInfo_v1710& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterFreqCAG_CellListPerPLMN_r16：ASN.1 InterFreqCAG-CellListPerPLMN-r16；源文件第 3621 行；SEQUENCE。
+// Encode_InterFreqCAG_CellListPerPLMN_r16 只读不分配；Decode_InterFreqCAG_CellListPerPLMN_r16 可能 malloc（失败时内部已释放并清零）；Free_InterFreqCAG_CellListPerPLMN_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCAG_CellListPerPLMN_r16(Encoder& enc, const InterFreqCAG_CellListPerPLMN_r16& value)
 {
     (void)value;
@@ -4616,6 +4928,10 @@ void Free_InterFreqCAG_CellListPerPLMN_r16(InterFreqCAG_CellListPerPLMN_r16& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CarrierFreqListEUTRA_v1610：ASN.1 CarrierFreqListEUTRA-v1610；源文件第 3649 行；SEQUENCE OF。
+// Encode_CarrierFreqListEUTRA_v1610 只读不分配；Decode_CarrierFreqListEUTRA_v1610 可能 malloc（失败时内部已释放并清零）；Free_CarrierFreqListEUTRA_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CarrierFreqListEUTRA_v1610(Encoder& enc, const CarrierFreqListEUTRA_v1610& value)
 {
     (void)value;
@@ -4661,6 +4977,10 @@ void Free_CarrierFreqListEUTRA_v1610(CarrierFreqListEUTRA_v1610& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB5_ExtGroup1：ASN.1 SIB5_ExtGroup1；源文件第 3635 行；扩展添加组 [[ ]]。
+// Encode_SIB5_ExtGroup1 只读不分配；Decode_SIB5_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_SIB5_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB5_ExtGroup1(Encoder& enc, const SIB5_ExtGroup1& value)
 {
     (void)value;
@@ -4696,6 +5016,10 @@ void Free_SIB5_ExtGroup1(SIB5_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CarrierFreqListEUTRA_v1700：ASN.1 CarrierFreqListEUTRA-v1700；源文件第 3651 行；SEQUENCE OF。
+// Encode_CarrierFreqListEUTRA_v1700 只读不分配；Decode_CarrierFreqListEUTRA_v1700 可能 malloc（失败时内部已释放并清零）；Free_CarrierFreqListEUTRA_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CarrierFreqListEUTRA_v1700(Encoder& enc, const CarrierFreqListEUTRA_v1700& value)
 {
     (void)value;
@@ -4741,6 +5065,10 @@ void Free_CarrierFreqListEUTRA_v1700(CarrierFreqListEUTRA_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB5_ExtGroup2：ASN.1 SIB5_ExtGroup2；源文件第 3638 行；扩展添加组 [[ ]]。
+// Encode_SIB5_ExtGroup2 只读不分配；Decode_SIB5_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_SIB5_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB5_ExtGroup2(Encoder& enc, const SIB5_ExtGroup2& value)
 {
     (void)value;
@@ -4787,6 +5115,10 @@ void Free_SIB5_ExtGroup2(SIB5_ExtGroup2& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CarrierFreqListEUTRA_v1800：ASN.1 CarrierFreqListEUTRA-v1800；源文件第 3653 行；SEQUENCE OF。
+// Encode_CarrierFreqListEUTRA_v1800 只读不分配；Decode_CarrierFreqListEUTRA_v1800 可能 malloc（失败时内部已释放并清零）；Free_CarrierFreqListEUTRA_v1800 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CarrierFreqListEUTRA_v1800(Encoder& enc, const CarrierFreqListEUTRA_v1800& value)
 {
     (void)value;
@@ -4832,6 +5164,10 @@ void Free_CarrierFreqListEUTRA_v1800(CarrierFreqListEUTRA_v1800& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB5_ExtGroup3：ASN.1 SIB5_ExtGroup3；源文件第 3642 行；扩展添加组 [[ ]]。
+// Encode_SIB5_ExtGroup3 只读不分配；Decode_SIB5_ExtGroup3 可能 malloc（失败时内部已释放并清零）；Free_SIB5_ExtGroup3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB5_ExtGroup3(Encoder& enc, const SIB5_ExtGroup3& value)
 {
     (void)value;
@@ -4867,6 +5203,10 @@ void Free_SIB5_ExtGroup3(SIB5_ExtGroup3& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CarrierFreqListEUTRA：ASN.1 CarrierFreqListEUTRA；源文件第 3647 行；SEQUENCE OF。
+// Encode_CarrierFreqListEUTRA 只读不分配；Decode_CarrierFreqListEUTRA 可能 malloc（失败时内部已释放并清零）；Free_CarrierFreqListEUTRA 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CarrierFreqListEUTRA(Encoder& enc, const CarrierFreqListEUTRA& value)
 {
     (void)value;
@@ -4912,6 +5252,10 @@ void Free_CarrierFreqListEUTRA(CarrierFreqListEUTRA& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB5：ASN.1 SIB5；源文件第 3629 行；SEQUENCE。
+// Encode_SIB5 只读不分配；Decode_SIB5 可能 malloc（失败时内部已释放并清零）；Free_SIB5 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB5(Encoder& enc, const SIB5& value)
 {
     (void)value;
@@ -5072,6 +5416,10 @@ void Free_SIB5(SIB5& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EUTRA_FreqExcludedCellList：ASN.1 EUTRA-FreqExcludedCellList；源文件第 3690 行；SEQUENCE OF。
+// Encode_EUTRA_FreqExcludedCellList 只读不分配；Decode_EUTRA_FreqExcludedCellList 可能 malloc（失败时内部已释放并清零）；Free_EUTRA_FreqExcludedCellList 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_FreqExcludedCellList(Encoder& enc, const EUTRA_FreqExcludedCellList& value)
 {
     (void)value;
@@ -5117,6 +5465,10 @@ void Free_EUTRA_FreqExcludedCellList(EUTRA_FreqExcludedCellList& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EUTRA_FreqNeighCellList：ASN.1 EUTRA-FreqNeighCellList；源文件第 3692 行；SEQUENCE OF。
+// Encode_EUTRA_FreqNeighCellList 只读不分配；Decode_EUTRA_FreqNeighCellList 可能 malloc（失败时内部已释放并清零）；Free_EUTRA_FreqNeighCellList 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_FreqNeighCellList(Encoder& enc, const EUTRA_FreqNeighCellList& value)
 {
     (void)value;
@@ -5162,6 +5514,10 @@ void Free_EUTRA_FreqNeighCellList(EUTRA_FreqNeighCellList& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EUTRA_MultiBandInfoList：ASN.1 EUTRA-MultiBandInfoList；源文件第 21436 行；SEQUENCE OF。
+// Encode_EUTRA_MultiBandInfoList 只读不分配；Decode_EUTRA_MultiBandInfoList 可能 malloc（失败时内部已释放并清零）；Free_EUTRA_MultiBandInfoList 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_MultiBandInfoList(Encoder& enc, const EUTRA_MultiBandInfoList& value)
 {
     (void)value;
@@ -5207,6 +5563,10 @@ void Free_EUTRA_MultiBandInfoList(EUTRA_MultiBandInfoList& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CarrierFreqEUTRA_ThreshX_Q：ASN.1 threshX-Q；源文件第 3669 行；SEQUENCE。
+// Encode_CarrierFreqEUTRA_ThreshX_Q 只读不分配；Decode_CarrierFreqEUTRA_ThreshX_Q 可能 malloc（失败时内部已释放并清零）；Free_CarrierFreqEUTRA_ThreshX_Q 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CarrierFreqEUTRA_ThreshX_Q(Encoder& enc, const CarrierFreqEUTRA_ThreshX_Q& value)
 {
     (void)value;
@@ -5242,6 +5602,10 @@ void Free_CarrierFreqEUTRA_ThreshX_Q(CarrierFreqEUTRA_ThreshX_Q& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CarrierFreqEUTRA：ASN.1 CarrierFreqEUTRA；源文件第 3655 行；SEQUENCE。
+// Encode_CarrierFreqEUTRA 只读不分配；Decode_CarrierFreqEUTRA 可能 malloc（失败时内部已释放并清零）；Free_CarrierFreqEUTRA 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CarrierFreqEUTRA(Encoder& enc, const CarrierFreqEUTRA& value)
 {
     (void)value;
@@ -5387,6 +5751,10 @@ void Free_CarrierFreqEUTRA(CarrierFreqEUTRA& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CarrierFreqEUTRA_v1610：ASN.1 CarrierFreqEUTRA-v1610；源文件第 3675 行；SEQUENCE。
+// Encode_CarrierFreqEUTRA_v1610 只读不分配；Decode_CarrierFreqEUTRA_v1610 可能 malloc（失败时内部已释放并清零）；Free_CarrierFreqEUTRA_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CarrierFreqEUTRA_v1610(Encoder& enc, const CarrierFreqEUTRA_v1610& value)
 {
     (void)value;
@@ -5421,6 +5789,10 @@ void Free_CarrierFreqEUTRA_v1610(CarrierFreqEUTRA_v1610& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EUTRA_FreqNeighHSDN_CellList_r17：ASN.1 EUTRA-FreqNeighHSDN-CellList-r17；源文件第 3688 行；SEQUENCE OF。
+// Encode_EUTRA_FreqNeighHSDN_CellList_r17 只读不分配；Decode_EUTRA_FreqNeighHSDN_CellList_r17 可能 malloc（失败时内部已释放并清零）；Free_EUTRA_FreqNeighHSDN_CellList_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_FreqNeighHSDN_CellList_r17(Encoder& enc, const EUTRA_FreqNeighHSDN_CellList_r17& value)
 {
     (void)value;
@@ -5466,6 +5838,10 @@ void Free_EUTRA_FreqNeighHSDN_CellList_r17(EUTRA_FreqNeighHSDN_CellList_r17& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CarrierFreqEUTRA_v1700：ASN.1 CarrierFreqEUTRA-v1700；源文件第 3679 行；SEQUENCE。
+// Encode_CarrierFreqEUTRA_v1700 只读不分配；Decode_CarrierFreqEUTRA_v1700 可能 malloc（失败时内部已释放并清零）；Free_CarrierFreqEUTRA_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CarrierFreqEUTRA_v1700(Encoder& enc, const CarrierFreqEUTRA_v1700& value)
 {
     (void)value;
@@ -5501,6 +5877,10 @@ void Free_CarrierFreqEUTRA_v1700(CarrierFreqEUTRA_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EUTRA_MultiBandInfoListAerial_r18：ASN.1 EUTRA-MultiBandInfoListAerial-r18；源文件第 21446 行；SEQUENCE OF。
+// Encode_EUTRA_MultiBandInfoListAerial_r18 只读不分配；Decode_EUTRA_MultiBandInfoListAerial_r18 可能 malloc（失败时内部已释放并清零）；Free_EUTRA_MultiBandInfoListAerial_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_MultiBandInfoListAerial_r18(Encoder& enc, const EUTRA_MultiBandInfoListAerial_r18& value)
 {
     (void)value;
@@ -5546,6 +5926,10 @@ void Free_EUTRA_MultiBandInfoListAerial_r18(EUTRA_MultiBandInfoListAerial_r18& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CarrierFreqEUTRA_v1800：ASN.1 CarrierFreqEUTRA-v1800；源文件第 3683 行；SEQUENCE。
+// Encode_CarrierFreqEUTRA_v1800 只读不分配；Decode_CarrierFreqEUTRA_v1800 可能 malloc（失败时内部已释放并清零）；Free_CarrierFreqEUTRA_v1800 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CarrierFreqEUTRA_v1800(Encoder& enc, const CarrierFreqEUTRA_v1800& value)
 {
     (void)value;
@@ -5615,6 +5999,10 @@ void Free_CarrierFreqEUTRA_v1800(CarrierFreqEUTRA_v1800& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EUTRA_FreqNeighCellInfo：ASN.1 EUTRA-FreqNeighCellInfo；源文件第 3694 行；SEQUENCE。
+// Encode_EUTRA_FreqNeighCellInfo 只读不分配；Decode_EUTRA_FreqNeighCellInfo 可能 malloc（失败时内部已释放并清零）；Free_EUTRA_FreqNeighCellInfo 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_FreqNeighCellInfo(Encoder& enc, const EUTRA_FreqNeighCellInfo& value)
 {
     (void)value;
@@ -5676,6 +6064,10 @@ void Free_EUTRA_FreqNeighCellInfo(EUTRA_FreqNeighCellInfo& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB6：ASN.1 SIB6；源文件第 3704 行；SEQUENCE。
+// Encode_SIB6 只读不分配；Decode_SIB6 可能 malloc（失败时内部已释放并清零）；Free_SIB6 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB6(Encoder& enc, const SIB6& value)
 {
     (void)value;
@@ -5760,6 +6152,10 @@ void Free_SIB6(SIB6& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB7：ASN.1 SIB7；源文件第 3715 行；SEQUENCE。
+// Encode_SIB7 只读不分配；Decode_SIB7 可能 malloc（失败时内部已释放并清零）；Free_SIB7 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB7(Encoder& enc, const SIB7& value)
 {
     (void)value;
@@ -5874,6 +6270,10 @@ void Free_SIB7(SIB7& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB8：ASN.1 SIB8；源文件第 3729 行；SEQUENCE。
+// Encode_SIB8 只读不分配；Decode_SIB8 可能 malloc（失败时内部已释放并清零）；Free_SIB8 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB8(Encoder& enc, const SIB8& value)
 {
     (void)value;
@@ -6006,6 +6406,10 @@ void Free_SIB8(SIB8& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB9_ExtGroup1：ASN.1 SIB9_ExtGroup1；源文件第 3753 行；扩展添加组 [[ ]]。
+// Encode_SIB9_ExtGroup1 只读不分配；Decode_SIB9_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_SIB9_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB9_ExtGroup1(Encoder& enc, const SIB9_ExtGroup1& value)
 {
     (void)value;
@@ -6041,6 +6445,10 @@ void Free_SIB9_ExtGroup1(SIB9_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB9_ExtGroup2：ASN.1 SIB9_ExtGroup2；源文件第 3756 行；扩展添加组 [[ ]]。
+// Encode_SIB9_ExtGroup2 只读不分配；Decode_SIB9_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_SIB9_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB9_ExtGroup2(Encoder& enc, const SIB9_ExtGroup2& value)
 {
     (void)value;
@@ -6077,6 +6485,10 @@ void Free_SIB9_ExtGroup2(SIB9_ExtGroup2& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB9_TimeInfo：ASN.1 timeInfo；源文件第 3745 行；SEQUENCE。
+// Encode_SIB9_TimeInfo 只读不分配；Decode_SIB9_TimeInfo 可能 malloc（失败时内部已释放并清零）；Free_SIB9_TimeInfo 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB9_TimeInfo(Encoder& enc, const SIB9_TimeInfo& value)
 {
     (void)value;
@@ -6151,6 +6563,10 @@ void Free_SIB9_TimeInfo(SIB9_TimeInfo& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB9：ASN.1 SIB9；源文件第 3744 行；SEQUENCE。
+// Encode_SIB9 只读不分配；Decode_SIB9 可能 malloc（失败时内部已释放并清零）；Free_SIB9 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB9(Encoder& enc, const SIB9& value)
 {
     (void)value;
@@ -6270,6 +6686,10 @@ void Free_SIB9(SIB9& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// HRNN_List_r16：ASN.1 HRNN-List-r16；源文件第 3770 行；SEQUENCE OF。
+// Encode_HRNN_List_r16 只读不分配；Decode_HRNN_List_r16 可能 malloc（失败时内部已释放并清零）；Free_HRNN_List_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_HRNN_List_r16(Encoder& enc, const HRNN_List_r16& value)
 {
     (void)value;
@@ -6315,6 +6735,10 @@ void Free_HRNN_List_r16(HRNN_List_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB10_r16：ASN.1 SIB10-r16；源文件第 3764 行；SEQUENCE。
+// Encode_SIB10_r16 只读不分配；Decode_SIB10_r16 可能 malloc（失败时内部已释放并清零）；Free_SIB10_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB10_r16(Encoder& enc, const SIB10_r16& value)
 {
     (void)value;
@@ -6375,6 +6799,10 @@ void Free_SIB10_r16(SIB10_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// HRNN_r16：ASN.1 HRNN-r16；源文件第 3772 行；SEQUENCE。
+// Encode_HRNN_r16 只读不分配；Decode_HRNN_r16 可能 malloc（失败时内部已释放并清零）；Free_HRNN_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_HRNN_r16(Encoder& enc, const HRNN_r16& value)
 {
     (void)value;
@@ -6416,6 +6844,10 @@ void Free_HRNN_r16(HRNN_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasIdleConfigSIB_r16_ExtGroup1：ASN.1 MeasIdleConfigSIB_r16_ExtGroup1；源文件第 7513 行；扩展添加组 [[ ]]。
+// Encode_MeasIdleConfigSIB_r16_ExtGroup1 只读不分配；Decode_MeasIdleConfigSIB_r16_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_MeasIdleConfigSIB_r16_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasIdleConfigSIB_r16_ExtGroup1(Encoder& enc, const MeasIdleConfigSIB_r16_ExtGroup1& value)
 {
     (void)value;
@@ -6498,6 +6930,10 @@ void Free_MeasIdleConfigSIB_r16_ExtGroup1(MeasIdleConfigSIB_r16_ExtGroup1& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasIdleConfigSIB_r16：ASN.1 MeasIdleConfigSIB-r16；源文件第 7509 行；SEQUENCE。
+// Encode_MeasIdleConfigSIB_r16 只读不分配；Decode_MeasIdleConfigSIB_r16 可能 malloc（失败时内部已释放并清零）；Free_MeasIdleConfigSIB_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasIdleConfigSIB_r16(Encoder& enc, const MeasIdleConfigSIB_r16& value)
 {
     (void)value;
@@ -6630,6 +7066,10 @@ void Free_MeasIdleConfigSIB_r16(MeasIdleConfigSIB_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB11_r16：ASN.1 SIB11-r16；源文件第 3779 行；SEQUENCE。
+// Encode_SIB11_r16 只读不分配；Decode_SIB11_r16 可能 malloc（失败时内部已释放并清零）；Free_SIB11_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB11_r16(Encoder& enc, const SIB11_r16& value)
 {
     (void)value;
@@ -6690,6 +7130,10 @@ void Free_SIB11_r16(SIB11_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB12_r16：ASN.1 SIB12-r16；源文件第 3788 行；SEQUENCE。
+// Encode_SIB12_r16 只读不分配；Decode_SIB12_r16 可能 malloc（失败时内部已释放并清零）；Free_SIB12_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB12_r16(Encoder& enc, const SIB12_r16& value)
 {
     (void)value;
@@ -6736,6 +7180,10 @@ void Free_SIB12_r16(SIB12_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SL_DiscConfigCommon_r17：ASN.1 SL-DiscConfigCommon-r17；源文件第 3836 行；SEQUENCE。
+// Encode_SL_DiscConfigCommon_r17 只读不分配；Decode_SL_DiscConfigCommon_r17 可能 malloc（失败时内部已释放并清零）；Free_SL_DiscConfigCommon_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SL_DiscConfigCommon_r17(Encoder& enc, const SL_DiscConfigCommon_r17& value)
 {
     (void)value;
@@ -6769,6 +7217,10 @@ void Free_SL_DiscConfigCommon_r17(SL_DiscConfigCommon_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// UE_TimersAndConstantsRemoteUE_r17：ASN.1 UE-TimersAndConstantsRemoteUE-r17；源文件第 13883 行；SEQUENCE。
+// Encode_UE_TimersAndConstantsRemoteUE_r17 只读不分配；Decode_UE_TimersAndConstantsRemoteUE_r17 可能 malloc（失败时内部已释放并清零）；Free_UE_TimersAndConstantsRemoteUE_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UE_TimersAndConstantsRemoteUE_r17(Encoder& enc, const UE_TimersAndConstantsRemoteUE_r17& value)
 {
     (void)value;
@@ -6838,6 +7290,10 @@ void Free_UE_TimersAndConstantsRemoteUE_r17(UE_TimersAndConstantsRemoteUE_r17& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB12_IEs_r16_ExtGroup1：ASN.1 SIB12_IEs_r16_ExtGroup1；源文件第 3798 行；扩展添加组 [[ ]]。
+// Encode_SIB12_IEs_r16_ExtGroup1 只读不分配；Decode_SIB12_IEs_r16_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_SIB12_IEs_r16_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB12_IEs_r16_ExtGroup1(Encoder& enc, const SIB12_IEs_r16_ExtGroup1& value)
 {
     (void)value;
@@ -6930,6 +7386,10 @@ void Free_SIB12_IEs_r16_ExtGroup1(SIB12_IEs_r16_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SL_DiscConfigCommon_v1800：ASN.1 SL-DiscConfigCommon-v1800；源文件第 3841 行；SEQUENCE。
+// Encode_SL_DiscConfigCommon_v1800 只读不分配；Decode_SL_DiscConfigCommon_v1800 可能 malloc（失败时内部已释放并清零）；Free_SL_DiscConfigCommon_v1800 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SL_DiscConfigCommon_v1800(Encoder& enc, const SL_DiscConfigCommon_v1800& value)
 {
     (void)value;
@@ -6963,6 +7423,10 @@ void Free_SL_DiscConfigCommon_v1800(SL_DiscConfigCommon_v1800& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB12_IEs_r16_ExtGroup2：ASN.1 SIB12_IEs_r16_ExtGroup2；源文件第 3806 行；扩展添加组 [[ ]]。
+// Encode_SIB12_IEs_r16_ExtGroup2 只读不分配；Decode_SIB12_IEs_r16_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_SIB12_IEs_r16_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB12_IEs_r16_ExtGroup2(Encoder& enc, const SIB12_IEs_r16_ExtGroup2& value)
 {
     (void)value;
@@ -7133,6 +7597,10 @@ void Free_SIB12_IEs_r16_ExtGroup2(SIB12_IEs_r16_ExtGroup2& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SL_NR_AnchorCarrierFreqList_r16：ASN.1 SL-NR-AnchorCarrierFreqList-r16；源文件第 3832 行；SEQUENCE OF。
+// Encode_SL_NR_AnchorCarrierFreqList_r16 只读不分配；Decode_SL_NR_AnchorCarrierFreqList_r16 可能 malloc（失败时内部已释放并清零）；Free_SL_NR_AnchorCarrierFreqList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SL_NR_AnchorCarrierFreqList_r16(Encoder& enc, const SL_NR_AnchorCarrierFreqList_r16& value)
 {
     (void)value;
@@ -7179,6 +7647,10 @@ void Free_SL_NR_AnchorCarrierFreqList_r16(SL_NR_AnchorCarrierFreqList_r16& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SL_EUTRA_AnchorCarrierFreqList_r16：ASN.1 SL-EUTRA-AnchorCarrierFreqList-r16；源文件第 3834 行；SEQUENCE OF。
+// Encode_SL_EUTRA_AnchorCarrierFreqList_r16 只读不分配；Decode_SL_EUTRA_AnchorCarrierFreqList_r16 可能 malloc（失败时内部已释放并清零）；Free_SL_EUTRA_AnchorCarrierFreqList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SL_EUTRA_AnchorCarrierFreqList_r16(Encoder& enc, const SL_EUTRA_AnchorCarrierFreqList_r16& value)
 {
     (void)value;
@@ -7225,6 +7697,10 @@ void Free_SL_EUTRA_AnchorCarrierFreqList_r16(SL_EUTRA_AnchorCarrierFreqList_r16&
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SL_MeasIdList_r16：ASN.1 SL-MeasIdList-r16；源文件第 22624 行；SEQUENCE OF。
+// Encode_SL_MeasIdList_r16 只读不分配；Decode_SL_MeasIdList_r16 可能 malloc（失败时内部已释放并清零）；Free_SL_MeasIdList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SL_MeasIdList_r16(Encoder& enc, const SL_MeasIdList_r16& value)
 {
     (void)value;
@@ -7270,6 +7746,10 @@ void Free_SL_MeasIdList_r16(SL_MeasIdList_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SL_MeasObjectList_r16：ASN.1 SL-MeasObjectList-r16；源文件第 22638 行；SEQUENCE OF。
+// Encode_SL_MeasObjectList_r16 只读不分配；Decode_SL_MeasObjectList_r16 可能 malloc（失败时内部已释放并清零）；Free_SL_MeasObjectList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SL_MeasObjectList_r16(Encoder& enc, const SL_MeasObjectList_r16& value)
 {
     (void)value;

@@ -18,6 +18,10 @@
 namespace rrc {
 namespace v1810 {
 
+// --------------------------------------------------------------------------
+// SI_RequestConfigRepetition_r18：ASN.1 SI-RequestConfigRepetition-r18；源文件第 12788 行；SEQUENCE。
+// Encode_SI_RequestConfigRepetition_r18 只读不分配；Decode_SI_RequestConfigRepetition_r18 可能 malloc（失败时内部已释放并清零）；Free_SI_RequestConfigRepetition_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SI_RequestConfigRepetition_r18(Encoder& enc, const SI_RequestConfigRepetition_r18& value)
 {
     (void)value;
@@ -159,6 +163,10 @@ void Free_SI_RequestConfigRepetition_r18(SI_RequestConfigRepetition_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SI_SchedulingInfo_v1800：ASN.1 SI-SchedulingInfo-v1800；源文件第 12831 行；SEQUENCE。
+// Encode_SI_SchedulingInfo_v1800 只读不分配；Decode_SI_SchedulingInfo_v1800 可能 malloc（失败时内部已释放并清零）；Free_SI_SchedulingInfo_v1800 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SI_SchedulingInfo_v1800(Encoder& enc, const SI_SchedulingInfo_v1800& value)
 {
     (void)value;
@@ -218,6 +226,10 @@ void Free_SI_SchedulingInfo_v1800(SI_SchedulingInfo_v1800& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB1_v1800_IEs_FeaturePriorities_v1800：ASN.1 featurePriorities-v1800；源文件第 1904 行；SEQUENCE。
+// Encode_SIB1_v1800_IEs_FeaturePriorities_v1800 只读不分配；Decode_SIB1_v1800_IEs_FeaturePriorities_v1800 可能 malloc（失败时内部已释放并清零）；Free_SIB1_v1800_IEs_FeaturePriorities_v1800 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB1_v1800_IEs_FeaturePriorities_v1800(Encoder& enc, const SIB1_v1800_IEs_FeaturePriorities_v1800& value)
 {
     (void)value;
@@ -267,6 +279,10 @@ void Free_SIB1_v1800_IEs_FeaturePriorities_v1800(SIB1_v1800_IEs_FeaturePrioritie
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB1_v1800_IEs_NonCriticalExtension：ASN.1 nonCriticalExtension；源文件第 1923 行；空 SEQUENCE{}。
+// Encode_SIB1_v1800_IEs_NonCriticalExtension 只读不分配；Decode_SIB1_v1800_IEs_NonCriticalExtension 可能 malloc（失败时内部已释放并清零）；Free_SIB1_v1800_IEs_NonCriticalExtension 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB1_v1800_IEs_NonCriticalExtension(Encoder& enc, const SIB1_v1800_IEs_NonCriticalExtension& value)
 {
     (void)value;
@@ -284,6 +300,10 @@ void Free_SIB1_v1800_IEs_NonCriticalExtension(SIB1_v1800_IEs_NonCriticalExtensio
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB1_v1800_IEs：ASN.1 SIB1-v1800-IEs；源文件第 1900 行；SEQUENCE。
+// Encode_SIB1_v1800_IEs 只读不分配；Decode_SIB1_v1800_IEs 可能 malloc（失败时内部已释放并清零）；Free_SIB1_v1800_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB1_v1800_IEs(Encoder& enc, const SIB1_v1800_IEs& value)
 {
     (void)value;
@@ -533,6 +553,10 @@ void Free_SIB1_v1800_IEs(SIB1_v1800_IEs& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SI_RequestConfig_Rach_OccasionsSI：ASN.1 rach-OccasionsSI；源文件第 12771 行；SEQUENCE。
+// Encode_SI_RequestConfig_Rach_OccasionsSI 只读不分配；Decode_SI_RequestConfig_Rach_OccasionsSI 可能 malloc（失败时内部已释放并清零）；Free_SI_RequestConfig_Rach_OccasionsSI 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SI_RequestConfig_Rach_OccasionsSI(Encoder& enc, const SI_RequestConfig_Rach_OccasionsSI& value)
 {
     (void)value;
@@ -567,6 +591,10 @@ void Free_SI_RequestConfig_Rach_OccasionsSI(SI_RequestConfig_Rach_OccasionsSI& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SI_RequestConfig：ASN.1 SI-RequestConfig；源文件第 12770 行；SEQUENCE。
+// Encode_SI_RequestConfig 只读不分配；Decode_SI_RequestConfig 可能 malloc（失败时内部已释放并清零）；Free_SI_RequestConfig 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SI_RequestConfig(Encoder& enc, const SI_RequestConfig& value)
 {
     (void)value;
@@ -641,6 +669,10 @@ void Free_SI_RequestConfig(SI_RequestConfig& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SI_SchedulingInfo_v1740：ASN.1 SI-SchedulingInfo-v1740；源文件第 12827 行；SEQUENCE。
+// Encode_SI_SchedulingInfo_v1740 只读不分配；Decode_SI_SchedulingInfo_v1740 可能 malloc（失败时内部已释放并清零）；Free_SI_SchedulingInfo_v1740 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SI_SchedulingInfo_v1740(Encoder& enc, const SI_SchedulingInfo_v1740& value)
 {
     (void)value;
@@ -676,6 +708,10 @@ void Free_SI_SchedulingInfo_v1740(SI_SchedulingInfo_v1740& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB1_v1740_IEs：ASN.1 SIB1-v1740-IEs；源文件第 1895 行；SEQUENCE。
+// Encode_SIB1_v1740_IEs 只读不分配；Decode_SIB1_v1740_IEs 可能 malloc（失败时内部已释放并清零）；Free_SIB1_v1740_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB1_v1740_IEs(Encoder& enc, const SIB1_v1740_IEs& value)
 {
     (void)value;
@@ -723,6 +759,10 @@ void Free_SIB1_v1740_IEs(SIB1_v1740_IEs& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SDT_ConfigCommonSIB_r17：ASN.1 SDT-ConfigCommonSIB-r17；源文件第 1930 行；SEQUENCE。
+// Encode_SDT_ConfigCommonSIB_r17 只读不分配；Decode_SDT_ConfigCommonSIB_r17 可能 malloc（失败时内部已释放并清零）；Free_SDT_ConfigCommonSIB_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SDT_ConfigCommonSIB_r17(Encoder& enc, const SDT_ConfigCommonSIB_r17& value)
 {
     (void)value;
@@ -784,6 +824,10 @@ void Free_SDT_ConfigCommonSIB_r17(SDT_ConfigCommonSIB_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RedCap_ConfigCommonSIB_r17_CellBarredRedCap_r17：ASN.1 cellBarredRedCap-r17；源文件第 1941 行；SEQUENCE。
+// Encode_RedCap_ConfigCommonSIB_r17_CellBarredRedCap_r17 只读不分配；Decode_RedCap_ConfigCommonSIB_r17_CellBarredRedCap_r17 可能 malloc（失败时内部已释放并清零）；Free_RedCap_ConfigCommonSIB_r17_CellBarredRedCap_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RedCap_ConfigCommonSIB_r17_CellBarredRedCap_r17(Encoder& enc, const RedCap_ConfigCommonSIB_r17_CellBarredRedCap_r17& value)
 {
     (void)value;
@@ -819,6 +863,10 @@ void Free_RedCap_ConfigCommonSIB_r17_CellBarredRedCap_r17(RedCap_ConfigCommonSIB
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RedCap_ConfigCommonSIB_r17：ASN.1 RedCap-ConfigCommonSIB-r17；源文件第 1939 行；SEQUENCE。
+// Encode_RedCap_ConfigCommonSIB_r17 只读不分配；Decode_RedCap_ConfigCommonSIB_r17 可能 malloc（失败时内部已释放并清零）；Free_RedCap_ConfigCommonSIB_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RedCap_ConfigCommonSIB_r17(Encoder& enc, const RedCap_ConfigCommonSIB_r17& value)
 {
     (void)value;
@@ -872,6 +920,10 @@ void Free_RedCap_ConfigCommonSIB_r17(RedCap_ConfigCommonSIB_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SI_SchedulingInfo_v1700：ASN.1 SI-SchedulingInfo-v1700；源文件第 12822 行；SEQUENCE。
+// Encode_SI_SchedulingInfo_v1700 只读不分配；Decode_SI_SchedulingInfo_v1700 可能 malloc（失败时内部已释放并清零）；Free_SI_SchedulingInfo_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SI_SchedulingInfo_v1700(Encoder& enc, const SI_SchedulingInfo_v1700& value)
 {
     (void)value;
@@ -933,6 +985,10 @@ void Free_SI_SchedulingInfo_v1700(SI_SchedulingInfo_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// UAC_BarringInfoSetList_v1700：ASN.1 UAC-BarringInfoSetList-v1700；源文件第 13829 行；SEQUENCE OF。
+// Encode_UAC_BarringInfoSetList_v1700 只读不分配；Decode_UAC_BarringInfoSetList_v1700 可能 malloc（失败时内部已释放并清零）；Free_UAC_BarringInfoSetList_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UAC_BarringInfoSetList_v1700(Encoder& enc, const UAC_BarringInfoSetList_v1700& value)
 {
     (void)value;
@@ -978,6 +1034,10 @@ void Free_UAC_BarringInfoSetList_v1700(UAC_BarringInfoSetList_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB1_v1700_IEs_Uac_BarringInfo_v1700：ASN.1 uac-BarringInfo-v1700；源文件第 1875 行；SEQUENCE。
+// Encode_SIB1_v1700_IEs_Uac_BarringInfo_v1700 只读不分配；Decode_SIB1_v1700_IEs_Uac_BarringInfo_v1700 可能 malloc（失败时内部已释放并清零）；Free_SIB1_v1700_IEs_Uac_BarringInfo_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB1_v1700_IEs_Uac_BarringInfo_v1700(Encoder& enc, const SIB1_v1700_IEs_Uac_BarringInfo_v1700& value)
 {
     (void)value;
@@ -1006,6 +1066,10 @@ void Free_SIB1_v1700_IEs_Uac_BarringInfo_v1700(SIB1_v1700_IEs_Uac_BarringInfo_v1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB1_v1700_IEs_FeaturePriorities_r17：ASN.1 featurePriorities-r17；源文件第 1880 行；SEQUENCE。
+// Encode_SIB1_v1700_IEs_FeaturePriorities_r17 只读不分配；Decode_SIB1_v1700_IEs_FeaturePriorities_r17 可能 malloc（失败时内部已释放并清零）；Free_SIB1_v1700_IEs_FeaturePriorities_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB1_v1700_IEs_FeaturePriorities_r17(Encoder& enc, const SIB1_v1700_IEs_FeaturePriorities_r17& value)
 {
     (void)value;
@@ -1081,6 +1145,10 @@ void Free_SIB1_v1700_IEs_FeaturePriorities_r17(SIB1_v1700_IEs_FeaturePriorities_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB1_v1700_IEs：ASN.1 SIB1-v1700-IEs；源文件第 1873 行；SEQUENCE。
+// Encode_SIB1_v1700_IEs 只读不分配；Decode_SIB1_v1700_IEs 可能 malloc（失败时内部已释放并清零）；Free_SIB1_v1700_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB1_v1700_IEs(Encoder& enc, const SIB1_v1700_IEs& value)
 {
     (void)value;
@@ -1254,6 +1322,10 @@ void Free_SIB1_v1700_IEs(SIB1_v1700_IEs& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB1_v1630_IEs_Uac_BarringInfo_v1630：ASN.1 uac-BarringInfo-v1630；源文件第 1867 行；SEQUENCE。
+// Encode_SIB1_v1630_IEs_Uac_BarringInfo_v1630 只读不分配；Decode_SIB1_v1630_IEs_Uac_BarringInfo_v1630 可能 malloc（失败时内部已释放并清零）；Free_SIB1_v1630_IEs_Uac_BarringInfo_v1630 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB1_v1630_IEs_Uac_BarringInfo_v1630(Encoder& enc, const SIB1_v1630_IEs_Uac_BarringInfo_v1630& value)
 {
     (void)value;
@@ -1304,6 +1376,10 @@ void Free_SIB1_v1630_IEs_Uac_BarringInfo_v1630(SIB1_v1630_IEs_Uac_BarringInfo_v1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB1_v1630_IEs：ASN.1 SIB1-v1630-IEs；源文件第 1866 行；SEQUENCE。
+// Encode_SIB1_v1630_IEs 只读不分配；Decode_SIB1_v1630_IEs 可能 malloc（失败时内部已释放并清零）；Free_SIB1_v1630_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB1_v1630_IEs(Encoder& enc, const SIB1_v1630_IEs& value)
 {
     (void)value;
@@ -1351,6 +1427,10 @@ void Free_SIB1_v1630_IEs(SIB1_v1630_IEs& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PosSI_SchedulingInfo_r16_ExtGroup2：ASN.1 PosSI_SchedulingInfo_r16_ExtGroup2；源文件第 4201 行；扩展添加组 [[ ]]。
+// Encode_PosSI_SchedulingInfo_r16_ExtGroup2 只读不分配；Decode_PosSI_SchedulingInfo_r16_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_PosSI_SchedulingInfo_r16_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PosSI_SchedulingInfo_r16_ExtGroup2(Encoder& enc, const PosSI_SchedulingInfo_r16_ExtGroup2& value)
 {
     (void)value;
@@ -1410,6 +1490,10 @@ void Free_PosSI_SchedulingInfo_r16_ExtGroup2(PosSI_SchedulingInfo_r16_ExtGroup2&
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PosSI_SchedulingInfo_r16_ExtGroup1：ASN.1 PosSI_SchedulingInfo_r16_ExtGroup1；源文件第 4198 行；扩展添加组 [[ ]]。
+// Encode_PosSI_SchedulingInfo_r16_ExtGroup1 只读不分配；Decode_PosSI_SchedulingInfo_r16_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_PosSI_SchedulingInfo_r16_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PosSI_SchedulingInfo_r16_ExtGroup1(Encoder& enc, const PosSI_SchedulingInfo_r16_ExtGroup1& value)
 {
     (void)value;
@@ -1445,6 +1529,10 @@ void Free_PosSI_SchedulingInfo_r16_ExtGroup1(PosSI_SchedulingInfo_r16_ExtGroup1&
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PosSI_SchedulingInfo_r16：ASN.1 PosSI-SchedulingInfo-r16；源文件第 4193 行；SEQUENCE。
+// Encode_PosSI_SchedulingInfo_r16 只读不分配；Decode_PosSI_SchedulingInfo_r16 可能 malloc（失败时内部已释放并清零）；Free_PosSI_SchedulingInfo_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PosSI_SchedulingInfo_r16(Encoder& enc, const PosSI_SchedulingInfo_r16& value)
 {
     (void)value;
@@ -1584,6 +1672,10 @@ void Free_PosSI_SchedulingInfo_r16(PosSI_SchedulingInfo_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB1_v1610_IEs：ASN.1 SIB1-v1610-IEs；源文件第 1859 行；SEQUENCE。
+// Encode_SIB1_v1610_IEs 只读不分配；Decode_SIB1_v1610_IEs 可能 malloc（失败时内部已释放并清零）；Free_SIB1_v1610_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB1_v1610_IEs(Encoder& enc, const SIB1_v1610_IEs& value)
 {
     (void)value;
@@ -1653,6 +1745,10 @@ void Free_SIB1_v1610_IEs(SIB1_v1610_IEs& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// NPN_IdentityInfoList_r16：ASN.1 NPN-IdentityInfoList-r16；源文件第 8787 行；SEQUENCE OF。
+// Encode_NPN_IdentityInfoList_r16 只读不分配；Decode_NPN_IdentityInfoList_r16 可能 malloc（失败时内部已释放并清零）；Free_NPN_IdentityInfoList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_NPN_IdentityInfoList_r16(Encoder& enc, const NPN_IdentityInfoList_r16& value)
 {
     (void)value;
@@ -1698,6 +1794,10 @@ void Free_NPN_IdentityInfoList_r16(NPN_IdentityInfoList_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CellAccessRelatedInfo_ExtGroup1：ASN.1 CellAccessRelatedInfo_ExtGroup1；源文件第 4746 行；扩展添加组 [[ ]]。
+// Encode_CellAccessRelatedInfo_ExtGroup1 只读不分配；Decode_CellAccessRelatedInfo_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_CellAccessRelatedInfo_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CellAccessRelatedInfo_ExtGroup1(Encoder& enc, const CellAccessRelatedInfo_ExtGroup1& value)
 {
     (void)value;
@@ -1744,6 +1844,10 @@ void Free_CellAccessRelatedInfo_ExtGroup1(CellAccessRelatedInfo_ExtGroup1& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CellAccessRelatedInfo_ExtGroup2：ASN.1 CellAccessRelatedInfo_ExtGroup2；源文件第 4750 行；扩展添加组 [[ ]]。
+// Encode_CellAccessRelatedInfo_ExtGroup2 只读不分配；Decode_CellAccessRelatedInfo_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_CellAccessRelatedInfo_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CellAccessRelatedInfo_ExtGroup2(Encoder& enc, const CellAccessRelatedInfo_ExtGroup2& value)
 {
     (void)value;
@@ -1800,6 +1904,10 @@ void Free_CellAccessRelatedInfo_ExtGroup2(CellAccessRelatedInfo_ExtGroup2& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PLMN_IdentityInfoList：ASN.1 PLMN-IdentityInfoList；源文件第 9856 行；SEQUENCE OF。
+// Encode_PLMN_IdentityInfoList 只读不分配；Decode_PLMN_IdentityInfoList 可能 malloc（失败时内部已释放并清零）；Free_PLMN_IdentityInfoList 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PLMN_IdentityInfoList(Encoder& enc, const PLMN_IdentityInfoList& value)
 {
     (void)value;
@@ -1845,6 +1953,10 @@ void Free_PLMN_IdentityInfoList(PLMN_IdentityInfoList& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CellAccessRelatedInfo：ASN.1 CellAccessRelatedInfo；源文件第 4742 行；SEQUENCE。
+// Encode_CellAccessRelatedInfo 只读不分配；Decode_CellAccessRelatedInfo 可能 malloc（失败时内部已释放并清零）；Free_CellAccessRelatedInfo 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CellAccessRelatedInfo(Encoder& enc, const CellAccessRelatedInfo& value)
 {
     (void)value;
@@ -1950,6 +2062,10 @@ void Free_CellAccessRelatedInfo(CellAccessRelatedInfo& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ConnEstFailureControl：ASN.1 ConnEstFailureControl；源文件第 5716 行；SEQUENCE。
+// Encode_ConnEstFailureControl 只读不分配；Decode_ConnEstFailureControl 可能 malloc（失败时内部已释放并清零）；Free_ConnEstFailureControl 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ConnEstFailureControl(Encoder& enc, const ConnEstFailureControl& value)
 {
     (void)value;
@@ -1998,6 +2114,10 @@ void Free_ConnEstFailureControl(ConnEstFailureControl& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ControlResourceSet_ExtGroup2：ASN.1 ControlResourceSet_ExtGroup2；源文件第 5749 行；扩展添加组 [[ ]]。
+// Encode_ControlResourceSet_ExtGroup2 只读不分配；Decode_ControlResourceSet_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_ControlResourceSet_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ControlResourceSet_ExtGroup2(Encoder& enc, const ControlResourceSet_ExtGroup2& value)
 {
     (void)value;
@@ -2032,6 +2152,10 @@ void Free_ControlResourceSet_ExtGroup2(ControlResourceSet_ExtGroup2& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ControlResourceSet_ExtGroup3：ASN.1 ControlResourceSet_ExtGroup3；源文件第 5752 行；扩展添加组 [[ ]]。
+// Encode_ControlResourceSet_ExtGroup3 只读不分配；Decode_ControlResourceSet_ExtGroup3 可能 malloc（失败时内部已释放并清零）；Free_ControlResourceSet_ExtGroup3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ControlResourceSet_ExtGroup3(Encoder& enc, const ControlResourceSet_ExtGroup3& value)
 {
     (void)value;
@@ -2068,6 +2192,10 @@ void Free_ControlResourceSet_ExtGroup3(ControlResourceSet_ExtGroup3& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ControlResourceSet_ExtGroup1：ASN.1 ControlResourceSet_ExtGroup1；源文件第 5743 行；扩展添加组 [[ ]]。
+// Encode_ControlResourceSet_ExtGroup1 只读不分配；Decode_ControlResourceSet_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_ControlResourceSet_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ControlResourceSet_ExtGroup1(Encoder& enc, const ControlResourceSet_ExtGroup1& value)
 {
     (void)value;
@@ -2143,6 +2271,10 @@ void Free_ControlResourceSet_ExtGroup1(ControlResourceSet_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ControlResourceSet_Cce_REG_MappingType_Interleaved：ASN.1 cce-REG-MappingType/interleaved；源文件第 5730 行；SEQUENCE。
+// Encode_ControlResourceSet_Cce_REG_MappingType_Interleaved 只读不分配；Decode_ControlResourceSet_Cce_REG_MappingType_Interleaved 可能 malloc（失败时内部已释放并清零）；Free_ControlResourceSet_Cce_REG_MappingType_Interleaved 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ControlResourceSet_Cce_REG_MappingType_Interleaved(Encoder& enc, const ControlResourceSet_Cce_REG_MappingType_Interleaved& value)
 {
     (void)value;
@@ -2191,6 +2323,10 @@ void Free_ControlResourceSet_Cce_REG_MappingType_Interleaved(ControlResourceSet_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ControlResourceSet_Cce_REG_MappingType：ASN.1 cce-REG-MappingType；源文件第 5729 行；CHOICE。
+// Encode_ControlResourceSet_Cce_REG_MappingType 只读不分配；Decode_ControlResourceSet_Cce_REG_MappingType 可能 malloc（失败时内部已释放并清零）；Free_ControlResourceSet_Cce_REG_MappingType 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ControlResourceSet_Cce_REG_MappingType(Encoder& enc, const ControlResourceSet_Cce_REG_MappingType& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -2250,6 +2386,10 @@ void Free_ControlResourceSet_Cce_REG_MappingType(ControlResourceSet_Cce_REG_Mapp
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ControlResourceSet：ASN.1 ControlResourceSet；源文件第 5725 行；SEQUENCE。
+// Encode_ControlResourceSet 只读不分配；Decode_ControlResourceSet 可能 malloc（失败时内部已释放并清零）；Free_ControlResourceSet 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ControlResourceSet(Encoder& enc, const ControlResourceSet& value)
 {
     (void)value;
@@ -2489,6 +2629,10 @@ void Free_ControlResourceSet(ControlResourceSet& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS15KHZoneT：ASN.1 firstPDCCH-MonitoringOccasionOfPO/sCS15KHZoneT；源文件第 9203 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS15KHZoneT 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS15KHZoneT 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS15KHZoneT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS15KHZoneT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS15KHZoneT& value)
 {
     (void)value;
@@ -2535,6 +2679,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS15KH
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS30KHZoneT_SCS15KHZhalfT：ASN.1 firstPDCCH-MonitoringOccasionOfPO/sCS30KHZoneT-SCS15KHZhalfT；源文件第 9204 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS30KHZoneT_SCS15KHZhalfT 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS30KHZoneT_SCS15KHZhalfT 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS30KHZoneT_SCS15KHZhalfT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS30KHZoneT_SCS15KHZhalfT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS30KHZoneT_SCS15KHZhalfT& value)
 {
     (void)value;
@@ -2581,6 +2729,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS30KH
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS60KHZoneT_SCS30KHZhalfT_SCS15KHZquarterT：ASN.1 firstPDCCH-MonitoringOccasionOfPO/sCS60KHZoneT-SCS30KHZhalfT-SCS15KHZquarterT；源文件第 9205 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS60KHZoneT_SCS30KHZhalfT_SCS15KHZquarterT 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS60KHZoneT_SCS30KHZhalfT_SCS15KHZquarterT 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS60KHZoneT_SCS30KHZhalfT_SCS15KHZquarterT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS60KHZoneT_SCS30KHZhalfT_SCS15KHZquarterT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS60KHZoneT_SCS30KHZhalfT_SCS15KHZquarterT& value)
 {
     (void)value;
@@ -2627,6 +2779,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS60KH
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneT_SCS60KHZhalfT_SCS30KHZq_c04df89c：ASN.1 firstPDCCH-MonitoringOccasionOfPO/sCS120KHZoneT-SCS60KHZhalfT-SCS30KHZquarterT-SCS15KHZoneEighthT；源文件第 9206 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneT_SCS60KHZhalfT_SCS30KHZq_c04df89c 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneT_SCS60KHZhalfT_SCS30KHZq_c04df89c 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneT_SCS60KHZhalfT_SCS30KHZq_c04df89c 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneT_SCS60KHZhalfT_SCS30KHZq_c04df89c(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneT_SCS60KHZhalfT_SCS30KHZq_c04df89c& value)
 {
     (void)value;
@@ -2673,6 +2829,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120K
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZhalfT_SCS60KHZquarterT_SCS30_400ca2d9：ASN.1 firstPDCCH-MonitoringOccasionOfPO/sCS120KHZhalfT-SCS60KHZquarterT-SCS30KHZoneEighthT-SCS15KHZoneSixteenthT；源文件第 9207 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZhalfT_SCS60KHZquarterT_SCS30_400ca2d9 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZhalfT_SCS60KHZquarterT_SCS30_400ca2d9 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZhalfT_SCS60KHZquarterT_SCS30_400ca2d9 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZhalfT_SCS60KHZquarterT_SCS30_400ca2d9(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZhalfT_SCS60KHZquarterT_SCS30_400ca2d9& value)
 {
     (void)value;
@@ -2719,6 +2879,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120K
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZquarterT_SCS60KHZoneEighthT__0e19d5e0：ASN.1 firstPDCCH-MonitoringOccasionOfPO/sCS120KHZquarterT-SCS60KHZoneEighthT-SCS30KHZoneSixteenthT；源文件第 9208 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZquarterT_SCS60KHZoneEighthT__0e19d5e0 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZquarterT_SCS60KHZoneEighthT__0e19d5e0 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZquarterT_SCS60KHZoneEighthT__0e19d5e0 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZquarterT_SCS60KHZoneEighthT__0e19d5e0(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZquarterT_SCS60KHZoneEighthT__0e19d5e0& value)
 {
     (void)value;
@@ -2765,6 +2929,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120K
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneEighthT_SCS60KHZoneSixteenthT：ASN.1 firstPDCCH-MonitoringOccasionOfPO/sCS120KHZoneEighthT-SCS60KHZoneSixteenthT；源文件第 9209 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneEighthT_SCS60KHZoneSixteenthT 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneEighthT_SCS60KHZoneSixteenthT 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneEighthT_SCS60KHZoneSixteenthT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneEighthT_SCS60KHZoneSixteenthT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneEighthT_SCS60KHZoneSixteenthT& value)
 {
     (void)value;
@@ -2811,6 +2979,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120K
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneSixteenthT：ASN.1 firstPDCCH-MonitoringOccasionOfPO/sCS120KHZoneSixteenthT；源文件第 9210 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneSixteenthT 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneSixteenthT 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneSixteenthT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneSixteenthT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneSixteenthT& value)
 {
     (void)value;
@@ -2857,6 +3029,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120K
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO：ASN.1 firstPDCCH-MonitoringOccasionOfPO；源文件第 9202 行；CHOICE。
+// Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 7);
@@ -2977,6 +3153,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO(PDCCH_C
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup1：ASN.1 PDCCH_ConfigCommon_ExtGroup1；源文件第 9201 行；扩展添加组 [[ ]]。
+// Encode_PDCCH_ConfigCommon_ExtGroup1 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup1(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup1& value)
 {
     (void)value;
@@ -3012,6 +3192,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup1(PDCCH_ConfigCommon_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup2：ASN.1 PDCCH_ConfigCommon_ExtGroup2；源文件第 9213 行；扩展添加组 [[ ]]。
+// Encode_PDCCH_ConfigCommon_ExtGroup2 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup2(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup2& value)
 {
     (void)value;
@@ -3068,6 +3252,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup2(PDCCH_ConfigCommon_ExtGroup2& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SearchSpace_MonitoringSlotPeriodicityAndOffset：ASN.1 monitoringSlotPeriodicityAndOffset；源文件第 12176 行；CHOICE。
+// Encode_SearchSpace_MonitoringSlotPeriodicityAndOffset 只读不分配；Decode_SearchSpace_MonitoringSlotPeriodicityAndOffset 可能 malloc（失败时内部已释放并清零）；Free_SearchSpace_MonitoringSlotPeriodicityAndOffset 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpace_MonitoringSlotPeriodicityAndOffset(Encoder& enc, const SearchSpace_MonitoringSlotPeriodicityAndOffset& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 14);
@@ -3271,6 +3459,10 @@ void Free_SearchSpace_MonitoringSlotPeriodicityAndOffset(SearchSpace_MonitoringS
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SearchSpace_NrofCandidates：ASN.1 nrofCandidates；源文件第 12195 行；SEQUENCE。
+// Encode_SearchSpace_NrofCandidates 只读不分配；Decode_SearchSpace_NrofCandidates 可能 malloc（失败时内部已释放并清零）；Free_SearchSpace_NrofCandidates 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpace_NrofCandidates(Encoder& enc, const SearchSpace_NrofCandidates& value)
 {
     (void)value;
@@ -3324,6 +3516,10 @@ void Free_SearchSpace_NrofCandidates(SearchSpace_NrofCandidates& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SearchSpaceType_Common_Dci_Format0_0_AndFormat1_0：ASN.1 searchSpaceType/common/dci-Format0-0-AndFormat1-0；源文件第 12204 行；空 SEQUENCE{}。
+// Encode_SearchSpaceType_Common_Dci_Format0_0_AndFormat1_0 只读不分配；Decode_SearchSpaceType_Common_Dci_Format0_0_AndFormat1_0 可能 malloc（失败时内部已释放并清零）；Free_SearchSpaceType_Common_Dci_Format0_0_AndFormat1_0 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceType_Common_Dci_Format0_0_AndFormat1_0(Encoder& enc, const SearchSpaceType_Common_Dci_Format0_0_AndFormat1_0& value)
 {
     (void)value;
@@ -3351,6 +3547,10 @@ void Free_SearchSpaceType_Common_Dci_Format0_0_AndFormat1_0(SearchSpaceType_Comm
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SearchSpaceType_Common_Dci_Format2_0_NrofCandidates_SFI：ASN.1 searchSpaceType/common/dci-Format2-0/nrofCandidates-SFI；源文件第 12208 行；SEQUENCE。
+// Encode_SearchSpaceType_Common_Dci_Format2_0_NrofCandidates_SFI 只读不分配；Decode_SearchSpaceType_Common_Dci_Format2_0_NrofCandidates_SFI 可能 malloc（失败时内部已释放并清零）；Free_SearchSpaceType_Common_Dci_Format2_0_NrofCandidates_SFI 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceType_Common_Dci_Format2_0_NrofCandidates_SFI(Encoder& enc, const SearchSpaceType_Common_Dci_Format2_0_NrofCandidates_SFI& value)
 {
     (void)value;
@@ -3439,6 +3639,10 @@ void Free_SearchSpaceType_Common_Dci_Format2_0_NrofCandidates_SFI(SearchSpaceTyp
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SearchSpaceType_Common_Dci_Format2_0：ASN.1 searchSpaceType/common/dci-Format2-0；源文件第 12207 行；SEQUENCE。
+// Encode_SearchSpaceType_Common_Dci_Format2_0 只读不分配；Decode_SearchSpaceType_Common_Dci_Format2_0 可能 malloc（失败时内部已释放并清零）；Free_SearchSpaceType_Common_Dci_Format2_0 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceType_Common_Dci_Format2_0(Encoder& enc, const SearchSpaceType_Common_Dci_Format2_0& value)
 {
     (void)value;
@@ -3474,6 +3678,10 @@ void Free_SearchSpaceType_Common_Dci_Format2_0(SearchSpaceType_Common_Dci_Format
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SearchSpaceType_Common_Dci_Format2_1：ASN.1 searchSpaceType/common/dci-Format2-1；源文件第 12217 行；空 SEQUENCE{}。
+// Encode_SearchSpaceType_Common_Dci_Format2_1 只读不分配；Decode_SearchSpaceType_Common_Dci_Format2_1 可能 malloc（失败时内部已释放并清零）；Free_SearchSpaceType_Common_Dci_Format2_1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceType_Common_Dci_Format2_1(Encoder& enc, const SearchSpaceType_Common_Dci_Format2_1& value)
 {
     (void)value;
@@ -3501,6 +3709,10 @@ void Free_SearchSpaceType_Common_Dci_Format2_1(SearchSpaceType_Common_Dci_Format
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SearchSpaceType_Common_Dci_Format2_2：ASN.1 searchSpaceType/common/dci-Format2-2；源文件第 12220 行；空 SEQUENCE{}。
+// Encode_SearchSpaceType_Common_Dci_Format2_2 只读不分配；Decode_SearchSpaceType_Common_Dci_Format2_2 可能 malloc（失败时内部已释放并清零）；Free_SearchSpaceType_Common_Dci_Format2_2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceType_Common_Dci_Format2_2(Encoder& enc, const SearchSpaceType_Common_Dci_Format2_2& value)
 {
     (void)value;
@@ -3528,6 +3740,10 @@ void Free_SearchSpaceType_Common_Dci_Format2_2(SearchSpaceType_Common_Dci_Format
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SearchSpaceType_Common_Dci_Format2_3：ASN.1 searchSpaceType/common/dci-Format2-3；源文件第 12223 行；SEQUENCE。
+// Encode_SearchSpaceType_Common_Dci_Format2_3 只读不分配；Decode_SearchSpaceType_Common_Dci_Format2_3 可能 malloc（失败时内部已释放并清零）；Free_SearchSpaceType_Common_Dci_Format2_3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceType_Common_Dci_Format2_3(Encoder& enc, const SearchSpaceType_Common_Dci_Format2_3& value)
 {
     (void)value;
@@ -3577,6 +3793,10 @@ void Free_SearchSpaceType_Common_Dci_Format2_3(SearchSpaceType_Common_Dci_Format
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SearchSpaceType_Common：ASN.1 searchSpaceType/common；源文件第 12203 行；SEQUENCE。
+// Encode_SearchSpaceType_Common 只读不分配；Decode_SearchSpaceType_Common 可能 malloc（失败时内部已释放并清零）；Free_SearchSpaceType_Common 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceType_Common(Encoder& enc, const SearchSpaceType_Common& value)
 {
     (void)value;
@@ -3660,6 +3880,10 @@ void Free_SearchSpaceType_Common(SearchSpaceType_Common& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SearchSpaceType_Ue_Specific_ExtGroup1：ASN.1 SearchSpaceType_Ue_Specific_ExtGroup1；源文件第 12232 行；扩展添加组 [[ ]]。
+// Encode_SearchSpaceType_Ue_Specific_ExtGroup1 只读不分配；Decode_SearchSpaceType_Ue_Specific_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_SearchSpaceType_Ue_Specific_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceType_Ue_Specific_ExtGroup1(Encoder& enc, const SearchSpaceType_Ue_Specific_ExtGroup1& value)
 {
     (void)value;
@@ -3720,6 +3944,10 @@ void Free_SearchSpaceType_Ue_Specific_ExtGroup1(SearchSpaceType_Ue_Specific_ExtG
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SearchSpaceType_Ue_Specific_ExtGroup2：ASN.1 SearchSpaceType_Ue_Specific_ExtGroup2；源文件第 12239 行；扩展添加组 [[ ]]。
+// Encode_SearchSpaceType_Ue_Specific_ExtGroup2 只读不分配；Decode_SearchSpaceType_Ue_Specific_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_SearchSpaceType_Ue_Specific_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceType_Ue_Specific_ExtGroup2(Encoder& enc, const SearchSpaceType_Ue_Specific_ExtGroup2& value)
 {
     (void)value;
@@ -3767,6 +3995,10 @@ void Free_SearchSpaceType_Ue_Specific_ExtGroup2(SearchSpaceType_Ue_Specific_ExtG
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SearchSpaceType_Ue_Specific：ASN.1 searchSpaceType/ue-Specific；源文件第 12229 行；SEQUENCE。
+// Encode_SearchSpaceType_Ue_Specific 只读不分配；Decode_SearchSpaceType_Ue_Specific 可能 malloc（失败时内部已释放并清零）；Free_SearchSpaceType_Ue_Specific 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceType_Ue_Specific(Encoder& enc, const SearchSpaceType_Ue_Specific& value)
 {
     (void)value;
@@ -3862,6 +4094,10 @@ void Free_SearchSpaceType_Ue_Specific(SearchSpaceType_Ue_Specific& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SearchSpaceType：ASN.1 searchSpaceType；源文件第 12202 行；CHOICE。
+// Encode_SearchSpaceType 只读不分配；Decode_SearchSpaceType 可能 malloc（失败时内部已释放并清零）；Free_SearchSpaceType 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceType(Encoder& enc, const SearchSpaceType& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -3922,6 +4158,10 @@ void Free_SearchSpaceType(SearchSpaceType& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SearchSpace：ASN.1 SearchSpace；源文件第 12173 行；SEQUENCE。
+// Encode_SearchSpace 只读不分配；Decode_SearchSpace 可能 malloc（失败时内部已释放并清零）；Free_SearchSpace 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpace(Encoder& enc, const SearchSpace& value)
 {
     (void)value;
@@ -4032,6 +4272,10 @@ void Free_SearchSpace(SearchSpace& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup3_Sdt_SearchSpace_r17：ASN.1 sdt-SearchSpace-r17；源文件第 9217 行；CHOICE。
+// Encode_PDCCH_ConfigCommon_ExtGroup3_Sdt_SearchSpace_r17 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup3_Sdt_SearchSpace_r17 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup3_Sdt_SearchSpace_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Sdt_SearchSpace_r17(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Sdt_SearchSpace_r17& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -4093,6 +4337,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Sdt_SearchSpace_r17(PDCCH_ConfigCommon_Ex
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneEighthT：ASN.1 firstPDCCH-MonitoringOccasionOfPO-v1710/sCS480KHZoneEighthT；源文件第 9225 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneEighthT 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneEighthT 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneEighthT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneEighthT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneEighthT& value)
 {
     (void)value;
@@ -4139,6 +4387,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710_S
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneSixteenthT：ASN.1 firstPDCCH-MonitoringOccasionOfPO-v1710/sCS480KHZoneSixteenthT；源文件第 9226 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneSixteenthT 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneSixteenthT 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneSixteenthT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneSixteenthT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneSixteenthT& value)
 {
     (void)value;
@@ -4185,6 +4437,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710_S
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710：ASN.1 firstPDCCH-MonitoringOccasionOfPO-v1710；源文件第 9224 行；CHOICE。
+// Encode_PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -4245,6 +4501,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710(P
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS15KHZoneT：ASN.1 pei-ConfigBWP-r17/firstPDCCH-MonitoringOccasionOfPEI-O-r17/sCS15KHZoneT；源文件第 9231 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS15KHZoneT 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS15KHZoneT 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS15KHZoneT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS15KHZoneT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS15KHZoneT& value)
 {
     (void)value;
@@ -4291,6 +4551,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS30KHZoneT_SCS15KHZhalfT：ASN.1 pei-ConfigBWP-r17/firstPDCCH-MonitoringOccasionOfPEI-O-r17/sCS30KHZoneT-SCS15KHZhalfT；源文件第 9232 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS30KHZoneT_SCS15KHZhalfT 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS30KHZoneT_SCS15KHZhalfT 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS30KHZoneT_SCS15KHZhalfT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS30KHZoneT_SCS15KHZhalfT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS30KHZoneT_SCS15KHZhalfT& value)
 {
     (void)value;
@@ -4337,6 +4601,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS60KHZoneT_e6741208：ASN.1 pei-ConfigBWP-r17/firstPDCCH-MonitoringOccasionOfPEI-O-r17/sCS60KHZoneT-SCS30KHZhalfT-SCS15KHZquarterT；源文件第 9233 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS60KHZoneT_e6741208 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS60KHZoneT_e6741208 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS60KHZoneT_e6741208 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS60KHZoneT_e6741208(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS60KHZoneT_e6741208& value)
 {
     (void)value;
@@ -4383,6 +4651,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS120KHZone_26de7ad4：ASN.1 pei-ConfigBWP-r17/firstPDCCH-MonitoringOccasionOfPEI-O-r17/sCS120KHZoneT-SCS60KHZhalfT-SCS30KHZquarterT-SCS15KHZoneEighthT；源文件第 9234 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS120KHZone_26de7ad4 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS120KHZone_26de7ad4 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS120KHZone_26de7ad4 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS120KHZone_26de7ad4(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS120KHZone_26de7ad4& value)
 {
     (void)value;
@@ -4429,6 +4701,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS120KHZhal_fdd06d92：ASN.1 pei-ConfigBWP-r17/firstPDCCH-MonitoringOccasionOfPEI-O-r17/sCS120KHZhalfT-SCS60KHZquarterT-SCS30KHZoneEighthT-SCS15KHZoneSixteenthT；源文件第 9235 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS120KHZhal_fdd06d92 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS120KHZhal_fdd06d92 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS120KHZhal_fdd06d92 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS120KHZhal_fdd06d92(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS120KHZhal_fdd06d92& value)
 {
     (void)value;
@@ -4475,6 +4751,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZone_fa6dd3e5：ASN.1 pei-ConfigBWP-r17/firstPDCCH-MonitoringOccasionOfPEI-O-r17/sCS480KHZoneT-SCS120KHZquarterT-SCS60KHZoneEighthT-SCS30KHZoneSixteenthT；源文件第 9236 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZone_fa6dd3e5 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZone_fa6dd3e5 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZone_fa6dd3e5 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZone_fa6dd3e5(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZone_fa6dd3e5& value)
 {
     (void)value;
@@ -4521,6 +4801,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZhal_10d37c5c：ASN.1 pei-ConfigBWP-r17/firstPDCCH-MonitoringOccasionOfPEI-O-r17/sCS480KHZhalfT-SCS120KHZoneEighthT-SCS60KHZoneSixteenthT；源文件第 9237 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZhal_10d37c5c 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZhal_10d37c5c 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZhal_10d37c5c 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZhal_10d37c5c(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZhal_10d37c5c& value)
 {
     (void)value;
@@ -4567,6 +4851,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZqua_a3381043：ASN.1 pei-ConfigBWP-r17/firstPDCCH-MonitoringOccasionOfPEI-O-r17/sCS480KHZquarterT-SCS120KHZoneSixteenthT；源文件第 9238 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZqua_a3381043 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZqua_a3381043 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZqua_a3381043 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZqua_a3381043(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZqua_a3381043& value)
 {
     (void)value;
@@ -4613,6 +4901,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZoneEighthT：ASN.1 pei-ConfigBWP-r17/firstPDCCH-MonitoringOccasionOfPEI-O-r17/sCS480KHZoneEighthT；源文件第 9239 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZoneEighthT 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZoneEighthT 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZoneEighthT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZoneEighthT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZoneEighthT& value)
 {
     (void)value;
@@ -4659,6 +4951,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZoneSixteenthT：ASN.1 pei-ConfigBWP-r17/firstPDCCH-MonitoringOccasionOfPEI-O-r17/sCS480KHZoneSixteenthT；源文件第 9240 行；SEQUENCE OF。
+// Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZoneSixteenthT 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZoneSixteenthT 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZoneSixteenthT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZoneSixteenthT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZoneSixteenthT& value)
 {
     (void)value;
@@ -4705,6 +5001,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17：ASN.1 pei-ConfigBWP-r17/firstPDCCH-MonitoringOccasionOfPEI-O-r17；源文件第 9230 行；CHOICE。
+// Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 9);
@@ -4845,6 +5145,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17：ASN.1 pei-ConfigBWP-r17；源文件第 9228 行；SEQUENCE。
+// Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17& value)
 {
     (void)value;
@@ -4879,6 +5183,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17(PDCCH_ConfigCommon_ExtG
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup3：ASN.1 PDCCH_ConfigCommon_ExtGroup3；源文件第 9216 行；扩展添加组 [[ ]]。
+// Encode_PDCCH_ConfigCommon_ExtGroup3 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup3 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3& value)
 {
     (void)value;
@@ -4997,6 +5305,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup3(PDCCH_ConfigCommon_ExtGroup3& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup4：ASN.1 PDCCH_ConfigCommon_ExtGroup4；源文件第 9244 行；扩展添加组 [[ ]]。
+// Encode_PDCCH_ConfigCommon_ExtGroup4 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup4 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup4 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup4(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup4& value)
 {
     (void)value;
@@ -5031,6 +5343,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup4(PDCCH_ConfigCommon_ExtGroup4& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon_ExtGroup5：ASN.1 PDCCH_ConfigCommon_ExtGroup5；源文件第 9247 行；扩展添加组 [[ ]]。
+// Encode_PDCCH_ConfigCommon_ExtGroup5 只读不分配；Decode_PDCCH_ConfigCommon_ExtGroup5 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon_ExtGroup5 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup5(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup5& value)
 {
     (void)value;
@@ -5126,6 +5442,10 @@ void Free_PDCCH_ConfigCommon_ExtGroup5(PDCCH_ConfigCommon_ExtGroup5& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_ConfigCommon：ASN.1 PDCCH-ConfigCommon；源文件第 9191 行；SEQUENCE。
+// Encode_PDCCH_ConfigCommon 只读不分配；Decode_PDCCH_ConfigCommon 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_ConfigCommon 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon(Encoder& enc, const PDCCH_ConfigCommon& value)
 {
     (void)value;
@@ -5407,6 +5727,10 @@ void Free_PDCCH_ConfigCommon(PDCCH_ConfigCommon& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SetupRelease_PDCCH_ConfigCommon：ASN.1 SetupRelease<PDCCH-ConfigCommon>；源文件第 4528 行；CHOICE。
+// Encode_SetupRelease_PDCCH_ConfigCommon 只读不分配；Decode_SetupRelease_PDCCH_ConfigCommon 可能 malloc（失败时内部已释放并清零）；Free_SetupRelease_PDCCH_ConfigCommon 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SetupRelease_PDCCH_ConfigCommon(Encoder& enc, const SetupRelease_PDCCH_ConfigCommon& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -5466,6 +5790,10 @@ void Free_SetupRelease_PDCCH_ConfigCommon(SetupRelease_PDCCH_ConfigCommon& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDSCH_ConfigCommon：ASN.1 PDSCH-ConfigCommon；源文件第 9549 行；SEQUENCE。
+// Encode_PDSCH_ConfigCommon 只读不分配；Decode_PDSCH_ConfigCommon 可能 malloc（失败时内部已释放并清零）；Free_PDSCH_ConfigCommon 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDSCH_ConfigCommon(Encoder& enc, const PDSCH_ConfigCommon& value)
 {
     (void)value;
@@ -5508,6 +5836,10 @@ void Free_PDSCH_ConfigCommon(PDSCH_ConfigCommon& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SetupRelease_PDSCH_ConfigCommon：ASN.1 SetupRelease<PDSCH-ConfigCommon>；源文件第 4529 行；CHOICE。
+// Encode_SetupRelease_PDSCH_ConfigCommon 只读不分配；Decode_SetupRelease_PDSCH_ConfigCommon 可能 malloc（失败时内部已释放并清零）；Free_SetupRelease_PDSCH_ConfigCommon 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SetupRelease_PDSCH_ConfigCommon(Encoder& enc, const SetupRelease_PDSCH_ConfigCommon& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -5567,6 +5899,10 @@ void Free_SetupRelease_PDSCH_ConfigCommon(SetupRelease_PDSCH_ConfigCommon& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BWP_DownlinkCommon：ASN.1 BWP-DownlinkCommon；源文件第 4526 行；SEQUENCE。
+// Encode_BWP_DownlinkCommon 只读不分配；Decode_BWP_DownlinkCommon 可能 malloc（失败时内部已释放并清零）；Free_BWP_DownlinkCommon 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BWP_DownlinkCommon(Encoder& enc, const BWP_DownlinkCommon& value)
 {
     (void)value;
@@ -5626,6 +5962,10 @@ void Free_BWP_DownlinkCommon(BWP_DownlinkCommon& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SubgroupConfig_r17：ASN.1 SubgroupConfig-r17；源文件第 6603 行；SEQUENCE。
+// Encode_SubgroupConfig_r17 只读不分配；Decode_SubgroupConfig_r17 可能 malloc（失败时内部已释放并清零）；Free_SubgroupConfig_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SubgroupConfig_r17(Encoder& enc, const SubgroupConfig_r17& value)
 {
     (void)value;
@@ -5675,6 +6015,10 @@ void Free_SubgroupConfig_r17(SubgroupConfig_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PEI_Config_r17：ASN.1 PEI-Config-r17；源文件第 6594 行；SEQUENCE。
+// Encode_PEI_Config_r17 只读不分配；Decode_PEI_Config_r17 可能 malloc（失败时内部已释放并清零）；Free_PEI_Config_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PEI_Config_r17(Encoder& enc, const PEI_Config_r17& value)
 {
     (void)value;
@@ -5739,6 +6083,10 @@ void Free_PEI_Config_r17(PEI_Config_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DownlinkConfigCommonSIB_ExtGroup1：ASN.1 DownlinkConfigCommonSIB_ExtGroup1；源文件第 6541 行；扩展添加组 [[ ]]。
+// Encode_DownlinkConfigCommonSIB_ExtGroup1 只读不分配；Decode_DownlinkConfigCommonSIB_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_DownlinkConfigCommonSIB_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DownlinkConfigCommonSIB_ExtGroup1(Encoder& enc, const DownlinkConfigCommonSIB_ExtGroup1& value)
 {
     (void)value;
@@ -5786,6 +6134,10 @@ void Free_DownlinkConfigCommonSIB_ExtGroup1(DownlinkConfigCommonSIB_ExtGroup1& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MultiFrequencyBandListNR_Aerial_SIB_r18：ASN.1 MultiFrequencyBandListNR-Aerial-SIB-r18；源文件第 8393 行；SEQUENCE OF。
+// Encode_MultiFrequencyBandListNR_Aerial_SIB_r18 只读不分配；Decode_MultiFrequencyBandListNR_Aerial_SIB_r18 可能 malloc（失败时内部已释放并清零）；Free_MultiFrequencyBandListNR_Aerial_SIB_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MultiFrequencyBandListNR_Aerial_SIB_r18(Encoder& enc, const MultiFrequencyBandListNR_Aerial_SIB_r18& value)
 {
     (void)value;
@@ -5831,6 +6183,10 @@ void Free_MultiFrequencyBandListNR_Aerial_SIB_r18(MultiFrequencyBandListNR_Aeria
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FrequencyInfoDL_SIB_v1800：ASN.1 FrequencyInfoDL-SIB-v1800；源文件第 6938 行；SEQUENCE。
+// Encode_FrequencyInfoDL_SIB_v1800 只读不分配；Decode_FrequencyInfoDL_SIB_v1800 可能 malloc（失败时内部已释放并清零）；Free_FrequencyInfoDL_SIB_v1800 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FrequencyInfoDL_SIB_v1800(Encoder& enc, const FrequencyInfoDL_SIB_v1800& value)
 {
     (void)value;
@@ -5859,6 +6215,10 @@ void Free_FrequencyInfoDL_SIB_v1800(FrequencyInfoDL_SIB_v1800& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DownlinkConfigCommonSIB_ExtGroup2：ASN.1 DownlinkConfigCommonSIB_ExtGroup2；源文件第 6545 行；扩展添加组 [[ ]]。
+// Encode_DownlinkConfigCommonSIB_ExtGroup2 只读不分配；Decode_DownlinkConfigCommonSIB_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_DownlinkConfigCommonSIB_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DownlinkConfigCommonSIB_ExtGroup2(Encoder& enc, const DownlinkConfigCommonSIB_ExtGroup2& value)
 {
     (void)value;
@@ -5894,6 +6254,10 @@ void Free_DownlinkConfigCommonSIB_ExtGroup2(DownlinkConfigCommonSIB_ExtGroup2& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BCCH_Config：ASN.1 BCCH-Config；源文件第 6554 行；SEQUENCE。
+// Encode_BCCH_Config 只读不分配；Decode_BCCH_Config 可能 malloc（失败时内部已释放并清零）；Free_BCCH_Config 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BCCH_Config(Encoder& enc, const BCCH_Config& value)
 {
     (void)value;
@@ -5930,6 +6294,10 @@ void Free_BCCH_Config(BCCH_Config& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PCCH_Config_ExtGroup1：ASN.1 PCCH_Config_ExtGroup1；源文件第 6581 行；扩展添加组 [[ ]]。
+// Encode_PCCH_Config_ExtGroup1 只读不分配；Decode_PCCH_Config_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_PCCH_Config_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_ExtGroup1(Encoder& enc, const PCCH_Config_ExtGroup1& value)
 {
     (void)value;
@@ -5966,6 +6334,10 @@ void Free_PCCH_Config_ExtGroup1(PCCH_Config_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneEighthT：ASN.1 firstPDCCH-MonitoringOccasionOfPO-v1710/sCS480KHZoneEighthT；源文件第 6588 行；SEQUENCE OF。
+// Encode_PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneEighthT 只读不分配；Decode_PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneEighthT 可能 malloc（失败时内部已释放并清零）；Free_PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneEighthT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneEighthT(Encoder& enc, const PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneEighthT& value)
 {
     (void)value;
@@ -6012,6 +6384,10 @@ void Free_PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KH
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneSixteenthT：ASN.1 firstPDCCH-MonitoringOccasionOfPO-v1710/sCS480KHZoneSixteenthT；源文件第 6589 行；SEQUENCE OF。
+// Encode_PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneSixteenthT 只读不分配；Decode_PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneSixteenthT 可能 malloc（失败时内部已释放并清零）；Free_PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneSixteenthT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneSixteenthT(Encoder& enc, const PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneSixteenthT& value)
 {
     (void)value;
@@ -6058,6 +6434,10 @@ void Free_PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KH
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710：ASN.1 firstPDCCH-MonitoringOccasionOfPO-v1710；源文件第 6587 行；CHOICE。
+// Encode_PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710 只读不分配；Decode_PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710 可能 malloc（失败时内部已释放并清零）；Free_PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710(Encoder& enc, const PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -6118,6 +6498,10 @@ void Free_PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710(PCCH_Con
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PCCH_Config_ExtGroup2：ASN.1 PCCH_Config_ExtGroup2；源文件第 6584 行；扩展添加组 [[ ]]。
+// Encode_PCCH_Config_ExtGroup2 只读不分配；Decode_PCCH_Config_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_PCCH_Config_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_ExtGroup2(Encoder& enc, const PCCH_Config_ExtGroup2& value)
 {
     (void)value;
@@ -6164,6 +6548,10 @@ void Free_PCCH_Config_ExtGroup2(PCCH_Config_ExtGroup2& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PCCH_Config_NAndPagingFrameOffset：ASN.1 nAndPagingFrameOffset；源文件第 6562 行；CHOICE。
+// Encode_PCCH_Config_NAndPagingFrameOffset 只读不分配；Decode_PCCH_Config_NAndPagingFrameOffset 可能 malloc（失败时内部已释放并清零）；Free_PCCH_Config_NAndPagingFrameOffset 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_NAndPagingFrameOffset(Encoder& enc, const PCCH_Config_NAndPagingFrameOffset& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 4);
@@ -6257,6 +6645,10 @@ void Free_PCCH_Config_NAndPagingFrameOffset(PCCH_Config_NAndPagingFrameOffset& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS15KHZoneT：ASN.1 firstPDCCH-MonitoringOccasionOfPO/sCS15KHZoneT；源文件第 6571 行；SEQUENCE OF。
+// Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS15KHZoneT 只读不分配；Decode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS15KHZoneT 可能 malloc（失败时内部已释放并清零）；Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS15KHZoneT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS15KHZoneT(Encoder& enc, const PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS15KHZoneT& value)
 {
     (void)value;
@@ -6303,6 +6695,10 @@ void Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS15KHZoneT(PCCH_Config
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS30KHZoneT_SCS15KHZhalfT：ASN.1 firstPDCCH-MonitoringOccasionOfPO/sCS30KHZoneT-SCS15KHZhalfT；源文件第 6572 行；SEQUENCE OF。
+// Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS30KHZoneT_SCS15KHZhalfT 只读不分配；Decode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS30KHZoneT_SCS15KHZhalfT 可能 malloc（失败时内部已释放并清零）；Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS30KHZoneT_SCS15KHZhalfT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS30KHZoneT_SCS15KHZhalfT(Encoder& enc, const PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS30KHZoneT_SCS15KHZhalfT& value)
 {
     (void)value;
@@ -6349,6 +6745,10 @@ void Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS30KHZoneT_SCS15KHZhal
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS60KHZoneT_SCS30KHZhalfT_SCS15KHZquarterT：ASN.1 firstPDCCH-MonitoringOccasionOfPO/sCS60KHZoneT-SCS30KHZhalfT-SCS15KHZquarterT；源文件第 6573 行；SEQUENCE OF。
+// Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS60KHZoneT_SCS30KHZhalfT_SCS15KHZquarterT 只读不分配；Decode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS60KHZoneT_SCS30KHZhalfT_SCS15KHZquarterT 可能 malloc（失败时内部已释放并清零）；Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS60KHZoneT_SCS30KHZhalfT_SCS15KHZquarterT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS60KHZoneT_SCS30KHZhalfT_SCS15KHZquarterT(Encoder& enc, const PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS60KHZoneT_SCS30KHZhalfT_SCS15KHZquarterT& value)
 {
     (void)value;
@@ -6395,6 +6795,10 @@ void Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS60KHZoneT_SCS30KHZhal
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneT_SCS60KHZhalfT_SCS30KHZquarterT_SCS15KHZoneEighthT：ASN.1 firstPDCCH-MonitoringOccasionOfPO/sCS120KHZoneT-SCS60KHZhalfT-SCS30KHZquarterT-SCS15KHZoneEighthT；源文件第 6574 行；SEQUENCE OF。
+// Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneT_SCS60KHZhalfT_SCS30KHZquarterT_SCS15KHZoneEighthT 只读不分配；Decode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneT_SCS60KHZhalfT_SCS30KHZquarterT_SCS15KHZoneEighthT 可能 malloc（失败时内部已释放并清零）；Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneT_SCS60KHZhalfT_SCS30KHZquarterT_SCS15KHZoneEighthT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneT_SCS60KHZhalfT_SCS30KHZquarterT_SCS15KHZoneEighthT(Encoder& enc, const PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneT_SCS60KHZhalfT_SCS30KHZquarterT_SCS15KHZoneEighthT& value)
 {
     (void)value;
@@ -6441,6 +6845,10 @@ void Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneT_SCS60KHZha
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZhalfT_SCS60KHZquarterT_SCS30KHZoneEighthT_SCS15KHZoneSixteenthT：ASN.1 firstPDCCH-MonitoringOccasionOfPO/sCS120KHZhalfT-SCS60KHZquarterT-SCS30KHZoneEighthT-SCS15KHZoneSixteenthT；源文件第 6575 行；SEQUENCE OF。
+// Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZhalfT_SCS60KHZquarterT_SCS30KHZoneEighthT_SCS15KHZoneSixteenthT 只读不分配；Decode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZhalfT_SCS60KHZquarterT_SCS30KHZoneEighthT_SCS15KHZoneSixteenthT 可能 malloc（失败时内部已释放并清零）；Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZhalfT_SCS60KHZquarterT_SCS30KHZoneEighthT_SCS15KHZoneSixteenthT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZhalfT_SCS60KHZquarterT_SCS30KHZoneEighthT_SCS15KHZoneSixteenthT(Encoder& enc, const PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZhalfT_SCS60KHZquarterT_SCS30KHZoneEighthT_SCS15KHZoneSixteenthT& value)
 {
     (void)value;
@@ -6487,6 +6895,10 @@ void Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZhalfT_SCS60KHZq
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZoneT_SCS120KHZquarterT_SCS60KHZoneEighthT_SCS30KHZoneSixteenthT：ASN.1 firstPDCCH-MonitoringOccasionOfPO/sCS480KHZoneT-SCS120KHZquarterT-SCS60KHZoneEighthT-SCS30KHZoneSixteenthT；源文件第 6576 行；SEQUENCE OF。
+// Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZoneT_SCS120KHZquarterT_SCS60KHZoneEighthT_SCS30KHZoneSixteenthT 只读不分配；Decode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZoneT_SCS120KHZquarterT_SCS60KHZoneEighthT_SCS30KHZoneSixteenthT 可能 malloc（失败时内部已释放并清零）；Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZoneT_SCS120KHZquarterT_SCS60KHZoneEighthT_SCS30KHZoneSixteenthT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZoneT_SCS120KHZquarterT_SCS60KHZoneEighthT_SCS30KHZoneSixteenthT(Encoder& enc, const PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZoneT_SCS120KHZquarterT_SCS60KHZoneEighthT_SCS30KHZoneSixteenthT& value)
 {
     (void)value;
@@ -6533,6 +6945,10 @@ void Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZoneT_SCS120KHZq
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZhalfT_SCS120KHZoneEighthT_SCS60KHZoneSixteenthT：ASN.1 firstPDCCH-MonitoringOccasionOfPO/sCS480KHZhalfT-SCS120KHZoneEighthT-SCS60KHZoneSixteenthT；源文件第 6577 行；SEQUENCE OF。
+// Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZhalfT_SCS120KHZoneEighthT_SCS60KHZoneSixteenthT 只读不分配；Decode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZhalfT_SCS120KHZoneEighthT_SCS60KHZoneSixteenthT 可能 malloc（失败时内部已释放并清零）；Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZhalfT_SCS120KHZoneEighthT_SCS60KHZoneSixteenthT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZhalfT_SCS120KHZoneEighthT_SCS60KHZoneSixteenthT(Encoder& enc, const PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZhalfT_SCS120KHZoneEighthT_SCS60KHZoneSixteenthT& value)
 {
     (void)value;
@@ -6579,6 +6995,10 @@ void Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZhalfT_SCS120KHZ
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZquarterT_SCS120KHZoneSixteenthT：ASN.1 firstPDCCH-MonitoringOccasionOfPO/sCS480KHZquarterT-SCS120KHZoneSixteenthT；源文件第 6578 行；SEQUENCE OF。
+// Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZquarterT_SCS120KHZoneSixteenthT 只读不分配；Decode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZquarterT_SCS120KHZoneSixteenthT 可能 malloc（失败时内部已释放并清零）；Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZquarterT_SCS120KHZoneSixteenthT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZquarterT_SCS120KHZoneSixteenthT(Encoder& enc, const PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZquarterT_SCS120KHZoneSixteenthT& value)
 {
     (void)value;
@@ -6625,6 +7045,10 @@ void Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZquarterT_SCS120
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO：ASN.1 firstPDCCH-MonitoringOccasionOfPO；源文件第 6570 行；CHOICE。
+// Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO 只读不分配；Decode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO 可能 malloc（失败时内部已释放并清零）；Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO(Encoder& enc, const PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 7);
@@ -6745,6 +7169,10 @@ void Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO(PCCH_Config_FirstPDCCH_M
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PCCH_Config：ASN.1 PCCH-Config；源文件第 6560 行；SEQUENCE。
+// Encode_PCCH_Config 只读不分配；Decode_PCCH_Config 可能 malloc（失败时内部已释放并清零）；Free_PCCH_Config 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config(Encoder& enc, const PCCH_Config& value)
 {
     (void)value;
@@ -6863,6 +7291,10 @@ void Free_PCCH_Config(PCCH_Config& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MultiFrequencyBandListNR_SIB：ASN.1 MultiFrequencyBandListNR-SIB；源文件第 8380 行；SEQUENCE OF。
+// Encode_MultiFrequencyBandListNR_SIB 只读不分配；Decode_MultiFrequencyBandListNR_SIB 可能 malloc（失败时内部已释放并清零）；Free_MultiFrequencyBandListNR_SIB 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MultiFrequencyBandListNR_SIB(Encoder& enc, const MultiFrequencyBandListNR_SIB& value)
 {
     (void)value;
@@ -6908,6 +7340,10 @@ void Free_MultiFrequencyBandListNR_SIB(MultiFrequencyBandListNR_SIB& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FrequencyInfoDL_SIB：ASN.1 FrequencyInfoDL-SIB；源文件第 6928 行；SEQUENCE。
+// Encode_FrequencyInfoDL_SIB 只读不分配；Decode_FrequencyInfoDL_SIB 可能 malloc（失败时内部已释放并清零）；Free_FrequencyInfoDL_SIB 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FrequencyInfoDL_SIB(Encoder& enc, const FrequencyInfoDL_SIB& value)
 {
     (void)value;
@@ -6968,6 +7404,10 @@ void Free_FrequencyInfoDL_SIB(FrequencyInfoDL_SIB& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DownlinkConfigCommonSIB：ASN.1 DownlinkConfigCommonSIB；源文件第 6535 行；SEQUENCE。
+// Encode_DownlinkConfigCommonSIB 只读不分配；Decode_DownlinkConfigCommonSIB 可能 malloc（失败时内部已释放并清零）；Free_DownlinkConfigCommonSIB 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DownlinkConfigCommonSIB(Encoder& enc, const DownlinkConfigCommonSIB& value)
 {
     (void)value;
@@ -7077,6 +7517,10 @@ void Free_DownlinkConfigCommonSIB(DownlinkConfigCommonSIB& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// HighSpeedConfig_r16：ASN.1 HighSpeedConfig-r16；源文件第 6988 行；SEQUENCE。
+// Encode_HighSpeedConfig_r16 只读不分配；Decode_HighSpeedConfig_r16 可能 malloc（失败时内部已释放并清零）；Free_HighSpeedConfig_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_HighSpeedConfig_r16(Encoder& enc, const HighSpeedConfig_r16& value)
 {
     (void)value;
@@ -7129,6 +7573,10 @@ void Free_HighSpeedConfig_r16(HighSpeedConfig_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SemiStaticChannelAccessConfig_r16：ASN.1 SemiStaticChannelAccessConfig-r16；源文件第 12374 行；SEQUENCE。
+// Encode_SemiStaticChannelAccessConfig_r16 只读不分配；Decode_SemiStaticChannelAccessConfig_r16 可能 malloc（失败时内部已释放并清零）；Free_SemiStaticChannelAccessConfig_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SemiStaticChannelAccessConfig_r16(Encoder& enc, const SemiStaticChannelAccessConfig_r16& value)
 {
     (void)value;
@@ -7158,6 +7606,10 @@ void Free_SemiStaticChannelAccessConfig_r16(SemiStaticChannelAccessConfig_r16& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ServingCellConfigCommonSIB_ExtGroup1_ChannelAccessMode_r16：ASN.1 channelAccessMode-r16；源文件第 12727 行；CHOICE。
+// Encode_ServingCellConfigCommonSIB_ExtGroup1_ChannelAccessMode_r16 只读不分配；Decode_ServingCellConfigCommonSIB_ExtGroup1_ChannelAccessMode_r16 可能 malloc（失败时内部已释放并清零）；Free_ServingCellConfigCommonSIB_ExtGroup1_ChannelAccessMode_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ServingCellConfigCommonSIB_ExtGroup1_ChannelAccessMode_r16(Encoder& enc, const ServingCellConfigCommonSIB_ExtGroup1_ChannelAccessMode_r16& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -7217,6 +7669,10 @@ void Free_ServingCellConfigCommonSIB_ExtGroup1_ChannelAccessMode_r16(ServingCell
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ServingCellConfigCommonSIB_ExtGroup1：ASN.1 ServingCellConfigCommonSIB_ExtGroup1；源文件第 12726 行；扩展添加组 [[ ]]。
+// Encode_ServingCellConfigCommonSIB_ExtGroup1 只读不分配；Decode_ServingCellConfigCommonSIB_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_ServingCellConfigCommonSIB_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ServingCellConfigCommonSIB_ExtGroup1(Encoder& enc, const ServingCellConfigCommonSIB_ExtGroup1& value)
 {
     (void)value;
@@ -7277,6 +7733,10 @@ void Free_ServingCellConfigCommonSIB_ExtGroup1(ServingCellConfigCommonSIB_ExtGro
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// HighSpeedConfigFR2_r17：ASN.1 HighSpeedConfigFR2-r17；源文件第 7001 行；SEQUENCE。
+// Encode_HighSpeedConfigFR2_r17 只读不分配；Decode_HighSpeedConfigFR2_r17 可能 malloc（失败时内部已释放并清零）；Free_HighSpeedConfigFR2_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_HighSpeedConfigFR2_r17(Encoder& enc, const HighSpeedConfigFR2_r17& value)
 {
     (void)value;
@@ -7344,6 +7804,10 @@ void Free_HighSpeedConfigFR2_r17(HighSpeedConfigFR2_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RA_Prioritization：ASN.1 RA-Prioritization；源文件第 10947 行；SEQUENCE。
+// Encode_RA_Prioritization 只读不分配；Decode_RA_Prioritization 可能 malloc（失败时内部已释放并清零）；Free_RA_Prioritization 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RA_Prioritization(Encoder& enc, const RA_Prioritization& value)
 {
     (void)value;
@@ -7393,6 +7857,10 @@ void Free_RA_Prioritization(RA_Prioritization& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RACH_ConfigCommon_ExtGroup1_Ra_PrioritizationForAccessIdentity_r16：ASN.1 ra-PrioritizationForAccessIdentity-r16；源文件第 10747 行；SEQUENCE。
+// Encode_RACH_ConfigCommon_ExtGroup1_Ra_PrioritizationForAccessIdentity_r16 只读不分配；Decode_RACH_ConfigCommon_ExtGroup1_Ra_PrioritizationForAccessIdentity_r16 可能 malloc（失败时内部已释放并清零）；Free_RACH_ConfigCommon_ExtGroup1_Ra_PrioritizationForAccessIdentity_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RACH_ConfigCommon_ExtGroup1_Ra_PrioritizationForAccessIdentity_r16(Encoder& enc, const RACH_ConfigCommon_ExtGroup1_Ra_PrioritizationForAccessIdentity_r16& value)
 {
     (void)value;
@@ -7433,6 +7901,10 @@ void Free_RACH_ConfigCommon_ExtGroup1_Ra_PrioritizationForAccessIdentity_r16(RAC
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RACH_ConfigCommon_ExtGroup1_Prach_RootSequenceIndex_r16：ASN.1 prach-RootSequenceIndex-r16；源文件第 10751 行；CHOICE。
+// Encode_RACH_ConfigCommon_ExtGroup1_Prach_RootSequenceIndex_r16 只读不分配；Decode_RACH_ConfigCommon_ExtGroup1_Prach_RootSequenceIndex_r16 可能 malloc（失败时内部已释放并清零）；Free_RACH_ConfigCommon_ExtGroup1_Prach_RootSequenceIndex_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RACH_ConfigCommon_ExtGroup1_Prach_RootSequenceIndex_r16(Encoder& enc, const RACH_ConfigCommon_ExtGroup1_Prach_RootSequenceIndex_r16& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -7495,6 +7967,10 @@ void Free_RACH_ConfigCommon_ExtGroup1_Prach_RootSequenceIndex_r16(RACH_ConfigCom
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RACH_ConfigCommon_ExtGroup1：ASN.1 RACH_ConfigCommon_ExtGroup1；源文件第 10746 行；扩展添加组 [[ ]]。
+// Encode_RACH_ConfigCommon_ExtGroup1 只读不分配；Decode_RACH_ConfigCommon_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_RACH_ConfigCommon_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RACH_ConfigCommon_ExtGroup1(Encoder& enc, const RACH_ConfigCommon_ExtGroup1& value)
 {
     (void)value;
@@ -7542,6 +8018,10 @@ void Free_RACH_ConfigCommon_ExtGroup1(RACH_ConfigCommon_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RA_PrioritizationSliceInfoList_r17：ASN.1 RA-PrioritizationSliceInfoList-r17；源文件第 10961 行；SEQUENCE OF。
+// Encode_RA_PrioritizationSliceInfoList_r17 只读不分配；Decode_RA_PrioritizationSliceInfoList_r17 可能 malloc（失败时内部已释放并清零）；Free_RA_PrioritizationSliceInfoList_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RA_PrioritizationSliceInfoList_r17(Encoder& enc, const RA_PrioritizationSliceInfoList_r17& value)
 {
     (void)value;

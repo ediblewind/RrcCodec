@@ -18,6 +18,10 @@
 namespace rrc {
 namespace v1810 {
 
+// --------------------------------------------------------------------------
+// RateMatchPattern_PatternType：ASN.1 patternType；源文件第 11118 行；CHOICE。
+// Encode_RateMatchPattern_PatternType 只读不分配；Decode_RateMatchPattern_PatternType 可能 malloc（失败时内部已释放并清零）；Free_RateMatchPattern_PatternType 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RateMatchPattern_PatternType(Encoder& enc, const RateMatchPattern_PatternType& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -79,6 +83,10 @@ void Free_RateMatchPattern_PatternType(RateMatchPattern_PatternType& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RateMatchPattern：ASN.1 RateMatchPattern；源文件第 11115 行；SEQUENCE。
+// Encode_RateMatchPattern 只读不分配；Decode_RateMatchPattern 可能 malloc（失败时内部已释放并清零）；Free_RateMatchPattern 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RateMatchPattern(Encoder& enc, const RateMatchPattern& value)
 {
     (void)value;
@@ -175,6 +183,10 @@ void Free_RateMatchPattern(RateMatchPattern& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ReportCGI_EUTRA_ExtGroup1：ASN.1 ReportCGI_EUTRA_ExtGroup1；源文件第 11247 行；扩展添加组 [[ ]]。
+// Encode_ReportCGI_EUTRA_ExtGroup1 只读不分配；Decode_ReportCGI_EUTRA_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_ReportCGI_EUTRA_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ReportCGI_EUTRA_ExtGroup1(Encoder& enc, const ReportCGI_EUTRA_ExtGroup1& value)
 {
     (void)value;
@@ -209,6 +221,10 @@ void Free_ReportCGI_EUTRA_ExtGroup1(ReportCGI_EUTRA_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ReportCGI_EUTRA：ASN.1 ReportCGI-EUTRA；源文件第 11244 行；SEQUENCE。
+// Encode_ReportCGI_EUTRA 只读不分配；Decode_ReportCGI_EUTRA 可能 malloc（失败时内部已释放并清零）；Free_ReportCGI_EUTRA 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ReportCGI_EUTRA(Encoder& enc, const ReportCGI_EUTRA& value)
 {
     (void)value;
@@ -281,6 +297,10 @@ void Free_ReportCGI_EUTRA(ReportCGI_EUTRA& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ReportSFTD_EUTRA：ASN.1 ReportSFTD-EUTRA；源文件第 11252 行；SEQUENCE。
+// Encode_ReportSFTD_EUTRA 只读不分配；Decode_ReportSFTD_EUTRA 可能 malloc（失败时内部已释放并清零）；Free_ReportSFTD_EUTRA 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ReportSFTD_EUTRA(Encoder& enc, const ReportSFTD_EUTRA& value)
 {
     (void)value;
@@ -323,6 +343,10 @@ void Free_ReportSFTD_EUTRA(ReportSFTD_EUTRA& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasReportQuantityUTRA_FDD_r16：ASN.1 MeasReportQuantityUTRA-FDD-r16；源文件第 11375 行；SEQUENCE。
+// Encode_MeasReportQuantityUTRA_FDD_r16 只读不分配；Decode_MeasReportQuantityUTRA_FDD_r16 可能 malloc（失败时内部已释放并清零）；Free_MeasReportQuantityUTRA_FDD_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasReportQuantityUTRA_FDD_r16(Encoder& enc, const MeasReportQuantityUTRA_FDD_r16& value)
 {
     (void)value;
@@ -358,6 +382,10 @@ void Free_MeasReportQuantityUTRA_FDD_r16(MeasReportQuantityUTRA_FDD_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfigInterRAT_ExtGroup1：ASN.1 EventTriggerConfigInterRAT_ExtGroup1；源文件第 11331 行；扩展添加组 [[ ]]。
+// Encode_EventTriggerConfigInterRAT_ExtGroup1 只读不分配；Decode_EventTriggerConfigInterRAT_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfigInterRAT_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_ExtGroup1(Encoder& enc, const EventTriggerConfigInterRAT_ExtGroup1& value)
 {
     (void)value;
@@ -393,6 +421,10 @@ void Free_EventTriggerConfigInterRAT_ExtGroup1(EventTriggerConfigInterRAT_ExtGro
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfigInterRAT_ExtGroup2：ASN.1 EventTriggerConfigInterRAT_ExtGroup2；源文件第 11334 行；扩展添加组 [[ ]]。
+// Encode_EventTriggerConfigInterRAT_ExtGroup2 只读不分配；Decode_EventTriggerConfigInterRAT_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfigInterRAT_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_ExtGroup2(Encoder& enc, const EventTriggerConfigInterRAT_ExtGroup2& value)
 {
     (void)value;
@@ -463,6 +495,10 @@ void Free_EventTriggerConfigInterRAT_ExtGroup2(EventTriggerConfigInterRAT_ExtGro
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SL_MeasReportQuantity_r16：ASN.1 SL-MeasReportQuantity-r16；源文件第 22977 行；CHOICE。
+// Encode_SL_MeasReportQuantity_r16 只读不分配；Decode_SL_MeasReportQuantity_r16 可能 malloc（失败时内部已释放并清零）；Free_SL_MeasReportQuantity_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SL_MeasReportQuantity_r16(Encoder& enc, const SL_MeasReportQuantity_r16& value)
 {
     const std::int64_t choice_index = (std::int64_t)(value.tag);
@@ -553,6 +589,10 @@ void Free_SL_MeasReportQuantity_r16(SL_MeasReportQuantity_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfigInterRAT_ExtGroup3：ASN.1 EventTriggerConfigInterRAT_ExtGroup3；源文件第 11340 行；扩展添加组 [[ ]]。
+// Encode_EventTriggerConfigInterRAT_ExtGroup3 只读不分配；Decode_EventTriggerConfigInterRAT_ExtGroup3 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfigInterRAT_ExtGroup3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_ExtGroup3(Encoder& enc, const EventTriggerConfigInterRAT_ExtGroup3& value)
 {
     (void)value;
@@ -588,6 +628,10 @@ void Free_EventTriggerConfigInterRAT_ExtGroup3(EventTriggerConfigInterRAT_ExtGro
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfigInterRAT_ExtGroup4：ASN.1 EventTriggerConfigInterRAT_ExtGroup4；源文件第 11343 行；扩展添加组 [[ ]]。
+// Encode_EventTriggerConfigInterRAT_ExtGroup4 只读不分配；Decode_EventTriggerConfigInterRAT_ExtGroup4 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfigInterRAT_ExtGroup4 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_ExtGroup4(Encoder& enc, const EventTriggerConfigInterRAT_ExtGroup4& value)
 {
     (void)value;
@@ -644,6 +688,10 @@ void Free_EventTriggerConfigInterRAT_ExtGroup4(EventTriggerConfigInterRAT_ExtGro
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasReportQuantity：ASN.1 MeasReportQuantity；源文件第 11707 行；SEQUENCE。
+// Encode_MeasReportQuantity 只读不分配；Decode_MeasReportQuantity 可能 malloc（失败时内部已释放并清零）；Free_MeasReportQuantity 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasReportQuantity(Encoder& enc, const MeasReportQuantity& value)
 {
     (void)value;
@@ -685,6 +733,10 @@ void Free_MeasReportQuantity(MeasReportQuantity& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfigInterRAT_EventId_EventB1：ASN.1 eventId/eventB1；源文件第 11260 行；SEQUENCE。
+// Encode_EventTriggerConfigInterRAT_EventId_EventB1 只读不分配；Decode_EventTriggerConfigInterRAT_EventId_EventB1 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfigInterRAT_EventId_EventB1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_EventId_EventB1(Encoder& enc, const EventTriggerConfigInterRAT_EventId_EventB1& value)
 {
     (void)value;
@@ -738,6 +790,10 @@ void Free_EventTriggerConfigInterRAT_EventId_EventB1(EventTriggerConfigInterRAT_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfigInterRAT_EventId_EventB2：ASN.1 eventId/eventB2；源文件第 11267 行；SEQUENCE。
+// Encode_EventTriggerConfigInterRAT_EventId_EventB2 只读不分配；Decode_EventTriggerConfigInterRAT_EventId_EventB2 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfigInterRAT_EventId_EventB2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_EventId_EventB2(Encoder& enc, const EventTriggerConfigInterRAT_EventId_EventB2& value)
 {
     (void)value;
@@ -796,6 +852,10 @@ void Free_EventTriggerConfigInterRAT_EventId_EventB2(EventTriggerConfigInterRAT_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasTriggerQuantityUTRA_FDD_r16：ASN.1 MeasTriggerQuantityUTRA-FDD-r16；源文件第 11370 行；CHOICE。
+// Encode_MeasTriggerQuantityUTRA_FDD_r16 只读不分配；Decode_MeasTriggerQuantityUTRA_FDD_r16 可能 malloc（失败时内部已释放并清零）；Free_MeasTriggerQuantityUTRA_FDD_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasTriggerQuantityUTRA_FDD_r16(Encoder& enc, const MeasTriggerQuantityUTRA_FDD_r16& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -858,6 +918,10 @@ void Free_MeasTriggerQuantityUTRA_FDD_r16(MeasTriggerQuantityUTRA_FDD_r16& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfigInterRAT_EventId_EventB1_UTRA_FDD_r16：ASN.1 eventId/eventB1-UTRA-FDD-r16；源文件第 11277 行；SEQUENCE。
+// Encode_EventTriggerConfigInterRAT_EventId_EventB1_UTRA_FDD_r16 只读不分配；Decode_EventTriggerConfigInterRAT_EventId_EventB1_UTRA_FDD_r16 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfigInterRAT_EventId_EventB1_UTRA_FDD_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_EventId_EventB1_UTRA_FDD_r16(Encoder& enc, const EventTriggerConfigInterRAT_EventId_EventB1_UTRA_FDD_r16& value)
 {
     (void)value;
@@ -911,6 +975,10 @@ void Free_EventTriggerConfigInterRAT_EventId_EventB1_UTRA_FDD_r16(EventTriggerCo
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfigInterRAT_EventId_EventB2_UTRA_FDD_r16：ASN.1 eventId/eventB2-UTRA-FDD-r16；源文件第 11284 行；SEQUENCE。
+// Encode_EventTriggerConfigInterRAT_EventId_EventB2_UTRA_FDD_r16 只读不分配；Decode_EventTriggerConfigInterRAT_EventId_EventB2_UTRA_FDD_r16 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfigInterRAT_EventId_EventB2_UTRA_FDD_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_EventId_EventB2_UTRA_FDD_r16(Encoder& enc, const EventTriggerConfigInterRAT_EventId_EventB2_UTRA_FDD_r16& value)
 {
     (void)value;
@@ -969,6 +1037,10 @@ void Free_EventTriggerConfigInterRAT_EventId_EventB2_UTRA_FDD_r16(EventTriggerCo
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SL_MeasTriggerQuantity_r16：ASN.1 SL-MeasTriggerQuantity-r16；源文件第 22982 行；CHOICE。
+// Encode_SL_MeasTriggerQuantity_r16 只读不分配；Decode_SL_MeasTriggerQuantity_r16 可能 malloc（失败时内部已释放并清零）；Free_SL_MeasTriggerQuantity_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SL_MeasTriggerQuantity_r16(Encoder& enc, const SL_MeasTriggerQuantity_r16& value)
 {
     const std::int64_t choice_index = (std::int64_t)(value.tag);
@@ -1059,6 +1131,10 @@ void Free_SL_MeasTriggerQuantity_r16(SL_MeasTriggerQuantity_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfigInterRAT_EventId_EventY1_Relay_r17：ASN.1 eventId/eventY1-Relay-r17；源文件第 11294 行；SEQUENCE。
+// Encode_EventTriggerConfigInterRAT_EventId_EventY1_Relay_r17 只读不分配；Decode_EventTriggerConfigInterRAT_EventId_EventY1_Relay_r17 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfigInterRAT_EventId_EventY1_Relay_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_EventId_EventY1_Relay_r17(Encoder& enc, const EventTriggerConfigInterRAT_EventId_EventY1_Relay_r17& value)
 {
     (void)value;
@@ -1117,6 +1193,10 @@ void Free_EventTriggerConfigInterRAT_EventId_EventY1_Relay_r17(EventTriggerConfi
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfigInterRAT_EventId_EventY2_Relay_r17：ASN.1 eventId/eventY2-Relay-r17；源文件第 11302 行；SEQUENCE。
+// Encode_EventTriggerConfigInterRAT_EventId_EventY2_Relay_r17 只读不分配；Decode_EventTriggerConfigInterRAT_EventId_EventY2_Relay_r17 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfigInterRAT_EventId_EventY2_Relay_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_EventId_EventY2_Relay_r17(Encoder& enc, const EventTriggerConfigInterRAT_EventId_EventY2_Relay_r17& value)
 {
     (void)value;
@@ -1170,6 +1250,10 @@ void Free_EventTriggerConfigInterRAT_EventId_EventY2_Relay_r17(EventTriggerConfi
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18_Z1_Threshold1_Relay_r18：ASN.1 eventId/eventZ1-Relay-r18/z1-Threshold1-Relay-r18；源文件第 11312 行；SEQUENCE。
+// Encode_EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18_Z1_Threshold1_Relay_r18 只读不分配；Decode_EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18_Z1_Threshold1_Relay_r18 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18_Z1_Threshold1_Relay_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18_Z1_Threshold1_Relay_r18(Encoder& enc, const EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18_Z1_Threshold1_Relay_r18& value)
 {
     (void)value;
@@ -1210,6 +1294,10 @@ void Free_EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18_Z1_Threshold1_Rel
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18：ASN.1 eventId/eventZ1-Relay-r18；源文件第 11311 行；SEQUENCE。
+// Encode_EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18 只读不分配；Decode_EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18(Encoder& enc, const EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18& value)
 {
     (void)value;
@@ -1268,6 +1356,10 @@ void Free_EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18(EventTriggerConfi
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfigInterRAT_EventId：ASN.1 eventId；源文件第 11259 行；CHOICE。
+// Encode_EventTriggerConfigInterRAT_EventId 只读不分配；Decode_EventTriggerConfigInterRAT_EventId 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfigInterRAT_EventId 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_EventId(Encoder& enc, const EventTriggerConfigInterRAT_EventId& value)
 {
     const std::int64_t choice_index = (std::int64_t)(value.tag);
@@ -1424,6 +1516,10 @@ void Free_EventTriggerConfigInterRAT_EventId(EventTriggerConfigInterRAT_EventId&
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfigInterRAT：ASN.1 EventTriggerConfigInterRAT；源文件第 11258 行；SEQUENCE。
+// Encode_EventTriggerConfigInterRAT 只读不分配；Decode_EventTriggerConfigInterRAT 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfigInterRAT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT(Encoder& enc, const EventTriggerConfigInterRAT& value)
 {
     (void)value;
@@ -1593,6 +1689,10 @@ void Free_EventTriggerConfigInterRAT(EventTriggerConfigInterRAT& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PeriodicalReportConfigInterRAT_ExtGroup1：ASN.1 PeriodicalReportConfigInterRAT_ExtGroup1；源文件第 11354 行；扩展添加组 [[ ]]。
+// Encode_PeriodicalReportConfigInterRAT_ExtGroup1 只读不分配；Decode_PeriodicalReportConfigInterRAT_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_PeriodicalReportConfigInterRAT_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PeriodicalReportConfigInterRAT_ExtGroup1(Encoder& enc, const PeriodicalReportConfigInterRAT_ExtGroup1& value)
 {
     (void)value;
@@ -1628,6 +1728,10 @@ void Free_PeriodicalReportConfigInterRAT_ExtGroup1(PeriodicalReportConfigInterRA
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PeriodicalReportConfigInterRAT_ExtGroup2：ASN.1 PeriodicalReportConfigInterRAT_ExtGroup2；源文件第 11357 行；扩展添加组 [[ ]]。
+// Encode_PeriodicalReportConfigInterRAT_ExtGroup2 只读不分配；Decode_PeriodicalReportConfigInterRAT_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_PeriodicalReportConfigInterRAT_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PeriodicalReportConfigInterRAT_ExtGroup2(Encoder& enc, const PeriodicalReportConfigInterRAT_ExtGroup2& value)
 {
     (void)value;
@@ -1698,6 +1802,10 @@ void Free_PeriodicalReportConfigInterRAT_ExtGroup2(PeriodicalReportConfigInterRA
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PeriodicalReportConfigInterRAT_ExtGroup3：ASN.1 PeriodicalReportConfigInterRAT_ExtGroup3；源文件第 11363 行；扩展添加组 [[ ]]。
+// Encode_PeriodicalReportConfigInterRAT_ExtGroup3 只读不分配；Decode_PeriodicalReportConfigInterRAT_ExtGroup3 可能 malloc（失败时内部已释放并清零）；Free_PeriodicalReportConfigInterRAT_ExtGroup3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PeriodicalReportConfigInterRAT_ExtGroup3(Encoder& enc, const PeriodicalReportConfigInterRAT_ExtGroup3& value)
 {
     (void)value;
@@ -1733,6 +1841,10 @@ void Free_PeriodicalReportConfigInterRAT_ExtGroup3(PeriodicalReportConfigInterRA
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PeriodicalReportConfigInterRAT：ASN.1 PeriodicalReportConfigInterRAT；源文件第 11348 行；SEQUENCE。
+// Encode_PeriodicalReportConfigInterRAT 只读不分配；Decode_PeriodicalReportConfigInterRAT 可能 malloc（失败时内部已释放并清零）；Free_PeriodicalReportConfigInterRAT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PeriodicalReportConfigInterRAT(Encoder& enc, const PeriodicalReportConfigInterRAT& value)
 {
     (void)value;
@@ -1868,6 +1980,10 @@ void Free_PeriodicalReportConfigInterRAT(PeriodicalReportConfigInterRAT& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ReportConfigInterRAT_ReportType：ASN.1 reportType；源文件第 11235 行；CHOICE。
+// Encode_ReportConfigInterRAT_ReportType 只读不分配；Decode_ReportConfigInterRAT_ReportType 可能 malloc（失败时内部已释放并清零）；Free_ReportConfigInterRAT_ReportType 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ReportConfigInterRAT_ReportType(Encoder& enc, const ReportConfigInterRAT_ReportType& value)
 {
     const std::int64_t choice_index = (std::int64_t)(value.tag);
@@ -1994,6 +2110,10 @@ void Free_ReportConfigInterRAT_ReportType(ReportConfigInterRAT_ReportType& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ReportConfigInterRAT：ASN.1 ReportConfigInterRAT；源文件第 11234 行；SEQUENCE。
+// Encode_ReportConfigInterRAT 只读不分配；Decode_ReportConfigInterRAT 可能 malloc（失败时内部已释放并清零）；Free_ReportConfigInterRAT 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ReportConfigInterRAT(Encoder& enc, const ReportConfigInterRAT& value)
 {
     (void)value;
@@ -2022,6 +2142,10 @@ void Free_ReportConfigInterRAT(ReportConfigInterRAT& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CellIndividualOffsetList_EUTRA_r18：ASN.1 CellIndividualOffsetList-EUTRA-r18；源文件第 11380 行；SEQUENCE。
+// Encode_CellIndividualOffsetList_EUTRA_r18 只读不分配；Decode_CellIndividualOffsetList_EUTRA_r18 可能 malloc（失败时内部已释放并清零）；Free_CellIndividualOffsetList_EUTRA_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CellIndividualOffsetList_EUTRA_r18(Encoder& enc, const CellIndividualOffsetList_EUTRA_r18& value)
 {
     (void)value;
@@ -2057,6 +2181,10 @@ void Free_CellIndividualOffsetList_EUTRA_r18(CellIndividualOffsetList_EUTRA_r18&
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ReportCGI_ExtGroup1：ASN.1 ReportCGI_ExtGroup1；源文件第 11406 行；扩展添加组 [[ ]]。
+// Encode_ReportCGI_ExtGroup1 只读不分配；Decode_ReportCGI_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_ReportCGI_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ReportCGI_ExtGroup1(Encoder& enc, const ReportCGI_ExtGroup1& value)
 {
     (void)value;
@@ -2091,6 +2219,10 @@ void Free_ReportCGI_ExtGroup1(ReportCGI_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ReportCGI：ASN.1 ReportCGI；源文件第 11403 行；SEQUENCE。
+// Encode_ReportCGI 只读不分配；Decode_ReportCGI 可能 malloc（失败时内部已释放并清零）；Free_ReportCGI 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ReportCGI(Encoder& enc, const ReportCGI& value)
 {
     (void)value;
@@ -2163,6 +2295,10 @@ void Free_ReportCGI(ReportCGI& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ReportSFTD_NR_ExtGroup1：ASN.1 ReportSFTD_NR_ExtGroup1；源文件第 11416 行；扩展添加组 [[ ]]。
+// Encode_ReportSFTD_NR_ExtGroup1 只读不分配；Decode_ReportSFTD_NR_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_ReportSFTD_NR_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ReportSFTD_NR_ExtGroup1(Encoder& enc, const ReportSFTD_NR_ExtGroup1& value)
 {
     (void)value;
@@ -2242,6 +2378,10 @@ void Free_ReportSFTD_NR_ExtGroup1(ReportSFTD_NR_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ReportSFTD_NR：ASN.1 ReportSFTD-NR；源文件第 11412 行；SEQUENCE。
+// Encode_ReportSFTD_NR 只读不分配；Decode_ReportSFTD_NR 可能 malloc（失败时内部已释放并清零）；Free_ReportSFTD_NR 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ReportSFTD_NR(Encoder& enc, const ReportSFTD_NR& value)
 {
     (void)value;
@@ -2320,6 +2460,10 @@ void Free_ReportSFTD_NR(ReportSFTD_NR& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CondTriggerConfig_r16_ExtGroup1：ASN.1 CondTriggerConfig_r16_ExtGroup1；源文件第 11464 行；扩展添加组 [[ ]]。
+// Encode_CondTriggerConfig_r16_ExtGroup1 只读不分配；Decode_CondTriggerConfig_r16_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_CondTriggerConfig_r16_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CondTriggerConfig_r16_ExtGroup1(Encoder& enc, const CondTriggerConfig_r16_ExtGroup1& value)
 {
     (void)value;
@@ -2354,6 +2498,10 @@ void Free_CondTriggerConfig_r16_ExtGroup1(CondTriggerConfig_r16_ExtGroup1& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasTriggerQuantityOffset：ASN.1 MeasTriggerQuantityOffset；源文件第 11700 行；CHOICE。
+// Encode_MeasTriggerQuantityOffset 只读不分配；Decode_MeasTriggerQuantityOffset 可能 malloc（失败时内部已释放并清零）；Free_MeasTriggerQuantityOffset 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasTriggerQuantityOffset(Encoder& enc, const MeasTriggerQuantityOffset& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 2);
@@ -2427,6 +2575,10 @@ void Free_MeasTriggerQuantityOffset(MeasTriggerQuantityOffset& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CondTriggerConfig_r16_CondEventId_CondEventA3：ASN.1 condEventId/condEventA3；源文件第 11425 行；SEQUENCE。
+// Encode_CondTriggerConfig_r16_CondEventId_CondEventA3 只读不分配；Decode_CondTriggerConfig_r16_CondEventId_CondEventA3 可能 malloc（失败时内部已释放并清零）；Free_CondTriggerConfig_r16_CondEventId_CondEventA3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CondTriggerConfig_r16_CondEventId_CondEventA3(Encoder& enc, const CondTriggerConfig_r16_CondEventId_CondEventA3& value)
 {
     (void)value;
@@ -2467,6 +2619,10 @@ void Free_CondTriggerConfig_r16_CondEventId_CondEventA3(CondTriggerConfig_r16_Co
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CondTriggerConfig_r16_CondEventId_CondEventA5：ASN.1 condEventId/condEventA5；源文件第 11430 行；SEQUENCE。
+// Encode_CondTriggerConfig_r16_CondEventId_CondEventA5 只读不分配；Decode_CondTriggerConfig_r16_CondEventId_CondEventA5 可能 malloc（失败时内部已释放并清零）；Free_CondTriggerConfig_r16_CondEventId_CondEventA5 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CondTriggerConfig_r16_CondEventId_CondEventA5(Encoder& enc, const CondTriggerConfig_r16_CondEventId_CondEventA5& value)
 {
     (void)value;
@@ -2512,6 +2668,10 @@ void Free_CondTriggerConfig_r16_CondEventId_CondEventA5(CondTriggerConfig_r16_Co
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CondTriggerConfig_r16_CondEventId_CondEventA4_r17：ASN.1 condEventId/condEventA4-r17；源文件第 11437 行；SEQUENCE。
+// Encode_CondTriggerConfig_r16_CondEventId_CondEventA4_r17 只读不分配；Decode_CondTriggerConfig_r16_CondEventId_CondEventA4_r17 可能 malloc（失败时内部已释放并清零）；Free_CondTriggerConfig_r16_CondEventId_CondEventA4_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CondTriggerConfig_r16_CondEventId_CondEventA4_r17(Encoder& enc, const CondTriggerConfig_r16_CondEventId_CondEventA4_r17& value)
 {
     (void)value;
@@ -2552,6 +2712,10 @@ void Free_CondTriggerConfig_r16_CondEventId_CondEventA4_r17(CondTriggerConfig_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CondTriggerConfig_r16_CondEventId_CondEventD1_r17：ASN.1 condEventId/condEventD1-r17；源文件第 11442 行；SEQUENCE。
+// Encode_CondTriggerConfig_r16_CondEventId_CondEventD1_r17 只读不分配；Decode_CondTriggerConfig_r16_CondEventId_CondEventD1_r17 可能 malloc（失败时内部已释放并清零）；Free_CondTriggerConfig_r16_CondEventId_CondEventD1_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CondTriggerConfig_r16_CondEventId_CondEventD1_r17(Encoder& enc, const CondTriggerConfig_r16_CondEventId_CondEventD1_r17& value)
 {
     (void)value;
@@ -2621,6 +2785,10 @@ void Free_CondTriggerConfig_r16_CondEventId_CondEventD1_r17(CondTriggerConfig_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CondTriggerConfig_r16_CondEventId_CondEventT1_r17：ASN.1 condEventId/condEventT1-r17；源文件第 11450 行；SEQUENCE。
+// Encode_CondTriggerConfig_r16_CondEventId_CondEventT1_r17 只读不分配；Decode_CondTriggerConfig_r16_CondEventId_CondEventT1_r17 可能 malloc（失败时内部已释放并清零）；Free_CondTriggerConfig_r16_CondEventId_CondEventT1_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CondTriggerConfig_r16_CondEventId_CondEventT1_r17(Encoder& enc, const CondTriggerConfig_r16_CondEventId_CondEventT1_r17& value)
 {
     (void)value;
@@ -2656,6 +2824,10 @@ void Free_CondTriggerConfig_r16_CondEventId_CondEventT1_r17(CondTriggerConfig_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CondTriggerConfig_r16_CondEventId_CondEventD2_r18：ASN.1 condEventId/condEventD2-r18；源文件第 11454 行；SEQUENCE。
+// Encode_CondTriggerConfig_r16_CondEventId_CondEventD2_r18 只读不分配；Decode_CondTriggerConfig_r16_CondEventId_CondEventD2_r18 可能 malloc（失败时内部已释放并清零）；Free_CondTriggerConfig_r16_CondEventId_CondEventD2_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CondTriggerConfig_r16_CondEventId_CondEventD2_r18(Encoder& enc, const CondTriggerConfig_r16_CondEventId_CondEventD2_r18& value)
 {
     (void)value;
@@ -2714,6 +2886,10 @@ void Free_CondTriggerConfig_r16_CondEventId_CondEventD2_r18(CondTriggerConfig_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CondTriggerConfig_r16_CondEventId：ASN.1 condEventId；源文件第 11424 行；CHOICE。
+// Encode_CondTriggerConfig_r16_CondEventId 只读不分配；Decode_CondTriggerConfig_r16_CondEventId 可能 malloc（失败时内部已释放并清零）；Free_CondTriggerConfig_r16_CondEventId 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CondTriggerConfig_r16_CondEventId(Encoder& enc, const CondTriggerConfig_r16_CondEventId& value)
 {
     const std::int64_t choice_index = (std::int64_t)(value.tag);
@@ -2860,6 +3036,10 @@ void Free_CondTriggerConfig_r16_CondEventId(CondTriggerConfig_r16_CondEventId& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CondTriggerConfig_r16：ASN.1 CondTriggerConfig-r16；源文件第 11423 行；SEQUENCE。
+// Encode_CondTriggerConfig_r16 只读不分配；Decode_CondTriggerConfig_r16 可能 malloc（失败时内部已释放并清零）；Free_CondTriggerConfig_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CondTriggerConfig_r16(Encoder& enc, const CondTriggerConfig_r16& value)
 {
     (void)value;
@@ -2937,6 +3117,10 @@ void Free_CondTriggerConfig_r16(CondTriggerConfig_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_ExtGroup3：ASN.1 EventTriggerConfig_ExtGroup3；源文件第 11656 行；扩展添加组 [[ ]]。
+// Encode_EventTriggerConfig_ExtGroup3 只读不分配；Decode_EventTriggerConfig_ExtGroup3 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_ExtGroup3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_ExtGroup3(Encoder& enc, const EventTriggerConfig_ExtGroup3& value)
 {
     (void)value;
@@ -3030,6 +3214,10 @@ void Free_EventTriggerConfig_ExtGroup3(EventTriggerConfig_ExtGroup3& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasRSSI_ReportConfig_r16：ASN.1 MeasRSSI-ReportConfig-r16；源文件第 11713 行；SEQUENCE。
+// Encode_MeasRSSI_ReportConfig_r16 只读不分配；Decode_MeasRSSI_ReportConfig_r16 可能 malloc（失败时内部已释放并清零）；Free_MeasRSSI_ReportConfig_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasRSSI_ReportConfig_r16(Encoder& enc, const MeasRSSI_ReportConfig_r16& value)
 {
     (void)value;
@@ -3066,6 +3254,10 @@ void Free_MeasRSSI_ReportConfig_r16(MeasRSSI_ReportConfig_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_ExtGroup1：ASN.1 EventTriggerConfig_ExtGroup1；源文件第 11644 行；扩展添加组 [[ ]]。
+// Encode_EventTriggerConfig_ExtGroup1 只读不分配；Decode_EventTriggerConfig_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_ExtGroup1(Encoder& enc, const EventTriggerConfig_ExtGroup1& value)
 {
     (void)value;
@@ -3161,6 +3353,10 @@ void Free_EventTriggerConfig_ExtGroup1(EventTriggerConfig_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_ExtGroup2：ASN.1 EventTriggerConfig_ExtGroup2；源文件第 11652 行；扩展添加组 [[ ]]。
+// Encode_EventTriggerConfig_ExtGroup2 只读不分配；Decode_EventTriggerConfig_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_ExtGroup2(Encoder& enc, const EventTriggerConfig_ExtGroup2& value)
 {
     (void)value;
@@ -3207,6 +3403,10 @@ void Free_EventTriggerConfig_ExtGroup2(EventTriggerConfig_ExtGroup2& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_EventId_EventA1：ASN.1 eventId/eventA1；源文件第 11472 行；SEQUENCE。
+// Encode_EventTriggerConfig_EventId_EventA1 只读不分配；Decode_EventTriggerConfig_EventId_EventA1 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_EventId_EventA1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA1(Encoder& enc, const EventTriggerConfig_EventId_EventA1& value)
 {
     (void)value;
@@ -3253,6 +3453,10 @@ void Free_EventTriggerConfig_EventId_EventA1(EventTriggerConfig_EventId_EventA1&
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_EventId_EventA2：ASN.1 eventId/eventA2；源文件第 11478 行；SEQUENCE。
+// Encode_EventTriggerConfig_EventId_EventA2 只读不分配；Decode_EventTriggerConfig_EventId_EventA2 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_EventId_EventA2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA2(Encoder& enc, const EventTriggerConfig_EventId_EventA2& value)
 {
     (void)value;
@@ -3299,6 +3503,10 @@ void Free_EventTriggerConfig_EventId_EventA2(EventTriggerConfig_EventId_EventA2&
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_EventId_EventA3：ASN.1 eventId/eventA3；源文件第 11484 行；SEQUENCE。
+// Encode_EventTriggerConfig_EventId_EventA3 只读不分配；Decode_EventTriggerConfig_EventId_EventA3 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_EventId_EventA3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA3(Encoder& enc, const EventTriggerConfig_EventId_EventA3& value)
 {
     (void)value;
@@ -3351,6 +3559,10 @@ void Free_EventTriggerConfig_EventId_EventA3(EventTriggerConfig_EventId_EventA3&
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_EventId_EventA4：ASN.1 eventId/eventA4；源文件第 11491 行；SEQUENCE。
+// Encode_EventTriggerConfig_EventId_EventA4 只读不分配；Decode_EventTriggerConfig_EventId_EventA4 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_EventId_EventA4 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA4(Encoder& enc, const EventTriggerConfig_EventId_EventA4& value)
 {
     (void)value;
@@ -3403,6 +3615,10 @@ void Free_EventTriggerConfig_EventId_EventA4(EventTriggerConfig_EventId_EventA4&
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_EventId_EventA5：ASN.1 eventId/eventA5；源文件第 11498 行；SEQUENCE。
+// Encode_EventTriggerConfig_EventId_EventA5 只读不分配；Decode_EventTriggerConfig_EventId_EventA5 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_EventId_EventA5 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA5(Encoder& enc, const EventTriggerConfig_EventId_EventA5& value)
 {
     (void)value;
@@ -3460,6 +3676,10 @@ void Free_EventTriggerConfig_EventId_EventA5(EventTriggerConfig_EventId_EventA5&
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_EventId_EventA6：ASN.1 eventId/eventA6；源文件第 11506 行；SEQUENCE。
+// Encode_EventTriggerConfig_EventId_EventA6 只读不分配；Decode_EventTriggerConfig_EventId_EventA6 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_EventId_EventA6 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA6(Encoder& enc, const EventTriggerConfig_EventId_EventA6& value)
 {
     (void)value;
@@ -3512,6 +3732,10 @@ void Free_EventTriggerConfig_EventId_EventA6(EventTriggerConfig_EventId_EventA6&
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_EventId_EventX1_r17：ASN.1 eventId/eventX1-r17；源文件第 11515 行；SEQUENCE。
+// Encode_EventTriggerConfig_EventId_EventX1_r17 只读不分配；Decode_EventTriggerConfig_EventId_EventX1_r17 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_EventId_EventX1_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventX1_r17(Encoder& enc, const EventTriggerConfig_EventId_EventX1_r17& value)
 {
     (void)value;
@@ -3569,6 +3793,10 @@ void Free_EventTriggerConfig_EventId_EventX1_r17(EventTriggerConfig_EventId_Even
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_EventId_EventX2_r17：ASN.1 eventId/eventX2-r17；源文件第 11523 行；SEQUENCE。
+// Encode_EventTriggerConfig_EventId_EventX2_r17 只读不分配；Decode_EventTriggerConfig_EventId_EventX2_r17 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_EventId_EventX2_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventX2_r17(Encoder& enc, const EventTriggerConfig_EventId_EventX2_r17& value)
 {
     (void)value;
@@ -3615,6 +3843,10 @@ void Free_EventTriggerConfig_EventId_EventX2_r17(EventTriggerConfig_EventId_Even
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_EventId_EventD1_r17：ASN.1 eventId/eventD1-r17；源文件第 11529 行；SEQUENCE。
+// Encode_EventTriggerConfig_EventId_EventD1_r17 只读不分配；Decode_EventTriggerConfig_EventId_EventD1_r17 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_EventId_EventD1_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventD1_r17(Encoder& enc, const EventTriggerConfig_EventId_EventD1_r17& value)
 {
     (void)value;
@@ -3690,6 +3922,10 @@ void Free_EventTriggerConfig_EventId_EventD1_r17(EventTriggerConfig_EventId_Even
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_EventId_EventH1_r18：ASN.1 eventId/eventH1-r18；源文件第 11540 行；SEQUENCE。
+// Encode_EventTriggerConfig_EventId_EventH1_r18 只读不分配；Decode_EventTriggerConfig_EventId_EventH1_r18 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_EventId_EventH1_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventH1_r18(Encoder& enc, const EventTriggerConfig_EventId_EventH1_r18& value)
 {
     (void)value;
@@ -3749,6 +3985,10 @@ void Free_EventTriggerConfig_EventId_EventH1_r18(EventTriggerConfig_EventId_Even
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_EventId_EventH2_r18：ASN.1 eventId/eventH2-r18；源文件第 11548 行；SEQUENCE。
+// Encode_EventTriggerConfig_EventId_EventH2_r18 只读不分配；Decode_EventTriggerConfig_EventId_EventH2_r18 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_EventId_EventH2_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventH2_r18(Encoder& enc, const EventTriggerConfig_EventId_EventH2_r18& value)
 {
     (void)value;
@@ -3808,6 +4048,10 @@ void Free_EventTriggerConfig_EventId_EventH2_r18(EventTriggerConfig_EventId_Even
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_EventId_EventA3H1_r18：ASN.1 eventId/eventA3H1-r18；源文件第 11556 行；SEQUENCE。
+// Encode_EventTriggerConfig_EventId_EventA3H1_r18 只读不分配；Decode_EventTriggerConfig_EventId_EventA3H1_r18 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_EventId_EventA3H1_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA3H1_r18(Encoder& enc, const EventTriggerConfig_EventId_EventA3H1_r18& value)
 {
     (void)value;
@@ -3884,6 +4128,10 @@ void Free_EventTriggerConfig_EventId_EventA3H1_r18(EventTriggerConfig_EventId_Ev
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_EventId_EventA3H2_r18：ASN.1 eventId/eventA3H2-r18；源文件第 11567 行；SEQUENCE。
+// Encode_EventTriggerConfig_EventId_EventA3H2_r18 只读不分配；Decode_EventTriggerConfig_EventId_EventA3H2_r18 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_EventId_EventA3H2_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA3H2_r18(Encoder& enc, const EventTriggerConfig_EventId_EventA3H2_r18& value)
 {
     (void)value;
@@ -3960,6 +4208,10 @@ void Free_EventTriggerConfig_EventId_EventA3H2_r18(EventTriggerConfig_EventId_Ev
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_EventId_EventA4H1_r18：ASN.1 eventId/eventA4H1-r18；源文件第 11578 行；SEQUENCE。
+// Encode_EventTriggerConfig_EventId_EventA4H1_r18 只读不分配；Decode_EventTriggerConfig_EventId_EventA4H1_r18 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_EventId_EventA4H1_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA4H1_r18(Encoder& enc, const EventTriggerConfig_EventId_EventA4H1_r18& value)
 {
     (void)value;
@@ -4036,6 +4288,10 @@ void Free_EventTriggerConfig_EventId_EventA4H1_r18(EventTriggerConfig_EventId_Ev
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_EventId_EventA4H2_r18：ASN.1 eventId/eventA4H2-r18；源文件第 11589 行；SEQUENCE。
+// Encode_EventTriggerConfig_EventId_EventA4H2_r18 只读不分配；Decode_EventTriggerConfig_EventId_EventA4H2_r18 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_EventId_EventA4H2_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA4H2_r18(Encoder& enc, const EventTriggerConfig_EventId_EventA4H2_r18& value)
 {
     (void)value;
@@ -4112,6 +4368,10 @@ void Free_EventTriggerConfig_EventId_EventA4H2_r18(EventTriggerConfig_EventId_Ev
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_EventId_EventA5H1_r18：ASN.1 eventId/eventA5H1-r18；源文件第 11600 行；SEQUENCE。
+// Encode_EventTriggerConfig_EventId_EventA5H1_r18 只读不分配；Decode_EventTriggerConfig_EventId_EventA5H1_r18 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_EventId_EventA5H1_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA5H1_r18(Encoder& enc, const EventTriggerConfig_EventId_EventA5H1_r18& value)
 {
     (void)value;
@@ -4193,6 +4453,10 @@ void Free_EventTriggerConfig_EventId_EventA5H1_r18(EventTriggerConfig_EventId_Ev
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_EventId_EventA5H2_r18：ASN.1 eventId/eventA5H2-r18；源文件第 11612 行；SEQUENCE。
+// Encode_EventTriggerConfig_EventId_EventA5H2_r18 只读不分配；Decode_EventTriggerConfig_EventId_EventA5H2_r18 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_EventId_EventA5H2_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA5H2_r18(Encoder& enc, const EventTriggerConfig_EventId_EventA5H2_r18& value)
 {
     (void)value;
@@ -4274,6 +4538,10 @@ void Free_EventTriggerConfig_EventId_EventA5H2_r18(EventTriggerConfig_EventId_Ev
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_EventId_EventD2_r18：ASN.1 eventId/eventD2-r18；源文件第 11624 行；SEQUENCE。
+// Encode_EventTriggerConfig_EventId_EventD2_r18 只读不分配；Decode_EventTriggerConfig_EventId_EventD2_r18 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_EventId_EventD2_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventD2_r18(Encoder& enc, const EventTriggerConfig_EventId_EventD2_r18& value)
 {
     (void)value;
@@ -4338,6 +4606,10 @@ void Free_EventTriggerConfig_EventId_EventD2_r18(EventTriggerConfig_EventId_Even
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig_EventId：ASN.1 eventId；源文件第 11471 行；CHOICE。
+// Encode_EventTriggerConfig_EventId 只读不分配；Decode_EventTriggerConfig_EventId 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig_EventId 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId(Encoder& enc, const EventTriggerConfig_EventId& value)
 {
     const std::int64_t choice_index = (std::int64_t)(value.tag);
@@ -4604,6 +4876,10 @@ void Free_EventTriggerConfig_EventId(EventTriggerConfig_EventId& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfig：ASN.1 EventTriggerConfig；源文件第 11470 行；SEQUENCE。
+// Encode_EventTriggerConfig 只读不分配；Decode_EventTriggerConfig 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfig 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig(Encoder& enc, const EventTriggerConfig& value)
 {
     (void)value;
@@ -4792,6 +5068,10 @@ void Free_EventTriggerConfig(EventTriggerConfig& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// UL_DelayValueConfig_r16：ASN.1 UL-DelayValueConfig-r16；源文件第 13893 行；SEQUENCE。
+// Encode_UL_DelayValueConfig_r16 只读不分配；Decode_UL_DelayValueConfig_r16 可能 malloc（失败时内部已释放并清零）；Free_UL_DelayValueConfig_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UL_DelayValueConfig_r16(Encoder& enc, const UL_DelayValueConfig_r16& value)
 {
     (void)value;
@@ -4842,6 +5122,10 @@ void Free_UL_DelayValueConfig_r16(UL_DelayValueConfig_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SetupRelease_UL_DelayValueConfig_r16：ASN.1 SetupRelease<UL-DelayValueConfig-r16>；源文件第 11682 行；CHOICE。
+// Encode_SetupRelease_UL_DelayValueConfig_r16 只读不分配；Decode_SetupRelease_UL_DelayValueConfig_r16 可能 malloc（失败时内部已释放并清零）；Free_SetupRelease_UL_DelayValueConfig_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SetupRelease_UL_DelayValueConfig_r16(Encoder& enc, const SetupRelease_UL_DelayValueConfig_r16& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -4901,6 +5185,10 @@ void Free_SetupRelease_UL_DelayValueConfig_r16(SetupRelease_UL_DelayValueConfig_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PeriodicalReportConfig_ExtGroup1：ASN.1 PeriodicalReportConfig_ExtGroup1；源文件第 11676 行；扩展添加组 [[ ]]。
+// Encode_PeriodicalReportConfig_ExtGroup1 只读不分配；Decode_PeriodicalReportConfig_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_PeriodicalReportConfig_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PeriodicalReportConfig_ExtGroup1(Encoder& enc, const PeriodicalReportConfig_ExtGroup1& value)
 {
     (void)value;
@@ -5006,6 +5294,10 @@ void Free_PeriodicalReportConfig_ExtGroup1(PeriodicalReportConfig_ExtGroup1& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// UL_ExcessDelayConfig_r17：ASN.1 UL-ExcessDelayConfig-r17；源文件第 13900 行；SEQUENCE。
+// Encode_UL_ExcessDelayConfig_r17 只读不分配；Decode_UL_ExcessDelayConfig_r17 可能 malloc（失败时内部已释放并清零）；Free_UL_ExcessDelayConfig_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UL_ExcessDelayConfig_r17(Encoder& enc, const UL_ExcessDelayConfig_r17& value)
 {
     (void)value;
@@ -5055,6 +5347,10 @@ void Free_UL_ExcessDelayConfig_r17(UL_ExcessDelayConfig_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SetupRelease_UL_ExcessDelayConfig_r17：ASN.1 SetupRelease<UL-ExcessDelayConfig-r17>；源文件第 11686 行；CHOICE。
+// Encode_SetupRelease_UL_ExcessDelayConfig_r17 只读不分配；Decode_SetupRelease_UL_ExcessDelayConfig_r17 可能 malloc（失败时内部已释放并清零）；Free_SetupRelease_UL_ExcessDelayConfig_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SetupRelease_UL_ExcessDelayConfig_r17(Encoder& enc, const SetupRelease_UL_ExcessDelayConfig_r17& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -5114,6 +5410,10 @@ void Free_SetupRelease_UL_ExcessDelayConfig_r17(SetupRelease_UL_ExcessDelayConfi
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PeriodicalReportConfig_ExtGroup2：ASN.1 PeriodicalReportConfig_ExtGroup2；源文件第 11685 行；扩展添加组 [[ ]]。
+// Encode_PeriodicalReportConfig_ExtGroup2 只读不分配；Decode_PeriodicalReportConfig_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_PeriodicalReportConfig_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PeriodicalReportConfig_ExtGroup2(Encoder& enc, const PeriodicalReportConfig_ExtGroup2& value)
 {
     (void)value;
@@ -5172,6 +5472,10 @@ void Free_PeriodicalReportConfig_ExtGroup2(PeriodicalReportConfig_ExtGroup2& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PeriodicalReportConfig：ASN.1 PeriodicalReportConfig；源文件第 11665 行；SEQUENCE。
+// Encode_PeriodicalReportConfig 只读不分配；Decode_PeriodicalReportConfig 可能 malloc（失败时内部已释放并清零）；Free_PeriodicalReportConfig 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PeriodicalReportConfig(Encoder& enc, const PeriodicalReportConfig& value)
 {
     (void)value;
@@ -5327,6 +5631,10 @@ void Free_PeriodicalReportConfig(PeriodicalReportConfig& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasTriggerQuantityCLI_r16：ASN.1 MeasTriggerQuantityCLI-r16；源文件第 11749 行；CHOICE。
+// Encode_MeasTriggerQuantityCLI_r16 只读不分配；Decode_MeasTriggerQuantityCLI_r16 可能 malloc（失败时内部已释放并清零）；Free_MeasTriggerQuantityCLI_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasTriggerQuantityCLI_r16(Encoder& enc, const MeasTriggerQuantityCLI_r16& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -5389,6 +5697,10 @@ void Free_MeasTriggerQuantityCLI_r16(MeasTriggerQuantityCLI_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CLI_EventTriggerConfig_r16_EventId_r16_EventI1_r16：ASN.1 eventId-r16/eventI1-r16；源文件第 11719 行；SEQUENCE。
+// Encode_CLI_EventTriggerConfig_r16_EventId_r16_EventI1_r16 只读不分配；Decode_CLI_EventTriggerConfig_r16_EventId_r16_EventI1_r16 可能 malloc（失败时内部已释放并清零）；Free_CLI_EventTriggerConfig_r16_EventId_r16_EventI1_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CLI_EventTriggerConfig_r16_EventId_r16_EventI1_r16(Encoder& enc, const CLI_EventTriggerConfig_r16_EventId_r16_EventI1_r16& value)
 {
     (void)value;
@@ -5435,6 +5747,10 @@ void Free_CLI_EventTriggerConfig_r16_EventId_r16_EventI1_r16(CLI_EventTriggerCon
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CLI_EventTriggerConfig_r16_EventId_r16：ASN.1 eventId-r16；源文件第 11718 行；CHOICE。
+// Encode_CLI_EventTriggerConfig_r16_EventId_r16 只读不分配；Decode_CLI_EventTriggerConfig_r16_EventId_r16 可能 malloc（失败时内部已释放并清零）；Free_CLI_EventTriggerConfig_r16_EventId_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CLI_EventTriggerConfig_r16_EventId_r16(Encoder& enc, const CLI_EventTriggerConfig_r16_EventId_r16& value)
 {
     const std::int64_t choice_index = (std::int64_t)(value.tag);
@@ -5524,6 +5840,10 @@ void Free_CLI_EventTriggerConfig_r16_EventId_r16(CLI_EventTriggerConfig_r16_Even
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CLI_EventTriggerConfig_r16：ASN.1 CLI-EventTriggerConfig-r16；源文件第 11717 行；SEQUENCE。
+// Encode_CLI_EventTriggerConfig_r16 只读不分配；Decode_CLI_EventTriggerConfig_r16 可能 malloc（失败时内部已释放并清零）；Free_CLI_EventTriggerConfig_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CLI_EventTriggerConfig_r16(Encoder& enc, const CLI_EventTriggerConfig_r16& value)
 {
     (void)value;
@@ -5577,6 +5897,10 @@ void Free_CLI_EventTriggerConfig_r16(CLI_EventTriggerConfig_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CLI_PeriodicalReportConfig_r16：ASN.1 CLI-PeriodicalReportConfig-r16；源文件第 11733 行；SEQUENCE。
+// Encode_CLI_PeriodicalReportConfig_r16 只读不分配；Decode_CLI_PeriodicalReportConfig_r16 可能 malloc（失败时内部已释放并清零）；Free_CLI_PeriodicalReportConfig_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CLI_PeriodicalReportConfig_r16(Encoder& enc, const CLI_PeriodicalReportConfig_r16& value)
 {
     (void)value;
@@ -5631,6 +5955,10 @@ void Free_CLI_PeriodicalReportConfig_r16(CLI_PeriodicalReportConfig_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RxTxPeriodical_r17：ASN.1 RxTxPeriodical-r17；源文件第 11741 行；SEQUENCE。
+// Encode_RxTxPeriodical_r17 只读不分配；Decode_RxTxPeriodical_r17 可能 malloc（失败时内部已释放并清零）；Free_RxTxPeriodical_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RxTxPeriodical_r17(Encoder& enc, const RxTxPeriodical_r17& value)
 {
     (void)value;
@@ -5680,6 +6008,10 @@ void Free_RxTxPeriodical_r17(RxTxPeriodical_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ReportOnScellActivation_r18：ASN.1 ReportOnScellActivation-r18；源文件第 11756 行；SEQUENCE。
+// Encode_ReportOnScellActivation_r18 只读不分配；Decode_ReportOnScellActivation_r18 可能 malloc（失败时内部已释放并清零）；Free_ReportOnScellActivation_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ReportOnScellActivation_r18(Encoder& enc, const ReportOnScellActivation_r18& value)
 {
     (void)value;
@@ -5726,6 +6058,10 @@ void Free_ReportOnScellActivation_r18(ReportOnScellActivation_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ReportConfigNR_ReportType：ASN.1 reportType；源文件第 11389 行；CHOICE。
+// Encode_ReportConfigNR_ReportType 只读不分配；Decode_ReportConfigNR_ReportType 可能 malloc（失败时内部已释放并清零）；Free_ReportConfigNR_ReportType 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ReportConfigNR_ReportType(Encoder& enc, const ReportConfigNR_ReportType& value)
 {
     const std::int64_t choice_index = (std::int64_t)(value.tag);
@@ -5902,6 +6238,10 @@ void Free_ReportConfigNR_ReportType(ReportConfigNR_ReportType& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ReportConfigNR：ASN.1 ReportConfigNR；源文件第 11388 行；SEQUENCE。
+// Encode_ReportConfigNR 只读不分配；Decode_ReportConfigNR 可能 malloc（失败时内部已释放并清零）；Free_ReportConfigNR 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ReportConfigNR(Encoder& enc, const ReportConfigNR& value)
 {
     (void)value;
@@ -5930,6 +6270,10 @@ void Free_ReportConfigNR(ReportConfigNR& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CellIndividualOffsetList_r18：ASN.1 CellIndividualOffsetList-r18；源文件第 11763 行；SEQUENCE。
+// Encode_CellIndividualOffsetList_r18 只读不分配；Decode_CellIndividualOffsetList_r18 可能 malloc（失败时内部已释放并清零）；Free_CellIndividualOffsetList_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CellIndividualOffsetList_r18(Encoder& enc, const CellIndividualOffsetList_r18& value)
 {
     (void)value;
@@ -5964,6 +6308,10 @@ void Free_CellIndividualOffsetList_r18(CellIndividualOffsetList_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasReportQuantity_r16：ASN.1 MeasReportQuantity-r16；源文件第 11805 行；SEQUENCE。
+// Encode_MeasReportQuantity_r16 只读不分配；Decode_MeasReportQuantity_r16 可能 malloc（失败时内部已释放并清零）；Free_MeasReportQuantity_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasReportQuantity_r16(Encoder& enc, const MeasReportQuantity_r16& value)
 {
     (void)value;
@@ -6000,6 +6348,10 @@ void Free_MeasReportQuantity_r16(MeasReportQuantity_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfigNR_SL_r16_EventId_r16_EventC1：ASN.1 eventId-r16/eventC1；源文件第 11780 行；SEQUENCE。
+// Encode_EventTriggerConfigNR_SL_r16_EventId_r16_EventC1 只读不分配；Decode_EventTriggerConfigNR_SL_r16_EventId_r16_EventC1 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfigNR_SL_r16_EventId_r16_EventC1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigNR_SL_r16_EventId_r16_EventC1(Encoder& enc, const EventTriggerConfigNR_SL_r16_EventId_r16_EventC1& value)
 {
     (void)value;
@@ -6041,6 +6393,10 @@ void Free_EventTriggerConfigNR_SL_r16_EventId_r16_EventC1(EventTriggerConfigNR_S
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfigNR_SL_r16_EventId_r16_EventC2_r16：ASN.1 eventId-r16/eventC2-r16；源文件第 11785 行；SEQUENCE。
+// Encode_EventTriggerConfigNR_SL_r16_EventId_r16_EventC2_r16 只读不分配；Decode_EventTriggerConfigNR_SL_r16_EventId_r16_EventC2_r16 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfigNR_SL_r16_EventId_r16_EventC2_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigNR_SL_r16_EventId_r16_EventC2_r16(Encoder& enc, const EventTriggerConfigNR_SL_r16_EventId_r16_EventC2_r16& value)
 {
     (void)value;
@@ -6082,6 +6438,10 @@ void Free_EventTriggerConfigNR_SL_r16_EventId_r16_EventC2_r16(EventTriggerConfig
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfigNR_SL_r16_EventId_r16：ASN.1 eventId-r16；源文件第 11779 行；CHOICE。
+// Encode_EventTriggerConfigNR_SL_r16_EventId_r16 只读不分配；Decode_EventTriggerConfigNR_SL_r16_EventId_r16 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfigNR_SL_r16_EventId_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigNR_SL_r16_EventId_r16(Encoder& enc, const EventTriggerConfigNR_SL_r16_EventId_r16& value)
 {
     const std::int64_t choice_index = (std::int64_t)(value.tag);
@@ -6186,6 +6546,10 @@ void Free_EventTriggerConfigNR_SL_r16_EventId_r16(EventTriggerConfigNR_SL_r16_Ev
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventTriggerConfigNR_SL_r16：ASN.1 EventTriggerConfigNR-SL-r16；源文件第 11778 行；SEQUENCE。
+// Encode_EventTriggerConfigNR_SL_r16 只读不分配；Decode_EventTriggerConfigNR_SL_r16 可能 malloc（失败时内部已释放并清零）；Free_EventTriggerConfigNR_SL_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigNR_SL_r16(Encoder& enc, const EventTriggerConfigNR_SL_r16& value)
 {
     (void)value;
@@ -6238,6 +6602,10 @@ void Free_EventTriggerConfigNR_SL_r16(EventTriggerConfigNR_SL_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PeriodicalReportConfigNR_SL_r16：ASN.1 PeriodicalReportConfigNR-SL-r16；源文件第 11798 行；SEQUENCE。
+// Encode_PeriodicalReportConfigNR_SL_r16 只读不分配；Decode_PeriodicalReportConfigNR_SL_r16 可能 malloc（失败时内部已释放并清零）；Free_PeriodicalReportConfigNR_SL_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PeriodicalReportConfigNR_SL_r16(Encoder& enc, const PeriodicalReportConfigNR_SL_r16& value)
 {
     (void)value;
@@ -6285,6 +6653,10 @@ void Free_PeriodicalReportConfigNR_SL_r16(PeriodicalReportConfigNR_SL_r16& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ReportConfigNR_SL_r16_ReportType_r16：ASN.1 reportType-r16；源文件第 11772 行；CHOICE。
+// Encode_ReportConfigNR_SL_r16_ReportType_r16 只读不分配；Decode_ReportConfigNR_SL_r16_ReportType_r16 可能 malloc（失败时内部已释放并清零）；Free_ReportConfigNR_SL_r16_ReportType_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ReportConfigNR_SL_r16_ReportType_r16(Encoder& enc, const ReportConfigNR_SL_r16_ReportType_r16& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -6345,6 +6717,10 @@ void Free_ReportConfigNR_SL_r16_ReportType_r16(ReportConfigNR_SL_r16_ReportType_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ReportConfigNR_SL_r16：ASN.1 ReportConfigNR-SL-r16；源文件第 11771 行；SEQUENCE。
+// Encode_ReportConfigNR_SL_r16 只读不分配；Decode_ReportConfigNR_SL_r16 可能 malloc（失败时内部已释放并清零）；Free_ReportConfigNR_SL_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ReportConfigNR_SL_r16(Encoder& enc, const ReportConfigNR_SL_r16& value)
 {
     (void)value;
@@ -6373,6 +6749,10 @@ void Free_ReportConfigNR_SL_r16(ReportConfigNR_SL_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ReportConfigToAddMod_ReportConfig：ASN.1 reportConfig；源文件第 11817 行；CHOICE。
+// Encode_ReportConfigToAddMod_ReportConfig 只读不分配；Decode_ReportConfigToAddMod_ReportConfig 可能 malloc（失败时内部已释放并清零）；Free_ReportConfigToAddMod_ReportConfig 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ReportConfigToAddMod_ReportConfig(Encoder& enc, const ReportConfigToAddMod_ReportConfig& value)
 {
     const std::int64_t choice_index = (std::int64_t)(value.tag);
@@ -6484,6 +6864,10 @@ void Free_ReportConfigToAddMod_ReportConfig(ReportConfigToAddMod_ReportConfig& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ReportConfigToAddMod：ASN.1 ReportConfigToAddMod；源文件第 11815 行；SEQUENCE。
+// Encode_ReportConfigToAddMod 只读不分配；Decode_ReportConfigToAddMod 可能 malloc（失败时内部已释放并清零）；Free_ReportConfigToAddMod 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ReportConfigToAddMod(Encoder& enc, const ReportConfigToAddMod& value)
 {
     (void)value;
@@ -6518,6 +6902,10 @@ void Free_ReportConfigToAddMod(ReportConfigToAddMod& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DL_AM_RLC_v1610：ASN.1 DL-AM-RLC-v1610；源文件第 11985 行；SEQUENCE。
+// Encode_DL_AM_RLC_v1610 只读不分配；Decode_DL_AM_RLC_v1610 可能 malloc（失败时内部已释放并清零）；Free_DL_AM_RLC_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DL_AM_RLC_v1610(Encoder& enc, const DL_AM_RLC_v1610& value)
 {
     (void)value;
@@ -6561,6 +6949,10 @@ void Free_DL_AM_RLC_v1610(DL_AM_RLC_v1610& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RLC_Config_v1610：ASN.1 RLC-Config-v1610；源文件第 11976 行；SEQUENCE。
+// Encode_RLC_Config_v1610 只读不分配；Decode_RLC_Config_v1610 可能 malloc（失败时内部已释放并清零）；Free_RLC_Config_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RLC_Config_v1610(Encoder& enc, const RLC_Config_v1610& value)
 {
     (void)value;
@@ -6589,6 +6981,10 @@ void Free_RLC_Config_v1610(RLC_Config_v1610& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RLC_BearerConfig_ExtGroup1：ASN.1 RLC_BearerConfig_ExtGroup1；源文件第 11861 行；扩展添加组 [[ ]]。
+// Encode_RLC_BearerConfig_ExtGroup1 只读不分配；Decode_RLC_BearerConfig_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_RLC_BearerConfig_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RLC_BearerConfig_ExtGroup1(Encoder& enc, const RLC_BearerConfig_ExtGroup1& value)
 {
     (void)value;
@@ -6624,6 +7020,10 @@ void Free_RLC_BearerConfig_ExtGroup1(RLC_BearerConfig_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MulticastRLC_BearerConfig_r17：ASN.1 MulticastRLC-BearerConfig-r17；源文件第 11872 行；SEQUENCE。
+// Encode_MulticastRLC_BearerConfig_r17 只读不分配；Decode_MulticastRLC_BearerConfig_r17 可能 malloc（失败时内部已释放并清零）；Free_MulticastRLC_BearerConfig_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MulticastRLC_BearerConfig_r17(Encoder& enc, const MulticastRLC_BearerConfig_r17& value)
 {
     (void)value;
@@ -6664,6 +7064,10 @@ void Free_MulticastRLC_BearerConfig_r17(MulticastRLC_BearerConfig_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DL_AM_RLC_v1700：ASN.1 DL-AM-RLC-v1700；源文件第 11990 行；SEQUENCE。
+// Encode_DL_AM_RLC_v1700 只读不分配；Decode_DL_AM_RLC_v1700 可能 malloc（失败时内部已释放并清零）；Free_DL_AM_RLC_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DL_AM_RLC_v1700(Encoder& enc, const DL_AM_RLC_v1700& value)
 {
     (void)value;
@@ -6700,6 +7104,10 @@ void Free_DL_AM_RLC_v1700(DL_AM_RLC_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DL_UM_RLC_v1700：ASN.1 DL-UM-RLC-v1700；源文件第 11994 行；SEQUENCE。
+// Encode_DL_UM_RLC_v1700 只读不分配；Decode_DL_UM_RLC_v1700 可能 malloc（失败时内部已释放并清零）；Free_DL_UM_RLC_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DL_UM_RLC_v1700(Encoder& enc, const DL_UM_RLC_v1700& value)
 {
     (void)value;
@@ -6736,6 +7144,10 @@ void Free_DL_UM_RLC_v1700(DL_UM_RLC_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RLC_Config_v1700：ASN.1 RLC-Config-v1700；源文件第 11980 行；SEQUENCE。
+// Encode_RLC_Config_v1700 只读不分配；Decode_RLC_Config_v1700 可能 malloc（失败时内部已释放并清零）；Free_RLC_Config_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RLC_Config_v1700(Encoder& enc, const RLC_Config_v1700& value)
 {
     (void)value;
@@ -6769,6 +7181,10 @@ void Free_RLC_Config_v1700(RLC_Config_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RLC_BearerConfig_ExtGroup2：ASN.1 RLC_BearerConfig_ExtGroup2；源文件第 11864 行；扩展添加组 [[ ]]。
+// Encode_RLC_BearerConfig_ExtGroup2 只读不分配；Decode_RLC_BearerConfig_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_RLC_BearerConfig_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RLC_BearerConfig_ExtGroup2(Encoder& enc, const RLC_BearerConfig_ExtGroup2& value)
 {
     (void)value;
@@ -6842,6 +7258,10 @@ void Free_RLC_BearerConfig_ExtGroup2(RLC_BearerConfig_ExtGroup2& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RLC_BearerConfig_ServedRadioBearer：ASN.1 servedRadioBearer；源文件第 11853 行；CHOICE。
+// Encode_RLC_BearerConfig_ServedRadioBearer 只读不分配；Decode_RLC_BearerConfig_ServedRadioBearer 可能 malloc（失败时内部已释放并清零）；Free_RLC_BearerConfig_ServedRadioBearer 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RLC_BearerConfig_ServedRadioBearer(Encoder& enc, const RLC_BearerConfig_ServedRadioBearer& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -6904,6 +7324,10 @@ void Free_RLC_BearerConfig_ServedRadioBearer(RLC_BearerConfig_ServedRadioBearer&
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RLC_BearerConfig：ASN.1 RLC-BearerConfig；源文件第 11851 行；SEQUENCE。
+// Encode_RLC_BearerConfig 只读不分配；Decode_RLC_BearerConfig 可能 malloc（失败时内部已释放并清零）；Free_RLC_BearerConfig 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RLC_BearerConfig(Encoder& enc, const RLC_BearerConfig& value)
 {
     (void)value;
@@ -7046,6 +7470,10 @@ void Free_RLC_BearerConfig(RLC_BearerConfig& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SCellActivationRS_Config_r17：ASN.1 SCellActivationRS-Config-r17；源文件第 12046 行；SEQUENCE。
+// Encode_SCellActivationRS_Config_r17 只读不分配；Decode_SCellActivationRS_Config_r17 可能 malloc（失败时内部已释放并清零）；Free_SCellActivationRS_Config_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SCellActivationRS_Config_r17(Encoder& enc, const SCellActivationRS_Config_r17& value)
 {
     (void)value;
@@ -7107,6 +7535,10 @@ void Free_SCellActivationRS_Config_r17(SCellActivationRS_Config_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SchedulingRequestToAddMod：ASN.1 SchedulingRequestToAddMod；源文件第 12074 行；SEQUENCE。
+// Encode_SchedulingRequestToAddMod 只读不分配；Decode_SchedulingRequestToAddMod 可能 malloc（失败时内部已释放并清零）；Free_SchedulingRequestToAddMod 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SchedulingRequestToAddMod(Encoder& enc, const SchedulingRequestToAddMod& value)
 {
     (void)value;
@@ -7155,6 +7587,10 @@ void Free_SchedulingRequestToAddMod(SchedulingRequestToAddMod& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SchedulingRequestToAddModExt_v1700：ASN.1 SchedulingRequestToAddModExt-v1700；源文件第 12085 行；SEQUENCE。
+// Encode_SchedulingRequestToAddModExt_v1700 只读不分配；Decode_SchedulingRequestToAddModExt_v1700 可能 malloc（失败时内部已释放并清零）；Free_SchedulingRequestToAddModExt_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SchedulingRequestToAddModExt_v1700(Encoder& enc, const SchedulingRequestToAddModExt_v1700& value)
 {
     (void)value;
@@ -7191,6 +7627,10 @@ void Free_SchedulingRequestToAddModExt_v1700(SchedulingRequestToAddModExt_v1700&
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SchedulingRequestResourceConfig_PeriodicityAndOffset：ASN.1 periodicityAndOffset；源文件第 12101 行；CHOICE。
+// Encode_SchedulingRequestResourceConfig_PeriodicityAndOffset 只读不分配；Decode_SchedulingRequestResourceConfig_PeriodicityAndOffset 可能 malloc（失败时内部已释放并清零）；Free_SchedulingRequestResourceConfig_PeriodicityAndOffset 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SchedulingRequestResourceConfig_PeriodicityAndOffset(Encoder& enc, const SchedulingRequestResourceConfig_PeriodicityAndOffset& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 14);
@@ -7390,6 +7830,10 @@ void Free_SchedulingRequestResourceConfig_PeriodicityAndOffset(SchedulingRequest
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SchedulingRequestResourceConfig：ASN.1 SchedulingRequestResourceConfig；源文件第 12098 行；SEQUENCE。
+// Encode_SchedulingRequestResourceConfig 只读不分配；Decode_SchedulingRequestResourceConfig 可能 malloc（失败时内部已释放并清零）；Free_SchedulingRequestResourceConfig 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SchedulingRequestResourceConfig(Encoder& enc, const SchedulingRequestResourceConfig& value)
 {
     (void)value;
@@ -7450,6 +7894,10 @@ void Free_SchedulingRequestResourceConfig(SchedulingRequestResourceConfig& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SchedulingRequestResourceConfigExt_v1610：ASN.1 SchedulingRequestResourceConfigExt-v1610；源文件第 12121 行；SEQUENCE。
+// Encode_SchedulingRequestResourceConfigExt_v1610 只读不分配；Decode_SchedulingRequestResourceConfigExt_v1610 可能 malloc（失败时内部已释放并清零）；Free_SchedulingRequestResourceConfigExt_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SchedulingRequestResourceConfigExt_v1610(Encoder& enc, const SchedulingRequestResourceConfigExt_v1610& value)
 {
     (void)value;
@@ -7493,6 +7941,10 @@ void Free_SchedulingRequestResourceConfigExt_v1610(SchedulingRequestResourceConf
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SchedulingRequestResourceConfigExt_v1700_PeriodicityAndOffset_r17：ASN.1 periodicityAndOffset-r17；源文件第 12127 行；CHOICE。
+// Encode_SchedulingRequestResourceConfigExt_v1700_PeriodicityAndOffset_r17 只读不分配；Decode_SchedulingRequestResourceConfigExt_v1700_PeriodicityAndOffset_r17 可能 malloc（失败时内部已释放并清零）；Free_SchedulingRequestResourceConfigExt_v1700_PeriodicityAndOffset_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SchedulingRequestResourceConfigExt_v1700_PeriodicityAndOffset_r17(Encoder& enc, const SchedulingRequestResourceConfigExt_v1700_PeriodicityAndOffset_r17& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 2);
@@ -7566,6 +8018,10 @@ void Free_SchedulingRequestResourceConfigExt_v1700_PeriodicityAndOffset_r17(Sche
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SchedulingRequestResourceConfigExt_v1700：ASN.1 SchedulingRequestResourceConfigExt-v1700；源文件第 12126 行；SEQUENCE。
+// Encode_SchedulingRequestResourceConfigExt_v1700 只读不分配；Decode_SchedulingRequestResourceConfigExt_v1700 可能 malloc（失败时内部已释放并清零）；Free_SchedulingRequestResourceConfigExt_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SchedulingRequestResourceConfigExt_v1700(Encoder& enc, const SchedulingRequestResourceConfigExt_v1700& value)
 {
     (void)value;
@@ -7601,6 +8057,10 @@ void Free_SchedulingRequestResourceConfigExt_v1700(SchedulingRequestResourceConf
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SCS_SpecificCarrier_ExtGroup1：ASN.1 SCS_SpecificCarrier_ExtGroup1；源文件第 12152 行；扩展添加组 [[ ]]。
+// Encode_SCS_SpecificCarrier_ExtGroup1 只读不分配；Decode_SCS_SpecificCarrier_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_SCS_SpecificCarrier_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SCS_SpecificCarrier_ExtGroup1(Encoder& enc, const SCS_SpecificCarrier_ExtGroup1& value)
 {
     (void)value;
@@ -7637,6 +8097,10 @@ void Free_SCS_SpecificCarrier_ExtGroup1(SCS_SpecificCarrier_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SCS_SpecificCarrier：ASN.1 SCS-SpecificCarrier；源文件第 12147 行；SEQUENCE。
+// Encode_SCS_SpecificCarrier 只读不分配；Decode_SCS_SpecificCarrier 可能 malloc（失败时内部已释放并清零）；Free_SCS_SpecificCarrier 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SCS_SpecificCarrier(Encoder& enc, const SCS_SpecificCarrier& value)
 {
     (void)value;
@@ -7721,6 +8185,10 @@ void Free_SCS_SpecificCarrier(SCS_SpecificCarrier& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16_NrofCandidates_CI_r16：ASN.1 searchSpaceType-r16/common-r16/dci-Format2-4-r16/nrofCandidates-CI-r16；源文件第 12252 行；SEQUENCE。
+// Encode_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16_NrofCandidates_CI_r16 只读不分配；Decode_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16_NrofCandidates_CI_r16 可能 malloc（失败时内部已释放并清零）；Free_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16_NrofCandidates_CI_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16_NrofCandidates_CI_r16(Encoder& enc, const SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16_NrofCandidates_CI_r16& value)
 {
     (void)value;
@@ -7809,6 +8277,10 @@ void Free_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16_Nr
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16：ASN.1 searchSpaceType-r16/common-r16/dci-Format2-4-r16；源文件第 12251 行；SEQUENCE。
+// Encode_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16 只读不分配；Decode_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16 可能 malloc（失败时内部已释放并清零）；Free_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16(Encoder& enc, const SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16& value)
 {
     (void)value;
@@ -7844,6 +8316,10 @@ void Free_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16(Se
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_5_r16_NrofCandidates_IAB_r16：ASN.1 searchSpaceType-r16/common-r16/dci-Format2-5-r16/nrofCandidates-IAB-r16；源文件第 12262 行；SEQUENCE。
+// Encode_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_5_r16_NrofCandidates_IAB_r16 只读不分配；Decode_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_5_r16_NrofCandidates_IAB_r16 可能 malloc（失败时内部已释放并清零）；Free_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_5_r16_NrofCandidates_IAB_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_5_r16_NrofCandidates_IAB_r16(Encoder& enc, const SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_5_r16_NrofCandidates_IAB_r16& value)
 {
     (void)value;
@@ -7932,6 +8408,10 @@ void Free_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_5_r16_Nr
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_5_r16：ASN.1 searchSpaceType-r16/common-r16/dci-Format2-5-r16；源文件第 12261 行；SEQUENCE。
+// Encode_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_5_r16 只读不分配；Decode_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_5_r16 可能 malloc（失败时内部已释放并清零）；Free_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_5_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_5_r16(Encoder& enc, const SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_5_r16& value)
 {
     (void)value;

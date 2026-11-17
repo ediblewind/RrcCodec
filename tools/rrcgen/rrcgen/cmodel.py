@@ -345,8 +345,55 @@ class CModel:
         self._validate_anonymous_coverage()
         self._build_layouts()
         self._compute_order()
+        self._validate_supported_subset()
         self.renames = list(self.registry.renames)
         self.stats = self._collect_stats()
+
+    def _validate_supported_subset(self) -> None:
+        """校验方案 6.1 声明的“38.331 实际使用范围”，遇到超出范围的构造直接报错。
+
+        发射器只实现非可扩展的约束 INTEGER / SIZE 与三种扩展构造（SEQUENCE、CHOICE、
+        ENUMERATED）；如果 38.331 未来版本引入可扩展整数/可扩展 SIZE，必须在生成器
+        中显式扩展，而不是静默按错误规则编码。
+        """
+        unsupported: List[str] = []
+        for type_model in self.model.types:
+            if type_model.id in self.wrapper_type_ids:
+                continue
+            if type_model.kind == KIND_INTEGER and type_model.integer is not None:
+                if type_model.integer.kind not in ("ValueRange", "SingleValue"):
+                    unsupported.append(
+                        f"INTEGER {type_model.id} kind={type_model.integer.kind}"
+                    )
+                if type_model.integer.is_extensible:
+                    unsupported.append(f"INTEGER {type_model.id} extensible")
+            if type_model.kind in (KIND_BIT_STRING, KIND_OCTET_STRING, KIND_SEQUENCE_OF):
+                size = type_model.size
+                if size is not None:
+                    if size.kind not in ("None", "SizeFixed", "SizeRange", "ExtensibleRange"):
+                        unsupported.append(
+                            f"SIZE {type_model.id} kind={size.kind}"
+                        )
+                    if size.is_extensible or size.kind == "ExtensibleRange":
+                        unsupported.append(f"SIZE {type_model.id} extensible")
+            if type_model.kind not in (
+                KIND_SEQUENCE,
+                KIND_CHOICE,
+                KIND_ENUMERATED,
+                KIND_INTEGER,
+                KIND_BIT_STRING,
+                KIND_OCTET_STRING,
+                KIND_BOOLEAN,
+                KIND_NULL,
+                KIND_SEQUENCE_OF,
+                KIND_ALIAS,
+            ):
+                unsupported.append(f"type {type_model.id} kind={type_model.kind}")
+        if unsupported:
+            raise ValueError(
+                "unsupported ASN.1 constructs for v2 emitter: "
+                + ", ".join(unsupported[:10])
+            )
 
     # ---- 消息提取 ---------------------------------------------------------
 

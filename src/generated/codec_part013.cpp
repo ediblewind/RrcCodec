@@ -18,6 +18,10 @@
 namespace rrc {
 namespace v1810 {
 
+// --------------------------------------------------------------------------
+// SL_QuantityConfig_r16：ASN.1 SL-QuantityConfig-r16；源文件第 22844 行；SEQUENCE。
+// Encode_SL_QuantityConfig_r16 只读不分配；Decode_SL_QuantityConfig_r16 可能 malloc（失败时内部已释放并清零）；Free_SL_QuantityConfig_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SL_QuantityConfig_r16(Encoder& enc, const SL_QuantityConfig_r16& value)
 {
     (void)value;
@@ -83,6 +87,10 @@ void Free_SL_QuantityConfig_r16(SL_QuantityConfig_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SL_ReportConfigList_r16：ASN.1 SL-ReportConfigList-r16；源文件第 22925 行；SEQUENCE OF。
+// Encode_SL_ReportConfigList_r16 只读不分配；Decode_SL_ReportConfigList_r16 可能 malloc（失败时内部已释放并清零）；Free_SL_ReportConfigList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SL_ReportConfigList_r16(Encoder& enc, const SL_ReportConfigList_r16& value)
 {
     (void)value;
@@ -128,6 +136,10 @@ void Free_SL_ReportConfigList_r16(SL_ReportConfigList_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SL_MeasConfigCommon_r16：ASN.1 SL-MeasConfigCommon-r16；源文件第 22587 行；SEQUENCE。
+// Encode_SL_MeasConfigCommon_r16 只读不分配；Decode_SL_MeasConfigCommon_r16 可能 malloc（失败时内部已释放并清零）；Free_SL_MeasConfigCommon_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SL_MeasConfigCommon_r16(Encoder& enc, const SL_MeasConfigCommon_r16& value)
 {
     (void)value;
@@ -206,6 +218,10 @@ void Free_SL_MeasConfigCommon_r16(SL_MeasConfigCommon_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SL_ConfigCommonNR_r16：ASN.1 SL-ConfigCommonNR-r16；源文件第 3817 行；SEQUENCE。
+// Encode_SL_ConfigCommonNR_r16 只读不分配；Decode_SL_ConfigCommonNR_r16 可能 malloc（失败时内部已释放并清零）；Free_SL_ConfigCommonNR_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SL_ConfigCommonNR_r16(Encoder& enc, const SL_ConfigCommonNR_r16& value)
 {
     (void)value;
@@ -439,6 +455,10 @@ void Free_SL_ConfigCommonNR_r16(SL_ConfigCommonNR_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB12_IEs_r16：ASN.1 SIB12-IEs-r16；源文件第 3794 行；SEQUENCE。
+// Encode_SIB12_IEs_r16 只读不分配；Decode_SIB12_IEs_r16 可能 malloc（失败时内部已释放并清零）；Free_SIB12_IEs_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB12_IEs_r16(Encoder& enc, const SIB12_IEs_r16& value)
 {
     (void)value;
@@ -551,6 +571,10 @@ void Free_SIB12_IEs_r16(SIB12_IEs_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB13_r16：ASN.1 SIB13-r16；源文件第 3849 行；SEQUENCE。
+// Encode_SIB13_r16 只读不分配；Decode_SIB13_r16 可能 malloc（失败时内部已释放并清零）；Free_SIB13_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB13_r16(Encoder& enc, const SIB13_r16& value)
 {
     (void)value;
@@ -632,6 +656,10 @@ void Free_SIB13_r16(SIB13_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB14_r16：ASN.1 SIB14-r16；源文件第 3860 行；SEQUENCE。
+// Encode_SIB14_r16 只读不分配；Decode_SIB14_r16 可能 malloc（失败时内部已释放并清零）；Free_SIB14_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB14_r16(Encoder& enc, const SIB14_r16& value)
 {
     (void)value;
@@ -691,6 +719,10 @@ void Free_SIB14_r16(SIB14_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB15_r17：ASN.1 SIB15-r17；源文件第 3869 行；SEQUENCE。
+// Encode_SIB15_r17 只读不分配；Decode_SIB15_r17 可能 malloc（失败时内部已释放并清零）；Free_SIB15_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB15_r17(Encoder& enc, const SIB15_r17& value)
 {
     (void)value;
@@ -805,6 +837,10 @@ void Free_SIB15_r17(SIB15_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ApplicableDisasterInfo_r17_DedicatedPLMNs_r17：ASN.1 dedicatedPLMNs-r17；源文件第 3880 行；SEQUENCE OF。
+// Encode_ApplicableDisasterInfo_r17_DedicatedPLMNs_r17 只读不分配；Decode_ApplicableDisasterInfo_r17_DedicatedPLMNs_r17 可能 malloc（失败时内部已释放并清零）；Free_ApplicableDisasterInfo_r17_DedicatedPLMNs_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ApplicableDisasterInfo_r17_DedicatedPLMNs_r17(Encoder& enc, const ApplicableDisasterInfo_r17_DedicatedPLMNs_r17& value)
 {
     (void)value;
@@ -850,6 +886,10 @@ void Free_ApplicableDisasterInfo_r17_DedicatedPLMNs_r17(ApplicableDisasterInfo_r
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ApplicableDisasterInfo_r17：ASN.1 ApplicableDisasterInfo-r17；源文件第 3876 行；CHOICE。
+// Encode_ApplicableDisasterInfo_r17 只读不分配；Decode_ApplicableDisasterInfo_r17 可能 malloc（失败时内部已释放并清零）；Free_ApplicableDisasterInfo_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ApplicableDisasterInfo_r17(Encoder& enc, const ApplicableDisasterInfo_r17& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 3);
@@ -927,6 +967,10 @@ void Free_ApplicableDisasterInfo_r17(ApplicableDisasterInfo_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FreqPriorityListSlicing_r17：ASN.1 FreqPriorityListSlicing-r17；源文件第 6890 行；SEQUENCE OF。
+// Encode_FreqPriorityListSlicing_r17 只读不分配；Decode_FreqPriorityListSlicing_r17 可能 malloc（失败时内部已释放并清零）；Free_FreqPriorityListSlicing_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FreqPriorityListSlicing_r17(Encoder& enc, const FreqPriorityListSlicing_r17& value)
 {
     (void)value;
@@ -972,6 +1016,10 @@ void Free_FreqPriorityListSlicing_r17(FreqPriorityListSlicing_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB16_r17：ASN.1 SIB16-r17；源文件第 3886 行；SEQUENCE。
+// Encode_SIB16_r17 只读不分配；Decode_SIB16_r17 可能 malloc（失败时内部已释放并清零）；Free_SIB16_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB16_r17(Encoder& enc, const SIB16_r17& value)
 {
     (void)value;
@@ -1032,6 +1080,10 @@ void Free_SIB16_r17(SIB16_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB17_r17：ASN.1 SIB17-r17；源文件第 3895 行；SEQUENCE。
+// Encode_SIB17_r17 只读不分配；Decode_SIB17_r17 可能 malloc（失败时内部已释放并清零）；Free_SIB17_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB17_r17(Encoder& enc, const SIB17_r17& value)
 {
     (void)value;
@@ -1078,6 +1130,10 @@ void Free_SIB17_r17(SIB17_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB17_IEs_r17：ASN.1 SIB17-IEs-r17；源文件第 3901 行；SEQUENCE。
+// Encode_SIB17_IEs_r17 只读不分配；Decode_SIB17_IEs_r17 可能 malloc（失败时内部已释放并清零）；Free_SIB17_IEs_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB17_IEs_r17(Encoder& enc, const SIB17_IEs_r17& value)
 {
     (void)value;
@@ -1165,6 +1221,10 @@ void Free_SIB17_IEs_r17(SIB17_IEs_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// TRS_ResourceSet_r17_ScramblingID_Info_r17_ScramblingIDperResourceListWith2_r17：ASN.1 scramblingID-Info-r17/scramblingIDperResourceListWith2-r17；源文件第 3913 行；SEQUENCE OF。
+// Encode_TRS_ResourceSet_r17_ScramblingID_Info_r17_ScramblingIDperResourceListWith2_r17 只读不分配；Decode_TRS_ResourceSet_r17_ScramblingID_Info_r17_ScramblingIDperResourceListWith2_r17 可能 malloc（失败时内部已释放并清零）；Free_TRS_ResourceSet_r17_ScramblingID_Info_r17_ScramblingIDperResourceListWith2_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_TRS_ResourceSet_r17_ScramblingID_Info_r17_ScramblingIDperResourceListWith2_r17(Encoder& enc, const TRS_ResourceSet_r17_ScramblingID_Info_r17_ScramblingIDperResourceListWith2_r17& value)
 {
     (void)value;
@@ -1214,6 +1274,10 @@ void Free_TRS_ResourceSet_r17_ScramblingID_Info_r17_ScramblingIDperResourceListW
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// TRS_ResourceSet_r17_ScramblingID_Info_r17_ScramblingIDperResourceListWith4_r17：ASN.1 scramblingID-Info-r17/scramblingIDperResourceListWith4-r17；源文件第 3914 行；SEQUENCE OF。
+// Encode_TRS_ResourceSet_r17_ScramblingID_Info_r17_ScramblingIDperResourceListWith4_r17 只读不分配；Decode_TRS_ResourceSet_r17_ScramblingID_Info_r17_ScramblingIDperResourceListWith4_r17 可能 malloc（失败时内部已释放并清零）；Free_TRS_ResourceSet_r17_ScramblingID_Info_r17_ScramblingIDperResourceListWith4_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_TRS_ResourceSet_r17_ScramblingID_Info_r17_ScramblingIDperResourceListWith4_r17(Encoder& enc, const TRS_ResourceSet_r17_ScramblingID_Info_r17_ScramblingIDperResourceListWith4_r17& value)
 {
     (void)value;
@@ -1263,6 +1327,10 @@ void Free_TRS_ResourceSet_r17_ScramblingID_Info_r17_ScramblingIDperResourceListW
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// TRS_ResourceSet_r17_ScramblingID_Info_r17：ASN.1 scramblingID-Info-r17；源文件第 3911 行；CHOICE。
+// Encode_TRS_ResourceSet_r17_ScramblingID_Info_r17 只读不分配；Decode_TRS_ResourceSet_r17_ScramblingID_Info_r17 可能 malloc（失败时内部已释放并清零）；Free_TRS_ResourceSet_r17_ScramblingID_Info_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_TRS_ResourceSet_r17_ScramblingID_Info_r17(Encoder& enc, const TRS_ResourceSet_r17_ScramblingID_Info_r17& value)
 {
     const std::int64_t choice_index = (std::int64_t)(value.tag);
@@ -1378,6 +1446,10 @@ void Free_TRS_ResourceSet_r17_ScramblingID_Info_r17(TRS_ResourceSet_r17_Scrambli
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// TRS_ResourceSet_r17_PeriodicityAndOffset_r17：ASN.1 periodicityAndOffset-r17；源文件第 3921 行；CHOICE。
+// Encode_TRS_ResourceSet_r17_PeriodicityAndOffset_r17 只读不分配；Decode_TRS_ResourceSet_r17_PeriodicityAndOffset_r17 可能 malloc（失败时内部已释放并清零）；Free_TRS_ResourceSet_r17_PeriodicityAndOffset_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_TRS_ResourceSet_r17_PeriodicityAndOffset_r17(Encoder& enc, const TRS_ResourceSet_r17_PeriodicityAndOffset_r17& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 3);
@@ -1462,6 +1534,10 @@ void Free_TRS_ResourceSet_r17_PeriodicityAndOffset_r17(TRS_ResourceSet_r17_Perio
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// TRS_ResourceSet_r17：ASN.1 TRS-ResourceSet-r17；源文件第 3909 行；SEQUENCE。
+// Encode_TRS_ResourceSet_r17 只读不分配；Decode_TRS_ResourceSet_r17 可能 malloc（失败时内部已释放并清零）；Free_TRS_ResourceSet_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_TRS_ResourceSet_r17(Encoder& enc, const TRS_ResourceSet_r17& value)
 {
     (void)value;
@@ -1549,6 +1625,10 @@ void Free_TRS_ResourceSet_r17(TRS_ResourceSet_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB18_r17：ASN.1 SIB18-r17；源文件第 3935 行；SEQUENCE。
+// Encode_SIB18_r17 只读不分配；Decode_SIB18_r17 可能 malloc（失败时内部已释放并清零）；Free_SIB18_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB18_r17(Encoder& enc, const SIB18_r17& value)
 {
     (void)value;
@@ -1663,6 +1743,10 @@ void Free_SIB18_r17(SIB18_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// GIN_Element_r17：ASN.1 GIN-Element-r17；源文件第 3942 行；SEQUENCE。
+// Encode_GIN_Element_r17 只读不分配；Decode_GIN_Element_r17 可能 malloc（失败时内部已释放并清零）；Free_GIN_Element_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_GIN_Element_r17(Encoder& enc, const GIN_Element_r17& value)
 {
     (void)value;
@@ -1724,6 +1808,10 @@ void Free_GIN_Element_r17(GIN_Element_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// GINs_PerSNPN_r17：ASN.1 GINs-PerSNPN-r17；源文件第 3947 行；SEQUENCE。
+// Encode_GINs_PerSNPN_r17 只读不分配；Decode_GINs_PerSNPN_r17 可能 malloc（失败时内部已释放并清零）；Free_GINs_PerSNPN_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_GINs_PerSNPN_r17(Encoder& enc, const GINs_PerSNPN_r17& value)
 {
     (void)value;
@@ -1765,6 +1853,10 @@ void Free_GINs_PerSNPN_r17(GINs_PerSNPN_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// NTN_NeighCellConfigList_r17：ASN.1 NTN-NeighCellConfigList-r17；源文件第 3972 行；SEQUENCE OF。
+// Encode_NTN_NeighCellConfigList_r17 只读不分配；Decode_NTN_NeighCellConfigList_r17 可能 malloc（失败时内部已释放并清零）；Free_NTN_NeighCellConfigList_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_NTN_NeighCellConfigList_r17(Encoder& enc, const NTN_NeighCellConfigList_r17& value)
 {
     (void)value;
@@ -1810,6 +1902,10 @@ void Free_NTN_NeighCellConfigList_r17(NTN_NeighCellConfigList_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB19_r17_ExtGroup1：ASN.1 SIB19_r17_ExtGroup1；源文件第 3961 行；扩展添加组 [[ ]]。
+// Encode_SIB19_r17_ExtGroup1 只读不分配；Decode_SIB19_r17_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_SIB19_r17_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB19_r17_ExtGroup1(Encoder& enc, const SIB19_r17_ExtGroup1& value)
 {
     (void)value;
@@ -1845,6 +1941,10 @@ void Free_SIB19_r17_ExtGroup1(SIB19_r17_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// NTN_CovEnh_r18：ASN.1 NTN-CovEnh-r18；源文件第 3980 行；SEQUENCE。
+// Encode_NTN_CovEnh_r18 只读不分配；Decode_NTN_CovEnh_r18 可能 malloc（失败时内部已释放并清零）；Free_NTN_CovEnh_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_NTN_CovEnh_r18(Encoder& enc, const NTN_CovEnh_r18& value)
 {
     (void)value;
@@ -1922,6 +2022,10 @@ void Free_NTN_CovEnh_r18(NTN_CovEnh_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PositionVelocity_r17：ASN.1 PositionVelocity-r17；源文件第 6783 行；SEQUENCE。
+// Encode_PositionVelocity_r17 只读不分配；Decode_PositionVelocity_r17 可能 malloc（失败时内部已释放并清零）；Free_PositionVelocity_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PositionVelocity_r17(Encoder& enc, const PositionVelocity_r17& value)
 {
     (void)value;
@@ -1981,6 +2085,10 @@ void Free_PositionVelocity_r17(PositionVelocity_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// Orbital_r17：ASN.1 Orbital-r17；源文件第 6792 行；SEQUENCE。
+// Encode_Orbital_r17 只读不分配；Decode_Orbital_r17 可能 malloc（失败时内部已释放并清零）；Free_Orbital_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_Orbital_r17(Encoder& enc, const Orbital_r17& value)
 {
     (void)value;
@@ -2040,6 +2148,10 @@ void Free_Orbital_r17(Orbital_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EphemerisInfo_r17：ASN.1 EphemerisInfo-r17；源文件第 6778 行；CHOICE。
+// Encode_EphemerisInfo_r17 只读不分配；Decode_EphemerisInfo_r17 可能 malloc（失败时内部已释放并清零）；Free_EphemerisInfo_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EphemerisInfo_r17(Encoder& enc, const EphemerisInfo_r17& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -2100,6 +2212,10 @@ void Free_EphemerisInfo_r17(EphemerisInfo_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EpochTime_r17：ASN.1 EpochTime-r17；源文件第 6808 行；SEQUENCE。
+// Encode_EpochTime_r17 只读不分配；Decode_EpochTime_r17 可能 malloc（失败时内部已释放并清零）；Free_EpochTime_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EpochTime_r17(Encoder& enc, const EpochTime_r17& value)
 {
     (void)value;
@@ -2135,6 +2251,10 @@ void Free_EpochTime_r17(EpochTime_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// TA_Info_r17：ASN.1 TA-Info-r17；源文件第 9000 行；SEQUENCE。
+// Encode_TA_Info_r17 只读不分配；Decode_TA_Info_r17 可能 malloc（失败时内部已释放并清零）；Free_TA_Info_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_TA_Info_r17(Encoder& enc, const TA_Info_r17& value)
 {
     (void)value;
@@ -2190,6 +2310,10 @@ void Free_TA_Info_r17(TA_Info_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// NTN_Config_r17：ASN.1 NTN-Config-r17；源文件第 8986 行；SEQUENCE。
+// Encode_NTN_Config_r17 只读不分配；Decode_NTN_Config_r17 可能 malloc（失败时内部已释放并清零）；Free_NTN_Config_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_NTN_Config_r17(Encoder& enc, const NTN_Config_r17& value)
 {
     (void)value;
@@ -2332,6 +2456,10 @@ void Free_NTN_Config_r17(NTN_Config_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SatSwitchWithReSync_r18：ASN.1 SatSwitchWithReSync-r18；源文件第 3988 行；SEQUENCE。
+// Encode_SatSwitchWithReSync_r18 只读不分配；Decode_SatSwitchWithReSync_r18 可能 malloc（失败时内部已释放并清零）；Free_SatSwitchWithReSync_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SatSwitchWithReSync_r18(Encoder& enc, const SatSwitchWithReSync_r18& value)
 {
     (void)value;
@@ -2386,6 +2514,10 @@ void Free_SatSwitchWithReSync_r18(SatSwitchWithReSync_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB19_r17_ExtGroup2：ASN.1 SIB19_r17_ExtGroup2；源文件第 3964 行；扩展添加组 [[ ]]。
+// Encode_SIB19_r17_ExtGroup2 只读不分配；Decode_SIB19_r17_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_SIB19_r17_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB19_r17_ExtGroup2(Encoder& enc, const SIB19_r17_ExtGroup2& value)
 {
     (void)value;
@@ -2451,6 +2583,10 @@ void Free_SIB19_r17_ExtGroup2(SIB19_r17_ExtGroup2& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB19_r17：ASN.1 SIB19-r17；源文件第 3953 行；SEQUENCE。
+// Encode_SIB19_r17 只读不分配；Decode_SIB19_r17 可能 malloc（失败时内部已释放并清零）；Free_SIB19_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB19_r17(Encoder& enc, const SIB19_r17& value)
 {
     (void)value;
@@ -2626,6 +2762,10 @@ void Free_SIB19_r17(SIB19_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// NTN_NeighCellConfig_r17：ASN.1 NTN-NeighCellConfig-r17；源文件第 3974 行；SEQUENCE。
+// Encode_NTN_NeighCellConfig_r17 只读不分配；Decode_NTN_NeighCellConfig_r17 可能 malloc（失败时内部已释放并清零）；Free_NTN_NeighCellConfig_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_NTN_NeighCellConfig_r17(Encoder& enc, const NTN_NeighCellConfig_r17& value)
 {
     (void)value;
@@ -2687,6 +2827,10 @@ void Free_NTN_NeighCellConfig_r17(NTN_NeighCellConfig_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MCCH_RepetitionPeriodAndOffset_r17：ASN.1 MCCH-RepetitionPeriodAndOffset-r17；源文件第 4016 行；CHOICE。
+// Encode_MCCH_RepetitionPeriodAndOffset_r17 只读不分配；Decode_MCCH_RepetitionPeriodAndOffset_r17 可能 malloc（失败时内部已释放并清零）；Free_MCCH_RepetitionPeriodAndOffset_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MCCH_RepetitionPeriodAndOffset_r17(Encoder& enc, const MCCH_RepetitionPeriodAndOffset_r17& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 8);
@@ -2826,6 +2970,10 @@ void Free_MCCH_RepetitionPeriodAndOffset_r17(MCCH_RepetitionPeriodAndOffset_r17&
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MCCH_Config_r17：ASN.1 MCCH-Config-r17；源文件第 4008 行；SEQUENCE。
+// Encode_MCCH_Config_r17 只读不分配；Decode_MCCH_Config_r17 可能 malloc（失败时内部已释放并清零）；Free_MCCH_Config_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MCCH_Config_r17(Encoder& enc, const MCCH_Config_r17& value)
 {
     (void)value;
@@ -2879,6 +3027,10 @@ void Free_MCCH_Config_r17(MCCH_Config_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LocationAndBandwidthBroadcast_r17：ASN.1 LocationAndBandwidthBroadcast-r17；源文件第 23442 行；CHOICE。
+// Encode_LocationAndBandwidthBroadcast_r17 只读不分配；Decode_LocationAndBandwidthBroadcast_r17 可能 malloc（失败时内部已释放并清零）；Free_LocationAndBandwidthBroadcast_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LocationAndBandwidthBroadcast_r17(Encoder& enc, const LocationAndBandwidthBroadcast_r17& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -2939,6 +3091,10 @@ void Free_LocationAndBandwidthBroadcast_r17(LocationAndBandwidthBroadcast_r17& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CFR_ConfigMCCH_MTCH_r17：ASN.1 CFR-ConfigMCCH-MTCH-r17；源文件第 23436 行；SEQUENCE。
+// Encode_CFR_ConfigMCCH_MTCH_r17 只读不分配；Decode_CFR_ConfigMCCH_MTCH_r17 可能 malloc（失败时内部已释放并清零）；Free_CFR_ConfigMCCH_MTCH_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CFR_ConfigMCCH_MTCH_r17(Encoder& enc, const CFR_ConfigMCCH_MTCH_r17& value)
 {
     (void)value;
@@ -2998,6 +3154,10 @@ void Free_CFR_ConfigMCCH_MTCH_r17(CFR_ConfigMCCH_MTCH_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB20_r17_ExtGroup1：ASN.1 SIB20_r17_ExtGroup1；源文件第 4002 行；扩展添加组 [[ ]]。
+// Encode_SIB20_r17_ExtGroup1 只读不分配；Decode_SIB20_r17_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_SIB20_r17_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB20_r17_ExtGroup1(Encoder& enc, const SIB20_r17_ExtGroup1& value)
 {
     (void)value;
@@ -3045,6 +3205,10 @@ void Free_SIB20_r17_ExtGroup1(SIB20_r17_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB20_r17：ASN.1 SIB20-r17；源文件第 3997 行；SEQUENCE。
+// Encode_SIB20_r17 只读不分配；Decode_SIB20_r17 可能 malloc（失败时内部已释放并清零）；Free_SIB20_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB20_r17(Encoder& enc, const SIB20_r17& value)
 {
     (void)value;
@@ -3146,6 +3310,10 @@ void Free_SIB20_r17(SIB20_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MBS_FSAI_List_r17：ASN.1 MBS-FSAI-List-r17；源文件第 4038 行；SEQUENCE OF。
+// Encode_MBS_FSAI_List_r17 只读不分配；Decode_MBS_FSAI_List_r17 可能 malloc（失败时内部已释放并清零）；Free_MBS_FSAI_List_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MBS_FSAI_List_r17(Encoder& enc, const MBS_FSAI_List_r17& value)
 {
     (void)value;
@@ -3198,6 +3366,10 @@ void Free_MBS_FSAI_List_r17(MBS_FSAI_List_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MBS_FSAI_InterFreqList_r17：ASN.1 MBS-FSAI-InterFreqList-r17；源文件第 4040 行；SEQUENCE OF。
+// Encode_MBS_FSAI_InterFreqList_r17 只读不分配；Decode_MBS_FSAI_InterFreqList_r17 可能 malloc（失败时内部已释放并清零）；Free_MBS_FSAI_InterFreqList_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MBS_FSAI_InterFreqList_r17(Encoder& enc, const MBS_FSAI_InterFreqList_r17& value)
 {
     (void)value;
@@ -3243,6 +3415,10 @@ void Free_MBS_FSAI_InterFreqList_r17(MBS_FSAI_InterFreqList_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB21_r17：ASN.1 SIB21-r17；源文件第 4031 行；SEQUENCE。
+// Encode_SIB21_r17 只读不分配；Decode_SIB21_r17 可能 malloc（失败时内部已释放并清零）；Free_SIB21_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB21_r17(Encoder& enc, const SIB21_r17& value)
 {
     (void)value;
@@ -3315,6 +3491,10 @@ void Free_SIB21_r17(SIB21_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MBS_FSAI_InterFreq_r17：ASN.1 MBS-FSAI-InterFreq-r17；源文件第 4042 行；SEQUENCE。
+// Encode_MBS_FSAI_InterFreq_r17 只读不分配；Decode_MBS_FSAI_InterFreq_r17 可能 malloc（失败时内部已释放并清零）；Free_MBS_FSAI_InterFreq_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MBS_FSAI_InterFreq_r17(Encoder& enc, const MBS_FSAI_InterFreq_r17& value)
 {
     (void)value;
@@ -3349,6 +3529,10 @@ void Free_MBS_FSAI_InterFreq_r17(MBS_FSAI_InterFreq_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ATG_NeighCellConfigList_r18：ASN.1 ATG-NeighCellConfigList-r18；源文件第 4060 行；SEQUENCE OF。
+// Encode_ATG_NeighCellConfigList_r18 只读不分配；Decode_ATG_NeighCellConfigList_r18 可能 malloc（失败时内部已释放并清零）；Free_ATG_NeighCellConfigList_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ATG_NeighCellConfigList_r18(Encoder& enc, const ATG_NeighCellConfigList_r18& value)
 {
     (void)value;
@@ -3394,6 +3578,10 @@ void Free_ATG_NeighCellConfigList_r18(ATG_NeighCellConfigList_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ATG_Config_r18：ASN.1 ATG-Config-r18；源文件第 4320 行；SEQUENCE。
+// Encode_ATG_Config_r18 只读不分配；Decode_ATG_Config_r18 可能 malloc（失败时内部已释放并清零）；Free_ATG_Config_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ATG_Config_r18(Encoder& enc, const ATG_Config_r18& value)
 {
     (void)value;
@@ -3472,6 +3660,10 @@ void Free_ATG_Config_r18(ATG_Config_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB22_r18：ASN.1 SIB22-r18；源文件第 4052 行；SEQUENCE。
+// Encode_SIB22_r18 只读不分配；Decode_SIB22_r18 可能 malloc（失败时内部已释放并清零）；Free_SIB22_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB22_r18(Encoder& enc, const SIB22_r18& value)
 {
     (void)value;
@@ -3555,6 +3747,10 @@ void Free_SIB22_r18(SIB22_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ATG_NeighCellConfig_r18：ASN.1 ATG-NeighCellConfig-r18；源文件第 4062 行；SEQUENCE。
+// Encode_ATG_NeighCellConfig_r18 只读不分配；Decode_ATG_NeighCellConfig_r18 可能 malloc（失败时内部已释放并清零）；Free_ATG_NeighCellConfig_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ATG_NeighCellConfig_r18(Encoder& enc, const ATG_NeighCellConfig_r18& value)
 {
     (void)value;
@@ -3635,6 +3831,10 @@ void Free_ATG_NeighCellConfig_r18(ATG_NeighCellConfig_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB23_r18：ASN.1 SIB23-r18；源文件第 4073 行；SEQUENCE。
+// Encode_SIB23_r18 只读不分配；Decode_SIB23_r18 可能 malloc（失败时内部已释放并清零）；Free_SIB23_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB23_r18(Encoder& enc, const SIB23_r18& value)
 {
     (void)value;
@@ -3681,6 +3881,10 @@ void Free_SIB23_r18(SIB23_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SL_PosConfigCommonNR_r18：ASN.1 SL-PosConfigCommonNR-r18；源文件第 4085 行；SEQUENCE。
+// Encode_SL_PosConfigCommonNR_r18 只读不分配；Decode_SL_PosConfigCommonNR_r18 可能 malloc（失败时内部已释放并清零）；Free_SL_PosConfigCommonNR_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SL_PosConfigCommonNR_r18(Encoder& enc, const SL_PosConfigCommonNR_r18& value)
 {
     (void)value;
@@ -3806,6 +4010,10 @@ void Free_SL_PosConfigCommonNR_r18(SL_PosConfigCommonNR_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB23_IEs_r18：ASN.1 SIB23-IEs-r18；源文件第 4079 行；SEQUENCE。
+// Encode_SIB23_IEs_r18 只读不分配；Decode_SIB23_IEs_r18 可能 malloc（失败时内部已释放并清零）；Free_SIB23_IEs_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB23_IEs_r18(Encoder& enc, const SIB23_IEs_r18& value)
 {
     (void)value;
@@ -3859,6 +4067,10 @@ void Free_SIB23_IEs_r18(SIB23_IEs_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB24_r18：ASN.1 SIB24-r18；源文件第 4098 行；SEQUENCE。
+// Encode_SIB24_r18 只读不分配；Decode_SIB24_r18 可能 malloc（失败时内部已释放并清零）；Free_SIB24_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB24_r18(Encoder& enc, const SIB24_r18& value)
 {
     (void)value;
@@ -3931,6 +4143,10 @@ void Free_SIB24_r18(SIB24_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CoverageAreaInfoList_r18：ASN.1 CoverageAreaInfoList-r18；源文件第 4114 行；SEQUENCE OF。
+// Encode_CoverageAreaInfoList_r18 只读不分配；Decode_CoverageAreaInfoList_r18 可能 malloc（失败时内部已释放并清零）；Free_CoverageAreaInfoList_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CoverageAreaInfoList_r18(Encoder& enc, const CoverageAreaInfoList_r18& value)
 {
     (void)value;
@@ -3976,6 +4192,10 @@ void Free_CoverageAreaInfoList_r18(CoverageAreaInfoList_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIB25_r18：ASN.1 SIB25-r18；源文件第 4108 行；SEQUENCE。
+// Encode_SIB25_r18 只读不分配；Decode_SIB25_r18 可能 malloc（失败时内部已释放并清零）；Free_SIB25_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIB25_r18(Encoder& enc, const SIB25_r18& value)
 {
     (void)value;
@@ -4036,6 +4256,10 @@ void Free_SIB25_r18(SIB25_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CoverageAreaInfo_r18：ASN.1 CoverageAreaInfo-r18；源文件第 4116 行；SEQUENCE。
+// Encode_CoverageAreaInfo_r18 只读不分配；Decode_CoverageAreaInfo_r18 可能 malloc（失败时内部已释放并清零）；Free_CoverageAreaInfo_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CoverageAreaInfo_r18(Encoder& enc, const CoverageAreaInfo_r18& value)
 {
     (void)value;
@@ -4082,6 +4306,10 @@ void Free_CoverageAreaInfo_r18(CoverageAreaInfo_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PosSIB_MappingInfo_r16：ASN.1 PosSIB-MappingInfo-r16；源文件第 4216 行；SEQUENCE OF。
+// Encode_PosSIB_MappingInfo_r16 只读不分配；Decode_PosSIB_MappingInfo_r16 可能 malloc（失败时内部已释放并清零）；Free_PosSIB_MappingInfo_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PosSIB_MappingInfo_r16(Encoder& enc, const PosSIB_MappingInfo_r16& value)
 {
     (void)value;
@@ -4127,6 +4355,10 @@ void Free_PosSIB_MappingInfo_r16(PosSIB_MappingInfo_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PosSchedulingInfo_r16：ASN.1 PosSchedulingInfo-r16；源文件第 4208 行；SEQUENCE。
+// Encode_PosSchedulingInfo_r16 只读不分配；Decode_PosSchedulingInfo_r16 可能 malloc（失败时内部已释放并清零）；Free_PosSchedulingInfo_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PosSchedulingInfo_r16(Encoder& enc, const PosSchedulingInfo_r16& value)
 {
     (void)value;
@@ -4185,6 +4417,10 @@ void Free_PosSchedulingInfo_r16(PosSchedulingInfo_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PosSIB_Type_r16：ASN.1 PosSIB-Type-r16；源文件第 4218 行；SEQUENCE。
+// Encode_PosSIB_Type_r16 只读不分配；Decode_PosSIB_Type_r16 可能 malloc（失败时内部已释放并清零）；Free_PosSIB_Type_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PosSIB_Type_r16(Encoder& enc, const PosSIB_Type_r16& value)
 {
     (void)value;
@@ -4282,6 +4518,10 @@ void Free_PosSIB_Type_r16(PosSIB_Type_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SIBpos_r16：ASN.1 SIBpos-r16；源文件第 4245 行；SEQUENCE。
+// Encode_SIBpos_r16 只读不分配；Decode_SIBpos_r16 可能 malloc（失败时内部已释放并清零）；Free_SIBpos_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SIBpos_r16(Encoder& enc, const SIBpos_r16& value)
 {
     (void)value;
@@ -4341,6 +4581,10 @@ void Free_SIBpos_r16(SIBpos_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// AvailabilityCombinationsPerCell_r16_ExtGroup1：ASN.1 AvailabilityCombinationsPerCell_r16_ExtGroup1；源文件第 4336 行；扩展添加组 [[ ]]。
+// Encode_AvailabilityCombinationsPerCell_r16_ExtGroup1 只读不分配；Decode_AvailabilityCombinationsPerCell_r16_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_AvailabilityCombinationsPerCell_r16_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_AvailabilityCombinationsPerCell_r16_ExtGroup1(Encoder& enc, const AvailabilityCombinationsPerCell_r16_ExtGroup1& value)
 {
     (void)value;
@@ -4397,6 +4641,10 @@ void Free_AvailabilityCombinationsPerCell_r16_ExtGroup1(AvailabilityCombinations
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// AvailabilityCombinationsPerCell_r16_ExtGroup2：ASN.1 AvailabilityCombinationsPerCell_r16_ExtGroup2；源文件第 4339 行；扩展添加组 [[ ]]。
+// Encode_AvailabilityCombinationsPerCell_r16_ExtGroup2 只读不分配；Decode_AvailabilityCombinationsPerCell_r16_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_AvailabilityCombinationsPerCell_r16_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_AvailabilityCombinationsPerCell_r16_ExtGroup2(Encoder& enc, const AvailabilityCombinationsPerCell_r16_ExtGroup2& value)
 {
     (void)value;
@@ -4433,6 +4681,10 @@ void Free_AvailabilityCombinationsPerCell_r16_ExtGroup2(AvailabilityCombinations
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// AvailabilityCombinationsPerCell_r16：ASN.1 AvailabilityCombinationsPerCell-r16；源文件第 4330 行；SEQUENCE。
+// Encode_AvailabilityCombinationsPerCell_r16 只读不分配；Decode_AvailabilityCombinationsPerCell_r16 可能 malloc（失败时内部已释放并清零）；Free_AvailabilityCombinationsPerCell_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_AvailabilityCombinationsPerCell_r16(Encoder& enc, const AvailabilityCombinationsPerCell_r16& value)
 {
     (void)value;
@@ -4579,6 +4831,10 @@ void Free_AvailabilityCombinationsPerCell_r16(AvailabilityCombinationsPerCell_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// AvailabilityCombination_r16：ASN.1 AvailabilityCombination-r16；源文件第 4346 行；SEQUENCE。
+// Encode_AvailabilityCombination_r16 只读不分配；Decode_AvailabilityCombination_r16 可能 malloc（失败时内部已释放并清零）；Free_AvailabilityCombination_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_AvailabilityCombination_r16(Encoder& enc, const AvailabilityCombination_r16& value)
 {
     (void)value;
@@ -4635,6 +4891,10 @@ void Free_AvailabilityCombination_r16(AvailabilityCombination_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// AvailabilityCombinationRB_Groups_r17：ASN.1 AvailabilityCombinationRB-Groups-r17；源文件第 4353 行；SEQUENCE。
+// Encode_AvailabilityCombinationRB_Groups_r17 只读不分配；Decode_AvailabilityCombinationRB_Groups_r17 可能 malloc（失败时内部已释放并清零）；Free_AvailabilityCombinationRB_Groups_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_AvailabilityCombinationRB_Groups_r17(Encoder& enc, const AvailabilityCombinationRB_Groups_r17& value)
 {
     (void)value;
@@ -4731,6 +4991,10 @@ void Free_AvailabilityCombinationRB_Groups_r17(AvailabilityCombinationRB_Groups_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RB_SetGroup_r17：ASN.1 RB-SetGroup-r17；源文件第 4359 行；SEQUENCE。
+// Encode_RB_SetGroup_r17 只读不分配；Decode_RB_SetGroup_r17 可能 malloc（失败时内部已释放并清零）；Free_RB_SetGroup_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RB_SetGroup_r17(Encoder& enc, const RB_SetGroup_r17& value)
 {
     (void)value;
@@ -4822,6 +5086,10 @@ void Free_RB_SetGroup_r17(RB_SetGroup_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// AvailabilityIndicator_r16：ASN.1 AvailabilityIndicator-r16；源文件第 4367 行；SEQUENCE。
+// Encode_AvailabilityIndicator_r16 只读不分配；Decode_AvailabilityIndicator_r16 可能 malloc（失败时内部已释放并清零）；Free_AvailabilityIndicator_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_AvailabilityIndicator_r16(Encoder& enc, const AvailabilityIndicator_r16& value)
 {
     (void)value;
@@ -4931,6 +5199,10 @@ void Free_AvailabilityIndicator_r16(AvailabilityIndicator_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BeamFailureRecoveryConfig_ExtGroup1：ASN.1 BeamFailureRecoveryConfig_ExtGroup1；源文件第 4400 行；扩展添加组 [[ ]]。
+// Encode_BeamFailureRecoveryConfig_ExtGroup1 只读不分配；Decode_BeamFailureRecoveryConfig_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_BeamFailureRecoveryConfig_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BeamFailureRecoveryConfig_ExtGroup1(Encoder& enc, const BeamFailureRecoveryConfig_ExtGroup1& value)
 {
     (void)value;
@@ -4967,6 +5239,10 @@ void Free_BeamFailureRecoveryConfig_ExtGroup1(BeamFailureRecoveryConfig_ExtGroup
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CandidateBeamRSListExt_r16：ASN.1 CandidateBeamRSListExt-r16；源文件第 4430 行；SEQUENCE OF。
+// Encode_CandidateBeamRSListExt_r16 只读不分配；Decode_CandidateBeamRSListExt_r16 可能 malloc（失败时内部已释放并清零）；Free_CandidateBeamRSListExt_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CandidateBeamRSListExt_r16(Encoder& enc, const CandidateBeamRSListExt_r16& value)
 {
     (void)value;
@@ -5012,6 +5288,10 @@ void Free_CandidateBeamRSListExt_r16(CandidateBeamRSListExt_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SetupRelease_CandidateBeamRSListExt_r16：ASN.1 SetupRelease<CandidateBeamRSListExt-r16>；源文件第 4405 行；CHOICE。
+// Encode_SetupRelease_CandidateBeamRSListExt_r16 只读不分配；Decode_SetupRelease_CandidateBeamRSListExt_r16 可能 malloc（失败时内部已释放并清零）；Free_SetupRelease_CandidateBeamRSListExt_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SetupRelease_CandidateBeamRSListExt_r16(Encoder& enc, const SetupRelease_CandidateBeamRSListExt_r16& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -5071,6 +5351,10 @@ void Free_SetupRelease_CandidateBeamRSListExt_r16(SetupRelease_CandidateBeamRSLi
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BeamFailureRecoveryConfig_ExtGroup2：ASN.1 BeamFailureRecoveryConfig_ExtGroup2；源文件第 4403 行；扩展添加组 [[ ]]。
+// Encode_BeamFailureRecoveryConfig_ExtGroup2 只读不分配；Decode_BeamFailureRecoveryConfig_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_BeamFailureRecoveryConfig_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BeamFailureRecoveryConfig_ExtGroup2(Encoder& enc, const BeamFailureRecoveryConfig_ExtGroup2& value)
 {
     (void)value;
@@ -5118,6 +5402,10 @@ void Free_BeamFailureRecoveryConfig_ExtGroup2(BeamFailureRecoveryConfig_ExtGroup
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BeamFailureRecoveryConfig_ExtGroup3：ASN.1 BeamFailureRecoveryConfig_ExtGroup3；源文件第 4407 行；扩展添加组 [[ ]]。
+// Encode_BeamFailureRecoveryConfig_ExtGroup3 只读不分配；Decode_BeamFailureRecoveryConfig_ExtGroup3 可能 malloc（失败时内部已释放并清零）；Free_BeamFailureRecoveryConfig_ExtGroup3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BeamFailureRecoveryConfig_ExtGroup3(Encoder& enc, const BeamFailureRecoveryConfig_ExtGroup3& value)
 {
     (void)value;
@@ -5152,6 +5440,10 @@ void Free_BeamFailureRecoveryConfig_ExtGroup3(BeamFailureRecoveryConfig_ExtGroup
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BeamFailureRecoveryConfig：ASN.1 BeamFailureRecoveryConfig；源文件第 4388 行；SEQUENCE。
+// Encode_BeamFailureRecoveryConfig 只读不分配；Decode_BeamFailureRecoveryConfig 可能 malloc（失败时内部已释放并清零）；Free_BeamFailureRecoveryConfig 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BeamFailureRecoveryConfig(Encoder& enc, const BeamFailureRecoveryConfig& value)
 {
     (void)value;
@@ -5399,6 +5691,10 @@ void Free_BeamFailureRecoveryConfig(BeamFailureRecoveryConfig& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BFR_SSB_Resource：ASN.1 BFR-SSB-Resource；源文件第 4417 行；SEQUENCE。
+// Encode_BFR_SSB_Resource 只读不分配；Decode_BFR_SSB_Resource 可能 malloc（失败时内部已释放并清零）；Free_BFR_SSB_Resource 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BFR_SSB_Resource(Encoder& enc, const BFR_SSB_Resource& value)
 {
     (void)value;
@@ -5441,6 +5737,10 @@ void Free_BFR_SSB_Resource(BFR_SSB_Resource& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BFR_CSIRS_Resource：ASN.1 BFR-CSIRS-Resource；源文件第 4423 行；SEQUENCE。
+// Encode_BFR_CSIRS_Resource 只读不分配；Decode_BFR_CSIRS_Resource 可能 malloc（失败时内部已释放并清零）；Free_BFR_CSIRS_Resource 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BFR_CSIRS_Resource(Encoder& enc, const BFR_CSIRS_Resource& value)
 {
     (void)value;
@@ -5524,6 +5824,10 @@ void Free_BFR_CSIRS_Resource(BFR_CSIRS_Resource& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PRACH_ResourceDedicatedBFR：ASN.1 PRACH-ResourceDedicatedBFR；源文件第 4412 行；CHOICE。
+// Encode_PRACH_ResourceDedicatedBFR 只读不分配；Decode_PRACH_ResourceDedicatedBFR 可能 malloc（失败时内部已释放并清零）；Free_PRACH_ResourceDedicatedBFR 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PRACH_ResourceDedicatedBFR(Encoder& enc, const PRACH_ResourceDedicatedBFR& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -5584,6 +5888,10 @@ void Free_PRACH_ResourceDedicatedBFR(PRACH_ResourceDedicatedBFR& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BeamFailureRecoveryRSConfig_r16_ExtGroup1：ASN.1 BeamFailureRecoveryRSConfig_r16_ExtGroup1；源文件第 4439 行；扩展添加组 [[ ]]。
+// Encode_BeamFailureRecoveryRSConfig_r16_ExtGroup1 只读不分配；Decode_BeamFailureRecoveryRSConfig_r16_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_BeamFailureRecoveryRSConfig_r16_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BeamFailureRecoveryRSConfig_r16_ExtGroup1(Encoder& enc, const BeamFailureRecoveryRSConfig_r16_ExtGroup1& value)
 {
     (void)value;
@@ -5640,6 +5948,10 @@ void Free_BeamFailureRecoveryRSConfig_r16_ExtGroup1(BeamFailureRecoveryRSConfig_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BeamFailureRecoveryRSConfig_r16：ASN.1 BeamFailureRecoveryRSConfig-r16；源文件第 4435 行；SEQUENCE。
+// Encode_BeamFailureRecoveryRSConfig_r16 只读不分配；Decode_BeamFailureRecoveryRSConfig_r16 可能 malloc（失败时内部已释放并清零）；Free_BeamFailureRecoveryRSConfig_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BeamFailureRecoveryRSConfig_r16(Encoder& enc, const BeamFailureRecoveryRSConfig_r16& value)
 {
     (void)value;
@@ -5752,6 +6064,10 @@ void Free_BeamFailureRecoveryRSConfig_r16(BeamFailureRecoveryRSConfig_r16& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BH_LogicalChannelIdentity_r16：ASN.1 BH-LogicalChannelIdentity-r16；源文件第 4465 行；CHOICE。
+// Encode_BH_LogicalChannelIdentity_r16 只读不分配；Decode_BH_LogicalChannelIdentity_r16 可能 malloc（失败时内部已释放并清零）；Free_BH_LogicalChannelIdentity_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BH_LogicalChannelIdentity_r16(Encoder& enc, const BH_LogicalChannelIdentity_r16& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -5814,6 +6130,10 @@ void Free_BH_LogicalChannelIdentity_r16(BH_LogicalChannelIdentity_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LogicalChannelConfig_ExtGroup1：ASN.1 LogicalChannelConfig_ExtGroup1；源文件第 7134 行；扩展添加组 [[ ]]。
+// Encode_LogicalChannelConfig_ExtGroup1 只读不分配；Decode_LogicalChannelConfig_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_LogicalChannelConfig_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LogicalChannelConfig_ExtGroup1(Encoder& enc, const LogicalChannelConfig_ExtGroup1& value)
 {
     (void)value;
@@ -5863,6 +6183,10 @@ void Free_LogicalChannelConfig_ExtGroup1(LogicalChannelConfig_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LogicalChannelConfig_Ul_SpecificParameters_ExtGroup1：ASN.1 LogicalChannelConfig_Ul_SpecificParameters_ExtGroup1；源文件第 7123 行；扩展添加组 [[ ]]。
+// Encode_LogicalChannelConfig_Ul_SpecificParameters_ExtGroup1 只读不分配；Decode_LogicalChannelConfig_Ul_SpecificParameters_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_LogicalChannelConfig_Ul_SpecificParameters_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LogicalChannelConfig_Ul_SpecificParameters_ExtGroup1(Encoder& enc, const LogicalChannelConfig_Ul_SpecificParameters_ExtGroup1& value)
 {
     (void)value;
@@ -5933,6 +6257,10 @@ void Free_LogicalChannelConfig_Ul_SpecificParameters_ExtGroup1(LogicalChannelCon
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LogicalChannelConfig_Ul_SpecificParameters_ExtGroup2：ASN.1 LogicalChannelConfig_Ul_SpecificParameters_ExtGroup2；源文件第 7128 行；扩展添加组 [[ ]]。
+// Encode_LogicalChannelConfig_Ul_SpecificParameters_ExtGroup2 只读不分配；Decode_LogicalChannelConfig_Ul_SpecificParameters_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_LogicalChannelConfig_Ul_SpecificParameters_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LogicalChannelConfig_Ul_SpecificParameters_ExtGroup2(Encoder& enc, const LogicalChannelConfig_Ul_SpecificParameters_ExtGroup2& value)
 {
     (void)value;
@@ -5982,6 +6310,10 @@ void Free_LogicalChannelConfig_Ul_SpecificParameters_ExtGroup2(LogicalChannelCon
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LogicalChannelConfig_Ul_SpecificParameters：ASN.1 ul-SpecificParameters；源文件第 7105 行；SEQUENCE。
+// Encode_LogicalChannelConfig_Ul_SpecificParameters 只读不分配；Decode_LogicalChannelConfig_Ul_SpecificParameters 可能 malloc（失败时内部已释放并清零）；Free_LogicalChannelConfig_Ul_SpecificParameters 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LogicalChannelConfig_Ul_SpecificParameters(Encoder& enc, const LogicalChannelConfig_Ul_SpecificParameters& value)
 {
     (void)value;
@@ -6240,6 +6572,10 @@ void Free_LogicalChannelConfig_Ul_SpecificParameters(LogicalChannelConfig_Ul_Spe
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LogicalChannelConfig：ASN.1 LogicalChannelConfig；源文件第 7104 行；SEQUENCE。
+// Encode_LogicalChannelConfig 只读不分配；Decode_LogicalChannelConfig 可能 malloc（失败时内部已释放并清零）；Free_LogicalChannelConfig 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LogicalChannelConfig(Encoder& enc, const LogicalChannelConfig& value)
 {
     (void)value;
@@ -6318,6 +6654,10 @@ void Free_LogicalChannelConfig(LogicalChannelConfig& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// UL_AM_RLC：ASN.1 UL-AM-RLC；源文件第 11900 行；SEQUENCE。
+// Encode_UL_AM_RLC 只读不分配；Decode_UL_AM_RLC 可能 malloc（失败时内部已释放并清零）；Free_UL_AM_RLC 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UL_AM_RLC(Encoder& enc, const UL_AM_RLC& value)
 {
     (void)value;
@@ -6378,6 +6718,10 @@ void Free_UL_AM_RLC(UL_AM_RLC& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DL_AM_RLC：ASN.1 DL-AM-RLC；源文件第 11908 行；SEQUENCE。
+// Encode_DL_AM_RLC 只读不分配；Decode_DL_AM_RLC 可能 malloc（失败时内部已释放并清零）；Free_DL_AM_RLC 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DL_AM_RLC(Encoder& enc, const DL_AM_RLC& value)
 {
     (void)value;
@@ -6426,6 +6770,10 @@ void Free_DL_AM_RLC(DL_AM_RLC& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RLC_Config_Am：ASN.1 am；源文件第 11883 行；SEQUENCE。
+// Encode_RLC_Config_Am 只读不分配；Decode_RLC_Config_Am 可能 malloc（失败时内部已释放并清零）；Free_RLC_Config_Am 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RLC_Config_Am(Encoder& enc, const RLC_Config_Am& value)
 {
     (void)value;
@@ -6459,6 +6807,10 @@ void Free_RLC_Config_Am(RLC_Config_Am& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// UL_UM_RLC：ASN.1 UL-UM-RLC；源文件第 11914 行；SEQUENCE。
+// Encode_UL_UM_RLC 只读不分配；Decode_UL_UM_RLC 可能 malloc（失败时内部已释放并清零）；Free_UL_UM_RLC 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UL_UM_RLC(Encoder& enc, const UL_UM_RLC& value)
 {
     (void)value;
@@ -6495,6 +6847,10 @@ void Free_UL_UM_RLC(UL_UM_RLC& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DL_UM_RLC：ASN.1 DL-UM-RLC；源文件第 11918 行；SEQUENCE。
+// Encode_DL_UM_RLC 只读不分配；Decode_DL_UM_RLC 可能 malloc（失败时内部已释放并清零）；Free_DL_UM_RLC 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DL_UM_RLC(Encoder& enc, const DL_UM_RLC& value)
 {
     (void)value;
@@ -6537,6 +6893,10 @@ void Free_DL_UM_RLC(DL_UM_RLC& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RLC_Config_Um_Bi_Directional：ASN.1 um-Bi-Directional；源文件第 11887 行；SEQUENCE。
+// Encode_RLC_Config_Um_Bi_Directional 只读不分配；Decode_RLC_Config_Um_Bi_Directional 可能 malloc（失败时内部已释放并清零）；Free_RLC_Config_Um_Bi_Directional 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RLC_Config_Um_Bi_Directional(Encoder& enc, const RLC_Config_Um_Bi_Directional& value)
 {
     (void)value;
@@ -6570,6 +6930,10 @@ void Free_RLC_Config_Um_Bi_Directional(RLC_Config_Um_Bi_Directional& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RLC_Config_Um_Uni_Directional_UL：ASN.1 um-Uni-Directional-UL；源文件第 11891 行；SEQUENCE。
+// Encode_RLC_Config_Um_Uni_Directional_UL 只读不分配；Decode_RLC_Config_Um_Uni_Directional_UL 可能 malloc（失败时内部已释放并清零）；Free_RLC_Config_Um_Uni_Directional_UL 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RLC_Config_Um_Uni_Directional_UL(Encoder& enc, const RLC_Config_Um_Uni_Directional_UL& value)
 {
     (void)value;
@@ -6598,6 +6962,10 @@ void Free_RLC_Config_Um_Uni_Directional_UL(RLC_Config_Um_Uni_Directional_UL& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RLC_Config_Um_Uni_Directional_DL：ASN.1 um-Uni-Directional-DL；源文件第 11894 行；SEQUENCE。
+// Encode_RLC_Config_Um_Uni_Directional_DL 只读不分配；Decode_RLC_Config_Um_Uni_Directional_DL 可能 malloc（失败时内部已释放并清零）；Free_RLC_Config_Um_Uni_Directional_DL 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RLC_Config_Um_Uni_Directional_DL(Encoder& enc, const RLC_Config_Um_Uni_Directional_DL& value)
 {
     (void)value;
@@ -6626,6 +6994,10 @@ void Free_RLC_Config_Um_Uni_Directional_DL(RLC_Config_Um_Uni_Directional_DL& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RLC_Config：ASN.1 RLC-Config；源文件第 11882 行；CHOICE。
+// Encode_RLC_Config 只读不分配；Decode_RLC_Config 可能 malloc（失败时内部已释放并清零）；Free_RLC_Config 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RLC_Config(Encoder& enc, const RLC_Config& value)
 {
     const std::int64_t choice_index = (std::int64_t)(value.tag);
@@ -6750,6 +7122,10 @@ void Free_RLC_Config(RLC_Config& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BH_RLC_ChannelConfig_r16：ASN.1 BH-RLC-ChannelConfig-r16；源文件第 4478 行；SEQUENCE。
+// Encode_BH_RLC_ChannelConfig_r16 只读不分配；Decode_BH_RLC_ChannelConfig_r16 可能 malloc（失败时内部已释放并清零）；Free_BH_RLC_ChannelConfig_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BH_RLC_ChannelConfig_r16(Encoder& enc, const BH_RLC_ChannelConfig_r16& value)
 {
     (void)value;
@@ -6839,6 +7215,10 @@ void Free_BH_RLC_ChannelConfig_r16(BH_RLC_ChannelConfig_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SPS_ConfigToAddModList_r16：ASN.1 SPS-ConfigToAddModList-r16；源文件第 4565 行；SEQUENCE OF。
+// Encode_SPS_ConfigToAddModList_r16 只读不分配；Decode_SPS_ConfigToAddModList_r16 可能 malloc（失败时内部已释放并清零）；Free_SPS_ConfigToAddModList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SPS_ConfigToAddModList_r16(Encoder& enc, const SPS_ConfigToAddModList_r16& value)
 {
     (void)value;
@@ -6884,6 +7264,10 @@ void Free_SPS_ConfigToAddModList_r16(SPS_ConfigToAddModList_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SPS_ConfigToReleaseList_r16：ASN.1 SPS-ConfigToReleaseList-r16；源文件第 4567 行；SEQUENCE OF。
+// Encode_SPS_ConfigToReleaseList_r16 只读不分配；Decode_SPS_ConfigToReleaseList_r16 可能 malloc（失败时内部已释放并清零）；Free_SPS_ConfigToReleaseList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SPS_ConfigToReleaseList_r16(Encoder& enc, const SPS_ConfigToReleaseList_r16& value)
 {
     (void)value;
@@ -6930,6 +7314,10 @@ void Free_SPS_ConfigToReleaseList_r16(SPS_ConfigToReleaseList_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SPS_ConfigDeactivationStateList_r16：ASN.1 SPS-ConfigDeactivationStateList-r16；源文件第 4571 行；SEQUENCE OF。
+// Encode_SPS_ConfigDeactivationStateList_r16 只读不分配；Decode_SPS_ConfigDeactivationStateList_r16 可能 malloc（失败时内部已释放并清零）；Free_SPS_ConfigDeactivationStateList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SPS_ConfigDeactivationStateList_r16(Encoder& enc, const SPS_ConfigDeactivationStateList_r16& value)
 {
     (void)value;
@@ -6975,6 +7363,10 @@ void Free_SPS_ConfigDeactivationStateList_r16(SPS_ConfigDeactivationStateList_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SetupRelease_BeamFailureRecoveryRSConfig_r16：ASN.1 SetupRelease<BeamFailureRecoveryRSConfig-r16>；源文件第 4546 行；CHOICE。
+// Encode_SetupRelease_BeamFailureRecoveryRSConfig_r16 只读不分配；Decode_SetupRelease_BeamFailureRecoveryRSConfig_r16 可能 malloc（失败时内部已释放并清零）；Free_SetupRelease_BeamFailureRecoveryRSConfig_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SetupRelease_BeamFailureRecoveryRSConfig_r16(Encoder& enc, const SetupRelease_BeamFailureRecoveryRSConfig_r16& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -7034,6 +7426,10 @@ void Free_SetupRelease_BeamFailureRecoveryRSConfig_r16(SetupRelease_BeamFailureR
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BWP_DownlinkDedicated_ExtGroup1：ASN.1 BWP_DownlinkDedicated_ExtGroup1；源文件第 4542 行；扩展添加组 [[ ]]。
+// Encode_BWP_DownlinkDedicated_ExtGroup1 只读不分配；Decode_BWP_DownlinkDedicated_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_BWP_DownlinkDedicated_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BWP_DownlinkDedicated_ExtGroup1(Encoder& enc, const BWP_DownlinkDedicated_ExtGroup1& value)
 {
     (void)value;
@@ -7129,6 +7525,10 @@ void Free_BWP_DownlinkDedicated_ExtGroup1(BWP_DownlinkDedicated_ExtGroup1& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DL_PPW_PreConfigToAddModList_r17：ASN.1 DL-PPW-PreConfigToAddModList-r17；源文件第 4573 行；SEQUENCE OF。
+// Encode_DL_PPW_PreConfigToAddModList_r17 只读不分配；Decode_DL_PPW_PreConfigToAddModList_r17 可能 malloc（失败时内部已释放并清零）；Free_DL_PPW_PreConfigToAddModList_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DL_PPW_PreConfigToAddModList_r17(Encoder& enc, const DL_PPW_PreConfigToAddModList_r17& value)
 {
     (void)value;
@@ -7174,6 +7574,10 @@ void Free_DL_PPW_PreConfigToAddModList_r17(DL_PPW_PreConfigToAddModList_r17& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DL_PPW_PreConfigToReleaseList_r17：ASN.1 DL-PPW-PreConfigToReleaseList-r17；源文件第 4575 行；SEQUENCE OF。
+// Encode_DL_PPW_PreConfigToReleaseList_r17 只读不分配；Decode_DL_PPW_PreConfigToReleaseList_r17 可能 malloc（失败时内部已释放并清零）；Free_DL_PPW_PreConfigToReleaseList_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DL_PPW_PreConfigToReleaseList_r17(Encoder& enc, const DL_PPW_PreConfigToReleaseList_r17& value)
 {
     (void)value;
@@ -7220,6 +7624,10 @@ void Free_DL_PPW_PreConfigToReleaseList_r17(DL_PPW_PreConfigToReleaseList_r17& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SPS_ConfigMulticastToAddModList_r17：ASN.1 SPS-ConfigMulticastToAddModList-r17；源文件第 5086 行；SEQUENCE OF。
+// Encode_SPS_ConfigMulticastToAddModList_r17 只读不分配；Decode_SPS_ConfigMulticastToAddModList_r17 可能 malloc（失败时内部已释放并清零）；Free_SPS_ConfigMulticastToAddModList_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SPS_ConfigMulticastToAddModList_r17(Encoder& enc, const SPS_ConfigMulticastToAddModList_r17& value)
 {
     (void)value;
@@ -7265,6 +7673,10 @@ void Free_SPS_ConfigMulticastToAddModList_r17(SPS_ConfigMulticastToAddModList_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SPS_ConfigMulticastToReleaseList_r17：ASN.1 SPS-ConfigMulticastToReleaseList-r17；源文件第 5088 行；SEQUENCE OF。
+// Encode_SPS_ConfigMulticastToReleaseList_r17 只读不分配；Decode_SPS_ConfigMulticastToReleaseList_r17 可能 malloc（失败时内部已释放并清零）；Free_SPS_ConfigMulticastToReleaseList_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SPS_ConfigMulticastToReleaseList_r17(Encoder& enc, const SPS_ConfigMulticastToReleaseList_r17& value)
 {
     (void)value;
@@ -7311,6 +7723,10 @@ void Free_SPS_ConfigMulticastToReleaseList_r17(SPS_ConfigMulticastToReleaseList_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CFR_ConfigMulticast_r17：ASN.1 CFR-ConfigMulticast-r17；源文件第 5078 行；SEQUENCE。
+// Encode_CFR_ConfigMulticast_r17 只读不分配；Decode_CFR_ConfigMulticast_r17 可能 malloc（失败时内部已释放并清零）；Free_CFR_ConfigMulticast_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CFR_ConfigMulticast_r17(Encoder& enc, const CFR_ConfigMulticast_r17& value)
 {
     (void)value;
@@ -7395,6 +7811,10 @@ void Free_CFR_ConfigMulticast_r17(CFR_ConfigMulticast_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SetupRelease_CFR_ConfigMulticast_r17：ASN.1 SetupRelease<CFR-ConfigMulticast-r17>；源文件第 4554 行；CHOICE。
+// Encode_SetupRelease_CFR_ConfigMulticast_r17 只读不分配；Decode_SetupRelease_CFR_ConfigMulticast_r17 可能 malloc（失败时内部已释放并清零）；Free_SetupRelease_CFR_ConfigMulticast_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SetupRelease_CFR_ConfigMulticast_r17(Encoder& enc, const SetupRelease_CFR_ConfigMulticast_r17& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -7454,6 +7874,10 @@ void Free_SetupRelease_CFR_ConfigMulticast_r17(SetupRelease_CFR_ConfigMulticast_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BWP_DownlinkDedicated_ExtGroup2：ASN.1 BWP_DownlinkDedicated_ExtGroup2；源文件第 4550 行；扩展添加组 [[ ]]。
+// Encode_BWP_DownlinkDedicated_ExtGroup2 只读不分配；Decode_BWP_DownlinkDedicated_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_BWP_DownlinkDedicated_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BWP_DownlinkDedicated_ExtGroup2(Encoder& enc, const BWP_DownlinkDedicated_ExtGroup2& value)
 {
     (void)value;
@@ -7582,6 +8006,10 @@ void Free_BWP_DownlinkDedicated_ExtGroup2(BWP_DownlinkDedicated_ExtGroup2& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// TCI_inDCI_r18：ASN.1 TCI-inDCI-r18；源文件第 4577 行；SEQUENCE。
+// Encode_TCI_inDCI_r18 只读不分配；Decode_TCI_inDCI_r18 可能 malloc（失败时内部已释放并清零）；Free_TCI_inDCI_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_TCI_inDCI_r18(Encoder& enc, const TCI_inDCI_r18& value)
 {
     (void)value;
@@ -7629,6 +8057,10 @@ void Free_TCI_inDCI_r18(TCI_inDCI_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SetupRelease_TCI_inDCI_r18：ASN.1 SetupRelease<TCI-inDCI-r18>；源文件第 4561 行；CHOICE。
+// Encode_SetupRelease_TCI_inDCI_r18 只读不分配；Decode_SetupRelease_TCI_inDCI_r18 可能 malloc（失败时内部已释放并清零）；Free_SetupRelease_TCI_inDCI_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SetupRelease_TCI_inDCI_r18(Encoder& enc, const SetupRelease_TCI_inDCI_r18& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -7688,6 +8120,10 @@ void Free_SetupRelease_TCI_inDCI_r18(SetupRelease_TCI_inDCI_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BWP_DownlinkDedicated_ExtGroup3：ASN.1 BWP_DownlinkDedicated_ExtGroup3；源文件第 4560 行；扩展添加组 [[ ]]。
+// Encode_BWP_DownlinkDedicated_ExtGroup3 只读不分配；Decode_BWP_DownlinkDedicated_ExtGroup3 可能 malloc（失败时内部已释放并清零）；Free_BWP_DownlinkDedicated_ExtGroup3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BWP_DownlinkDedicated_ExtGroup3(Encoder& enc, const BWP_DownlinkDedicated_ExtGroup3& value)
 {
     (void)value;
@@ -7723,6 +8159,10 @@ void Free_BWP_DownlinkDedicated_ExtGroup3(BWP_DownlinkDedicated_ExtGroup3& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SPS_Config_ExtGroup1：ASN.1 SPS_Config_ExtGroup1；源文件第 12987 行；扩展添加组 [[ ]]。
+// Encode_SPS_Config_ExtGroup1 只读不分配；Decode_SPS_Config_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_SPS_Config_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SPS_Config_ExtGroup1(Encoder& enc, const SPS_Config_ExtGroup1& value)
 {
     (void)value;
@@ -7811,6 +8251,10 @@ void Free_SPS_Config_ExtGroup1(SPS_Config_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SPS_Config_ExtGroup2：ASN.1 SPS_Config_ExtGroup2；源文件第 12994 行；扩展添加组 [[ ]]。
+// Encode_SPS_Config_ExtGroup2 只读不分配；Decode_SPS_Config_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_SPS_Config_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SPS_Config_ExtGroup2(Encoder& enc, const SPS_Config_ExtGroup2& value)
 {
     (void)value;
@@ -7899,6 +8343,10 @@ void Free_SPS_Config_ExtGroup2(SPS_Config_ExtGroup2& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SPS_Config：ASN.1 SPS-Config；源文件第 12980 行；SEQUENCE。
+// Encode_SPS_Config 只读不分配；Decode_SPS_Config 可能 malloc（失败时内部已释放并清零）；Free_SPS_Config 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SPS_Config(Encoder& enc, const SPS_Config& value)
 {
     (void)value;
@@ -8024,6 +8472,10 @@ void Free_SPS_Config(SPS_Config& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SetupRelease_SPS_Config：ASN.1 SetupRelease<SPS-Config>；源文件第 4539 行；CHOICE。
+// Encode_SetupRelease_SPS_Config 只读不分配；Decode_SetupRelease_SPS_Config 可能 malloc（失败时内部已释放并清零）；Free_SetupRelease_SPS_Config 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SetupRelease_SPS_Config(Encoder& enc, const SetupRelease_SPS_Config& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -8083,6 +8535,10 @@ void Free_SetupRelease_SPS_Config(SetupRelease_SPS_Config& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BeamFailureDetectionSet_r17：ASN.1 BeamFailureDetectionSet-r17；源文件第 11081 行；SEQUENCE。
+// Encode_BeamFailureDetectionSet_r17 只读不分配；Decode_BeamFailureDetectionSet_r17 可能 malloc（失败时内部已释放并清零）；Free_BeamFailureDetectionSet_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BeamFailureDetectionSet_r17(Encoder& enc, const BeamFailureDetectionSet_r17& value)
 {
     (void)value;
@@ -8206,6 +8662,10 @@ void Free_BeamFailureDetectionSet_r17(BeamFailureDetectionSet_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BeamFailureDetection_r17：ASN.1 BeamFailureDetection-r17；源文件第 11065 行；SEQUENCE。
+// Encode_BeamFailureDetection_r17 只读不分配；Decode_BeamFailureDetection_r17 可能 malloc（失败时内部已释放并清零）；Free_BeamFailureDetection_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BeamFailureDetection_r17(Encoder& enc, const BeamFailureDetection_r17& value)
 {
     (void)value;
@@ -8266,6 +8726,10 @@ void Free_BeamFailureDetection_r17(BeamFailureDetection_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RadioLinkMonitoringConfig_ExtGroup1：ASN.1 RadioLinkMonitoringConfig_ExtGroup1；源文件第 11060 行；扩展添加组 [[ ]]。
+// Encode_RadioLinkMonitoringConfig_ExtGroup1 只读不分配；Decode_RadioLinkMonitoringConfig_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_RadioLinkMonitoringConfig_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RadioLinkMonitoringConfig_ExtGroup1(Encoder& enc, const RadioLinkMonitoringConfig_ExtGroup1& value)
 {
     (void)value;
@@ -8301,6 +8765,10 @@ void Free_RadioLinkMonitoringConfig_ExtGroup1(RadioLinkMonitoringConfig_ExtGroup
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RadioLinkMonitoringConfig：ASN.1 RadioLinkMonitoringConfig；源文件第 11052 行；SEQUENCE。
+// Encode_RadioLinkMonitoringConfig 只读不分配；Decode_RadioLinkMonitoringConfig 可能 malloc（失败时内部已释放并清零）；Free_RadioLinkMonitoringConfig 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RadioLinkMonitoringConfig(Encoder& enc, const RadioLinkMonitoringConfig& value)
 {
     (void)value;
@@ -8460,6 +8928,10 @@ void Free_RadioLinkMonitoringConfig(RadioLinkMonitoringConfig& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SetupRelease_RadioLinkMonitoringConfig：ASN.1 SetupRelease<RadioLinkMonitoringConfig>；源文件第 4540 行；CHOICE。
+// Encode_SetupRelease_RadioLinkMonitoringConfig 只读不分配；Decode_SetupRelease_RadioLinkMonitoringConfig 可能 malloc（失败时内部已释放并清零）；Free_SetupRelease_RadioLinkMonitoringConfig 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SetupRelease_RadioLinkMonitoringConfig(Encoder& enc, const SetupRelease_RadioLinkMonitoringConfig& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -8519,6 +8991,10 @@ void Free_SetupRelease_RadioLinkMonitoringConfig(SetupRelease_RadioLinkMonitorin
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BWP_DownlinkDedicated：ASN.1 BWP-DownlinkDedicated；源文件第 4536 行；SEQUENCE。
+// Encode_BWP_DownlinkDedicated 只读不分配；Decode_BWP_DownlinkDedicated 可能 malloc（失败时内部已释放并清零）；Free_BWP_DownlinkDedicated 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BWP_DownlinkDedicated(Encoder& enc, const BWP_DownlinkDedicated& value)
 {
     (void)value;
@@ -8679,6 +9155,10 @@ void Free_BWP_DownlinkDedicated(BWP_DownlinkDedicated& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BWP_Downlink：ASN.1 BWP-Downlink；源文件第 4516 行；SEQUENCE。
+// Encode_BWP_Downlink 只读不分配；Decode_BWP_Downlink 可能 malloc（失败时内部已释放并清零）；Free_BWP_Downlink 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BWP_Downlink(Encoder& enc, const BWP_Downlink& value)
 {
     (void)value;

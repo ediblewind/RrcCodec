@@ -18,6 +18,10 @@
 namespace rrc {
 namespace v1810 {
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1700_TimeDurationForQCL_v1710：ASN.1 timeDurationForQCL-v1710；源文件第 16290 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1700_TimeDurationForQCL_v1710 只读不分配；Decode_FeatureSetDownlink_v1700_TimeDurationForQCL_v1710 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1700_TimeDurationForQCL_v1710 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1700_TimeDurationForQCL_v1710(Encoder& enc, const FeatureSetDownlink_v1700_TimeDurationForQCL_v1710& value)
 {
     (void)value;
@@ -67,6 +71,10 @@ void Free_FeatureSetDownlink_v1700_TimeDurationForQCL_v1710(FeatureSetDownlink_v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_RepetitionParameters_r17：ASN.1 PDCCH-RepetitionParameters-r17；源文件第 16425 行；SEQUENCE。
+// Encode_PDCCH_RepetitionParameters_r17 只读不分配；Decode_PDCCH_RepetitionParameters_r17 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_RepetitionParameters_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_RepetitionParameters_r17(Encoder& enc, const PDCCH_RepetitionParameters_r17& value)
 {
     (void)value;
@@ -122,6 +130,10 @@ void Free_PDCCH_RepetitionParameters_r17(PDCCH_RepetitionParameters_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1700_MTRP_PDCCH_Case2_1SpanGap_r17：ASN.1 mTRP-PDCCH-Case2-1SpanGap-r17；源文件第 16309 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1700_MTRP_PDCCH_Case2_1SpanGap_r17 只读不分配；Decode_FeatureSetDownlink_v1700_MTRP_PDCCH_Case2_1SpanGap_r17 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1700_MTRP_PDCCH_Case2_1SpanGap_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1700_MTRP_PDCCH_Case2_1SpanGap_r17(Encoder& enc, const FeatureSetDownlink_v1700_MTRP_PDCCH_Case2_1SpanGap_r17& value)
 {
     (void)value;
@@ -193,6 +205,10 @@ void Free_FeatureSetDownlink_v1700_MTRP_PDCCH_Case2_1SpanGap_r17(FeatureSetDownl
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1700_MTRP_PDCCH_legacyMonitoring_r17：ASN.1 mTRP-PDCCH-legacyMonitoring-r17；源文件第 16316 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1700_MTRP_PDCCH_legacyMonitoring_r17 只读不分配；Decode_FeatureSetDownlink_v1700_MTRP_PDCCH_legacyMonitoring_r17 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1700_MTRP_PDCCH_legacyMonitoring_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1700_MTRP_PDCCH_legacyMonitoring_r17(Encoder& enc, const FeatureSetDownlink_v1700_MTRP_PDCCH_legacyMonitoring_r17& value)
 {
     (void)value;
@@ -240,6 +256,10 @@ void Free_FeatureSetDownlink_v1700_MTRP_PDCCH_legacyMonitoring_r17(FeatureSetDow
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1700_MTRP_PDCCH_Repetition_r17：ASN.1 mTRP-PDCCH-Repetition-r17；源文件第 16325 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1700_MTRP_PDCCH_Repetition_r17 只读不分配；Decode_FeatureSetDownlink_v1700_MTRP_PDCCH_Repetition_r17 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1700_MTRP_PDCCH_Repetition_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1700_MTRP_PDCCH_Repetition_r17(Encoder& enc, const FeatureSetDownlink_v1700_MTRP_PDCCH_Repetition_r17& value)
 {
     (void)value;
@@ -275,6 +295,10 @@ void Free_FeatureSetDownlink_v1700_MTRP_PDCCH_Repetition_r17(FeatureSetDownlink_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1700：ASN.1 FeatureSetDownlink-v1700；源文件第 16286 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1700 只读不分配；Decode_FeatureSetDownlink_v1700 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1700(Encoder& enc, const FeatureSetDownlink_v1700& value)
 {
     (void)value;
@@ -458,6 +482,10 @@ void Free_FeatureSetDownlink_v1700(FeatureSetDownlink_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17_MaxNumberPRS_ResourceProcessedPerSlot_r17：ASN.1 rtt-BasedPDC-PRS-r17/maxNumberPRS-ResourceProcessedPerSlot-r17；源文件第 16337 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17_MaxNumberPRS_ResourceProcessedPerSlot_r17 只读不分配；Decode_FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17_MaxNumberPRS_ResourceProcessedPerSlot_r17 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17_MaxNumberPRS_ResourceProcessedPerSlot_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17_MaxNumberPRS_ResourceProcessedPerSlot_r17(Encoder& enc, const FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17_MaxNumberPRS_ResourceProcessedPerSlot_r17& value)
 {
     (void)value;
@@ -533,6 +561,10 @@ void Free_FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17_MaxNumberPRS_ResourcePro
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17：ASN.1 rtt-BasedPDC-PRS-r17；源文件第 16335 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17 只读不分配；Decode_FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17(Encoder& enc, const FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17& value)
 {
     (void)value;
@@ -567,6 +599,10 @@ void Free_FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17(FeatureSetDownlink_v1720
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1720：ASN.1 FeatureSetDownlink-v1720；源文件第 16331 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1720 只读不分配；Decode_FeatureSetDownlink_v1720 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1720 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1720(Encoder& enc, const FeatureSetDownlink_v1720& value)
 {
     (void)value;
@@ -624,6 +660,10 @@ void Free_FeatureSetDownlink_v1720(FeatureSetDownlink_v1720& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1730：ASN.1 FeatureSetDownlink-v1730；源文件第 16348 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1730 只读不分配；Decode_FeatureSetDownlink_v1730 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1730 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1730(Encoder& enc, const FeatureSetDownlink_v1730& value)
 {
     (void)value;
@@ -658,6 +698,10 @@ void Free_FeatureSetDownlink_v1730(FeatureSetDownlink_v1730& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1800_SimulDMRS_PDSCH_r18：ASN.1 simulDMRS-PDSCH-r18；源文件第 16391 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1800_SimulDMRS_PDSCH_r18 只读不分配；Decode_FeatureSetDownlink_v1800_SimulDMRS_PDSCH_r18 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1800_SimulDMRS_PDSCH_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1800_SimulDMRS_PDSCH_r18(Encoder& enc, const FeatureSetDownlink_v1800_SimulDMRS_PDSCH_r18& value)
 {
     (void)value;
@@ -720,6 +764,10 @@ void Free_FeatureSetDownlink_v1800_SimulDMRS_PDSCH_r18(FeatureSetDownlink_v1800_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingType1_r18：ASN.1 pdcch-MonitoringSpan2-2-r18/pdsch-ProcessingType1-r18；源文件第 16402 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingType1_r18 只读不分配；Decode_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingType1_r18 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingType1_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingType1_r18(Encoder& enc, const FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingType1_r18& value)
 {
     (void)value;
@@ -765,6 +813,10 @@ void Free_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingT
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingType2_r18：ASN.1 pdcch-MonitoringSpan2-2-r18/pdsch-ProcessingType2-r18；源文件第 16406 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingType2_r18 只读不分配；Decode_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingType2_r18 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingType2_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingType2_r18(Encoder& enc, const FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingType2_r18& value)
 {
     (void)value;
@@ -810,6 +862,10 @@ void Free_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingT
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18：ASN.1 pdcch-MonitoringSpan2-2-r18；源文件第 16401 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18 只读不分配；Decode_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18(Encoder& enc, const FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18& value)
 {
     (void)value;
@@ -843,6 +899,10 @@ void Free_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18(FeatureSetDownlin
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1800：ASN.1 FeatureSetDownlink-v1800；源文件第 16353 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1800 只读不分配；Decode_FeatureSetDownlink_v1800 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1800 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1800(Encoder& enc, const FeatureSetDownlink_v1800& value)
 {
     (void)value;
@@ -1134,6 +1194,10 @@ void Free_FeatureSetDownlink_v1800(FeatureSetDownlink_v1800& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DummyB：ASN.1 DummyB；源文件第 16445 行；SEQUENCE。
+// Encode_DummyB 只读不分配；Decode_DummyB 可能 malloc（失败时内部已释放并清零）；Free_DummyB 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DummyB(Encoder& enc, const DummyB& value)
 {
     (void)value;
@@ -1187,6 +1251,10 @@ void Free_DummyB(DummyB& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DummyC：ASN.1 DummyC；源文件第 16453 行；SEQUENCE。
+// Encode_DummyC 只读不分配；Decode_DummyC 可能 malloc（失败时内部已释放并清零）；Free_DummyC 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DummyC(Encoder& enc, const DummyC& value)
 {
     (void)value;
@@ -1246,6 +1314,10 @@ void Free_DummyC(DummyC& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DummyD：ASN.1 DummyD；源文件第 16462 行；SEQUENCE。
+// Encode_DummyD 只读不分配；Decode_DummyD 可能 malloc（失败时内部已释放并清零）；Free_DummyD 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DummyD(Encoder& enc, const DummyD& value)
 {
     (void)value;
@@ -1316,6 +1388,10 @@ void Free_DummyD(DummyD& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DummyE：ASN.1 DummyE；源文件第 16472 行；SEQUENCE。
+// Encode_DummyE 只读不分配；Decode_DummyE 可能 malloc（失败时内部已释放并清零）；Free_DummyE 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DummyE(Encoder& enc, const DummyE& value)
 {
     (void)value;
@@ -1375,6 +1451,10 @@ void Free_DummyE(DummyE& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlinkPerCC：ASN.1 FeatureSetDownlinkPerCC；源文件第 16489 行；SEQUENCE。
+// Encode_FeatureSetDownlinkPerCC 只读不分配；Decode_FeatureSetDownlinkPerCC 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlinkPerCC 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlinkPerCC(Encoder& enc, const FeatureSetDownlinkPerCC& value)
 {
     (void)value;
@@ -1446,6 +1526,10 @@ void Free_FeatureSetDownlinkPerCC(FeatureSetDownlinkPerCC& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MultiDCI_MultiTRP_r16：ASN.1 MultiDCI-MultiTRP-r16；源文件第 16556 行；SEQUENCE。
+// Encode_MultiDCI_MultiTRP_r16 只读不分配；Decode_MultiDCI_MultiTRP_r16 可能 malloc（失败时内部已释放并清零）；Free_MultiDCI_MultiTRP_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MultiDCI_MultiTRP_r16(Encoder& enc, const MultiDCI_MultiTRP_r16& value)
 {
     (void)value;
@@ -1487,6 +1571,10 @@ void Free_MultiDCI_MultiTRP_r16(MultiDCI_MultiTRP_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlinkPerCC_v1620：ASN.1 FeatureSetDownlinkPerCC-v1620；源文件第 16497 行；SEQUENCE。
+// Encode_FeatureSetDownlinkPerCC_v1620 只读不分配；Decode_FeatureSetDownlinkPerCC_v1620 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlinkPerCC_v1620 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlinkPerCC_v1620(Encoder& enc, const FeatureSetDownlinkPerCC_v1620& value)
 {
     (void)value;
@@ -1533,6 +1621,10 @@ void Free_FeatureSetDownlinkPerCC_v1620(FeatureSetDownlinkPerCC_v1620& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CRS_InterfMitigation_r17：ASN.1 CRS-InterfMitigation-r17；源文件第 16562 行；SEQUENCE。
+// Encode_CRS_InterfMitigation_r17 只读不分配；Decode_CRS_InterfMitigation_r17 可能 malloc（失败时内部已释放并清零）；Free_CRS_InterfMitigation_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CRS_InterfMitigation_r17(Encoder& enc, const CRS_InterfMitigation_r17& value)
 {
     (void)value;
@@ -1611,6 +1703,10 @@ void Free_CRS_InterfMitigation_r17(CRS_InterfMitigation_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SupportedBandwidth_v1700：ASN.1 SupportedBandwidth-v1700；源文件第 20797 行；CHOICE。
+// Encode_SupportedBandwidth_v1700 只读不分配；Decode_SupportedBandwidth_v1700 可能 malloc（失败时内部已释放并清零）；Free_SupportedBandwidth_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SupportedBandwidth_v1700(Encoder& enc, const SupportedBandwidth_v1700& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -1673,6 +1769,10 @@ void Free_SupportedBandwidth_v1700(SupportedBandwidth_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlinkPerCC_v1700：ASN.1 FeatureSetDownlinkPerCC-v1700；源文件第 16504 行；SEQUENCE。
+// Encode_FeatureSetDownlinkPerCC_v1700 只读不分配；Decode_FeatureSetDownlinkPerCC_v1700 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlinkPerCC_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlinkPerCC_v1700(Encoder& enc, const FeatureSetDownlinkPerCC_v1700& value)
 {
     (void)value;
@@ -1767,6 +1867,10 @@ void Free_FeatureSetDownlinkPerCC_v1700(FeatureSetDownlinkPerCC_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlinkPerCC_v1720：ASN.1 FeatureSetDownlinkPerCC-v1720；源文件第 16516 行；SEQUENCE。
+// Encode_FeatureSetDownlinkPerCC_v1720 只读不分配；Decode_FeatureSetDownlinkPerCC_v1720 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlinkPerCC_v1720 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlinkPerCC_v1720(Encoder& enc, const FeatureSetDownlinkPerCC_v1720& value)
 {
     (void)value;
@@ -1825,6 +1929,10 @@ void Free_FeatureSetDownlinkPerCC_v1720(FeatureSetDownlinkPerCC_v1720& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlinkPerCC_v1730：ASN.1 FeatureSetDownlinkPerCC-v1730；源文件第 16525 行；SEQUENCE。
+// Encode_FeatureSetDownlinkPerCC_v1730 只读不分配；Decode_FeatureSetDownlinkPerCC_v1730 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlinkPerCC_v1730 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlinkPerCC_v1730(Encoder& enc, const FeatureSetDownlinkPerCC_v1730& value)
 {
     (void)value;
@@ -1896,6 +2004,10 @@ void Free_FeatureSetDownlinkPerCC_v1730(FeatureSetDownlinkPerCC_v1730& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlinkPerCC_v1780：ASN.1 FeatureSetDownlinkPerCC-v1780；源文件第 16536 行；SEQUENCE。
+// Encode_FeatureSetDownlinkPerCC_v1780 只读不分配；Decode_FeatureSetDownlinkPerCC_v1780 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlinkPerCC_v1780 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlinkPerCC_v1780(Encoder& enc, const FeatureSetDownlinkPerCC_v1780& value)
 {
     (void)value;
@@ -1931,6 +2043,10 @@ void Free_FeatureSetDownlinkPerCC_v1780(FeatureSetDownlinkPerCC_v1780& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlinkPerCC_v1800：ASN.1 FeatureSetDownlinkPerCC-v1800；源文件第 16540 行；SEQUENCE。
+// Encode_FeatureSetDownlinkPerCC_v1800 只读不分配；Decode_FeatureSetDownlinkPerCC_v1800 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlinkPerCC_v1800 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlinkPerCC_v1800(Encoder& enc, const FeatureSetDownlinkPerCC_v1800& value)
 {
     (void)value;
@@ -2022,6 +2138,10 @@ void Free_FeatureSetDownlinkPerCC_v1800(FeatureSetDownlinkPerCC_v1800& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSets_ExtGroup8：ASN.1 FeatureSets_ExtGroup8；源文件第 16629 行；扩展添加组 [[ ]]。
+// Encode_FeatureSets_ExtGroup8 只读不分配；Decode_FeatureSets_ExtGroup8 可能 malloc（失败时内部已释放并清零）；Free_FeatureSets_ExtGroup8 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup8(Encoder& enc, const FeatureSets_ExtGroup8& value)
 {
     (void)value;
@@ -2111,6 +2231,10 @@ void Free_FeatureSets_ExtGroup8(FeatureSets_ExtGroup8& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSets_ExtGroup9：ASN.1 FeatureSets_ExtGroup9；源文件第 16633 行；扩展添加组 [[ ]]。
+// Encode_FeatureSets_ExtGroup9 只读不分配；Decode_FeatureSets_ExtGroup9 可能 malloc（失败时内部已释放并清零）；Free_FeatureSets_ExtGroup9 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup9(Encoder& enc, const FeatureSets_ExtGroup9& value)
 {
     (void)value;
@@ -2200,6 +2324,10 @@ void Free_FeatureSets_ExtGroup9(FeatureSets_ExtGroup9& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSets_ExtGroup10：ASN.1 FeatureSets_ExtGroup10；源文件第 16637 行；扩展添加组 [[ ]]。
+// Encode_FeatureSets_ExtGroup10 只读不分配；Decode_FeatureSets_ExtGroup10 可能 malloc（失败时内部已释放并清零）；Free_FeatureSets_ExtGroup10 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup10(Encoder& enc, const FeatureSets_ExtGroup10& value)
 {
     (void)value;
@@ -2355,6 +2483,10 @@ void Free_FeatureSets_ExtGroup10(FeatureSets_ExtGroup10& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSets_ExtGroup1：ASN.1 FeatureSets_ExtGroup1；源文件第 16599 行；扩展添加组 [[ ]]。
+// Encode_FeatureSets_ExtGroup1 只读不分配；Decode_FeatureSets_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_FeatureSets_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup1(Encoder& enc, const FeatureSets_ExtGroup1& value)
 {
     (void)value;
@@ -2477,6 +2609,10 @@ void Free_FeatureSets_ExtGroup1(FeatureSets_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSets_ExtGroup2：ASN.1 FeatureSets_ExtGroup2；源文件第 16604 行；扩展添加组 [[ ]]。
+// Encode_FeatureSets_ExtGroup2 只读不分配；Decode_FeatureSets_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_FeatureSets_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup2(Encoder& enc, const FeatureSets_ExtGroup2& value)
 {
     (void)value;
@@ -2533,6 +2669,10 @@ void Free_FeatureSets_ExtGroup2(FeatureSets_ExtGroup2& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSets_ExtGroup3：ASN.1 FeatureSets_ExtGroup3；源文件第 16607 行；扩展添加组 [[ ]]。
+// Encode_FeatureSets_ExtGroup3 只读不分配；Decode_FeatureSets_ExtGroup3 可能 malloc（失败时内部已释放并清零）；Free_FeatureSets_ExtGroup3 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup3(Encoder& enc, const FeatureSets_ExtGroup3& value)
 {
     (void)value;
@@ -2655,6 +2795,10 @@ void Free_FeatureSets_ExtGroup3(FeatureSets_ExtGroup3& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSets_ExtGroup4：ASN.1 FeatureSets_ExtGroup4；源文件第 16612 行；扩展添加组 [[ ]]。
+// Encode_FeatureSets_ExtGroup4 只读不分配；Decode_FeatureSets_ExtGroup4 可能 malloc（失败时内部已释放并清零）；Free_FeatureSets_ExtGroup4 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup4(Encoder& enc, const FeatureSets_ExtGroup4& value)
 {
     (void)value;
@@ -2711,6 +2855,10 @@ void Free_FeatureSets_ExtGroup4(FeatureSets_ExtGroup4& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSets_ExtGroup5：ASN.1 FeatureSets_ExtGroup5；源文件第 16615 行；扩展添加组 [[ ]]。
+// Encode_FeatureSets_ExtGroup5 只读不分配；Decode_FeatureSets_ExtGroup5 可能 malloc（失败时内部已释放并清零）；Free_FeatureSets_ExtGroup5 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup5(Encoder& enc, const FeatureSets_ExtGroup5& value)
 {
     (void)value;
@@ -2767,6 +2915,10 @@ void Free_FeatureSets_ExtGroup5(FeatureSets_ExtGroup5& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSets_ExtGroup6：ASN.1 FeatureSets_ExtGroup6；源文件第 16618 行；扩展添加组 [[ ]]。
+// Encode_FeatureSets_ExtGroup6 只读不分配；Decode_FeatureSets_ExtGroup6 可能 malloc（失败时内部已释放并清零）；Free_FeatureSets_ExtGroup6 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup6(Encoder& enc, const FeatureSets_ExtGroup6& value)
 {
     (void)value;
@@ -2922,6 +3074,10 @@ void Free_FeatureSets_ExtGroup6(FeatureSets_ExtGroup6& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSets_ExtGroup7：ASN.1 FeatureSets_ExtGroup7；源文件第 16624 行；扩展添加组 [[ ]]。
+// Encode_FeatureSets_ExtGroup7 只读不分配；Decode_FeatureSets_ExtGroup7 可能 malloc（失败时内部已释放并清零）；Free_FeatureSets_ExtGroup7 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup7(Encoder& enc, const FeatureSets_ExtGroup7& value)
 {
     (void)value;
@@ -3044,6 +3200,10 @@ void Free_FeatureSets_ExtGroup7(FeatureSets_ExtGroup7& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSets：ASN.1 FeatureSets；源文件第 16593 行；SEQUENCE。
+// Encode_FeatureSets 只读不分配；Decode_FeatureSets 可能 malloc（失败时内部已释放并清零）；Free_FeatureSets 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets(Encoder& enc, const FeatureSets& value)
 {
     (void)value;
@@ -3449,6 +3609,10 @@ void Free_FeatureSets(FeatureSets& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSets_v16d0：ASN.1 FeatureSets-v16d0；源文件第 16645 行；SEQUENCE。
+// Encode_FeatureSets_v16d0 只读不分配；Decode_FeatureSets_v16d0 可能 malloc（失败时内部已释放并清零）；Free_FeatureSets_v16d0 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_v16d0(Encoder& enc, const FeatureSets_v16d0& value)
 {
     (void)value;
@@ -3505,6 +3669,10 @@ void Free_FeatureSets_v16d0(FeatureSets_v16d0& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DummyF：ASN.1 DummyF；源文件第 16978 行；SEQUENCE。
+// Encode_DummyF 只读不分配；Decode_DummyF 可能 malloc（失败时内部已释放并清零）；Free_DummyF 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DummyF(Encoder& enc, const DummyF& value)
 {
     (void)value;
@@ -3552,6 +3720,10 @@ void Free_DummyF(DummyF& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DummyI：ASN.1 DummyI；源文件第 18508 行；SEQUENCE。
+// Encode_DummyI 只读不分配；Decode_DummyI 可能 malloc（失败时内部已释放并清零）；Free_DummyI 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DummyI(Encoder& enc, const DummyI& value)
 {
     (void)value;
@@ -3592,6 +3764,10 @@ void Free_DummyI(DummyI& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_Pusch_ProcessingType1_DifferentTB_PerSlot：ASN.1 pusch-ProcessingType1-DifferentTB-PerSlot；源文件第 16663 行；SEQUENCE。
+// Encode_FeatureSetUplink_Pusch_ProcessingType1_DifferentTB_PerSlot 只读不分配；Decode_FeatureSetUplink_Pusch_ProcessingType1_DifferentTB_PerSlot 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_Pusch_ProcessingType1_DifferentTB_PerSlot 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_Pusch_ProcessingType1_DifferentTB_PerSlot(Encoder& enc, const FeatureSetUplink_Pusch_ProcessingType1_DifferentTB_PerSlot& value)
 {
     (void)value;
@@ -3667,6 +3843,10 @@ void Free_FeatureSetUplink_Pusch_ProcessingType1_DifferentTB_PerSlot(FeatureSetU
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink：ASN.1 FeatureSetUplink；源文件第 16652 行；SEQUENCE。
+// Encode_FeatureSetUplink 只读不分配；Decode_FeatureSetUplink 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink(Encoder& enc, const FeatureSetUplink& value)
 {
     (void)value;
@@ -3868,6 +4048,10 @@ void Free_FeatureSetUplink(FeatureSetUplink& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1540_Pusch_ProcessingType2：ASN.1 pusch-ProcessingType2；源文件第 16676 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1540_Pusch_ProcessingType2 只读不分配；Decode_FeatureSetUplink_v1540_Pusch_ProcessingType2 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1540_Pusch_ProcessingType2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1540_Pusch_ProcessingType2(Encoder& enc, const FeatureSetUplink_v1540_Pusch_ProcessingType2& value)
 {
     (void)value;
@@ -3927,6 +4111,10 @@ void Free_FeatureSetUplink_v1540_Pusch_ProcessingType2(FeatureSetUplink_v1540_Pu
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1540：ASN.1 FeatureSetUplink-v1540；源文件第 16672 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1540 只读不分配；Decode_FeatureSetUplink_v1540 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1540 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1540(Encoder& enc, const FeatureSetUplink_v1540& value)
 {
     (void)value;
@@ -4006,6 +4194,10 @@ void Free_FeatureSetUplink_v1540(FeatureSetUplink_v1540& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SRS_PosResources_r16：ASN.1 SRS-PosResources-r16；源文件第 16950 行；SEQUENCE。
+// Encode_SRS_PosResources_r16 只读不分配；Decode_SRS_PosResources_r16 可能 malloc（失败时内部已释放并清零）；Free_SRS_PosResources_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SRS_PosResources_r16(Encoder& enc, const SRS_PosResources_r16& value)
 {
     (void)value;
@@ -4059,6 +4251,10 @@ void Free_SRS_PosResources_r16(SRS_PosResources_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SRS_PosResourceAP_r16：ASN.1 SRS-PosResourceAP-r16；源文件第 16958 行；SEQUENCE。
+// Encode_SRS_PosResourceAP_r16 只读不分配；Decode_SRS_PosResourceAP_r16 可能 malloc（失败时内部已释放并清零）；Free_SRS_PosResourceAP_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SRS_PosResourceAP_r16(Encoder& enc, const SRS_PosResourceAP_r16& value)
 {
     (void)value;
@@ -4094,6 +4290,10 @@ void Free_SRS_PosResourceAP_r16(SRS_PosResourceAP_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SRS_PosResourceSP_r16：ASN.1 SRS-PosResourceSP-r16；源文件第 16963 行；SEQUENCE。
+// Encode_SRS_PosResourceSP_r16 只读不分配；Decode_SRS_PosResourceSP_r16 可能 malloc（失败时内部已释放并清零）；Free_SRS_PosResourceSP_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SRS_PosResourceSP_r16(Encoder& enc, const SRS_PosResourceSP_r16& value)
 {
     (void)value;
@@ -4129,6 +4329,10 @@ void Free_SRS_PosResourceSP_r16(SRS_PosResourceSP_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SRS_AllPosResources_r16：ASN.1 SRS-AllPosResources-r16；源文件第 16944 行；SEQUENCE。
+// Encode_SRS_AllPosResources_r16 只读不分配；Decode_SRS_AllPosResources_r16 可能 malloc（失败时内部已释放并清零）；Free_SRS_AllPosResources_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SRS_AllPosResources_r16(Encoder& enc, const SRS_AllPosResources_r16& value)
 {
     (void)value;
@@ -4181,6 +4385,10 @@ void Free_SRS_AllPosResources_r16(SRS_AllPosResources_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1610_Pusch_RepetitionTypeB_r16：ASN.1 pusch-RepetitionTypeB-r16；源文件第 16686 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1610_Pusch_RepetitionTypeB_r16 只读不分配；Decode_FeatureSetUplink_v1610_Pusch_RepetitionTypeB_r16 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1610_Pusch_RepetitionTypeB_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1610_Pusch_RepetitionTypeB_r16(Encoder& enc, const FeatureSetUplink_v1610_Pusch_RepetitionTypeB_r16& value)
 {
     (void)value;
@@ -4216,6 +4424,10 @@ void Free_FeatureSetUplink_v1610_Pusch_RepetitionTypeB_r16(FeatureSetUplink_v161
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1610_CbgPUSCH_ProcessingType1_DifferentTB_PerSlot_r16：ASN.1 cbgPUSCH-ProcessingType1-DifferentTB-PerSlot-r16；源文件第 16698 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1610_CbgPUSCH_ProcessingType1_DifferentTB_PerSlot_r16 只读不分配；Decode_FeatureSetUplink_v1610_CbgPUSCH_ProcessingType1_DifferentTB_PerSlot_r16 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1610_CbgPUSCH_ProcessingType1_DifferentTB_PerSlot_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1610_CbgPUSCH_ProcessingType1_DifferentTB_PerSlot_r16(Encoder& enc, const FeatureSetUplink_v1610_CbgPUSCH_ProcessingType1_DifferentTB_PerSlot_r16& value)
 {
     (void)value;
@@ -4291,6 +4503,10 @@ void Free_FeatureSetUplink_v1610_CbgPUSCH_ProcessingType1_DifferentTB_PerSlot_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1610_CbgPUSCH_ProcessingType2_DifferentTB_PerSlot_r16：ASN.1 cbgPUSCH-ProcessingType2-DifferentTB-PerSlot-r16；源文件第 16706 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1610_CbgPUSCH_ProcessingType2_DifferentTB_PerSlot_r16 只读不分配；Decode_FeatureSetUplink_v1610_CbgPUSCH_ProcessingType2_DifferentTB_PerSlot_r16 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1610_CbgPUSCH_ProcessingType2_DifferentTB_PerSlot_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1610_CbgPUSCH_ProcessingType2_DifferentTB_PerSlot_r16(Encoder& enc, const FeatureSetUplink_v1610_CbgPUSCH_ProcessingType2_DifferentTB_PerSlot_r16& value)
 {
     (void)value;
@@ -4366,6 +4582,10 @@ void Free_FeatureSetUplink_v1610_CbgPUSCH_ProcessingType2_DifferentTB_PerSlot_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1610_IntraFreqDAPS_UL_r16：ASN.1 intraFreqDAPS-UL-r16；源文件第 16713 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1610_IntraFreqDAPS_UL_r16 只读不分配；Decode_FeatureSetUplink_v1610_IntraFreqDAPS_UL_r16 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1610_IntraFreqDAPS_UL_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1610_IntraFreqDAPS_UL_r16(Encoder& enc, const FeatureSetUplink_v1610_IntraFreqDAPS_UL_r16& value)
 {
     (void)value;
@@ -4446,6 +4666,10 @@ void Free_FeatureSetUplink_v1610_IntraFreqDAPS_UL_r16(FeatureSetUplink_v1610_Int
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1610_MultiPUCCH_r16：ASN.1 multiPUCCH-r16；源文件第 16723 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1610_MultiPUCCH_r16 只读不分配；Decode_FeatureSetUplink_v1610_MultiPUCCH_r16 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1610_MultiPUCCH_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1610_MultiPUCCH_r16(Encoder& enc, const FeatureSetUplink_v1610_MultiPUCCH_r16& value)
 {
     (void)value;
@@ -4495,6 +4719,10 @@ void Free_FeatureSetUplink_v1610_MultiPUCCH_r16(FeatureSetUplink_v1610_MultiPUCC
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1610_Ul_IntraUE_Mux_r16：ASN.1 ul-IntraUE-Mux-r16；源文件第 16760 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1610_Ul_IntraUE_Mux_r16 只读不分配；Decode_FeatureSetUplink_v1610_Ul_IntraUE_Mux_r16 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1610_Ul_IntraUE_Mux_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1610_Ul_IntraUE_Mux_r16(Encoder& enc, const FeatureSetUplink_v1610_Ul_IntraUE_Mux_r16& value)
 {
     (void)value;
@@ -4530,6 +4758,10 @@ void Free_FeatureSetUplink_v1610_Ul_IntraUE_Mux_r16(FeatureSetUplink_v1610_Ul_In
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1610_CrossCarrierSchedulingProcessing_DiffSCS_r16：ASN.1 crossCarrierSchedulingProcessing-DiffSCS-r16；源文件第 16767 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1610_CrossCarrierSchedulingProcessing_DiffSCS_r16 只读不分配；Decode_FeatureSetUplink_v1610_CrossCarrierSchedulingProcessing_DiffSCS_r16 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1610_CrossCarrierSchedulingProcessing_DiffSCS_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1610_CrossCarrierSchedulingProcessing_DiffSCS_r16(Encoder& enc, const FeatureSetUplink_v1610_CrossCarrierSchedulingProcessing_DiffSCS_r16& value)
 {
     (void)value;
@@ -4625,6 +4857,10 @@ void Free_FeatureSetUplink_v1610_CrossCarrierSchedulingProcessing_DiffSCS_r16(Fe
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1610_Ul_FullPwrMode2_TPMIGroup_r16：ASN.1 ul-FullPwrMode2-TPMIGroup-r16；源文件第 16780 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1610_Ul_FullPwrMode2_TPMIGroup_r16 只读不分配；Decode_FeatureSetUplink_v1610_Ul_FullPwrMode2_TPMIGroup_r16 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1610_Ul_FullPwrMode2_TPMIGroup_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1610_Ul_FullPwrMode2_TPMIGroup_r16(Encoder& enc, const FeatureSetUplink_v1610_Ul_FullPwrMode2_TPMIGroup_r16& value)
 {
     (void)value;
@@ -4693,6 +4929,10 @@ void Free_FeatureSetUplink_v1610_Ul_FullPwrMode2_TPMIGroup_r16(FeatureSetUplink_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1610：ASN.1 FeatureSetUplink-v1610；源文件第 16684 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1610 只读不分配；Decode_FeatureSetUplink_v1610 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1610(Encoder& enc, const FeatureSetUplink_v1610& value)
 {
     (void)value;
@@ -5059,6 +5299,10 @@ void Free_FeatureSetUplink_v1610(FeatureSetUplink_v1610& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1630：ASN.1 FeatureSetUplink-v1630；源文件第 16787 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1630 只读不分配；Decode_FeatureSetUplink_v1630 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1630 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1630(Encoder& enc, const FeatureSetUplink_v1630& value)
 {
     (void)value;
@@ -5148,6 +5392,10 @@ void Free_FeatureSetUplink_v1630(FeatureSetUplink_v1630& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SubSlot_Config_r16：ASN.1 SubSlot-Config-r16；源文件第 16939 行；SEQUENCE。
+// Encode_SubSlot_Config_r16 只读不分配；Decode_SubSlot_Config_r16 可能 malloc（失败时内部已释放并清零）；Free_SubSlot_Config_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SubSlot_Config_r16(Encoder& enc, const SubSlot_Config_r16& value)
 {
     (void)value;
@@ -5197,6 +5445,10 @@ void Free_SubSlot_Config_r16(SubSlot_Config_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1640_OffsetSRS_CB_PUSCH_PDCCH_MonitorAnyOccWithSpanGap_fr1_r16：ASN.1 offsetSRS-CB-PUSCH-PDCCH-MonitorAnyOccWithSpanGap-fr1-r16；源文件第 16813 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1640_OffsetSRS_CB_PUSCH_PDCCH_MonitorAnyOccWithSpanGap_fr1_r16 只读不分配；Decode_FeatureSetUplink_v1640_OffsetSRS_CB_PUSCH_PDCCH_MonitorAnyOccWithSpanGap_fr1_r16 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1640_OffsetSRS_CB_PUSCH_PDCCH_MonitorAnyOccWithSpanGap_fr1_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1640_OffsetSRS_CB_PUSCH_PDCCH_MonitorAnyOccWithSpanGap_fr1_r16(Encoder& enc, const FeatureSetUplink_v1640_OffsetSRS_CB_PUSCH_PDCCH_MonitorAnyOccWithSpanGap_fr1_r16& value)
 {
     (void)value;
@@ -5259,6 +5511,10 @@ void Free_FeatureSetUplink_v1640_OffsetSRS_CB_PUSCH_PDCCH_MonitorAnyOccWithSpanG
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1640：ASN.1 FeatureSetUplink-v1640；源文件第 16804 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1640 只读不分配；Decode_FeatureSetUplink_v1640 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1640 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1640(Encoder& enc, const FeatureSetUplink_v1640& value)
 {
     (void)value;
@@ -5318,6 +5574,10 @@ void Free_FeatureSetUplink_v1640(FeatureSetUplink_v1640& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v16d0_Pusch_RepetitionTypeB_v16d0：ASN.1 pusch-RepetitionTypeB-v16d0；源文件第 16821 行；SEQUENCE。
+// Encode_FeatureSetUplink_v16d0_Pusch_RepetitionTypeB_v16d0 只读不分配；Decode_FeatureSetUplink_v16d0_Pusch_RepetitionTypeB_v16d0 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v16d0_Pusch_RepetitionTypeB_v16d0 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v16d0_Pusch_RepetitionTypeB_v16d0(Encoder& enc, const FeatureSetUplink_v16d0_Pusch_RepetitionTypeB_v16d0& value)
 {
     (void)value;
@@ -5353,6 +5613,10 @@ void Free_FeatureSetUplink_v16d0_Pusch_RepetitionTypeB_v16d0(FeatureSetUplink_v1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v16d0：ASN.1 FeatureSetUplink-v16d0；源文件第 16820 行；SEQUENCE。
+// Encode_FeatureSetUplink_v16d0 只读不分配；Decode_FeatureSetUplink_v16d0 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v16d0 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v16d0(Encoder& enc, const FeatureSetUplink_v16d0& value)
 {
     (void)value;
@@ -5388,6 +5652,10 @@ void Free_FeatureSetUplink_v16d0(FeatureSetUplink_v16d0& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1710：ASN.1 FeatureSetUplink-v1710；源文件第 16827 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1710 只读不分配；Decode_FeatureSetUplink_v1710 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1710 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1710(Encoder& enc, const FeatureSetUplink_v1710& value)
 {
     (void)value;
@@ -5507,6 +5775,10 @@ void Free_FeatureSetUplink_v1710(FeatureSetUplink_v1710& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_r17_AdditionalCancellationTime_r17：ASN.1 phy-PrioritizationHighPriorityDG-LowPriorityCG-r17/additionalCancellationTime-r17；源文件第 16860 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_r17_AdditionalCancellationTime_r17 只读不分配；Decode_FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_r17_AdditionalCancellationTime_r17 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_r17_AdditionalCancellationTime_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_r17_AdditionalCancellationTime_r17(Encoder& enc, const FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_r17_AdditionalCancellationTime_r17& value)
 {
     (void)value;
@@ -5582,6 +5854,10 @@ void Free_FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_r17：ASN.1 phy-PrioritizationHighPriorityDG-LowPriorityCG-r17；源文件第 16858 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_r17 只读不分配；Decode_FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_r17 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_r17(Encoder& enc, const FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_r17& value)
 {
     (void)value;
@@ -5622,6 +5898,10 @@ void Free_FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1720：ASN.1 FeatureSetUplink-v1720；源文件第 16846 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1720 只读不分配；Decode_FeatureSetUplink_v1720 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1720 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1720(Encoder& enc, const FeatureSetUplink_v1720& value)
 {
     (void)value;
@@ -5725,6 +6005,10 @@ void Free_FeatureSetUplink_v1720(FeatureSetUplink_v1720& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PosSRS_BWA_RRC_Connected_r18：ASN.1 PosSRS-BWA-RRC-Connected-r18；源文件第 16985 行；SEQUENCE。
+// Encode_PosSRS_BWA_RRC_Connected_r18 只读不分配；Decode_PosSRS_BWA_RRC_Connected_r18 可能 malloc（失败时内部已释放并清零）；Free_PosSRS_BWA_RRC_Connected_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PosSRS_BWA_RRC_Connected_r18(Encoder& enc, const PosSRS_BWA_RRC_Connected_r18& value)
 {
     (void)value;
@@ -5922,6 +6206,10 @@ void Free_PosSRS_BWA_RRC_Connected_r18(PosSRS_BWA_RRC_Connected_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PosSRS_BWA_IndependentCA_RRC_Connected_r18：ASN.1 PosSRS-BWA-IndependentCA-RRC-Connected-r18；源文件第 17003 行；SEQUENCE。
+// Encode_PosSRS_BWA_IndependentCA_RRC_Connected_r18 只读不分配；Decode_PosSRS_BWA_IndependentCA_RRC_Connected_r18 可能 malloc（失败时内部已释放并清零）；Free_PosSRS_BWA_IndependentCA_RRC_Connected_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PosSRS_BWA_IndependentCA_RRC_Connected_r18(Encoder& enc, const PosSRS_BWA_IndependentCA_RRC_Connected_r18& value)
 {
     (void)value;
@@ -6132,6 +6420,10 @@ void Free_PosSRS_BWA_IndependentCA_RRC_Connected_r18(PosSRS_BWA_IndependentCA_RR
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18_Pusch_TypeA_DMRS_r18：ASN.1 pusch-DMRS-TypeEnh-r18/pusch-TypeA-DMRS-r18；源文件第 16888 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18_Pusch_TypeA_DMRS_r18 只读不分配；Decode_FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18_Pusch_TypeA_DMRS_r18 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18_Pusch_TypeA_DMRS_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18_Pusch_TypeA_DMRS_r18(Encoder& enc, const FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18_Pusch_TypeA_DMRS_r18& value)
 {
     (void)value;
@@ -6205,6 +6497,10 @@ void Free_FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18_Pusch_TypeA_DMRS_r18(Fea
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18：ASN.1 pusch-DMRS-TypeEnh-r18；源文件第 16886 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18 只读不分配；Decode_FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18(Encoder& enc, const FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18& value)
 {
     (void)value;
@@ -6301,6 +6597,10 @@ void Free_FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18(FeatureSetUplink_v1800_P
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplink_v1800：ASN.1 FeatureSetUplink-v1800；源文件第 16873 行；SEQUENCE。
+// Encode_FeatureSetUplink_v1800 只读不分配；Decode_FeatureSetUplink_v1800 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplink_v1800 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1800(Encoder& enc, const FeatureSetUplink_v1800& value)
 {
     (void)value;
@@ -6547,6 +6847,10 @@ void Free_FeatureSetUplink_v1800(FeatureSetUplink_v1800& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplinkPerCC_Mimo_CB_PUSCH：ASN.1 mimo-CB-PUSCH；源文件第 17034 行；SEQUENCE。
+// Encode_FeatureSetUplinkPerCC_Mimo_CB_PUSCH 只读不分配；Decode_FeatureSetUplinkPerCC_Mimo_CB_PUSCH 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplinkPerCC_Mimo_CB_PUSCH 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_Mimo_CB_PUSCH(Encoder& enc, const FeatureSetUplinkPerCC_Mimo_CB_PUSCH& value)
 {
     (void)value;
@@ -6589,6 +6893,10 @@ void Free_FeatureSetUplinkPerCC_Mimo_CB_PUSCH(FeatureSetUplinkPerCC_Mimo_CB_PUSC
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplinkPerCC：ASN.1 FeatureSetUplinkPerCC；源文件第 17030 行；SEQUENCE。
+// Encode_FeatureSetUplinkPerCC 只读不分配；Decode_FeatureSetUplinkPerCC 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplinkPerCC 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC(Encoder& enc, const FeatureSetUplinkPerCC& value)
 {
     (void)value;
@@ -6672,6 +6980,10 @@ void Free_FeatureSetUplinkPerCC(FeatureSetUplinkPerCC& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplinkPerCC_v1540_Mimo_NonCB_PUSCH：ASN.1 mimo-NonCB-PUSCH；源文件第 17042 行；SEQUENCE。
+// Encode_FeatureSetUplinkPerCC_v1540_Mimo_NonCB_PUSCH 只读不分配；Decode_FeatureSetUplinkPerCC_v1540_Mimo_NonCB_PUSCH 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplinkPerCC_v1540_Mimo_NonCB_PUSCH 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1540_Mimo_NonCB_PUSCH(Encoder& enc, const FeatureSetUplinkPerCC_v1540_Mimo_NonCB_PUSCH& value)
 {
     (void)value;
@@ -6707,6 +7019,10 @@ void Free_FeatureSetUplinkPerCC_v1540_Mimo_NonCB_PUSCH(FeatureSetUplinkPerCC_v15
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplinkPerCC_v1540：ASN.1 FeatureSetUplinkPerCC-v1540；源文件第 17041 行；SEQUENCE。
+// Encode_FeatureSetUplinkPerCC_v1540 只读不分配；Decode_FeatureSetUplinkPerCC_v1540 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplinkPerCC_v1540 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1540(Encoder& enc, const FeatureSetUplinkPerCC_v1540& value)
 {
     (void)value;
@@ -6742,6 +7058,10 @@ void Free_FeatureSetUplinkPerCC_v1540(FeatureSetUplinkPerCC_v1540& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplinkPerCC_v1700：ASN.1 FeatureSetUplinkPerCC-v1700；源文件第 17048 行；SEQUENCE。
+// Encode_FeatureSetUplinkPerCC_v1700 只读不分配；Decode_FeatureSetUplinkPerCC_v1700 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplinkPerCC_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1700(Encoder& enc, const FeatureSetUplinkPerCC_v1700& value)
 {
     (void)value;
@@ -6815,6 +7135,10 @@ void Free_FeatureSetUplinkPerCC_v1700(FeatureSetUplinkPerCC_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplinkPerCC_v1780：ASN.1 FeatureSetUplinkPerCC-v1780；源文件第 17057 行；SEQUENCE。
+// Encode_FeatureSetUplinkPerCC_v1780 只读不分配；Decode_FeatureSetUplinkPerCC_v1780 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplinkPerCC_v1780 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1780(Encoder& enc, const FeatureSetUplinkPerCC_v1780& value)
 {
     (void)value;
@@ -6850,6 +7174,10 @@ void Free_FeatureSetUplinkPerCC_v1780(FeatureSetUplinkPerCC_v1780& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SDM_r18：ASN.1 pusch-CB-SingleDCI-STx2P-SDM-r18；源文件第 17065 行；SEQUENCE。
+// Encode_FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SDM_r18 只读不分配；Decode_FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SDM_r18 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SDM_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SDM_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SDM_r18& value)
 {
     (void)value;
@@ -6897,6 +7225,10 @@ void Free_FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SDM_r18(FeatureSe
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SDM_r18：ASN.1 pusch-NonCB-SingleDCI-STx2P-SDM-r18；源文件第 17072 行；SEQUENCE。
+// Encode_FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SDM_r18 只读不分配；Decode_FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SDM_r18 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SDM_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SDM_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SDM_r18& value)
 {
     (void)value;
@@ -6938,6 +7270,10 @@ void Free_FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SDM_r18(Featur
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SFN_r18：ASN.1 pusch-CB-SingleDCI-STx2P-SFN-r18；源文件第 17078 行；SEQUENCE。
+// Encode_FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SFN_r18 只读不分配；Decode_FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SFN_r18 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SFN_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SFN_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SFN_r18& value)
 {
     (void)value;
@@ -6985,6 +7321,10 @@ void Free_FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SFN_r18(FeatureSe
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SFN_r18：ASN.1 pusch-NonCB-SingleDCI-STx2P-SFN-r18；源文件第 17085 行；SEQUENCE。
+// Encode_FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SFN_r18 只读不分配；Decode_FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SFN_r18 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SFN_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SFN_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SFN_r18& value)
 {
     (void)value;
@@ -7026,6 +7366,10 @@ void Free_FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SFN_r18(Featur
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18_MaxNumberPUSCH_PerCORESET_PerSlot_r18：ASN.1 twoPUSCH-CB-MultiDCI-STx2P-DG-DG-r18/maxNumberPUSCH-PerCORESET-PerSlot-r18；源文件第 17095 行；SEQUENCE。
+// Encode_FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18_MaxNumberPUSCH_PerCORESET_PerSlot_r18 只读不分配；Decode_FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18_MaxNumberPUSCH_PerCORESET_PerSlot_r18 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18_MaxNumberPUSCH_PerCORESET_PerSlot_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18_MaxNumberPUSCH_PerCORESET_PerSlot_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18_MaxNumberPUSCH_PerCORESET_PerSlot_r18& value)
 {
     (void)value;
@@ -7075,6 +7419,10 @@ void Free_FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18_MaxNu
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18：ASN.1 twoPUSCH-CB-MultiDCI-STx2P-DG-DG-r18；源文件第 17091 行；SEQUENCE。
+// Encode_FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18 只读不分配；Decode_FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18& value)
 {
     (void)value;
@@ -7140,6 +7488,10 @@ void Free_FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18(Featu
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18_MaxNumberPUSCH_PerCORESET_PerSlot_r18：ASN.1 twoPUSCH-NonCB-MultiDCI-STx2P-DG-DG-r18/maxNumberPUSCH-PerCORESET-PerSlot-r18；源文件第 17107 行；SEQUENCE。
+// Encode_FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18_MaxNumberPUSCH_PerCORESET_PerSlot_r18 只读不分配；Decode_FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18_MaxNumberPUSCH_PerCORESET_PerSlot_r18 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18_MaxNumberPUSCH_PerCORESET_PerSlot_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18_MaxNumberPUSCH_PerCORESET_PerSlot_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18_MaxNumberPUSCH_PerCORESET_PerSlot_r18& value)
 {
     (void)value;
@@ -7189,6 +7541,10 @@ void Free_FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18_Ma
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18：ASN.1 twoPUSCH-NonCB-MultiDCI-STx2P-DG-DG-r18；源文件第 17103 行；SEQUENCE。
+// Encode_FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18 只读不分配；Decode_FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18& value)
 {
     (void)value;
@@ -7248,6 +7604,10 @@ void Free_FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18(Fe
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18_Codebook_8TxBasic_r18：ASN.1 codebookParameter8TxPUSCH-r18/codebook-8TxBasic-r18；源文件第 17118 行；SEQUENCE。
+// Encode_FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18_Codebook_8TxBasic_r18 只读不分配；Decode_FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18_Codebook_8TxBasic_r18 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18_Codebook_8TxBasic_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18_Codebook_8TxBasic_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18_Codebook_8TxBasic_r18& value)
 {
     (void)value;
@@ -7289,6 +7649,10 @@ void Free_FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18_Codebook_8Tx
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18：ASN.1 codebookParameter8TxPUSCH-r18；源文件第 17116 行；SEQUENCE。
+// Encode_FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18 只读不分配；Decode_FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18& value)
 {
     (void)value;
@@ -7430,6 +7794,10 @@ void Free_FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18(FeatureSetUp
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplinkPerCC_v1800_NonCodebook_8TxPUSCH_r18：ASN.1 nonCodebook-8TxPUSCH-r18；源文件第 17143 行；SEQUENCE。
+// Encode_FeatureSetUplinkPerCC_v1800_NonCodebook_8TxPUSCH_r18 只读不分配；Decode_FeatureSetUplinkPerCC_v1800_NonCodebook_8TxPUSCH_r18 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplinkPerCC_v1800_NonCodebook_8TxPUSCH_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_NonCodebook_8TxPUSCH_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_NonCodebook_8TxPUSCH_r18& value)
 {
     (void)value;
@@ -7471,6 +7839,10 @@ void Free_FeatureSetUplinkPerCC_v1800_NonCodebook_8TxPUSCH_r18(FeatureSetUplinkP
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetUplinkPerCC_v1800：ASN.1 FeatureSetUplinkPerCC-v1800；源文件第 17061 行；SEQUENCE。
+// Encode_FeatureSetUplinkPerCC_v1800 只读不分配；Decode_FeatureSetUplinkPerCC_v1800 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetUplinkPerCC_v1800 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800(Encoder& enc, const FeatureSetUplinkPerCC_v1800& value)
 {
     (void)value;
@@ -7635,6 +8007,10 @@ void Free_FeatureSetUplinkPerCC_v1800(FeatureSetUplinkPerCC_v1800& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FreqBandList：ASN.1 FreqBandList；源文件第 17167 行；SEQUENCE OF。
+// Encode_FreqBandList 只读不分配；Decode_FreqBandList 可能 malloc（失败时内部已释放并清零）；Free_FreqBandList 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FreqBandList(Encoder& enc, const FreqBandList& value)
 {
     (void)value;
@@ -7680,6 +8056,10 @@ void Free_FreqBandList(FreqBandList& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FreqBandInformationEUTRA：ASN.1 FreqBandInformationEUTRA；源文件第 17174 行；SEQUENCE。
+// Encode_FreqBandInformationEUTRA 只读不分配；Decode_FreqBandInformationEUTRA 可能 malloc（失败时内部已释放并清零）；Free_FreqBandInformationEUTRA 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FreqBandInformationEUTRA(Encoder& enc, const FreqBandInformationEUTRA& value)
 {
     (void)value;
@@ -7779,6 +8159,10 @@ void Free_FreqBandInformationEUTRA(FreqBandInformationEUTRA& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FreqBandInformationNR：ASN.1 FreqBandInformationNR；源文件第 17180 行；SEQUENCE。
+// Encode_FreqBandInformationNR 只读不分配；Decode_FreqBandInformationNR 可能 malloc（失败时内部已释放并清零）；Free_FreqBandInformationNR 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FreqBandInformationNR(Encoder& enc, const FreqBandInformationNR& value)
 {
     (void)value;
@@ -7860,6 +8244,10 @@ void Free_FreqBandInformationNR(FreqBandInformationNR& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FreqBandInformation：ASN.1 FreqBandInformation；源文件第 17169 行；CHOICE。
+// Encode_FreqBandInformation 只读不分配；Decode_FreqBandInformation 可能 malloc（失败时内部已释放并清零）；Free_FreqBandInformation 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FreqBandInformation(Encoder& enc, const FreqBandInformation& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -7920,6 +8308,10 @@ void Free_FreqBandInformation(FreqBandInformation& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FR2_2_AccessParamsPerBand_r17_ExtGroup1：ASN.1 FR2_2_AccessParamsPerBand_r17_ExtGroup1；源文件第 17266 行；扩展添加组 [[ ]]。
+// Encode_FR2_2_AccessParamsPerBand_r17_ExtGroup1 只读不分配；Decode_FR2_2_AccessParamsPerBand_r17_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_FR2_2_AccessParamsPerBand_r17_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FR2_2_AccessParamsPerBand_r17_ExtGroup1(Encoder& enc, const FR2_2_AccessParamsPerBand_r17_ExtGroup1& value)
 {
     (void)value;
@@ -7954,6 +8346,10 @@ void Free_FR2_2_AccessParamsPerBand_r17_ExtGroup1(FR2_2_AccessParamsPerBand_r17_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FR2_2_AccessParamsPerBand_r17_EnhancedPDCCH_monitoringSCS_960kHz_r17：ASN.1 enhancedPDCCH-monitoringSCS-960kHz-r17；源文件第 17242 行；SEQUENCE。
+// Encode_FR2_2_AccessParamsPerBand_r17_EnhancedPDCCH_monitoringSCS_960kHz_r17 只读不分配；Decode_FR2_2_AccessParamsPerBand_r17_EnhancedPDCCH_monitoringSCS_960kHz_r17 可能 malloc（失败时内部已释放并清零）；Free_FR2_2_AccessParamsPerBand_r17_EnhancedPDCCH_monitoringSCS_960kHz_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FR2_2_AccessParamsPerBand_r17_EnhancedPDCCH_monitoringSCS_960kHz_r17(Encoder& enc, const FR2_2_AccessParamsPerBand_r17_EnhancedPDCCH_monitoringSCS_960kHz_r17& value)
 {
     (void)value;
@@ -8010,6 +8406,10 @@ void Free_FR2_2_AccessParamsPerBand_r17_EnhancedPDCCH_monitoringSCS_960kHz_r17(F
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FR2_2_AccessParamsPerBand_r17_Support32_DL_HARQ_ProcessPerSCS_r17：ASN.1 support32-DL-HARQ-ProcessPerSCS-r17；源文件第 17254 行；SEQUENCE。
+// Encode_FR2_2_AccessParamsPerBand_r17_Support32_DL_HARQ_ProcessPerSCS_r17 只读不分配；Decode_FR2_2_AccessParamsPerBand_r17_Support32_DL_HARQ_ProcessPerSCS_r17 可能 malloc（失败时内部已释放并清零）；Free_FR2_2_AccessParamsPerBand_r17_Support32_DL_HARQ_ProcessPerSCS_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FR2_2_AccessParamsPerBand_r17_Support32_DL_HARQ_ProcessPerSCS_r17(Encoder& enc, const FR2_2_AccessParamsPerBand_r17_Support32_DL_HARQ_ProcessPerSCS_r17& value)
 {
     (void)value;
@@ -8066,6 +8466,10 @@ void Free_FR2_2_AccessParamsPerBand_r17_Support32_DL_HARQ_ProcessPerSCS_r17(FR2_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FR2_2_AccessParamsPerBand_r17_Support32_UL_HARQ_ProcessPerSCS_r17：ASN.1 support32-UL-HARQ-ProcessPerSCS-r17；源文件第 17260 行；SEQUENCE。
+// Encode_FR2_2_AccessParamsPerBand_r17_Support32_UL_HARQ_ProcessPerSCS_r17 只读不分配；Decode_FR2_2_AccessParamsPerBand_r17_Support32_UL_HARQ_ProcessPerSCS_r17 可能 malloc（失败时内部已释放并清零）；Free_FR2_2_AccessParamsPerBand_r17_Support32_UL_HARQ_ProcessPerSCS_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FR2_2_AccessParamsPerBand_r17_Support32_UL_HARQ_ProcessPerSCS_r17(Encoder& enc, const FR2_2_AccessParamsPerBand_r17_Support32_UL_HARQ_ProcessPerSCS_r17& value)
 {
     (void)value;
@@ -8122,6 +8526,10 @@ void Free_FR2_2_AccessParamsPerBand_r17_Support32_UL_HARQ_ProcessPerSCS_r17(FR2_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FR2_2_AccessParamsPerBand_r17：ASN.1 FR2-2-AccessParamsPerBand-r17；源文件第 17208 行；SEQUENCE。
+// Encode_FR2_2_AccessParamsPerBand_r17 只读不分配；Decode_FR2_2_AccessParamsPerBand_r17 可能 malloc（失败时内部已释放并清零）；Free_FR2_2_AccessParamsPerBand_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FR2_2_AccessParamsPerBand_r17(Encoder& enc, const FR2_2_AccessParamsPerBand_r17& value)
 {
     (void)value;
@@ -8433,6 +8841,10 @@ void Free_FR2_2_AccessParamsPerBand_r17(FR2_2_AccessParamsPerBand_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// HighSpeedParameters_r16：ASN.1 HighSpeedParameters-r16；源文件第 17275 行；SEQUENCE。
+// Encode_HighSpeedParameters_r16 只读不分配；Decode_HighSpeedParameters_r16 可能 malloc（失败时内部已释放并清零）；Free_HighSpeedParameters_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_HighSpeedParameters_r16(Encoder& enc, const HighSpeedParameters_r16& value)
 {
     (void)value;
@@ -8478,6 +8890,10 @@ void Free_HighSpeedParameters_r16(HighSpeedParameters_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// HighSpeedParameters_v1650：ASN.1 HighSpeedParameters-v1650；源文件第 17280 行；CHOICE。
+// Encode_HighSpeedParameters_v1650 只读不分配；Decode_HighSpeedParameters_v1650 可能 malloc（失败时内部已释放并清零）；Free_HighSpeedParameters_v1650 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_HighSpeedParameters_v1650(Encoder& enc, const HighSpeedParameters_v1650& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -8536,6 +8952,10 @@ void Free_HighSpeedParameters_v1650(HighSpeedParameters_v1650& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// HighSpeedParameters_v1700：ASN.1 HighSpeedParameters-v1700；源文件第 17285 行；SEQUENCE。
+// Encode_HighSpeedParameters_v1700 只读不分配；Decode_HighSpeedParameters_v1700 可能 malloc（失败时内部已释放并清零）；Free_HighSpeedParameters_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_HighSpeedParameters_v1700(Encoder& enc, const HighSpeedParameters_v1700& value)
 {
     (void)value;
@@ -8581,6 +9001,10 @@ void Free_HighSpeedParameters_v1700(HighSpeedParameters_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IMS_ParametersCommon_ExtGroup1：ASN.1 IMS_ParametersCommon_ExtGroup1；源文件第 17308 行；扩展添加组 [[ ]]。
+// Encode_IMS_ParametersCommon_ExtGroup1 只读不分配；Decode_IMS_ParametersCommon_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_IMS_ParametersCommon_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IMS_ParametersCommon_ExtGroup1(Encoder& enc, const IMS_ParametersCommon_ExtGroup1& value)
 {
     (void)value;
@@ -8615,6 +9039,10 @@ void Free_IMS_ParametersCommon_ExtGroup1(IMS_ParametersCommon_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IMS_ParametersCommon_ExtGroup2：ASN.1 IMS_ParametersCommon_ExtGroup2；源文件第 17311 行；扩展添加组 [[ ]]。
+// Encode_IMS_ParametersCommon_ExtGroup2 只读不分配；Decode_IMS_ParametersCommon_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_IMS_ParametersCommon_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IMS_ParametersCommon_ExtGroup2(Encoder& enc, const IMS_ParametersCommon_ExtGroup2& value)
 {
     (void)value;
@@ -8649,6 +9077,10 @@ void Free_IMS_ParametersCommon_ExtGroup2(IMS_ParametersCommon_ExtGroup2& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IMS_ParametersCommon：ASN.1 IMS-ParametersCommon；源文件第 17305 行；SEQUENCE。
+// Encode_IMS_ParametersCommon 只读不分配；Decode_IMS_ParametersCommon 可能 malloc（失败时内部已释放并清零）；Free_IMS_ParametersCommon 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IMS_ParametersCommon(Encoder& enc, const IMS_ParametersCommon& value)
 {
     (void)value;
@@ -8749,6 +9181,10 @@ void Free_IMS_ParametersCommon(IMS_ParametersCommon& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IMS_ParametersFRX_Diff：ASN.1 IMS-ParametersFRX-Diff；源文件第 17316 行；SEQUENCE。
+// Encode_IMS_ParametersFRX_Diff 只读不分配；Decode_IMS_ParametersFRX_Diff 可能 malloc（失败时内部已释放并清零）；Free_IMS_ParametersFRX_Diff 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IMS_ParametersFRX_Diff(Encoder& enc, const IMS_ParametersFRX_Diff& value)
 {
     (void)value;
@@ -8790,6 +9226,10 @@ void Free_IMS_ParametersFRX_Diff(IMS_ParametersFRX_Diff& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IMS_Parameters：ASN.1 IMS-Parameters；源文件第 17295 行；SEQUENCE。
+// Encode_IMS_Parameters 只读不分配；Decode_IMS_Parameters 可能 malloc（失败时内部已释放并清零）；Free_IMS_Parameters 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IMS_Parameters(Encoder& enc, const IMS_Parameters& value)
 {
     (void)value;
@@ -8844,6 +9284,10 @@ void Free_IMS_Parameters(IMS_Parameters& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IMS_ParametersFR2_2_r17：ASN.1 IMS-ParametersFR2-2-r17；源文件第 17321 行；SEQUENCE。
+// Encode_IMS_ParametersFR2_2_r17 只读不分配；Decode_IMS_ParametersFR2_2_r17 可能 malloc（失败时内部已释放并清零）；Free_IMS_ParametersFR2_2_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IMS_ParametersFR2_2_r17(Encoder& enc, const IMS_ParametersFR2_2_r17& value)
 {
     (void)value;
@@ -8885,6 +9329,10 @@ void Free_IMS_ParametersFR2_2_r17(IMS_ParametersFR2_2_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IMS_Parameters_v1700：ASN.1 IMS-Parameters-v1700；源文件第 17301 行；SEQUENCE。
+// Encode_IMS_Parameters_v1700 只读不分配；Decode_IMS_Parameters_v1700 可能 malloc（失败时内部已释放并清零）；Free_IMS_Parameters_v1700 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IMS_Parameters_v1700(Encoder& enc, const IMS_Parameters_v1700& value)
 {
     (void)value;
@@ -8920,6 +9368,10 @@ void Free_IMS_Parameters_v1700(IMS_Parameters_v1700& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// UTRA_FDD_Parameters_r16：ASN.1 UTRA-FDD-Parameters-r16；源文件第 17364 行；SEQUENCE。
+// Encode_UTRA_FDD_Parameters_r16 只读不分配；Decode_UTRA_FDD_Parameters_r16 可能 malloc（失败时内部已释放并清零）；Free_UTRA_FDD_Parameters_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_UTRA_FDD_Parameters_r16(Encoder& enc, const UTRA_FDD_Parameters_r16& value)
 {
     (void)value;
@@ -8977,6 +9429,10 @@ void Free_UTRA_FDD_Parameters_r16(UTRA_FDD_Parameters_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterRAT_Parameters_ExtGroup1：ASN.1 InterRAT_Parameters_ExtGroup1；源文件第 17332 行；扩展添加组 [[ ]]。
+// Encode_InterRAT_Parameters_ExtGroup1 只读不分配；Decode_InterRAT_Parameters_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_InterRAT_Parameters_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterRAT_Parameters_ExtGroup1(Encoder& enc, const InterRAT_Parameters_ExtGroup1& value)
 {
     (void)value;
@@ -9012,6 +9468,10 @@ void Free_InterRAT_Parameters_ExtGroup1(InterRAT_Parameters_ExtGroup1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EUTRA_ParametersCommon_ExtGroup1：ASN.1 EUTRA_ParametersCommon_ExtGroup1；源文件第 17351 行；扩展添加组 [[ ]]。
+// Encode_EUTRA_ParametersCommon_ExtGroup1 只读不分配；Decode_EUTRA_ParametersCommon_ExtGroup1 可能 malloc（失败时内部已释放并清零）；Free_EUTRA_ParametersCommon_ExtGroup1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_ParametersCommon_ExtGroup1(Encoder& enc, const EUTRA_ParametersCommon_ExtGroup1& value)
 {
     (void)value;
@@ -9046,6 +9506,10 @@ void Free_EUTRA_ParametersCommon_ExtGroup1(EUTRA_ParametersCommon_ExtGroup1& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EUTRA_ParametersCommon_ExtGroup2：ASN.1 EUTRA_ParametersCommon_ExtGroup2；源文件第 17354 行；扩展添加组 [[ ]]。
+// Encode_EUTRA_ParametersCommon_ExtGroup2 只读不分配；Decode_EUTRA_ParametersCommon_ExtGroup2 可能 malloc（失败时内部已释放并清零）；Free_EUTRA_ParametersCommon_ExtGroup2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_ParametersCommon_ExtGroup2(Encoder& enc, const EUTRA_ParametersCommon_ExtGroup2& value)
 {
     (void)value;
@@ -9080,6 +9544,10 @@ void Free_EUTRA_ParametersCommon_ExtGroup2(EUTRA_ParametersCommon_ExtGroup2& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EUTRA_ParametersCommon：ASN.1 EUTRA-ParametersCommon；源文件第 17345 行；SEQUENCE。
+// Encode_EUTRA_ParametersCommon 只读不分配；Decode_EUTRA_ParametersCommon 可能 malloc（失败时内部已释放并清零）；Free_EUTRA_ParametersCommon 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_ParametersCommon(Encoder& enc, const EUTRA_ParametersCommon& value)
 {
     (void)value;
@@ -9221,6 +9689,10 @@ void Free_EUTRA_ParametersCommon(EUTRA_ParametersCommon& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EUTRA_ParametersXDD_Diff：ASN.1 EUTRA-ParametersXDD-Diff；源文件第 17359 行；SEQUENCE。
+// Encode_EUTRA_ParametersXDD_Diff 只读不分配；Decode_EUTRA_ParametersXDD_Diff 可能 malloc（失败时内部已释放并清零）；Free_EUTRA_ParametersXDD_Diff 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_ParametersXDD_Diff(Encoder& enc, const EUTRA_ParametersXDD_Diff& value)
 {
     (void)value;
@@ -9262,6 +9734,10 @@ void Free_EUTRA_ParametersXDD_Diff(EUTRA_ParametersXDD_Diff& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EUTRA_Parameters：ASN.1 EUTRA-Parameters；源文件第 17338 行；SEQUENCE。
+// Encode_EUTRA_Parameters 只读不分配；Decode_EUTRA_Parameters 可能 malloc（失败时内部已释放并清零）；Free_EUTRA_Parameters 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_Parameters(Encoder& enc, const EUTRA_Parameters& value)
 {
     (void)value;
@@ -9343,6 +9819,10 @@ void Free_EUTRA_Parameters(EUTRA_Parameters& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// InterRAT_Parameters：ASN.1 InterRAT-Parameters；源文件第 17329 行；SEQUENCE。
+// Encode_InterRAT_Parameters 只读不分配；Decode_InterRAT_Parameters 可能 malloc（失败时内部已释放并清零）；Free_InterRAT_Parameters 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_InterRAT_Parameters(Encoder& enc, const InterRAT_Parameters& value)
 {
     (void)value;

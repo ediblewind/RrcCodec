@@ -36,8 +36,8 @@ function Invoke-Step {
 
 function Configure-And-Build {
   param([string]$Dir, [string]$BuildType, [string[]]$Extra = @())
-  $args = @('-S', $RepoRoot, '-B', $Dir, '-G', 'Ninja', "-DCMAKE_BUILD_TYPE=$BuildType") + $Extra
-  cmake @args
+  $cmakeArgs = @('-S', $RepoRoot, '-B', $Dir, '-G', 'Ninja', "-DCMAKE_BUILD_TYPE=$BuildType") + $Extra
+  cmake @cmakeArgs
   if ($LASTEXITCODE -ne 0) { throw "configure failed: $Dir" }
   cmake --build $Dir --parallel $Jobs
   if ($LASTEXITCODE -ne 0) { throw "build failed: $Dir" }
@@ -73,6 +73,11 @@ try {
       }
       Write-Host "DLL exports OK: $($exports -join ', ')"
     }
+  }
+
+  Invoke-Step 'Generator unit tests (tools/rrcgen/tests)' {
+    python -m unittest discover -s (Join-Path $RepoRoot 'tools\rrcgen\tests')
+    if ($LASTEXITCODE -ne 0) { throw 'generator unit tests failed' }
   }
 
   Invoke-Step 'Generated code consistency (rrcgen --check)' {

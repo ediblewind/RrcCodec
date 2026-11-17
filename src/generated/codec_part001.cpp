@@ -18,6 +18,10 @@
 namespace rrc {
 namespace v1810 {
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_MIB：ASN.1 MIB；结构体 MIB；信道 ChannelType_BCCH_BCH；包装位 1 级（0/2）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_MIB(Encoder& enc, const MIB& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -54,6 +58,10 @@ void FreeMessage_MIB(MIB& value)
     Free_MIB(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_SystemInformation：ASN.1 SystemInformation；结构体 SystemInformation；信道 ChannelType_BCCH_DL_SCH；包装位 2 级（0/2 → 0/2）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_SystemInformation(Encoder& enc, const SystemInformation& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -100,6 +108,10 @@ void FreeMessage_SystemInformation(SystemInformation& value)
     Free_SystemInformation(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_SIB1：ASN.1 SIB1；结构体 SIB1；信道 ChannelType_BCCH_DL_SCH；包装位 2 级（0/2 → 1/2）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_SIB1(Encoder& enc, const SIB1& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -146,6 +158,10 @@ void FreeMessage_SIB1(SIB1& value)
     Free_SIB1(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_RRCReject：ASN.1 RRCReject；结构体 RRCReject；信道 ChannelType_DL_CCCH；包装位 2 级（0/2 → 0/4）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_RRCReject(Encoder& enc, const RRCReject& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -198,6 +214,10 @@ void FreeMessage_RRCReject(RRCReject& value)
     Free_RRCReject(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_RRCSetup：ASN.1 RRCSetup；结构体 RRCSetup；信道 ChannelType_DL_CCCH；包装位 2 级（0/2 → 1/4）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_RRCSetup(Encoder& enc, const RRCSetup& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -250,6 +270,10 @@ void FreeMessage_RRCSetup(RRCSetup& value)
     Free_RRCSetup(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_RRCReconfiguration：ASN.1 RRCReconfiguration；结构体 RRCReconfiguration；信道 ChannelType_DL_DCCH；包装位 2 级（0/2 → 0/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_RRCReconfiguration(Encoder& enc, const RRCReconfiguration& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -303,6 +327,10 @@ void FreeMessage_RRCReconfiguration(RRCReconfiguration& value)
     Free_RRCReconfiguration(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_RRCResume：ASN.1 RRCResume；结构体 RRCResume；信道 ChannelType_DL_DCCH；包装位 2 级（0/2 → 1/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_RRCResume(Encoder& enc, const RRCResume& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -356,6 +384,10 @@ void FreeMessage_RRCResume(RRCResume& value)
     Free_RRCResume(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_RRCRelease：ASN.1 RRCRelease；结构体 RRCRelease；信道 ChannelType_DL_DCCH；包装位 2 级（0/2 → 2/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_RRCRelease(Encoder& enc, const RRCRelease& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -409,6 +441,10 @@ void FreeMessage_RRCRelease(RRCRelease& value)
     Free_RRCRelease(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_RRCReestablishment：ASN.1 RRCReestablishment；结构体 RRCReestablishment；信道 ChannelType_DL_DCCH；包装位 2 级（0/2 → 3/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_RRCReestablishment(Encoder& enc, const RRCReestablishment& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -462,6 +498,10 @@ void FreeMessage_RRCReestablishment(RRCReestablishment& value)
     Free_RRCReestablishment(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_SecurityModeCommand：ASN.1 SecurityModeCommand；结构体 SecurityModeCommand；信道 ChannelType_DL_DCCH；包装位 2 级（0/2 → 4/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_SecurityModeCommand(Encoder& enc, const SecurityModeCommand& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -515,6 +555,10 @@ void FreeMessage_SecurityModeCommand(SecurityModeCommand& value)
     Free_SecurityModeCommand(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_DLInformationTransfer：ASN.1 DLInformationTransfer；结构体 DLInformationTransfer；信道 ChannelType_DL_DCCH；包装位 2 级（0/2 → 5/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_DLInformationTransfer(Encoder& enc, const DLInformationTransfer& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -568,6 +612,10 @@ void FreeMessage_DLInformationTransfer(DLInformationTransfer& value)
     Free_DLInformationTransfer(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_UECapabilityEnquiry：ASN.1 UECapabilityEnquiry；结构体 UECapabilityEnquiry；信道 ChannelType_DL_DCCH；包装位 2 级（0/2 → 6/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_UECapabilityEnquiry(Encoder& enc, const UECapabilityEnquiry& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -621,6 +669,10 @@ void FreeMessage_UECapabilityEnquiry(UECapabilityEnquiry& value)
     Free_UECapabilityEnquiry(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_CounterCheck：ASN.1 CounterCheck；结构体 CounterCheck；信道 ChannelType_DL_DCCH；包装位 2 级（0/2 → 7/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_CounterCheck(Encoder& enc, const CounterCheck& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -674,6 +726,10 @@ void FreeMessage_CounterCheck(CounterCheck& value)
     Free_CounterCheck(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_MobilityFromNRCommand：ASN.1 MobilityFromNRCommand；结构体 MobilityFromNRCommand；信道 ChannelType_DL_DCCH；包装位 2 级（0/2 → 8/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_MobilityFromNRCommand(Encoder& enc, const MobilityFromNRCommand& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -727,6 +783,10 @@ void FreeMessage_MobilityFromNRCommand(MobilityFromNRCommand& value)
     Free_MobilityFromNRCommand(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_DLDedicatedMessageSegment_r16：ASN.1 DLDedicatedMessageSegment-r16；结构体 DLDedicatedMessageSegment_r16；信道 ChannelType_DL_DCCH；包装位 2 级（0/2 → 9/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_DLDedicatedMessageSegment_r16(Encoder& enc, const DLDedicatedMessageSegment_r16& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -780,6 +840,10 @@ void FreeMessage_DLDedicatedMessageSegment_r16(DLDedicatedMessageSegment_r16& va
     Free_DLDedicatedMessageSegment_r16(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_UEInformationRequest_r16：ASN.1 UEInformationRequest-r16；结构体 UEInformationRequest_r16；信道 ChannelType_DL_DCCH；包装位 2 级（0/2 → 10/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_UEInformationRequest_r16(Encoder& enc, const UEInformationRequest_r16& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -833,6 +897,10 @@ void FreeMessage_UEInformationRequest_r16(UEInformationRequest_r16& value)
     Free_UEInformationRequest_r16(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_DLInformationTransferMRDC_r16：ASN.1 DLInformationTransferMRDC-r16；结构体 DLInformationTransferMRDC_r16；信道 ChannelType_DL_DCCH；包装位 2 级（0/2 → 11/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_DLInformationTransferMRDC_r16(Encoder& enc, const DLInformationTransferMRDC_r16& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -886,6 +954,10 @@ void FreeMessage_DLInformationTransferMRDC_r16(DLInformationTransferMRDC_r16& va
     Free_DLInformationTransferMRDC_r16(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_LoggedMeasurementConfiguration_r16：ASN.1 LoggedMeasurementConfiguration-r16；结构体 LoggedMeasurementConfiguration_r16；信道 ChannelType_DL_DCCH；包装位 2 级（0/2 → 12/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_LoggedMeasurementConfiguration_r16(Encoder& enc, const LoggedMeasurementConfiguration_r16& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -939,6 +1011,10 @@ void FreeMessage_LoggedMeasurementConfiguration_r16(LoggedMeasurementConfigurati
     Free_LoggedMeasurementConfiguration_r16(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_MBSBroadcastConfiguration_r17：ASN.1 MBSBroadcastConfiguration-r17；结构体 MBSBroadcastConfiguration_r17；信道 ChannelType_MCCH_r17；包装位 2 级（0/2 → 0/2）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_MBSBroadcastConfiguration_r17(Encoder& enc, const MBSBroadcastConfiguration_r17& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -990,6 +1066,10 @@ void FreeMessage_MBSBroadcastConfiguration_r17(MBSBroadcastConfiguration_r17& va
     Free_MBSBroadcastConfiguration_r17(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_MBSMulticastConfiguration_r18：ASN.1 MBSMulticastConfiguration-r18；结构体 MBSMulticastConfiguration_r18；信道 ChannelType_MulticastMCCH_r18；包装位 2 级（0/2 → 0/2）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_MBSMulticastConfiguration_r18(Encoder& enc, const MBSMulticastConfiguration_r18& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1041,6 +1121,10 @@ void FreeMessage_MBSMulticastConfiguration_r18(MBSMulticastConfiguration_r18& va
     Free_MBSMulticastConfiguration_r18(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_Paging：ASN.1 Paging；结构体 Paging；信道 ChannelType_PCCH；包装位 2 级（0/2 → 0/2）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_Paging(Encoder& enc, const Paging& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1092,6 +1176,10 @@ void FreeMessage_Paging(Paging& value)
     Free_Paging(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_RRCSetupRequest：ASN.1 RRCSetupRequest；结构体 RRCSetupRequest；信道 ChannelType_UL_CCCH；包装位 2 级（0/2 → 0/4）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_RRCSetupRequest(Encoder& enc, const RRCSetupRequest& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1138,6 +1226,10 @@ void FreeMessage_RRCSetupRequest(RRCSetupRequest& value)
     Free_RRCSetupRequest(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_RRCResumeRequest：ASN.1 RRCResumeRequest；结构体 RRCResumeRequest；信道 ChannelType_UL_CCCH；包装位 2 级（0/2 → 1/4）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_RRCResumeRequest(Encoder& enc, const RRCResumeRequest& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1184,6 +1276,10 @@ void FreeMessage_RRCResumeRequest(RRCResumeRequest& value)
     Free_RRCResumeRequest(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_RRCReestablishmentRequest：ASN.1 RRCReestablishmentRequest；结构体 RRCReestablishmentRequest；信道 ChannelType_UL_CCCH；包装位 2 级（0/2 → 2/4）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_RRCReestablishmentRequest(Encoder& enc, const RRCReestablishmentRequest& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1230,6 +1326,10 @@ void FreeMessage_RRCReestablishmentRequest(RRCReestablishmentRequest& value)
     Free_RRCReestablishmentRequest(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_RRCSystemInfoRequest：ASN.1 RRCSystemInfoRequest；结构体 RRCSystemInfoRequest；信道 ChannelType_UL_CCCH；包装位 2 级（0/2 → 3/4）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_RRCSystemInfoRequest(Encoder& enc, const RRCSystemInfoRequest& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1276,6 +1376,10 @@ void FreeMessage_RRCSystemInfoRequest(RRCSystemInfoRequest& value)
     Free_RRCSystemInfoRequest(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_RRCResumeRequest1：ASN.1 RRCResumeRequest1；结构体 RRCResumeRequest1；信道 ChannelType_UL_CCCH1；包装位 2 级（0/2 → 0/4）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_RRCResumeRequest1(Encoder& enc, const RRCResumeRequest1& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1329,6 +1433,10 @@ void FreeMessage_RRCResumeRequest1(RRCResumeRequest1& value)
     Free_RRCResumeRequest1(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_MeasurementReport：ASN.1 MeasurementReport；结构体 MeasurementReport；信道 ChannelType_UL_DCCH；包装位 2 级（0/2 → 0/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_MeasurementReport(Encoder& enc, const MeasurementReport& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1370,6 +1478,10 @@ void FreeMessage_MeasurementReport(MeasurementReport& value)
     Free_MeasurementReport(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_RRCReconfigurationComplete：ASN.1 RRCReconfigurationComplete；结构体 RRCReconfigurationComplete；信道 ChannelType_UL_DCCH；包装位 2 级（0/2 → 1/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_RRCReconfigurationComplete(Encoder& enc, const RRCReconfigurationComplete& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1411,6 +1523,10 @@ void FreeMessage_RRCReconfigurationComplete(RRCReconfigurationComplete& value)
     Free_RRCReconfigurationComplete(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_RRCSetupComplete：ASN.1 RRCSetupComplete；结构体 RRCSetupComplete；信道 ChannelType_UL_DCCH；包装位 2 级（0/2 → 2/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_RRCSetupComplete(Encoder& enc, const RRCSetupComplete& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1452,6 +1568,10 @@ void FreeMessage_RRCSetupComplete(RRCSetupComplete& value)
     Free_RRCSetupComplete(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_RRCReestablishmentComplete：ASN.1 RRCReestablishmentComplete；结构体 RRCReestablishmentComplete；信道 ChannelType_UL_DCCH；包装位 2 级（0/2 → 3/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_RRCReestablishmentComplete(Encoder& enc, const RRCReestablishmentComplete& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1493,6 +1613,10 @@ void FreeMessage_RRCReestablishmentComplete(RRCReestablishmentComplete& value)
     Free_RRCReestablishmentComplete(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_RRCResumeComplete：ASN.1 RRCResumeComplete；结构体 RRCResumeComplete；信道 ChannelType_UL_DCCH；包装位 2 级（0/2 → 4/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_RRCResumeComplete(Encoder& enc, const RRCResumeComplete& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1534,6 +1658,10 @@ void FreeMessage_RRCResumeComplete(RRCResumeComplete& value)
     Free_RRCResumeComplete(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_SecurityModeComplete：ASN.1 SecurityModeComplete；结构体 SecurityModeComplete；信道 ChannelType_UL_DCCH；包装位 2 级（0/2 → 5/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_SecurityModeComplete(Encoder& enc, const SecurityModeComplete& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1575,6 +1703,10 @@ void FreeMessage_SecurityModeComplete(SecurityModeComplete& value)
     Free_SecurityModeComplete(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_SecurityModeFailure：ASN.1 SecurityModeFailure；结构体 SecurityModeFailure；信道 ChannelType_UL_DCCH；包装位 2 级（0/2 → 6/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_SecurityModeFailure(Encoder& enc, const SecurityModeFailure& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1616,6 +1748,10 @@ void FreeMessage_SecurityModeFailure(SecurityModeFailure& value)
     Free_SecurityModeFailure(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_ULInformationTransfer：ASN.1 ULInformationTransfer；结构体 ULInformationTransfer；信道 ChannelType_UL_DCCH；包装位 2 级（0/2 → 7/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_ULInformationTransfer(Encoder& enc, const ULInformationTransfer& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1657,6 +1793,10 @@ void FreeMessage_ULInformationTransfer(ULInformationTransfer& value)
     Free_ULInformationTransfer(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_LocationMeasurementIndication：ASN.1 LocationMeasurementIndication；结构体 LocationMeasurementIndication；信道 ChannelType_UL_DCCH；包装位 2 级（0/2 → 8/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_LocationMeasurementIndication(Encoder& enc, const LocationMeasurementIndication& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1698,6 +1838,10 @@ void FreeMessage_LocationMeasurementIndication(LocationMeasurementIndication& va
     Free_LocationMeasurementIndication(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_UECapabilityInformation：ASN.1 UECapabilityInformation；结构体 UECapabilityInformation；信道 ChannelType_UL_DCCH；包装位 2 级（0/2 → 9/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_UECapabilityInformation(Encoder& enc, const UECapabilityInformation& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1739,6 +1883,10 @@ void FreeMessage_UECapabilityInformation(UECapabilityInformation& value)
     Free_UECapabilityInformation(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_CounterCheckResponse：ASN.1 CounterCheckResponse；结构体 CounterCheckResponse；信道 ChannelType_UL_DCCH；包装位 2 级（0/2 → 10/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_CounterCheckResponse(Encoder& enc, const CounterCheckResponse& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1780,6 +1928,10 @@ void FreeMessage_CounterCheckResponse(CounterCheckResponse& value)
     Free_CounterCheckResponse(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_UEAssistanceInformation：ASN.1 UEAssistanceInformation；结构体 UEAssistanceInformation；信道 ChannelType_UL_DCCH；包装位 2 级（0/2 → 11/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_UEAssistanceInformation(Encoder& enc, const UEAssistanceInformation& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1821,6 +1973,10 @@ void FreeMessage_UEAssistanceInformation(UEAssistanceInformation& value)
     Free_UEAssistanceInformation(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_FailureInformation：ASN.1 FailureInformation；结构体 FailureInformation；信道 ChannelType_UL_DCCH；包装位 2 级（0/2 → 12/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_FailureInformation(Encoder& enc, const FailureInformation& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1862,6 +2018,10 @@ void FreeMessage_FailureInformation(FailureInformation& value)
     Free_FailureInformation(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_ULInformationTransferMRDC：ASN.1 ULInformationTransferMRDC；结构体 ULInformationTransferMRDC；信道 ChannelType_UL_DCCH；包装位 2 级（0/2 → 13/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_ULInformationTransferMRDC(Encoder& enc, const ULInformationTransferMRDC& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1903,6 +2063,10 @@ void FreeMessage_ULInformationTransferMRDC(ULInformationTransferMRDC& value)
     Free_ULInformationTransferMRDC(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_SCGFailureInformation：ASN.1 SCGFailureInformation；结构体 SCGFailureInformation；信道 ChannelType_UL_DCCH；包装位 2 级（0/2 → 14/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_SCGFailureInformation(Encoder& enc, const SCGFailureInformation& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1944,6 +2108,10 @@ void FreeMessage_SCGFailureInformation(SCGFailureInformation& value)
     Free_SCGFailureInformation(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_SCGFailureInformationEUTRA：ASN.1 SCGFailureInformationEUTRA；结构体 SCGFailureInformationEUTRA；信道 ChannelType_UL_DCCH；包装位 2 级（0/2 → 15/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_SCGFailureInformationEUTRA(Encoder& enc, const SCGFailureInformationEUTRA& value)
 {
     enc.WriteConstrainedInteger(0, 0, 1);
@@ -1985,6 +2153,10 @@ void FreeMessage_SCGFailureInformationEUTRA(SCGFailureInformationEUTRA& value)
     Free_SCGFailureInformationEUTRA(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_ULDedicatedMessageSegment_r16：ASN.1 ULDedicatedMessageSegment-r16；结构体 ULDedicatedMessageSegment_r16；信道 ChannelType_UL_DCCH；包装位 3 级（1/2 → 0/2 → 0/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_ULDedicatedMessageSegment_r16(Encoder& enc, const ULDedicatedMessageSegment_r16& value)
 {
     enc.WriteConstrainedInteger(1, 0, 1);
@@ -2050,6 +2222,10 @@ void FreeMessage_ULDedicatedMessageSegment_r16(ULDedicatedMessageSegment_r16& va
     Free_ULDedicatedMessageSegment_r16(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_DedicatedSIBRequest_r16：ASN.1 DedicatedSIBRequest-r16；结构体 DedicatedSIBRequest_r16；信道 ChannelType_UL_DCCH；包装位 3 级（1/2 → 0/2 → 1/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_DedicatedSIBRequest_r16(Encoder& enc, const DedicatedSIBRequest_r16& value)
 {
     enc.WriteConstrainedInteger(1, 0, 1);
@@ -2115,6 +2291,10 @@ void FreeMessage_DedicatedSIBRequest_r16(DedicatedSIBRequest_r16& value)
     Free_DedicatedSIBRequest_r16(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_MCGFailureInformation_r16：ASN.1 MCGFailureInformation-r16；结构体 MCGFailureInformation_r16；信道 ChannelType_UL_DCCH；包装位 3 级（1/2 → 0/2 → 2/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_MCGFailureInformation_r16(Encoder& enc, const MCGFailureInformation_r16& value)
 {
     enc.WriteConstrainedInteger(1, 0, 1);
@@ -2180,6 +2360,10 @@ void FreeMessage_MCGFailureInformation_r16(MCGFailureInformation_r16& value)
     Free_MCGFailureInformation_r16(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_UEInformationResponse_r16：ASN.1 UEInformationResponse-r16；结构体 UEInformationResponse_r16；信道 ChannelType_UL_DCCH；包装位 3 级（1/2 → 0/2 → 3/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_UEInformationResponse_r16(Encoder& enc, const UEInformationResponse_r16& value)
 {
     enc.WriteConstrainedInteger(1, 0, 1);
@@ -2245,6 +2429,10 @@ void FreeMessage_UEInformationResponse_r16(UEInformationResponse_r16& value)
     Free_UEInformationResponse_r16(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_SidelinkUEInformationNR_r16：ASN.1 SidelinkUEInformationNR-r16；结构体 SidelinkUEInformationNR_r16；信道 ChannelType_UL_DCCH；包装位 3 级（1/2 → 0/2 → 4/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_SidelinkUEInformationNR_r16(Encoder& enc, const SidelinkUEInformationNR_r16& value)
 {
     enc.WriteConstrainedInteger(1, 0, 1);
@@ -2310,6 +2498,10 @@ void FreeMessage_SidelinkUEInformationNR_r16(SidelinkUEInformationNR_r16& value)
     Free_SidelinkUEInformationNR_r16(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_ULInformationTransferIRAT_r16：ASN.1 ULInformationTransferIRAT-r16；结构体 ULInformationTransferIRAT_r16；信道 ChannelType_UL_DCCH；包装位 3 级（1/2 → 0/2 → 5/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_ULInformationTransferIRAT_r16(Encoder& enc, const ULInformationTransferIRAT_r16& value)
 {
     enc.WriteConstrainedInteger(1, 0, 1);
@@ -2375,6 +2567,10 @@ void FreeMessage_ULInformationTransferIRAT_r16(ULInformationTransferIRAT_r16& va
     Free_ULInformationTransferIRAT_r16(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_IABOtherInformation_r16：ASN.1 IABOtherInformation-r16；结构体 IABOtherInformation_r16；信道 ChannelType_UL_DCCH；包装位 3 级（1/2 → 0/2 → 6/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_IABOtherInformation_r16(Encoder& enc, const IABOtherInformation_r16& value)
 {
     enc.WriteConstrainedInteger(1, 0, 1);
@@ -2440,6 +2636,10 @@ void FreeMessage_IABOtherInformation_r16(IABOtherInformation_r16& value)
     Free_IABOtherInformation_r16(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_MBSInterestIndication_r17：ASN.1 MBSInterestIndication-r17；结构体 MBSInterestIndication_r17；信道 ChannelType_UL_DCCH；包装位 3 级（1/2 → 0/2 → 7/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_MBSInterestIndication_r17(Encoder& enc, const MBSInterestIndication_r17& value)
 {
     enc.WriteConstrainedInteger(1, 0, 1);
@@ -2505,6 +2705,10 @@ void FreeMessage_MBSInterestIndication_r17(MBSInterestIndication_r17& value)
     Free_MBSInterestIndication_r17(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_UEPositioningAssistanceInfo_r17：ASN.1 UEPositioningAssistanceInfo-r17；结构体 UEPositioningAssistanceInfo_r17；信道 ChannelType_UL_DCCH；包装位 3 级（1/2 → 0/2 → 8/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_UEPositioningAssistanceInfo_r17(Encoder& enc, const UEPositioningAssistanceInfo_r17& value)
 {
     enc.WriteConstrainedInteger(1, 0, 1);
@@ -2570,6 +2774,10 @@ void FreeMessage_UEPositioningAssistanceInfo_r17(UEPositioningAssistanceInfo_r17
     Free_UEPositioningAssistanceInfo_r17(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_MeasurementReportAppLayer_r17：ASN.1 MeasurementReportAppLayer-r17；结构体 MeasurementReportAppLayer_r17；信道 ChannelType_UL_DCCH；包装位 3 级（1/2 → 0/2 → 9/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_MeasurementReportAppLayer_r17(Encoder& enc, const MeasurementReportAppLayer_r17& value)
 {
     enc.WriteConstrainedInteger(1, 0, 1);
@@ -2635,6 +2843,10 @@ void FreeMessage_MeasurementReportAppLayer_r17(MeasurementReportAppLayer_r17& va
     Free_MeasurementReportAppLayer_r17(value);
 }
 
+// --------------------------------------------------------------------------
+// 消息入口 MessageKind_IndirectPathFailureInformation_r18：ASN.1 IndirectPathFailureInformation-r18；结构体 IndirectPathFailureInformation_r18；信道 ChannelType_UL_DCCH；包装位 3 级（1/2 → 0/2 → 10/16）。
+// EncodeMessage_* 先按路径写入包装层 CHOICE 索引，再编码消息体；DecodeMessage_* 反向校验包装位。
+// --------------------------------------------------------------------------
 ErrorCode EncodeMessage_IndirectPathFailureInformation_r18(Encoder& enc, const IndirectPathFailureInformation_r18& value)
 {
     enc.WriteConstrainedInteger(1, 0, 1);
@@ -2701,6 +2913,7 @@ void FreeMessage_IndirectPathFailureInformation_r18(IndirectPathFailureInformati
 }
 
 
+// CONTAINING 开放类型包装：编码内层并写长度行列式；解码递归解析内层；受深度上限保护。
 ErrorCode EncodeContained_MBSMulticastConfiguration_r18(Encoder& enc, const MBSMulticastConfiguration_r18& value)
 {
     if (enc.ContainingDepth() >= RRC_CODEC_MAX_CONTAINING_DEPTH) {
@@ -2748,6 +2961,7 @@ ErrorCode DecodeContained_MBSMulticastConfiguration_r18(Decoder& dec, MBSMultica
     return dec.Error();
 }
 
+// CONTAINING 开放类型包装：编码内层并写长度行列式；解码递归解析内层；受深度上限保护。
 ErrorCode EncodeContained_Paging(Encoder& enc, const Paging& value)
 {
     if (enc.ContainingDepth() >= RRC_CODEC_MAX_CONTAINING_DEPTH) {
@@ -2795,6 +3009,7 @@ ErrorCode DecodeContained_Paging(Decoder& dec, Paging*& out)
     return dec.Error();
 }
 
+// CONTAINING 开放类型包装：编码内层并写长度行列式；解码递归解析内层；受深度上限保护。
 ErrorCode EncodeContained_RRCReconfiguration(Encoder& enc, const RRCReconfiguration& value)
 {
     if (enc.ContainingDepth() >= RRC_CODEC_MAX_CONTAINING_DEPTH) {
@@ -2842,6 +3057,7 @@ ErrorCode DecodeContained_RRCReconfiguration(Decoder& dec, RRCReconfiguration*& 
     return dec.Error();
 }
 
+// CONTAINING 开放类型包装：编码内层并写长度行列式；解码递归解析内层；受深度上限保护。
 ErrorCode EncodeContained_RRCReconfigurationComplete(Encoder& enc, const RRCReconfigurationComplete& value)
 {
     if (enc.ContainingDepth() >= RRC_CODEC_MAX_CONTAINING_DEPTH) {
@@ -2889,6 +3105,7 @@ ErrorCode DecodeContained_RRCReconfigurationComplete(Decoder& dec, RRCReconfigur
     return dec.Error();
 }
 
+// CONTAINING 开放类型包装：编码内层并写长度行列式；解码递归解析内层；受深度上限保护。
 ErrorCode EncodeContained_SDT_MAC_PHY_CG_Config_r17(Encoder& enc, const SDT_MAC_PHY_CG_Config_r17& value)
 {
     if (enc.ContainingDepth() >= RRC_CODEC_MAX_CONTAINING_DEPTH) {
@@ -2936,6 +3153,7 @@ ErrorCode DecodeContained_SDT_MAC_PHY_CG_Config_r17(Decoder& dec, SDT_MAC_PHY_CG
     return dec.Error();
 }
 
+// CONTAINING 开放类型包装：编码内层并写长度行列式；解码递归解析内层；受深度上限保护。
 ErrorCode EncodeContained_SRS_PosRRC_InactiveConfig_r17(Encoder& enc, const SRS_PosRRC_InactiveConfig_r17& value)
 {
     if (enc.ContainingDepth() >= RRC_CODEC_MAX_CONTAINING_DEPTH) {
@@ -2983,6 +3201,7 @@ ErrorCode DecodeContained_SRS_PosRRC_InactiveConfig_r17(Decoder& dec, SRS_PosRRC
     return dec.Error();
 }
 
+// CONTAINING 开放类型包装：编码内层并写长度行列式；解码递归解析内层；受深度上限保护。
 ErrorCode EncodeContained_SIB1(Encoder& enc, const SIB1& value)
 {
     if (enc.ContainingDepth() >= RRC_CODEC_MAX_CONTAINING_DEPTH) {
@@ -3030,6 +3249,7 @@ ErrorCode DecodeContained_SIB1(Decoder& dec, SIB1*& out)
     return dec.Error();
 }
 
+// CONTAINING 开放类型包装：编码内层并写长度行列式；解码递归解析内层；受深度上限保护。
 ErrorCode EncodeContained_SystemInformation(Encoder& enc, const SystemInformation& value)
 {
     if (enc.ContainingDepth() >= RRC_CODEC_MAX_CONTAINING_DEPTH) {
@@ -3077,6 +3297,7 @@ ErrorCode DecodeContained_SystemInformation(Decoder& dec, SystemInformation*& ou
     return dec.Error();
 }
 
+// CONTAINING 开放类型包装：编码内层并写长度行列式；解码递归解析内层；受深度上限保护。
 ErrorCode EncodeContained_UECapabilityEnquiry_v1560_IEs(Encoder& enc, const UECapabilityEnquiry_v1560_IEs& value)
 {
     if (enc.ContainingDepth() >= RRC_CODEC_MAX_CONTAINING_DEPTH) {
@@ -3124,6 +3345,7 @@ ErrorCode DecodeContained_UECapabilityEnquiry_v1560_IEs(Decoder& dec, UECapabili
     return dec.Error();
 }
 
+// CONTAINING 开放类型包装：编码内层并写长度行列式；解码递归解析内层；受深度上限保护。
 ErrorCode EncodeContained_PosSystemInformation_r16_IEs(Encoder& enc, const PosSystemInformation_r16_IEs& value)
 {
     if (enc.ContainingDepth() >= RRC_CODEC_MAX_CONTAINING_DEPTH) {
@@ -3171,6 +3393,7 @@ ErrorCode DecodeContained_PosSystemInformation_r16_IEs(Decoder& dec, PosSystemIn
     return dec.Error();
 }
 
+// CONTAINING 开放类型包装：编码内层并写长度行列式；解码递归解析内层；受深度上限保护。
 ErrorCode EncodeContained_CellGroupConfig(Encoder& enc, const CellGroupConfig& value)
 {
     if (enc.ContainingDepth() >= RRC_CODEC_MAX_CONTAINING_DEPTH) {
@@ -3218,6 +3441,7 @@ ErrorCode DecodeContained_CellGroupConfig(Decoder& dec, CellGroupConfig*& out)
     return dec.Error();
 }
 
+// CONTAINING 开放类型包装：编码内层并写长度行列式；解码递归解析内层；受深度上限保护。
 ErrorCode EncodeContained_CondReconfigExecCondSCG_r17(Encoder& enc, const CondReconfigExecCondSCG_r17& value)
 {
     if (enc.ContainingDepth() >= RRC_CODEC_MAX_CONTAINING_DEPTH) {
@@ -3265,6 +3489,7 @@ ErrorCode DecodeContained_CondReconfigExecCondSCG_r17(Decoder& dec, CondReconfig
     return dec.Error();
 }
 
+// CONTAINING 开放类型包装：编码内层并写长度行列式；解码递归解析内层；受深度上限保护。
 ErrorCode EncodeContained_EarlyUL_SyncConfig_r18(Encoder& enc, const EarlyUL_SyncConfig_r18& value)
 {
     if (enc.ContainingDepth() >= RRC_CODEC_MAX_CONTAINING_DEPTH) {
@@ -3312,6 +3537,7 @@ ErrorCode DecodeContained_EarlyUL_SyncConfig_r18(Decoder& dec, EarlyUL_SyncConfi
     return dec.Error();
 }
 
+// CONTAINING 开放类型包装：编码内层并写长度行列式；解码递归解析内层；受深度上限保护。
 ErrorCode EncodeContained_MeasResultSCG_Failure(Encoder& enc, const MeasResultSCG_Failure& value)
 {
     if (enc.ContainingDepth() >= RRC_CODEC_MAX_CONTAINING_DEPTH) {
@@ -3359,6 +3585,7 @@ ErrorCode DecodeContained_MeasResultSCG_Failure(Decoder& dec, MeasResultSCG_Fail
     return dec.Error();
 }
 
+// CONTAINING 开放类型包装：编码内层并写长度行列式；解码递归解析内层；受深度上限保护。
 ErrorCode EncodeContained_RadioBearerConfig(Encoder& enc, const RadioBearerConfig& value)
 {
     if (enc.ContainingDepth() >= RRC_CODEC_MAX_CONTAINING_DEPTH) {
@@ -3406,6 +3633,7 @@ ErrorCode DecodeContained_RadioBearerConfig(Decoder& dec, RadioBearerConfig*& ou
     return dec.Error();
 }
 
+// CONTAINING 开放类型包装：编码内层并写长度行列式；解码递归解析内层；受深度上限保护。
 ErrorCode EncodeContained_UE_MRDC_Capability_v15g0(Encoder& enc, const UE_MRDC_Capability_v15g0& value)
 {
     if (enc.ContainingDepth() >= RRC_CODEC_MAX_CONTAINING_DEPTH) {
@@ -3453,6 +3681,7 @@ ErrorCode DecodeContained_UE_MRDC_Capability_v15g0(Decoder& dec, UE_MRDC_Capabil
     return dec.Error();
 }
 
+// CONTAINING 开放类型包装：编码内层并写长度行列式；解码递归解析内层；受深度上限保护。
 ErrorCode EncodeContained_UE_NR_Capability_v15c0(Encoder& enc, const UE_NR_Capability_v15c0& value)
 {
     if (enc.ContainingDepth() >= RRC_CODEC_MAX_CONTAINING_DEPTH) {
@@ -3501,6 +3730,10 @@ ErrorCode DecodeContained_UE_NR_Capability_v15c0(Decoder& dec, UE_NR_Capability_
 }
 
 
+// --------------------------------------------------------------------------
+// DRB_CountMSB_InfoList：ASN.1 DRB-CountMSB-InfoList；源文件第 229 行；SEQUENCE OF。
+// Encode_DRB_CountMSB_InfoList 只读不分配；Decode_DRB_CountMSB_InfoList 可能 malloc（失败时内部已释放并清零）；Free_DRB_CountMSB_InfoList 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DRB_CountMSB_InfoList(Encoder& enc, const DRB_CountMSB_InfoList& value)
 {
     (void)value;
@@ -3546,6 +3779,10 @@ void Free_DRB_CountMSB_InfoList(DRB_CountMSB_InfoList& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CounterCheck_IEs_NonCriticalExtension：ASN.1 nonCriticalExtension；源文件第 226 行；空 SEQUENCE{}。
+// Encode_CounterCheck_IEs_NonCriticalExtension 只读不分配；Decode_CounterCheck_IEs_NonCriticalExtension 可能 malloc（失败时内部已释放并清零）；Free_CounterCheck_IEs_NonCriticalExtension 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CounterCheck_IEs_NonCriticalExtension(Encoder& enc, const CounterCheck_IEs_NonCriticalExtension& value)
 {
     (void)value;
@@ -3563,6 +3800,10 @@ void Free_CounterCheck_IEs_NonCriticalExtension(CounterCheck_IEs_NonCriticalExte
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CounterCheck_IEs：ASN.1 CounterCheck-IEs；源文件第 223 行；SEQUENCE。
+// Encode_CounterCheck_IEs 只读不分配；Decode_CounterCheck_IEs 可能 malloc（失败时内部已释放并清零）；Free_CounterCheck_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CounterCheck_IEs(Encoder& enc, const CounterCheck_IEs& value)
 {
     (void)value;
@@ -3621,6 +3862,10 @@ void Free_CounterCheck_IEs(CounterCheck_IEs& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CounterCheck_CriticalExtensionsFuture：ASN.1 criticalExtensions/criticalExtensionsFuture；源文件第 219 行；空 SEQUENCE{}。
+// Encode_CounterCheck_CriticalExtensionsFuture 只读不分配；Decode_CounterCheck_CriticalExtensionsFuture 可能 malloc（失败时内部已释放并清零）；Free_CounterCheck_CriticalExtensionsFuture 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CounterCheck_CriticalExtensionsFuture(Encoder& enc, const CounterCheck_CriticalExtensionsFuture& value)
 {
     (void)value;
@@ -3638,6 +3883,10 @@ void Free_CounterCheck_CriticalExtensionsFuture(CounterCheck_CriticalExtensionsF
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CounterCheck_CriticalExtensions：ASN.1 criticalExtensions；源文件第 217 行；CHOICE。
+// Encode_CounterCheck_CriticalExtensions 只读不分配；Decode_CounterCheck_CriticalExtensions 可能 malloc（失败时内部已释放并清零）；Free_CounterCheck_CriticalExtensions 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CounterCheck_CriticalExtensions(Encoder& enc, const CounterCheck_CriticalExtensions& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -3698,6 +3947,10 @@ void Free_CounterCheck_CriticalExtensions(CounterCheck_CriticalExtensions& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CounterCheck：ASN.1 CounterCheck；源文件第 215 行；SEQUENCE。
+// Encode_CounterCheck 只读不分配；Decode_CounterCheck 可能 malloc（失败时内部已释放并清零）；Free_CounterCheck 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CounterCheck(Encoder& enc, const CounterCheck& value)
 {
     (void)value;
@@ -3732,6 +3985,10 @@ void Free_CounterCheck(CounterCheck& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DRB_CountMSB_Info：ASN.1 DRB-CountMSB-Info；源文件第 231 行；SEQUENCE。
+// Encode_DRB_CountMSB_Info 只读不分配；Decode_DRB_CountMSB_Info 可能 malloc（失败时内部已释放并清零）；Free_DRB_CountMSB_Info 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DRB_CountMSB_Info(Encoder& enc, const DRB_CountMSB_Info& value)
 {
     (void)value;
@@ -3773,6 +4030,10 @@ void Free_DRB_CountMSB_Info(DRB_CountMSB_Info& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DRB_CountInfoList：ASN.1 DRB-CountInfoList；源文件第 255 行；SEQUENCE OF。
+// Encode_DRB_CountInfoList 只读不分配；Decode_DRB_CountInfoList 可能 malloc（失败时内部已释放并清零）；Free_DRB_CountInfoList 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DRB_CountInfoList(Encoder& enc, const DRB_CountInfoList& value)
 {
     (void)value;
@@ -3818,6 +4079,10 @@ void Free_DRB_CountInfoList(DRB_CountInfoList& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CounterCheckResponse_IEs_NonCriticalExtension：ASN.1 nonCriticalExtension；源文件第 251 行；空 SEQUENCE{}。
+// Encode_CounterCheckResponse_IEs_NonCriticalExtension 只读不分配；Decode_CounterCheckResponse_IEs_NonCriticalExtension 可能 malloc（失败时内部已释放并清零）；Free_CounterCheckResponse_IEs_NonCriticalExtension 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CounterCheckResponse_IEs_NonCriticalExtension(Encoder& enc, const CounterCheckResponse_IEs_NonCriticalExtension& value)
 {
     (void)value;
@@ -3835,6 +4100,10 @@ void Free_CounterCheckResponse_IEs_NonCriticalExtension(CounterCheckResponse_IEs
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CounterCheckResponse_IEs：ASN.1 CounterCheckResponse-IEs；源文件第 248 行；SEQUENCE。
+// Encode_CounterCheckResponse_IEs 只读不分配；Decode_CounterCheckResponse_IEs 可能 malloc（失败时内部已释放并清零）；Free_CounterCheckResponse_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CounterCheckResponse_IEs(Encoder& enc, const CounterCheckResponse_IEs& value)
 {
     (void)value;
@@ -3893,6 +4162,10 @@ void Free_CounterCheckResponse_IEs(CounterCheckResponse_IEs& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CounterCheckResponse_CriticalExtensionsFuture：ASN.1 criticalExtensions/criticalExtensionsFuture；源文件第 244 行；空 SEQUENCE{}。
+// Encode_CounterCheckResponse_CriticalExtensionsFuture 只读不分配；Decode_CounterCheckResponse_CriticalExtensionsFuture 可能 malloc（失败时内部已释放并清零）；Free_CounterCheckResponse_CriticalExtensionsFuture 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CounterCheckResponse_CriticalExtensionsFuture(Encoder& enc, const CounterCheckResponse_CriticalExtensionsFuture& value)
 {
     (void)value;
@@ -3910,6 +4183,10 @@ void Free_CounterCheckResponse_CriticalExtensionsFuture(CounterCheckResponse_Cri
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CounterCheckResponse_CriticalExtensions：ASN.1 criticalExtensions；源文件第 242 行；CHOICE。
+// Encode_CounterCheckResponse_CriticalExtensions 只读不分配；Decode_CounterCheckResponse_CriticalExtensions 可能 malloc（失败时内部已释放并清零）；Free_CounterCheckResponse_CriticalExtensions 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CounterCheckResponse_CriticalExtensions(Encoder& enc, const CounterCheckResponse_CriticalExtensions& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -3970,6 +4247,10 @@ void Free_CounterCheckResponse_CriticalExtensions(CounterCheckResponse_CriticalE
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CounterCheckResponse：ASN.1 CounterCheckResponse；源文件第 240 行；SEQUENCE。
+// Encode_CounterCheckResponse 只读不分配；Decode_CounterCheckResponse 可能 malloc（失败时内部已释放并清零）；Free_CounterCheckResponse 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CounterCheckResponse(Encoder& enc, const CounterCheckResponse& value)
 {
     (void)value;
@@ -4004,6 +4285,10 @@ void Free_CounterCheckResponse(CounterCheckResponse& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DRB_CountInfo：ASN.1 DRB-CountInfo；源文件第 257 行；SEQUENCE。
+// Encode_DRB_CountInfo 只读不分配；Decode_DRB_CountInfo 可能 malloc（失败时内部已释放并清零）；Free_DRB_CountInfo 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DRB_CountInfo(Encoder& enc, const DRB_CountInfo& value)
 {
     (void)value;
@@ -4045,6 +4330,10 @@ void Free_DRB_CountInfo(DRB_CountInfo& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DedicatedSIBRequest_r16_IEs_OnDemandSIB_RequestList_r16：ASN.1 onDemandSIB-RequestList-r16；源文件第 274 行；SEQUENCE。
+// Encode_DedicatedSIBRequest_r16_IEs_OnDemandSIB_RequestList_r16 只读不分配；Decode_DedicatedSIBRequest_r16_IEs_OnDemandSIB_RequestList_r16 可能 malloc（失败时内部已释放并清零）；Free_DedicatedSIBRequest_r16_IEs_OnDemandSIB_RequestList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DedicatedSIBRequest_r16_IEs_OnDemandSIB_RequestList_r16(Encoder& enc, const DedicatedSIBRequest_r16_IEs_OnDemandSIB_RequestList_r16& value)
 {
     (void)value;
@@ -4135,6 +4424,10 @@ void Free_DedicatedSIBRequest_r16_IEs_OnDemandSIB_RequestList_r16(DedicatedSIBRe
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DedicatedSIBRequest_r16_IEs_NonCriticalExtension：ASN.1 nonCriticalExtension；源文件第 280 行；空 SEQUENCE{}。
+// Encode_DedicatedSIBRequest_r16_IEs_NonCriticalExtension 只读不分配；Decode_DedicatedSIBRequest_r16_IEs_NonCriticalExtension 可能 malloc（失败时内部已释放并清零）；Free_DedicatedSIBRequest_r16_IEs_NonCriticalExtension 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DedicatedSIBRequest_r16_IEs_NonCriticalExtension(Encoder& enc, const DedicatedSIBRequest_r16_IEs_NonCriticalExtension& value)
 {
     (void)value;
@@ -4152,6 +4445,10 @@ void Free_DedicatedSIBRequest_r16_IEs_NonCriticalExtension(DedicatedSIBRequest_r
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DedicatedSIBRequest_r16_IEs：ASN.1 DedicatedSIBRequest-r16-IEs；源文件第 273 行；SEQUENCE。
+// Encode_DedicatedSIBRequest_r16_IEs 只读不分配；Decode_DedicatedSIBRequest_r16_IEs 可能 malloc（失败时内部已释放并清零）；Free_DedicatedSIBRequest_r16_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DedicatedSIBRequest_r16_IEs(Encoder& enc, const DedicatedSIBRequest_r16_IEs& value)
 {
     (void)value;
@@ -4217,6 +4514,10 @@ void Free_DedicatedSIBRequest_r16_IEs(DedicatedSIBRequest_r16_IEs& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DedicatedSIBRequest_r16_CriticalExtensionsFuture：ASN.1 criticalExtensions/criticalExtensionsFuture；源文件第 269 行；空 SEQUENCE{}。
+// Encode_DedicatedSIBRequest_r16_CriticalExtensionsFuture 只读不分配；Decode_DedicatedSIBRequest_r16_CriticalExtensionsFuture 可能 malloc（失败时内部已释放并清零）；Free_DedicatedSIBRequest_r16_CriticalExtensionsFuture 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DedicatedSIBRequest_r16_CriticalExtensionsFuture(Encoder& enc, const DedicatedSIBRequest_r16_CriticalExtensionsFuture& value)
 {
     (void)value;
@@ -4234,6 +4535,10 @@ void Free_DedicatedSIBRequest_r16_CriticalExtensionsFuture(DedicatedSIBRequest_r
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DedicatedSIBRequest_r16_CriticalExtensions：ASN.1 criticalExtensions；源文件第 267 行；CHOICE。
+// Encode_DedicatedSIBRequest_r16_CriticalExtensions 只读不分配；Decode_DedicatedSIBRequest_r16_CriticalExtensions 可能 malloc（失败时内部已释放并清零）；Free_DedicatedSIBRequest_r16_CriticalExtensions 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DedicatedSIBRequest_r16_CriticalExtensions(Encoder& enc, const DedicatedSIBRequest_r16_CriticalExtensions& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -4294,6 +4599,10 @@ void Free_DedicatedSIBRequest_r16_CriticalExtensions(DedicatedSIBRequest_r16_Cri
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DedicatedSIBRequest_r16：ASN.1 DedicatedSIBRequest-r16；源文件第 266 行；SEQUENCE。
+// Encode_DedicatedSIBRequest_r16 只读不分配；Decode_DedicatedSIBRequest_r16 可能 malloc（失败时内部已释放并清零）；Free_DedicatedSIBRequest_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DedicatedSIBRequest_r16(Encoder& enc, const DedicatedSIBRequest_r16& value)
 {
     (void)value;
@@ -4322,6 +4631,10 @@ void Free_DedicatedSIBRequest_r16(DedicatedSIBRequest_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// GNSS_ID_r16：ASN.1 GNSS-ID-r16；源文件第 4232 行；SEQUENCE。
+// Encode_GNSS_ID_r16 只读不分配；Decode_GNSS_ID_r16 可能 malloc（失败时内部已释放并清零）；Free_GNSS_ID_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_GNSS_ID_r16(Encoder& enc, const GNSS_ID_r16& value)
 {
     (void)value;
@@ -4380,6 +4693,10 @@ void Free_GNSS_ID_r16(GNSS_ID_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SBAS_ID_r16：ASN.1 SBAS-ID-r16；源文件第 4237 行；SEQUENCE。
+// Encode_SBAS_ID_r16 只读不分配；Decode_SBAS_ID_r16 可能 malloc（失败时内部已释放并清零）；Free_SBAS_ID_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SBAS_ID_r16(Encoder& enc, const SBAS_ID_r16& value)
 {
     (void)value;
@@ -4438,6 +4755,10 @@ void Free_SBAS_ID_r16(SBAS_ID_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PosSIB_ReqInfo_r16：ASN.1 PosSIB-ReqInfo-r16；源文件第 285 行；SEQUENCE。
+// Encode_PosSIB_ReqInfo_r16 只读不分配；Decode_PosSIB_ReqInfo_r16 可能 malloc（失败时内部已释放并清零）；Free_PosSIB_ReqInfo_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PosSIB_ReqInfo_r16(Encoder& enc, const PosSIB_ReqInfo_r16& value)
 {
     (void)value;
@@ -4513,6 +4834,10 @@ void Free_PosSIB_ReqInfo_r16(PosSIB_ReqInfo_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLDedicatedMessageSegment_r16_IEs_NonCriticalExtension：ASN.1 nonCriticalExtension；源文件第 318 行；空 SEQUENCE{}。
+// Encode_DLDedicatedMessageSegment_r16_IEs_NonCriticalExtension 只读不分配；Decode_DLDedicatedMessageSegment_r16_IEs_NonCriticalExtension 可能 malloc（失败时内部已释放并清零）；Free_DLDedicatedMessageSegment_r16_IEs_NonCriticalExtension 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLDedicatedMessageSegment_r16_IEs_NonCriticalExtension(Encoder& enc, const DLDedicatedMessageSegment_r16_IEs_NonCriticalExtension& value)
 {
     (void)value;
@@ -4530,6 +4855,10 @@ void Free_DLDedicatedMessageSegment_r16_IEs_NonCriticalExtension(DLDedicatedMess
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLDedicatedMessageSegment_r16_IEs：ASN.1 DLDedicatedMessageSegment-r16-IEs；源文件第 313 行；SEQUENCE。
+// Encode_DLDedicatedMessageSegment_r16_IEs 只读不分配；Decode_DLDedicatedMessageSegment_r16_IEs 可能 malloc（失败时内部已释放并清零）；Free_DLDedicatedMessageSegment_r16_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLDedicatedMessageSegment_r16_IEs(Encoder& enc, const DLDedicatedMessageSegment_r16_IEs& value)
 {
     (void)value;
@@ -4606,6 +4935,10 @@ void Free_DLDedicatedMessageSegment_r16_IEs(DLDedicatedMessageSegment_r16_IEs& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLDedicatedMessageSegment_r16_CriticalExtensionsFuture：ASN.1 criticalExtensions/criticalExtensionsFuture；源文件第 309 行；空 SEQUENCE{}。
+// Encode_DLDedicatedMessageSegment_r16_CriticalExtensionsFuture 只读不分配；Decode_DLDedicatedMessageSegment_r16_CriticalExtensionsFuture 可能 malloc（失败时内部已释放并清零）；Free_DLDedicatedMessageSegment_r16_CriticalExtensionsFuture 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLDedicatedMessageSegment_r16_CriticalExtensionsFuture(Encoder& enc, const DLDedicatedMessageSegment_r16_CriticalExtensionsFuture& value)
 {
     (void)value;
@@ -4623,6 +4956,10 @@ void Free_DLDedicatedMessageSegment_r16_CriticalExtensionsFuture(DLDedicatedMess
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLDedicatedMessageSegment_r16_CriticalExtensions：ASN.1 criticalExtensions；源文件第 307 行；CHOICE。
+// Encode_DLDedicatedMessageSegment_r16_CriticalExtensions 只读不分配；Decode_DLDedicatedMessageSegment_r16_CriticalExtensions 可能 malloc（失败时内部已释放并清零）；Free_DLDedicatedMessageSegment_r16_CriticalExtensions 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLDedicatedMessageSegment_r16_CriticalExtensions(Encoder& enc, const DLDedicatedMessageSegment_r16_CriticalExtensions& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -4683,6 +5020,10 @@ void Free_DLDedicatedMessageSegment_r16_CriticalExtensions(DLDedicatedMessageSeg
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLDedicatedMessageSegment_r16：ASN.1 DLDedicatedMessageSegment-r16；源文件第 306 行；SEQUENCE。
+// Encode_DLDedicatedMessageSegment_r16 只读不分配；Decode_DLDedicatedMessageSegment_r16 可能 malloc（失败时内部已释放并清零）；Free_DLDedicatedMessageSegment_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLDedicatedMessageSegment_r16(Encoder& enc, const DLDedicatedMessageSegment_r16& value)
 {
     (void)value;
@@ -4711,6 +5052,10 @@ void Free_DLDedicatedMessageSegment_r16(DLDedicatedMessageSegment_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ClockQualityMetrics_r18_ClockAccuracy_r18：ASN.1 clockAccuracy-r18；源文件第 5157 行；CHOICE。
+// Encode_ClockQualityMetrics_r18_ClockAccuracy_r18 只读不分配；Decode_ClockQualityMetrics_r18_ClockAccuracy_r18 可能 malloc（失败时内部已释放并清零）；Free_ClockQualityMetrics_r18_ClockAccuracy_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ClockQualityMetrics_r18_ClockAccuracy_r18(Encoder& enc, const ClockQualityMetrics_r18_ClockAccuracy_r18& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -4773,6 +5118,10 @@ void Free_ClockQualityMetrics_r18_ClockAccuracy_r18(ClockQualityMetrics_r18_Cloc
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ClockQualityMetrics_r18：ASN.1 ClockQualityMetrics-r18；源文件第 5152 行；SEQUENCE。
+// Encode_ClockQualityMetrics_r18 只读不分配；Decode_ClockQualityMetrics_r18 可能 malloc（失败时内部已释放并清零）；Free_ClockQualityMetrics_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ClockQualityMetrics_r18(Encoder& enc, const ClockQualityMetrics_r18& value)
 {
     (void)value;
@@ -4886,6 +5235,10 @@ void Free_ClockQualityMetrics_r18(ClockQualityMetrics_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLInformationTransfer_v1800_IEs_ClockQualityDetailsLevel_r18：ASN.1 clockQualityDetailsLevel-r18；源文件第 353 行；CHOICE。
+// Encode_DLInformationTransfer_v1800_IEs_ClockQualityDetailsLevel_r18 只读不分配；Decode_DLInformationTransfer_v1800_IEs_ClockQualityDetailsLevel_r18 可能 malloc（失败时内部已释放并清零）；Free_DLInformationTransfer_v1800_IEs_ClockQualityDetailsLevel_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransfer_v1800_IEs_ClockQualityDetailsLevel_r18(Encoder& enc, const DLInformationTransfer_v1800_IEs_ClockQualityDetailsLevel_r18& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -4947,6 +5300,10 @@ void Free_DLInformationTransfer_v1800_IEs_ClockQualityDetailsLevel_r18(DLInforma
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLInformationTransfer_v1800_IEs_NonCriticalExtension：ASN.1 nonCriticalExtension；源文件第 357 行；空 SEQUENCE{}。
+// Encode_DLInformationTransfer_v1800_IEs_NonCriticalExtension 只读不分配；Decode_DLInformationTransfer_v1800_IEs_NonCriticalExtension 可能 malloc（失败时内部已释放并清零）；Free_DLInformationTransfer_v1800_IEs_NonCriticalExtension 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransfer_v1800_IEs_NonCriticalExtension(Encoder& enc, const DLInformationTransfer_v1800_IEs_NonCriticalExtension& value)
 {
     (void)value;
@@ -4964,6 +5321,10 @@ void Free_DLInformationTransfer_v1800_IEs_NonCriticalExtension(DLInformationTran
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLInformationTransfer_v1800_IEs：ASN.1 DLInformationTransfer-v1800-IEs；源文件第 351 行；SEQUENCE。
+// Encode_DLInformationTransfer_v1800_IEs 只读不分配；Decode_DLInformationTransfer_v1800_IEs 可能 malloc（失败时内部已释放并清零）；Free_DLInformationTransfer_v1800_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransfer_v1800_IEs(Encoder& enc, const DLInformationTransfer_v1800_IEs& value)
 {
     (void)value;
@@ -5024,6 +5385,10 @@ void Free_DLInformationTransfer_v1800_IEs(DLInformationTransfer_v1800_IEs& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// RxTxTimeDiff_r17：ASN.1 RxTxTimeDiff-r17；源文件第 12038 行；SEQUENCE。
+// Encode_RxTxTimeDiff_r17 只读不分配；Decode_RxTxTimeDiff_r17 可能 malloc（失败时内部已释放并清零）；Free_RxTxTimeDiff_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_RxTxTimeDiff_r17(Encoder& enc, const RxTxTimeDiff_r17& value)
 {
     (void)value;
@@ -5067,6 +5432,10 @@ void Free_RxTxTimeDiff_r17(RxTxTimeDiff_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLInformationTransfer_v1700_IEs：ASN.1 DLInformationTransfer-v1700-IEs；源文件第 343 行；SEQUENCE。
+// Encode_DLInformationTransfer_v1700_IEs 只读不分配；Decode_DLInformationTransfer_v1700_IEs 可能 malloc（失败时内部已释放并清零）；Free_DLInformationTransfer_v1700_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransfer_v1700_IEs(Encoder& enc, const DLInformationTransfer_v1700_IEs& value)
 {
     (void)value;
@@ -5156,6 +5525,10 @@ void Free_DLInformationTransfer_v1700_IEs(DLInformationTransfer_v1700_IEs& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ReferenceTime_r16：ASN.1 ReferenceTime-r16；源文件第 11187 行；SEQUENCE。
+// Encode_ReferenceTime_r16 只读不分配；Decode_ReferenceTime_r16 可能 malloc（失败时内部已释放并清零）；Free_ReferenceTime_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ReferenceTime_r16(Encoder& enc, const ReferenceTime_r16& value)
 {
     (void)value;
@@ -5203,6 +5576,10 @@ void Free_ReferenceTime_r16(ReferenceTime_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ReferenceTimeInfo_r16：ASN.1 ReferenceTimeInfo-r16；源文件第 11180 行；SEQUENCE。
+// Encode_ReferenceTimeInfo_r16 只读不分配；Decode_ReferenceTimeInfo_r16 可能 malloc（失败时内部已释放并清零）；Free_ReferenceTimeInfo_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ReferenceTimeInfo_r16(Encoder& enc, const ReferenceTimeInfo_r16& value)
 {
     (void)value;
@@ -5268,6 +5645,10 @@ void Free_ReferenceTimeInfo_r16(ReferenceTimeInfo_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLInformationTransfer_v1610_IEs：ASN.1 DLInformationTransfer-v1610-IEs；源文件第 338 行；SEQUENCE。
+// Encode_DLInformationTransfer_v1610_IEs 只读不分配；Decode_DLInformationTransfer_v1610_IEs 可能 malloc（失败时内部已释放并清零）；Free_DLInformationTransfer_v1610_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransfer_v1610_IEs(Encoder& enc, const DLInformationTransfer_v1610_IEs& value)
 {
     (void)value;
@@ -5315,6 +5696,10 @@ void Free_DLInformationTransfer_v1610_IEs(DLInformationTransfer_v1610_IEs& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLInformationTransfer_IEs：ASN.1 DLInformationTransfer-IEs；源文件第 332 行；SEQUENCE。
+// Encode_DLInformationTransfer_IEs 只读不分配；Decode_DLInformationTransfer_IEs 可能 malloc（失败时内部已释放并清零）；Free_DLInformationTransfer_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransfer_IEs(Encoder& enc, const DLInformationTransfer_IEs& value)
 {
     (void)value;
@@ -5386,6 +5771,10 @@ void Free_DLInformationTransfer_IEs(DLInformationTransfer_IEs& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLInformationTransfer_CriticalExtensionsFuture：ASN.1 criticalExtensions/criticalExtensionsFuture；源文件第 328 行；空 SEQUENCE{}。
+// Encode_DLInformationTransfer_CriticalExtensionsFuture 只读不分配；Decode_DLInformationTransfer_CriticalExtensionsFuture 可能 malloc（失败时内部已释放并清零）；Free_DLInformationTransfer_CriticalExtensionsFuture 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransfer_CriticalExtensionsFuture(Encoder& enc, const DLInformationTransfer_CriticalExtensionsFuture& value)
 {
     (void)value;
@@ -5403,6 +5792,10 @@ void Free_DLInformationTransfer_CriticalExtensionsFuture(DLInformationTransfer_C
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLInformationTransfer_CriticalExtensions：ASN.1 criticalExtensions；源文件第 326 行；CHOICE。
+// Encode_DLInformationTransfer_CriticalExtensions 只读不分配；Decode_DLInformationTransfer_CriticalExtensions 可能 malloc（失败时内部已释放并清零）；Free_DLInformationTransfer_CriticalExtensions 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransfer_CriticalExtensions(Encoder& enc, const DLInformationTransfer_CriticalExtensions& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -5463,6 +5856,10 @@ void Free_DLInformationTransfer_CriticalExtensions(DLInformationTransfer_Critica
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLInformationTransfer：ASN.1 DLInformationTransfer；源文件第 324 行；SEQUENCE。
+// Encode_DLInformationTransfer 只读不分配；Decode_DLInformationTransfer 可能 malloc（失败时内部已释放并清零）；Free_DLInformationTransfer 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransfer(Encoder& enc, const DLInformationTransfer& value)
 {
     (void)value;
@@ -5497,6 +5894,10 @@ void Free_DLInformationTransfer(DLInformationTransfer& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLInformationTransferMRDC_r16_IEs_NonCriticalExtension：ASN.1 nonCriticalExtension；源文件第 377 行；空 SEQUENCE{}。
+// Encode_DLInformationTransferMRDC_r16_IEs_NonCriticalExtension 只读不分配；Decode_DLInformationTransferMRDC_r16_IEs_NonCriticalExtension 可能 malloc（失败时内部已释放并清零）；Free_DLInformationTransferMRDC_r16_IEs_NonCriticalExtension 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransferMRDC_r16_IEs_NonCriticalExtension(Encoder& enc, const DLInformationTransferMRDC_r16_IEs_NonCriticalExtension& value)
 {
     (void)value;
@@ -5514,6 +5915,10 @@ void Free_DLInformationTransferMRDC_r16_IEs_NonCriticalExtension(DLInformationTr
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLInformationTransferMRDC_r16_IEs：ASN.1 DLInformationTransferMRDC-r16-IEs；源文件第 373 行；SEQUENCE。
+// Encode_DLInformationTransferMRDC_r16_IEs 只读不分配；Decode_DLInformationTransferMRDC_r16_IEs 可能 malloc（失败时内部已释放并清零）；Free_DLInformationTransferMRDC_r16_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransferMRDC_r16_IEs(Encoder& enc, const DLInformationTransferMRDC_r16_IEs& value)
 {
     (void)value;
@@ -5603,6 +6008,10 @@ void Free_DLInformationTransferMRDC_r16_IEs(DLInformationTransferMRDC_r16_IEs& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLInformationTransferMRDC_r16_CriticalExtensions_C1：ASN.1 criticalExtensions/c1；源文件第 365 行；CHOICE。
+// Encode_DLInformationTransferMRDC_r16_CriticalExtensions_C1 只读不分配；Decode_DLInformationTransferMRDC_r16_CriticalExtensions_C1 可能 malloc（失败时内部已释放并清零）；Free_DLInformationTransferMRDC_r16_CriticalExtensions_C1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransferMRDC_r16_CriticalExtensions_C1(Encoder& enc, const DLInformationTransferMRDC_r16_CriticalExtensions_C1& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 3);
@@ -5680,6 +6089,10 @@ void Free_DLInformationTransferMRDC_r16_CriticalExtensions_C1(DLInformationTrans
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLInformationTransferMRDC_r16_CriticalExtensionsFuture：ASN.1 criticalExtensions/criticalExtensionsFuture；源文件第 369 行；空 SEQUENCE{}。
+// Encode_DLInformationTransferMRDC_r16_CriticalExtensionsFuture 只读不分配；Decode_DLInformationTransferMRDC_r16_CriticalExtensionsFuture 可能 malloc（失败时内部已释放并清零）；Free_DLInformationTransferMRDC_r16_CriticalExtensionsFuture 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransferMRDC_r16_CriticalExtensionsFuture(Encoder& enc, const DLInformationTransferMRDC_r16_CriticalExtensionsFuture& value)
 {
     (void)value;
@@ -5697,6 +6110,10 @@ void Free_DLInformationTransferMRDC_r16_CriticalExtensionsFuture(DLInformationTr
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLInformationTransferMRDC_r16_CriticalExtensions：ASN.1 criticalExtensions；源文件第 364 行；CHOICE。
+// Encode_DLInformationTransferMRDC_r16_CriticalExtensions 只读不分配；Decode_DLInformationTransferMRDC_r16_CriticalExtensions 可能 malloc（失败时内部已释放并清零）；Free_DLInformationTransferMRDC_r16_CriticalExtensions 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransferMRDC_r16_CriticalExtensions(Encoder& enc, const DLInformationTransferMRDC_r16_CriticalExtensions& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -5757,6 +6174,10 @@ void Free_DLInformationTransferMRDC_r16_CriticalExtensions(DLInformationTransfer
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DLInformationTransferMRDC_r16：ASN.1 DLInformationTransferMRDC-r16；源文件第 363 行；SEQUENCE。
+// Encode_DLInformationTransferMRDC_r16 只读不分配；Decode_DLInformationTransferMRDC_r16 可能 malloc（失败时内部已释放并清零）；Free_DLInformationTransferMRDC_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransferMRDC_r16(Encoder& enc, const DLInformationTransferMRDC_r16& value)
 {
     (void)value;
@@ -5785,6 +6206,10 @@ void Free_DLInformationTransferMRDC_r16(DLInformationTransferMRDC_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FailureInfoRLC_Bearer：ASN.1 FailureInfoRLC-Bearer；源文件第 397 行；SEQUENCE。
+// Encode_FailureInfoRLC_Bearer 只读不分配；Decode_FailureInfoRLC_Bearer 可能 malloc（失败时内部已释放并清零）；Free_FailureInfoRLC_Bearer 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FailureInfoRLC_Bearer(Encoder& enc, const FailureInfoRLC_Bearer& value)
 {
     (void)value;
@@ -5826,6 +6251,10 @@ void Free_FailureInfoRLC_Bearer(FailureInfoRLC_Bearer& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FailureInfoDAPS_r16：ASN.1 FailureInfoDAPS-r16；源文件第 408 行；SEQUENCE。
+// Encode_FailureInfoDAPS_r16 只读不分配；Decode_FailureInfoDAPS_r16 可能 malloc（失败时内部已释放并清零）；Free_FailureInfoDAPS_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FailureInfoDAPS_r16(Encoder& enc, const FailureInfoDAPS_r16& value)
 {
     (void)value;
@@ -5855,6 +6284,10 @@ void Free_FailureInfoDAPS_r16(FailureInfoDAPS_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FailureInformation_v1610_IEs_NonCriticalExtension：ASN.1 nonCriticalExtension；源文件第 405 行；空 SEQUENCE{}。
+// Encode_FailureInformation_v1610_IEs_NonCriticalExtension 只读不分配；Decode_FailureInformation_v1610_IEs_NonCriticalExtension 可能 malloc（失败时内部已释放并清零）；Free_FailureInformation_v1610_IEs_NonCriticalExtension 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FailureInformation_v1610_IEs_NonCriticalExtension(Encoder& enc, const FailureInformation_v1610_IEs_NonCriticalExtension& value)
 {
     (void)value;
@@ -5872,6 +6305,10 @@ void Free_FailureInformation_v1610_IEs_NonCriticalExtension(FailureInformation_v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FailureInformation_v1610_IEs：ASN.1 FailureInformation-v1610-IEs；源文件第 403 行；SEQUENCE。
+// Encode_FailureInformation_v1610_IEs 只读不分配；Decode_FailureInformation_v1610_IEs 可能 malloc（失败时内部已释放并清零）；Free_FailureInformation_v1610_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FailureInformation_v1610_IEs(Encoder& enc, const FailureInformation_v1610_IEs& value)
 {
     (void)value;
@@ -5919,6 +6356,10 @@ void Free_FailureInformation_v1610_IEs(FailureInformation_v1610_IEs& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FailureInformation_IEs：ASN.1 FailureInformation-IEs；源文件第 391 行；SEQUENCE。
+// Encode_FailureInformation_IEs 只读不分配；Decode_FailureInformation_IEs 可能 malloc（失败时内部已释放并清零）；Free_FailureInformation_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FailureInformation_IEs(Encoder& enc, const FailureInformation_IEs& value)
 {
     (void)value;
@@ -5984,6 +6425,10 @@ void Free_FailureInformation_IEs(FailureInformation_IEs& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FailureInformation_CriticalExtensionsFuture：ASN.1 criticalExtensions/criticalExtensionsFuture；源文件第 387 行；空 SEQUENCE{}。
+// Encode_FailureInformation_CriticalExtensionsFuture 只读不分配；Decode_FailureInformation_CriticalExtensionsFuture 可能 malloc（失败时内部已释放并清零）；Free_FailureInformation_CriticalExtensionsFuture 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FailureInformation_CriticalExtensionsFuture(Encoder& enc, const FailureInformation_CriticalExtensionsFuture& value)
 {
     (void)value;
@@ -6001,6 +6446,10 @@ void Free_FailureInformation_CriticalExtensionsFuture(FailureInformation_Critica
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FailureInformation_CriticalExtensions：ASN.1 criticalExtensions；源文件第 385 行；CHOICE。
+// Encode_FailureInformation_CriticalExtensions 只读不分配；Decode_FailureInformation_CriticalExtensions 可能 malloc（失败时内部已释放并清零）；Free_FailureInformation_CriticalExtensions 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FailureInformation_CriticalExtensions(Encoder& enc, const FailureInformation_CriticalExtensions& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -6061,6 +6510,10 @@ void Free_FailureInformation_CriticalExtensions(FailureInformation_CriticalExten
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FailureInformation：ASN.1 FailureInformation；源文件第 384 行；SEQUENCE。
+// Encode_FailureInformation 只读不分配；Decode_FailureInformation 可能 malloc（失败时内部已释放并清零）；Free_FailureInformation 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FailureInformation(Encoder& enc, const FailureInformation& value)
 {
     (void)value;
@@ -6089,6 +6542,10 @@ void Free_FailureInformation(FailureInformation& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IAB_IP_AddressNumReq_r16：ASN.1 IAB-IP-AddressNumReq-r16；源文件第 447 行；SEQUENCE。
+// Encode_IAB_IP_AddressNumReq_r16 只读不分配；Decode_IAB_IP_AddressNumReq_r16 可能 malloc（失败时内部已释放并清零）；Free_IAB_IP_AddressNumReq_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IAB_IP_AddressNumReq_r16(Encoder& enc, const IAB_IP_AddressNumReq_r16& value)
 {
     (void)value;
@@ -6171,6 +6628,10 @@ void Free_IAB_IP_AddressNumReq_r16(IAB_IP_AddressNumReq_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IAB_IP_AddressPrefixReq_r16：ASN.1 IAB-IP-AddressPrefixReq-r16；源文件第 455 行；SEQUENCE。
+// Encode_IAB_IP_AddressPrefixReq_r16 只读不分配；Decode_IAB_IP_AddressPrefixReq_r16 可能 malloc（失败时内部已释放并清零）；Free_IAB_IP_AddressPrefixReq_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IAB_IP_AddressPrefixReq_r16(Encoder& enc, const IAB_IP_AddressPrefixReq_r16& value)
 {
     (void)value;
@@ -6245,6 +6706,10 @@ void Free_IAB_IP_AddressPrefixReq_r16(IAB_IP_AddressPrefixReq_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Request_r16_Iab_IPv6_AddressReq_r16：ASN.1 ip-InfoType-r16/iab-IP-Request-r16/iab-IPv6-AddressReq-r16；源文件第 427 行；CHOICE。
+// Encode_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Request_r16_Iab_IPv6_AddressReq_r16 只读不分配；Decode_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Request_r16_Iab_IPv6_AddressReq_r16 可能 malloc（失败时内部已释放并清零）；Free_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Request_r16_Iab_IPv6_AddressReq_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Request_r16_Iab_IPv6_AddressReq_r16(Encoder& enc, const IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Request_r16_Iab_IPv6_AddressReq_r16& value)
 {
     const std::int64_t choice_index = (std::int64_t)(value.tag);
@@ -6349,6 +6814,10 @@ void Free_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Request_r16_Iab_IPv
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Request_r16：ASN.1 ip-InfoType-r16/iab-IP-Request-r16；源文件第 425 行；SEQUENCE。
+// Encode_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Request_r16 只读不分配；Decode_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Request_r16 可能 malloc（失败时内部已释放并清零）；Free_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Request_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Request_r16(Encoder& enc, const IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Request_r16& value)
 {
     (void)value;
@@ -6396,6 +6865,10 @@ void Free_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Request_r16(IABOthe
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IAB_IP_AddressAndTraffic_r16：ASN.1 IAB-IP-AddressAndTraffic-r16；源文件第 463 行；SEQUENCE。
+// Encode_IAB_IP_AddressAndTraffic_r16 只读不分配；Decode_IAB_IP_AddressAndTraffic_r16 可能 malloc（失败时内部已释放并清零）；Free_IAB_IP_AddressAndTraffic_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IAB_IP_AddressAndTraffic_r16(Encoder& enc, const IAB_IP_AddressAndTraffic_r16& value)
 {
     (void)value;
@@ -6551,6 +7024,10 @@ void Free_IAB_IP_AddressAndTraffic_r16(IAB_IP_AddressAndTraffic_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IAB_IP_Address_r16：ASN.1 IAB-IP-Address-r16；源文件第 21495 行；CHOICE。
+// Encode_IAB_IP_Address_r16 只读不分配；Decode_IAB_IP_Address_r16 可能 malloc（失败时内部已释放并清零）；Free_IAB_IP_Address_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IAB_IP_Address_r16(Encoder& enc, const IAB_IP_Address_r16& value)
 {
     const std::int64_t choice_index = (std::int64_t)(value.tag);
@@ -6680,6 +7157,10 @@ void Free_IAB_IP_Address_r16(IAB_IP_Address_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IAB_IP_PrefixAndTraffic_r16：ASN.1 IAB-IP-PrefixAndTraffic-r16；源文件第 470 行；SEQUENCE。
+// Encode_IAB_IP_PrefixAndTraffic_r16 只读不分配；Decode_IAB_IP_PrefixAndTraffic_r16 可能 malloc（失败时内部已释放并清零）；Free_IAB_IP_PrefixAndTraffic_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IAB_IP_PrefixAndTraffic_r16(Encoder& enc, const IAB_IP_PrefixAndTraffic_r16& value)
 {
     (void)value;
@@ -6751,6 +7232,10 @@ void Free_IAB_IP_PrefixAndTraffic_r16(IAB_IP_PrefixAndTraffic_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Report_r16_Iab_IPv6_Report_r16：ASN.1 ip-InfoType-r16/iab-IP-Report-r16/iab-IPv6-Report-r16；源文件第 435 行；CHOICE。
+// Encode_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Report_r16_Iab_IPv6_Report_r16 只读不分配；Decode_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Report_r16_Iab_IPv6_Report_r16 可能 malloc（失败时内部已释放并清零）；Free_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Report_r16_Iab_IPv6_Report_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Report_r16_Iab_IPv6_Report_r16(Encoder& enc, const IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Report_r16_Iab_IPv6_Report_r16& value)
 {
     const std::int64_t choice_index = (std::int64_t)(value.tag);
@@ -6855,6 +7340,10 @@ void Free_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Report_r16_Iab_IPv6
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Report_r16：ASN.1 ip-InfoType-r16/iab-IP-Report-r16；源文件第 433 行；SEQUENCE。
+// Encode_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Report_r16 只读不分配；Decode_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Report_r16 可能 malloc（失败时内部已释放并清零）；Free_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Report_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Report_r16(Encoder& enc, const IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Report_r16& value)
 {
     (void)value;
@@ -6902,6 +7391,10 @@ void Free_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Report_r16(IABOther
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IABOtherInformation_r16_IEs_Ip_InfoType_r16：ASN.1 ip-InfoType-r16；源文件第 424 行；CHOICE。
+// Encode_IABOtherInformation_r16_IEs_Ip_InfoType_r16 只读不分配；Decode_IABOtherInformation_r16_IEs_Ip_InfoType_r16 可能 malloc（失败时内部已释放并清零）；Free_IABOtherInformation_r16_IEs_Ip_InfoType_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IABOtherInformation_r16_IEs_Ip_InfoType_r16(Encoder& enc, const IABOtherInformation_r16_IEs_Ip_InfoType_r16& value)
 {
     const std::int64_t choice_index = (std::int64_t)(value.tag);
@@ -7006,6 +7499,10 @@ void Free_IABOtherInformation_r16_IEs_Ip_InfoType_r16(IABOtherInformation_r16_IE
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IABOtherInformation_r16_IEs_NonCriticalExtension：ASN.1 nonCriticalExtension；源文件第 444 行；空 SEQUENCE{}。
+// Encode_IABOtherInformation_r16_IEs_NonCriticalExtension 只读不分配；Decode_IABOtherInformation_r16_IEs_NonCriticalExtension 可能 malloc（失败时内部已释放并清零）；Free_IABOtherInformation_r16_IEs_NonCriticalExtension 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IABOtherInformation_r16_IEs_NonCriticalExtension(Encoder& enc, const IABOtherInformation_r16_IEs_NonCriticalExtension& value)
 {
     (void)value;
@@ -7023,6 +7520,10 @@ void Free_IABOtherInformation_r16_IEs_NonCriticalExtension(IABOtherInformation_r
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IABOtherInformation_r16_IEs：ASN.1 IABOtherInformation-r16-IEs；源文件第 423 行；SEQUENCE。
+// Encode_IABOtherInformation_r16_IEs 只读不分配；Decode_IABOtherInformation_r16_IEs 可能 malloc（失败时内部已释放并清零）；Free_IABOtherInformation_r16_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IABOtherInformation_r16_IEs(Encoder& enc, const IABOtherInformation_r16_IEs& value)
 {
     (void)value;
@@ -7081,6 +7582,10 @@ void Free_IABOtherInformation_r16_IEs(IABOtherInformation_r16_IEs& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IABOtherInformation_r16_CriticalExtensionsFuture：ASN.1 criticalExtensions/criticalExtensionsFuture；源文件第 419 行；空 SEQUENCE{}。
+// Encode_IABOtherInformation_r16_CriticalExtensionsFuture 只读不分配；Decode_IABOtherInformation_r16_CriticalExtensionsFuture 可能 malloc（失败时内部已释放并清零）；Free_IABOtherInformation_r16_CriticalExtensionsFuture 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IABOtherInformation_r16_CriticalExtensionsFuture(Encoder& enc, const IABOtherInformation_r16_CriticalExtensionsFuture& value)
 {
     (void)value;
@@ -7098,6 +7603,10 @@ void Free_IABOtherInformation_r16_CriticalExtensionsFuture(IABOtherInformation_r
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IABOtherInformation_r16_CriticalExtensions：ASN.1 criticalExtensions；源文件第 417 行；CHOICE。
+// Encode_IABOtherInformation_r16_CriticalExtensions 只读不分配；Decode_IABOtherInformation_r16_CriticalExtensions 可能 malloc（失败时内部已释放并清零）；Free_IABOtherInformation_r16_CriticalExtensions 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IABOtherInformation_r16_CriticalExtensions(Encoder& enc, const IABOtherInformation_r16_CriticalExtensions& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -7158,6 +7667,10 @@ void Free_IABOtherInformation_r16_CriticalExtensions(IABOtherInformation_r16_Cri
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IABOtherInformation_r16：ASN.1 IABOtherInformation-r16；源文件第 415 行；SEQUENCE。
+// Encode_IABOtherInformation_r16 只读不分配；Decode_IABOtherInformation_r16 可能 malloc（失败时内部已释放并清零）；Free_IABOtherInformation_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IABOtherInformation_r16(Encoder& enc, const IABOtherInformation_r16& value)
 {
     (void)value;
@@ -7192,6 +7705,10 @@ void Free_IABOtherInformation_r16(IABOtherInformation_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FailureReportIndirectPath_r18：ASN.1 FailureReportIndirectPath-r18；源文件第 493 行；SEQUENCE。
+// Encode_FailureReportIndirectPath_r18 只读不分配；Decode_FailureReportIndirectPath_r18 可能 malloc（失败时内部已释放并清零）；Free_FailureReportIndirectPath_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FailureReportIndirectPath_r18(Encoder& enc, const FailureReportIndirectPath_r18& value)
 {
     (void)value;
@@ -7304,6 +7821,10 @@ void Free_FailureReportIndirectPath_r18(FailureReportIndirectPath_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IndirectPathFailureInformation_r18_IEs_NonCriticalExtension：ASN.1 nonCriticalExtension；源文件第 490 行；空 SEQUENCE{}。
+// Encode_IndirectPathFailureInformation_r18_IEs_NonCriticalExtension 只读不分配；Decode_IndirectPathFailureInformation_r18_IEs_NonCriticalExtension 可能 malloc（失败时内部已释放并清零）；Free_IndirectPathFailureInformation_r18_IEs_NonCriticalExtension 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IndirectPathFailureInformation_r18_IEs_NonCriticalExtension(Encoder& enc, const IndirectPathFailureInformation_r18_IEs_NonCriticalExtension& value)
 {
     (void)value;
@@ -7321,6 +7842,10 @@ void Free_IndirectPathFailureInformation_r18_IEs_NonCriticalExtension(IndirectPa
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IndirectPathFailureInformation_r18_IEs：ASN.1 IndirectPathFailureInformation-r18-IEs；源文件第 487 行；SEQUENCE。
+// Encode_IndirectPathFailureInformation_r18_IEs 只读不分配；Decode_IndirectPathFailureInformation_r18_IEs 可能 malloc（失败时内部已释放并清零）；Free_IndirectPathFailureInformation_r18_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IndirectPathFailureInformation_r18_IEs(Encoder& enc, const IndirectPathFailureInformation_r18_IEs& value)
 {
     (void)value;
@@ -7386,6 +7911,10 @@ void Free_IndirectPathFailureInformation_r18_IEs(IndirectPathFailureInformation_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IndirectPathFailureInformation_r18_CriticalExtensionsFuture：ASN.1 criticalExtensions/criticalExtensionsFuture；源文件第 483 行；空 SEQUENCE{}。
+// Encode_IndirectPathFailureInformation_r18_CriticalExtensionsFuture 只读不分配；Decode_IndirectPathFailureInformation_r18_CriticalExtensionsFuture 可能 malloc（失败时内部已释放并清零）；Free_IndirectPathFailureInformation_r18_CriticalExtensionsFuture 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IndirectPathFailureInformation_r18_CriticalExtensionsFuture(Encoder& enc, const IndirectPathFailureInformation_r18_CriticalExtensionsFuture& value)
 {
     (void)value;
@@ -7403,6 +7932,10 @@ void Free_IndirectPathFailureInformation_r18_CriticalExtensionsFuture(IndirectPa
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IndirectPathFailureInformation_r18_CriticalExtensions：ASN.1 criticalExtensions；源文件第 481 行；CHOICE。
+// Encode_IndirectPathFailureInformation_r18_CriticalExtensions 只读不分配；Decode_IndirectPathFailureInformation_r18_CriticalExtensions 可能 malloc（失败时内部已释放并清零）；Free_IndirectPathFailureInformation_r18_CriticalExtensions 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IndirectPathFailureInformation_r18_CriticalExtensions(Encoder& enc, const IndirectPathFailureInformation_r18_CriticalExtensions& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -7463,6 +7996,10 @@ void Free_IndirectPathFailureInformation_r18_CriticalExtensions(IndirectPathFail
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// IndirectPathFailureInformation_r18：ASN.1 IndirectPathFailureInformation-r18；源文件第 480 行；SEQUENCE。
+// Encode_IndirectPathFailureInformation_r18 只读不分配；Decode_IndirectPathFailureInformation_r18 可能 malloc（失败时内部已释放并清零）；Free_IndirectPathFailureInformation_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_IndirectPathFailureInformation_r18(Encoder& enc, const IndirectPathFailureInformation_r18& value)
 {
     (void)value;
@@ -7491,6 +8028,10 @@ void Free_IndirectPathFailureInformation_r18(IndirectPathFailureInformation_r18&
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EUTRA_RSTD_InfoList：ASN.1 EUTRA-RSTD-InfoList；源文件第 7078 行；SEQUENCE OF。
+// Encode_EUTRA_RSTD_InfoList 只读不分配；Decode_EUTRA_RSTD_InfoList 可能 malloc（失败时内部已释放并清零）；Free_EUTRA_RSTD_InfoList 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_RSTD_InfoList(Encoder& enc, const EUTRA_RSTD_InfoList& value)
 {
     (void)value;
@@ -7536,6 +8077,10 @@ void Free_EUTRA_RSTD_InfoList(EUTRA_RSTD_InfoList& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// NR_PRS_MeasurementInfoList_r16：ASN.1 NR-PRS-MeasurementInfoList-r16；源文件第 7086 行；SEQUENCE OF。
+// Encode_NR_PRS_MeasurementInfoList_r16 只读不分配；Decode_NR_PRS_MeasurementInfoList_r16 可能 malloc（失败时内部已释放并清零）；Free_NR_PRS_MeasurementInfoList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_NR_PRS_MeasurementInfoList_r16(Encoder& enc, const NR_PRS_MeasurementInfoList_r16& value)
 {
     (void)value;
@@ -7581,6 +8126,10 @@ void Free_NR_PRS_MeasurementInfoList_r16(NR_PRS_MeasurementInfoList_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LocationMeasurementInfo：ASN.1 LocationMeasurementInfo；源文件第 7071 行；CHOICE。
+// Encode_LocationMeasurementInfo 只读不分配；Decode_LocationMeasurementInfo 可能 malloc（失败时内部已释放并清零）；Free_LocationMeasurementInfo 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LocationMeasurementInfo(Encoder& enc, const LocationMeasurementInfo& value)
 {
     const std::int64_t choice_index = (std::int64_t)(value.tag);
@@ -7691,6 +8240,10 @@ void Free_LocationMeasurementInfo(LocationMeasurementInfo& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SetupRelease_LocationMeasurementInfo：ASN.1 SetupRelease<LocationMeasurementInfo>；源文件第 515 行；CHOICE。
+// Encode_SetupRelease_LocationMeasurementInfo 只读不分配；Decode_SetupRelease_LocationMeasurementInfo 可能 malloc（失败时内部已释放并清零）；Free_SetupRelease_LocationMeasurementInfo 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SetupRelease_LocationMeasurementInfo(Encoder& enc, const SetupRelease_LocationMeasurementInfo& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -7750,6 +8303,10 @@ void Free_SetupRelease_LocationMeasurementInfo(SetupRelease_LocationMeasurementI
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LocationMeasurementIndication_IEs_NonCriticalExtension：ASN.1 nonCriticalExtension；源文件第 517 行；空 SEQUENCE{}。
+// Encode_LocationMeasurementIndication_IEs_NonCriticalExtension 只读不分配；Decode_LocationMeasurementIndication_IEs_NonCriticalExtension 可能 malloc（失败时内部已释放并清零）；Free_LocationMeasurementIndication_IEs_NonCriticalExtension 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LocationMeasurementIndication_IEs_NonCriticalExtension(Encoder& enc, const LocationMeasurementIndication_IEs_NonCriticalExtension& value)
 {
     (void)value;
@@ -7767,6 +8324,10 @@ void Free_LocationMeasurementIndication_IEs_NonCriticalExtension(LocationMeasure
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LocationMeasurementIndication_IEs：ASN.1 LocationMeasurementIndication-IEs；源文件第 514 行；SEQUENCE。
+// Encode_LocationMeasurementIndication_IEs 只读不分配；Decode_LocationMeasurementIndication_IEs 可能 malloc（失败时内部已释放并清零）；Free_LocationMeasurementIndication_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LocationMeasurementIndication_IEs(Encoder& enc, const LocationMeasurementIndication_IEs& value)
 {
     (void)value;
@@ -7825,6 +8386,10 @@ void Free_LocationMeasurementIndication_IEs(LocationMeasurementIndication_IEs& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LocationMeasurementIndication_CriticalExtensionsFuture：ASN.1 criticalExtensions/criticalExtensionsFuture；源文件第 510 行；空 SEQUENCE{}。
+// Encode_LocationMeasurementIndication_CriticalExtensionsFuture 只读不分配；Decode_LocationMeasurementIndication_CriticalExtensionsFuture 可能 malloc（失败时内部已释放并清零）；Free_LocationMeasurementIndication_CriticalExtensionsFuture 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LocationMeasurementIndication_CriticalExtensionsFuture(Encoder& enc, const LocationMeasurementIndication_CriticalExtensionsFuture& value)
 {
     (void)value;
@@ -7842,6 +8407,10 @@ void Free_LocationMeasurementIndication_CriticalExtensionsFuture(LocationMeasure
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LocationMeasurementIndication_CriticalExtensions：ASN.1 criticalExtensions；源文件第 508 行；CHOICE。
+// Encode_LocationMeasurementIndication_CriticalExtensions 只读不分配；Decode_LocationMeasurementIndication_CriticalExtensions 可能 malloc（失败时内部已释放并清零）；Free_LocationMeasurementIndication_CriticalExtensions 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LocationMeasurementIndication_CriticalExtensions(Encoder& enc, const LocationMeasurementIndication_CriticalExtensions& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -7902,6 +8471,10 @@ void Free_LocationMeasurementIndication_CriticalExtensions(LocationMeasurementIn
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LocationMeasurementIndication：ASN.1 LocationMeasurementIndication；源文件第 507 行；SEQUENCE。
+// Encode_LocationMeasurementIndication 只读不分配；Decode_LocationMeasurementIndication 可能 malloc（失败时内部已释放并清零）；Free_LocationMeasurementIndication 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LocationMeasurementIndication(Encoder& enc, const LocationMeasurementIndication& value)
 {
     (void)value;
@@ -7930,6 +8503,10 @@ void Free_LocationMeasurementIndication(LocationMeasurementIndication& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CAG_ConfigList_r18：ASN.1 CAG-ConfigList-r18；源文件第 21363 行；SEQUENCE OF。
+// Encode_CAG_ConfigList_r18 只读不分配；Decode_CAG_ConfigList_r18 可能 malloc（失败时内部已释放并清零）；Free_CAG_ConfigList_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CAG_ConfigList_r18(Encoder& enc, const CAG_ConfigList_r18& value)
 {
     (void)value;
@@ -7975,6 +8552,10 @@ void Free_CAG_ConfigList_r18(CAG_ConfigList_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SNPN_ConfigCellIdList_r18：ASN.1 SNPN-ConfigCellIdList-r18；源文件第 21376 行；SEQUENCE OF。
+// Encode_SNPN_ConfigCellIdList_r18 只读不分配；Decode_SNPN_ConfigCellIdList_r18 可能 malloc（失败时内部已释放并清零）；Free_SNPN_ConfigCellIdList_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SNPN_ConfigCellIdList_r18(Encoder& enc, const SNPN_ConfigCellIdList_r18& value)
 {
     (void)value;
@@ -8020,6 +8601,10 @@ void Free_SNPN_ConfigCellIdList_r18(SNPN_ConfigCellIdList_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SNPN_ConfigTAIList_r18：ASN.1 SNPN-ConfigTAIList-r18；源文件第 21383 行；SEQUENCE OF。
+// Encode_SNPN_ConfigTAIList_r18 只读不分配；Decode_SNPN_ConfigTAIList_r18 可能 malloc（失败时内部已释放并清零）；Free_SNPN_ConfigTAIList_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SNPN_ConfigTAIList_r18(Encoder& enc, const SNPN_ConfigTAIList_r18& value)
 {
     (void)value;
@@ -8065,6 +8650,10 @@ void Free_SNPN_ConfigTAIList_r18(SNPN_ConfigTAIList_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SNPN_ConfigIDList_r18：ASN.1 SNPN-ConfigIDList-r18；源文件第 21390 行；SEQUENCE OF。
+// Encode_SNPN_ConfigIDList_r18 只读不分配；Decode_SNPN_ConfigIDList_r18 可能 malloc（失败时内部已释放并清零）；Free_SNPN_ConfigIDList_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SNPN_ConfigIDList_r18(Encoder& enc, const SNPN_ConfigIDList_r18& value)
 {
     (void)value;
@@ -8110,6 +8699,10 @@ void Free_SNPN_ConfigIDList_r18(SNPN_ConfigIDList_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SNPN_ConfigList_r18：ASN.1 SNPN-ConfigList-r18；源文件第 21370 行；CHOICE。
+// Encode_SNPN_ConfigList_r18 只读不分配；Decode_SNPN_ConfigList_r18 可能 malloc（失败时内部已释放并清零）；Free_SNPN_ConfigList_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SNPN_ConfigList_r18(Encoder& enc, const SNPN_ConfigList_r18& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 2);
@@ -8180,6 +8773,10 @@ void Free_SNPN_ConfigList_r18(SNPN_ConfigList_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// AreaConfiguration_v1800：ASN.1 AreaConfiguration-v1800；源文件第 21337 行；SEQUENCE。
+// Encode_AreaConfiguration_v1800 只读不分配；Decode_AreaConfiguration_v1800 可能 malloc（失败时内部已释放并清零）；Free_AreaConfiguration_v1800 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_AreaConfiguration_v1800(Encoder& enc, const AreaConfiguration_v1800& value)
 {
     (void)value;
@@ -8227,6 +8824,10 @@ void Free_AreaConfiguration_v1800(AreaConfiguration_v1800& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LoggedMeasurementConfiguration_v1800_IEs_NonCriticalExtension：ASN.1 nonCriticalExtension；源文件第 559 行；空 SEQUENCE{}。
+// Encode_LoggedMeasurementConfiguration_v1800_IEs_NonCriticalExtension 只读不分配；Decode_LoggedMeasurementConfiguration_v1800_IEs_NonCriticalExtension 可能 malloc（失败时内部已释放并清零）；Free_LoggedMeasurementConfiguration_v1800_IEs_NonCriticalExtension 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LoggedMeasurementConfiguration_v1800_IEs_NonCriticalExtension(Encoder& enc, const LoggedMeasurementConfiguration_v1800_IEs_NonCriticalExtension& value)
 {
     (void)value;
@@ -8244,6 +8845,10 @@ void Free_LoggedMeasurementConfiguration_v1800_IEs_NonCriticalExtension(LoggedMe
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LoggedMeasurementConfiguration_v1800_IEs：ASN.1 LoggedMeasurementConfiguration-v1800-IEs；源文件第 557 行；SEQUENCE。
+// Encode_LoggedMeasurementConfiguration_v1800_IEs 只读不分配；Decode_LoggedMeasurementConfiguration_v1800_IEs 可能 malloc（失败时内部已释放并清零）；Free_LoggedMeasurementConfiguration_v1800_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LoggedMeasurementConfiguration_v1800_IEs(Encoder& enc, const LoggedMeasurementConfiguration_v1800_IEs& value)
 {
     (void)value;
@@ -8291,6 +8896,10 @@ void Free_LoggedMeasurementConfiguration_v1800_IEs(LoggedMeasurementConfiguratio
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CellGlobalIdList_r16：ASN.1 CellGlobalIdList-r16；源文件第 21353 行；SEQUENCE OF。
+// Encode_CellGlobalIdList_r16 只读不分配；Decode_CellGlobalIdList_r16 可能 malloc（失败时内部已释放并清零）；Free_CellGlobalIdList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CellGlobalIdList_r16(Encoder& enc, const CellGlobalIdList_r16& value)
 {
     (void)value;
@@ -8336,6 +8945,10 @@ void Free_CellGlobalIdList_r16(CellGlobalIdList_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// TrackingAreaCodeList_r16：ASN.1 TrackingAreaCodeList-r16；源文件第 21355 行；SEQUENCE OF。
+// Encode_TrackingAreaCodeList_r16 只读不分配；Decode_TrackingAreaCodeList_r16 可能 malloc（失败时内部已释放并清零）；Free_TrackingAreaCodeList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_TrackingAreaCodeList_r16(Encoder& enc, const TrackingAreaCodeList_r16& value)
 {
     (void)value;
@@ -8388,6 +9001,10 @@ void Free_TrackingAreaCodeList_r16(TrackingAreaCodeList_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// TrackingAreaIdentityList_r16：ASN.1 TrackingAreaIdentityList-r16；源文件第 21357 行；SEQUENCE OF。
+// Encode_TrackingAreaIdentityList_r16 只读不分配；Decode_TrackingAreaIdentityList_r16 可能 malloc（失败时内部已释放并清零）；Free_TrackingAreaIdentityList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_TrackingAreaIdentityList_r16(Encoder& enc, const TrackingAreaIdentityList_r16& value)
 {
     (void)value;
@@ -8433,6 +9050,10 @@ void Free_TrackingAreaIdentityList_r16(TrackingAreaIdentityList_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// AreaConfig_r16：ASN.1 AreaConfig-r16；源文件第 21342 行；CHOICE。
+// Encode_AreaConfig_r16 只读不分配；Decode_AreaConfig_r16 可能 malloc（失败时内部已释放并清零）；Free_AreaConfig_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_AreaConfig_r16(Encoder& enc, const AreaConfig_r16& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 2);
@@ -8503,6 +9124,10 @@ void Free_AreaConfig_r16(AreaConfig_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// AreaConfiguration_r17：ASN.1 AreaConfiguration-r17；源文件第 21332 行；SEQUENCE。
+// Encode_AreaConfiguration_r17 只读不分配；Decode_AreaConfiguration_r17 可能 malloc（失败时内部已释放并清零）；Free_AreaConfiguration_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_AreaConfiguration_r17(Encoder& enc, const AreaConfiguration_r17& value)
 {
     (void)value;
@@ -8571,6 +9196,10 @@ void Free_AreaConfiguration_r17(AreaConfiguration_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LoggedMeasurementConfiguration_v1700_IEs：ASN.1 LoggedMeasurementConfiguration-v1700-IEs；源文件第 550 行；SEQUENCE。
+// Encode_LoggedMeasurementConfiguration_v1700_IEs 只读不分配；Decode_LoggedMeasurementConfiguration_v1700_IEs 可能 malloc（失败时内部已释放并清零）；Free_LoggedMeasurementConfiguration_v1700_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LoggedMeasurementConfiguration_v1700_IEs(Encoder& enc, const LoggedMeasurementConfiguration_v1700_IEs& value)
 {
     (void)value;
@@ -8640,6 +9269,10 @@ void Free_LoggedMeasurementConfiguration_v1700_IEs(LoggedMeasurementConfiguratio
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PLMN_IdentityList2_r16：ASN.1 PLMN-IdentityList2-r16；源文件第 9879 行；SEQUENCE OF。
+// Encode_PLMN_IdentityList2_r16 只读不分配；Decode_PLMN_IdentityList2_r16 可能 malloc（失败时内部已释放并清零）；Free_PLMN_IdentityList2_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PLMN_IdentityList2_r16(Encoder& enc, const PLMN_IdentityList2_r16& value)
 {
     (void)value;
@@ -8685,6 +9318,10 @@ void Free_PLMN_IdentityList2_r16(PLMN_IdentityList2_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// AreaConfiguration_r16：ASN.1 AreaConfiguration-r16；源文件第 21327 行；SEQUENCE。
+// Encode_AreaConfiguration_r16 只读不分配；Decode_AreaConfiguration_r16 可能 malloc（失败时内部已释放并清零）；Free_AreaConfiguration_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_AreaConfiguration_r16(Encoder& enc, const AreaConfiguration_r16& value)
 {
     (void)value;
@@ -8746,6 +9383,10 @@ void Free_AreaConfiguration_r16(AreaConfiguration_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MCC：ASN.1 MCC；源文件第 9847 行；SEQUENCE OF。
+// Encode_MCC 只读不分配；Decode_MCC 可能 malloc（失败时内部已释放并清零）；Free_MCC 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MCC(Encoder& enc, const MCC& value)
 {
     (void)value;
@@ -8795,6 +9436,10 @@ void Free_MCC(MCC& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MNC：ASN.1 MNC；源文件第 9849 行；SEQUENCE OF。
+// Encode_MNC 只读不分配；Decode_MNC 可能 malloc（失败时内部已释放并清零）；Free_MNC 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MNC(Encoder& enc, const MNC& value)
 {
     (void)value;
@@ -8841,6 +9486,10 @@ void Free_MNC(MNC& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PLMN_Identity：ASN.1 PLMN-Identity；源文件第 9842 行；SEQUENCE。
+// Encode_PLMN_Identity 只读不分配；Decode_PLMN_Identity 可能 malloc（失败时内部已释放并清零）；Free_PLMN_Identity 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PLMN_Identity(Encoder& enc, const PLMN_Identity& value)
 {
     (void)value;
@@ -8881,6 +9530,10 @@ void Free_PLMN_Identity(PLMN_Identity& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// TraceReference_r16：ASN.1 TraceReference-r16；源文件第 21809 行；SEQUENCE。
+// Encode_TraceReference_r16 只读不分配；Decode_TraceReference_r16 可能 malloc（失败时内部已释放并清零）；Free_TraceReference_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_TraceReference_r16(Encoder& enc, const TraceReference_r16& value)
 {
     (void)value;
@@ -8921,6 +9574,10 @@ void Free_TraceReference_r16(TraceReference_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BT_NameList_r16：ASN.1 BT-NameList-r16；源文件第 21400 行；SEQUENCE OF。
+// Encode_BT_NameList_r16 只读不分配；Decode_BT_NameList_r16 可能 malloc（失败时内部已释放并清零）；Free_BT_NameList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BT_NameList_r16(Encoder& enc, const BT_NameList_r16& value)
 {
     (void)value;
@@ -8972,6 +9629,10 @@ void Free_BT_NameList_r16(BT_NameList_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SetupRelease_BT_NameList_r16：ASN.1 SetupRelease<BT-NameList-r16>；源文件第 537 行；CHOICE。
+// Encode_SetupRelease_BT_NameList_r16 只读不分配；Decode_SetupRelease_BT_NameList_r16 可能 malloc（失败时内部已释放并清零）；Free_SetupRelease_BT_NameList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SetupRelease_BT_NameList_r16(Encoder& enc, const SetupRelease_BT_NameList_r16& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -9031,6 +9692,10 @@ void Free_SetupRelease_BT_NameList_r16(SetupRelease_BT_NameList_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// WLAN_NameList_r16：ASN.1 WLAN-NameList-r16；源文件第 21887 行；SEQUENCE OF。
+// Encode_WLAN_NameList_r16 只读不分配；Decode_WLAN_NameList_r16 可能 malloc（失败时内部已释放并清零）；Free_WLAN_NameList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_WLAN_NameList_r16(Encoder& enc, const WLAN_NameList_r16& value)
 {
     (void)value;
@@ -9082,6 +9747,10 @@ void Free_WLAN_NameList_r16(WLAN_NameList_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SetupRelease_WLAN_NameList_r16：ASN.1 SetupRelease<WLAN-NameList-r16>；源文件第 538 行；CHOICE。
+// Encode_SetupRelease_WLAN_NameList_r16 只读不分配；Decode_SetupRelease_WLAN_NameList_r16 可能 malloc（失败时内部已释放并清零）；Free_SetupRelease_WLAN_NameList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SetupRelease_WLAN_NameList_r16(Encoder& enc, const SetupRelease_WLAN_NameList_r16& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -9141,6 +9810,10 @@ void Free_SetupRelease_WLAN_NameList_r16(SetupRelease_WLAN_NameList_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// Sensor_NameList_r16：ASN.1 Sensor-NameList-r16；源文件第 21799 行；SEQUENCE。
+// Encode_Sensor_NameList_r16 只读不分配；Decode_Sensor_NameList_r16 可能 malloc（失败时内部已释放并清零）；Free_Sensor_NameList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_Sensor_NameList_r16(Encoder& enc, const Sensor_NameList_r16& value)
 {
     (void)value;
@@ -9197,6 +9870,10 @@ void Free_Sensor_NameList_r16(Sensor_NameList_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SetupRelease_Sensor_NameList_r16：ASN.1 SetupRelease<Sensor-NameList-r16>；源文件第 539 行；CHOICE。
+// Encode_SetupRelease_Sensor_NameList_r16 只读不分配；Decode_SetupRelease_Sensor_NameList_r16 可能 malloc（失败时内部已释放并清零）；Free_SetupRelease_Sensor_NameList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SetupRelease_Sensor_NameList_r16(Encoder& enc, const SetupRelease_Sensor_NameList_r16& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -9256,6 +9933,10 @@ void Free_SetupRelease_Sensor_NameList_r16(SetupRelease_Sensor_NameList_r16& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LoggedPeriodicalReportConfig_r16：ASN.1 LoggedPeriodicalReportConfig-r16；源文件第 562 行；SEQUENCE。
+// Encode_LoggedPeriodicalReportConfig_r16 只读不分配；Decode_LoggedPeriodicalReportConfig_r16 可能 malloc（失败时内部已释放并清零）；Free_LoggedPeriodicalReportConfig_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LoggedPeriodicalReportConfig_r16(Encoder& enc, const LoggedPeriodicalReportConfig_r16& value)
 {
     (void)value;
@@ -9292,6 +9973,10 @@ void Free_LoggedPeriodicalReportConfig_r16(LoggedPeriodicalReportConfig_r16& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// MeasTriggerQuantity：ASN.1 MeasTriggerQuantity；源文件第 11694 行；CHOICE。
+// Encode_MeasTriggerQuantity 只读不分配；Decode_MeasTriggerQuantity 可能 malloc（失败时内部已释放并清零）；Free_MeasTriggerQuantity 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_MeasTriggerQuantity(Encoder& enc, const MeasTriggerQuantity& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 2);
@@ -9365,6 +10050,10 @@ void Free_MeasTriggerQuantity(MeasTriggerQuantity& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventType_r16_EventL1：ASN.1 eventL1；源文件第 575 行；SEQUENCE。
+// Encode_EventType_r16_EventL1 只读不分配；Decode_EventType_r16_EventL1 可能 malloc（失败时内部已释放并清零）；Free_EventType_r16_EventL1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventType_r16_EventL1(Encoder& enc, const EventType_r16_EventL1& value)
 {
     (void)value;
@@ -9405,6 +10094,10 @@ void Free_EventType_r16_EventL1(EventType_r16_EventL1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// EventType_r16：ASN.1 EventType-r16；源文件第 573 行；CHOICE。
+// Encode_EventType_r16 只读不分配；Decode_EventType_r16 可能 malloc（失败时内部已释放并清零）；Free_EventType_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_EventType_r16(Encoder& enc, const EventType_r16& value)
 {
     const std::int64_t choice_index = (std::int64_t)(value.tag);
@@ -9508,6 +10201,10 @@ void Free_EventType_r16(EventType_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LoggedEventTriggerConfig_r16：ASN.1 LoggedEventTriggerConfig-r16；源文件第 567 行；SEQUENCE。
+// Encode_LoggedEventTriggerConfig_r16 只读不分配；Decode_LoggedEventTriggerConfig_r16 可能 malloc（失败时内部已释放并清零）；Free_LoggedEventTriggerConfig_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LoggedEventTriggerConfig_r16(Encoder& enc, const LoggedEventTriggerConfig_r16& value)
 {
     (void)value;
@@ -9549,6 +10246,10 @@ void Free_LoggedEventTriggerConfig_r16(LoggedEventTriggerConfig_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LoggedMeasurementConfiguration_r16_IEs_ReportType：ASN.1 reportType；源文件第 541 行；CHOICE。
+// Encode_LoggedMeasurementConfiguration_r16_IEs_ReportType 只读不分配；Decode_LoggedMeasurementConfiguration_r16_IEs_ReportType 可能 malloc（失败时内部已释放并清零）；Free_LoggedMeasurementConfiguration_r16_IEs_ReportType 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LoggedMeasurementConfiguration_r16_IEs_ReportType(Encoder& enc, const LoggedMeasurementConfiguration_r16_IEs_ReportType& value)
 {
     const std::int64_t choice_index = (std::int64_t)(value.tag);
@@ -9653,6 +10354,10 @@ void Free_LoggedMeasurementConfiguration_r16_IEs_ReportType(LoggedMeasurementCon
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LoggedMeasurementConfiguration_r16_IEs：ASN.1 LoggedMeasurementConfiguration-r16-IEs；源文件第 530 行；SEQUENCE。
+// Encode_LoggedMeasurementConfiguration_r16_IEs 只读不分配；Decode_LoggedMeasurementConfiguration_r16_IEs 可能 malloc（失败时内部已释放并清零）；Free_LoggedMeasurementConfiguration_r16_IEs 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LoggedMeasurementConfiguration_r16_IEs(Encoder& enc, const LoggedMeasurementConfiguration_r16_IEs& value)
 {
     (void)value;
@@ -9818,6 +10523,10 @@ void Free_LoggedMeasurementConfiguration_r16_IEs(LoggedMeasurementConfiguration_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// LoggedMeasurementConfiguration_r16_CriticalExtensionsFuture：ASN.1 criticalExtensions/criticalExtensionsFuture；源文件第 526 行；空 SEQUENCE{}。
+// Encode_LoggedMeasurementConfiguration_r16_CriticalExtensionsFuture 只读不分配；Decode_LoggedMeasurementConfiguration_r16_CriticalExtensionsFuture 可能 malloc（失败时内部已释放并清零）；Free_LoggedMeasurementConfiguration_r16_CriticalExtensionsFuture 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_LoggedMeasurementConfiguration_r16_CriticalExtensionsFuture(Encoder& enc, const LoggedMeasurementConfiguration_r16_CriticalExtensionsFuture& value)
 {
     (void)value;

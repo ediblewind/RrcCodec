@@ -36,10 +36,10 @@ bash ci/ci-linux.sh
 | configure | 1.24 s |
 | 全量构建（Release，8 并发，含测试/示例） | 8.74 s |
 | ctest | 6.31 s |
-| 静态库 Release | 8.34 MB |
-| 共享库 Release（未 strip） | 5.24 MB |
-| `rrc_types.h` | 6.2 MB |
-| `src/generated/` | 11.1 MB |
+| 静态库 Release | 8.34 MiB |
+| 共享库 Release（未 strip） | 5.24 MiB |
+| `rrc_types.h` | 6.2 MB（5.9 MiB） |
+| `src/generated/` | 13.8 MB（13.2 MiB） |
 
 ## 说明
 
@@ -49,3 +49,4 @@ bash ci/ci-linux.sh
   Linux CI 中追加。
 - ASan/UBSan：MinGW 运行库不提供 UBSan 运行时；Linux 下可用
   `-DRRC_CODEC_ENABLE_SANITIZERS=ON` 打开。
+

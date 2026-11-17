@@ -18,6 +18,10 @@
 namespace rrc {
 namespace v1810 {
 
+// --------------------------------------------------------------------------
+// BandParameters_v1710：ASN.1 BandParameters-v1710；源文件第 14569 行；SEQUENCE。
+// Encode_BandParameters_v1710 只读不分配；Decode_BandParameters_v1710 可能 malloc（失败时内部已释放并清零）；Free_BandParameters_v1710 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParameters_v1710(Encoder& enc, const BandParameters_v1710& value)
 {
     (void)value;
@@ -53,6 +57,10 @@ void Free_BandParameters_v1710(BandParameters_v1710& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParameters_v1730：ASN.1 BandParameters-v1730；源文件第 14581 行；SEQUENCE。
+// Encode_BandParameters_v1730 只读不分配；Decode_BandParameters_v1730 可能 malloc（失败时内部已释放并清零）；Free_BandParameters_v1730 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParameters_v1730(Encoder& enc, const BandParameters_v1730& value)
 {
     (void)value;
@@ -108,6 +116,10 @@ void Free_BandParameters_v1730(BandParameters_v1730& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParameters_v1770：ASN.1 BandParameters-v1770；源文件第 14586 行；SEQUENCE。
+// Encode_BandParameters_v1770 只读不分配；Decode_BandParameters_v1770 可能 malloc（失败时内部已释放并清零）；Free_BandParameters_v1770 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParameters_v1770(Encoder& enc, const BandParameters_v1770& value)
 {
     (void)value;
@@ -201,6 +213,10 @@ void Free_BandParameters_v1770(BandParameters_v1770& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParameters_v1780_SupportedAggBW_FR2_r17：ASN.1 supportedAggBW-FR2-r17；源文件第 14594 行；SEQUENCE。
+// Encode_BandParameters_v1780_SupportedAggBW_FR2_r17 只读不分配；Decode_BandParameters_v1780_SupportedAggBW_FR2_r17 可能 malloc（失败时内部已释放并清零）；Free_BandParameters_v1780_SupportedAggBW_FR2_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParameters_v1780_SupportedAggBW_FR2_r17(Encoder& enc, const BandParameters_v1780_SupportedAggBW_FR2_r17& value)
 {
     (void)value;
@@ -248,6 +264,10 @@ void Free_BandParameters_v1780_SupportedAggBW_FR2_r17(BandParameters_v1780_Suppo
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParameters_v1780：ASN.1 BandParameters-v1780；源文件第 14591 行；SEQUENCE。
+// Encode_BandParameters_v1780 只读不分配；Decode_BandParameters_v1780 可能 malloc（失败时内部已释放并清零）；Free_BandParameters_v1780 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParameters_v1780(Encoder& enc, const BandParameters_v1780& value)
 {
     (void)value;
@@ -353,6 +373,10 @@ void Free_BandParameters_v1780(BandParameters_v1780& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParameters_v1810_Srs_AntennaSwitching8T8R_r18_DowngradeConfig_r18：ASN.1 srs-AntennaSwitching8T8R-r18/downgradeConfig-r18；源文件第 14604 行；CHOICE。
+// Encode_BandParameters_v1810_Srs_AntennaSwitching8T8R_r18_DowngradeConfig_r18 只读不分配；Decode_BandParameters_v1810_Srs_AntennaSwitching8T8R_r18_DowngradeConfig_r18 可能 malloc（失败时内部已释放并清零）；Free_BandParameters_v1810_Srs_AntennaSwitching8T8R_r18_DowngradeConfig_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParameters_v1810_Srs_AntennaSwitching8T8R_r18_DowngradeConfig_r18(Encoder& enc, const BandParameters_v1810_Srs_AntennaSwitching8T8R_r18_DowngradeConfig_r18& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -417,6 +441,10 @@ void Free_BandParameters_v1810_Srs_AntennaSwitching8T8R_r18_DowngradeConfig_r18(
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParameters_v1810_Srs_AntennaSwitching8T8R_r18：ASN.1 srs-AntennaSwitching8T8R-r18；源文件第 14602 行；SEQUENCE。
+// Encode_BandParameters_v1810_Srs_AntennaSwitching8T8R_r18 只读不分配；Decode_BandParameters_v1810_Srs_AntennaSwitching8T8R_r18 可能 malloc（失败时内部已释放并清零）；Free_BandParameters_v1810_Srs_AntennaSwitching8T8R_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParameters_v1810_Srs_AntennaSwitching8T8R_r18(Encoder& enc, const BandParameters_v1810_Srs_AntennaSwitching8T8R_r18& value)
 {
     (void)value;
@@ -470,6 +498,10 @@ void Free_BandParameters_v1810_Srs_AntennaSwitching8T8R_r18(BandParameters_v1810
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParameters_v1810：ASN.1 BandParameters-v1810；源文件第 14600 行；SEQUENCE。
+// Encode_BandParameters_v1810 只读不分配；Decode_BandParameters_v1810 可能 malloc（失败时内部已释放并清零）；Free_BandParameters_v1810 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParameters_v1810(Encoder& enc, const BandParameters_v1810& value)
 {
     (void)value;
@@ -505,6 +537,10 @@ void Free_BandParameters_v1810(BandParameters_v1810& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationListSidelinkEUTRA_NR_r16：ASN.1 BandCombinationListSidelinkEUTRA-NR-r16；源文件第 14622 行；SEQUENCE OF。
+// Encode_BandCombinationListSidelinkEUTRA_NR_r16 只读不分配；Decode_BandCombinationListSidelinkEUTRA_NR_r16 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationListSidelinkEUTRA_NR_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationListSidelinkEUTRA_NR_r16(Encoder& enc, const BandCombinationListSidelinkEUTRA_NR_r16& value)
 {
     (void)value;
@@ -582,6 +618,10 @@ void Free_BandCombinationListSidelinkEUTRA_NR_r16(BandCombinationListSidelinkEUT
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationListSidelinkEUTRA_NR_v1630：ASN.1 BandCombinationListSidelinkEUTRA-NR-v1630；源文件第 14624 行；SEQUENCE OF。
+// Encode_BandCombinationListSidelinkEUTRA_NR_v1630 只读不分配；Decode_BandCombinationListSidelinkEUTRA_NR_v1630 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationListSidelinkEUTRA_NR_v1630 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationListSidelinkEUTRA_NR_v1630(Encoder& enc, const BandCombinationListSidelinkEUTRA_NR_v1630& value)
 {
     (void)value;
@@ -659,6 +699,10 @@ void Free_BandCombinationListSidelinkEUTRA_NR_v1630(BandCombinationListSidelinkE
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationListSidelinkEUTRA_NR_v1710：ASN.1 BandCombinationListSidelinkEUTRA-NR-v1710；源文件第 14626 行；SEQUENCE OF。
+// Encode_BandCombinationListSidelinkEUTRA_NR_v1710 只读不分配；Decode_BandCombinationListSidelinkEUTRA_NR_v1710 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationListSidelinkEUTRA_NR_v1710 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationListSidelinkEUTRA_NR_v1710(Encoder& enc, const BandCombinationListSidelinkEUTRA_NR_v1710& value)
 {
     (void)value;
@@ -736,6 +780,10 @@ void Free_BandCombinationListSidelinkEUTRA_NR_v1710(BandCombinationListSidelinkE
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationParametersSidelinkEUTRA_NR_r16：ASN.1 BandCombinationParametersSidelinkEUTRA-NR-r16；源文件第 14628 行；SEQUENCE OF。
+// Encode_BandCombinationParametersSidelinkEUTRA_NR_r16 只读不分配；Decode_BandCombinationParametersSidelinkEUTRA_NR_r16 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationParametersSidelinkEUTRA_NR_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationParametersSidelinkEUTRA_NR_r16(Encoder& enc, const BandCombinationParametersSidelinkEUTRA_NR_r16& value)
 {
     (void)value;
@@ -781,6 +829,10 @@ void Free_BandCombinationParametersSidelinkEUTRA_NR_r16(BandCombinationParameter
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationParametersSidelinkEUTRA_NR_v1630：ASN.1 BandCombinationParametersSidelinkEUTRA-NR-v1630；源文件第 14630 行；SEQUENCE OF。
+// Encode_BandCombinationParametersSidelinkEUTRA_NR_v1630 只读不分配；Decode_BandCombinationParametersSidelinkEUTRA_NR_v1630 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationParametersSidelinkEUTRA_NR_v1630 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationParametersSidelinkEUTRA_NR_v1630(Encoder& enc, const BandCombinationParametersSidelinkEUTRA_NR_v1630& value)
 {
     (void)value;
@@ -826,6 +878,10 @@ void Free_BandCombinationParametersSidelinkEUTRA_NR_v1630(BandCombinationParamet
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationParametersSidelinkEUTRA_NR_v1710：ASN.1 BandCombinationParametersSidelinkEUTRA-NR-v1710；源文件第 14632 行；SEQUENCE OF。
+// Encode_BandCombinationParametersSidelinkEUTRA_NR_v1710 只读不分配；Decode_BandCombinationParametersSidelinkEUTRA_NR_v1710 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationParametersSidelinkEUTRA_NR_v1710 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationParametersSidelinkEUTRA_NR_v1710(Encoder& enc, const BandCombinationParametersSidelinkEUTRA_NR_v1710& value)
 {
     (void)value;
@@ -871,6 +927,10 @@ void Free_BandCombinationParametersSidelinkEUTRA_NR_v1710(BandCombinationParamet
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParametersSidelinkEUTRA_NR_r16_Eutra：ASN.1 eutra；源文件第 14635 行；SEQUENCE。
+// Encode_BandParametersSidelinkEUTRA_NR_r16_Eutra 只读不分配；Decode_BandParametersSidelinkEUTRA_NR_r16_Eutra 可能 malloc（失败时内部已释放并清零）；Free_BandParametersSidelinkEUTRA_NR_r16_Eutra 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParametersSidelinkEUTRA_NR_r16_Eutra(Encoder& enc, const BandParametersSidelinkEUTRA_NR_r16_Eutra& value)
 {
     (void)value;
@@ -930,6 +990,10 @@ void Free_BandParametersSidelinkEUTRA_NR_r16_Eutra(BandParametersSidelinkEUTRA_N
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParametersSidelink_r16：ASN.1 BandParametersSidelink-r16；源文件第 14682 行；SEQUENCE。
+// Encode_BandParametersSidelink_r16 只读不分配；Decode_BandParametersSidelink_r16 可能 malloc（失败时内部已释放并清零）；Free_BandParametersSidelink_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParametersSidelink_r16(Encoder& enc, const BandParametersSidelink_r16& value)
 {
     (void)value;
@@ -959,6 +1023,10 @@ void Free_BandParametersSidelink_r16(BandParametersSidelink_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParametersSidelinkEUTRA_NR_r16_Nr：ASN.1 nr；源文件第 14639 行；SEQUENCE。
+// Encode_BandParametersSidelinkEUTRA_NR_r16_Nr 只读不分配；Decode_BandParametersSidelinkEUTRA_NR_r16_Nr 可能 malloc（失败时内部已释放并清零）；Free_BandParametersSidelinkEUTRA_NR_r16_Nr 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParametersSidelinkEUTRA_NR_r16_Nr(Encoder& enc, const BandParametersSidelinkEUTRA_NR_r16_Nr& value)
 {
     (void)value;
@@ -987,6 +1055,10 @@ void Free_BandParametersSidelinkEUTRA_NR_r16_Nr(BandParametersSidelinkEUTRA_NR_r
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParametersSidelinkEUTRA_NR_r16：ASN.1 BandParametersSidelinkEUTRA-NR-r16；源文件第 14634 行；CHOICE。
+// Encode_BandParametersSidelinkEUTRA_NR_r16 只读不分配；Decode_BandParametersSidelinkEUTRA_NR_r16 可能 malloc（失败时内部已释放并清零）；Free_BandParametersSidelinkEUTRA_NR_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParametersSidelinkEUTRA_NR_r16(Encoder& enc, const BandParametersSidelinkEUTRA_NR_r16& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -1047,6 +1119,10 @@ void Free_BandParametersSidelinkEUTRA_NR_r16(BandParametersSidelinkEUTRA_NR_r16&
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParametersSidelinkEUTRA_NR_v1630_Nr：ASN.1 nr；源文件第 14646 行；SEQUENCE。
+// Encode_BandParametersSidelinkEUTRA_NR_v1630_Nr 只读不分配；Decode_BandParametersSidelinkEUTRA_NR_v1630_Nr 可能 malloc（失败时内部已释放并清零）；Free_BandParametersSidelinkEUTRA_NR_v1630_Nr 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParametersSidelinkEUTRA_NR_v1630_Nr(Encoder& enc, const BandParametersSidelinkEUTRA_NR_v1630_Nr& value)
 {
     (void)value;
@@ -1103,6 +1179,10 @@ void Free_BandParametersSidelinkEUTRA_NR_v1630_Nr(BandParametersSidelinkEUTRA_NR
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParametersSidelinkEUTRA_NR_v1630：ASN.1 BandParametersSidelinkEUTRA-NR-v1630；源文件第 14644 行；CHOICE。
+// Encode_BandParametersSidelinkEUTRA_NR_v1630 只读不分配；Decode_BandParametersSidelinkEUTRA_NR_v1630 可能 malloc（失败时内部已释放并清零）；Free_BandParametersSidelinkEUTRA_NR_v1630 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParametersSidelinkEUTRA_NR_v1630(Encoder& enc, const BandParametersSidelinkEUTRA_NR_v1630& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -1162,6 +1242,10 @@ void Free_BandParametersSidelinkEUTRA_NR_v1630(BandParametersSidelinkEUTRA_NR_v1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSide_d9d46e71：ASN.1 nr/sl-TransmissionMode2-PartialSensing-r17/scs-CP-PatternTxSidelinkModeTwo-r17/fr1-r17；源文件第 14660 行；SEQUENCE。
+// Encode_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSide_d9d46e71 只读不分配；Decode_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSide_d9d46e71 可能 malloc（失败时内部已释放并清零）；Free_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSide_d9d46e71 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSide_d9d46e71(Encoder& enc, const BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSide_d9d46e71& value)
 {
     (void)value;
@@ -1242,6 +1326,10 @@ void Free_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSe
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSide_3f3652b6：ASN.1 nr/sl-TransmissionMode2-PartialSensing-r17/scs-CP-PatternTxSidelinkModeTwo-r17/fr2-r17；源文件第 14665 行；SEQUENCE。
+// Encode_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSide_3f3652b6 只读不分配；Decode_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSide_3f3652b6 可能 malloc（失败时内部已释放并清零）；Free_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSide_3f3652b6 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSide_3f3652b6(Encoder& enc, const BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSide_3f3652b6& value)
 {
     (void)value;
@@ -1303,6 +1391,10 @@ void Free_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSe
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17：ASN.1 nr/sl-TransmissionMode2-PartialSensing-r17/scs-CP-PatternTxSidelinkModeTwo-r17；源文件第 14659 行；CHOICE。
+// Encode_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17 只读不分配；Decode_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17 可能 malloc（失败时内部已释放并清零）；Free_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17(Encoder& enc, const BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -1363,6 +1455,10 @@ void Free_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSe
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17：ASN.1 nr/sl-TransmissionMode2-PartialSensing-r17；源文件第 14657 行；SEQUENCE。
+// Encode_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17 只读不分配；Decode_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17 可能 malloc（失败时内部已释放并清零）；Free_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17(Encoder& enc, const BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSensing_r17& value)
 {
     (void)value;
@@ -1426,6 +1522,10 @@ void Free_BandParametersSidelinkEUTRA_NR_v1710_Nr_Sl_TransmissionMode2_PartialSe
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParametersSidelinkEUTRA_NR_v1710_Nr：ASN.1 nr；源文件第 14655 行；SEQUENCE。
+// Encode_BandParametersSidelinkEUTRA_NR_v1710_Nr 只读不分配；Decode_BandParametersSidelinkEUTRA_NR_v1710_Nr 可能 malloc（失败时内部已释放并清零）；Free_BandParametersSidelinkEUTRA_NR_v1710_Nr 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParametersSidelinkEUTRA_NR_v1710_Nr(Encoder& enc, const BandParametersSidelinkEUTRA_NR_v1710_Nr& value)
 {
     (void)value;
@@ -1498,6 +1598,10 @@ void Free_BandParametersSidelinkEUTRA_NR_v1710_Nr(BandParametersSidelinkEUTRA_NR
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParametersSidelinkEUTRA_NR_v1710：ASN.1 BandParametersSidelinkEUTRA-NR-v1710；源文件第 14653 行；CHOICE。
+// Encode_BandParametersSidelinkEUTRA_NR_v1710 只读不分配；Decode_BandParametersSidelinkEUTRA_NR_v1710 可能 malloc（失败时内部已释放并清零）；Free_BandParametersSidelinkEUTRA_NR_v1710 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParametersSidelinkEUTRA_NR_v1710(Encoder& enc, const BandParametersSidelinkEUTRA_NR_v1710& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -1557,6 +1661,10 @@ void Free_BandParametersSidelinkEUTRA_NR_v1710(BandParametersSidelinkEUTRA_NR_v1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandCombinationListSL_Discovery_r17：ASN.1 BandCombinationListSL-Discovery-r17；源文件第 14689 行；SEQUENCE OF。
+// Encode_BandCombinationListSL_Discovery_r17 只读不分配；Decode_BandCombinationListSL_Discovery_r17 可能 malloc（失败时内部已释放并清零）；Free_BandCombinationListSL_Discovery_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationListSL_Discovery_r17(Encoder& enc, const BandCombinationListSL_Discovery_r17& value)
 {
     (void)value;
@@ -1602,6 +1710,10 @@ void Free_BandCombinationListSL_Discovery_r17(BandCombinationListSL_Discovery_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17_Fr1_r17：ASN.1 sl-TransmissionMode2-PartialSensing-r17/scs-CP-PatternTxSidelinkModeTwo-r17/fr1-r17；源文件第 14697 行；SEQUENCE。
+// Encode_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17_Fr1_r17 只读不分配；Decode_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17_Fr1_r17 可能 malloc（失败时内部已释放并清零）；Free_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17_Fr1_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17_Fr1_r17(Encoder& enc, const BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17_Fr1_r17& value)
 {
     (void)value;
@@ -1682,6 +1794,10 @@ void Free_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensin
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17_Fr2_r17：ASN.1 sl-TransmissionMode2-PartialSensing-r17/scs-CP-PatternTxSidelinkModeTwo-r17/fr2-r17；源文件第 14702 行；SEQUENCE。
+// Encode_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17_Fr2_r17 只读不分配；Decode_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17_Fr2_r17 可能 malloc（失败时内部已释放并清零）；Free_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17_Fr2_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17_Fr2_r17(Encoder& enc, const BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17_Fr2_r17& value)
 {
     (void)value;
@@ -1743,6 +1859,10 @@ void Free_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensin
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17：ASN.1 sl-TransmissionMode2-PartialSensing-r17/scs-CP-PatternTxSidelinkModeTwo-r17；源文件第 14696 行；CHOICE。
+// Encode_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17 只读不分配；Decode_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17 可能 malloc（失败时内部已释放并清零）；Free_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17(Encoder& enc, const BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17_Scs_CP_PatternTxSidelinkModeTwo_r17& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -1803,6 +1923,10 @@ void Free_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensin
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17：ASN.1 sl-TransmissionMode2-PartialSensing-r17；源文件第 14694 行；SEQUENCE。
+// Encode_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17 只读不分配；Decode_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17 可能 malloc（失败时内部已释放并清零）；Free_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17(Encoder& enc, const BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensing_r17& value)
 {
     (void)value;
@@ -1866,6 +1990,10 @@ void Free_BandParametersSidelinkDiscovery_r17_Sl_TransmissionMode2_PartialSensin
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// BandParametersSidelinkDiscovery_r17：ASN.1 BandParametersSidelinkDiscovery-r17；源文件第 14691 行；SEQUENCE。
+// Encode_BandParametersSidelinkDiscovery_r17 只读不分配；Decode_BandParametersSidelinkDiscovery_r17 可能 malloc（失败时内部已释放并清零）；Free_BandParametersSidelinkDiscovery_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_BandParametersSidelinkDiscovery_r17(Encoder& enc, const BandParametersSidelinkDiscovery_r17& value)
 {
     (void)value;
@@ -1923,6 +2051,10 @@ void Free_BandParametersSidelinkDiscovery_r17(BandParametersSidelinkDiscovery_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_BlindDetectionCA_MixedExt_r16：ASN.1 PDCCH-BlindDetectionCA-MixedExt-r16；源文件第 15342 行；SEQUENCE。
+// Encode_PDCCH_BlindDetectionCA_MixedExt_r16 只读不分配；Decode_PDCCH_BlindDetectionCA_MixedExt_r16 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_BlindDetectionCA_MixedExt_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_BlindDetectionCA_MixedExt_r16(Encoder& enc, const PDCCH_BlindDetectionCA_MixedExt_r16& value)
 {
     (void)value;
@@ -1958,6 +2090,10 @@ void Free_PDCCH_BlindDetectionCA_MixedExt_r16(PDCCH_BlindDetectionCA_MixedExt_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_BlindDetectionMixedList_r16_Pdcch_BlindDetectionCA_MixedExt_r16：ASN.1 pdcch-BlindDetectionCA-MixedExt-r16；源文件第 15332 行；CHOICE。
+// Encode_PDCCH_BlindDetectionMixedList_r16_Pdcch_BlindDetectionCA_MixedExt_r16 只读不分配；Decode_PDCCH_BlindDetectionMixedList_r16_Pdcch_BlindDetectionCA_MixedExt_r16 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_BlindDetectionMixedList_r16_Pdcch_BlindDetectionCA_MixedExt_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_BlindDetectionMixedList_r16_Pdcch_BlindDetectionCA_MixedExt_r16(Encoder& enc, const PDCCH_BlindDetectionMixedList_r16_Pdcch_BlindDetectionCA_MixedExt_r16& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -2018,6 +2154,10 @@ void Free_PDCCH_BlindDetectionMixedList_r16_Pdcch_BlindDetectionCA_MixedExt_r16(
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_BlindDetectionCG_UE_MixedExt_r16：ASN.1 PDCCH-BlindDetectionCG-UE-MixedExt-r16；源文件第 15347 行；SEQUENCE。
+// Encode_PDCCH_BlindDetectionCG_UE_MixedExt_r16 只读不分配；Decode_PDCCH_BlindDetectionCG_UE_MixedExt_r16 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_BlindDetectionCG_UE_MixedExt_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_BlindDetectionCG_UE_MixedExt_r16(Encoder& enc, const PDCCH_BlindDetectionCG_UE_MixedExt_r16& value)
 {
     (void)value;
@@ -2053,6 +2193,10 @@ void Free_PDCCH_BlindDetectionCG_UE_MixedExt_r16(PDCCH_BlindDetectionCG_UE_Mixed
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_BlindDetectionMixedList_r16_Pdcch_BlindDetectionCG_UE_MixedExt_r16：ASN.1 pdcch-BlindDetectionCG-UE-MixedExt-r16；源文件第 15336 行；SEQUENCE。
+// Encode_PDCCH_BlindDetectionMixedList_r16_Pdcch_BlindDetectionCG_UE_MixedExt_r16 只读不分配；Decode_PDCCH_BlindDetectionMixedList_r16_Pdcch_BlindDetectionCG_UE_MixedExt_r16 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_BlindDetectionMixedList_r16_Pdcch_BlindDetectionCG_UE_MixedExt_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_BlindDetectionMixedList_r16_Pdcch_BlindDetectionCG_UE_MixedExt_r16(Encoder& enc, const PDCCH_BlindDetectionMixedList_r16_Pdcch_BlindDetectionCG_UE_MixedExt_r16& value)
 {
     (void)value;
@@ -2086,6 +2230,10 @@ void Free_PDCCH_BlindDetectionMixedList_r16_Pdcch_BlindDetectionCG_UE_MixedExt_r
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_BlindDetectionMixedList_r16：ASN.1 PDCCH-BlindDetectionMixedList-r16；源文件第 15331 行；SEQUENCE。
+// Encode_PDCCH_BlindDetectionMixedList_r16 只读不分配；Decode_PDCCH_BlindDetectionMixedList_r16 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_BlindDetectionMixedList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_BlindDetectionMixedList_r16(Encoder& enc, const PDCCH_BlindDetectionMixedList_r16& value)
 {
     (void)value;
@@ -2133,6 +2281,10 @@ void Free_PDCCH_BlindDetectionMixedList_r16(PDCCH_BlindDetectionMixedList_r16& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_BlindDetectionMCG_SCG_r17：ASN.1 PDCCH-BlindDetectionMCG-SCG-r17；源文件第 15352 行；SEQUENCE。
+// Encode_PDCCH_BlindDetectionMCG_SCG_r17 只读不分配；Decode_PDCCH_BlindDetectionMCG_SCG_r17 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_BlindDetectionMCG_SCG_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_BlindDetectionMCG_SCG_r17(Encoder& enc, const PDCCH_BlindDetectionMCG_SCG_r17& value)
 {
     (void)value;
@@ -2168,6 +2320,10 @@ void Free_PDCCH_BlindDetectionMCG_SCG_r17(PDCCH_BlindDetectionMCG_SCG_r17& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_BlindDetectionCA_Mixed_r17：ASN.1 PDCCH-BlindDetectionCA-Mixed-r17；源文件第 15370 行；SEQUENCE。
+// Encode_PDCCH_BlindDetectionCA_Mixed_r17 只读不分配；Decode_PDCCH_BlindDetectionCA_Mixed_r17 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_BlindDetectionCA_Mixed_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_BlindDetectionCA_Mixed_r17(Encoder& enc, const PDCCH_BlindDetectionCA_Mixed_r17& value)
 {
     (void)value;
@@ -2217,6 +2373,10 @@ void Free_PDCCH_BlindDetectionCA_Mixed_r17(PDCCH_BlindDetectionCA_Mixed_r17& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_BlindDetectionCG_UE_Mixed_r17：ASN.1 PDCCH-BlindDetectionCG-UE-Mixed-r17；源文件第 15365 行；SEQUENCE。
+// Encode_PDCCH_BlindDetectionCG_UE_Mixed_r17 只读不分配；Decode_PDCCH_BlindDetectionCG_UE_Mixed_r17 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_BlindDetectionCG_UE_Mixed_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_BlindDetectionCG_UE_Mixed_r17(Encoder& enc, const PDCCH_BlindDetectionCG_UE_Mixed_r17& value)
 {
     (void)value;
@@ -2252,6 +2412,10 @@ void Free_PDCCH_BlindDetectionCG_UE_Mixed_r17(PDCCH_BlindDetectionCG_UE_Mixed_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_BlindDetectionMixed_r17_Pdcch_BlindDetectionCG_UE_Mixed_r17：ASN.1 pdcch-BlindDetectionCG-UE-Mixed-r17；源文件第 15359 行；SEQUENCE。
+// Encode_PDCCH_BlindDetectionMixed_r17_Pdcch_BlindDetectionCG_UE_Mixed_r17 只读不分配；Decode_PDCCH_BlindDetectionMixed_r17_Pdcch_BlindDetectionCG_UE_Mixed_r17 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_BlindDetectionMixed_r17_Pdcch_BlindDetectionCG_UE_Mixed_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_BlindDetectionMixed_r17_Pdcch_BlindDetectionCG_UE_Mixed_r17(Encoder& enc, const PDCCH_BlindDetectionMixed_r17_Pdcch_BlindDetectionCG_UE_Mixed_r17& value)
 {
     (void)value;
@@ -2285,6 +2449,10 @@ void Free_PDCCH_BlindDetectionMixed_r17_Pdcch_BlindDetectionCG_UE_Mixed_r17(PDCC
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_BlindDetectionMixed_r17：ASN.1 PDCCH-BlindDetectionMixed-r17；源文件第 15357 行；SEQUENCE。
+// Encode_PDCCH_BlindDetectionMixed_r17 只读不分配；Decode_PDCCH_BlindDetectionMixed_r17 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_BlindDetectionMixed_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_BlindDetectionMixed_r17(Encoder& enc, const PDCCH_BlindDetectionMixed_r17& value)
 {
     (void)value;
@@ -2332,6 +2500,10 @@ void Free_PDCCH_BlindDetectionMixed_r17(PDCCH_BlindDetectionMixed_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_BlindDetectionCA_Mixed1_r17：ASN.1 PDCCH-BlindDetectionCA-Mixed1-r17；源文件第 15388 行；SEQUENCE。
+// Encode_PDCCH_BlindDetectionCA_Mixed1_r17 只读不分配；Decode_PDCCH_BlindDetectionCA_Mixed1_r17 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_BlindDetectionCA_Mixed1_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_BlindDetectionCA_Mixed1_r17(Encoder& enc, const PDCCH_BlindDetectionCA_Mixed1_r17& value)
 {
     (void)value;
@@ -2394,6 +2566,10 @@ void Free_PDCCH_BlindDetectionCA_Mixed1_r17(PDCCH_BlindDetectionCA_Mixed1_r17& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_BlindDetectionCG_UE_Mixed1_r17：ASN.1 PDCCH-BlindDetectionCG-UE-Mixed1-r17；源文件第 15382 行；SEQUENCE。
+// Encode_PDCCH_BlindDetectionCG_UE_Mixed1_r17 只读不分配；Decode_PDCCH_BlindDetectionCG_UE_Mixed1_r17 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_BlindDetectionCG_UE_Mixed1_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_BlindDetectionCG_UE_Mixed1_r17(Encoder& enc, const PDCCH_BlindDetectionCG_UE_Mixed1_r17& value)
 {
     (void)value;
@@ -2435,6 +2611,10 @@ void Free_PDCCH_BlindDetectionCG_UE_Mixed1_r17(PDCCH_BlindDetectionCG_UE_Mixed1_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_BlindDetectionMixed1_r17_Pdcch_BlindDetectionCG_UE_Mixed1_r17：ASN.1 pdcch-BlindDetectionCG-UE-Mixed1-r17；源文件第 15376 行；SEQUENCE。
+// Encode_PDCCH_BlindDetectionMixed1_r17_Pdcch_BlindDetectionCG_UE_Mixed1_r17 只读不分配；Decode_PDCCH_BlindDetectionMixed1_r17_Pdcch_BlindDetectionCG_UE_Mixed1_r17 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_BlindDetectionMixed1_r17_Pdcch_BlindDetectionCG_UE_Mixed1_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_BlindDetectionMixed1_r17_Pdcch_BlindDetectionCG_UE_Mixed1_r17(Encoder& enc, const PDCCH_BlindDetectionMixed1_r17_Pdcch_BlindDetectionCG_UE_Mixed1_r17& value)
 {
     (void)value;
@@ -2468,6 +2648,10 @@ void Free_PDCCH_BlindDetectionMixed1_r17_Pdcch_BlindDetectionCG_UE_Mixed1_r17(PD
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_BlindDetectionMixed1_r17：ASN.1 PDCCH-BlindDetectionMixed1-r17；源文件第 15374 行；SEQUENCE。
+// Encode_PDCCH_BlindDetectionMixed1_r17 只读不分配；Decode_PDCCH_BlindDetectionMixed1_r17 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_BlindDetectionMixed1_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_BlindDetectionMixed1_r17(Encoder& enc, const PDCCH_BlindDetectionMixed1_r17& value)
 {
     (void)value;
@@ -2515,6 +2699,10 @@ void Free_PDCCH_BlindDetectionMixed1_r17(PDCCH_BlindDetectionMixed1_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_BlindDetectionCG_UE_Mixed_r18：ASN.1 PDCCH-BlindDetectionCG-UE-Mixed-r18；源文件第 15404 行；SEQUENCE。
+// Encode_PDCCH_BlindDetectionCG_UE_Mixed_r18 只读不分配；Decode_PDCCH_BlindDetectionCG_UE_Mixed_r18 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_BlindDetectionCG_UE_Mixed_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_BlindDetectionCG_UE_Mixed_r18(Encoder& enc, const PDCCH_BlindDetectionCG_UE_Mixed_r18& value)
 {
     (void)value;
@@ -2550,6 +2738,10 @@ void Free_PDCCH_BlindDetectionCG_UE_Mixed_r18(PDCCH_BlindDetectionCG_UE_Mixed_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_BlindDetectionMCG_SCG_r18：ASN.1 PDCCH-BlindDetectionMCG-SCG-r18；源文件第 15394 行；SEQUENCE。
+// Encode_PDCCH_BlindDetectionMCG_SCG_r18 只读不分配；Decode_PDCCH_BlindDetectionMCG_SCG_r18 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_BlindDetectionMCG_SCG_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_BlindDetectionMCG_SCG_r18(Encoder& enc, const PDCCH_BlindDetectionMCG_SCG_r18& value)
 {
     (void)value;
@@ -2583,6 +2775,10 @@ void Free_PDCCH_BlindDetectionMCG_SCG_r18(PDCCH_BlindDetectionMCG_SCG_r18& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_BlindDetectionCA_Mixed_r18：ASN.1 PDCCH-BlindDetectionCA-Mixed-r18；源文件第 15399 行；SEQUENCE。
+// Encode_PDCCH_BlindDetectionCA_Mixed_r18 只读不分配；Decode_PDCCH_BlindDetectionCA_Mixed_r18 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_BlindDetectionCA_Mixed_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_BlindDetectionCA_Mixed_r18(Encoder& enc, const PDCCH_BlindDetectionCA_Mixed_r18& value)
 {
     (void)value;
@@ -2618,6 +2814,10 @@ void Free_PDCCH_BlindDetectionCA_Mixed_r18(PDCCH_BlindDetectionCA_Mixed_r18& val
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// TwoPUCCH_Grp_ConfigParams_r16：ASN.1 TwoPUCCH-Grp-ConfigParams-r16；源文件第 15425 行；SEQUENCE。
+// Encode_TwoPUCCH_Grp_ConfigParams_r16 只读不分配；Decode_TwoPUCCH_Grp_ConfigParams_r16 可能 malloc（失败时内部已释放并清零）；Free_TwoPUCCH_Grp_ConfigParams_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_TwoPUCCH_Grp_ConfigParams_r16(Encoder& enc, const TwoPUCCH_Grp_ConfigParams_r16& value)
 {
     (void)value;
@@ -2651,6 +2851,10 @@ void Free_TwoPUCCH_Grp_ConfigParams_r16(TwoPUCCH_Grp_ConfigParams_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// TwoPUCCH_Grp_Configurations_r16：ASN.1 TwoPUCCH-Grp-Configurations-r16；源文件第 15415 行；SEQUENCE。
+// Encode_TwoPUCCH_Grp_Configurations_r16 只读不分配；Decode_TwoPUCCH_Grp_Configurations_r16 可能 malloc（失败时内部已释放并清零）；Free_TwoPUCCH_Grp_Configurations_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_TwoPUCCH_Grp_Configurations_r16(Encoder& enc, const TwoPUCCH_Grp_Configurations_r16& value)
 {
     (void)value;
@@ -2684,6 +2888,10 @@ void Free_TwoPUCCH_Grp_Configurations_r16(TwoPUCCH_Grp_Configurations_r16& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// TwoPUCCH_Grp_Configurations_r17：ASN.1 TwoPUCCH-Grp-Configurations-r17；源文件第 15420 行；SEQUENCE。
+// Encode_TwoPUCCH_Grp_Configurations_r17 只读不分配；Decode_TwoPUCCH_Grp_Configurations_r17 可能 malloc（失败时内部已释放并清零）；Free_TwoPUCCH_Grp_Configurations_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_TwoPUCCH_Grp_Configurations_r17(Encoder& enc, const TwoPUCCH_Grp_Configurations_r17& value)
 {
     (void)value;
@@ -2717,6 +2925,10 @@ void Free_TwoPUCCH_Grp_Configurations_r17(TwoPUCCH_Grp_Configurations_r17& value
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CarrierTypePair_r16：ASN.1 CarrierTypePair-r16；源文件第 15431 行；SEQUENCE。
+// Encode_CarrierTypePair_r16 只读不分配；Decode_CarrierTypePair_r16 可能 malloc（失败时内部已释放并清零）；Free_CarrierTypePair_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CarrierTypePair_r16(Encoder& enc, const CarrierTypePair_r16& value)
 {
     (void)value;
@@ -2750,6 +2962,10 @@ void Free_CarrierTypePair_r16(CarrierTypePair_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CombinationCarrierType_r18：ASN.1 CombinationCarrierType-r18；源文件第 15449 行；SEQUENCE。
+// Encode_CombinationCarrierType_r18 只读不分配；Decode_CombinationCarrierType_r18 可能 malloc（失败时内部已释放并清零）；Free_CombinationCarrierType_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CombinationCarrierType_r18(Encoder& enc, const CombinationCarrierType_r18& value)
 {
     (void)value;
@@ -2785,6 +3001,10 @@ void Free_CombinationCarrierType_r18(CombinationCarrierType_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_BlindDetectionMixed1_r18_Pdcch_BlindDetectionCG_UE_Mixed_r18：ASN.1 pdcch-BlindDetectionCG-UE-Mixed-r18；源文件第 15531 行；SEQUENCE。
+// Encode_PDCCH_BlindDetectionMixed1_r18_Pdcch_BlindDetectionCG_UE_Mixed_r18 只读不分配；Decode_PDCCH_BlindDetectionMixed1_r18_Pdcch_BlindDetectionCG_UE_Mixed_r18 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_BlindDetectionMixed1_r18_Pdcch_BlindDetectionCG_UE_Mixed_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_BlindDetectionMixed1_r18_Pdcch_BlindDetectionCG_UE_Mixed_r18(Encoder& enc, const PDCCH_BlindDetectionMixed1_r18_Pdcch_BlindDetectionCG_UE_Mixed_r18& value)
 {
     (void)value;
@@ -2818,6 +3038,10 @@ void Free_PDCCH_BlindDetectionMixed1_r18_Pdcch_BlindDetectionCG_UE_Mixed_r18(PDC
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_BlindDetectionMixed1_r18：ASN.1 PDCCH-BlindDetectionMixed1-r18；源文件第 15530 行；SEQUENCE。
+// Encode_PDCCH_BlindDetectionMixed1_r18 只读不分配；Decode_PDCCH_BlindDetectionMixed1_r18 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_BlindDetectionMixed1_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_BlindDetectionMixed1_r18(Encoder& enc, const PDCCH_BlindDetectionMixed1_r18& value)
 {
     (void)value;
@@ -2846,6 +3070,10 @@ void Free_PDCCH_BlindDetectionMixed1_r18(PDCCH_BlindDetectionMixed1_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CarrierAggregationVariant：ASN.1 CarrierAggregationVariant；源文件第 15540 行；SEQUENCE。
+// Encode_CarrierAggregationVariant 只读不分配；Decode_CarrierAggregationVariant 可能 malloc（失败时内部已释放并清零）；Free_CarrierAggregationVariant 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CarrierAggregationVariant(Encoder& enc, const CarrierAggregationVariant& value)
 {
     (void)value;
@@ -2968,6 +3196,10 @@ void Free_CarrierAggregationVariant(CarrierAggregationVariant& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookParameters_Type1_SinglePanel：ASN.1 type1/singlePanel；源文件第 15557 行；SEQUENCE。
+// Encode_CodebookParameters_Type1_SinglePanel 只读不分配；Decode_CodebookParameters_Type1_SinglePanel 可能 malloc（失败时内部已释放并清零）；Free_CodebookParameters_Type1_SinglePanel 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParameters_Type1_SinglePanel(Encoder& enc, const CodebookParameters_Type1_SinglePanel& value)
 {
     (void)value;
@@ -3029,6 +3261,10 @@ void Free_CodebookParameters_Type1_SinglePanel(CodebookParameters_Type1_SinglePa
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookParameters_Type1_MultiPanel：ASN.1 type1/multiPanel；源文件第 15562 行；SEQUENCE。
+// Encode_CodebookParameters_Type1_MultiPanel 只读不分配；Decode_CodebookParameters_Type1_MultiPanel 可能 malloc（失败时内部已释放并清零）；Free_CodebookParameters_Type1_MultiPanel 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParameters_Type1_MultiPanel(Encoder& enc, const CodebookParameters_Type1_MultiPanel& value)
 {
     (void)value;
@@ -3096,6 +3332,10 @@ void Free_CodebookParameters_Type1_MultiPanel(CodebookParameters_Type1_MultiPane
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookParameters_Type1：ASN.1 type1；源文件第 15556 行；SEQUENCE。
+// Encode_CodebookParameters_Type1 只读不分配；Decode_CodebookParameters_Type1 可能 malloc（失败时内部已释放并清零）；Free_CodebookParameters_Type1 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParameters_Type1(Encoder& enc, const CodebookParameters_Type1& value)
 {
     (void)value;
@@ -3136,6 +3376,10 @@ void Free_CodebookParameters_Type1(CodebookParameters_Type1& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookParameters_Type2：ASN.1 type2；源文件第 15569 行；SEQUENCE。
+// Encode_CodebookParameters_Type2 只读不分配；Decode_CodebookParameters_Type2 可能 malloc（失败时内部已释放并清零）；Free_CodebookParameters_Type2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParameters_Type2(Encoder& enc, const CodebookParameters_Type2& value)
 {
     (void)value;
@@ -3208,6 +3452,10 @@ void Free_CodebookParameters_Type2(CodebookParameters_Type2& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookParameters_Type2_PortSelection：ASN.1 type2-PortSelection；源文件第 15575 行；SEQUENCE。
+// Encode_CodebookParameters_Type2_PortSelection 只读不分配；Decode_CodebookParameters_Type2_PortSelection 可能 malloc（失败时内部已释放并清零）；Free_CodebookParameters_Type2_PortSelection 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParameters_Type2_PortSelection(Encoder& enc, const CodebookParameters_Type2_PortSelection& value)
 {
     (void)value;
@@ -3269,6 +3517,10 @@ void Free_CodebookParameters_Type2_PortSelection(CodebookParameters_Type2_PortSe
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookParameters：ASN.1 CodebookParameters；源文件第 15555 行；SEQUENCE。
+// Encode_CodebookParameters 只读不分配；Decode_CodebookParameters 可能 malloc（失败时内部已释放并清零）；Free_CodebookParameters 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParameters(Encoder& enc, const CodebookParameters& value)
 {
     (void)value;
@@ -3321,6 +3573,10 @@ void Free_CodebookParameters(CodebookParameters& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookParametersAddition_r16_Etype2_r16_Etype2R1_r16：ASN.1 etype2-r16/etype2R1-r16；源文件第 15594 行；SEQUENCE。
+// Encode_CodebookParametersAddition_r16_Etype2_r16_Etype2R1_r16 只读不分配；Decode_CodebookParametersAddition_r16_Etype2_r16_Etype2R1_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookParametersAddition_r16_Etype2_r16_Etype2R1_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersAddition_r16_Etype2_r16_Etype2R1_r16(Encoder& enc, const CodebookParametersAddition_r16_Etype2_r16_Etype2R1_r16& value)
 {
     (void)value;
@@ -3371,6 +3627,10 @@ void Free_CodebookParametersAddition_r16_Etype2_r16_Etype2R1_r16(CodebookParamet
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookParametersAddition_r16_Etype2_r16_Etype2R2_r16：ASN.1 etype2-r16/etype2R2-r16；源文件第 15599 行；SEQUENCE。
+// Encode_CodebookParametersAddition_r16_Etype2_r16_Etype2R2_r16 只读不分配；Decode_CodebookParametersAddition_r16_Etype2_r16_Etype2R2_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookParametersAddition_r16_Etype2_r16_Etype2R2_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersAddition_r16_Etype2_r16_Etype2R2_r16(Encoder& enc, const CodebookParametersAddition_r16_Etype2_r16_Etype2R2_r16& value)
 {
     (void)value;
@@ -3421,6 +3681,10 @@ void Free_CodebookParametersAddition_r16_Etype2_r16_Etype2R2_r16(CodebookParamet
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookParametersAddition_r16_Etype2_r16：ASN.1 etype2-r16；源文件第 15592 行；SEQUENCE。
+// Encode_CodebookParametersAddition_r16_Etype2_r16 只读不分配；Decode_CodebookParametersAddition_r16_Etype2_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookParametersAddition_r16_Etype2_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersAddition_r16_Etype2_r16(Encoder& enc, const CodebookParametersAddition_r16_Etype2_r16& value)
 {
     (void)value;
@@ -3494,6 +3758,10 @@ void Free_CodebookParametersAddition_r16_Etype2_r16(CodebookParametersAddition_r
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookParametersAddition_r16_Etype2_PS_r16_Etype2R1_PortSelection_r16：ASN.1 etype2-PS-r16/etype2R1-PortSelection-r16；源文件第 15612 行；SEQUENCE。
+// Encode_CodebookParametersAddition_r16_Etype2_PS_r16_Etype2R1_PortSelection_r16 只读不分配；Decode_CodebookParametersAddition_r16_Etype2_PS_r16_Etype2R1_PortSelection_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookParametersAddition_r16_Etype2_PS_r16_Etype2R1_PortSelection_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersAddition_r16_Etype2_PS_r16_Etype2R1_PortSelection_r16(Encoder& enc, const CodebookParametersAddition_r16_Etype2_PS_r16_Etype2R1_PortSelection_r16& value)
 {
     (void)value;
@@ -3544,6 +3812,10 @@ void Free_CodebookParametersAddition_r16_Etype2_PS_r16_Etype2R1_PortSelection_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookParametersAddition_r16_Etype2_PS_r16_Etype2R2_PortSelection_r16：ASN.1 etype2-PS-r16/etype2R2-PortSelection-r16；源文件第 15617 行；SEQUENCE。
+// Encode_CodebookParametersAddition_r16_Etype2_PS_r16_Etype2R2_PortSelection_r16 只读不分配；Decode_CodebookParametersAddition_r16_Etype2_PS_r16_Etype2R2_PortSelection_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookParametersAddition_r16_Etype2_PS_r16_Etype2R2_PortSelection_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersAddition_r16_Etype2_PS_r16_Etype2R2_PortSelection_r16(Encoder& enc, const CodebookParametersAddition_r16_Etype2_PS_r16_Etype2R2_PortSelection_r16& value)
 {
     (void)value;
@@ -3594,6 +3866,10 @@ void Free_CodebookParametersAddition_r16_Etype2_PS_r16_Etype2R2_PortSelection_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookParametersAddition_r16_Etype2_PS_r16：ASN.1 etype2-PS-r16；源文件第 15610 行；SEQUENCE。
+// Encode_CodebookParametersAddition_r16_Etype2_PS_r16 只读不分配；Decode_CodebookParametersAddition_r16_Etype2_PS_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookParametersAddition_r16_Etype2_PS_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersAddition_r16_Etype2_PS_r16(Encoder& enc, const CodebookParametersAddition_r16_Etype2_PS_r16& value)
 {
     (void)value;
@@ -3645,6 +3921,10 @@ void Free_CodebookParametersAddition_r16_Etype2_PS_r16(CodebookParametersAdditio
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookParametersAddition_r16：ASN.1 CodebookParametersAddition-r16；源文件第 15591 行；SEQUENCE。
+// Encode_CodebookParametersAddition_r16 只读不分配；Decode_CodebookParametersAddition_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookParametersAddition_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersAddition_r16(Encoder& enc, const CodebookParametersAddition_r16& value)
 {
     (void)value;
@@ -3692,6 +3972,10 @@ void Free_CodebookParametersAddition_r16(CodebookParametersAddition_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookComboParametersAddition_r16_Type1SP_Type2_null_r16：ASN.1 type1SP-Type2-null-r16；源文件第 15628 行；SEQUENCE。
+// Encode_CodebookComboParametersAddition_r16_Type1SP_Type2_null_r16 只读不分配；Decode_CodebookComboParametersAddition_r16_Type1SP_Type2_null_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookComboParametersAddition_r16_Type1SP_Type2_null_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParametersAddition_r16_Type1SP_Type2_null_r16(Encoder& enc, const CodebookComboParametersAddition_r16_Type1SP_Type2_null_r16& value)
 {
     (void)value;
@@ -3742,6 +4026,10 @@ void Free_CodebookComboParametersAddition_r16_Type1SP_Type2_null_r16(CodebookCom
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookComboParametersAddition_r16_Type1SP_Type2PS_null_r16：ASN.1 type1SP-Type2PS-null-r16；源文件第 15631 行；SEQUENCE。
+// Encode_CodebookComboParametersAddition_r16_Type1SP_Type2PS_null_r16 只读不分配；Decode_CodebookComboParametersAddition_r16_Type1SP_Type2PS_null_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookComboParametersAddition_r16_Type1SP_Type2PS_null_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParametersAddition_r16_Type1SP_Type2PS_null_r16(Encoder& enc, const CodebookComboParametersAddition_r16_Type1SP_Type2PS_null_r16& value)
 {
     (void)value;
@@ -3792,6 +4080,10 @@ void Free_CodebookComboParametersAddition_r16_Type1SP_Type2PS_null_r16(CodebookC
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookComboParametersAddition_r16_Type1SP_eType2R1_null_r16：ASN.1 type1SP-eType2R1-null-r16；源文件第 15634 行；SEQUENCE。
+// Encode_CodebookComboParametersAddition_r16_Type1SP_eType2R1_null_r16 只读不分配；Decode_CodebookComboParametersAddition_r16_Type1SP_eType2R1_null_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookComboParametersAddition_r16_Type1SP_eType2R1_null_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParametersAddition_r16_Type1SP_eType2R1_null_r16(Encoder& enc, const CodebookComboParametersAddition_r16_Type1SP_eType2R1_null_r16& value)
 {
     (void)value;
@@ -3842,6 +4134,10 @@ void Free_CodebookComboParametersAddition_r16_Type1SP_eType2R1_null_r16(Codebook
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookComboParametersAddition_r16_Type1SP_eType2R2_null_r16：ASN.1 type1SP-eType2R2-null-r16；源文件第 15637 行；SEQUENCE。
+// Encode_CodebookComboParametersAddition_r16_Type1SP_eType2R2_null_r16 只读不分配；Decode_CodebookComboParametersAddition_r16_Type1SP_eType2R2_null_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookComboParametersAddition_r16_Type1SP_eType2R2_null_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParametersAddition_r16_Type1SP_eType2R2_null_r16(Encoder& enc, const CodebookComboParametersAddition_r16_Type1SP_eType2R2_null_r16& value)
 {
     (void)value;
@@ -3892,6 +4188,10 @@ void Free_CodebookComboParametersAddition_r16_Type1SP_eType2R2_null_r16(Codebook
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookComboParametersAddition_r16_Type1SP_eType2R1PS_null_r16：ASN.1 type1SP-eType2R1PS-null-r16；源文件第 15640 行；SEQUENCE。
+// Encode_CodebookComboParametersAddition_r16_Type1SP_eType2R1PS_null_r16 只读不分配；Decode_CodebookComboParametersAddition_r16_Type1SP_eType2R1PS_null_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookComboParametersAddition_r16_Type1SP_eType2R1PS_null_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParametersAddition_r16_Type1SP_eType2R1PS_null_r16(Encoder& enc, const CodebookComboParametersAddition_r16_Type1SP_eType2R1PS_null_r16& value)
 {
     (void)value;
@@ -3942,6 +4242,10 @@ void Free_CodebookComboParametersAddition_r16_Type1SP_eType2R1PS_null_r16(Codebo
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookComboParametersAddition_r16_Type1SP_eType2R2PS_null_r16：ASN.1 type1SP-eType2R2PS-null-r16；源文件第 15643 行；SEQUENCE。
+// Encode_CodebookComboParametersAddition_r16_Type1SP_eType2R2PS_null_r16 只读不分配；Decode_CodebookComboParametersAddition_r16_Type1SP_eType2R2PS_null_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookComboParametersAddition_r16_Type1SP_eType2R2PS_null_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParametersAddition_r16_Type1SP_eType2R2PS_null_r16(Encoder& enc, const CodebookComboParametersAddition_r16_Type1SP_eType2R2PS_null_r16& value)
 {
     (void)value;
@@ -3992,6 +4296,10 @@ void Free_CodebookComboParametersAddition_r16_Type1SP_eType2R2PS_null_r16(Codebo
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookComboParametersAddition_r16_Type1SP_Type2_Type2PS_r16：ASN.1 type1SP-Type2-Type2PS-r16；源文件第 15646 行；SEQUENCE。
+// Encode_CodebookComboParametersAddition_r16_Type1SP_Type2_Type2PS_r16 只读不分配；Decode_CodebookComboParametersAddition_r16_Type1SP_Type2_Type2PS_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookComboParametersAddition_r16_Type1SP_Type2_Type2PS_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParametersAddition_r16_Type1SP_Type2_Type2PS_r16(Encoder& enc, const CodebookComboParametersAddition_r16_Type1SP_Type2_Type2PS_r16& value)
 {
     (void)value;
@@ -4042,6 +4350,10 @@ void Free_CodebookComboParametersAddition_r16_Type1SP_Type2_Type2PS_r16(Codebook
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookComboParametersAddition_r16_Type1MP_Type2_null_r16：ASN.1 type1MP-Type2-null-r16；源文件第 15649 行；SEQUENCE。
+// Encode_CodebookComboParametersAddition_r16_Type1MP_Type2_null_r16 只读不分配；Decode_CodebookComboParametersAddition_r16_Type1MP_Type2_null_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookComboParametersAddition_r16_Type1MP_Type2_null_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParametersAddition_r16_Type1MP_Type2_null_r16(Encoder& enc, const CodebookComboParametersAddition_r16_Type1MP_Type2_null_r16& value)
 {
     (void)value;
@@ -4092,6 +4404,10 @@ void Free_CodebookComboParametersAddition_r16_Type1MP_Type2_null_r16(CodebookCom
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookComboParametersAddition_r16_Type1MP_Type2PS_null_r16：ASN.1 type1MP-Type2PS-null-r16；源文件第 15652 行；SEQUENCE。
+// Encode_CodebookComboParametersAddition_r16_Type1MP_Type2PS_null_r16 只读不分配；Decode_CodebookComboParametersAddition_r16_Type1MP_Type2PS_null_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookComboParametersAddition_r16_Type1MP_Type2PS_null_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParametersAddition_r16_Type1MP_Type2PS_null_r16(Encoder& enc, const CodebookComboParametersAddition_r16_Type1MP_Type2PS_null_r16& value)
 {
     (void)value;
@@ -4142,6 +4458,10 @@ void Free_CodebookComboParametersAddition_r16_Type1MP_Type2PS_null_r16(CodebookC
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookComboParametersAddition_r16_Type1MP_eType2R1_null_r16：ASN.1 type1MP-eType2R1-null-r16；源文件第 15655 行；SEQUENCE。
+// Encode_CodebookComboParametersAddition_r16_Type1MP_eType2R1_null_r16 只读不分配；Decode_CodebookComboParametersAddition_r16_Type1MP_eType2R1_null_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookComboParametersAddition_r16_Type1MP_eType2R1_null_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParametersAddition_r16_Type1MP_eType2R1_null_r16(Encoder& enc, const CodebookComboParametersAddition_r16_Type1MP_eType2R1_null_r16& value)
 {
     (void)value;
@@ -4192,6 +4512,10 @@ void Free_CodebookComboParametersAddition_r16_Type1MP_eType2R1_null_r16(Codebook
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookComboParametersAddition_r16_Type1MP_eType2R2_null_r16：ASN.1 type1MP-eType2R2-null-r16；源文件第 15658 行；SEQUENCE。
+// Encode_CodebookComboParametersAddition_r16_Type1MP_eType2R2_null_r16 只读不分配；Decode_CodebookComboParametersAddition_r16_Type1MP_eType2R2_null_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookComboParametersAddition_r16_Type1MP_eType2R2_null_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParametersAddition_r16_Type1MP_eType2R2_null_r16(Encoder& enc, const CodebookComboParametersAddition_r16_Type1MP_eType2R2_null_r16& value)
 {
     (void)value;
@@ -4242,6 +4566,10 @@ void Free_CodebookComboParametersAddition_r16_Type1MP_eType2R2_null_r16(Codebook
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookComboParametersAddition_r16_Type1MP_eType2R1PS_null_r16：ASN.1 type1MP-eType2R1PS-null-r16；源文件第 15661 行；SEQUENCE。
+// Encode_CodebookComboParametersAddition_r16_Type1MP_eType2R1PS_null_r16 只读不分配；Decode_CodebookComboParametersAddition_r16_Type1MP_eType2R1PS_null_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookComboParametersAddition_r16_Type1MP_eType2R1PS_null_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParametersAddition_r16_Type1MP_eType2R1PS_null_r16(Encoder& enc, const CodebookComboParametersAddition_r16_Type1MP_eType2R1PS_null_r16& value)
 {
     (void)value;
@@ -4292,6 +4620,10 @@ void Free_CodebookComboParametersAddition_r16_Type1MP_eType2R1PS_null_r16(Codebo
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookComboParametersAddition_r16_Type1MP_eType2R2PS_null_r16：ASN.1 type1MP-eType2R2PS-null-r16；源文件第 15664 行；SEQUENCE。
+// Encode_CodebookComboParametersAddition_r16_Type1MP_eType2R2PS_null_r16 只读不分配；Decode_CodebookComboParametersAddition_r16_Type1MP_eType2R2PS_null_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookComboParametersAddition_r16_Type1MP_eType2R2PS_null_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParametersAddition_r16_Type1MP_eType2R2PS_null_r16(Encoder& enc, const CodebookComboParametersAddition_r16_Type1MP_eType2R2PS_null_r16& value)
 {
     (void)value;
@@ -4342,6 +4674,10 @@ void Free_CodebookComboParametersAddition_r16_Type1MP_eType2R2PS_null_r16(Codebo
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookComboParametersAddition_r16_Type1MP_Type2_Type2PS_r16：ASN.1 type1MP-Type2-Type2PS-r16；源文件第 15667 行；SEQUENCE。
+// Encode_CodebookComboParametersAddition_r16_Type1MP_Type2_Type2PS_r16 只读不分配；Decode_CodebookComboParametersAddition_r16_Type1MP_Type2_Type2PS_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookComboParametersAddition_r16_Type1MP_Type2_Type2PS_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParametersAddition_r16_Type1MP_Type2_Type2PS_r16(Encoder& enc, const CodebookComboParametersAddition_r16_Type1MP_Type2_Type2PS_r16& value)
 {
     (void)value;
@@ -4392,6 +4728,10 @@ void Free_CodebookComboParametersAddition_r16_Type1MP_Type2_Type2PS_r16(Codebook
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookComboParametersAddition_r16：ASN.1 CodebookComboParametersAddition-r16；源文件第 15626 行；SEQUENCE。
+// Encode_CodebookComboParametersAddition_r16 只读不分配；Decode_CodebookComboParametersAddition_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookComboParametersAddition_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParametersAddition_r16(Encoder& enc, const CodebookComboParametersAddition_r16& value)
 {
     (void)value;
@@ -4583,6 +4923,10 @@ void Free_CodebookComboParametersAddition_r16(CodebookComboParametersAddition_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookParametersfetype2_r17：ASN.1 CodebookParametersfetype2-r17；源文件第 15672 行；SEQUENCE。
+// Encode_CodebookParametersfetype2_r17 只读不分配；Decode_CodebookParametersfetype2_r17 可能 malloc（失败时内部已释放并清零）；Free_CodebookParametersfetype2_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersfetype2_r17(Encoder& enc, const CodebookParametersfetype2_r17& value)
 {
     (void)value;
@@ -4712,6 +5056,10 @@ void Free_CodebookParametersfetype2_r17(CodebookParametersfetype2_r17& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookComboParameterMixedType_r17：ASN.1 CodebookComboParameterMixedType-r17；源文件第 15685 行；SEQUENCE。
+// Encode_CodebookComboParameterMixedType_r17 只读不分配；Decode_CodebookComboParameterMixedType_r17 可能 malloc（失败时内部已释放并清零）；Free_CodebookComboParameterMixedType_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParameterMixedType_r17(Encoder& enc, const CodebookComboParameterMixedType_r17& value)
 {
     (void)value;
@@ -5211,6 +5559,10 @@ void Free_CodebookComboParameterMixedType_r17(CodebookComboParameterMixedType_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookComboParameterMultiTRP_r17：ASN.1 CodebookComboParameterMultiTRP-r17；源文件第 15717 行；SEQUENCE。
+// Encode_CodebookComboParameterMultiTRP_r17 只读不分配；Decode_CodebookComboParameterMultiTRP_r17 可能 malloc（失败时内部已释放并清零）；Free_CodebookComboParameterMultiTRP_r17 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParameterMultiTRP_r17(Encoder& enc, const CodebookComboParameterMultiTRP_r17& value)
 {
     (void)value;
@@ -6254,6 +6606,10 @@ void Free_CodebookComboParameterMultiTRP_r17(CodebookComboParameterMultiTRP_r17&
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// CodebookVariantsList_r16：ASN.1 CodebookVariantsList-r16；源文件第 16106 行；SEQUENCE OF。
+// Encode_CodebookVariantsList_r16 只读不分配；Decode_CodebookVariantsList_r16 可能 malloc（失败时内部已释放并清零）；Free_CodebookVariantsList_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_CodebookVariantsList_r16(Encoder& enc, const CodebookVariantsList_r16& value)
 {
     (void)value;
@@ -6299,6 +6655,10 @@ void Free_CodebookVariantsList_r16(CodebookVariantsList_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SupportedCSI_RS_Resource：ASN.1 SupportedCSI-RS-Resource；源文件第 16108 行；SEQUENCE。
+// Encode_SupportedCSI_RS_Resource 只读不分配；Decode_SupportedCSI_RS_Resource 可能 malloc（失败时内部已释放并清零）；Free_SupportedCSI_RS_Resource 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SupportedCSI_RS_Resource(Encoder& enc, const SupportedCSI_RS_Resource& value)
 {
     (void)value;
@@ -6340,6 +6700,10 @@ void Free_SupportedCSI_RS_Resource(SupportedCSI_RS_Resource& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SupportedCSI_RS_ReportSetting_r18：ASN.1 SupportedCSI-RS-ReportSetting-r18；源文件第 16114 行；SEQUENCE。
+// Encode_SupportedCSI_RS_ReportSetting_r18 只读不分配；Decode_SupportedCSI_RS_ReportSetting_r18 可能 malloc（失败时内部已释放并清零）；Free_SupportedCSI_RS_ReportSetting_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SupportedCSI_RS_ReportSetting_r18(Encoder& enc, const SupportedCSI_RS_ReportSetting_r18& value)
 {
     (void)value;
@@ -6387,6 +6751,10 @@ void Free_SupportedCSI_RS_ReportSetting_r18(SupportedCSI_RS_ReportSetting_r18& v
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DL_PRS_MeasurementWithRxFH_RRC_Connected_r18_ProcessingDuration_r18：ASN.1 processingDuration-r18；源文件第 16128 行；SEQUENCE。
+// Encode_DL_PRS_MeasurementWithRxFH_RRC_Connected_r18_ProcessingDuration_r18 只读不分配；Decode_DL_PRS_MeasurementWithRxFH_RRC_Connected_r18_ProcessingDuration_r18 可能 malloc（失败时内部已释放并清零）；Free_DL_PRS_MeasurementWithRxFH_RRC_Connected_r18_ProcessingDuration_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DL_PRS_MeasurementWithRxFH_RRC_Connected_r18_ProcessingDuration_r18(Encoder& enc, const DL_PRS_MeasurementWithRxFH_RRC_Connected_r18_ProcessingDuration_r18& value)
 {
     (void)value;
@@ -6422,6 +6790,10 @@ void Free_DL_PRS_MeasurementWithRxFH_RRC_Connected_r18_ProcessingDuration_r18(DL
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DL_PRS_MeasurementWithRxFH_RRC_Connected_r18：ASN.1 DL-PRS-MeasurementWithRxFH-RRC-Connected-r18；源文件第 16124 行；SEQUENCE。
+// Encode_DL_PRS_MeasurementWithRxFH_RRC_Connected_r18 只读不分配；Decode_DL_PRS_MeasurementWithRxFH_RRC_Connected_r18 可能 malloc（失败时内部已释放并清零）；Free_DL_PRS_MeasurementWithRxFH_RRC_Connected_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DL_PRS_MeasurementWithRxFH_RRC_Connected_r18(Encoder& enc, const DL_PRS_MeasurementWithRxFH_RRC_Connected_r18& value)
 {
     (void)value;
@@ -6542,6 +6914,10 @@ void Free_DL_PRS_MeasurementWithRxFH_RRC_Connected_r18(DL_PRS_MeasurementWithRxF
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ERedCapParameters_r18：ASN.1 ERedCapParameters-r18；源文件第 16142 行；SEQUENCE。
+// Encode_ERedCapParameters_r18 只读不分配；Decode_ERedCapParameters_r18 可能 malloc（失败时内部已释放并清零）；Free_ERedCapParameters_r18 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ERedCapParameters_r18(Encoder& enc, const ERedCapParameters_r18& value)
 {
     (void)value;
@@ -6591,6 +6967,10 @@ void Free_ERedCapParameters_r18(ERedCapParameters_r18& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetCombination：ASN.1 FeatureSetCombination；源文件第 16153 行；SEQUENCE OF。
+// Encode_FeatureSetCombination 只读不分配；Decode_FeatureSetCombination 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetCombination 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetCombination(Encoder& enc, const FeatureSetCombination& value)
 {
     (void)value;
@@ -6636,6 +7016,10 @@ void Free_FeatureSetCombination(FeatureSetCombination& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetsPerBand：ASN.1 FeatureSetsPerBand；源文件第 16155 行；SEQUENCE OF。
+// Encode_FeatureSetsPerBand 只读不分配；Decode_FeatureSetsPerBand 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetsPerBand 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetsPerBand(Encoder& enc, const FeatureSetsPerBand& value)
 {
     (void)value;
@@ -6681,6 +7065,10 @@ void Free_FeatureSetsPerBand(FeatureSetsPerBand& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSet_Eutra：ASN.1 eutra；源文件第 16158 行；SEQUENCE。
+// Encode_FeatureSet_Eutra 只读不分配；Decode_FeatureSet_Eutra 可能 malloc（失败时内部已释放并清零）；Free_FeatureSet_Eutra 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSet_Eutra(Encoder& enc, const FeatureSet_Eutra& value)
 {
     (void)value;
@@ -6716,6 +7104,10 @@ void Free_FeatureSet_Eutra(FeatureSet_Eutra& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSet_Nr：ASN.1 nr；源文件第 16162 行；SEQUENCE。
+// Encode_FeatureSet_Nr 只读不分配；Decode_FeatureSet_Nr 可能 malloc（失败时内部已释放并清零）；Free_FeatureSet_Nr 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSet_Nr(Encoder& enc, const FeatureSet_Nr& value)
 {
     (void)value;
@@ -6751,6 +7143,10 @@ void Free_FeatureSet_Nr(FeatureSet_Nr& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSet：ASN.1 FeatureSet；源文件第 16157 行；CHOICE。
+// Encode_FeatureSet 只读不分配；Decode_FeatureSet 可能 malloc（失败时内部已释放并清零）；Free_FeatureSet 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSet(Encoder& enc, const FeatureSet& value)
 {
     enc.WriteConstrainedInteger((std::int64_t)(value.tag), 0, 1);
@@ -6811,6 +7207,10 @@ void Free_FeatureSet(FeatureSet& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// DummyA：ASN.1 DummyA；源文件第 16431 行；SEQUENCE。
+// Encode_DummyA 只读不分配；Decode_DummyA 可能 malloc（失败时内部已释放并清零）；Free_DummyA 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_DummyA(Encoder& enc, const DummyA& value)
 {
     (void)value;
@@ -6864,6 +7264,10 @@ void Free_DummyA(DummyA& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_TimeDurationForQCL：ASN.1 timeDurationForQCL；源文件第 16190 行；SEQUENCE。
+// Encode_FeatureSetDownlink_TimeDurationForQCL 只读不分配；Decode_FeatureSetDownlink_TimeDurationForQCL 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_TimeDurationForQCL 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_TimeDurationForQCL(Encoder& enc, const FeatureSetDownlink_TimeDurationForQCL& value)
 {
     (void)value;
@@ -6913,6 +7317,10 @@ void Free_FeatureSetDownlink_TimeDurationForQCL(FeatureSetDownlink_TimeDurationF
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_Pdsch_ProcessingType1_DifferentTB_PerSlot：ASN.1 pdsch-ProcessingType1-DifferentTB-PerSlot；源文件第 16194 行；SEQUENCE。
+// Encode_FeatureSetDownlink_Pdsch_ProcessingType1_DifferentTB_PerSlot 只读不分配；Decode_FeatureSetDownlink_Pdsch_ProcessingType1_DifferentTB_PerSlot 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_Pdsch_ProcessingType1_DifferentTB_PerSlot 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_Pdsch_ProcessingType1_DifferentTB_PerSlot(Encoder& enc, const FeatureSetDownlink_Pdsch_ProcessingType1_DifferentTB_PerSlot& value)
 {
     (void)value;
@@ -6988,6 +7396,10 @@ void Free_FeatureSetDownlink_Pdsch_ProcessingType1_DifferentTB_PerSlot(FeatureSe
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink：ASN.1 FeatureSetDownlink；源文件第 16176 行；SEQUENCE。
+// Encode_FeatureSetDownlink 只读不分配；Decode_FeatureSetDownlink 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink(Encoder& enc, const FeatureSetDownlink& value)
 {
     (void)value;
@@ -7355,6 +7767,10 @@ void Free_FeatureSetDownlink(FeatureSetDownlink& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1540_Pdcch_MonitoringAnyOccasionsWithSpanGap：ASN.1 pdcch-MonitoringAnyOccasionsWithSpanGap；源文件第 16212 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1540_Pdcch_MonitoringAnyOccasionsWithSpanGap 只读不分配；Decode_FeatureSetDownlink_v1540_Pdcch_MonitoringAnyOccasionsWithSpanGap 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1540_Pdcch_MonitoringAnyOccasionsWithSpanGap 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1540_Pdcch_MonitoringAnyOccasionsWithSpanGap(Encoder& enc, const FeatureSetDownlink_v1540_Pdcch_MonitoringAnyOccasionsWithSpanGap& value)
 {
     (void)value;
@@ -7430,6 +7846,10 @@ void Free_FeatureSetDownlink_v1540_Pdcch_MonitoringAnyOccasionsWithSpanGap(Featu
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ProcessingParameters_DifferentTB_PerSlot：ASN.1 differentTB-PerSlot；源文件第 19350 行；SEQUENCE。
+// Encode_ProcessingParameters_DifferentTB_PerSlot 只读不分配；Decode_ProcessingParameters_DifferentTB_PerSlot 可能 malloc（失败时内部已释放并清零）；Free_ProcessingParameters_DifferentTB_PerSlot 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ProcessingParameters_DifferentTB_PerSlot(Encoder& enc, const ProcessingParameters_DifferentTB_PerSlot& value)
 {
     (void)value;
@@ -7505,6 +7925,10 @@ void Free_ProcessingParameters_DifferentTB_PerSlot(ProcessingParameters_Differen
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// ProcessingParameters：ASN.1 ProcessingParameters；源文件第 19348 行；SEQUENCE。
+// Encode_ProcessingParameters 只读不分配；Decode_ProcessingParameters 可能 malloc（失败时内部已释放并清零）；Free_ProcessingParameters 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_ProcessingParameters(Encoder& enc, const ProcessingParameters& value)
 {
     (void)value;
@@ -7546,6 +7970,10 @@ void Free_ProcessingParameters(ProcessingParameters& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1540_Pdsch_ProcessingType2：ASN.1 pdsch-ProcessingType2；源文件第 16219 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1540_Pdsch_ProcessingType2 只读不分配；Decode_FeatureSetDownlink_v1540_Pdsch_ProcessingType2 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1540_Pdsch_ProcessingType2 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1540_Pdsch_ProcessingType2(Encoder& enc, const FeatureSetDownlink_v1540_Pdsch_ProcessingType2& value)
 {
     (void)value;
@@ -7605,6 +8033,10 @@ void Free_FeatureSetDownlink_v1540_Pdsch_ProcessingType2(FeatureSetDownlink_v154
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1540_Pdsch_ProcessingType2_Limited：ASN.1 pdsch-ProcessingType2-Limited；源文件第 16224 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1540_Pdsch_ProcessingType2_Limited 只读不分配；Decode_FeatureSetDownlink_v1540_Pdsch_ProcessingType2_Limited 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1540_Pdsch_ProcessingType2_Limited 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1540_Pdsch_ProcessingType2_Limited(Encoder& enc, const FeatureSetDownlink_v1540_Pdsch_ProcessingType2_Limited& value)
 {
     (void)value;
@@ -7634,6 +8066,10 @@ void Free_FeatureSetDownlink_v1540_Pdsch_ProcessingType2_Limited(FeatureSetDownl
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1540：ASN.1 FeatureSetDownlink-v1540；源文件第 16207 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1540 只读不分配；Decode_FeatureSetDownlink_v1540 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1540 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1540(Encoder& enc, const FeatureSetDownlink_v1540& value)
 {
     (void)value;
@@ -7759,6 +8195,10 @@ void Free_FeatureSetDownlink_v1540(FeatureSetDownlink_v1540& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// SRS_Resources：ASN.1 SRS-Resources；源文件第 16968 行；SEQUENCE。
+// Encode_SRS_Resources 只读不分配；Decode_SRS_Resources 可能 malloc（失败时内部已释放并清零）；Free_SRS_Resources 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_SRS_Resources(Encoder& enc, const SRS_Resources& value)
 {
     (void)value;
@@ -7824,6 +8264,10 @@ void Free_SRS_Resources(SRS_Resources& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v15a0：ASN.1 FeatureSetDownlink-v15a0；源文件第 16230 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v15a0 只读不分配；Decode_FeatureSetDownlink_v15a0 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v15a0 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v15a0(Encoder& enc, const FeatureSetDownlink_v15a0& value)
 {
     (void)value;
@@ -7859,6 +8303,10 @@ void Free_FeatureSetDownlink_v15a0(FeatureSetDownlink_v15a0& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1610_CbgPDSCH_ProcessingType1_DifferentTB_PerSlot_r16：ASN.1 cbgPDSCH-ProcessingType1-DifferentTB-PerSlot-r16；源文件第 16236 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1610_CbgPDSCH_ProcessingType1_DifferentTB_PerSlot_r16 只读不分配；Decode_FeatureSetDownlink_v1610_CbgPDSCH_ProcessingType1_DifferentTB_PerSlot_r16 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1610_CbgPDSCH_ProcessingType1_DifferentTB_PerSlot_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1610_CbgPDSCH_ProcessingType1_DifferentTB_PerSlot_r16(Encoder& enc, const FeatureSetDownlink_v1610_CbgPDSCH_ProcessingType1_DifferentTB_PerSlot_r16& value)
 {
     (void)value;
@@ -7934,6 +8382,10 @@ void Free_FeatureSetDownlink_v1610_CbgPDSCH_ProcessingType1_DifferentTB_PerSlot_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1610_CbgPDSCH_ProcessingType2_DifferentTB_PerSlot_r16：ASN.1 cbgPDSCH-ProcessingType2-DifferentTB-PerSlot-r16；源文件第 16244 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1610_CbgPDSCH_ProcessingType2_DifferentTB_PerSlot_r16 只读不分配；Decode_FeatureSetDownlink_v1610_CbgPDSCH_ProcessingType2_DifferentTB_PerSlot_r16 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1610_CbgPDSCH_ProcessingType2_DifferentTB_PerSlot_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1610_CbgPDSCH_ProcessingType2_DifferentTB_PerSlot_r16(Encoder& enc, const FeatureSetDownlink_v1610_CbgPDSCH_ProcessingType2_DifferentTB_PerSlot_r16& value)
 {
     (void)value;
@@ -8009,6 +8461,10 @@ void Free_FeatureSetDownlink_v1610_CbgPDSCH_ProcessingType2_DifferentTB_PerSlot_
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1610_IntraFreqDAPS_r16：ASN.1 intraFreqDAPS-r16；源文件第 16250 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1610_IntraFreqDAPS_r16 只读不分配；Decode_FeatureSetDownlink_v1610_IntraFreqDAPS_r16 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1610_IntraFreqDAPS_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1610_IntraFreqDAPS_r16(Encoder& enc, const FeatureSetDownlink_v1610_IntraFreqDAPS_r16& value)
 {
     (void)value;
@@ -8054,6 +8510,10 @@ void Free_FeatureSetDownlink_v1610_IntraFreqDAPS_r16(FeatureSetDownlink_v1610_In
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// PDCCH_MonitoringOccasions_r16：ASN.1 PDCCH-MonitoringOccasions-r16；源文件第 16419 行；SEQUENCE。
+// Encode_PDCCH_MonitoringOccasions_r16 只读不分配；Decode_PDCCH_MonitoringOccasions_r16 可能 malloc（失败时内部已释放并清零）；Free_PDCCH_MonitoringOccasions_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_MonitoringOccasions_r16(Encoder& enc, const PDCCH_MonitoringOccasions_r16& value)
 {
     (void)value;
@@ -8110,6 +8570,10 @@ void Free_PDCCH_MonitoringOccasions_r16(PDCCH_MonitoringOccasions_r16& value)
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1610_Pdcch_Monitoring_r16_Pdsch_ProcessingType1_r16：ASN.1 pdcch-Monitoring-r16/pdsch-ProcessingType1-r16；源文件第 16259 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1610_Pdcch_Monitoring_r16_Pdsch_ProcessingType1_r16 只读不分配；Decode_FeatureSetDownlink_v1610_Pdcch_Monitoring_r16_Pdsch_ProcessingType1_r16 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1610_Pdcch_Monitoring_r16_Pdsch_ProcessingType1_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1610_Pdcch_Monitoring_r16_Pdsch_ProcessingType1_r16(Encoder& enc, const FeatureSetDownlink_v1610_Pdcch_Monitoring_r16_Pdsch_ProcessingType1_r16& value)
 {
     (void)value;
@@ -8157,6 +8621,10 @@ void Free_FeatureSetDownlink_v1610_Pdcch_Monitoring_r16_Pdsch_ProcessingType1_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1610_Pdcch_Monitoring_r16_Pdsch_ProcessingType2_r16：ASN.1 pdcch-Monitoring-r16/pdsch-ProcessingType2-r16；源文件第 16263 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1610_Pdcch_Monitoring_r16_Pdsch_ProcessingType2_r16 只读不分配；Decode_FeatureSetDownlink_v1610_Pdcch_Monitoring_r16_Pdsch_ProcessingType2_r16 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1610_Pdcch_Monitoring_r16_Pdsch_ProcessingType2_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1610_Pdcch_Monitoring_r16_Pdsch_ProcessingType2_r16(Encoder& enc, const FeatureSetDownlink_v1610_Pdcch_Monitoring_r16_Pdsch_ProcessingType2_r16& value)
 {
     (void)value;
@@ -8204,6 +8672,10 @@ void Free_FeatureSetDownlink_v1610_Pdcch_Monitoring_r16_Pdsch_ProcessingType2_r1
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1610_Pdcch_Monitoring_r16：ASN.1 pdcch-Monitoring-r16；源文件第 16258 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1610_Pdcch_Monitoring_r16 只读不分配；Decode_FeatureSetDownlink_v1610_Pdcch_Monitoring_r16 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1610_Pdcch_Monitoring_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1610_Pdcch_Monitoring_r16(Encoder& enc, const FeatureSetDownlink_v1610_Pdcch_Monitoring_r16& value)
 {
     (void)value;
@@ -8251,6 +8723,10 @@ void Free_FeatureSetDownlink_v1610_Pdcch_Monitoring_r16(FeatureSetDownlink_v1610
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1610_CrossCarrierSchedulingProcessing_DiffSCS_r16：ASN.1 crossCarrierSchedulingProcessing-DiffSCS-r16；源文件第 16273 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1610_CrossCarrierSchedulingProcessing_DiffSCS_r16 只读不分配；Decode_FeatureSetDownlink_v1610_CrossCarrierSchedulingProcessing_DiffSCS_r16 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1610_CrossCarrierSchedulingProcessing_DiffSCS_r16 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1610_CrossCarrierSchedulingProcessing_DiffSCS_r16(Encoder& enc, const FeatureSetDownlink_v1610_CrossCarrierSchedulingProcessing_DiffSCS_r16& value)
 {
     (void)value;
@@ -8346,6 +8822,10 @@ void Free_FeatureSetDownlink_v1610_CrossCarrierSchedulingProcessing_DiffSCS_r16(
     std::memset(&value, 0, sizeof(value));
 }
 
+// --------------------------------------------------------------------------
+// FeatureSetDownlink_v1610：ASN.1 FeatureSetDownlink-v1610；源文件第 16234 行；SEQUENCE。
+// Encode_FeatureSetDownlink_v1610 只读不分配；Decode_FeatureSetDownlink_v1610 可能 malloc（失败时内部已释放并清零）；Free_FeatureSetDownlink_v1610 递归释放并清零。
+// --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1610(Encoder& enc, const FeatureSetDownlink_v1610& value)
 {
     (void)value;
