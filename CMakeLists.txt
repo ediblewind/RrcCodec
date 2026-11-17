@@ -39,6 +39,13 @@ include("${CMAKE_CURRENT_SOURCE_DIR}/generated/Sources.cmake")
 # ---------------------------------------------------------------------------
 # 库目标
 # ---------------------------------------------------------------------------
+# 共享库构建时把可执行文件与 DLL 放到同一目录，Windows 下测试/示例才能找到 DLL。
+if(RRC_CODEC_BUILD_SHARED)
+  set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+  set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+  set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
+endif()
+
 if(RRC_CODEC_BUILD_SHARED)
   add_library(rrc_codec SHARED)
   target_compile_definitions(rrc_codec PRIVATE RRC_CODEC_BUILDING_LIBRARY)

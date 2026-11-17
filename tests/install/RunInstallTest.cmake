@@ -138,14 +138,19 @@ function(rrc_run_consumer _label _binary_dir _name)
 
   set(_run_cmd "${CMAKE_COMMAND}" -E env)
   if(RRC_CODEC_EXPECT_SHARED)
-    # 动态库安装到 <prefix>/<bindir>，运行时需要它在 PATH（Windows）上。
     if(CMAKE_HOST_WIN32)
-      set(_path_sep ";")
+      # Windows：把安装的 DLL 复制到消费者可执行文件旁，避免依赖 PATH 列表
+      # 在 CMake list/环境变量之间的分号转义问题。
+      file(GLOB _installed_dlls
+        "${RRC_CODEC_PREFIX}/${RRC_CODEC_INSTALL_BINDIR}/*.dll")
+      foreach(_dll IN LISTS _installed_dlls)
+        execute_process(COMMAND "${CMAKE_COMMAND}" -E copy_if_different
+          "${_dll}" "${_binary_dir}")
+      endforeach()
     else()
-      set(_path_sep ":")
+      list(APPEND _run_cmd
+        "LD_LIBRARY_PATH=${RRC_CODEC_PREFIX}/${RRC_CODEC_INSTALL_LIBDIR}:$ENV{LD_LIBRARY_PATH}")
     endif()
-    list(APPEND _run_cmd
-      "PATH=${RRC_CODEC_PREFIX}/${RRC_CODEC_INSTALL_BINDIR}${_path_sep}$ENV{PATH}")
   endif()
   list(APPEND _run_cmd "${_exe}")
   rrc_run("运行 ${_label}" ${_run_cmd})

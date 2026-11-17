@@ -15,6 +15,7 @@
 
 #include <cstddef>
 
+#include "rrc_codec/rrc_codec.h"
 #include "rrc_codec/rrc_version.h"
 
 namespace {
