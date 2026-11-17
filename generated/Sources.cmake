@@ -1,3 +1,36 @@
-# 生成源列表（由 rrcgen 生成；入库）
-# 当前为脚手架占位：生成器首次运行后会写入全部 codec_partNNN.cpp。
-set(RRC_CODEC_GENERATED_SOURCES)
+# 生成源列表（由 rrcgen 生成；入库，请勿手工修改）
+# 每个 codec_partNNN.cpp 为一个独立编译单元（方案 5.5）。
+set(RRC_CODEC_GENERATED_SOURCES
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part001.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part002.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part003.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part004.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part005.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part006.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part007.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part008.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part009.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part010.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part011.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part012.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part013.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part014.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part015.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part016.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part017.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part018.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part019.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part020.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part021.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part022.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part023.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part024.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part025.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part026.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part027.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part028.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part029.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part030.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part031.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part032.cpp"
+)
