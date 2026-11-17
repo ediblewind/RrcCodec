@@ -305,6 +305,59 @@ void TestContainingRoundTrip() {
                                      sample.data);
 }
 
+void TestContainingDepthExceeded() {
+  /* 构造 RRCReconfiguration ↔ MRDC-SecondaryCellGroupConfig 的循环指针图：
+     A 的 nr-SCG 指向 B，B 的 nr-SCG 指向 A。编码必须在深度上限处失败。 */
+  const std::size_t size =
+      rrc::v1810::test::MessageStructSize(MessageKind_RRCReconfiguration);
+  const std::size_t alignment =
+      rrc::v1810::test::MessageStructAlignment(MessageKind_RRCReconfiguration);
+  AlignedBuffer buffer_a(size, alignment);
+  AlignedBuffer buffer_b(size, alignment);
+  auto* a = static_cast<RRCReconfiguration*>(buffer_a.data);
+  auto* b = static_cast<RRCReconfiguration*>(buffer_b.data);
+  rrc::v1810::test::BuildSample_RRCReconfiguration(*a, 0);
+  rrc::v1810::test::BuildSample_RRCReconfiguration(*b, 0);
+
+  auto attach = [](RRCReconfiguration& message, RRCReconfiguration* target) {
+    RRCReconfiguration_IEs& ies =
+        message.criticalExtensions.u.rrcReconfiguration;
+    ies.has_nonCriticalExtension = true;
+    RRCReconfiguration_v1530_IEs& v1530 = ies.nonCriticalExtension;
+    v1530.has_nonCriticalExtension = true;
+    RRCReconfiguration_v1540_IEs& v1540 = v1530.nonCriticalExtension;
+    v1540.has_nonCriticalExtension = true;
+    RRCReconfiguration_v1560_IEs& v1560 = v1540.nonCriticalExtension;
+    v1560.has_mrdc_SecondaryCellGroupConfig = true;
+    SetupRelease_MRDC_SecondaryCellGroupConfig& setup_release =
+        v1560.mrdc_SecondaryCellGroupConfig;
+    setup_release.tag = SetupRelease_MRDC_SecondaryCellGroupConfig_Tag_setup;
+    MRDC_SecondaryCellGroupConfig& config = setup_release.u.setup;
+    config.mrdc_SecondaryCellGroup.tag =
+        MRDC_SecondaryCellGroupConfig_Mrdc_SecondaryCellGroup_Tag_nr_SCG;
+    config.mrdc_SecondaryCellGroup.u.nr_SCG = target;
+  };
+  attach(*a, b);
+  attach(*b, a);
+
+  EncodedMessage encoded = {nullptr, 0, 0};
+  const ErrorCode rc = EncodeMessage(MessageKind_RRCReconfiguration, a,
+                                     &encoded);
+  CHECK_KIND(rc == ErrorCode_ContainingDepthExceeded, "depth");
+  FreeEncodedMessage(&encoded);
+
+  /* 打断环后分别释放（A、B 由测试分配，不能作为 CONTAINING 指针被 free）。 */
+  auto detach = [](RRCReconfiguration& message) {
+    message.criticalExtensions.u.rrcReconfiguration.nonCriticalExtension
+        .nonCriticalExtension.nonCriticalExtension.mrdc_SecondaryCellGroupConfig
+        .u.setup.mrdc_SecondaryCellGroup.u.nr_SCG = nullptr;
+  };
+  detach(*a);
+  detach(*b);
+  rrc::v1810::test::FreeSampleByKind(MessageKind_RRCReconfiguration, a);
+  rrc::v1810::test::FreeSampleByKind(MessageKind_RRCReconfiguration, b);
+}
+
 }  // namespace
 
 int main() {
@@ -313,6 +366,7 @@ int main() {
   TestUnsupportedSpareBranch();
   TestTruncatedMessage();
   TestContainingRoundTrip();
+  TestContainingDepthExceeded();
   if (g_failures == 0) {
     std::printf("messages: 53 round-trip + channel/containing tests passed\n");
     return 0;
