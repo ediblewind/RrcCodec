@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import List, Optional
+from typing import Dict, List, Optional, Tuple
 
 from ..cmodel import (
     CModel,
@@ -29,44 +29,161 @@ from .c_common import (
 
 _HEADER = "rrc_types.h"
 
+#: 单个生成头分块的目标大小（字节）。CLion/ReSharper 的默认“分析文件大小阈值”
+#: 为 300,000 字节、PSI 构建阈值为 2,000,000 字节；分块后每个头都能被 IDE 正常
+#: 解析，Go to Declaration 可用（方案 Q-10 的“实测不佳再拆”）。
+TYPE_PART_LIMIT = 240_000
 
-def emit_types_header(cmodel: CModel) -> str:
+
+def emit_types_headers(
+    cmodel: CModel, part_limit: int = TYPE_PART_LIMIT
+) -> Dict[str, str]:
+    """生成 ``types/rrc_types.h``（umbrella）+ 若干 ``rrc_types_partNNN.h``。
+
+    返回 {相对文件名: 内容}；所有文件安装到 ``include/rrc_codec/types/``。
+    分块只改变头文件布局，不改变公开包含路径、类型名与 ABI。
+    """
+    blocks = _definition_blocks(cmodel)
+    part_blocks = _pack_blocks(blocks, part_limit)
+    part_names = [f"rrc_types_part{index:03d}.h" for index in range(len(part_blocks))]
+    files: Dict[str, str] = {}
+    files[_HEADER] = _render_umbrella(cmodel, part_names)
+    for index, blocks_in_part in enumerate(part_blocks):
+        files[part_names[index]] = _render_part(
+            cmodel, index, part_names[index], blocks_in_part, part_names[:index]
+        )
+    return files
+
+
+def _definition_blocks(cmodel: CModel) -> List[Tuple[List[str], bool]]:
+    """按声明依赖顺序返回 (行块, 是否可跨分块拆分) 列表。"""
+    blocks: List[Tuple[List[str], bool]] = []
+    blocks.append((_base_types(), False))
+    blocks.append(([""] + _forward_declarations(cmodel), True))
+    # 枚举先于顶层基本类型/别名输出：别名可能指向顶层枚举（如 RangeToBestCell）。
+    for key in sorted(cmodel.enum_defs):
+        enum_def = cmodel.enum_defs[key]
+        blocks.append((_emit_enum(enum_def) + [""], False))
+    blocks.append(([""] + _named_primitive_typedefs(cmodel), True))
+    blocks.append(([""] + _alias_typedefs(cmodel), True))
+    for struct in cmodel.ordered_structs:
+        blocks.append((_render_struct_definition(cmodel, struct) + [""], False))
+    return blocks
+
+
+def _block_size(lines: List[str]) -> int:
+    return sum(len(line) + 1 for line in lines) + 1
+
+
+def _split_lines(lines: List[str], limit: int) -> List[List[str]]:
+    chunks: List[List[str]] = []
+    current: List[str] = []
+    size = 0
+    for line in lines:
+        line_size = len(line) + 1
+        if current and size + line_size > limit:
+            chunks.append(current)
+            current = []
+            size = 0
+        current.append(line)
+        size += line_size
+    if current:
+        chunks.append(current)
+    return chunks
+
+
+def _pack_blocks(
+    blocks: List[Tuple[List[str], bool]], limit: int
+) -> List[List[List[str]]]:
+    parts: List[List[List[str]]] = []
+    current: List[List[str]] = []
+    size = 0
+    for lines, splittable in blocks:
+        block_size = _block_size(lines)
+        if block_size > limit and splittable:
+            if current:
+                parts.append(current)
+                current = []
+                size = 0
+            for chunk in _split_lines(lines, limit):
+                parts.append([chunk])
+            continue
+        if current and size + block_size > limit:
+            parts.append(current)
+            current = []
+            size = 0
+        current.append(lines)
+        size += block_size
+    if current:
+        parts.append(current)
+    return parts
+
+
+def _render_umbrella(cmodel: CModel, part_names: List[str]) -> str:
     lines: List[str] = []
     lines.extend(
         generated_banner(
-            "types/rrc_types.h — 消息/IE 的 C 结构体与枚举（公开头）",
+            "types/rrc_types.h — 消息/IE 的 C 结构体与枚举（公开伞头）",
             cmodel.input_sha256,
             cmodel.asn_version,
         )
     )
-    lines.append("")
-    lines.append("#ifndef RRC_CODEC_TYPES_RRC_TYPES_H")
-    lines.append("#define RRC_CODEC_TYPES_RRC_TYPES_H")
-    lines.append("")
-    lines.append("#include <stdbool.h>")
-    lines.append("#include <stdint.h>")
-    lines.append("")
-    lines.append("#ifdef __cplusplus")
-    lines.append('extern "C" {')
-    lines.append("#endif")
-    lines.append("")
-    lines.extend(_base_types())
-    lines.append("")
-    lines.extend(_forward_declarations(cmodel))
-    lines.append("")
-    lines.extend(_enum_definitions(cmodel))
-    lines.append("")
-    lines.extend(_named_primitive_typedefs(cmodel))
-    lines.append("")
-    lines.extend(_alias_typedefs(cmodel))
-    lines.append("")
-    lines.extend(_struct_definitions(cmodel))
-    lines.append("")
-    lines.append("#ifdef __cplusplus")
-    lines.append('} /* extern "C" */')
-    lines.append("#endif")
-    lines.append("")
-    lines.append("#endif /* RRC_CODEC_TYPES_RRC_TYPES_H */")
+    lines.extend(
+        [
+            "",
+            "/*",
+            " * 本文件为公开入口；实际定义按拓扑序拆分在 rrc_types_partNNN.h 中，",
+            " * 以控制单文件体积（生成物仍为单一声明集合，类型名/ABI 不变）。",
+            " * 请包含本文件，不要直接包含 part 文件。",
+            " */",
+            "",
+            "#ifndef RRC_CODEC_TYPES_RRC_TYPES_H",
+            "#define RRC_CODEC_TYPES_RRC_TYPES_H",
+            "",
+            "#include <stdbool.h>",
+            "#include <stdint.h>",
+        ]
+    )
+    for name in part_names:
+        lines.append(f'#include "{name}"')
+    lines.extend(["", "#endif /* RRC_CODEC_TYPES_RRC_TYPES_H */"])
+    return "\n".join(lines) + "\n"
+
+
+def _render_part(
+    cmodel: CModel,
+    index: int,
+    name: str,
+    blocks: List[List[str]],
+    previous_names: List[str],
+) -> str:
+    guard = f"RRC_CODEC_TYPES_PART{index:03d}_H"
+    lines: List[str] = []
+    lines.extend(
+        generated_banner(
+            f"types/{name} — rrc_types.h 的分块定义（自动生成）",
+            cmodel.input_sha256,
+            cmodel.asn_version,
+        )
+    )
+    lines.extend(["", f"#ifndef {guard}", f"#define {guard}", ""])
+    if index == 0:
+        lines.extend(["#include <stdbool.h>", "#include <stdint.h>", ""])
+    for previous in previous_names:
+        lines.append(f'#include "{previous}"')
+    lines.extend(["", "#ifdef __cplusplus", 'extern "C" {', "#endif", ""])
+    for block in blocks:
+        lines.extend(block)
+        lines.append("")
+    lines.extend(
+        [
+            "#ifdef __cplusplus",
+            '} /* extern "C" */',
+            "#endif",
+            "",
+            f"#endif /* {guard} */",
+        ]
+    )
     return "\n".join(lines) + "\n"
 
 
@@ -195,24 +312,31 @@ def _alias_typedefs(cmodel: CModel) -> List[str]:
 
 def _struct_definitions(cmodel: CModel) -> List[str]:
     lines = ["/* ---------- 结构体定义（依赖拓扑序） ---------- */"]
-    messages_by_type = {message.type_id: message for message in cmodel.messages}
     for struct in cmodel.ordered_structs:
-        message = messages_by_type.get(struct.key)
-        lines.extend(_emit_struct_header(struct, message))
-        if struct.kind == "empty":
-            lines.append(f"struct {struct.cname} {{")
-            lines.append("    uint8_t _dummy; /**< 占位；编码 0 bit。 */")
-            lines.append("};")
-        elif struct.kind == "group":
-            group = cmodel.group_by_key[struct.key]
-            lines.extend(_emit_group_body(group))
-        elif struct.kind == "seqof":
-            lines.extend(_emit_seqof_body(struct))
-        elif struct.kind == "choice":
-            lines.extend(_emit_choice_body(struct))
-        else:
-            lines.extend(_emit_sequence_body(struct))
+        lines.extend(_render_struct_definition(cmodel, struct))
         lines.append("")
+    return lines
+
+
+def _render_struct_definition(cmodel: CModel, struct: StructDef) -> List[str]:
+    """渲染单个结构体的完整定义（供分块生成复用）。"""
+    message = next(
+        (item for item in cmodel.messages if item.type_id == struct.key), None
+    )
+    lines = _emit_struct_header(struct, message)
+    if struct.kind == "empty":
+        lines.append(f"struct {struct.cname} {{")
+        lines.append("    uint8_t _dummy; /**< 占位；编码 0 bit。 */")
+        lines.append("};")
+    elif struct.kind == "group":
+        group = cmodel.group_by_key[struct.key]
+        lines.extend(_emit_group_body(group))
+    elif struct.kind == "seqof":
+        lines.extend(_emit_seqof_body(struct))
+    elif struct.kind == "choice":
+        lines.extend(_emit_choice_body(struct))
+    else:
+        lines.extend(_emit_sequence_body(struct))
     return lines
 
 

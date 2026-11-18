@@ -34,7 +34,7 @@ from .diagnostics import DiagnosticCollector
 from .emitters.c_codec import CodecEmitter
 from .emitters.c_messages import emit_messages_header
 from .emitters.c_samples import emit_samples_header, emit_samples_source
-from .emitters.c_types import emit_types_header
+from .emitters.c_types import emit_types_headers
 from .normalize import normalize_source
 from .parser import parse_source
 from .resolver import resolve_source
@@ -46,7 +46,8 @@ EXIT_USAGE = 2
 DEFAULT_MODULE = "NR-RRC-Definitions"
 
 #: 输出文件（相对 repo-root）。
-PATH_TYPES = "include/rrc_codec/types/rrc_types.h"
+PATH_TYPES_DIR = "include/rrc_codec/types"
+PATH_TYPES = PATH_TYPES_DIR + "/rrc_types.h"
 PATH_MESSAGES = "include/rrc_codec/messages/rrc_messages.h"
 PATH_INTERNAL = "src/generated/codec_internal.h"
 PATH_SOURCES_CMAKE = "generated/Sources.cmake"
@@ -150,7 +151,6 @@ def _generate(args) -> Dict[str, str]:
     codec = CodecEmitter(cmodel, chunk_size=args.chunk_size)
 
     files: Dict[str, str] = {
-        PATH_TYPES: emit_types_header(cmodel),
         PATH_MESSAGES: emit_messages_header(cmodel),
         PATH_INTERNAL: codec.emit_internal_header(),
         PATH_STATS: _emit_stats(cmodel, args),
@@ -158,6 +158,8 @@ def _generate(args) -> Dict[str, str]:
         PATH_SAMPLES_HEADER: emit_samples_header(cmodel),
         PATH_SAMPLES_SOURCE: emit_samples_source(cmodel),
     }
+    for name, content in emit_types_headers(cmodel).items():
+        files[f"{PATH_TYPES_DIR}/{name}"] = content
     parts = codec.emit_parts()
     part_names: List[str] = []
     for name, content in parts.items():
@@ -256,16 +258,28 @@ def _emit_message_index(cmodel: CModel) -> str:
 
 def _write_outputs(repo_root: Path, files: Dict[str, str]) -> None:
     expected = set(files)
-    generated_dir = repo_root / "src/generated"
-    if generated_dir.is_dir():
-        for entry in generated_dir.glob("codec_part*.cpp"):
-            relative = entry.relative_to(repo_root).as_posix()
-            if relative not in expected:
-                entry.unlink()
+    _prune_stale(repo_root, expected)
     for relative, content in files.items():
         path = repo_root / relative
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(content, encoding="utf-8", newline="\n")
+
+
+def _prune_stale(repo_root: Path, expected: set[str]) -> List[str]:
+    """删除不再由生成器产出的分块文件，返回删除的相对路径列表。"""
+    removed: List[str] = []
+    for directory, pattern in (
+        (repo_root / "src/generated", "codec_part*.cpp"),
+        (repo_root / PATH_TYPES_DIR, "rrc_types_part*.h"),
+    ):
+        if not directory.is_dir():
+            continue
+        for entry in sorted(directory.glob(pattern)):
+            relative = entry.relative_to(repo_root).as_posix()
+            if relative not in expected:
+                entry.unlink()
+                removed.append(relative)
+    return removed
 
 
 def _check_outputs(repo_root: Path, files: Dict[str, str]) -> int:
@@ -280,9 +294,13 @@ def _check_outputs(repo_root: Path, files: Dict[str, str]) -> int:
             mismatch.append(relative)
     expected = set(files)
     unexpected: List[str] = []
-    generated_dir = repo_root / "src/generated"
-    if generated_dir.is_dir():
-        for entry in sorted(generated_dir.glob("codec_part*.cpp")):
+    for directory, pattern in (
+        (repo_root / "src/generated", "codec_part*.cpp"),
+        (repo_root / PATH_TYPES_DIR, "rrc_types_part*.h"),
+    ):
+        if not directory.is_dir():
+            continue
+        for entry in sorted(directory.glob(pattern)):
             relative = entry.relative_to(repo_root).as_posix()
             if relative not in expected:
                 unexpected.append(relative)

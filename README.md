@@ -113,7 +113,7 @@ cc app.c $(pkg-config --cflags --libs rrc_codec) -o app
 ## 目录
 
 ```
-include/rrc_codec/   公共头（手写 5 个 + 生成 2 个）
+include/rrc_codec/   公共头（手写 5 个 + 生成 2 个；类型头按 IDE 友好大小分块）
 src/core/            PER 运行时、错误、C ABI、分派（手写）
 src/generated/       生成的编解码函数（32 个分块 + 内部头）
 tools/rrcgen/        ASN.1 前端 + C 发射器（开发期，不安装）

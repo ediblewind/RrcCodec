@@ -160,6 +160,27 @@ class CModelTest(unittest.TestCase):
         self.assertGreater(stats["EnumDefinitions"], 3000)
         self.assertEqual(stats["NamedAliases"], 3)
         self.assertEqual(len(self.cmodel.chunks(120)), 32)
+    def test_type_headers_are_split_for_ides(self) -> None:
+        # CLion/ReSharper 的默认分析阈值为 300KB、PSI 阈值为 2MB；单文件 6MB
+        # 会暂停分析并导致 Go to Declaration 失效，因此类型头必须分块。
+        from rrcgen.emitters.c_types import emit_types_headers
+
+        files = emit_types_headers(self.cmodel)
+        umbrella = files["rrc_types.h"]
+        parts = sorted(name for name in files if name.startswith("rrc_types_part"))
+        self.assertGreater(len(parts), 1)
+        for name in parts:
+            self.assertIn(f'#include "{name}"', umbrella)
+            self.assertLess(len(files[name].encode("utf-8")), 300_000,
+                            f"{name} exceeds IDE analysis threshold")
+        # 第一部分必须包含基础类型；前向声明允许被拆分到后续 part。
+        self.assertIn("typedef struct BitString", files["rrc_types_part000.h"])
+        combined = "\n".join(files[name] for name in parts)
+        self.assertIn("typedef struct MIB MIB;", combined)
+        # part 文件按序 include 前面的部分，保证单独打开时也能解析依赖。
+        for name in parts[1:]:
+            self.assertIn('"rrc_types_part000.h"', files[name])
+
 
 
 if __name__ == "__main__":

@@ -80,6 +80,7 @@ Makefile       text eol=lf
 # 生成物标记（内容仍是文本，仅提示评审/统计工具）
 # ---------------------------------------------------------------------------
 include/rrc_codec/types/rrc_types.h        linguist-generated=true
+include/rrc_codec/types/rrc_types_part*.h   linguist-generated=true
 include/rrc_codec/messages/rrc_messages.h  linguist-generated=true
 src/generated/**                            linguist-generated=true
 generated/**                                linguist-generated=true
