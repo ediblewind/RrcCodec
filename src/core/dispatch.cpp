@@ -122,8 +122,7 @@ ErrorCode EncodeAs(MessageKind kind, const void* message, EncodedMessage* encode
   }
 
   /* 先取补零前的有效位长，再 Finish() 补零到字节边界。 */
-  const std::uint64_t bit_length =
-      static_cast<std::uint64_t>(encoder.BitLength());
+  const std::uint64_t bit_length = encoder.BitLength();
   std::vector<std::uint8_t> bytes = encoder.Finish();
   const std::size_t size = bytes.size();
   if (size == 0) {

@@ -24,7 +24,6 @@ namespace v1810 {
 // --------------------------------------------------------------------------
 ErrorCode Encode_PUCCH_TPC_CommandConfig(Encoder& enc, const PUCCH_TPC_CommandConfig& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_tpc_IndexPCell);
@@ -183,7 +182,6 @@ void Free_SetupRelease_PUCCH_TPC_CommandConfig(SetupRelease_PUCCH_TPC_CommandCon
 // --------------------------------------------------------------------------
 ErrorCode Encode_SRS_TPC_CommandConfig_ExtGroup1(Encoder& enc, const SRS_TPC_CommandConfig_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_startingBitOfFormat2_3SUL);
     if (value.has_startingBitOfFormat2_3SUL) {
         enc.WriteConstrainedInteger((std::int64_t)(value.startingBitOfFormat2_3SUL), 1, 31);
@@ -223,7 +221,6 @@ void Free_SRS_TPC_CommandConfig_ExtGroup1(SRS_TPC_CommandConfig_ExtGroup1& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_SRS_TPC_CommandConfig(Encoder& enc, const SRS_TPC_CommandConfig& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_startingBitOfFormat2_3);
@@ -382,7 +379,6 @@ void Free_SetupRelease_SRS_TPC_CommandConfig(SetupRelease_SRS_TPC_CommandConfig&
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_Config(Encoder& enc, const PDCCH_Config& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_controlResourceSetToAddModList);
@@ -743,7 +739,6 @@ void Free_SetupRelease_PDCCH_Config(SetupRelease_PDCCH_Config& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_RateMatchPatternGroup(Encoder& enc, const RateMatchPatternGroup& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_RateMatchPatternGroup_Item(enc, value.items[i]);
@@ -792,7 +787,6 @@ void Free_RateMatchPatternGroup(RateMatchPatternGroup& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DMRS_DownlinkConfig_ExtGroup1(Encoder& enc, const DMRS_DownlinkConfig_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dmrs_Downlink_r16);
     if (value.has_dmrs_Downlink_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.dmrs_Downlink_r16), 0, 0);
@@ -830,7 +824,6 @@ void Free_DMRS_DownlinkConfig_ExtGroup1(DMRS_DownlinkConfig_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DMRS_DownlinkConfig_ExtGroup2(Encoder& enc, const DMRS_DownlinkConfig_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dmrs_TypeEnh_r18);
     if (value.has_dmrs_TypeEnh_r18) {
         enc.WriteConstrainedInteger((std::int64_t)(value.dmrs_TypeEnh_r18), 0, 0);
@@ -868,7 +861,6 @@ void Free_DMRS_DownlinkConfig_ExtGroup2(DMRS_DownlinkConfig_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PTRS_DownlinkConfig_ExtGroup1(Encoder& enc, const PTRS_DownlinkConfig_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxNrofPorts_r16);
     if (value.has_maxNrofPorts_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.maxNrofPorts_r16), 0, 1);
@@ -908,7 +900,6 @@ void Free_PTRS_DownlinkConfig_ExtGroup1(PTRS_DownlinkConfig_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PTRS_DownlinkConfig(Encoder& enc, const PTRS_DownlinkConfig& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_frequencyDensity);
@@ -1135,7 +1126,6 @@ void Free_SetupRelease_PTRS_DownlinkConfig(SetupRelease_PTRS_DownlinkConfig& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_DMRS_DownlinkConfig(Encoder& enc, const DMRS_DownlinkConfig& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_dmrs_Type);
@@ -1428,7 +1418,6 @@ void Free_SetupRelease_MaxMIMO_LayersDL_r16(SetupRelease_MaxMIMO_LayersDL_r16& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_MinSchedulingOffsetK0_Values_r16(Encoder& enc, const MinSchedulingOffsetK0_Values_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 2u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 16);
@@ -1604,7 +1593,6 @@ void Free_SetupRelease_PDSCH_TimeDomainResourceAllocationList_r16(SetupRelease_P
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDSCH_Config_ExtGroup1_Prb_BundlingTypeDCI_1_2_r16_StaticBundling_r16(Encoder& enc, const PDSCH_Config_ExtGroup1_Prb_BundlingTypeDCI_1_2_r16_StaticBundling_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bundleSize_r16);
     if (value.has_bundleSize_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.bundleSize_r16), 0, 1);
@@ -1644,7 +1632,6 @@ void Free_PDSCH_Config_ExtGroup1_Prb_BundlingTypeDCI_1_2_r16_StaticBundling_r16(
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDSCH_Config_ExtGroup1_Prb_BundlingTypeDCI_1_2_r16_DynamicBundling_r16(Encoder& enc, const PDSCH_Config_ExtGroup1_Prb_BundlingTypeDCI_1_2_r16_DynamicBundling_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bundleSizeSet1_r16);
     enc.WriteBit(value.has_bundleSizeSet2_r16);
     if (value.has_bundleSizeSet1_r16) {
@@ -1761,7 +1748,6 @@ void Free_PDSCH_Config_ExtGroup1_Prb_BundlingTypeDCI_1_2_r16(PDSCH_Config_ExtGro
 // --------------------------------------------------------------------------
 ErrorCode Encode_FDM_TDM_r16(Encoder& enc, const FDM_TDM_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_startingSymbolOffsetK_r16);
     enc.WriteConstrainedInteger((std::int64_t)(value.repetitionScheme_r16), 0, 2);
     if (value.has_startingSymbolOffsetK_r16) {
@@ -1870,7 +1856,6 @@ void Free_SetupRelease_FDM_TDM_r16(SetupRelease_FDM_TDM_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SlotBased_r16(Encoder& enc, const SlotBased_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.tciMapping_r16), 0, 1);
     enc.WriteConstrainedInteger((std::int64_t)(value.sequenceOffsetForRV_r16), 1, 3);
     return enc.Error();
@@ -2099,7 +2084,6 @@ void Free_SetupRelease_RepetitionSchemeConfig_r16(SetupRelease_RepetitionSchemeC
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDSCH_Config_ExtGroup1(Encoder& enc, const PDSCH_Config_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxMIMO_Layers_r16);
     enc.WriteBit(value.has_minimumSchedulingOffsetK0_r16);
     enc.WriteBit(value.has_antennaPortsFieldPresenceDCI_1_2_r16);
@@ -2459,7 +2443,6 @@ void Free_PDSCH_Config_ExtGroup1(PDSCH_Config_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SlotBased_v1630(Encoder& enc, const SlotBased_v1630& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.tciMapping_r16), 0, 1);
     enc.WriteConstrainedInteger((std::int64_t)(value.sequenceOffsetForRV_r16), 0, 0);
     return enc.Error();
@@ -2561,7 +2544,6 @@ void Free_SetupRelease_SlotBased_v1630(SetupRelease_SlotBased_v1630& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_RepetitionSchemeConfig_v1630(Encoder& enc, const RepetitionSchemeConfig_v1630& value)
 {
-    (void)value;
     Encode_SetupRelease_SlotBased_v1630(enc, value.slotBased_v1630);
     return enc.Error();
 }
@@ -2656,7 +2638,6 @@ void Free_SetupRelease_RepetitionSchemeConfig_v1630(SetupRelease_RepetitionSchem
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDSCH_Config_ExtGroup2(Encoder& enc, const PDSCH_Config_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_repetitionSchemeConfig_v1630);
     if (value.has_repetitionSchemeConfig_v1630) {
         Encode_SetupRelease_RepetitionSchemeConfig_v1630(enc, value.repetitionSchemeConfig_v1630);
@@ -2695,7 +2676,6 @@ void Free_PDSCH_Config_ExtGroup2(PDSCH_Config_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ServingCellAndBWP_Id_r17(Encoder& enc, const ServingCellAndBWP_Id_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.servingcell_r17), 0, 31);
     enc.WriteConstrainedInteger((std::int64_t)(value.bwp_r17), 0, 4);
     return enc.Error();
@@ -2734,7 +2714,6 @@ void Free_ServingCellAndBWP_Id_r17(ServingCellAndBWP_Id_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDSCH_Config_ExtGroup3_Dl_OrJointTCI_StateList_r17_Explicitlist(Encoder& enc, const PDSCH_Config_ExtGroup3_Dl_OrJointTCI_StateList_r17_Explicitlist& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dl_OrJointTCI_StateToAddModList_r17);
     enc.WriteBit(value.has_dl_OrJointTCI_StateToReleaseList_r17);
     if (value.has_dl_OrJointTCI_StateToAddModList_r17) {
@@ -2892,7 +2871,6 @@ void Free_PDSCH_Config_ExtGroup3_Dl_OrJointTCI_StateList_r17(PDSCH_Config_ExtGro
 // --------------------------------------------------------------------------
 ErrorCode Encode_Dummy_TDRA_List(Encoder& enc, const Dummy_TDRA_List& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MultiPDSCH_TDRA_r17(enc, value.items[i]);
@@ -3004,7 +2982,6 @@ void Free_SetupRelease_Dummy_TDRA_List(SetupRelease_Dummy_TDRA_List& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MinSchedulingOffsetK0_Values_r17(Encoder& enc, const MinSchedulingOffsetK0_Values_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 2u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 64);
@@ -3117,7 +3094,6 @@ void Free_SetupRelease_MinSchedulingOffsetK0_Values_r17(SetupRelease_MinScheduli
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDSCH_Config_ExtGroup3(Encoder& enc, const PDSCH_Config_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pdsch_HARQ_ACK_OneShotFeedbackDCI_1_2_r17);
     enc.WriteBit(value.has_pdsch_HARQ_ACK_EnhType3DCI_1_2_r17);
     enc.WriteBit(value.has_pdsch_HARQ_ACK_EnhType3DCI_Field_1_2_r17);
@@ -3344,7 +3320,6 @@ void Free_PDSCH_Config_ExtGroup3(PDSCH_Config_ExtGroup3& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MultiPDSCH_TDRA_List_r17(Encoder& enc, const MultiPDSCH_TDRA_List_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 64u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MultiPDSCH_TDRA_r17(enc, value.items[i]);
@@ -3456,7 +3431,6 @@ void Free_SetupRelease_MultiPDSCH_TDRA_List_r17(SetupRelease_MultiPDSCH_TDRA_Lis
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDSCH_Config_ExtGroup4(Encoder& enc, const PDSCH_Config_ExtGroup4& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pdsch_TimeDomainAllocationListForMultiPDSCH_r17);
     if (value.has_pdsch_TimeDomainAllocationListForMultiPDSCH_r17) {
         Encode_SetupRelease_MultiPDSCH_TDRA_List_r17(enc, value.pdsch_TimeDomainAllocationListForMultiPDSCH_r17);
@@ -3495,7 +3469,6 @@ void Free_PDSCH_Config_ExtGroup4(PDSCH_Config_ExtGroup4& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_AdvancedReceiver_MU_MIMO_r18(Encoder& enc, const AdvancedReceiver_MU_MIMO_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_precodingAndResourceAllocation_r18);
@@ -3655,7 +3628,6 @@ void Free_SetupRelease_AdvancedReceiver_MU_MIMO_r18(SetupRelease_AdvancedReceive
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDSCH_ConfigDCI_1_3_r18(Encoder& enc, const PDSCH_ConfigDCI_1_3_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_resourceAllocationDCI_1_3_r18);
     enc.WriteBit(value.has_rbg_SizeDCI_1_3_r18);
     enc.WriteBit(value.has_resourceAllocationType1GranularityDCI_1_3_r18);
@@ -3810,7 +3782,6 @@ void Free_SetupRelease_PDSCH_ConfigDCI_1_3_r18(SetupRelease_PDSCH_ConfigDCI_1_3_
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDSCH_Config_ExtGroup5(Encoder& enc, const PDSCH_Config_ExtGroup5& value)
 {
-    (void)value;
     enc.WriteBit(value.has_advancedReceiver_MU_MIMO_r18);
     enc.WriteBit(value.has_pdsch_ConfigDCI_1_3_r18);
     if (value.has_advancedReceiver_MU_MIMO_r18) {
@@ -3861,7 +3832,6 @@ void Free_PDSCH_Config_ExtGroup5(PDSCH_Config_ExtGroup5& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDSCH_TimeDomainResourceAllocationList(Encoder& enc, const PDSCH_TimeDomainResourceAllocationList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_PDSCH_TimeDomainResourceAllocation(enc, value.items[i]);
@@ -3973,7 +3943,6 @@ void Free_SetupRelease_PDSCH_TimeDomainResourceAllocationList(SetupRelease_PDSCH
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDSCH_Config_Prb_BundlingType_StaticBundling(Encoder& enc, const PDSCH_Config_Prb_BundlingType_StaticBundling& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bundleSize);
     if (value.has_bundleSize) {
         enc.WriteConstrainedInteger((std::int64_t)(value.bundleSize), 0, 1);
@@ -4013,7 +3982,6 @@ void Free_PDSCH_Config_Prb_BundlingType_StaticBundling(PDSCH_Config_Prb_Bundling
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDSCH_Config_Prb_BundlingType_DynamicBundling(Encoder& enc, const PDSCH_Config_Prb_BundlingType_DynamicBundling& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bundleSizeSet1);
     enc.WriteBit(value.has_bundleSizeSet2);
     if (value.has_bundleSizeSet1) {
@@ -4130,7 +4098,6 @@ void Free_PDSCH_Config_Prb_BundlingType(PDSCH_Config_Prb_BundlingType& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ZP_CSI_RS_ResourceSet(Encoder& enc, const ZP_CSI_RS_ResourceSet& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.zp_CSI_RS_ResourceSetId), 0, 15);
@@ -4260,7 +4227,6 @@ void Free_SetupRelease_ZP_CSI_RS_ResourceSet(SetupRelease_ZP_CSI_RS_ResourceSet&
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDSCH_Config(Encoder& enc, const PDSCH_Config& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3 || value.has_extGroup4 || value.has_extGroup5;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_dataScramblingIdentityPDSCH);
@@ -4974,7 +4940,6 @@ void Free_SetupRelease_PDSCH_Config(SetupRelease_PDSCH_Config& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BWP_DownlinkDedicatedSDT_r17(Encoder& enc, const BWP_DownlinkDedicatedSDT_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_pdcch_Config_r17);
@@ -5032,7 +4997,6 @@ void Free_BWP_DownlinkDedicatedSDT_r17(BWP_DownlinkDedicatedSDT_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ConfiguredGrantConfigToAddModList_r16(Encoder& enc, const ConfiguredGrantConfigToAddModList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 12u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_ConfiguredGrantConfig(enc, value.items[i]);
@@ -5081,7 +5045,6 @@ void Free_ConfiguredGrantConfigToAddModList_r16(ConfiguredGrantConfigToAddModLis
 // --------------------------------------------------------------------------
 ErrorCode Encode_ConfiguredGrantConfigToReleaseList_r16(Encoder& enc, const ConfiguredGrantConfigToReleaseList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 12u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 11);
@@ -5131,7 +5094,6 @@ void Free_ConfiguredGrantConfigToReleaseList_r16(ConfiguredGrantConfigToReleaseL
 // --------------------------------------------------------------------------
 ErrorCode Encode_SDM_Scheme_r18(Encoder& enc, const SDM_Scheme_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxRankSDM_r18);
     enc.WriteBit(value.has_maxRankSDM_DCI_0_2_r18);
     if (value.has_maxRankSDM_r18) {
@@ -5184,7 +5146,6 @@ void Free_SDM_Scheme_r18(SDM_Scheme_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SFN_Scheme_r18(Encoder& enc, const SFN_Scheme_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxRankSFN_r18);
     enc.WriteBit(value.has_maxRankSFN_DCI_0_2_r18);
     if (value.has_maxRankSFN_r18) {
@@ -5382,7 +5343,6 @@ void Free_SetupRelease_CodebookTypeUL_r18(SetupRelease_CodebookTypeUL_r18& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_UCI_OnPUSCH_ListDCI_0_1_r16(Encoder& enc, const UCI_OnPUSCH_ListDCI_0_1_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 2u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_UCI_OnPUSCH(enc, value.items[i]);
@@ -5494,7 +5454,6 @@ void Free_SetupRelease_UCI_OnPUSCH_ListDCI_0_1_r16(SetupRelease_UCI_OnPUSCH_List
 // --------------------------------------------------------------------------
 ErrorCode Encode_PUSCH_ConfigDCI_0_3_r18(Encoder& enc, const PUSCH_ConfigDCI_0_3_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_resourceAllocationDCI_0_3_r18);
     enc.WriteBit(value.has_rbg_SizeDCI_0_3_r18);
     enc.WriteBit(value.has_resourceAllocationType1GranularityDCI_0_3_r18);
@@ -5661,7 +5620,6 @@ void Free_SetupRelease_PUSCH_ConfigDCI_0_3_r18(SetupRelease_PUSCH_ConfigDCI_0_3_
 // --------------------------------------------------------------------------
 ErrorCode Encode_PUSCH_Config_ExtGroup3(Encoder& enc, const PUSCH_Config_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxRank_v1810);
     enc.WriteBit(value.has_sTx_2Panel_r18);
     enc.WriteBit(value.has_multipanelSchemeSDM_r18);
@@ -6018,7 +5976,6 @@ void Free_InvalidSymbolPattern_r16_PeriodicityAndPattern_r16(InvalidSymbolPatter
 // --------------------------------------------------------------------------
 ErrorCode Encode_InvalidSymbolPattern_r16(Encoder& enc, const InvalidSymbolPattern_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_periodicityAndPattern_r16);
@@ -6069,7 +6026,6 @@ void Free_InvalidSymbolPattern_r16(InvalidSymbolPattern_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DMRS_UplinkConfig_ExtGroup1(Encoder& enc, const DMRS_UplinkConfig_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dmrs_TypeEnh_r18);
     if (value.has_dmrs_TypeEnh_r18) {
         enc.WriteConstrainedInteger((std::int64_t)(value.dmrs_TypeEnh_r18), 0, 0);
@@ -6107,7 +6063,6 @@ void Free_DMRS_UplinkConfig_ExtGroup1(DMRS_UplinkConfig_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PTRS_UplinkConfig_ExtGroup1(Encoder& enc, const PTRS_UplinkConfig_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxNrofPorts_SDM_r18);
     if (value.has_maxNrofPorts_SDM_r18) {
         enc.WriteConstrainedInteger((std::int64_t)(value.maxNrofPorts_SDM_r18), 0, 1);
@@ -6147,7 +6102,6 @@ void Free_PTRS_UplinkConfig_ExtGroup1(PTRS_UplinkConfig_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PTRS_UplinkConfig_TransformPrecoderDisabled(Encoder& enc, const PTRS_UplinkConfig_TransformPrecoderDisabled& value)
 {
-    (void)value;
     enc.WriteBit(value.has_frequencyDensity);
     enc.WriteBit(value.has_timeDensity);
     enc.WriteBit(value.has_resourceElementOffset);
@@ -6267,7 +6221,6 @@ void Free_PTRS_UplinkConfig_TransformPrecoderDisabled(PTRS_UplinkConfig_Transfor
 // --------------------------------------------------------------------------
 ErrorCode Encode_PTRS_UplinkConfig_TransformPrecoderEnabled(Encoder& enc, const PTRS_UplinkConfig_TransformPrecoderEnabled& value)
 {
-    (void)value;
     enc.WriteBit(value.has_timeDensityTransformPrecoding);
 enc.WriteConstrainedLength(value.sampleDensity_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.sampleDensity_count; ++i) {
@@ -6332,7 +6285,6 @@ void Free_PTRS_UplinkConfig_TransformPrecoderEnabled(PTRS_UplinkConfig_Transform
 // --------------------------------------------------------------------------
 ErrorCode Encode_PTRS_UplinkConfig(Encoder& enc, const PTRS_UplinkConfig& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_transformPrecoderDisabled);
@@ -6489,7 +6441,6 @@ void Free_SetupRelease_PTRS_UplinkConfig(SetupRelease_PTRS_UplinkConfig& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DMRS_UplinkConfig_TransformPrecodingDisabled_ExtGroup1(Encoder& enc, const DMRS_UplinkConfig_TransformPrecodingDisabled_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dmrs_Uplink_r16);
     if (value.has_dmrs_Uplink_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.dmrs_Uplink_r16), 0, 0);
@@ -6527,7 +6478,6 @@ void Free_DMRS_UplinkConfig_TransformPrecodingDisabled_ExtGroup1(DMRS_UplinkConf
 // --------------------------------------------------------------------------
 ErrorCode Encode_DMRS_UplinkConfig_TransformPrecodingDisabled(Encoder& enc, const DMRS_UplinkConfig_TransformPrecodingDisabled& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_scramblingID0);
@@ -6623,7 +6573,6 @@ void Free_DMRS_UplinkConfig_TransformPrecodingDisabled(DMRS_UplinkConfig_Transfo
 // --------------------------------------------------------------------------
 ErrorCode Encode_DMRS_UplinkTransformPrecoding_r16(Encoder& enc, const DMRS_UplinkTransformPrecoding_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pi2BPSK_ScramblingID0);
     enc.WriteBit(value.has_pi2BPSK_ScramblingID1);
     if (value.has_pi2BPSK_ScramblingID0) {
@@ -6739,7 +6688,6 @@ void Free_SetupRelease_DMRS_UplinkTransformPrecoding_r16(SetupRelease_DMRS_Uplin
 // --------------------------------------------------------------------------
 ErrorCode Encode_DMRS_UplinkConfig_TransformPrecodingEnabled_ExtGroup1(Encoder& enc, const DMRS_UplinkConfig_TransformPrecodingEnabled_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dmrs_UplinkTransformPrecoding_r16);
     if (value.has_dmrs_UplinkTransformPrecoding_r16) {
         Encode_SetupRelease_DMRS_UplinkTransformPrecoding_r16(enc, value.dmrs_UplinkTransformPrecoding_r16);
@@ -6778,7 +6726,6 @@ void Free_DMRS_UplinkConfig_TransformPrecodingEnabled_ExtGroup1(DMRS_UplinkConfi
 // --------------------------------------------------------------------------
 ErrorCode Encode_DMRS_UplinkConfig_TransformPrecodingEnabled(Encoder& enc, const DMRS_UplinkConfig_TransformPrecodingEnabled& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_nPUSCH_Identity);
@@ -6883,7 +6830,6 @@ void Free_DMRS_UplinkConfig_TransformPrecodingEnabled(DMRS_UplinkConfig_Transfor
 // --------------------------------------------------------------------------
 ErrorCode Encode_DMRS_UplinkConfig(Encoder& enc, const DMRS_UplinkConfig& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_dmrs_Type);
@@ -7087,7 +7033,6 @@ void Free_SetupRelease_DMRS_UplinkConfig(SetupRelease_DMRS_UplinkConfig& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MinSchedulingOffsetK2_Values_r16(Encoder& enc, const MinSchedulingOffsetK2_Values_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 2u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 16);
@@ -7200,7 +7145,6 @@ void Free_SetupRelease_MinSchedulingOffsetK2_Values_r16(SetupRelease_MinScheduli
 // --------------------------------------------------------------------------
 ErrorCode Encode_UL_AccessConfigListDCI_0_1_r16(Encoder& enc, const UL_AccessConfigListDCI_0_1_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 64u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 63);
@@ -7379,7 +7323,6 @@ void Free_PUSCH_Config_ExtGroup1_FrequencyHoppingDCI_0_2_r16(PUSCH_Config_ExtGro
 // --------------------------------------------------------------------------
 ErrorCode Encode_FrequencyHoppingOffsetListsDCI_0_2_r16(Encoder& enc, const FrequencyHoppingOffsetListsDCI_0_2_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 1, 274);
@@ -7492,7 +7435,6 @@ void Free_SetupRelease_FrequencyHoppingOffsetListsDCI_0_2_r16(SetupRelease_Frequ
 // --------------------------------------------------------------------------
 ErrorCode Encode_UCI_OnPUSCH_ListDCI_0_2_r16(Encoder& enc, const UCI_OnPUSCH_ListDCI_0_2_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 2u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_UCI_OnPUSCH_DCI_0_2_r16(enc, value.items[i]);
@@ -7604,7 +7546,6 @@ void Free_SetupRelease_UCI_OnPUSCH_ListDCI_0_2_r16(SetupRelease_UCI_OnPUSCH_List
 // --------------------------------------------------------------------------
 ErrorCode Encode_PUSCH_TimeDomainResourceAllocationList_r16(Encoder& enc, const PUSCH_TimeDomainResourceAllocationList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 64u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_PUSCH_TimeDomainResourceAllocation_r16(enc, value.items[i]);
@@ -7716,7 +7657,6 @@ void Free_SetupRelease_PUSCH_TimeDomainResourceAllocationList_r16(SetupRelease_P
 // --------------------------------------------------------------------------
 ErrorCode Encode_PUSCH_PowerControl_v1610_ExtGroup1(Encoder& enc, const PUSCH_PowerControl_v1610_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sri_PUSCH_MappingToAddModList2_r17);
     enc.WriteBit(value.has_sri_PUSCH_MappingToReleaseList2_r17);
     enc.WriteBit(value.has_p0_PUSCH_SetList2_r17);
@@ -7876,7 +7816,6 @@ void Free_PUSCH_PowerControl_v1610_ExtGroup1(PUSCH_PowerControl_v1610_ExtGroup1&
 // --------------------------------------------------------------------------
 ErrorCode Encode_PUSCH_PowerControl_v1610_Olpc_ParameterSet(Encoder& enc, const PUSCH_PowerControl_v1610_Olpc_ParameterSet& value)
 {
-    (void)value;
     enc.WriteBit(value.has_olpc_ParameterSetDCI_0_1_r16);
     enc.WriteBit(value.has_olpc_ParameterSetDCI_0_2_r16);
     if (value.has_olpc_ParameterSetDCI_0_1_r16) {
@@ -7929,7 +7868,6 @@ void Free_PUSCH_PowerControl_v1610_Olpc_ParameterSet(PUSCH_PowerControl_v1610_Ol
 // --------------------------------------------------------------------------
 ErrorCode Encode_PUSCH_PowerControl_v1610(Encoder& enc, const PUSCH_PowerControl_v1610& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_pathlossReferenceRSToAddModListSizeExt_v1610);
@@ -8174,7 +8112,6 @@ void Free_SetupRelease_PUSCH_PowerControl_v1610(SetupRelease_PUSCH_PowerControl_
 // --------------------------------------------------------------------------
 ErrorCode Encode_PUSCH_Config_ExtGroup1(Encoder& enc, const PUSCH_Config_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_minimumSchedulingOffsetK2_r16);
     enc.WriteBit(value.has_ul_AccessConfigListDCI_0_1_r16);
     enc.WriteBit(value.has_harq_ProcessNumberSizeDCI_0_2_r16);
@@ -8592,7 +8529,6 @@ void Free_PUSCH_Config_ExtGroup1(PUSCH_Config_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_UL_AccessConfigListDCI_0_2_r17(Encoder& enc, const UL_AccessConfigListDCI_0_2_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 64u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 63);
@@ -8705,7 +8641,6 @@ void Free_SetupRelease_UL_AccessConfigListDCI_0_2_r17(SetupRelease_UL_AccessConf
 // --------------------------------------------------------------------------
 ErrorCode Encode_BetaOffsetsCrossPri_r17(Encoder& enc, const BetaOffsetsCrossPri_r17& value)
 {
-    (void)value;
     if (value.count != 3u) {
         enc.Fail(ErrorCode_ValueOutOfRange);
     } else {
@@ -8758,7 +8693,6 @@ void Free_BetaOffsetsCrossPri_r17(BetaOffsetsCrossPri_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BetaOffsetsCrossPriSel_r17_Dynamic_r17(Encoder& enc, const BetaOffsetsCrossPriSel_r17_Dynamic_r17& value)
 {
-    (void)value;
     if (value.count != 4u) {
         enc.Fail(ErrorCode_ValueOutOfRange);
     } else {
@@ -8937,7 +8871,6 @@ void Free_SetupRelease_BetaOffsetsCrossPriSel_r17(SetupRelease_BetaOffsetsCrossP
 // --------------------------------------------------------------------------
 ErrorCode Encode_BetaOffsetsCrossPriSelDCI_0_2_r17_DynamicDCI_0_2_r17_OneBit_r17(Encoder& enc, const BetaOffsetsCrossPriSelDCI_0_2_r17_DynamicDCI_0_2_r17_OneBit_r17& value)
 {
-    (void)value;
     if (value.count != 2u) {
         enc.Fail(ErrorCode_ValueOutOfRange);
     } else {
@@ -8989,7 +8922,6 @@ void Free_BetaOffsetsCrossPriSelDCI_0_2_r17_DynamicDCI_0_2_r17_OneBit_r17(BetaOf
 // --------------------------------------------------------------------------
 ErrorCode Encode_BetaOffsetsCrossPriSelDCI_0_2_r17_DynamicDCI_0_2_r17_TwoBits_r17(Encoder& enc, const BetaOffsetsCrossPriSelDCI_0_2_r17_DynamicDCI_0_2_r17_TwoBits_r17& value)
 {
-    (void)value;
     if (value.count != 4u) {
         enc.Fail(ErrorCode_ValueOutOfRange);
     } else {
@@ -9232,7 +9164,6 @@ void Free_SetupRelease_BetaOffsetsCrossPriSelDCI_0_2_r17(SetupRelease_BetaOffset
 // --------------------------------------------------------------------------
 ErrorCode Encode_UL_AccessConfigListDCI_0_1_r17(Encoder& enc, const UL_AccessConfigListDCI_0_1_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 3u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 2);
@@ -9345,7 +9276,6 @@ void Free_SetupRelease_UL_AccessConfigListDCI_0_1_r17(SetupRelease_UL_AccessConf
 // --------------------------------------------------------------------------
 ErrorCode Encode_MinSchedulingOffsetK2_Values_r17(Encoder& enc, const MinSchedulingOffsetK2_Values_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 2u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 64);
@@ -9458,7 +9388,6 @@ void Free_SetupRelease_MinSchedulingOffsetK2_Values_r17(SetupRelease_MinScheduli
 // --------------------------------------------------------------------------
 ErrorCode Encode_DMRS_BundlingPUSCH_Config_r17(Encoder& enc, const DMRS_BundlingPUSCH_Config_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_pusch_DMRS_Bundling_r17);

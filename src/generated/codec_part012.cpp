@@ -190,7 +190,6 @@ void Free_ULInformationTransferMRDC_CriticalExtensions(ULInformationTransferMRDC
 // --------------------------------------------------------------------------
 ErrorCode Encode_ULInformationTransferMRDC(Encoder& enc, const ULInformationTransferMRDC& value)
 {
-    (void)value;
     Encode_ULInformationTransferMRDC_CriticalExtensions(enc, value.criticalExtensions);
     return enc.Error();
 }
@@ -222,7 +221,6 @@ void Free_ULInformationTransferMRDC(ULInformationTransferMRDC& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_ExtGroup1_RelaxedMeasurement_r16_LowMobilityEvaluation_r16(Encoder& enc, const SIB2_ExtGroup1_RelaxedMeasurement_r16_LowMobilityEvaluation_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.s_SearchDeltaP_r16), 0, 7);
     enc.WriteConstrainedInteger((std::int64_t)(value.t_SearchDeltaP_r16), 0, 15);
     return enc.Error();
@@ -261,7 +259,6 @@ void Free_SIB2_ExtGroup1_RelaxedMeasurement_r16_LowMobilityEvaluation_r16(SIB2_E
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_ExtGroup1_RelaxedMeasurement_r16_CellEdgeEvaluation_r16(Encoder& enc, const SIB2_ExtGroup1_RelaxedMeasurement_r16_CellEdgeEvaluation_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_s_SearchThresholdQ_r16);
     enc.WriteConstrainedInteger((std::int64_t)(value.s_SearchThresholdP_r16), 0, 31);
     if (value.has_s_SearchThresholdQ_r16) {
@@ -307,7 +304,6 @@ void Free_SIB2_ExtGroup1_RelaxedMeasurement_r16_CellEdgeEvaluation_r16(SIB2_ExtG
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_ExtGroup1_RelaxedMeasurement_r16(Encoder& enc, const SIB2_ExtGroup1_RelaxedMeasurement_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_lowMobilityEvaluation_r16);
     enc.WriteBit(value.has_cellEdgeEvaluation_r16);
     enc.WriteBit(value.has_combineRelaxedMeasCondition_r16);
@@ -380,7 +376,6 @@ void Free_SIB2_ExtGroup1_RelaxedMeasurement_r16(SIB2_ExtGroup1_RelaxedMeasuremen
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_ExtGroup1(Encoder& enc, const SIB2_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_relaxedMeasurement_r16);
     if (value.has_relaxedMeasurement_r16) {
         Encode_SIB2_ExtGroup1_RelaxedMeasurement_r16(enc, value.relaxedMeasurement_r16);
@@ -419,7 +414,6 @@ void Free_SIB2_ExtGroup1(SIB2_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_ExtGroup2_RelaxedMeasurement_r17_StationaryMobilityEvaluation_r17(Encoder& enc, const SIB2_ExtGroup2_RelaxedMeasurement_r17_StationaryMobilityEvaluation_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.s_SearchDeltaP_Stationary_r17), 0, 7);
     enc.WriteConstrainedInteger((std::int64_t)(value.t_SearchDeltaP_Stationary_r17), 0, 15);
     return enc.Error();
@@ -458,7 +452,6 @@ void Free_SIB2_ExtGroup2_RelaxedMeasurement_r17_StationaryMobilityEvaluation_r17
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_ExtGroup2_RelaxedMeasurement_r17_CellEdgeEvaluationWhileStationary_r17(Encoder& enc, const SIB2_ExtGroup2_RelaxedMeasurement_r17_CellEdgeEvaluationWhileStationary_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_s_SearchThresholdQ2_r17);
     enc.WriteConstrainedInteger((std::int64_t)(value.s_SearchThresholdP2_r17), 0, 31);
     if (value.has_s_SearchThresholdQ2_r17) {
@@ -504,7 +497,6 @@ void Free_SIB2_ExtGroup2_RelaxedMeasurement_r17_CellEdgeEvaluationWhileStationar
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_ExtGroup2_RelaxedMeasurement_r17(Encoder& enc, const SIB2_ExtGroup2_RelaxedMeasurement_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_cellEdgeEvaluationWhileStationary_r17);
     enc.WriteBit(value.has_combineRelaxedMeasCondition2_r17);
     Encode_SIB2_ExtGroup2_RelaxedMeasurement_r17_StationaryMobilityEvaluation_r17(enc, value.stationaryMobilityEvaluation_r17);
@@ -559,7 +551,6 @@ void Free_SIB2_ExtGroup2_RelaxedMeasurement_r17(SIB2_ExtGroup2_RelaxedMeasuremen
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_ExtGroup2(Encoder& enc, const SIB2_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_cellEquivalentSize_r17);
     enc.WriteBit(value.has_relaxedMeasurement_r17);
     if (value.has_cellEquivalentSize_r17) {
@@ -611,7 +602,6 @@ void Free_SIB2_ExtGroup2(SIB2_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ThresholdNR(Encoder& enc, const ThresholdNR& value)
 {
-    (void)value;
     enc.WriteBit(value.has_thresholdRSRP);
     enc.WriteBit(value.has_thresholdRSRQ);
     enc.WriteBit(value.has_thresholdSINR);
@@ -677,7 +667,6 @@ void Free_ThresholdNR(ThresholdNR& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MobilityStateParameters(Encoder& enc, const MobilityStateParameters& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.t_Evaluation), 0, 7);
     enc.WriteConstrainedInteger((std::int64_t)(value.t_HystNormal), 0, 7);
     enc.WriteConstrainedInteger((std::int64_t)(value.n_CellChangeMedium), 1, 16);
@@ -728,7 +717,6 @@ void Free_MobilityStateParameters(MobilityStateParameters& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars_Q_HystSF(Encoder& enc, const SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars_Q_HystSF& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.sf_Medium), 0, 3);
     enc.WriteConstrainedInteger((std::int64_t)(value.sf_High), 0, 3);
     return enc.Error();
@@ -767,7 +755,6 @@ void Free_SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars_Q_HystSF(SIB2
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars(Encoder& enc, const SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars& value)
 {
-    (void)value;
     Encode_MobilityStateParameters(enc, value.mobilityStateParameters);
     Encode_SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars_Q_HystSF(enc, value.q_HystSF);
     return enc.Error();
@@ -804,7 +791,6 @@ void Free_SIB2_CellReselectionInfoCommon_SpeedStateReselectionPars(SIB2_CellRese
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_CellReselectionInfoCommon(Encoder& enc, const SIB2_CellReselectionInfoCommon& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_nrofSS_BlocksToAverage);
@@ -894,7 +880,6 @@ void Free_SIB2_CellReselectionInfoCommon(SIB2_CellReselectionInfoCommon& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_CellReselectionServingFreqInfo(Encoder& enc, const SIB2_CellReselectionServingFreqInfo& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_s_NonIntraSearchP);
@@ -1081,7 +1066,6 @@ void Free_SSB_ToMeasure(SSB_ToMeasure& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SS_RSSI_Measurement(Encoder& enc, const SS_RSSI_Measurement& value)
 {
-    (void)value;
     enc.WriteConstrainedBitString(value.measurementSlots.bytes, value.measurementSlots.bitLength, 1, 80);
     enc.WriteConstrainedInteger((std::int64_t)(value.endSymbol), 0, 3);
     return enc.Error();
@@ -1125,7 +1109,6 @@ void Free_SS_RSSI_Measurement(SS_RSSI_Measurement& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SpeedStateScaleFactors(Encoder& enc, const SpeedStateScaleFactors& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.sf_Medium), 0, 3);
     enc.WriteConstrainedInteger((std::int64_t)(value.sf_High), 0, 3);
     return enc.Error();
@@ -1164,7 +1147,6 @@ void Free_SpeedStateScaleFactors(SpeedStateScaleFactors& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_IntraFreqCellReselectionInfo_ExtGroup1(Encoder& enc, const SIB2_IntraFreqCellReselectionInfo_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_t_ReselectionNR_SF);
     if (value.has_t_ReselectionNR_SF) {
         Encode_SpeedStateScaleFactors(enc, value.t_ReselectionNR_SF);
@@ -1203,7 +1185,6 @@ void Free_SIB2_IntraFreqCellReselectionInfo_ExtGroup1(SIB2_IntraFreqCellReselect
 // --------------------------------------------------------------------------
 ErrorCode Encode_SSB_MTC2_LP_r16(Encoder& enc, const SSB_MTC2_LP_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pci_List);
     if (value.has_pci_List) {
 enc.WriteConstrainedLength(value.pci_List_count, 0u, 0u);
@@ -1270,7 +1251,6 @@ void Free_SSB_MTC2_LP_r16(SSB_MTC2_LP_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_IntraFreqCellReselectionInfo_ExtGroup2(Encoder& enc, const SIB2_IntraFreqCellReselectionInfo_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_smtc2_LP_r16);
     enc.WriteBit(value.has_ssb_PositionQCL_Common_r16);
     if (value.has_smtc2_LP_r16) {
@@ -1322,7 +1302,6 @@ void Free_SIB2_IntraFreqCellReselectionInfo_ExtGroup2(SIB2_IntraFreqCellReselect
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_IntraFreqCellReselectionInfo_ExtGroup3(Encoder& enc, const SIB2_IntraFreqCellReselectionInfo_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ssb_PositionQCL_Common_r17);
     if (value.has_ssb_PositionQCL_Common_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.ssb_PositionQCL_Common_r17), 0, 1);
@@ -1362,7 +1341,6 @@ void Free_SIB2_IntraFreqCellReselectionInfo_ExtGroup3(SIB2_IntraFreqCellReselect
 // --------------------------------------------------------------------------
 ErrorCode Encode_SSB_MTC4List_r17(Encoder& enc, const SSB_MTC4List_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 3u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_SSB_MTC4_r17(enc, value.items[i]);
@@ -1411,7 +1389,6 @@ void Free_SSB_MTC4List_r17(SSB_MTC4List_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_IntraFreqCellReselectionInfo_ExtGroup4(Encoder& enc, const SIB2_IntraFreqCellReselectionInfo_ExtGroup4& value)
 {
-    (void)value;
     enc.WriteBit(value.has_smtc4list_r17);
     if (value.has_smtc4list_r17) {
         Encode_SSB_MTC4List_r17(enc, value.smtc4list_r17);
@@ -1450,7 +1427,6 @@ void Free_SIB2_IntraFreqCellReselectionInfo_ExtGroup4(SIB2_IntraFreqCellReselect
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_IntraFreqCellReselectionInfo_ExtGroup5(Encoder& enc, const SIB2_IntraFreqCellReselectionInfo_ExtGroup5& value)
 {
-    (void)value;
     enc.WriteBit(value.has_frequencyBandList_v1760);
     enc.WriteBit(value.has_frequencyBandListSUL_v1760);
     if (value.has_frequencyBandList_v1760) {
@@ -1501,7 +1477,6 @@ void Free_SIB2_IntraFreqCellReselectionInfo_ExtGroup5(SIB2_IntraFreqCellReselect
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_IntraFreqCellReselectionInfo_ExtGroup6(Encoder& enc, const SIB2_IntraFreqCellReselectionInfo_ExtGroup6& value)
 {
-    (void)value;
     enc.WriteBit(value.has_frequencyBandListAerial_r18);
     if (value.has_frequencyBandListAerial_r18) {
         Encode_MultiFrequencyBandListNR_Aerial_SIB_r18(enc, value.frequencyBandListAerial_r18);
@@ -1540,7 +1515,6 @@ void Free_SIB2_IntraFreqCellReselectionInfo_ExtGroup6(SIB2_IntraFreqCellReselect
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2_IntraFreqCellReselectionInfo(Encoder& enc, const SIB2_IntraFreqCellReselectionInfo& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3 || value.has_extGroup4 || value.has_extGroup5 || value.has_extGroup6;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_q_RxLevMinSUL);
@@ -1861,7 +1835,6 @@ void Free_SIB2_IntraFreqCellReselectionInfo(SIB2_IntraFreqCellReselectionInfo& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB2(Encoder& enc, const SIB2& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     Encode_SIB2_CellReselectionInfoCommon(enc, value.cellReselectionInfoCommon);
@@ -1969,7 +1942,6 @@ void Free_SIB2(SIB2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqNeighCellList_v1610(Encoder& enc, const IntraFreqNeighCellList_v1610& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_IntraFreqNeighCellInfo_v1610(enc, value.items[i]);
@@ -2018,7 +1990,6 @@ void Free_IntraFreqNeighCellList_v1610(IntraFreqNeighCellList_v1610& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqAllowedCellList_r16(Encoder& enc, const IntraFreqAllowedCellList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_PCI_Range(enc, value.items[i]);
@@ -2067,7 +2038,6 @@ void Free_IntraFreqAllowedCellList_r16(IntraFreqAllowedCellList_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB3_ExtGroup1(Encoder& enc, const SIB3_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_intraFreqNeighCellList_v1610);
     enc.WriteBit(value.has_intraFreqAllowedCellList_r16);
     enc.WriteBit(value.has_intraFreqCAG_CellList_r16);
@@ -2151,7 +2121,6 @@ void Free_SIB3_ExtGroup1(SIB3_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqNeighCellList_v1710(Encoder& enc, const IntraFreqNeighCellList_v1710& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_IntraFreqNeighCellInfo_v1710(enc, value.items[i]);
@@ -2200,7 +2169,6 @@ void Free_IntraFreqNeighCellList_v1710(IntraFreqNeighCellList_v1710& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqNeighHSDN_CellList_r17(Encoder& enc, const IntraFreqNeighHSDN_CellList_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_PCI_Range(enc, value.items[i]);
@@ -2249,7 +2217,6 @@ void Free_IntraFreqNeighHSDN_CellList_r17(IntraFreqNeighHSDN_CellList_r17& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB3_ExtGroup2(Encoder& enc, const SIB3_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_intraFreqNeighHSDN_CellList_r17);
     enc.WriteBit(value.has_intraFreqNeighCellList_v1710);
     if (value.has_intraFreqNeighHSDN_CellList_r17) {
@@ -2300,7 +2267,6 @@ void Free_SIB3_ExtGroup2(SIB3_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB3_ExtGroup3(Encoder& enc, const SIB3_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_channelAccessMode2_r17);
     if (value.has_channelAccessMode2_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.channelAccessMode2_r17), 0, 0);
@@ -2338,7 +2304,6 @@ void Free_SIB3_ExtGroup3(SIB3_ExtGroup3& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqNeighCellList(Encoder& enc, const IntraFreqNeighCellList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_IntraFreqNeighCellInfo(enc, value.items[i]);
@@ -2387,7 +2352,6 @@ void Free_IntraFreqNeighCellList(IntraFreqNeighCellList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqExcludedCellList(Encoder& enc, const IntraFreqExcludedCellList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_PCI_Range(enc, value.items[i]);
@@ -2436,7 +2400,6 @@ void Free_IntraFreqExcludedCellList(IntraFreqExcludedCellList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB3(Encoder& enc, const SIB3& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_intraFreqNeighCellList);
@@ -2594,7 +2557,6 @@ void Free_SIB3(SIB3& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqNeighCellInfo(Encoder& enc, const IntraFreqNeighCellInfo& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_q_RxLevMinOffsetCell);
@@ -2679,7 +2641,6 @@ void Free_IntraFreqNeighCellInfo(IntraFreqNeighCellInfo& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqNeighCellInfo_v1610(Encoder& enc, const IntraFreqNeighCellInfo_v1610& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ssb_PositionQCL_r16);
     if (value.has_ssb_PositionQCL_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.ssb_PositionQCL_r16), 0, 3);
@@ -2719,7 +2680,6 @@ void Free_IntraFreqNeighCellInfo_v1610(IntraFreqNeighCellInfo_v1610& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqNeighCellInfo_v1710(Encoder& enc, const IntraFreqNeighCellInfo_v1710& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ssb_PositionQCL_r17);
     if (value.has_ssb_PositionQCL_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.ssb_PositionQCL_r17), 0, 1);
@@ -2759,7 +2719,6 @@ void Free_IntraFreqNeighCellInfo_v1710(IntraFreqNeighCellInfo_v1710& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IntraFreqCAG_CellListPerPLMN_r16(Encoder& enc, const IntraFreqCAG_CellListPerPLMN_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.plmn_IdentityIndex_r16), 1, 12);
 enc.WriteConstrainedLength(value.cag_CellList_r16_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.cag_CellList_r16_count; ++i) {
@@ -2818,7 +2777,6 @@ void Free_IntraFreqCAG_CellListPerPLMN_r16(IntraFreqCAG_CellListPerPLMN_r16& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqList_v1610(Encoder& enc, const InterFreqCarrierFreqList_v1610& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_InterFreqCarrierFreqInfo_v1610(enc, value.items[i]);
@@ -2867,7 +2825,6 @@ void Free_InterFreqCarrierFreqList_v1610(InterFreqCarrierFreqList_v1610& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB4_ExtGroup1(Encoder& enc, const SIB4_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_interFreqCarrierFreqList_v1610);
     if (value.has_interFreqCarrierFreqList_v1610) {
         Encode_InterFreqCarrierFreqList_v1610(enc, value.interFreqCarrierFreqList_v1610);
@@ -2906,7 +2863,6 @@ void Free_SIB4_ExtGroup1(SIB4_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqList_v1700(Encoder& enc, const InterFreqCarrierFreqList_v1700& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_InterFreqCarrierFreqInfo_v1700(enc, value.items[i]);
@@ -2955,7 +2911,6 @@ void Free_InterFreqCarrierFreqList_v1700(InterFreqCarrierFreqList_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB4_ExtGroup2(Encoder& enc, const SIB4_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_interFreqCarrierFreqList_v1700);
     if (value.has_interFreqCarrierFreqList_v1700) {
         Encode_InterFreqCarrierFreqList_v1700(enc, value.interFreqCarrierFreqList_v1700);
@@ -2994,7 +2949,6 @@ void Free_SIB4_ExtGroup2(SIB4_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqList_v1720(Encoder& enc, const InterFreqCarrierFreqList_v1720& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_InterFreqCarrierFreqInfo_v1720(enc, value.items[i]);
@@ -3043,7 +2997,6 @@ void Free_InterFreqCarrierFreqList_v1720(InterFreqCarrierFreqList_v1720& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB4_ExtGroup3(Encoder& enc, const SIB4_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_interFreqCarrierFreqList_v1720);
     if (value.has_interFreqCarrierFreqList_v1720) {
         Encode_InterFreqCarrierFreqList_v1720(enc, value.interFreqCarrierFreqList_v1720);
@@ -3082,7 +3035,6 @@ void Free_SIB4_ExtGroup3(SIB4_ExtGroup3& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqList_v1730(Encoder& enc, const InterFreqCarrierFreqList_v1730& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_InterFreqCarrierFreqInfo_v1730(enc, value.items[i]);
@@ -3131,7 +3083,6 @@ void Free_InterFreqCarrierFreqList_v1730(InterFreqCarrierFreqList_v1730& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB4_ExtGroup4(Encoder& enc, const SIB4_ExtGroup4& value)
 {
-    (void)value;
     enc.WriteBit(value.has_interFreqCarrierFreqList_v1730);
     if (value.has_interFreqCarrierFreqList_v1730) {
         Encode_InterFreqCarrierFreqList_v1730(enc, value.interFreqCarrierFreqList_v1730);
@@ -3170,7 +3121,6 @@ void Free_SIB4_ExtGroup4(SIB4_ExtGroup4& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqList_v1760(Encoder& enc, const InterFreqCarrierFreqList_v1760& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_InterFreqCarrierFreqInfo_v1760(enc, value.items[i]);
@@ -3219,7 +3169,6 @@ void Free_InterFreqCarrierFreqList_v1760(InterFreqCarrierFreqList_v1760& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB4_ExtGroup5(Encoder& enc, const SIB4_ExtGroup5& value)
 {
-    (void)value;
     enc.WriteBit(value.has_interFreqCarrierFreqList_v1760);
     if (value.has_interFreqCarrierFreqList_v1760) {
         Encode_InterFreqCarrierFreqList_v1760(enc, value.interFreqCarrierFreqList_v1760);
@@ -3258,7 +3207,6 @@ void Free_SIB4_ExtGroup5(SIB4_ExtGroup5& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqList_v1800(Encoder& enc, const InterFreqCarrierFreqList_v1800& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_InterFreqCarrierFreqInfo_v1800(enc, value.items[i]);
@@ -3307,7 +3255,6 @@ void Free_InterFreqCarrierFreqList_v1800(InterFreqCarrierFreqList_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB4_ExtGroup6(Encoder& enc, const SIB4_ExtGroup6& value)
 {
-    (void)value;
     enc.WriteBit(value.has_interFreqCarrierFreqList_v1800);
     if (value.has_interFreqCarrierFreqList_v1800) {
         Encode_InterFreqCarrierFreqList_v1800(enc, value.interFreqCarrierFreqList_v1800);
@@ -3346,7 +3293,6 @@ void Free_SIB4_ExtGroup6(SIB4_ExtGroup6& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqList(Encoder& enc, const InterFreqCarrierFreqList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_InterFreqCarrierFreqInfo(enc, value.items[i]);
@@ -3395,7 +3341,6 @@ void Free_InterFreqCarrierFreqList(InterFreqCarrierFreqList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB4(Encoder& enc, const SIB4& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3 || value.has_extGroup4 || value.has_extGroup5 || value.has_extGroup6;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_lateNonCriticalExtension);
@@ -3603,7 +3548,6 @@ void Free_SIB4(SIB4& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqNeighCellList(Encoder& enc, const InterFreqNeighCellList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_InterFreqNeighCellInfo(enc, value.items[i]);
@@ -3652,7 +3596,6 @@ void Free_InterFreqNeighCellList(InterFreqNeighCellList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqExcludedCellList(Encoder& enc, const InterFreqExcludedCellList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_PCI_Range(enc, value.items[i]);
@@ -3701,7 +3644,6 @@ void Free_InterFreqExcludedCellList(InterFreqExcludedCellList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqInfo_ThreshX_Q(Encoder& enc, const InterFreqCarrierFreqInfo_ThreshX_Q& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.threshX_HighQ), 0, 31);
     enc.WriteConstrainedInteger((std::int64_t)(value.threshX_LowQ), 0, 31);
     return enc.Error();
@@ -3740,7 +3682,6 @@ void Free_InterFreqCarrierFreqInfo_ThreshX_Q(InterFreqCarrierFreqInfo_ThreshX_Q&
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqInfo(Encoder& enc, const InterFreqCarrierFreqInfo& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_frequencyBandList);
@@ -4027,7 +3968,6 @@ void Free_InterFreqCarrierFreqInfo(InterFreqCarrierFreqInfo& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqNeighCellList_v1610(Encoder& enc, const InterFreqNeighCellList_v1610& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_InterFreqNeighCellInfo_v1610(enc, value.items[i]);
@@ -4076,7 +4016,6 @@ void Free_InterFreqNeighCellList_v1610(InterFreqNeighCellList_v1610& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqAllowedCellList_r16(Encoder& enc, const InterFreqAllowedCellList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_PCI_Range(enc, value.items[i]);
@@ -4125,7 +4064,6 @@ void Free_InterFreqAllowedCellList_r16(InterFreqAllowedCellList_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqInfo_v1610(Encoder& enc, const InterFreqCarrierFreqInfo_v1610& value)
 {
-    (void)value;
     enc.WriteBit(value.has_interFreqNeighCellList_v1610);
     enc.WriteBit(value.has_smtc2_LP_r16);
     enc.WriteBit(value.has_interFreqAllowedCellList_r16);
@@ -4234,7 +4172,6 @@ void Free_InterFreqCarrierFreqInfo_v1610(InterFreqCarrierFreqInfo_v1610& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqNeighHSDN_CellList_r17(Encoder& enc, const InterFreqNeighHSDN_CellList_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_PCI_Range(enc, value.items[i]);
@@ -4283,7 +4220,6 @@ void Free_InterFreqNeighHSDN_CellList_r17(InterFreqNeighHSDN_CellList_r17& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqNeighCellList_v1710(Encoder& enc, const InterFreqNeighCellList_v1710& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_InterFreqNeighCellInfo_v1710(enc, value.items[i]);
@@ -4332,7 +4268,6 @@ void Free_InterFreqNeighCellList_v1710(InterFreqNeighCellList_v1710& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqInfo_v1700(Encoder& enc, const InterFreqCarrierFreqInfo_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_interFreqNeighHSDN_CellList_r17);
     enc.WriteBit(value.has_highSpeedMeasInterFreq_r17);
     enc.WriteBit(value.has_redCapAccessAllowed_r17);
@@ -4418,7 +4353,6 @@ void Free_InterFreqCarrierFreqInfo_v1700(InterFreqCarrierFreqInfo_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqInfo_v1720(Encoder& enc, const InterFreqCarrierFreqInfo_v1720& value)
 {
-    (void)value;
     enc.WriteBit(value.has_smtc4list_r17);
     if (value.has_smtc4list_r17) {
         Encode_SSB_MTC4List_r17(enc, value.smtc4list_r17);
@@ -4457,7 +4391,6 @@ void Free_InterFreqCarrierFreqInfo_v1720(InterFreqCarrierFreqInfo_v1720& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqInfo_v1730(Encoder& enc, const InterFreqCarrierFreqInfo_v1730& value)
 {
-    (void)value;
     enc.WriteBit(value.has_channelAccessMode2_r17);
     if (value.has_channelAccessMode2_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.channelAccessMode2_r17), 0, 0);
@@ -4495,7 +4428,6 @@ void Free_InterFreqCarrierFreqInfo_v1730(InterFreqCarrierFreqInfo_v1730& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqInfo_v1760(Encoder& enc, const InterFreqCarrierFreqInfo_v1760& value)
 {
-    (void)value;
     enc.WriteBit(value.has_frequencyBandList_v1760);
     enc.WriteBit(value.has_frequencyBandListSUL_v1760);
     if (value.has_frequencyBandList_v1760) {
@@ -4546,7 +4478,6 @@ void Free_InterFreqCarrierFreqInfo_v1760(InterFreqCarrierFreqInfo_v1760& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PCI_Range(Encoder& enc, const PCI_Range& value)
 {
-    (void)value;
     enc.WriteBit(value.has_range);
     enc.WriteConstrainedInteger((std::int64_t)(value.start), 0, 1007);
     if (value.has_range) {
@@ -4592,7 +4523,6 @@ void Free_PCI_Range(PCI_Range& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCarrierFreqInfo_v1800(Encoder& enc, const InterFreqCarrierFreqInfo_v1800& value)
 {
-    (void)value;
     enc.WriteBit(value.has_frequencyBandListAerial_r18);
     enc.WriteBit(value.has_mobileIAB_CellList_r18);
     enc.WriteBit(value.has_mobileIAB_Freq_r18);
@@ -4710,7 +4640,6 @@ void Free_InterFreqCarrierFreqInfo_v1800(InterFreqCarrierFreqInfo_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqNeighCellInfo(Encoder& enc, const InterFreqNeighCellInfo& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_q_RxLevMinOffsetCell);
@@ -4795,7 +4724,6 @@ void Free_InterFreqNeighCellInfo(InterFreqNeighCellInfo& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqNeighCellInfo_v1610(Encoder& enc, const InterFreqNeighCellInfo_v1610& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ssb_PositionQCL_r16);
     if (value.has_ssb_PositionQCL_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.ssb_PositionQCL_r16), 0, 3);
@@ -4835,7 +4763,6 @@ void Free_InterFreqNeighCellInfo_v1610(InterFreqNeighCellInfo_v1610& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqNeighCellInfo_v1710(Encoder& enc, const InterFreqNeighCellInfo_v1710& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ssb_PositionQCL_r17);
     if (value.has_ssb_PositionQCL_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.ssb_PositionQCL_r17), 0, 1);
@@ -4875,7 +4802,6 @@ void Free_InterFreqNeighCellInfo_v1710(InterFreqNeighCellInfo_v1710& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterFreqCAG_CellListPerPLMN_r16(Encoder& enc, const InterFreqCAG_CellListPerPLMN_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.plmn_IdentityIndex_r16), 1, 12);
 enc.WriteConstrainedLength(value.cag_CellList_r16_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.cag_CellList_r16_count; ++i) {
@@ -4934,7 +4860,6 @@ void Free_InterFreqCAG_CellListPerPLMN_r16(InterFreqCAG_CellListPerPLMN_r16& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_CarrierFreqListEUTRA_v1610(Encoder& enc, const CarrierFreqListEUTRA_v1610& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_CarrierFreqEUTRA_v1610(enc, value.items[i]);
@@ -4983,7 +4908,6 @@ void Free_CarrierFreqListEUTRA_v1610(CarrierFreqListEUTRA_v1610& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB5_ExtGroup1(Encoder& enc, const SIB5_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_carrierFreqListEUTRA_v1610);
     if (value.has_carrierFreqListEUTRA_v1610) {
         Encode_CarrierFreqListEUTRA_v1610(enc, value.carrierFreqListEUTRA_v1610);
@@ -5022,7 +4946,6 @@ void Free_SIB5_ExtGroup1(SIB5_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CarrierFreqListEUTRA_v1700(Encoder& enc, const CarrierFreqListEUTRA_v1700& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_CarrierFreqEUTRA_v1700(enc, value.items[i]);
@@ -5071,7 +4994,6 @@ void Free_CarrierFreqListEUTRA_v1700(CarrierFreqListEUTRA_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB5_ExtGroup2(Encoder& enc, const SIB5_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_carrierFreqListEUTRA_v1700);
     enc.WriteBit(value.has_idleModeMeasVoiceFallback_r17);
     if (value.has_carrierFreqListEUTRA_v1700) {
@@ -5121,7 +5043,6 @@ void Free_SIB5_ExtGroup2(SIB5_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CarrierFreqListEUTRA_v1800(Encoder& enc, const CarrierFreqListEUTRA_v1800& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_CarrierFreqEUTRA_v1800(enc, value.items[i]);
@@ -5170,7 +5091,6 @@ void Free_CarrierFreqListEUTRA_v1800(CarrierFreqListEUTRA_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB5_ExtGroup3(Encoder& enc, const SIB5_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_carrierFreqListEUTRA_v1800);
     if (value.has_carrierFreqListEUTRA_v1800) {
         Encode_CarrierFreqListEUTRA_v1800(enc, value.carrierFreqListEUTRA_v1800);
@@ -5209,7 +5129,6 @@ void Free_SIB5_ExtGroup3(SIB5_ExtGroup3& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CarrierFreqListEUTRA(Encoder& enc, const CarrierFreqListEUTRA& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_CarrierFreqEUTRA(enc, value.items[i]);
@@ -5258,7 +5177,6 @@ void Free_CarrierFreqListEUTRA(CarrierFreqListEUTRA& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB5(Encoder& enc, const SIB5& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_carrierFreqListEUTRA);
@@ -5422,7 +5340,6 @@ void Free_SIB5(SIB5& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_FreqExcludedCellList(Encoder& enc, const EUTRA_FreqExcludedCellList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_EUTRA_PhysCellIdRange(enc, value.items[i]);
@@ -5471,7 +5388,6 @@ void Free_EUTRA_FreqExcludedCellList(EUTRA_FreqExcludedCellList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_FreqNeighCellList(Encoder& enc, const EUTRA_FreqNeighCellList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_EUTRA_FreqNeighCellInfo(enc, value.items[i]);
@@ -5520,7 +5436,6 @@ void Free_EUTRA_FreqNeighCellList(EUTRA_FreqNeighCellList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_MultiBandInfoList(Encoder& enc, const EUTRA_MultiBandInfoList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_EUTRA_MultiBandInfo(enc, value.items[i]);
@@ -5569,7 +5484,6 @@ void Free_EUTRA_MultiBandInfoList(EUTRA_MultiBandInfoList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CarrierFreqEUTRA_ThreshX_Q(Encoder& enc, const CarrierFreqEUTRA_ThreshX_Q& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.threshX_HighQ), 0, 31);
     enc.WriteConstrainedInteger((std::int64_t)(value.threshX_LowQ), 0, 31);
     return enc.Error();
@@ -5608,7 +5522,6 @@ void Free_CarrierFreqEUTRA_ThreshX_Q(CarrierFreqEUTRA_ThreshX_Q& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CarrierFreqEUTRA(Encoder& enc, const CarrierFreqEUTRA& value)
 {
-    (void)value;
     enc.WriteBit(value.has_eutra_multiBandInfoList);
     enc.WriteBit(value.has_eutra_FreqNeighCellList);
     enc.WriteBit(value.has_eutra_ExcludedCellList);
@@ -5757,7 +5670,6 @@ void Free_CarrierFreqEUTRA(CarrierFreqEUTRA& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CarrierFreqEUTRA_v1610(Encoder& enc, const CarrierFreqEUTRA_v1610& value)
 {
-    (void)value;
     enc.WriteBit(value.has_highSpeedEUTRACarrier_r16);
     if (value.has_highSpeedEUTRACarrier_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.highSpeedEUTRACarrier_r16), 0, 0);
@@ -5795,7 +5707,6 @@ void Free_CarrierFreqEUTRA_v1610(CarrierFreqEUTRA_v1610& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_FreqNeighHSDN_CellList_r17(Encoder& enc, const EUTRA_FreqNeighHSDN_CellList_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_EUTRA_PhysCellIdRange(enc, value.items[i]);
@@ -5844,7 +5755,6 @@ void Free_EUTRA_FreqNeighHSDN_CellList_r17(EUTRA_FreqNeighHSDN_CellList_r17& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_CarrierFreqEUTRA_v1700(Encoder& enc, const CarrierFreqEUTRA_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_eutra_FreqNeighHSDN_CellList_r17);
     if (value.has_eutra_FreqNeighHSDN_CellList_r17) {
         Encode_EUTRA_FreqNeighHSDN_CellList_r17(enc, value.eutra_FreqNeighHSDN_CellList_r17);
@@ -5883,7 +5793,6 @@ void Free_CarrierFreqEUTRA_v1700(CarrierFreqEUTRA_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_MultiBandInfoListAerial_r18(Encoder& enc, const EUTRA_MultiBandInfoListAerial_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_EUTRA_MultiBandInfoAerial_r18(enc, value.items[i]);
@@ -5932,7 +5841,6 @@ void Free_EUTRA_MultiBandInfoListAerial_r18(EUTRA_MultiBandInfoListAerial_r18& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_CarrierFreqEUTRA_v1800(Encoder& enc, const CarrierFreqEUTRA_v1800& value)
 {
-    (void)value;
     enc.WriteBit(value.has_eutra_MultiBandInfoListAerial_r18);
     enc.WriteBit(value.has_tn_AreaIdList_r18);
     if (value.has_eutra_MultiBandInfoListAerial_r18) {
@@ -6005,7 +5913,6 @@ void Free_CarrierFreqEUTRA_v1800(CarrierFreqEUTRA_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_FreqNeighCellInfo(Encoder& enc, const EUTRA_FreqNeighCellInfo& value)
 {
-    (void)value;
     enc.WriteBit(value.has_q_RxLevMinOffsetCell);
     enc.WriteBit(value.has_q_QualMinOffsetCell);
     enc.WriteConstrainedInteger((std::int64_t)(value.physCellId), 0, 503);
@@ -6070,7 +5977,6 @@ void Free_EUTRA_FreqNeighCellInfo(EUTRA_FreqNeighCellInfo& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB6(Encoder& enc, const SIB6& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_lateNonCriticalExtension);
@@ -6158,7 +6064,6 @@ void Free_SIB6(SIB6& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB7(Encoder& enc, const SIB7& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_dataCodingScheme);
@@ -6276,7 +6181,6 @@ void Free_SIB7(SIB7& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB8(Encoder& enc, const SIB8& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_dataCodingScheme);
@@ -6412,7 +6316,6 @@ void Free_SIB8(SIB8& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB9_ExtGroup1(Encoder& enc, const SIB9_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_referenceTimeInfo_r16);
     if (value.has_referenceTimeInfo_r16) {
         Encode_ReferenceTimeInfo_r16(enc, value.referenceTimeInfo_r16);
@@ -6451,7 +6354,6 @@ void Free_SIB9_ExtGroup1(SIB9_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB9_ExtGroup2(Encoder& enc, const SIB9_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_eventID_TSS_r18);
     if (value.has_eventID_TSS_r18) {
         enc.WriteConstrainedInteger((std::int64_t)(value.eventID_TSS_r18), 0, 63);
@@ -6491,7 +6393,6 @@ void Free_SIB9_ExtGroup2(SIB9_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB9_TimeInfo(Encoder& enc, const SIB9_TimeInfo& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dayLightSavingTime);
     enc.WriteBit(value.has_leapSeconds);
     enc.WriteBit(value.has_localTimeOffset);
@@ -6569,7 +6470,6 @@ void Free_SIB9_TimeInfo(SIB9_TimeInfo& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB9(Encoder& enc, const SIB9& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_timeInfo);
@@ -6692,7 +6592,6 @@ void Free_SIB9(SIB9& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_HRNN_List_r16(Encoder& enc, const HRNN_List_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 12u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_HRNN_r16(enc, value.items[i]);
@@ -6741,7 +6640,6 @@ void Free_HRNN_List_r16(HRNN_List_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB10_r16(Encoder& enc, const SIB10_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_hrnn_List_r16);
@@ -6805,7 +6703,6 @@ void Free_SIB10_r16(SIB10_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_HRNN_r16(Encoder& enc, const HRNN_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_hrnn_r16);
     if (value.has_hrnn_r16) {
         enc.WriteConstrainedOctetString(value.hrnn_r16.bytes, value.hrnn_r16.length, 1, 48);
@@ -6850,7 +6747,6 @@ void Free_HRNN_r16(HRNN_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasIdleConfigSIB_r16_ExtGroup1(Encoder& enc, const MeasIdleConfigSIB_r16_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measReselectionCarrierListNR_r18);
     enc.WriteBit(value.has_measIdleValidityDuration_r18);
     enc.WriteBit(value.has_measReselectionValidityDuration_r18);
@@ -6936,7 +6832,6 @@ void Free_MeasIdleConfigSIB_r16_ExtGroup1(MeasIdleConfigSIB_r16_ExtGroup1& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasIdleConfigSIB_r16(Encoder& enc, const MeasIdleConfigSIB_r16& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_measIdleCarrierListNR_r16);
@@ -7072,7 +6967,6 @@ void Free_MeasIdleConfigSIB_r16(MeasIdleConfigSIB_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB11_r16(Encoder& enc, const SIB11_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_measIdleConfigSIB_r16);
@@ -7136,7 +7030,6 @@ void Free_SIB11_r16(SIB11_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB12_r16(Encoder& enc, const SIB12_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.segmentNumber_r16), 0, 63);
     enc.WriteConstrainedInteger((std::int64_t)(value.segmentType_r16), 0, 1);
     enc.WriteSemiConstrainedOctetString(value.segmentContainer_r16.bytes, value.segmentContainer_r16.length, 0, 0xFFFFFFFFu);
@@ -7186,7 +7079,6 @@ void Free_SIB12_r16(SIB12_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_DiscConfigCommon_r17(Encoder& enc, const SL_DiscConfigCommon_r17& value)
 {
-    (void)value;
     Encode_SL_RelayUE_Config_r17(enc, value.sl_RelayUE_ConfigCommon_r17);
     Encode_SL_RemoteUE_Config_r17(enc, value.sl_RemoteUE_ConfigCommon_r17);
     return enc.Error();
@@ -7223,7 +7115,6 @@ void Free_SL_DiscConfigCommon_r17(SL_DiscConfigCommon_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_UE_TimersAndConstantsRemoteUE_r17(Encoder& enc, const UE_TimersAndConstantsRemoteUE_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_t300_RemoteUE_r17);
@@ -7296,7 +7187,6 @@ void Free_UE_TimersAndConstantsRemoteUE_r17(UE_TimersAndConstantsRemoteUE_r17& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB12_IEs_r16_ExtGroup1(Encoder& enc, const SIB12_IEs_r16_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_DRX_ConfigCommonGC_BC_r17);
     enc.WriteBit(value.has_sl_DiscConfigCommon_r17);
     enc.WriteBit(value.has_sl_L2U2N_Relay_r17);
@@ -7392,7 +7282,6 @@ void Free_SIB12_IEs_r16_ExtGroup1(SIB12_IEs_r16_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_DiscConfigCommon_v1800(Encoder& enc, const SL_DiscConfigCommon_v1800& value)
 {
-    (void)value;
     Encode_SL_RelayUE_ConfigU2U_r18(enc, value.sl_RelayUE_ConfigCommonU2U_r18);
     Encode_SL_RemoteUE_ConfigU2U_r18(enc, value.sl_RemoteUE_ConfigCommonU2U_r18);
     return enc.Error();
@@ -7429,7 +7318,6 @@ void Free_SL_DiscConfigCommon_v1800(SL_DiscConfigCommon_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB12_IEs_r16_ExtGroup2(Encoder& enc, const SIB12_IEs_r16_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_FreqInfoListSizeExt_v1800);
     enc.WriteBit(value.has_sl_RLC_BearerConfigListSizeExt_v1800);
     enc.WriteBit(value.has_sl_SyncFreqList_r18);
@@ -7603,7 +7491,6 @@ void Free_SIB12_IEs_r16_ExtGroup2(SIB12_IEs_r16_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_NR_AnchorCarrierFreqList_r16(Encoder& enc, const SL_NR_AnchorCarrierFreqList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 3279165);
@@ -7653,7 +7540,6 @@ void Free_SL_NR_AnchorCarrierFreqList_r16(SL_NR_AnchorCarrierFreqList_r16& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_EUTRA_AnchorCarrierFreqList_r16(Encoder& enc, const SL_EUTRA_AnchorCarrierFreqList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 262143);
@@ -7703,7 +7589,6 @@ void Free_SL_EUTRA_AnchorCarrierFreqList_r16(SL_EUTRA_AnchorCarrierFreqList_r16&
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_MeasIdList_r16(Encoder& enc, const SL_MeasIdList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 64u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_SL_MeasIdInfo_r16(enc, value.items[i]);
@@ -7752,7 +7637,6 @@ void Free_SL_MeasIdList_r16(SL_MeasIdList_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_MeasObjectList_r16(Encoder& enc, const SL_MeasObjectList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 64u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_SL_MeasObjectInfo_r16(enc, value.items[i]);

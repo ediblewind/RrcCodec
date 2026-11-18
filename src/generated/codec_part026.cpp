@@ -24,7 +24,6 @@ namespace v1810 {
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1700_TimeDurationForQCL_v1710(Encoder& enc, const FeatureSetDownlink_v1700_TimeDurationForQCL_v1710& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_480kHz);
     enc.WriteBit(value.has_scs_960kHz);
     if (value.has_scs_480kHz) {
@@ -77,7 +76,6 @@ void Free_FeatureSetDownlink_v1700_TimeDurationForQCL_v1710(FeatureSetDownlink_v
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_RepetitionParameters_r17(Encoder& enc, const PDCCH_RepetitionParameters_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_limitX_PerCC_r17);
     enc.WriteBit(value.has_limitX_AcrossCC_r17);
     enc.WriteConstrainedInteger((std::int64_t)(value.supportedMode_r17), 0, 2);
@@ -136,7 +134,6 @@ void Free_PDCCH_RepetitionParameters_r17(PDCCH_RepetitionParameters_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1700_MTRP_PDCCH_Case2_1SpanGap_r17(Encoder& enc, const FeatureSetDownlink_v1700_MTRP_PDCCH_Case2_1SpanGap_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_15kHz_r17);
     enc.WriteBit(value.has_scs_30kHz_r17);
     enc.WriteBit(value.has_scs_60kHz_r17);
@@ -211,7 +208,6 @@ void Free_FeatureSetDownlink_v1700_MTRP_PDCCH_Case2_1SpanGap_r17(FeatureSetDownl
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1700_MTRP_PDCCH_legacyMonitoring_r17(Encoder& enc, const FeatureSetDownlink_v1700_MTRP_PDCCH_legacyMonitoring_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_15kHz_r17);
     enc.WriteBit(value.has_scs_30kHz_r17);
     if (value.has_scs_15kHz_r17) {
@@ -262,7 +258,6 @@ void Free_FeatureSetDownlink_v1700_MTRP_PDCCH_legacyMonitoring_r17(FeatureSetDow
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1700_MTRP_PDCCH_Repetition_r17(Encoder& enc, const FeatureSetDownlink_v1700_MTRP_PDCCH_Repetition_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.numBD_twoPDCCH_r17), 2, 3);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumOverlaps_r17), 0, 6);
     return enc.Error();
@@ -301,7 +296,6 @@ void Free_FeatureSetDownlink_v1700_MTRP_PDCCH_Repetition_r17(FeatureSetDownlink_
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1700(Encoder& enc, const FeatureSetDownlink_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scalingFactor_1024QAM_FR1_r17);
     enc.WriteBit(value.has_timeDurationForQCL_v1710);
     enc.WriteBit(value.has_sfn_SchemeA_r17);
@@ -488,7 +482,6 @@ void Free_FeatureSetDownlink_v1700(FeatureSetDownlink_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17_MaxNumberPRS_ResourceProcessedPerSlot_r17(Encoder& enc, const FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17_MaxNumberPRS_ResourceProcessedPerSlot_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_15kHz_r17);
     enc.WriteBit(value.has_scs_30kHz_r17);
     enc.WriteBit(value.has_scs_60kHz_r17);
@@ -567,7 +560,6 @@ void Free_FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17_MaxNumberPRS_ResourcePro
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17(Encoder& enc, const FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberPRS_Resource_r17), 0, 6);
     Encode_FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17_MaxNumberPRS_ResourceProcessedPerSlot_r17(enc, value.maxNumberPRS_ResourceProcessedPerSlot_r17);
     return enc.Error();
@@ -605,7 +597,6 @@ void Free_FeatureSetDownlink_v1720_Rtt_BasedPDC_PRS_r17(FeatureSetDownlink_v1720
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1720(Encoder& enc, const FeatureSetDownlink_v1720& value)
 {
-    (void)value;
     enc.WriteBit(value.has_rtt_BasedPDC_CSI_RS_ForTracking_r17);
     enc.WriteBit(value.has_rtt_BasedPDC_PRS_r17);
     enc.WriteBit(value.has_sps_Multicast_r17);
@@ -666,7 +657,6 @@ void Free_FeatureSetDownlink_v1720(FeatureSetDownlink_v1720& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1730(Encoder& enc, const FeatureSetDownlink_v1730& value)
 {
-    (void)value;
     enc.WriteBit(value.has_prs_AsSpatialRelationRS_For_SRS_r17);
     if (value.has_prs_AsSpatialRelationRS_For_SRS_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.prs_AsSpatialRelationRS_For_SRS_r17), 0, 0);
@@ -704,7 +694,6 @@ void Free_FeatureSetDownlink_v1730(FeatureSetDownlink_v1730& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1800_SimulDMRS_PDSCH_r18(Encoder& enc, const FeatureSetDownlink_v1800_SimulDMRS_PDSCH_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_15kHz_r18);
     enc.WriteBit(value.has_scs_30kHz_r18);
     enc.WriteBit(value.has_scs_60kHz_r18);
@@ -770,7 +759,6 @@ void Free_FeatureSetDownlink_v1800_SimulDMRS_PDSCH_r18(FeatureSetDownlink_v1800_
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingType1_r18(Encoder& enc, const FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingType1_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_15kHz_r18);
     enc.WriteBit(value.has_scs_30kHz_r18);
     if (value.has_scs_15kHz_r18) {
@@ -819,7 +807,6 @@ void Free_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingT
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingType2_r18(Encoder& enc, const FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingType2_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_15kHz_r18);
     enc.WriteBit(value.has_scs_30kHz_r18);
     if (value.has_scs_15kHz_r18) {
@@ -868,7 +855,6 @@ void Free_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingT
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18(Encoder& enc, const FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18& value)
 {
-    (void)value;
     Encode_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingType1_r18(enc, value.pdsch_ProcessingType1_r18);
     Encode_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18_Pdsch_ProcessingType2_r18(enc, value.pdsch_ProcessingType2_r18);
     return enc.Error();
@@ -905,7 +891,6 @@ void Free_FeatureSetDownlink_v1800_Pdcch_MonitoringSpan2_2_r18(FeatureSetDownlin
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlink_v1800(Encoder& enc, const FeatureSetDownlink_v1800& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pdsch_TypeA_DMRS_r18);
     enc.WriteBit(value.has_pdsch_TypeB_DMRS_r18);
     enc.WriteBit(value.has_pdsch_1SymbolFL_DMRS_Addition2Symbol_r18);
@@ -1200,7 +1185,6 @@ void Free_FeatureSetDownlink_v1800(FeatureSetDownlink_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DummyB(Encoder& enc, const DummyB& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberTxPortsPerResource), 0, 6);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberResources), 1, 64);
     enc.WriteConstrainedInteger((std::int64_t)(value.totalNumberTxPorts), 2, 256);
@@ -1257,7 +1241,6 @@ void Free_DummyB(DummyB& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DummyC(Encoder& enc, const DummyC& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberTxPortsPerResource), 0, 2);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberResources), 1, 64);
     enc.WriteConstrainedInteger((std::int64_t)(value.totalNumberTxPorts), 2, 256);
@@ -1320,7 +1303,6 @@ void Free_DummyC(DummyC& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DummyD(Encoder& enc, const DummyD& value)
 {
-    (void)value;
     enc.WriteBit(value.has_amplitudeSubsetRestriction);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberTxPortsPerResource), 0, 5);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberResources), 1, 64);
@@ -1394,7 +1376,6 @@ void Free_DummyD(DummyD& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DummyE(Encoder& enc, const DummyE& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberTxPortsPerResource), 0, 5);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberResources), 1, 64);
     enc.WriteConstrainedInteger((std::int64_t)(value.totalNumberTxPorts), 2, 256);
@@ -1457,7 +1438,6 @@ void Free_DummyE(DummyE& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlinkPerCC(Encoder& enc, const FeatureSetDownlinkPerCC& value)
 {
-    (void)value;
     enc.WriteBit(value.has_channelBW_90mhz);
     enc.WriteBit(value.has_maxNumberMIMO_LayersPDSCH);
     enc.WriteBit(value.has_supportedModulationOrderDL);
@@ -1532,7 +1512,6 @@ void Free_FeatureSetDownlinkPerCC(FeatureSetDownlinkPerCC& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MultiDCI_MultiTRP_r16(Encoder& enc, const MultiDCI_MultiTRP_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberCORESET_r16), 0, 3);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberCORESETPerPoolIndex_r16), 1, 3);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberUnicastPDSCH_PerPool_r16), 0, 4);
@@ -1577,7 +1556,6 @@ void Free_MultiDCI_MultiTRP_r16(MultiDCI_MultiTRP_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlinkPerCC_v1620(Encoder& enc, const FeatureSetDownlinkPerCC_v1620& value)
 {
-    (void)value;
     enc.WriteBit(value.has_multiDCI_MultiTRP_r16);
     enc.WriteBit(value.has_supportFDM_SchemeB_r16);
     if (value.has_multiDCI_MultiTRP_r16) {
@@ -1627,7 +1605,6 @@ void Free_FeatureSetDownlinkPerCC_v1620(FeatureSetDownlinkPerCC_v1620& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CRS_InterfMitigation_r17(Encoder& enc, const CRS_InterfMitigation_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_crs_IM_DSS_15kHzSCS_r17);
     enc.WriteBit(value.has_crs_IM_nonDSS_15kHzSCS_r17);
     enc.WriteBit(value.has_crs_IM_nonDSS_NWA_15kHzSCS_r17);
@@ -1775,7 +1752,6 @@ void Free_SupportedBandwidth_v1700(SupportedBandwidth_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlinkPerCC_v1700(Encoder& enc, const FeatureSetDownlinkPerCC_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_supportedMinBandwidthDL_r17);
     enc.WriteBit(value.has_broadcastSCell_r17);
     enc.WriteBit(value.has_maxNumberMIMO_LayersMulticastPDSCH_r17);
@@ -1873,7 +1849,6 @@ void Free_FeatureSetDownlinkPerCC_v1700(FeatureSetDownlinkPerCC_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlinkPerCC_v1720(Encoder& enc, const FeatureSetDownlinkPerCC_v1720& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxModulationOrderForMulticastDataRateCalculation_r17);
     enc.WriteBit(value.has_fdm_BroadcastUnicast_r17);
     enc.WriteBit(value.has_fdm_MulticastUnicast_r17);
@@ -1935,7 +1910,6 @@ void Free_FeatureSetDownlinkPerCC_v1720(FeatureSetDownlinkPerCC_v1720& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlinkPerCC_v1730(Encoder& enc, const FeatureSetDownlinkPerCC_v1730& value)
 {
-    (void)value;
     enc.WriteBit(value.has_intraSlotTDM_UnicastGroupCommonPDSCH_r17);
     enc.WriteBit(value.has_sps_MulticastSCell_r17);
     enc.WriteBit(value.has_sps_MulticastSCellMultiConfig_r17);
@@ -2010,7 +1984,6 @@ void Free_FeatureSetDownlinkPerCC_v1730(FeatureSetDownlinkPerCC_v1730& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlinkPerCC_v1780(Encoder& enc, const FeatureSetDownlinkPerCC_v1780& value)
 {
-    (void)value;
     enc.WriteBit(value.has_supportedBandwidthDL_v1780);
     if (value.has_supportedBandwidthDL_v1780) {
         Encode_SupportedBandwidth_v1700(enc, value.supportedBandwidthDL_v1780);
@@ -2049,7 +2022,6 @@ void Free_FeatureSetDownlinkPerCC_v1780(FeatureSetDownlinkPerCC_v1780& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetDownlinkPerCC_v1800(Encoder& enc, const FeatureSetDownlinkPerCC_v1800& value)
 {
-    (void)value;
     enc.WriteBit(value.has_multiDCI_IntraCellMultiTRP_TwoTA_r18);
     enc.WriteBit(value.has_multiDCI_InterCellMultiTRP_TwoTA_r18);
     enc.WriteBit(value.has_rxTimingDiff_r18);
@@ -2144,7 +2116,6 @@ void Free_FeatureSetDownlinkPerCC_v1800(FeatureSetDownlinkPerCC_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup8(Encoder& enc, const FeatureSets_ExtGroup8& value)
 {
-    (void)value;
     enc.WriteBit(value.has_featureSetsDownlink_v1730);
     enc.WriteBit(value.has_featureSetsDownlinkPerCC_v1730);
     if (value.has_featureSetsDownlink_v1730) {
@@ -2237,7 +2208,6 @@ void Free_FeatureSets_ExtGroup8(FeatureSets_ExtGroup8& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup9(Encoder& enc, const FeatureSets_ExtGroup9& value)
 {
-    (void)value;
     enc.WriteBit(value.has_featureSetsDownlinkPerCC_v1780);
     enc.WriteBit(value.has_featureSetsUplinkPerCC_v1780);
     if (value.has_featureSetsDownlinkPerCC_v1780) {
@@ -2330,7 +2300,6 @@ void Free_FeatureSets_ExtGroup9(FeatureSets_ExtGroup9& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup10(Encoder& enc, const FeatureSets_ExtGroup10& value)
 {
-    (void)value;
     enc.WriteBit(value.has_featureSetsDownlink_v1800);
     enc.WriteBit(value.has_featureSetsDownlinkPerCC_v1800);
     enc.WriteBit(value.has_featureSetsUplink_v1800);
@@ -2489,7 +2458,6 @@ void Free_FeatureSets_ExtGroup10(FeatureSets_ExtGroup10& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup1(Encoder& enc, const FeatureSets_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_featureSetsDownlink_v1540);
     enc.WriteBit(value.has_featureSetsUplink_v1540);
     enc.WriteBit(value.has_featureSetsUplinkPerCC_v1540);
@@ -2615,7 +2583,6 @@ void Free_FeatureSets_ExtGroup1(FeatureSets_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup2(Encoder& enc, const FeatureSets_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_featureSetsDownlink_v15a0);
     if (value.has_featureSetsDownlink_v15a0) {
 enc.WriteConstrainedLength(value.featureSetsDownlink_v15a0_count, 0u, 0u);
@@ -2675,7 +2642,6 @@ void Free_FeatureSets_ExtGroup2(FeatureSets_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup3(Encoder& enc, const FeatureSets_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_featureSetsDownlink_v1610);
     enc.WriteBit(value.has_featureSetsUplink_v1610);
     enc.WriteBit(value.has_featureSetDownlinkPerCC_v1620);
@@ -2801,7 +2767,6 @@ void Free_FeatureSets_ExtGroup3(FeatureSets_ExtGroup3& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup4(Encoder& enc, const FeatureSets_ExtGroup4& value)
 {
-    (void)value;
     enc.WriteBit(value.has_featureSetsUplink_v1630);
     if (value.has_featureSetsUplink_v1630) {
 enc.WriteConstrainedLength(value.featureSetsUplink_v1630_count, 0u, 0u);
@@ -2861,7 +2826,6 @@ void Free_FeatureSets_ExtGroup4(FeatureSets_ExtGroup4& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup5(Encoder& enc, const FeatureSets_ExtGroup5& value)
 {
-    (void)value;
     enc.WriteBit(value.has_featureSetsUplink_v1640);
     if (value.has_featureSetsUplink_v1640) {
 enc.WriteConstrainedLength(value.featureSetsUplink_v1640_count, 0u, 0u);
@@ -2921,7 +2885,6 @@ void Free_FeatureSets_ExtGroup5(FeatureSets_ExtGroup5& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup6(Encoder& enc, const FeatureSets_ExtGroup6& value)
 {
-    (void)value;
     enc.WriteBit(value.has_featureSetsDownlink_v1700);
     enc.WriteBit(value.has_featureSetsDownlinkPerCC_v1700);
     enc.WriteBit(value.has_featureSetsUplink_v1710);
@@ -3080,7 +3043,6 @@ void Free_FeatureSets_ExtGroup6(FeatureSets_ExtGroup6& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_ExtGroup7(Encoder& enc, const FeatureSets_ExtGroup7& value)
 {
-    (void)value;
     enc.WriteBit(value.has_featureSetsDownlink_v1720);
     enc.WriteBit(value.has_featureSetsDownlinkPerCC_v1720);
     enc.WriteBit(value.has_featureSetsUplink_v1720);
@@ -3206,7 +3168,6 @@ void Free_FeatureSets_ExtGroup7(FeatureSets_ExtGroup7& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets(Encoder& enc, const FeatureSets& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3 || value.has_extGroup4 || value.has_extGroup5 || value.has_extGroup6 || value.has_extGroup7 || value.has_extGroup8 || value.has_extGroup9 || value.has_extGroup10;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_featureSetsDownlink);
@@ -3615,7 +3576,6 @@ void Free_FeatureSets(FeatureSets& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSets_v16d0(Encoder& enc, const FeatureSets_v16d0& value)
 {
-    (void)value;
     enc.WriteBit(value.has_featureSetsUplink_v16d0);
     if (value.has_featureSetsUplink_v16d0) {
 enc.WriteConstrainedLength(value.featureSetsUplink_v16d0_count, 0u, 0u);
@@ -3675,7 +3635,6 @@ void Free_FeatureSets_v16d0(FeatureSets_v16d0& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DummyF(Encoder& enc, const DummyF& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberPeriodicCSI_ReportPerBWP), 1, 4);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberAperiodicCSI_ReportPerBWP), 1, 4);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSemiPersistentCSI_ReportPerBWP), 0, 4);
@@ -3726,7 +3685,6 @@ void Free_DummyF(DummyF& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DummyI(Encoder& enc, const DummyI& value)
 {
-    (void)value;
     enc.WriteBit(value.has_txSwitchImpactToRx);
     enc.WriteConstrainedInteger((std::int64_t)(value.supportedSRS_TxPortSwitch), 0, 4);
     if (value.has_txSwitchImpactToRx) {
@@ -3770,7 +3728,6 @@ void Free_DummyI(DummyI& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_Pusch_ProcessingType1_DifferentTB_PerSlot(Encoder& enc, const FeatureSetUplink_Pusch_ProcessingType1_DifferentTB_PerSlot& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_15kHz);
     enc.WriteBit(value.has_scs_30kHz);
     enc.WriteBit(value.has_scs_60kHz);
@@ -3849,7 +3806,6 @@ void Free_FeatureSetUplink_Pusch_ProcessingType1_DifferentTB_PerSlot(FeatureSetU
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink(Encoder& enc, const FeatureSetUplink& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scalingFactor);
     enc.WriteBit(value.has_dummy3);
     enc.WriteBit(value.has_intraBandFreqSeparationUL);
@@ -4054,7 +4010,6 @@ void Free_FeatureSetUplink(FeatureSetUplink& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1540_Pusch_ProcessingType2(Encoder& enc, const FeatureSetUplink_v1540_Pusch_ProcessingType2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_15kHz);
     enc.WriteBit(value.has_scs_30kHz);
     enc.WriteBit(value.has_scs_60kHz);
@@ -4117,7 +4072,6 @@ void Free_FeatureSetUplink_v1540_Pusch_ProcessingType2(FeatureSetUplink_v1540_Pu
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1540(Encoder& enc, const FeatureSetUplink_v1540& value)
 {
-    (void)value;
     enc.WriteBit(value.has_zeroSlotOffsetAperiodicSRS);
     enc.WriteBit(value.has_pa_PhaseDiscontinuityImpacts);
     enc.WriteBit(value.has_pusch_SeparationWithGap);
@@ -4200,7 +4154,6 @@ void Free_FeatureSetUplink_v1540(FeatureSetUplink_v1540& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SRS_PosResources_r16(Encoder& enc, const SRS_PosResources_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSRS_PosResourceSetPerBWP_r16), 0, 5);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSRS_PosResourcesPerBWP_r16), 0, 6);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSRS_ResourcesPerBWP_PerSlot_r16), 0, 9);
@@ -4257,7 +4210,6 @@ void Free_SRS_PosResources_r16(SRS_PosResources_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SRS_PosResourceAP_r16(Encoder& enc, const SRS_PosResourceAP_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberAP_SRS_PosResourcesPerBWP_r16), 0, 6);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberAP_SRS_PosResourcesPerBWP_PerSlot_r16), 0, 9);
     return enc.Error();
@@ -4296,7 +4248,6 @@ void Free_SRS_PosResourceAP_r16(SRS_PosResourceAP_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SRS_PosResourceSP_r16(Encoder& enc, const SRS_PosResourceSP_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSP_SRS_PosResourcesPerBWP_r16), 0, 6);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSP_SRS_PosResourcesPerBWP_PerSlot_r16), 0, 9);
     return enc.Error();
@@ -4335,7 +4286,6 @@ void Free_SRS_PosResourceSP_r16(SRS_PosResourceSP_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SRS_AllPosResources_r16(Encoder& enc, const SRS_AllPosResources_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_srs_PosResourceAP_r16);
     enc.WriteBit(value.has_srs_PosResourceSP_r16);
     Encode_SRS_PosResources_r16(enc, value.srs_PosResources_r16);
@@ -4391,7 +4341,6 @@ void Free_SRS_AllPosResources_r16(SRS_AllPosResources_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1610_Pusch_RepetitionTypeB_r16(Encoder& enc, const FeatureSetUplink_v1610_Pusch_RepetitionTypeB_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberPUSCH_Tx_r16), 0, 5);
     enc.WriteConstrainedInteger((std::int64_t)(value.hoppingScheme_r16), 0, 2);
     return enc.Error();
@@ -4430,7 +4379,6 @@ void Free_FeatureSetUplink_v1610_Pusch_RepetitionTypeB_r16(FeatureSetUplink_v161
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1610_CbgPUSCH_ProcessingType1_DifferentTB_PerSlot_r16(Encoder& enc, const FeatureSetUplink_v1610_CbgPUSCH_ProcessingType1_DifferentTB_PerSlot_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_15kHz_r16);
     enc.WriteBit(value.has_scs_30kHz_r16);
     enc.WriteBit(value.has_scs_60kHz_r16);
@@ -4509,7 +4457,6 @@ void Free_FeatureSetUplink_v1610_CbgPUSCH_ProcessingType1_DifferentTB_PerSlot_r1
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1610_CbgPUSCH_ProcessingType2_DifferentTB_PerSlot_r16(Encoder& enc, const FeatureSetUplink_v1610_CbgPUSCH_ProcessingType2_DifferentTB_PerSlot_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_15kHz_r16);
     enc.WriteBit(value.has_scs_30kHz_r16);
     enc.WriteBit(value.has_scs_60kHz_r16);
@@ -4588,7 +4535,6 @@ void Free_FeatureSetUplink_v1610_CbgPUSCH_ProcessingType2_DifferentTB_PerSlot_r1
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1610_IntraFreqDAPS_UL_r16(Encoder& enc, const FeatureSetUplink_v1610_IntraFreqDAPS_UL_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dummy);
     enc.WriteBit(value.has_intraFreqTwoTAGs_DAPS_r16);
     enc.WriteBit(value.has_dummy1);
@@ -4672,7 +4618,6 @@ void Free_FeatureSetUplink_v1610_IntraFreqDAPS_UL_r16(FeatureSetUplink_v1610_Int
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1610_MultiPUCCH_r16(Encoder& enc, const FeatureSetUplink_v1610_MultiPUCCH_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sub_SlotConfig_NCP_r16);
     enc.WriteBit(value.has_sub_SlotConfig_ECP_r16);
     if (value.has_sub_SlotConfig_NCP_r16) {
@@ -4725,7 +4670,6 @@ void Free_FeatureSetUplink_v1610_MultiPUCCH_r16(FeatureSetUplink_v1610_MultiPUCC
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1610_Ul_IntraUE_Mux_r16(Encoder& enc, const FeatureSetUplink_v1610_Ul_IntraUE_Mux_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.pusch_PreparationLowPriority_r16), 0, 2);
     enc.WriteConstrainedInteger((std::int64_t)(value.pusch_PreparationHighPriority_r16), 0, 2);
     return enc.Error();
@@ -4764,7 +4708,6 @@ void Free_FeatureSetUplink_v1610_Ul_IntraUE_Mux_r16(FeatureSetUplink_v1610_Ul_In
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1610_CrossCarrierSchedulingProcessing_DiffSCS_r16(Encoder& enc, const FeatureSetUplink_v1610_CrossCarrierSchedulingProcessing_DiffSCS_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_15kHz_120kHz_r16);
     enc.WriteBit(value.has_scs_15kHz_60kHz_r16);
     enc.WriteBit(value.has_scs_30kHz_120kHz_r16);
@@ -4863,7 +4806,6 @@ void Free_FeatureSetUplink_v1610_CrossCarrierSchedulingProcessing_DiffSCS_r16(Fe
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1610_Ul_FullPwrMode2_TPMIGroup_r16(Encoder& enc, const FeatureSetUplink_v1610_Ul_FullPwrMode2_TPMIGroup_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_twoPorts_r16);
     enc.WriteBit(value.has_fourPortsNonCoherent_r16);
     enc.WriteBit(value.has_fourPortsPartialCoherent_r16);
@@ -4935,7 +4877,6 @@ void Free_FeatureSetUplink_v1610_Ul_FullPwrMode2_TPMIGroup_r16(FeatureSetUplink_
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1610(Encoder& enc, const FeatureSetUplink_v1610& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pusch_RepetitionTypeB_r16);
     enc.WriteBit(value.has_ul_CancellationSelfCarrier_r16);
     enc.WriteBit(value.has_ul_CancellationCrossCarrier_r16);
@@ -5305,7 +5246,6 @@ void Free_FeatureSetUplink_v1610(FeatureSetUplink_v1610& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1630(Encoder& enc, const FeatureSetUplink_v1630& value)
 {
-    (void)value;
     enc.WriteBit(value.has_offsetSRS_CB_PUSCH_Ant_Switch_fr1_r16);
     enc.WriteBit(value.has_offsetSRS_CB_PUSCH_PDCCH_MonitorSingleOcc_fr1_r16);
     enc.WriteBit(value.has_offsetSRS_CB_PUSCH_PDCCH_MonitorAnyOccWithoutGap_fr1_r16);
@@ -5398,7 +5338,6 @@ void Free_FeatureSetUplink_v1630(FeatureSetUplink_v1630& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SubSlot_Config_r16(Encoder& enc, const SubSlot_Config_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sub_SlotConfig_NCP_r16);
     enc.WriteBit(value.has_sub_SlotConfig_ECP_r16);
     if (value.has_sub_SlotConfig_NCP_r16) {
@@ -5451,7 +5390,6 @@ void Free_SubSlot_Config_r16(SubSlot_Config_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1640_OffsetSRS_CB_PUSCH_PDCCH_MonitorAnyOccWithSpanGap_fr1_r16(Encoder& enc, const FeatureSetUplink_v1640_OffsetSRS_CB_PUSCH_PDCCH_MonitorAnyOccWithSpanGap_fr1_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_15kHz_r16);
     enc.WriteBit(value.has_scs_30kHz_r16);
     enc.WriteBit(value.has_scs_60kHz_r16);
@@ -5517,7 +5455,6 @@ void Free_FeatureSetUplink_v1640_OffsetSRS_CB_PUSCH_PDCCH_MonitorAnyOccWithSpanG
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1640(Encoder& enc, const FeatureSetUplink_v1640& value)
 {
-    (void)value;
     enc.WriteBit(value.has_twoHARQ_ACK_Codebook_type1_r16);
     enc.WriteBit(value.has_twoHARQ_ACK_Codebook_type2_r16);
     enc.WriteBit(value.has_offsetSRS_CB_PUSCH_PDCCH_MonitorAnyOccWithSpanGap_fr1_r16);
@@ -5580,7 +5517,6 @@ void Free_FeatureSetUplink_v1640(FeatureSetUplink_v1640& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v16d0_Pusch_RepetitionTypeB_v16d0(Encoder& enc, const FeatureSetUplink_v16d0_Pusch_RepetitionTypeB_v16d0& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberPUSCH_Tx_Cap1_r16), 0, 5);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberPUSCH_Tx_Cap2_r16), 0, 5);
     return enc.Error();
@@ -5619,7 +5555,6 @@ void Free_FeatureSetUplink_v16d0_Pusch_RepetitionTypeB_v16d0(FeatureSetUplink_v1
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v16d0(Encoder& enc, const FeatureSetUplink_v16d0& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pusch_RepetitionTypeB_v16d0);
     if (value.has_pusch_RepetitionTypeB_v16d0) {
         Encode_FeatureSetUplink_v16d0_Pusch_RepetitionTypeB_v16d0(enc, value.pusch_RepetitionTypeB_v16d0);
@@ -5658,7 +5593,6 @@ void Free_FeatureSetUplink_v16d0(FeatureSetUplink_v16d0& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1710(Encoder& enc, const FeatureSetUplink_v1710& value)
 {
-    (void)value;
     enc.WriteBit(value.has_mTRP_PUSCH_TypeA_CB_r17);
     enc.WriteBit(value.has_mTRP_PUSCH_RepetitionTypeA_r17);
     enc.WriteBit(value.has_mTRP_PUCCH_IntraSlot_r17);
@@ -5781,7 +5715,6 @@ void Free_FeatureSetUplink_v1710(FeatureSetUplink_v1710& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_r17_AdditionalCancellationTime_r17(Encoder& enc, const FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_r17_AdditionalCancellationTime_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_15kHz_r17);
     enc.WriteBit(value.has_scs_30kHz_r17);
     enc.WriteBit(value.has_scs_60kHz_r17);
@@ -5860,7 +5793,6 @@ void Free_FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_r17(Encoder& enc, const FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.pusch_PreparationLowPriority_r17), 0, 2);
     Encode_FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_r17_AdditionalCancellationTime_r17(enc, value.additionalCancellationTime_r17);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberCarriers_r17), 1, 16);
@@ -5904,7 +5836,6 @@ void Free_FeatureSetUplink_v1720_Phy_PrioritizationHighPriorityDG_LowPriorityCG_
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1720(Encoder& enc, const FeatureSetUplink_v1720& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pucch_Repetition_F0_1_2_3_4_RRC_Config_r17);
     enc.WriteBit(value.has_pucch_Repetition_F0_1_2_3_4_DynamicIndication_r17);
     enc.WriteBit(value.has_interSubslotFreqHopping_PUCCH_r17);
@@ -6011,7 +5942,6 @@ void Free_FeatureSetUplink_v1720(FeatureSetUplink_v1720& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PosSRS_BWA_RRC_Connected_r18(Encoder& enc, const PosSRS_BWA_RRC_Connected_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_numOfCarriersIntraBandContiguous_r18);
@@ -6212,7 +6142,6 @@ void Free_PosSRS_BWA_RRC_Connected_r18(PosSRS_BWA_RRC_Connected_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PosSRS_BWA_IndependentCA_RRC_Connected_r18(Encoder& enc, const PosSRS_BWA_IndependentCA_RRC_Connected_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_numOfCarriersIntraBandContiguous_r18);
@@ -6426,7 +6355,6 @@ void Free_PosSRS_BWA_IndependentCA_RRC_Connected_r18(PosSRS_BWA_IndependentCA_RR
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18_Pusch_TypeA_DMRS_r18(Encoder& enc, const FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18_Pusch_TypeA_DMRS_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pusch_2SymbolFL_DMRS_r18);
     enc.WriteBit(value.has_pusch_2SymbolFL_DMRS_Addition2Symbol_r18);
     enc.WriteBit(value.has_pusch_1SymbolFL_DMRS_Addition3Symbol_r18);
@@ -6503,7 +6431,6 @@ void Free_FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18_Pusch_TypeA_DMRS_r18(Fea
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18(Encoder& enc, const FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pusch_TypeA_DMRS_r18);
     enc.WriteBit(value.has_pusch_TypeB_DMRS_r18);
     enc.WriteBit(value.has_pusch_rank_1_4_1Port_r18);
@@ -6603,7 +6530,6 @@ void Free_FeatureSetUplink_v1800_Pusch_DMRS_TypeEnh_r18(FeatureSetUplink_v1800_P
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplink_v1800(Encoder& enc, const FeatureSetUplink_v1800& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxDelayValueBeyondD_Basic_r18);
     enc.WriteBit(value.has_tdcp_NumberDelayValue_r18);
     enc.WriteBit(value.has_phaseReportMoreThanOne_r18);
@@ -6853,7 +6779,6 @@ void Free_FeatureSetUplink_v1800(FeatureSetUplink_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_Mimo_CB_PUSCH(Encoder& enc, const FeatureSetUplinkPerCC_Mimo_CB_PUSCH& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxNumberMIMO_LayersCB_PUSCH);
     if (value.has_maxNumberMIMO_LayersCB_PUSCH) {
         enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberMIMO_LayersCB_PUSCH), 0, 2);
@@ -6899,7 +6824,6 @@ void Free_FeatureSetUplinkPerCC_Mimo_CB_PUSCH(FeatureSetUplinkPerCC_Mimo_CB_PUSC
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC(Encoder& enc, const FeatureSetUplinkPerCC& value)
 {
-    (void)value;
     enc.WriteBit(value.has_channelBW_90mhz);
     enc.WriteBit(value.has_mimo_CB_PUSCH);
     enc.WriteBit(value.has_maxNumberMIMO_LayersNonCB_PUSCH);
@@ -6986,7 +6910,6 @@ void Free_FeatureSetUplinkPerCC(FeatureSetUplinkPerCC& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1540_Mimo_NonCB_PUSCH(Encoder& enc, const FeatureSetUplinkPerCC_v1540_Mimo_NonCB_PUSCH& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSRS_ResourcePerSet), 1, 4);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSimultaneousSRS_ResourceTx), 1, 4);
     return enc.Error();
@@ -7025,7 +6948,6 @@ void Free_FeatureSetUplinkPerCC_v1540_Mimo_NonCB_PUSCH(FeatureSetUplinkPerCC_v15
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1540(Encoder& enc, const FeatureSetUplinkPerCC_v1540& value)
 {
-    (void)value;
     enc.WriteBit(value.has_mimo_NonCB_PUSCH);
     if (value.has_mimo_NonCB_PUSCH) {
         Encode_FeatureSetUplinkPerCC_v1540_Mimo_NonCB_PUSCH(enc, value.mimo_NonCB_PUSCH);
@@ -7064,7 +6986,6 @@ void Free_FeatureSetUplinkPerCC_v1540(FeatureSetUplinkPerCC_v1540& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1700(Encoder& enc, const FeatureSetUplinkPerCC_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_supportedMinBandwidthUL_r17);
     enc.WriteBit(value.has_mTRP_PUSCH_RepetitionTypeB_r17);
     enc.WriteBit(value.has_mTRP_PUSCH_TypeB_CB_r17);
@@ -7141,7 +7062,6 @@ void Free_FeatureSetUplinkPerCC_v1700(FeatureSetUplinkPerCC_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1780(Encoder& enc, const FeatureSetUplinkPerCC_v1780& value)
 {
-    (void)value;
     enc.WriteBit(value.has_supportedBandwidthUL_v1780);
     if (value.has_supportedBandwidthUL_v1780) {
         Encode_SupportedBandwidth_v1700(enc, value.supportedBandwidthUL_v1780);
@@ -7180,7 +7100,6 @@ void Free_FeatureSetUplinkPerCC_v1780(FeatureSetUplinkPerCC_v1780& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SDM_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SDM_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSRS_ResourcePerSet_r18), 0, 2);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberLayerPerPanel_r18), 1, 2);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberNZP_PUSCH_PortsPerSet_r18), 0, 2);
@@ -7231,7 +7150,6 @@ void Free_FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SDM_r18(FeatureSe
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SDM_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SDM_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSRS_ResourcePerSet_r18), 1, 4);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberLayerPerPanel_r18), 1, 2);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSimulSRS_ResourcePerSet_r18), 1, 4);
@@ -7276,7 +7194,6 @@ void Free_FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SDM_r18(Featur
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SFN_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SFN_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSRS_ResourcePerSet_r18), 0, 2);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberLayerPerSet_r18), 1, 2);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSRS_AntennaPortsPerSet_r18), 0, 2);
@@ -7327,7 +7244,6 @@ void Free_FeatureSetUplinkPerCC_v1800_Pusch_CB_SingleDCI_STx2P_SFN_r18(FeatureSe
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SFN_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SFN_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSRS_ResourcePerSet_r18), 1, 4);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberLayerPerSet_r18), 1, 2);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSimulSRS_ResourcePerSet_r18), 1, 4);
@@ -7372,7 +7288,6 @@ void Free_FeatureSetUplinkPerCC_v1800_Pusch_NonCB_SingleDCI_STx2P_SFN_r18(Featur
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18_MaxNumberPUSCH_PerCORESET_PerSlot_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18_MaxNumberPUSCH_PerCORESET_PerSlot_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_60kHz_r18);
     enc.WriteBit(value.has_scs_120kHz_r18);
     if (value.has_scs_60kHz_r18) {
@@ -7425,7 +7340,6 @@ void Free_FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18_MaxNu
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxNumberPUSCH_PerCORESET_PerSlot_r18);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSRS_ResourcePerSet_r18), 0, 2);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberLayerOverlapping_r18), 1, 2);
@@ -7494,7 +7408,6 @@ void Free_FeatureSetUplinkPerCC_v1800_TwoPUSCH_CB_MultiDCI_STx2P_DG_DG_r18(Featu
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18_MaxNumberPUSCH_PerCORESET_PerSlot_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18_MaxNumberPUSCH_PerCORESET_PerSlot_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_60kHz_r18);
     enc.WriteBit(value.has_scs_120kHz_r18);
     if (value.has_scs_60kHz_r18) {
@@ -7547,7 +7460,6 @@ void Free_FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18_Ma
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxNumberPUSCH_PerCORESET_PerSlot_r18);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSRS_ResourcePerSet_r18), 1, 4);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberLayerOverlapping_r18), 1, 2);
@@ -7610,7 +7522,6 @@ void Free_FeatureSetUplinkPerCC_v1800_TwoPUSCH_NonCB_MultiDCI_STx2P_DG_DG_r18(Fe
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18_Codebook_8TxBasic_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18_Codebook_8TxBasic_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberPUSCH_MIMO_Layer_r18), 1, 8);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSRS_Resource_r18), 1, 2);
     enc.WriteConstrainedInteger((std::int64_t)(value.srs_8TxPorts_r18), 0, 1);
@@ -7655,7 +7566,6 @@ void Free_FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18_Codebook_8Tx
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_codebook1_8TxPUSCH_r18);
     enc.WriteBit(value.has_codebook2_8TxPUSCH_r18);
     enc.WriteBit(value.has_codebook3_8TxPUSCH_r18);
@@ -7800,7 +7710,6 @@ void Free_FeatureSetUplinkPerCC_v1800_CodebookParameter8TxPUSCH_r18(FeatureSetUp
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800_NonCodebook_8TxPUSCH_r18(Encoder& enc, const FeatureSetUplinkPerCC_v1800_NonCodebook_8TxPUSCH_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberPUSCH_MIMO_Layer_r18), 1, 8);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSRS_Resource_r18), 1, 8);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSimultaneousSRS_r18), 1, 8);
@@ -7845,7 +7754,6 @@ void Free_FeatureSetUplinkPerCC_v1800_NonCodebook_8TxPUSCH_r18(FeatureSetUplinkP
 // --------------------------------------------------------------------------
 ErrorCode Encode_FeatureSetUplinkPerCC_v1800(Encoder& enc, const FeatureSetUplinkPerCC_v1800& value)
 {
-    (void)value;
     enc.WriteBit(value.has_twoPUSCH_MultiDCI_STxMP_TwoTA_r18);
     enc.WriteBit(value.has_pusch_CB_SingleDCI_STx2P_SDM_r18);
     enc.WriteBit(value.has_pusch_NonCB_SingleDCI_STx2P_SDM_r18);
@@ -8013,7 +7921,6 @@ void Free_FeatureSetUplinkPerCC_v1800(FeatureSetUplinkPerCC_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FreqBandList(Encoder& enc, const FreqBandList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 1280u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_FreqBandInformation(enc, value.items[i]);
@@ -8062,7 +7969,6 @@ void Free_FreqBandList(FreqBandList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FreqBandInformationEUTRA(Encoder& enc, const FreqBandInformationEUTRA& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_BandwidthClassDL_EUTRA);
     enc.WriteBit(value.has_ca_BandwidthClassUL_EUTRA);
     enc.WriteConstrainedInteger((std::int64_t)(value.bandEUTRA), 1, 256);
@@ -8165,7 +8071,6 @@ void Free_FreqBandInformationEUTRA(FreqBandInformationEUTRA& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FreqBandInformationNR(Encoder& enc, const FreqBandInformationNR& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxBandwidthRequestedDL);
     enc.WriteBit(value.has_maxBandwidthRequestedUL);
     enc.WriteBit(value.has_maxCarriersRequestedDL);
@@ -8314,7 +8219,6 @@ void Free_FreqBandInformation(FreqBandInformation& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FR2_2_AccessParamsPerBand_r17_ExtGroup1(Encoder& enc, const FR2_2_AccessParamsPerBand_r17_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_modulation64_QAM_PUSCH_FR2_2_r17);
     if (value.has_modulation64_QAM_PUSCH_FR2_2_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.modulation64_QAM_PUSCH_FR2_2_r17), 0, 0);
@@ -8352,7 +8256,6 @@ void Free_FR2_2_AccessParamsPerBand_r17_ExtGroup1(FR2_2_AccessParamsPerBand_r17_
 // --------------------------------------------------------------------------
 ErrorCode Encode_FR2_2_AccessParamsPerBand_r17_EnhancedPDCCH_monitoringSCS_960kHz_r17(Encoder& enc, const FR2_2_AccessParamsPerBand_r17_EnhancedPDCCH_monitoringSCS_960kHz_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pdcch_monitoring4_1_r17);
     enc.WriteBit(value.has_pdcch_monitoring4_2_r17);
     enc.WriteBit(value.has_pdcch_monitoring8_4_r17);
@@ -8412,7 +8315,6 @@ void Free_FR2_2_AccessParamsPerBand_r17_EnhancedPDCCH_monitoringSCS_960kHz_r17(F
 // --------------------------------------------------------------------------
 ErrorCode Encode_FR2_2_AccessParamsPerBand_r17_Support32_DL_HARQ_ProcessPerSCS_r17(Encoder& enc, const FR2_2_AccessParamsPerBand_r17_Support32_DL_HARQ_ProcessPerSCS_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_120kHz_r17);
     enc.WriteBit(value.has_scs_480kHz_r17);
     enc.WriteBit(value.has_scs_960kHz_r17);
@@ -8472,7 +8374,6 @@ void Free_FR2_2_AccessParamsPerBand_r17_Support32_DL_HARQ_ProcessPerSCS_r17(FR2_
 // --------------------------------------------------------------------------
 ErrorCode Encode_FR2_2_AccessParamsPerBand_r17_Support32_UL_HARQ_ProcessPerSCS_r17(Encoder& enc, const FR2_2_AccessParamsPerBand_r17_Support32_UL_HARQ_ProcessPerSCS_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_120kHz_r17);
     enc.WriteBit(value.has_scs_480kHz_r17);
     enc.WriteBit(value.has_scs_960kHz_r17);
@@ -8532,7 +8433,6 @@ void Free_FR2_2_AccessParamsPerBand_r17_Support32_UL_HARQ_ProcessPerSCS_r17(FR2_
 // --------------------------------------------------------------------------
 ErrorCode Encode_FR2_2_AccessParamsPerBand_r17(Encoder& enc, const FR2_2_AccessParamsPerBand_r17& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_dl_FR2_2_SCS_120kHz_r17);
@@ -8847,7 +8747,6 @@ void Free_FR2_2_AccessParamsPerBand_r17(FR2_2_AccessParamsPerBand_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_HighSpeedParameters_r16(Encoder& enc, const HighSpeedParameters_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measurementEnhancement_r16);
     enc.WriteBit(value.has_demodulationEnhancement_r16);
     if (value.has_measurementEnhancement_r16) {
@@ -8958,7 +8857,6 @@ void Free_HighSpeedParameters_v1650(HighSpeedParameters_v1650& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_HighSpeedParameters_v1700(Encoder& enc, const HighSpeedParameters_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measurementEnhancementCA_r17);
     enc.WriteBit(value.has_measurementEnhancementInterFreq_r17);
     if (value.has_measurementEnhancementCA_r17) {
@@ -9007,7 +8905,6 @@ void Free_HighSpeedParameters_v1700(HighSpeedParameters_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IMS_ParametersCommon_ExtGroup1(Encoder& enc, const IMS_ParametersCommon_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_voiceOverSCG_BearerEUTRA_5GC);
     if (value.has_voiceOverSCG_BearerEUTRA_5GC) {
         enc.WriteConstrainedInteger((std::int64_t)(value.voiceOverSCG_BearerEUTRA_5GC), 0, 0);
@@ -9045,7 +8942,6 @@ void Free_IMS_ParametersCommon_ExtGroup1(IMS_ParametersCommon_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IMS_ParametersCommon_ExtGroup2(Encoder& enc, const IMS_ParametersCommon_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_voiceFallbackIndicationEPS_r16);
     if (value.has_voiceFallbackIndicationEPS_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.voiceFallbackIndicationEPS_r16), 0, 0);
@@ -9083,7 +8979,6 @@ void Free_IMS_ParametersCommon_ExtGroup2(IMS_ParametersCommon_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IMS_ParametersCommon(Encoder& enc, const IMS_ParametersCommon& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_voiceOverEUTRA_5GC);
@@ -9187,7 +9082,6 @@ void Free_IMS_ParametersCommon(IMS_ParametersCommon& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IMS_ParametersFRX_Diff(Encoder& enc, const IMS_ParametersFRX_Diff& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_voiceOverNR);
@@ -9232,7 +9126,6 @@ void Free_IMS_ParametersFRX_Diff(IMS_ParametersFRX_Diff& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IMS_Parameters(Encoder& enc, const IMS_Parameters& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_ims_ParametersCommon);
@@ -9290,7 +9183,6 @@ void Free_IMS_Parameters(IMS_Parameters& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IMS_ParametersFR2_2_r17(Encoder& enc, const IMS_ParametersFR2_2_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_voiceOverNR_r17);
@@ -9335,7 +9227,6 @@ void Free_IMS_ParametersFR2_2_r17(IMS_ParametersFR2_2_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IMS_Parameters_v1700(Encoder& enc, const IMS_Parameters_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ims_ParametersFR2_2_r17);
     if (value.has_ims_ParametersFR2_2_r17) {
         Encode_IMS_ParametersFR2_2_r17(enc, value.ims_ParametersFR2_2_r17);
@@ -9374,7 +9265,6 @@ void Free_IMS_Parameters_v1700(IMS_Parameters_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_UTRA_FDD_Parameters_r16(Encoder& enc, const UTRA_FDD_Parameters_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
 enc.WriteConstrainedLength(value.supportedBandListUTRA_FDD_r16_count, 0u, 0u);
@@ -9435,7 +9325,6 @@ void Free_UTRA_FDD_Parameters_r16(UTRA_FDD_Parameters_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterRAT_Parameters_ExtGroup1(Encoder& enc, const InterRAT_Parameters_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_utra_FDD_r16);
     if (value.has_utra_FDD_r16) {
         Encode_UTRA_FDD_Parameters_r16(enc, value.utra_FDD_r16);
@@ -9474,7 +9363,6 @@ void Free_InterRAT_Parameters_ExtGroup1(InterRAT_Parameters_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_ParametersCommon_ExtGroup1(Encoder& enc, const EUTRA_ParametersCommon_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ne_DC);
     if (value.has_ne_DC) {
         enc.WriteConstrainedInteger((std::int64_t)(value.ne_DC), 0, 0);
@@ -9512,7 +9400,6 @@ void Free_EUTRA_ParametersCommon_ExtGroup1(EUTRA_ParametersCommon_ExtGroup1& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_ParametersCommon_ExtGroup2(Encoder& enc, const EUTRA_ParametersCommon_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_nr_HO_ToEN_DC_r16);
     if (value.has_nr_HO_ToEN_DC_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.nr_HO_ToEN_DC_r16), 0, 0);
@@ -9550,7 +9437,6 @@ void Free_EUTRA_ParametersCommon_ExtGroup2(EUTRA_ParametersCommon_ExtGroup2& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_ParametersCommon(Encoder& enc, const EUTRA_ParametersCommon& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_mfbi_EUTRA);
@@ -9695,7 +9581,6 @@ void Free_EUTRA_ParametersCommon(EUTRA_ParametersCommon& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_ParametersXDD_Diff(Encoder& enc, const EUTRA_ParametersXDD_Diff& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_rsrqMeasWidebandEUTRA);
@@ -9740,7 +9625,6 @@ void Free_EUTRA_ParametersXDD_Diff(EUTRA_ParametersXDD_Diff& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_Parameters(Encoder& enc, const EUTRA_Parameters& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_eutra_ParametersCommon);
@@ -9825,7 +9709,6 @@ void Free_EUTRA_Parameters(EUTRA_Parameters& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_InterRAT_Parameters(Encoder& enc, const InterRAT_Parameters& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_eutra);

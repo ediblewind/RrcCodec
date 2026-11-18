@@ -24,7 +24,6 @@ namespace v1810 {
 // --------------------------------------------------------------------------
 ErrorCode Encode_OnDemandSIB_Request_r16(Encoder& enc, const OnDemandSIB_Request_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.onDemandSIB_RequestProhibitTimer_r16), 0, 7);
     return enc.Error();
 }
@@ -184,7 +183,6 @@ void Free_SetupRelease_SchedulingRequestId(SetupRelease_SchedulingRequestId& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_SCCH_CarrierSetConfigList_r18(Encoder& enc, const SL_SCCH_CarrierSetConfigList_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 96u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_SL_SCCH_CarrierSetConfig_r18(enc, value.items[i]);
@@ -296,7 +294,6 @@ void Free_SetupRelease_SL_SCCH_CarrierSetConfigList_r18(SetupRelease_SL_SCCH_Car
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_PHY_MAC_RLC_Config_v1700_ExtGroup1(Encoder& enc, const SL_PHY_MAC_RLC_Config_v1700_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_RLC_BearerToAddModListSizeExt_v1800);
     enc.WriteBit(value.has_sl_RLC_BearerToReleaseListSizeExt_v1800);
     enc.WriteBit(value.has_sl_FreqInfoToAddModListExt_v1800);
@@ -583,7 +580,6 @@ void Free_SL_DRX_GC_BC_QoS_r17_Sl_DRX_GC_BC_OnDurationTimer_r17(SL_DRX_GC_BC_QoS
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_DRX_GC_BC_QoS_r17(Encoder& enc, const SL_DRX_GC_BC_QoS_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_DRX_GC_BC_MappedQoS_FlowList_r17);
@@ -667,7 +663,6 @@ void Free_SL_DRX_GC_BC_QoS_r17(SL_DRX_GC_BC_QoS_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_DRX_GC_Generic_r17(Encoder& enc, const SL_DRX_GC_Generic_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_DRX_GC_HARQ_RTT_Timer1_r17);
     enc.WriteBit(value.has_sl_DRX_GC_HARQ_RTT_Timer2_r17);
     if (value.has_sl_DRX_GC_HARQ_RTT_Timer1_r17) {
@@ -726,7 +721,6 @@ void Free_SL_DRX_GC_Generic_r17(SL_DRX_GC_Generic_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_DRX_ConfigGC_BC_r17(Encoder& enc, const SL_DRX_ConfigGC_BC_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_DRX_GC_BC_PerQoS_List_r17);
@@ -817,7 +811,6 @@ void Free_SL_DRX_ConfigGC_BC_r17(SL_DRX_ConfigGC_BC_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_DRX_Config_r17(Encoder& enc, const SL_DRX_Config_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_DRX_ConfigGC_BC_r17);
@@ -930,7 +923,6 @@ void Free_SL_DRX_Config_r17(SL_DRX_Config_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_PHY_MAC_RLC_Config_v1700(Encoder& enc, const SL_PHY_MAC_RLC_Config_v1700& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_DRX_Config_r17);
@@ -1142,7 +1134,6 @@ void Free_SetupRelease_SL_PHY_MAC_RLC_Config_v1700(SetupRelease_SL_PHY_MAC_RLC_C
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_RelayUE_Config_r17(Encoder& enc, const SL_RelayUE_Config_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_threshHighRelay_r17);
     enc.WriteBit(value.has_threshLowRelay_r17);
     enc.WriteBit(value.has_hystMaxRelay_r17);
@@ -1284,7 +1275,6 @@ void Free_SetupRelease_SL_RelayUE_Config_r17(SetupRelease_SL_RelayUE_Config_r17&
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_ReselectionConfig_r17(Encoder& enc, const SL_ReselectionConfig_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_RSRP_Thresh_r17);
     enc.WriteBit(value.has_sl_FilterCoefficientRSRP_r17);
     enc.WriteBit(value.has_sl_HystMin_r17);
@@ -1372,7 +1362,6 @@ void Free_SL_ReselectionConfig_r17(SL_ReselectionConfig_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_RemoteUE_Config_r17(Encoder& enc, const SL_RemoteUE_Config_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_threshHighRemote_r17);
     enc.WriteBit(value.has_hystMaxRemote_r17);
     enc.WriteBit(value.has_sl_ReselectionConfig_r17);
@@ -1500,7 +1489,6 @@ void Free_SetupRelease_SL_RemoteUE_Config_r17(SetupRelease_SL_RemoteUE_Config_r1
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_DiscConfig_r17(Encoder& enc, const SL_DiscConfig_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_RelayUE_Config_r17);
     enc.WriteBit(value.has_sl_RemoteUE_Config_r17);
     if (value.has_sl_RelayUE_Config_r17) {
@@ -1614,7 +1602,6 @@ void Free_SetupRelease_SL_DiscConfig_r17(SetupRelease_SL_DiscConfig_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_ConfigDedicatedNR_r16_ExtGroup1(Encoder& enc, const SL_ConfigDedicatedNR_r16_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_PHY_MAC_RLC_Config_v1700);
     enc.WriteBit(value.has_sl_DiscConfig_r17);
     if (value.has_sl_PHY_MAC_RLC_Config_v1700) {
@@ -1665,7 +1652,6 @@ void Free_SL_ConfigDedicatedNR_r16_ExtGroup1(SL_ConfigDedicatedNR_r16_ExtGroup1&
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_RelayUE_ConfigU2U_r18(Encoder& enc, const SL_RelayUE_ConfigU2U_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_RSRP_Thresh_DiscConfig_r18);
     enc.WriteBit(value.has_sd_RSRP_ThreshDiscConfig_r18);
     enc.WriteBit(value.has_sd_hystMaxRelay_r18);
@@ -1794,7 +1780,6 @@ void Free_SetupRelease_SL_RelayUE_ConfigU2U_r18(SetupRelease_SL_RelayUE_ConfigU2
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_RemoteUE_ConfigU2U_r18(Encoder& enc, const SL_RemoteUE_ConfigU2U_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_RSRP_ThreshU2U_r18);
     enc.WriteBit(value.has_sl_FilterCoefficientU2U_r18);
     enc.WriteBit(value.has_sl_HystMinU2U_r18);
@@ -2006,7 +1991,6 @@ void Free_SetupRelease_SL_RemoteUE_ConfigU2U_r18(SetupRelease_SL_RemoteUE_Config
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_DiscConfig_v1800(Encoder& enc, const SL_DiscConfig_v1800& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_RelayUE_ConfigU2U_r18);
     enc.WriteBit(value.has_sl_RemoteUE_ConfigU2U_r18);
     if (value.has_sl_RelayUE_ConfigU2U_r18) {
@@ -2057,7 +2041,6 @@ void Free_SL_DiscConfig_v1800(SL_DiscConfig_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_ConfigDedicatedNR_r16_ExtGroup2(Encoder& enc, const SL_ConfigDedicatedNR_r16_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_DiscConfig_v1800);
     if (value.has_sl_DiscConfig_v1800) {
         Encode_SL_DiscConfig_v1800(enc, value.sl_DiscConfig_v1800);
@@ -2096,7 +2079,6 @@ void Free_SL_ConfigDedicatedNR_r16_ExtGroup2(SL_ConfigDedicatedNR_r16_ExtGroup2&
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_ScheduledConfig_r16_ExtGroup1(Encoder& enc, const SL_ScheduledConfig_r16_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_DCI_ToSL_Trans_r16);
     if (value.has_sl_DCI_ToSL_Trans_r16) {
 enc.WriteConstrainedLength(value.sl_DCI_ToSL_Trans_r16_count, 0u, 0u);
@@ -2157,7 +2139,6 @@ void Free_SL_ScheduledConfig_r16_ExtGroup1(SL_ScheduledConfig_r16_ExtGroup1& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_ConfiguredGrantConfigDedicated_SL_PRS_RP_List_r18(Encoder& enc, const SL_ConfiguredGrantConfigDedicated_SL_PRS_RP_List_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_ConfiguredGrantConfigDedicated_SL_PRS_RPToReleaseList_r18);
     enc.WriteBit(value.has_sl_ConfiguredGrantConfigDedicated_SL_PRS_RPToAddModList_r18);
     if (value.has_sl_ConfiguredGrantConfigDedicated_SL_PRS_RPToReleaseList_r18) {
@@ -2251,7 +2232,6 @@ void Free_SL_ConfiguredGrantConfigDedicated_SL_PRS_RP_List_r18(SL_ConfiguredGran
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_ScheduledConfig_r16_ExtGroup2(Encoder& enc, const SL_ScheduledConfig_r16_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_ConfiguredGrantConfigDedicated_SL_PRS_RP_List_r18);
     if (value.has_sl_ConfiguredGrantConfigDedicated_SL_PRS_RP_List_r18) {
         Encode_SL_ConfiguredGrantConfigDedicated_SL_PRS_RP_List_r18(enc, value.sl_ConfiguredGrantConfigDedicated_SL_PRS_RP_List_r18);
@@ -2290,7 +2270,6 @@ void Free_SL_ScheduledConfig_r16_ExtGroup2(SL_ScheduledConfig_r16_ExtGroup2& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_BSR_Config(Encoder& enc, const BSR_Config& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_logicalChannelSR_DelayTimer);
@@ -2349,7 +2328,6 @@ void Free_BSR_Config(BSR_Config& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MAC_MainConfigSL_r16(Encoder& enc, const MAC_MainConfigSL_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_BSR_Config_r16);
@@ -2421,7 +2399,6 @@ void Free_MAC_MainConfigSL_r16(MAC_MainConfigSL_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_ConfiguredGrantConfigList_r16(Encoder& enc, const SL_ConfiguredGrantConfigList_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_ConfiguredGrantConfigToReleaseList_r16);
     enc.WriteBit(value.has_sl_ConfiguredGrantConfigToAddModList_r16);
     if (value.has_sl_ConfiguredGrantConfigToReleaseList_r16) {
@@ -2515,7 +2492,6 @@ void Free_SL_ConfiguredGrantConfigList_r16(SL_ConfiguredGrantConfigList_r16& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_ScheduledConfig_r16(Encoder& enc, const SL_ScheduledConfig_r16& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_mac_MainConfigSL_r16);
@@ -2748,7 +2724,6 @@ void Free_SetupRelease_SL_ScheduledConfig_r16(SetupRelease_SL_ScheduledConfig_r1
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_CBR_CommonTxConfigList_r16(Encoder& enc, const SL_CBR_CommonTxConfigList_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_CBR_RangeConfigList_r16);
     enc.WriteBit(value.has_sl_CBR_PSSCH_TxConfigList_r16);
     if (value.has_sl_CBR_RangeConfigList_r16) {
@@ -2841,7 +2816,6 @@ void Free_SL_CBR_CommonTxConfigList_r16(SL_CBR_CommonTxConfigList_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_PSSCH_TxConfigList_r16(Encoder& enc, const SL_PSSCH_TxConfigList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_SL_PSSCH_TxConfig_r16(enc, value.items[i]);
@@ -2890,7 +2864,6 @@ void Free_SL_PSSCH_TxConfigList_r16(SL_PSSCH_TxConfigList_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_CBR_CommonTxDedicatedSL_PRS_RP_List_r18(Encoder& enc, const SL_CBR_CommonTxDedicatedSL_PRS_RP_List_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_CBR_RangeDedicatedSL_PRS_RP_List_r18);
     enc.WriteBit(value.has_sl_CBR_SL_PRS_TxConfigList_r18);
     if (value.has_sl_CBR_RangeDedicatedSL_PRS_RP_List_r18) {
@@ -2983,7 +2956,6 @@ void Free_SL_CBR_CommonTxDedicatedSL_PRS_RP_List_r18(SL_CBR_CommonTxDedicatedSL_
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_UE_SelectedConfig_r16_ExtGroup1(Encoder& enc, const SL_UE_SelectedConfig_r16_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_CBR_CommonTxDedicatedSL_PRS_RP_List_r18);
     if (value.has_sl_CBR_CommonTxDedicatedSL_PRS_RP_List_r18) {
         Encode_SL_CBR_CommonTxDedicatedSL_PRS_RP_List_r18(enc, value.sl_CBR_CommonTxDedicatedSL_PRS_RP_List_r18);
@@ -3022,7 +2994,6 @@ void Free_SL_UE_SelectedConfig_r16_ExtGroup1(SL_UE_SelectedConfig_r16_ExtGroup1&
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_UE_SelectedConfig_r16(Encoder& enc, const SL_UE_SelectedConfig_r16& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_PSSCH_TxConfigList_r16);
@@ -3231,7 +3202,6 @@ void Free_SetupRelease_SL_UE_SelectedConfig_r16(SetupRelease_SL_UE_SelectedConfi
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_PHY_MAC_RLC_Config_r16(Encoder& enc, const SL_PHY_MAC_RLC_Config_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_ScheduledConfig_r16);
     enc.WriteBit(value.has_sl_UE_SelectedConfig_r16);
     enc.WriteBit(value.has_sl_FreqInfoToReleaseList_r16);
@@ -3478,7 +3448,6 @@ void Free_SL_PHY_MAC_RLC_Config_r16(SL_PHY_MAC_RLC_Config_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_ConfigDedicatedNR_r16(Encoder& enc, const SL_ConfigDedicatedNR_r16& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_PHY_MAC_RLC_Config_r16);
@@ -3793,7 +3762,6 @@ void Free_SetupRelease_SL_ConfigDedicatedNR_r16(SetupRelease_SL_ConfigDedicatedN
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_ConfigDedicatedEUTRA_Info_r16(Encoder& enc, const SL_ConfigDedicatedEUTRA_Info_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_ConfigDedicatedEUTRA_r16);
     enc.WriteBit(value.has_sl_TimeOffsetEUTRA_List_r16);
     if (value.has_sl_ConfigDedicatedEUTRA_r16) {
@@ -3935,7 +3903,6 @@ void Free_SetupRelease_SL_ConfigDedicatedEUTRA_Info_r16(SetupRelease_SL_ConfigDe
 // --------------------------------------------------------------------------
 ErrorCode Encode_RRCReconfiguration_v1610_IEs(Encoder& enc, const RRCReconfiguration_v1610_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_otherConfig_v1610);
     enc.WriteBit(value.has_bap_Config_r16);
     enc.WriteBit(value.has_iab_IP_AddressConfigurationList_r16);
@@ -4244,7 +4211,6 @@ void Free_MRDC_SecondaryCellGroupConfig_Mrdc_SecondaryCellGroup(MRDC_SecondaryCe
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_SecondaryCellGroupConfig(Encoder& enc, const MRDC_SecondaryCellGroupConfig& value)
 {
-    (void)value;
     enc.WriteBit(value.has_mrdc_ReleaseAndAdd);
     if (value.has_mrdc_ReleaseAndAdd) {
         enc.WriteConstrainedInteger((std::int64_t)(value.mrdc_ReleaseAndAdd), 0, 0);
@@ -4350,7 +4316,6 @@ void Free_SetupRelease_MRDC_SecondaryCellGroupConfig(SetupRelease_MRDC_Secondary
 // --------------------------------------------------------------------------
 ErrorCode Encode_RRCReconfiguration_v1560_IEs(Encoder& enc, const RRCReconfiguration_v1560_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_mrdc_SecondaryCellGroupConfig);
     enc.WriteBit(value.radioBearerConfig2 != nullptr);
     enc.WriteBit(value.has_sk_Counter);
@@ -4456,7 +4421,6 @@ void Free_RRCReconfiguration_v1560_IEs(RRCReconfiguration_v1560_IEs& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_OverheatingAssistanceConfig(Encoder& enc, const OverheatingAssistanceConfig& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.overheatingIndicationProhibitTimer), 0, 15);
     return enc.Error();
 }
@@ -4552,7 +4516,6 @@ void Free_SetupRelease_OverheatingAssistanceConfig(SetupRelease_OverheatingAssis
 // --------------------------------------------------------------------------
 ErrorCode Encode_OtherConfig_v1540(Encoder& enc, const OtherConfig_v1540& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_overheatingAssistanceConfig);
@@ -4598,7 +4561,6 @@ void Free_OtherConfig_v1540(OtherConfig_v1540& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_RRCReconfiguration_v1540_IEs(Encoder& enc, const RRCReconfiguration_v1540_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_otherConfig_v1540);
     enc.WriteBit(value.has_nonCriticalExtension);
     if (value.has_otherConfig_v1540) {
@@ -4649,7 +4611,6 @@ void Free_RRCReconfiguration_v1540_IEs(RRCReconfiguration_v1540_IEs& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MasterKeyUpdate(Encoder& enc, const MasterKeyUpdate& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_nas_Container);
@@ -4713,7 +4674,6 @@ void Free_MasterKeyUpdate(MasterKeyUpdate& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_OtherConfig_DelayBudgetReportingConfig_Setup(Encoder& enc, const OtherConfig_DelayBudgetReportingConfig_Setup& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.delayBudgetReportingProhibitTimer), 0, 7);
     return enc.Error();
 }
@@ -4809,7 +4769,6 @@ void Free_OtherConfig_DelayBudgetReportingConfig(OtherConfig_DelayBudgetReportin
 // --------------------------------------------------------------------------
 ErrorCode Encode_OtherConfig(Encoder& enc, const OtherConfig& value)
 {
-    (void)value;
     enc.WriteBit(value.has_delayBudgetReportingConfig);
     if (value.has_delayBudgetReportingConfig) {
         Encode_OtherConfig_DelayBudgetReportingConfig(enc, value.delayBudgetReportingConfig);
@@ -4848,7 +4807,6 @@ void Free_OtherConfig(OtherConfig& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_RRCReconfiguration_v1530_IEs(Encoder& enc, const RRCReconfiguration_v1530_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.masterCellGroup != nullptr);
     enc.WriteBit(value.has_fullConfig);
     enc.WriteBit(value.has_dedicatedNAS_MessageList);
@@ -5197,7 +5155,6 @@ void Free_MeasWindowConfig_r18_WindowOffsetPeriodicity(MeasWindowConfig_r18_Wind
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasWindowConfig_r18(Encoder& enc, const MeasWindowConfig_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_MeasWindowConfig_r18_WindowOffsetPeriodicity(enc, value.windowOffsetPeriodicity);
@@ -5305,7 +5262,6 @@ void Free_SetupRelease_MeasWindowConfig_r18(SetupRelease_MeasWindowConfig_r18& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasConfig_ExtGroup2(Encoder& enc, const MeasConfig_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_effectiveMeasWindowConfig_r18);
     if (value.has_effectiveMeasWindowConfig_r18) {
         Encode_SetupRelease_MeasWindowConfig_r18(enc, value.effectiveMeasWindowConfig_r18);
@@ -5344,7 +5300,6 @@ void Free_MeasConfig_ExtGroup2(MeasConfig_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasConfig_ExtGroup1(Encoder& enc, const MeasConfig_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_interFrequencyConfig_NoGap_r16);
     if (value.has_interFrequencyConfig_NoGap_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.interFrequencyConfig_NoGap_r16), 0, 0);
@@ -5382,7 +5337,6 @@ void Free_MeasConfig_ExtGroup1(MeasConfig_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasObjectToRemoveList(Encoder& enc, const MeasObjectToRemoveList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 64u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 1, 64);
@@ -5432,7 +5386,6 @@ void Free_MeasObjectToRemoveList(MeasObjectToRemoveList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasIdToRemoveList(Encoder& enc, const MeasIdToRemoveList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 64u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 1, 64);
@@ -5482,7 +5435,6 @@ void Free_MeasIdToRemoveList(MeasIdToRemoveList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ReportConfigToRemoveList(Encoder& enc, const ReportConfigToRemoveList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 64u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 1, 64);
@@ -5532,7 +5484,6 @@ void Free_ReportConfigToRemoveList(ReportConfigToRemoveList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PosMeasGapPreConfigToAddModList_r17(Encoder& enc, const PosMeasGapPreConfigToAddModList_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_PosGapConfig_r17(enc, value.items[i]);
@@ -5581,7 +5532,6 @@ void Free_PosMeasGapPreConfigToAddModList_r17(PosMeasGapPreConfigToAddModList_r1
 // --------------------------------------------------------------------------
 ErrorCode Encode_PosMeasGapPreConfigToReleaseList_r17(Encoder& enc, const PosMeasGapPreConfigToReleaseList_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 1, 16);
@@ -5631,7 +5581,6 @@ void Free_PosMeasGapPreConfigToReleaseList_r17(PosMeasGapPreConfigToReleaseList_
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasGapConfig_ExtGroup2(Encoder& enc, const MeasGapConfig_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_gapToAddModList_r17);
     enc.WriteBit(value.has_gapToReleaseList_r17);
     enc.WriteBit(value.has_posMeasGapPreConfigToAddModList_r17);
@@ -5749,7 +5698,6 @@ void Free_MeasGapConfig_ExtGroup2(MeasGapConfig_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_GapConfig_ExtGroup1(Encoder& enc, const GapConfig_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_refServCellIndicator);
     if (value.has_refServCellIndicator) {
         enc.WriteConstrainedInteger((std::int64_t)(value.refServCellIndicator), 0, 2);
@@ -5789,7 +5737,6 @@ void Free_GapConfig_ExtGroup1(GapConfig_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_GapConfig_ExtGroup2(Encoder& enc, const GapConfig_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_refFR2ServCellAsyncCA_r16);
     enc.WriteBit(value.has_mgl_r16);
     if (value.has_refFR2ServCellAsyncCA_r16) {
@@ -5842,7 +5789,6 @@ void Free_GapConfig_ExtGroup2(GapConfig_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_GapConfig(Encoder& enc, const GapConfig& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.gapOffset), 0, 159);
@@ -6022,7 +5968,6 @@ void Free_SetupRelease_GapConfig(SetupRelease_GapConfig& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasGapConfig_ExtGroup1(Encoder& enc, const MeasGapConfig_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_gapFR1);
     enc.WriteBit(value.has_gapUE);
     if (value.has_gapFR1) {
@@ -6073,7 +6018,6 @@ void Free_MeasGapConfig_ExtGroup1(MeasGapConfig_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasGapConfig(Encoder& enc, const MeasGapConfig& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_gapFR2);
@@ -6242,7 +6186,6 @@ void Free_SetupRelease_MeasGapSharingScheme(SetupRelease_MeasGapSharingScheme& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasGapSharingConfig_ExtGroup1(Encoder& enc, const MeasGapSharingConfig_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_gapSharingFR1);
     enc.WriteBit(value.has_gapSharingUE);
     if (value.has_gapSharingFR1) {
@@ -6293,7 +6236,6 @@ void Free_MeasGapSharingConfig_ExtGroup1(MeasGapSharingConfig_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasGapSharingConfig(Encoder& enc, const MeasGapSharingConfig& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_gapSharingFR2);
@@ -6375,7 +6317,6 @@ void Free_MeasGapSharingConfig(MeasGapSharingConfig& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasIdToAddModList(Encoder& enc, const MeasIdToAddModList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 64u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MeasIdToAddMod(enc, value.items[i]);
@@ -6424,7 +6365,6 @@ void Free_MeasIdToAddModList(MeasIdToAddModList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasObjectToAddModList(Encoder& enc, const MeasObjectToAddModList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 64u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MeasObjectToAddMod(enc, value.items[i]);
@@ -6473,7 +6413,6 @@ void Free_MeasObjectToAddModList(MeasObjectToAddModList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FilterConfig(Encoder& enc, const FilterConfig& value)
 {
-    (void)value;
     enc.WriteBit(value.filterCoefficientRSRP != FilterCoefficient_fc4);
     enc.WriteBit(value.filterCoefficientRSRQ != FilterCoefficient_fc4);
     enc.WriteBit(value.filterCoefficientRS_SINR != FilterCoefficient_fc4);
@@ -6605,7 +6544,6 @@ void Free_FilterConfig(FilterConfig& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_QuantityConfig_ExtGroup1(Encoder& enc, const QuantityConfig_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_quantityConfigEUTRA);
     if (value.has_quantityConfigEUTRA) {
         Encode_FilterConfig(enc, value.quantityConfigEUTRA);
@@ -6644,7 +6582,6 @@ void Free_QuantityConfig_ExtGroup1(QuantityConfig_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FilterConfigCLI_r16(Encoder& enc, const FilterConfigCLI_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.filterCoefficientSRS_RSRP_r16 != FilterCoefficient_fc4);
     enc.WriteBit(value.filterCoefficientCLI_RSSI_r16 != FilterCoefficient_fc4);
     if (value.filterCoefficientSRS_RSRP_r16 != FilterCoefficient_fc4) {
@@ -6741,7 +6678,6 @@ void Free_FilterConfigCLI_r16(FilterConfigCLI_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_QuantityConfigUTRA_FDD_r16(Encoder& enc, const QuantityConfigUTRA_FDD_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.filterCoefficientRSCP_r16 != FilterCoefficient_fc4);
     enc.WriteBit(value.filterCoefficientEcNO_r16 != FilterCoefficient_fc4);
     if (value.filterCoefficientRSCP_r16 != FilterCoefficient_fc4) {
@@ -6838,7 +6774,6 @@ void Free_QuantityConfigUTRA_FDD_r16(QuantityConfigUTRA_FDD_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_QuantityConfig_ExtGroup2(Encoder& enc, const QuantityConfig_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_quantityConfigUTRA_FDD_r16);
     enc.WriteBit(value.has_quantityConfigCLI_r16);
     if (value.has_quantityConfigUTRA_FDD_r16) {
@@ -6889,7 +6824,6 @@ void Free_QuantityConfig_ExtGroup2(QuantityConfig_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_QuantityConfig(Encoder& enc, const QuantityConfig& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_quantityConfigNR_List);
@@ -7015,7 +6949,6 @@ void Free_QuantityConfig(QuantityConfig& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ReportConfigToAddModList(Encoder& enc, const ReportConfigToAddModList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 64u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_ReportConfigToAddMod(enc, value.items[i]);
@@ -7130,7 +7063,6 @@ void Free_MeasConfig_S_MeasureConfig(MeasConfig_S_MeasureConfig& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasConfig(Encoder& enc, const MeasConfig& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_measObjectToRemoveList);
@@ -7343,7 +7275,6 @@ void Free_MeasConfig(MeasConfig& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCP_Config_ExtGroup1(Encoder& enc, const PDCP_Config_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_cipheringDisabled);
     if (value.has_cipheringDisabled) {
         enc.WriteConstrainedInteger((std::int64_t)(value.cipheringDisabled), 0, 0);
@@ -7445,7 +7376,6 @@ void Free_SetupRelease_DiscardTimerExt_r16(SetupRelease_DiscardTimerExt_r16& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCP_Config_ExtGroup2_MoreThanTwoRLC_DRB_r16(Encoder& enc, const PDCP_Config_ExtGroup2_MoreThanTwoRLC_DRB_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_splitSecondaryPath_r16);
     enc.WriteBit(value.has_duplicationState_r16);
     if (value.has_splitSecondaryPath_r16) {
@@ -7519,7 +7449,6 @@ void Free_PDCP_Config_ExtGroup2_MoreThanTwoRLC_DRB_r16(PDCP_Config_ExtGroup2_Mor
 // --------------------------------------------------------------------------
 ErrorCode Encode_EthernetHeaderCompression_r16_Ehc_Common_r16(Encoder& enc, const EthernetHeaderCompression_r16_Ehc_Common_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.ehc_CID_Length_r16), 0, 1);
@@ -7559,7 +7488,6 @@ void Free_EthernetHeaderCompression_r16_Ehc_Common_r16(EthernetHeaderCompression
 // --------------------------------------------------------------------------
 ErrorCode Encode_EthernetHeaderCompression_r16_Ehc_Downlink_r16(Encoder& enc, const EthernetHeaderCompression_r16_Ehc_Downlink_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_drb_ContinueEHC_DL_r16);
@@ -7604,7 +7532,6 @@ void Free_EthernetHeaderCompression_r16_Ehc_Downlink_r16(EthernetHeaderCompressi
 // --------------------------------------------------------------------------
 ErrorCode Encode_EthernetHeaderCompression_r16_Ehc_Uplink_r16(Encoder& enc, const EthernetHeaderCompression_r16_Ehc_Uplink_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_drb_ContinueEHC_UL_r16);
@@ -7655,7 +7582,6 @@ void Free_EthernetHeaderCompression_r16_Ehc_Uplink_r16(EthernetHeaderCompression
 // --------------------------------------------------------------------------
 ErrorCode Encode_EthernetHeaderCompression_r16(Encoder& enc, const EthernetHeaderCompression_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ehc_Downlink_r16);
     enc.WriteBit(value.has_ehc_Uplink_r16);
     Encode_EthernetHeaderCompression_r16_Ehc_Common_r16(enc, value.ehc_Common_r16);
@@ -7774,7 +7700,6 @@ void Free_SetupRelease_EthernetHeaderCompression_r16(SetupRelease_EthernetHeader
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCP_Config_ExtGroup2(Encoder& enc, const PDCP_Config_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_discardTimerExt_r16);
     enc.WriteBit(value.has_moreThanTwoRLC_DRB_r16);
     enc.WriteBit(value.has_ethernetHeaderCompression_r16);
@@ -7837,7 +7762,6 @@ void Free_PDCP_Config_ExtGroup2(PDCP_Config_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_UplinkDataCompression_r17_NewSetup(Encoder& enc, const UplinkDataCompression_r17_NewSetup& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dictionary_r17);
     enc.WriteConstrainedInteger((std::int64_t)(value.bufferSize_r17), 0, 3);
     if (value.has_dictionary_r17) {
@@ -8073,7 +7997,6 @@ void Free_SetupRelease_DiscardTimerExt2_r17(SetupRelease_DiscardTimerExt2_r17& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCP_Config_ExtGroup3(Encoder& enc, const PDCP_Config_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_survivalTimeStateSupport_r17);
     enc.WriteBit(value.has_uplinkDataCompression_r17);
     enc.WriteBit(value.has_discardTimerExt2_r17);
@@ -8218,7 +8141,6 @@ void Free_SetupRelease_DiscardTimerForLowImportance_r18(SetupRelease_DiscardTime
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCP_Config_ExtGroup4(Encoder& enc, const PDCP_Config_ExtGroup4& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pdu_SetDiscard_r18);
     enc.WriteBit(value.has_discardTimerForLowImportance_r18);
     enc.WriteBit(value.has_primaryPathOnIndirectPath_r18);
@@ -8279,7 +8201,6 @@ void Free_PDCP_Config_ExtGroup4(PDCP_Config_ExtGroup4& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCP_Config_Drb_HeaderCompression_Rohc_Profiles(Encoder& enc, const PDCP_Config_Drb_HeaderCompression_Rohc_Profiles& value)
 {
-    (void)value;
     enc.WriteBool(value.profile0x0001);
     enc.WriteBool(value.profile0x0002);
     enc.WriteBool(value.profile0x0003);
@@ -8360,7 +8281,6 @@ void Free_PDCP_Config_Drb_HeaderCompression_Rohc_Profiles(PDCP_Config_Drb_Header
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCP_Config_Drb_HeaderCompression_Rohc(Encoder& enc, const PDCP_Config_Drb_HeaderCompression_Rohc& value)
 {
-    (void)value;
     enc.WriteBit(value.maxCID != 15);
     enc.WriteBit(value.has_drb_ContinueROHC);
     if (value.maxCID != 15) {
@@ -8416,7 +8336,6 @@ void Free_PDCP_Config_Drb_HeaderCompression_Rohc(PDCP_Config_Drb_HeaderCompressi
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCP_Config_Drb_HeaderCompression_UplinkOnlyROHC_Profiles(Encoder& enc, const PDCP_Config_Drb_HeaderCompression_UplinkOnlyROHC_Profiles& value)
 {
-    (void)value;
     enc.WriteBool(value.profile0x0006);
     return enc.Error();
 }
@@ -8449,7 +8368,6 @@ void Free_PDCP_Config_Drb_HeaderCompression_UplinkOnlyROHC_Profiles(PDCP_Config_
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCP_Config_Drb_HeaderCompression_UplinkOnlyROHC(Encoder& enc, const PDCP_Config_Drb_HeaderCompression_UplinkOnlyROHC& value)
 {
-    (void)value;
     enc.WriteBit(value.maxCID != 15);
     enc.WriteBit(value.has_drb_ContinueROHC);
     if (value.maxCID != 15) {
@@ -8622,7 +8540,6 @@ void Free_PDCP_Config_Drb_HeaderCompression(PDCP_Config_Drb_HeaderCompression& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCP_Config_Drb(Encoder& enc, const PDCP_Config_Drb& value)
 {
-    (void)value;
     enc.WriteBit(value.has_discardTimer);
     enc.WriteBit(value.has_pdcp_SN_SizeUL);
     enc.WriteBit(value.has_pdcp_SN_SizeDL);
@@ -8726,7 +8643,6 @@ void Free_PDCP_Config_Drb(PDCP_Config_Drb& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCP_Config_MoreThanOneRLC_PrimaryPath(Encoder& enc, const PDCP_Config_MoreThanOneRLC_PrimaryPath& value)
 {
-    (void)value;
     enc.WriteBit(value.has_cellGroup);
     enc.WriteBit(value.has_logicalChannel);
     if (value.has_cellGroup) {
@@ -8779,7 +8695,6 @@ void Free_PDCP_Config_MoreThanOneRLC_PrimaryPath(PDCP_Config_MoreThanOneRLC_Prim
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCP_Config_MoreThanOneRLC(Encoder& enc, const PDCP_Config_MoreThanOneRLC& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ul_DataSplitThreshold);
     enc.WriteBit(value.has_pdcp_Duplication);
     Encode_PDCP_Config_MoreThanOneRLC_PrimaryPath(enc, value.primaryPath);
@@ -8837,7 +8752,6 @@ void Free_PDCP_Config_MoreThanOneRLC(PDCP_Config_MoreThanOneRLC& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCP_Config(Encoder& enc, const PDCP_Config& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3 || value.has_extGroup4;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_drb);
@@ -9013,7 +8927,6 @@ void Free_PDCP_Config(PDCP_Config& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SRB_ToAddMod_ExtGroup1(Encoder& enc, const SRB_ToAddMod_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_srb_Identity_v1700);
     if (value.has_srb_Identity_v1700) {
         enc.WriteConstrainedInteger((std::int64_t)(value.srb_Identity_v1700), 4, 4);
@@ -9053,7 +8966,6 @@ void Free_SRB_ToAddMod_ExtGroup1(SRB_ToAddMod_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SRB_ToAddMod_ExtGroup2(Encoder& enc, const SRB_ToAddMod_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_srb_Identity_v1800);
     enc.WriteBit(value.has_n3c_BearerAssociated_r18);
     if (value.has_srb_Identity_v1800) {
@@ -9104,7 +9016,6 @@ void Free_SRB_ToAddMod_ExtGroup2(SRB_ToAddMod_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SRB_ToAddMod(Encoder& enc, const SRB_ToAddMod& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_reestablishPDCP);
@@ -9237,7 +9148,6 @@ void Free_SRB_ToAddMod(SRB_ToAddMod& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRB_ToAddModList_r17(Encoder& enc, const MRB_ToAddModList_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 32u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MRB_ToAddMod_r17(enc, value.items[i]);

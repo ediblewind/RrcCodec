@@ -24,7 +24,6 @@ namespace v1810 {
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1650(Encoder& enc, const BandCombination_v1650& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNRDC_v1650);
     if (value.has_ca_ParametersNRDC_v1650) {
         Encode_CA_ParametersNRDC_v1650(enc, value.ca_ParametersNRDC_v1650);
@@ -63,7 +62,6 @@ void Free_BandCombination_v1650(BandCombination_v1650& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1680(Encoder& enc, const BandCombination_v1680& value)
 {
-    (void)value;
     enc.WriteBit(value.has_intrabandConcurrentOperationPowerClass_r16);
     if (value.has_intrabandConcurrentOperationPowerClass_r16) {
 enc.WriteConstrainedLength(value.intrabandConcurrentOperationPowerClass_r16_count, 0u, 0u);
@@ -124,7 +122,6 @@ void Free_BandCombination_v1680(BandCombination_v1680& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1690_Csi_ReportingCrossPUCCH_Grp_r16_AdditionalSymbols_r16(Encoder& enc, const CA_ParametersNR_v1690_Csi_ReportingCrossPUCCH_Grp_r16_AdditionalSymbols_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_15kHz_additionalSymbols_r16);
     enc.WriteBit(value.has_scs_30kHz_additionalSymbols_r16);
     enc.WriteBit(value.has_scs_60kHz_additionalSymbols_r16);
@@ -203,7 +200,6 @@ void Free_CA_ParametersNR_v1690_Csi_ReportingCrossPUCCH_Grp_r16_AdditionalSymbol
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1690_Csi_ReportingCrossPUCCH_Grp_r16(Encoder& enc, const CA_ParametersNR_v1690_Csi_ReportingCrossPUCCH_Grp_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_additionalSymbols_r16);
     enc.WriteBit(value.has_sp_CSI_ReportingOnPUCCH_r16);
     enc.WriteBit(value.has_sp_CSI_ReportingOnPUSCH_r16);
@@ -296,7 +292,6 @@ void Free_CA_ParametersNR_v1690_Csi_ReportingCrossPUCCH_Grp_r16(CA_ParametersNR_
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1690(Encoder& enc, const CA_ParametersNR_v1690& value)
 {
-    (void)value;
     enc.WriteBit(value.has_csi_ReportingCrossPUCCH_Grp_r16);
     if (value.has_csi_ReportingCrossPUCCH_Grp_r16) {
         Encode_CA_ParametersNR_v1690_Csi_ReportingCrossPUCCH_Grp_r16(enc, value.csi_ReportingCrossPUCCH_Grp_r16);
@@ -335,7 +330,6 @@ void Free_CA_ParametersNR_v1690(CA_ParametersNR_v1690& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1690(Encoder& enc, const BandCombination_v1690& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_v1690);
     if (value.has_ca_ParametersNR_v1690) {
         Encode_CA_ParametersNR_v1690(enc, value.ca_ParametersNR_v1690);
@@ -374,7 +368,6 @@ void Free_BandCombination_v1690(BandCombination_v1690& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v16a0(Encoder& enc, const CA_ParametersNR_v16a0& value)
 {
-    (void)value;
 enc.WriteConstrainedLength(value.pdcch_BlindDetectionMixedList_r16_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.pdcch_BlindDetectionMixedList_r16_count; ++i) {
     Encode_PDCCH_BlindDetectionMixedList_r16(enc, value.pdcch_BlindDetectionMixedList_r16_items[i]);
@@ -427,7 +420,6 @@ void Free_CA_ParametersNR_v16a0(CA_ParametersNR_v16a0& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNRDC_v16a0(Encoder& enc, const CA_ParametersNRDC_v16a0& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_ForDC_v16a0);
     if (value.has_ca_ParametersNR_ForDC_v16a0) {
         Encode_CA_ParametersNR_v16a0(enc, value.ca_ParametersNR_ForDC_v16a0);
@@ -466,7 +458,6 @@ void Free_CA_ParametersNRDC_v16a0(CA_ParametersNRDC_v16a0& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v16a0(Encoder& enc, const BandCombination_v16a0& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_v16a0);
     enc.WriteBit(value.has_ca_ParametersNRDC_v16a0);
     if (value.has_ca_ParametersNR_v16a0) {
@@ -517,7 +508,6 @@ void Free_BandCombination_v16a0(BandCombination_v16a0& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CrossCarrierSchedulingSCell_SpCell_r17_SupportedSCS_Combinations_r17(Encoder& enc, const CrossCarrierSchedulingSCell_SpCell_r17_SupportedSCS_Combinations_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs15kHz_15kHz_r17);
     enc.WriteBit(value.has_scs15kHz_30kHz_r17);
     enc.WriteBit(value.has_scs15kHz_60kHz_r17);
@@ -631,7 +621,6 @@ void Free_CrossCarrierSchedulingSCell_SpCell_r17_SupportedSCS_Combinations_r17(C
 // --------------------------------------------------------------------------
 ErrorCode Encode_CrossCarrierSchedulingSCell_SpCell_r17(Encoder& enc, const CrossCarrierSchedulingSCell_SpCell_r17& value)
 {
-    (void)value;
     Encode_CrossCarrierSchedulingSCell_SpCell_r17_SupportedSCS_Combinations_r17(enc, value.supportedSCS_Combinations_r17);
     enc.WriteConstrainedInteger((std::int64_t)(value.pdcch_MonitoringOccasion_r17), 0, 1);
     return enc.Error();
@@ -669,7 +658,6 @@ void Free_CrossCarrierSchedulingSCell_SpCell_r17(CrossCarrierSchedulingSCell_SpC
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersfetype2PerBC_r17(Encoder& enc, const CodebookParametersfetype2PerBC_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_fetype2R1_r17);
     enc.WriteBit(value.has_fetype2R2_r17);
 enc.WriteConstrainedLength(value.fetype2basic_r17_count, 0u, 0u);
@@ -791,7 +779,6 @@ void Free_CodebookParametersfetype2PerBC_r17(CodebookParametersfetype2PerBC_r17&
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParameterMixedTypePerBC_r17(Encoder& enc, const CodebookComboParameterMixedTypePerBC_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_type1SP_feType2PS_null_r17);
     enc.WriteBit(value.has_type1SP_feType2PS_M2R1_null_r17);
     enc.WriteBit(value.has_type1SP_feType2PS_M2R2_null_r17);
@@ -1294,7 +1281,6 @@ void Free_CodebookComboParameterMixedTypePerBC_r17(CodebookComboParameterMixedTy
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParameterMultiTRP_PerBC_r17(Encoder& enc, const CodebookComboParameterMultiTRP_PerBC_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_nCJT_null_null);
     enc.WriteBit(value.has_nCJT1SP_null_null);
     enc.WriteBit(value.has_nCJT_Type2_null_r16);
@@ -2341,7 +2327,6 @@ void Free_CodebookComboParameterMultiTRP_PerBC_r17(CodebookComboParameterMultiTR
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1700_MTRP_CSI_EnhancementPerBC_r17(Encoder& enc, const CA_ParametersNR_v1700_MTRP_CSI_EnhancementPerBC_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumNZP_CSI_RS_r17), 2, 8);
     enc.WriteConstrainedInteger((std::int64_t)(value.cSI_Report_mode_r17), 0, 2);
 enc.WriteConstrainedLength(value.supportedComboAcrossCCs_r17_count, 0u, 0u);
@@ -2412,7 +2397,6 @@ void Free_CA_ParametersNR_v1700_MTRP_CSI_EnhancementPerBC_r17(CA_ParametersNR_v1
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1700_Non_AlignedFrameBoundaries_r17(Encoder& enc, const CA_ParametersNR_v1700_Non_AlignedFrameBoundaries_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs15kHz_15kHz_r17);
     enc.WriteBit(value.has_scs15kHz_30kHz_r17);
     enc.WriteBit(value.has_scs15kHz_60kHz_r17);
@@ -2547,7 +2531,6 @@ void Free_CA_ParametersNR_v1700_Non_AlignedFrameBoundaries_r17(CA_ParametersNR_v
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1700(Encoder& enc, const CA_ParametersNR_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_codebookParametersfetype2PerBC_r17);
     enc.WriteBit(value.has_demodulationEnhancementCA_r17);
     enc.WriteBit(value.has_maxUplinkDutyCycle_interBandCA_PC2_r17);
@@ -2776,7 +2759,6 @@ void Free_CA_ParametersNR_v1700(CA_ParametersNR_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNRDC_v1700(Encoder& enc, const CA_ParametersNRDC_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_simultaneousRxTx_IAB_MultipleParents_r17);
     enc.WriteBit(value.has_condPSCellAdditionNRDC_r17);
     enc.WriteBit(value.has_scg_ActivationDeactivationNRDC_r17);
@@ -2858,7 +2840,6 @@ void Free_CA_ParametersNRDC_v1700(CA_ParametersNRDC_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_v1700(Encoder& enc, const MRDC_Parameters_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_condPSCellAdditionENDC_r17);
     enc.WriteBit(value.has_scg_ActivationDeactivationENDC_r17);
     enc.WriteBit(value.has_scg_ActivationDeactivationResumeENDC_r17);
@@ -2918,7 +2899,6 @@ void Free_MRDC_Parameters_v1700(MRDC_Parameters_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1700(Encoder& enc, const BandCombination_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_v1700);
     enc.WriteBit(value.has_ca_ParametersNRDC_v1700);
     enc.WriteBit(value.has_mrdc_Parameters_v1700);
@@ -3050,7 +3030,6 @@ void Free_BandCombination_v1700(BandCombination_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PUCCH_Group_Config_r17(Encoder& enc, const PUCCH_Group_Config_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_fr1_FR1_NonSharedTDD_r17);
     enc.WriteBit(value.has_fr2_FR2_NonSharedTDD_r17);
     enc.WriteBit(value.has_fr1_FR2_NonSharedTDD_r17);
@@ -3110,7 +3089,6 @@ void Free_PUCCH_Group_Config_r17(PUCCH_Group_Config_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1720_SemiStaticPUCCH_CellSwitchSingleGroup_r17(Encoder& enc, const CA_ParametersNR_v1720_SemiStaticPUCCH_CellSwitchSingleGroup_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.pucch_Group_r17), 0, 2);
     Encode_PUCCH_Group_Config_r17(enc, value.pucch_Group_Config_r17);
     return enc.Error();
@@ -3148,7 +3126,6 @@ void Free_CA_ParametersNR_v1720_SemiStaticPUCCH_CellSwitchSingleGroup_r17(CA_Par
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1720_DynamicPUCCH_CellSwitchSameLengthSingleGroup_r17(Encoder& enc, const CA_ParametersNR_v1720_DynamicPUCCH_CellSwitchSameLengthSingleGroup_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.pucch_Group_r17), 0, 2);
     Encode_PUCCH_Group_Config_r17(enc, value.pucch_Group_Config_r17);
     return enc.Error();
@@ -3186,7 +3163,6 @@ void Free_CA_ParametersNR_v1720_DynamicPUCCH_CellSwitchSameLengthSingleGroup_r17
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1720_DynamicPUCCH_CellSwitchDiffLengthSingleGroup_r17(Encoder& enc, const CA_ParametersNR_v1720_DynamicPUCCH_CellSwitchDiffLengthSingleGroup_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.pucch_Group_r17), 0, 2);
     Encode_PUCCH_Group_Config_r17(enc, value.pucch_Group_Config_r17);
     return enc.Error();
@@ -3224,7 +3200,6 @@ void Free_CA_ParametersNR_v1720_DynamicPUCCH_CellSwitchDiffLengthSingleGroup_r17
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1720(Encoder& enc, const CA_ParametersNR_v1720& value)
 {
-    (void)value;
     enc.WriteBit(value.has_parallelTxSRS_PUCCH_PUSCH_intraBand_r17);
     enc.WriteBit(value.has_parallelTxPRACH_SRS_PUCCH_PUSCH_intraBand_r17);
     enc.WriteBit(value.has_semiStaticPUCCH_CellSwitchSingleGroup_r17);
@@ -3641,7 +3616,6 @@ void Free_CA_ParametersNR_v1720(CA_ParametersNR_v1720& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNRDC_v1720(Encoder& enc, const CA_ParametersNRDC_v1720& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_ForDC_v1700);
     enc.WriteBit(value.has_ca_ParametersNR_ForDC_v1720);
     if (value.has_ca_ParametersNR_ForDC_v1700) {
@@ -3692,7 +3666,6 @@ void Free_CA_ParametersNRDC_v1720(CA_ParametersNRDC_v1720& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1720(Encoder& enc, const BandCombination_v1720& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_v1720);
     enc.WriteBit(value.has_ca_ParametersNRDC_v1720);
     if (value.has_ca_ParametersNR_v1720) {
@@ -3743,7 +3716,6 @@ void Free_BandCombination_v1720(BandCombination_v1720& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1730(Encoder& enc, const CA_ParametersNR_v1730& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dmrs_BundlingPUSCH_RepTypeAPerBC_r17);
     enc.WriteBit(value.has_dmrs_BundlingPUSCH_RepTypeBPerBC_r17);
     enc.WriteBit(value.has_dmrs_BundlingPUSCH_multiSlotPerBC_r17);
@@ -3937,7 +3909,6 @@ void Free_CA_ParametersNR_v1730(CA_ParametersNR_v1730& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNRDC_v1730(Encoder& enc, const CA_ParametersNRDC_v1730& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_ForDC_v1730);
     if (value.has_ca_ParametersNR_ForDC_v1730) {
         Encode_CA_ParametersNR_v1730(enc, value.ca_ParametersNR_ForDC_v1730);
@@ -3976,7 +3947,6 @@ void Free_CA_ParametersNRDC_v1730(CA_ParametersNRDC_v1730& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1730(Encoder& enc, const BandCombination_v1730& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_v1730);
     enc.WriteBit(value.has_ca_ParametersNRDC_v1730);
     enc.WriteBit(value.has_bandList_v1730);
@@ -4060,7 +4030,6 @@ void Free_BandCombination_v1730(BandCombination_v1730& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1740(Encoder& enc, const CA_ParametersNR_v1740& value)
 {
-    (void)value;
     enc.WriteBit(value.has_nack_OnlyFeedbackForSPS_Multicast_r17);
     enc.WriteBit(value.has_singlePUCCH_ConfigForMulticast_r17);
     if (value.has_nack_OnlyFeedbackForSPS_Multicast_r17) {
@@ -4109,7 +4078,6 @@ void Free_CA_ParametersNR_v1740(CA_ParametersNR_v1740& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1740(Encoder& enc, const BandCombination_v1740& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_v1740);
     if (value.has_ca_ParametersNR_v1740) {
         Encode_CA_ParametersNR_v1740(enc, value.ca_ParametersNR_v1740);
@@ -4148,7 +4116,6 @@ void Free_BandCombination_v1740(BandCombination_v1740& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1760(Encoder& enc, const CA_ParametersNR_v1760& value)
 {
-    (void)value;
     enc.WriteBit(value.has_prioSCellPRACH_OverSP_PeriodicSRS_Support_r17);
     if (value.has_prioSCellPRACH_OverSP_PeriodicSRS_Support_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.prioSCellPRACH_OverSP_PeriodicSRS_Support_r17), 0, 0);
@@ -4186,7 +4153,6 @@ void Free_CA_ParametersNR_v1760(CA_ParametersNR_v1760& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNRDC_v1760(Encoder& enc, const CA_ParametersNRDC_v1760& value)
 {
-    (void)value;
     Encode_CA_ParametersNR_v1760(enc, value.ca_ParametersNR_ForDC_v1760);
     return enc.Error();
 }
@@ -4218,7 +4184,6 @@ void Free_CA_ParametersNRDC_v1760(CA_ParametersNRDC_v1760& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1760(Encoder& enc, const BandCombination_v1760& value)
 {
-    (void)value;
     Encode_CA_ParametersNR_v1760(enc, value.ca_ParametersNR_v1760);
     Encode_CA_ParametersNRDC_v1760(enc, value.ca_ParametersNRDC_v1760);
     return enc.Error();
@@ -4255,7 +4220,6 @@ void Free_BandCombination_v1760(BandCombination_v1760& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1770(Encoder& enc, const CA_ParametersNR_v1770& value)
 {
-    (void)value;
     enc.WriteBit(value.has_parallelTxPUCCH_PUSCH_SamePriority_r17);
     if (value.has_parallelTxPUCCH_PUSCH_SamePriority_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.parallelTxPUCCH_PUSCH_SamePriority_r17), 0, 0);
@@ -4293,7 +4257,6 @@ void Free_CA_ParametersNR_v1770(CA_ParametersNR_v1770& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_v1770(Encoder& enc, const MRDC_Parameters_v1770& value)
 {
-    (void)value;
     enc.WriteBit(value.has_higherPowerLimitMRDC_r17);
     if (value.has_higherPowerLimitMRDC_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.higherPowerLimitMRDC_r17), 0, 0);
@@ -4331,7 +4294,6 @@ void Free_MRDC_Parameters_v1770(MRDC_Parameters_v1770& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1770(Encoder& enc, const BandCombination_v1770& value)
 {
-    (void)value;
     enc.WriteBit(value.has_mrdc_Parameters_v1770);
     enc.WriteBit(value.has_ca_ParametersNR_v1770);
 enc.WriteConstrainedLength(value.bandList_v1770_count, 0u, 0u);
@@ -4474,7 +4436,6 @@ void Free_SupportedAggBandwidth_r17(SupportedAggBandwidth_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1780_SupportedAggBW_FR1_r17(Encoder& enc, const CA_ParametersNR_v1780_SupportedAggBW_FR1_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scalingFactorSCS_r17);
     enc.WriteBit(value.has_supportedAggBW_FDD_DL_r17);
     enc.WriteBit(value.has_supportedAggBW_FDD_UL_r17);
@@ -4584,7 +4545,6 @@ void Free_CA_ParametersNR_v1780_SupportedAggBW_FR1_r17(CA_ParametersNR_v1780_Sup
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1780(Encoder& enc, const CA_ParametersNR_v1780& value)
 {
-    (void)value;
     enc.WriteBit(value.has_parallelTxPUCCH_PUSCH_SamePriority_r17);
     enc.WriteBit(value.has_supportedAggBW_FR1_r17);
     if (value.has_parallelTxPUCCH_PUSCH_SamePriority_r17) {
@@ -4634,7 +4594,6 @@ void Free_CA_ParametersNR_v1780(CA_ParametersNR_v1780& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNRDC_v1780(Encoder& enc, const CA_ParametersNRDC_v1780& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_ForDC_v1780);
     if (value.has_ca_ParametersNR_ForDC_v1780) {
         Encode_CA_ParametersNR_v1780(enc, value.ca_ParametersNR_ForDC_v1780);
@@ -4673,7 +4632,6 @@ void Free_CA_ParametersNRDC_v1780(CA_ParametersNRDC_v1780& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1780(Encoder& enc, const BandCombination_v1780& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_v1780);
     enc.WriteBit(value.has_ca_ParametersNRDC_v1780);
     enc.WriteBit(value.has_bandList_v1780);
@@ -4769,7 +4727,6 @@ void Free_BandCombination_v1780(BandCombination_v1780& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersetype2DopplerCSI_r18_EType2Doppler_r18(Encoder& enc, const CodebookParametersetype2DopplerCSI_r18_EType2Doppler_r18& value)
 {
-    (void)value;
 enc.WriteConstrainedLength(value.supportedCSI_RS_ResourceList_r18_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.supportedCSI_RS_ResourceList_r18_count; ++i) {
     enc.WriteConstrainedInteger((std::int64_t)(value.supportedCSI_RS_ResourceList_r18_items[i]), 0, 511);
@@ -4841,7 +4798,6 @@ void Free_CodebookParametersetype2DopplerCSI_r18_EType2Doppler_r18(CodebookParam
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersetype2DopplerCSI_r18_EType2DopplerN4_r18(Encoder& enc, const CodebookParametersetype2DopplerCSI_r18_EType2DopplerN4_r18& value)
 {
-    (void)value;
 enc.WriteConstrainedLength(value.supportedCSI_RS_ReportSettingList1_r18_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.supportedCSI_RS_ReportSettingList1_r18_count; ++i) {
     Encode_SupportedCSI_RS_ReportSetting_r18(enc, value.supportedCSI_RS_ReportSettingList1_r18_items[i]);
@@ -4920,7 +4876,6 @@ void Free_CodebookParametersetype2DopplerCSI_r18_EType2DopplerN4_r18(CodebookPar
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersetype2DopplerCSI_r18(Encoder& enc, const CodebookParametersetype2DopplerCSI_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_eType2DopplerN4_r18);
     enc.WriteBit(value.has_ddUnitSize_A_CSI_RS_CMR_r18);
     enc.WriteBit(value.has_maxNumberAperiodicCSI_RS_Resource_r18);
@@ -5077,7 +5032,6 @@ void Free_CodebookParametersetype2DopplerCSI_r18(CodebookParametersetype2Doppler
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersfetype2DopplerCSI_r18_FeType2Doppler_r18(Encoder& enc, const CodebookParametersfetype2DopplerCSI_r18_FeType2Doppler_r18& value)
 {
-    (void)value;
 enc.WriteConstrainedLength(value.supportedCSI_RS_ResourceList_r18_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.supportedCSI_RS_ResourceList_r18_count; ++i) {
     enc.WriteConstrainedInteger((std::int64_t)(value.supportedCSI_RS_ResourceList_r18_items[i]), 0, 511);
@@ -5143,7 +5097,6 @@ void Free_CodebookParametersfetype2DopplerCSI_r18_FeType2Doppler_r18(CodebookPar
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersfetype2DopplerCSI_r18(Encoder& enc, const CodebookParametersfetype2DopplerCSI_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxNumberAperiodicCSI_RS_Resource_r18);
     enc.WriteBit(value.has_feType2DopplerM2R1_r18);
     enc.WriteBit(value.has_feType2DopplerR2_r18);
@@ -5278,7 +5231,6 @@ void Free_CodebookParametersfetype2DopplerCSI_r18(CodebookParametersfetype2Doppl
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersetype2CJT_r18_EType2CJT_r18(Encoder& enc, const CodebookParametersetype2CJT_r18_EType2CJT_r18& value)
 {
-    (void)value;
 enc.WriteConstrainedLength(value.supportedCSI_RS_ResourceList_r18_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.supportedCSI_RS_ResourceList_r18_count; ++i) {
     enc.WriteConstrainedInteger((std::int64_t)(value.supportedCSI_RS_ResourceList_r18_items[i]), 0, 511);
@@ -5344,7 +5296,6 @@ void Free_CodebookParametersetype2CJT_r18_EType2CJT_r18(CodebookParametersetype2
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersetype2CJT_r18(Encoder& enc, const CodebookParametersetype2CJT_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_eType2CJT_FD_IO_r18);
     enc.WriteBit(value.has_eType2CJT_FD_FO_r18);
     enc.WriteBit(value.has_eType2CJT_R2_r18);
@@ -5536,7 +5487,6 @@ void Free_CodebookParametersetype2CJT_r18(CodebookParametersetype2CJT_r18& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersfetype2CJT_r18_FeType2CJT_r18(Encoder& enc, const CodebookParametersfetype2CJT_r18_FeType2CJT_r18& value)
 {
-    (void)value;
 enc.WriteConstrainedLength(value.supportedCSI_RS_ResourceList_r18_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.supportedCSI_RS_ResourceList_r18_count; ++i) {
     enc.WriteConstrainedInteger((std::int64_t)(value.supportedCSI_RS_ResourceList_r18_items[i]), 0, 511);
@@ -5602,7 +5552,6 @@ void Free_CodebookParametersfetype2CJT_r18_FeType2CJT_r18(CodebookParametersfety
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersfetype2CJT_r18(Encoder& enc, const CodebookParametersfetype2CJT_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_feType2CJT_FD_IO_r18);
     enc.WriteBit(value.has_feType2CJT_FD_FO_r18);
     enc.WriteBit(value.has_feType2CJT_M2R1_r18);
@@ -5806,7 +5755,6 @@ void Free_CodebookParametersfetype2CJT_r18(CodebookParametersfetype2CJT_r18& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParametersCJT_r18(Encoder& enc, const CodebookComboParametersCJT_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_cjt_Type1SP_eType2R1_null);
     enc.WriteBit(value.has_cjt_Type1SP_eType2R2_null);
     enc.WriteBit(value.has_cjt_Type1SP_feType2R1M1_null);
@@ -6173,7 +6121,6 @@ void Free_CodebookComboParametersCJT_r18(CodebookComboParametersCJT_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersHARQ_ACK_PUSCH_r18(Encoder& enc, const CodebookParametersHARQ_ACK_PUSCH_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_multiplexingType1_r18);
     enc.WriteBit(value.has_multiplexingType2_r18);
     enc.WriteBit(value.has_multiplexingType3_r18);
@@ -6255,7 +6202,6 @@ void Free_CodebookParametersHARQ_ACK_PUSCH_r18(CodebookParametersHARQ_ACK_PUSCH_
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_Tdcp_ReportPerBC_r18(Encoder& enc, const CA_ParametersNR_v1800_Tdcp_ReportPerBC_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.valueX_r18), 1, 2);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberActiveResource_r18), 2, 32);
     return enc.Error();
@@ -6294,7 +6240,6 @@ void Free_CA_ParametersNR_v1800_Tdcp_ReportPerBC_r18(CA_ParametersNR_v1800_Tdcp_
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_Tdcp_ResourcePerBC_r18(Encoder& enc, const CA_ParametersNR_v1800_Tdcp_ResourcePerBC_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberConfigPerCC_r18), 0, 5);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberConfigAcrossCC_r18), 1, 32);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSimultaneousPerCC_r18), 0, 9);
@@ -6339,7 +6284,6 @@ void Free_CA_ParametersNR_v1800_Tdcp_ResourcePerBC_r18(CA_ParametersNR_v1800_Tdc
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackPerBC_r18_MaxNumberCSI_ResourceAcrossCC_r18(Encoder& enc, const CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackPerBC_r18_MaxNumberCSI_ResourceAcrossCC_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.sdType1_Resource_r18), 0, 32);
     enc.WriteConstrainedInteger((std::int64_t)(value.sdType2_Resource_r18), 0, 32);
     return enc.Error();
@@ -6378,7 +6322,6 @@ void Free_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackPerBC_r18_MaxNumbe
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackPerBC_r18_MaxNumberPortsAcrossCC_r18(Encoder& enc, const CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackPerBC_r18_MaxNumberPortsAcrossCC_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.sdType1_Resource_r18), 1, 32);
     enc.WriteConstrainedInteger((std::int64_t)(value.sdType2_Resource_r18), 1, 32);
     return enc.Error();
@@ -6417,7 +6360,6 @@ void Free_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackPerBC_r18_MaxNumbe
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackPerBC_r18(Encoder& enc, const CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackPerBC_r18& value)
 {
-    (void)value;
     Encode_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackPerBC_r18_MaxNumberCSI_ResourceAcrossCC_r18(enc, value.maxNumberCSI_ResourceAcrossCC_r18);
     Encode_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackPerBC_r18_MaxNumberPortsAcrossCC_r18(enc, value.maxNumberPortsAcrossCC_r18);
     return enc.Error();
@@ -6454,7 +6396,6 @@ void Free_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackPerBC_r18(CA_Param
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackPUSCH_PerBC_r18(Encoder& enc, const CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackPUSCH_PerBC_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberCSI_ResourceAcrossCC_r18), 0, 32);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberPortsAcrossCC_r18), 1, 32);
     return enc.Error();
@@ -6493,7 +6434,6 @@ void Free_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackPUSCH_PerBC_r18(CA
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackAperiodicPerBC_r18_MaxNumberCSI_ResourceAcrossCC_r18(Encoder& enc, const CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackAperiodicPerBC_r18_MaxNumberCSI_ResourceAcrossCC_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.sdType1_Resource_r18), 0, 32);
     enc.WriteConstrainedInteger((std::int64_t)(value.sdType2_Resource_r18), 0, 32);
     return enc.Error();
@@ -6532,7 +6472,6 @@ void Free_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackAperiodicPerBC_r18
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackAperiodicPerBC_r18_MaxNumberPortsAcrossCC_r18(Encoder& enc, const CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackAperiodicPerBC_r18_MaxNumberPortsAcrossCC_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.sdType1_Resource_r18), 1, 32);
     enc.WriteConstrainedInteger((std::int64_t)(value.sdType2_Resource_r18), 1, 32);
     return enc.Error();
@@ -6571,7 +6510,6 @@ void Free_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackAperiodicPerBC_r18
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackAperiodicPerBC_r18(Encoder& enc, const CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackAperiodicPerBC_r18& value)
 {
-    (void)value;
     Encode_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackAperiodicPerBC_r18_MaxNumberCSI_ResourceAcrossCC_r18(enc, value.maxNumberCSI_ResourceAcrossCC_r18);
     Encode_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackAperiodicPerBC_r18_MaxNumberPortsAcrossCC_r18(enc, value.maxNumberPortsAcrossCC_r18);
     return enc.Error();
@@ -6608,7 +6546,6 @@ void Free_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackAperiodicPerBC_r18
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackPUCCH_PerBC_r18(Encoder& enc, const CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackPUCCH_PerBC_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberCSI_ResourceAcrossCC_r18), 0, 32);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberPortsAcrossCC_r18), 1, 32);
     return enc.Error();
@@ -6647,7 +6584,6 @@ void Free_CA_ParametersNR_v1800_SpatialAdaptation_CSI_FeedbackPUCCH_PerBC_r18(CA
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_PowerAdaptation_CSI_FeedbackPerBC_r18(Encoder& enc, const CA_ParametersNR_v1800_PowerAdaptation_CSI_FeedbackPerBC_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberCSI_ResourceAcrossCC_r18), 0, 32);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberPortsAcrossCC_r18), 1, 32);
     return enc.Error();
@@ -6686,7 +6622,6 @@ void Free_CA_ParametersNR_v1800_PowerAdaptation_CSI_FeedbackPerBC_r18(CA_Paramet
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_PowerAdaptation_CSI_FeedbackPUSCH_PerBC_r18(Encoder& enc, const CA_ParametersNR_v1800_PowerAdaptation_CSI_FeedbackPUSCH_PerBC_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberCSI_ResourceAcrossCC_r18), 0, 32);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberPortsAcrossCC_r18), 1, 32);
     return enc.Error();
@@ -6725,7 +6660,6 @@ void Free_CA_ParametersNR_v1800_PowerAdaptation_CSI_FeedbackPUSCH_PerBC_r18(CA_P
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_PowerAdaptation_CSI_FeedbackAperiodicPerBC_r18(Encoder& enc, const CA_ParametersNR_v1800_PowerAdaptation_CSI_FeedbackAperiodicPerBC_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberCSI_ResourceAcrossCC_r18), 0, 32);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberPortsAcrossCC_r18), 1, 32);
     return enc.Error();
@@ -6764,7 +6698,6 @@ void Free_CA_ParametersNR_v1800_PowerAdaptation_CSI_FeedbackAperiodicPerBC_r18(C
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_PowerAdaptation_CSI_FeedbackPUCCH_PerBC_r18(Encoder& enc, const CA_ParametersNR_v1800_PowerAdaptation_CSI_FeedbackPUCCH_PerBC_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberCSI_ResourceAcrossCC_r18), 0, 32);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberPortsAcrossCC_r18), 1, 32);
     return enc.Error();
@@ -6803,7 +6736,6 @@ void Free_CA_ParametersNR_v1800_PowerAdaptation_CSI_FeedbackPUCCH_PerBC_r18(CA_P
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_MultiCell_PDSCH_DCI_1_3_SameSCS_r18_CoScheduledCellSCS_r18(Encoder& enc, const CA_ParametersNR_v1800_MultiCell_PDSCH_DCI_1_3_SameSCS_r18_CoScheduledCellSCS_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_nonSharedSpectrum_fdd_fr1);
     enc.WriteBit(value.has_nonSharedSpectrum_tdd_fr1);
     enc.WriteBit(value.has_sharedSpectrum_tdd_fr1);
@@ -6885,7 +6817,6 @@ void Free_CA_ParametersNR_v1800_MultiCell_PDSCH_DCI_1_3_SameSCS_r18_CoScheduledC
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_MultiCell_PDSCH_DCI_1_3_SameSCS_r18(Encoder& enc, const CA_ParametersNR_v1800_MultiCell_PDSCH_DCI_1_3_SameSCS_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_supportOfSearchSpace_r18);
     enc.WriteBit(value.has_licensed_fdd_tdd_fr1_r18);
     Encode_CA_ParametersNR_v1800_MultiCell_PDSCH_DCI_1_3_SameSCS_r18_CoScheduledCellSCS_r18(enc, value.coScheduledCellSCS_r18);
@@ -6969,7 +6900,6 @@ void Free_CA_ParametersNR_v1800_MultiCell_PDSCH_DCI_1_3_SameSCS_r18(CA_Parameter
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_MultiCell_PDSCH_DCI_1_3_DiffSCS_r18(Encoder& enc, const CA_ParametersNR_v1800_MultiCell_PDSCH_DCI_1_3_DiffSCS_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.coScheduledCellSCS_r18), 0, 2);
 enc.WriteConstrainedLength(value.combinationCarrierType_r18_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.combinationCarrierType_r18_count; ++i) {
@@ -7058,7 +6988,6 @@ void Free_CA_ParametersNR_v1800_MultiCell_PDSCH_DCI_1_3_DiffSCS_r18(CA_Parameter
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_MultiCell_PUSCH_DCI_0_3_SameSCS_r18_CoScheduledCellSCS_r18(Encoder& enc, const CA_ParametersNR_v1800_MultiCell_PUSCH_DCI_0_3_SameSCS_r18_CoScheduledCellSCS_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_nonSharedSpectrum_fdd_fr1);
     enc.WriteBit(value.has_nonSharedSpectrum_tdd_fr1);
     enc.WriteBit(value.has_sharedSpectrum_tdd_fr1);
@@ -7140,7 +7069,6 @@ void Free_CA_ParametersNR_v1800_MultiCell_PUSCH_DCI_0_3_SameSCS_r18_CoScheduledC
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_MultiCell_PUSCH_DCI_0_3_SameSCS_r18(Encoder& enc, const CA_ParametersNR_v1800_MultiCell_PUSCH_DCI_0_3_SameSCS_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_supportOfSearchSpace_r18);
     enc.WriteBit(value.has_licensed_fdd_tdd_fr1_r18);
     Encode_CA_ParametersNR_v1800_MultiCell_PUSCH_DCI_0_3_SameSCS_r18_CoScheduledCellSCS_r18(enc, value.coScheduledCellSCS_r18);
@@ -7218,7 +7146,6 @@ void Free_CA_ParametersNR_v1800_MultiCell_PUSCH_DCI_0_3_SameSCS_r18(CA_Parameter
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_MultiCell_PUSCH_DCI_0_3_DiffSCS_r18(Encoder& enc, const CA_ParametersNR_v1800_MultiCell_PUSCH_DCI_0_3_DiffSCS_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.coScheduledCellSCS_r18), 0, 2);
 enc.WriteConstrainedLength(value.combinationCarrierType_r18_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.combinationCarrierType_r18_count; ++i) {
@@ -7301,7 +7228,6 @@ void Free_CA_ParametersNR_v1800_MultiCell_PUSCH_DCI_0_3_DiffSCS_r18(CA_Parameter
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_AdvUnicastDCI_DL_r18(Encoder& enc, const CA_ParametersNR_v1800_AdvUnicastDCI_DL_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_15kHz_120kHz_r18);
     enc.WriteBit(value.has_scs_15kHz_60kHz_r18);
     enc.WriteBit(value.has_scs_30kHz_120kHz_r18);
@@ -7400,7 +7326,6 @@ void Free_CA_ParametersNR_v1800_AdvUnicastDCI_DL_r18(CA_ParametersNR_v1800_AdvUn
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_AdvUnicastDCI_UL_r18(Encoder& enc, const CA_ParametersNR_v1800_AdvUnicastDCI_UL_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_15kHz_120kHz_r18);
     enc.WriteBit(value.has_scs_15kHz_60kHz_r18);
     enc.WriteBit(value.has_scs_30kHz_120kHz_r18);
@@ -7499,7 +7424,6 @@ void Free_CA_ParametersNR_v1800_AdvUnicastDCI_UL_r18(CA_ParametersNR_v1800_AdvUn
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_Type3EnhHARQ_CB_DCI_1_3_r18(Encoder& enc, const CA_ParametersNR_v1800_Type3EnhHARQ_CB_DCI_1_3_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.numberOfCodebook_r18), 0, 3);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberPUCCH_Trans_r18), 1, 7);
     return enc.Error();
@@ -7538,7 +7462,6 @@ void Free_CA_ParametersNR_v1800_Type3EnhHARQ_CB_DCI_1_3_r18(CA_ParametersNR_v180
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_Pdcch_MonitoringCA_r18(Encoder& enc, const CA_ParametersNR_v1800_Pdcch_MonitoringCA_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberOfMonitoringCC_r18), 2, 16);
     enc.WriteConstrainedInteger((std::int64_t)(value.supportedSpanArrangement_r18), 0, 1);
     return enc.Error();
@@ -7577,7 +7500,6 @@ void Free_CA_ParametersNR_v1800_Pdcch_MonitoringCA_r18(CA_ParametersNR_v1800_Pdc
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800_Pdcch_BlindDetectionCA_Mixed_r18(Encoder& enc, const CA_ParametersNR_v1800_Pdcch_BlindDetectionCA_Mixed_r18& value)
 {
-    (void)value;
 enc.WriteConstrainedLength(value.blindDetectionCA_Mixed_r18_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.blindDetectionCA_Mixed_r18_count; ++i) {
     Encode_PDCCH_BlindDetectionCA_Mixed_r18(enc, value.blindDetectionCA_Mixed_r18_items[i]);
@@ -7636,7 +7558,6 @@ void Free_CA_ParametersNR_v1800_Pdcch_BlindDetectionCA_Mixed_r18(CA_ParametersNR
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1800(Encoder& enc, const CA_ParametersNR_v1800& value)
 {
-    (void)value;
     enc.WriteBit(value.has_codebookParametersetype2DopplerCSI_PerBC_r18);
     enc.WriteBit(value.has_codebookParametersfetype2DopplerCSI_PerBC_r18);
     enc.WriteBit(value.has_codebookParametersetype2CJT_PerBC_r18);
@@ -8123,7 +8044,6 @@ void Free_CA_ParametersNR_v1800(CA_ParametersNR_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNRDC_v1800(Encoder& enc, const CA_ParametersNRDC_v1800& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_ForDC_v1800);
     enc.WriteBit(value.has_pdcch_BlindDetectionNRDC_r18);
     if (value.has_ca_ParametersNR_ForDC_v1800) {
@@ -8195,7 +8115,6 @@ void Free_CA_ParametersNRDC_v1800(CA_ParametersNRDC_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1800(Encoder& enc, const BandCombination_v1800& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_v1800);
     enc.WriteBit(value.has_ca_ParametersNRDC_v1800);
     enc.WriteBit(value.has_supportedBandCombListPerBC_SL_U2U_RelayDiscovery_r18);
@@ -8297,7 +8216,6 @@ void Free_BandCombination_v1800(BandCombination_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_UplinkTxSwitch_r16_ExtGroup1(Encoder& enc, const BandCombination_UplinkTxSwitch_r16_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_uplinkTxSwitching_PUSCH_TransCoherence_r16);
     if (value.has_uplinkTxSwitching_PUSCH_TransCoherence_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.uplinkTxSwitching_PUSCH_TransCoherence_r16), 0, 1);
@@ -8337,7 +8255,6 @@ void Free_BandCombination_UplinkTxSwitch_r16_ExtGroup1(BandCombination_UplinkTxS
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_UplinkTxSwitch_r16(Encoder& enc, const BandCombination_UplinkTxSwitch_r16& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_bandCombination_v1540);
@@ -8534,7 +8451,6 @@ void Free_BandCombination_UplinkTxSwitch_r16(BandCombination_UplinkTxSwitch_r16&
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_UplinkTxSwitch_v1630(Encoder& enc, const BandCombination_UplinkTxSwitch_v1630& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bandCombination_v1630);
     if (value.has_bandCombination_v1630) {
         Encode_BandCombination_v1630(enc, value.bandCombination_v1630);
@@ -8573,7 +8489,6 @@ void Free_BandCombination_UplinkTxSwitch_v1630(BandCombination_UplinkTxSwitch_v1
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_UplinkTxSwitch_v1640(Encoder& enc, const BandCombination_UplinkTxSwitch_v1640& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bandCombination_v1640);
     if (value.has_bandCombination_v1640) {
         Encode_BandCombination_v1640(enc, value.bandCombination_v1640);
@@ -8612,7 +8527,6 @@ void Free_BandCombination_UplinkTxSwitch_v1640(BandCombination_UplinkTxSwitch_v1
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_UplinkTxSwitch_v1650(Encoder& enc, const BandCombination_UplinkTxSwitch_v1650& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bandCombination_v1650);
     if (value.has_bandCombination_v1650) {
         Encode_BandCombination_v1650(enc, value.bandCombination_v1650);
@@ -8651,7 +8565,6 @@ void Free_BandCombination_UplinkTxSwitch_v1650(BandCombination_UplinkTxSwitch_v1
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_UplinkTxSwitch_v1670(Encoder& enc, const BandCombination_UplinkTxSwitch_v1670& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bandCombination_v15g0);
     if (value.has_bandCombination_v15g0) {
         Encode_BandCombination_v15g0(enc, value.bandCombination_v15g0);
@@ -8690,7 +8603,6 @@ void Free_BandCombination_UplinkTxSwitch_v1670(BandCombination_UplinkTxSwitch_v1
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_UplinkTxSwitch_v1690(Encoder& enc, const BandCombination_UplinkTxSwitch_v1690& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bandCombination_v1690);
     if (value.has_bandCombination_v1690) {
         Encode_BandCombination_v1690(enc, value.bandCombination_v1690);
@@ -8729,7 +8641,6 @@ void Free_BandCombination_UplinkTxSwitch_v1690(BandCombination_UplinkTxSwitch_v1
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_UplinkTxSwitch_v16a0(Encoder& enc, const BandCombination_UplinkTxSwitch_v16a0& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bandCombination_v16a0);
     if (value.has_bandCombination_v16a0) {
         Encode_BandCombination_v16a0(enc, value.bandCombination_v16a0);
@@ -8768,7 +8679,6 @@ void Free_BandCombination_UplinkTxSwitch_v16a0(BandCombination_UplinkTxSwitch_v1
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_UplinkTxSwitch_v16e0(Encoder& enc, const BandCombination_UplinkTxSwitch_v16e0& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bandCombination_v15n0);
     if (value.has_bandCombination_v15n0) {
         Encode_BandCombination_v15n0(enc, value.bandCombination_v15n0);
@@ -8807,7 +8717,6 @@ void Free_BandCombination_UplinkTxSwitch_v16e0(BandCombination_UplinkTxSwitch_v1
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_UplinkTxSwitch_v1700(Encoder& enc, const BandCombination_UplinkTxSwitch_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bandCombination_v1700);
     enc.WriteBit(value.has_supportedBandPairListNR_v1700);
     enc.WriteBit(value.has_uplinkTxSwitchingBandParametersList_v1700);
@@ -8912,7 +8821,6 @@ void Free_BandCombination_UplinkTxSwitch_v1700(BandCombination_UplinkTxSwitch_v1
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_UplinkTxSwitch_v1720(Encoder& enc, const BandCombination_UplinkTxSwitch_v1720& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bandCombination_v1720);
     enc.WriteBit(value.has_uplinkTxSwitching_OptionSupport2T2T_r17);
     if (value.has_bandCombination_v1720) {
@@ -8964,7 +8872,6 @@ void Free_BandCombination_UplinkTxSwitch_v1720(BandCombination_UplinkTxSwitch_v1
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_UplinkTxSwitch_v1730(Encoder& enc, const BandCombination_UplinkTxSwitch_v1730& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bandCombination_v1730);
     if (value.has_bandCombination_v1730) {
         Encode_BandCombination_v1730(enc, value.bandCombination_v1730);
@@ -9003,7 +8910,6 @@ void Free_BandCombination_UplinkTxSwitch_v1730(BandCombination_UplinkTxSwitch_v1
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_UplinkTxSwitch_v1740(Encoder& enc, const BandCombination_UplinkTxSwitch_v1740& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bandCombination_v1740);
     if (value.has_bandCombination_v1740) {
         Encode_BandCombination_v1740(enc, value.bandCombination_v1740);
@@ -9042,7 +8948,6 @@ void Free_BandCombination_UplinkTxSwitch_v1740(BandCombination_UplinkTxSwitch_v1
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_UplinkTxSwitch_v1760(Encoder& enc, const BandCombination_UplinkTxSwitch_v1760& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bandCombination_v1760);
     if (value.has_bandCombination_v1760) {
         Encode_BandCombination_v1760(enc, value.bandCombination_v1760);
@@ -9081,7 +8986,6 @@ void Free_BandCombination_UplinkTxSwitch_v1760(BandCombination_UplinkTxSwitch_v1
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_UplinkTxSwitch_v1770(Encoder& enc, const BandCombination_UplinkTxSwitch_v1770& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bandCombination_v1770);
     if (value.has_bandCombination_v1770) {
         Encode_BandCombination_v1770(enc, value.bandCombination_v1770);
@@ -9120,7 +9024,6 @@ void Free_BandCombination_UplinkTxSwitch_v1770(BandCombination_UplinkTxSwitch_v1
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_UplinkTxSwitch_v1780(Encoder& enc, const BandCombination_UplinkTxSwitch_v1780& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bandCombination_v1780);
     if (value.has_bandCombination_v1780) {
         Encode_BandCombination_v1780(enc, value.bandCombination_v1780);
@@ -9159,7 +9062,6 @@ void Free_BandCombination_UplinkTxSwitch_v1780(BandCombination_UplinkTxSwitch_v1
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_UplinkTxSwitch_v1800(Encoder& enc, const BandCombination_UplinkTxSwitch_v1800& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bandCombination_v1800);
     enc.WriteBit(value.has_supportedBandPairListNR_r18);
     enc.WriteBit(value.has_uplinkTxSwitchingMinimumSeparationTime_r18);
@@ -9288,7 +9190,6 @@ void Free_BandCombination_UplinkTxSwitch_v1800(BandCombination_UplinkTxSwitch_v1
 // --------------------------------------------------------------------------
 ErrorCode Encode_ULTxSwitchingBandPair_r16(Encoder& enc, const ULTxSwitchingBandPair_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_uplinkTxSwitching_DL_Interruption_r16);
     enc.WriteConstrainedInteger((std::int64_t)(value.bandIndexUL1_r16), 1, 32);
     enc.WriteConstrainedInteger((std::int64_t)(value.bandIndexUL2_r16), 1, 32);
@@ -9351,7 +9252,6 @@ void Free_ULTxSwitchingBandPair_r16(ULTxSwitchingBandPair_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ULTxSwitchingBandPair_v1700(Encoder& enc, const ULTxSwitchingBandPair_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_uplinkTxSwitchingPeriod2T2T_r17);
     if (value.has_uplinkTxSwitchingPeriod2T2T_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.uplinkTxSwitchingPeriod2T2T_r17), 0, 2);
@@ -9391,7 +9291,6 @@ void Free_ULTxSwitchingBandPair_v1700(ULTxSwitchingBandPair_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ULTxSwitchingBandPair_r18_UplinkTxSwitchingPeriodForBandPair_r18(Encoder& enc, const ULTxSwitchingBandPair_r18_UplinkTxSwitchingPeriodForBandPair_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_switchingPeriodFor2T_r18);
     if (value.has_switchingPeriodFor2T_r18) {
         enc.WriteConstrainedInteger((std::int64_t)(value.switchingPeriodFor2T_r18), 0, 2);
@@ -9437,7 +9336,6 @@ void Free_ULTxSwitchingBandPair_r18_UplinkTxSwitchingPeriodForBandPair_r18(ULTxS
 // --------------------------------------------------------------------------
 ErrorCode Encode_ULTxSwitchingBandPair_r18(Encoder& enc, const ULTxSwitchingBandPair_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_uplinkTxSwitching_DL_Interruption_r18);
     enc.WriteBit(value.has_uplinkTxSwitchingPeriodUnaffectedBandDualUL_List_r18);
     enc.WriteConstrainedInteger((std::int64_t)(value.bandIndexUL1_r18), 1, 32);
@@ -9538,7 +9436,6 @@ void Free_ULTxSwitchingBandPair_r18(ULTxSwitchingBandPair_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_UplinkTxSwitchingBandParameters_v1700(Encoder& enc, const UplinkTxSwitchingBandParameters_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_uplinkTxSwitching2T2T_PUSCH_TransCoherence_r17);
     enc.WriteConstrainedInteger((std::int64_t)(value.bandIndex_r17), 1, 32);
     if (value.has_uplinkTxSwitching2T2T_PUSCH_TransCoherence_r17) {
@@ -9650,7 +9547,6 @@ void Free_UplinkTxSwitchingAdditionalPeriodDualUL_r18_UplinkTxSwitchingBetweenBa
 // --------------------------------------------------------------------------
 ErrorCode Encode_UplinkTxSwitchingAdditionalPeriodDualUL_r18_UplinkTxSwitchingBetweenBandPairs_r18(Encoder& enc, const UplinkTxSwitchingAdditionalPeriodDualUL_r18_UplinkTxSwitchingBetweenBandPairs_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.bandPairIndex1_r18), 1, 32);
     Encode_UplinkTxSwitchingAdditionalPeriodDualUL_r18_UplinkTxSwitchingBetweenBandPairs_r18_AnotherBandPairOrBand_r18(enc, value.anotherBandPairOrBand_r18);
     return enc.Error();
@@ -9688,7 +9584,6 @@ void Free_UplinkTxSwitchingAdditionalPeriodDualUL_r18_UplinkTxSwitchingBetweenBa
 // --------------------------------------------------------------------------
 ErrorCode Encode_UplinkTxSwitchingAdditionalPeriodDualUL_r18(Encoder& enc, const UplinkTxSwitchingAdditionalPeriodDualUL_r18& value)
 {
-    (void)value;
     Encode_UplinkTxSwitchingAdditionalPeriodDualUL_r18_UplinkTxSwitchingBetweenBandPairs_r18(enc, value.uplinkTxSwitchingBetweenBandPairs_r18);
     enc.WriteConstrainedInteger((std::int64_t)(value.switchingAdditionalPeriodDualUL_r18), 0, 2);
     return enc.Error();
@@ -9790,7 +9685,6 @@ void Free_SwitchingPeriodUnaffectedBandDualUL_r18_PeriodUnaffectedBandDualUL_r18
 // --------------------------------------------------------------------------
 ErrorCode Encode_SwitchingPeriodUnaffectedBandDualUL_r18(Encoder& enc, const SwitchingPeriodUnaffectedBandDualUL_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.bandIndexUnaffected_r18), 1, 32);
     Encode_SwitchingPeriodUnaffectedBandDualUL_r18_PeriodUnaffectedBandDualUL_r18(enc, value.periodUnaffectedBandDualUL_r18);
     return enc.Error();
@@ -9828,7 +9722,6 @@ void Free_SwitchingPeriodUnaffectedBandDualUL_r18(SwitchingPeriodUnaffectedBandD
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandParameters_Eutra(Encoder& enc, const BandParameters_Eutra& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_BandwidthClassDL_EUTRA);
     enc.WriteBit(value.has_ca_BandwidthClassUL_EUTRA);
     enc.WriteConstrainedInteger((std::int64_t)(value.bandEUTRA), 1, 256);
@@ -9931,7 +9824,6 @@ void Free_BandParameters_Eutra(BandParameters_Eutra& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandParameters_Nr(Encoder& enc, const BandParameters_Nr& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_BandwidthClassDL_NR);
     enc.WriteBit(value.has_ca_BandwidthClassUL_NR);
     enc.WriteConstrainedInteger((std::int64_t)(value.bandNR), 1, 1024);
@@ -10098,7 +9990,6 @@ void Free_BandParameters(BandParameters& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandParameters_v1540_Srs_CarrierSwitch_Nr(Encoder& enc, const BandParameters_v1540_Srs_CarrierSwitch_Nr& value)
 {
-    (void)value;
 enc.WriteConstrainedLength(value.srs_SwitchingTimesListNR_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.srs_SwitchingTimesListNR_count; ++i) {
     Encode_SRS_SwitchingTimeNR(enc, value.srs_SwitchingTimesListNR_items[i]);
@@ -10151,7 +10042,6 @@ void Free_BandParameters_v1540_Srs_CarrierSwitch_Nr(BandParameters_v1540_Srs_Car
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandParameters_v1540_Srs_CarrierSwitch_Eutra(Encoder& enc, const BandParameters_v1540_Srs_CarrierSwitch_Eutra& value)
 {
-    (void)value;
 enc.WriteConstrainedLength(value.srs_SwitchingTimesListEUTRA_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.srs_SwitchingTimesListEUTRA_count; ++i) {
     Encode_SRS_SwitchingTimeEUTRA(enc, value.srs_SwitchingTimesListEUTRA_items[i]);
@@ -10268,7 +10158,6 @@ void Free_BandParameters_v1540_Srs_CarrierSwitch(BandParameters_v1540_Srs_Carrie
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandParameters_v1540_Srs_TxSwitch(Encoder& enc, const BandParameters_v1540_Srs_TxSwitch& value)
 {
-    (void)value;
     enc.WriteBit(value.has_txSwitchImpactToRx);
     enc.WriteBit(value.has_txSwitchWithAnotherBand);
     enc.WriteConstrainedInteger((std::int64_t)(value.supportedSRS_TxPortSwitch), 0, 7);
@@ -10327,7 +10216,6 @@ void Free_BandParameters_v1540_Srs_TxSwitch(BandParameters_v1540_Srs_TxSwitch& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandParameters_v1540(Encoder& enc, const BandParameters_v1540& value)
 {
-    (void)value;
     enc.WriteBit(value.has_srs_CarrierSwitch);
     enc.WriteBit(value.has_srs_TxSwitch);
     if (value.has_srs_CarrierSwitch) {
@@ -10378,7 +10266,6 @@ void Free_BandParameters_v1540(BandParameters_v1540& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandParameters_v1610_Srs_TxSwitch_v1610(Encoder& enc, const BandParameters_v1610_Srs_TxSwitch_v1610& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.supportedSRS_TxPortSwitch_v1610), 0, 5);
     return enc.Error();
 }
@@ -10411,7 +10298,6 @@ void Free_BandParameters_v1610_Srs_TxSwitch_v1610(BandParameters_v1610_Srs_TxSwi
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandParameters_v1610(Encoder& enc, const BandParameters_v1610& value)
 {
-    (void)value;
     enc.WriteBit(value.has_srs_TxSwitch_v1610);
     if (value.has_srs_TxSwitch_v1610) {
         Encode_BandParameters_v1610_Srs_TxSwitch_v1610(enc, value.srs_TxSwitch_v1610);
@@ -10450,7 +10336,6 @@ void Free_BandParameters_v1610(BandParameters_v1610& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandParameters_v1710_Srs_AntennaSwitchingBeyond4RX_r17(Encoder& enc, const BandParameters_v1710_Srs_AntennaSwitchingBeyond4RX_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_entryNumberAffectBeyond4Rx_r17);
     enc.WriteBit(value.has_entryNumberSwitchBeyond4Rx_r17);
     enc.WriteFixedBitString(value.supportedSRS_TxPortSwitchBeyond4Rx_r17.bytes, value.supportedSRS_TxPortSwitchBeyond4Rx_r17.bitLength, 11, 11);

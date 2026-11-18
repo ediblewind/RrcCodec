@@ -89,7 +89,6 @@ void Free_RateMatchPattern_PatternType(RateMatchPattern_PatternType& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_RateMatchPattern(Encoder& enc, const RateMatchPattern& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_subcarrierSpacing);
@@ -189,7 +188,6 @@ void Free_RateMatchPattern(RateMatchPattern& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ReportCGI_EUTRA_ExtGroup1(Encoder& enc, const ReportCGI_EUTRA_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_useAutonomousGaps_r16);
     if (value.has_useAutonomousGaps_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.useAutonomousGaps_r16), 0, 0);
@@ -227,7 +225,6 @@ void Free_ReportCGI_EUTRA_ExtGroup1(ReportCGI_EUTRA_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ReportCGI_EUTRA(Encoder& enc, const ReportCGI_EUTRA& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.cellForWhichToReportCGI), 0, 503);
@@ -303,7 +300,6 @@ void Free_ReportCGI_EUTRA(ReportCGI_EUTRA& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ReportSFTD_EUTRA(Encoder& enc, const ReportSFTD_EUTRA& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBool(value.reportSFTD_Meas);
@@ -349,7 +345,6 @@ void Free_ReportSFTD_EUTRA(ReportSFTD_EUTRA& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasReportQuantityUTRA_FDD_r16(Encoder& enc, const MeasReportQuantityUTRA_FDD_r16& value)
 {
-    (void)value;
     enc.WriteBool(value.cpich_RSCP);
     enc.WriteBool(value.cpich_EcN0);
     return enc.Error();
@@ -388,7 +383,6 @@ void Free_MeasReportQuantityUTRA_FDD_r16(MeasReportQuantityUTRA_FDD_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_ExtGroup1(Encoder& enc, const EventTriggerConfigInterRAT_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_reportQuantityUTRA_FDD_r16);
     if (value.has_reportQuantityUTRA_FDD_r16) {
         Encode_MeasReportQuantityUTRA_FDD_r16(enc, value.reportQuantityUTRA_FDD_r16);
@@ -427,7 +421,6 @@ void Free_EventTriggerConfigInterRAT_ExtGroup1(EventTriggerConfigInterRAT_ExtGro
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_ExtGroup2(Encoder& enc, const EventTriggerConfigInterRAT_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_includeCommonLocationInfo_r16);
     enc.WriteBit(value.has_includeBT_Meas_r16);
     enc.WriteBit(value.has_includeWLAN_Meas_r16);
@@ -595,7 +588,6 @@ void Free_SL_MeasReportQuantity_r16(SL_MeasReportQuantity_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_ExtGroup3(Encoder& enc, const EventTriggerConfigInterRAT_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_reportQuantityRelay_r17);
     if (value.has_reportQuantityRelay_r17) {
         Encode_SL_MeasReportQuantity_r16(enc, value.reportQuantityRelay_r17);
@@ -634,7 +626,6 @@ void Free_EventTriggerConfigInterRAT_ExtGroup3(EventTriggerConfigInterRAT_ExtGro
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_ExtGroup4(Encoder& enc, const EventTriggerConfigInterRAT_ExtGroup4& value)
 {
-    (void)value;
     enc.WriteBit(value.has_cellIndividualOffsetList_r18);
     if (value.has_cellIndividualOffsetList_r18) {
 enc.WriteConstrainedLength(value.cellIndividualOffsetList_r18_count, 0u, 0u);
@@ -694,7 +685,6 @@ void Free_EventTriggerConfigInterRAT_ExtGroup4(EventTriggerConfigInterRAT_ExtGro
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasReportQuantity(Encoder& enc, const MeasReportQuantity& value)
 {
-    (void)value;
     enc.WriteBool(value.rsrp);
     enc.WriteBool(value.rsrq);
     enc.WriteBool(value.sinr);
@@ -739,7 +729,6 @@ void Free_MeasReportQuantity(MeasReportQuantity& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_EventId_EventB1(Encoder& enc, const EventTriggerConfigInterRAT_EventId_EventB1& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_MeasTriggerQuantityEUTRA(enc, value.b1_ThresholdEUTRA);
@@ -796,7 +785,6 @@ void Free_EventTriggerConfigInterRAT_EventId_EventB1(EventTriggerConfigInterRAT_
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_EventId_EventB2(Encoder& enc, const EventTriggerConfigInterRAT_EventId_EventB2& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_MeasTriggerQuantity(enc, value.b2_Threshold1);
@@ -924,7 +912,6 @@ void Free_MeasTriggerQuantityUTRA_FDD_r16(MeasTriggerQuantityUTRA_FDD_r16& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_EventId_EventB1_UTRA_FDD_r16(Encoder& enc, const EventTriggerConfigInterRAT_EventId_EventB1_UTRA_FDD_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_MeasTriggerQuantityUTRA_FDD_r16(enc, value.b1_ThresholdUTRA_FDD_r16);
@@ -981,7 +968,6 @@ void Free_EventTriggerConfigInterRAT_EventId_EventB1_UTRA_FDD_r16(EventTriggerCo
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_EventId_EventB2_UTRA_FDD_r16(Encoder& enc, const EventTriggerConfigInterRAT_EventId_EventB2_UTRA_FDD_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_MeasTriggerQuantity(enc, value.b2_Threshold1_r16);
@@ -1137,7 +1123,6 @@ void Free_SL_MeasTriggerQuantity_r16(SL_MeasTriggerQuantity_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_EventId_EventY1_Relay_r17(Encoder& enc, const EventTriggerConfigInterRAT_EventId_EventY1_Relay_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_MeasTriggerQuantity(enc, value.y1_Threshold1_r17);
@@ -1199,7 +1184,6 @@ void Free_EventTriggerConfigInterRAT_EventId_EventY1_Relay_r17(EventTriggerConfi
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_EventId_EventY2_Relay_r17(Encoder& enc, const EventTriggerConfigInterRAT_EventId_EventY2_Relay_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_SL_MeasTriggerQuantity_r16(enc, value.y2_Threshold_Relay_r17);
@@ -1256,7 +1240,6 @@ void Free_EventTriggerConfigInterRAT_EventId_EventY2_Relay_r17(EventTriggerConfi
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18_Z1_Threshold1_Relay_r18(Encoder& enc, const EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18_Z1_Threshold1_Relay_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sd_RSRP_r18);
     Encode_SL_MeasTriggerQuantity_r16(enc, value.sl_RSRP_r18);
     if (value.has_sd_RSRP_r18) {
@@ -1300,7 +1283,6 @@ void Free_EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18_Z1_Threshold1_Rel
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18(Encoder& enc, const EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_EventTriggerConfigInterRAT_EventId_EventZ1_Relay_r18_Z1_Threshold1_Relay_r18(enc, value.z1_Threshold1_Relay_r18);
@@ -1522,7 +1504,6 @@ void Free_EventTriggerConfigInterRAT_EventId(EventTriggerConfigInterRAT_EventId&
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigInterRAT(Encoder& enc, const EventTriggerConfigInterRAT& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3 || value.has_extGroup4;
     enc.WriteBit(any_extension);
     Encode_EventTriggerConfigInterRAT_EventId(enc, value.eventId);
@@ -1695,7 +1676,6 @@ void Free_EventTriggerConfigInterRAT(EventTriggerConfigInterRAT& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PeriodicalReportConfigInterRAT_ExtGroup1(Encoder& enc, const PeriodicalReportConfigInterRAT_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_reportQuantityUTRA_FDD_r16);
     if (value.has_reportQuantityUTRA_FDD_r16) {
         Encode_MeasReportQuantityUTRA_FDD_r16(enc, value.reportQuantityUTRA_FDD_r16);
@@ -1734,7 +1714,6 @@ void Free_PeriodicalReportConfigInterRAT_ExtGroup1(PeriodicalReportConfigInterRA
 // --------------------------------------------------------------------------
 ErrorCode Encode_PeriodicalReportConfigInterRAT_ExtGroup2(Encoder& enc, const PeriodicalReportConfigInterRAT_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_includeCommonLocationInfo_r16);
     enc.WriteBit(value.has_includeBT_Meas_r16);
     enc.WriteBit(value.has_includeWLAN_Meas_r16);
@@ -1808,7 +1787,6 @@ void Free_PeriodicalReportConfigInterRAT_ExtGroup2(PeriodicalReportConfigInterRA
 // --------------------------------------------------------------------------
 ErrorCode Encode_PeriodicalReportConfigInterRAT_ExtGroup3(Encoder& enc, const PeriodicalReportConfigInterRAT_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_reportQuantityRelay_r17);
     if (value.has_reportQuantityRelay_r17) {
         Encode_SL_MeasReportQuantity_r16(enc, value.reportQuantityRelay_r17);
@@ -1847,7 +1825,6 @@ void Free_PeriodicalReportConfigInterRAT_ExtGroup3(PeriodicalReportConfigInterRA
 // --------------------------------------------------------------------------
 ErrorCode Encode_PeriodicalReportConfigInterRAT(Encoder& enc, const PeriodicalReportConfigInterRAT& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.reportInterval), 0, 13);
@@ -2116,7 +2093,6 @@ void Free_ReportConfigInterRAT_ReportType(ReportConfigInterRAT_ReportType& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_ReportConfigInterRAT(Encoder& enc, const ReportConfigInterRAT& value)
 {
-    (void)value;
     Encode_ReportConfigInterRAT_ReportType(enc, value.reportType);
     return enc.Error();
 }
@@ -2148,7 +2124,6 @@ void Free_ReportConfigInterRAT(ReportConfigInterRAT& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CellIndividualOffsetList_EUTRA_r18(Encoder& enc, const CellIndividualOffsetList_EUTRA_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.physCellId_r18), 0, 503);
     enc.WriteConstrainedInteger((std::int64_t)(value.cellIndividualOffset_r18), 0, 30);
     return enc.Error();
@@ -2187,7 +2162,6 @@ void Free_CellIndividualOffsetList_EUTRA_r18(CellIndividualOffsetList_EUTRA_r18&
 // --------------------------------------------------------------------------
 ErrorCode Encode_ReportCGI_ExtGroup1(Encoder& enc, const ReportCGI_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_useAutonomousGaps_r16);
     if (value.has_useAutonomousGaps_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.useAutonomousGaps_r16), 0, 0);
@@ -2225,7 +2199,6 @@ void Free_ReportCGI_ExtGroup1(ReportCGI_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ReportCGI(Encoder& enc, const ReportCGI& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.cellForWhichToReportCGI), 0, 1007);
@@ -2301,7 +2274,6 @@ void Free_ReportCGI(ReportCGI& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ReportSFTD_NR_ExtGroup1(Encoder& enc, const ReportSFTD_NR_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_reportSFTD_NeighMeas);
     enc.WriteBit(value.has_drx_SFTD_NeighMeas);
     enc.WriteBit(value.has_cellsForWhichToReportSFTD);
@@ -2384,7 +2356,6 @@ void Free_ReportSFTD_NR_ExtGroup1(ReportSFTD_NR_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ReportSFTD_NR(Encoder& enc, const ReportSFTD_NR& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBool(value.reportSFTD_Meas);
@@ -2466,7 +2437,6 @@ void Free_ReportSFTD_NR(ReportSFTD_NR& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CondTriggerConfig_r16_ExtGroup1(Encoder& enc, const CondTriggerConfig_r16_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_nesEvent_r18);
     if (value.has_nesEvent_r18) {
         enc.WriteConstrainedInteger((std::int64_t)(value.nesEvent_r18), 0, 0);
@@ -2581,7 +2551,6 @@ void Free_MeasTriggerQuantityOffset(MeasTriggerQuantityOffset& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CondTriggerConfig_r16_CondEventId_CondEventA3(Encoder& enc, const CondTriggerConfig_r16_CondEventId_CondEventA3& value)
 {
-    (void)value;
     Encode_MeasTriggerQuantityOffset(enc, value.a3_Offset);
     enc.WriteConstrainedInteger((std::int64_t)(value.hysteresis), 0, 30);
     enc.WriteConstrainedInteger((std::int64_t)(value.timeToTrigger), 0, 15);
@@ -2625,7 +2594,6 @@ void Free_CondTriggerConfig_r16_CondEventId_CondEventA3(CondTriggerConfig_r16_Co
 // --------------------------------------------------------------------------
 ErrorCode Encode_CondTriggerConfig_r16_CondEventId_CondEventA5(Encoder& enc, const CondTriggerConfig_r16_CondEventId_CondEventA5& value)
 {
-    (void)value;
     Encode_MeasTriggerQuantity(enc, value.a5_Threshold1);
     Encode_MeasTriggerQuantity(enc, value.a5_Threshold2);
     enc.WriteConstrainedInteger((std::int64_t)(value.hysteresis), 0, 30);
@@ -2674,7 +2642,6 @@ void Free_CondTriggerConfig_r16_CondEventId_CondEventA5(CondTriggerConfig_r16_Co
 // --------------------------------------------------------------------------
 ErrorCode Encode_CondTriggerConfig_r16_CondEventId_CondEventA4_r17(Encoder& enc, const CondTriggerConfig_r16_CondEventId_CondEventA4_r17& value)
 {
-    (void)value;
     Encode_MeasTriggerQuantity(enc, value.a4_Threshold_r17);
     enc.WriteConstrainedInteger((std::int64_t)(value.hysteresis_r17), 0, 30);
     enc.WriteConstrainedInteger((std::int64_t)(value.timeToTrigger_r17), 0, 15);
@@ -2718,7 +2685,6 @@ void Free_CondTriggerConfig_r16_CondEventId_CondEventA4_r17(CondTriggerConfig_r1
 // --------------------------------------------------------------------------
 ErrorCode Encode_CondTriggerConfig_r16_CondEventId_CondEventD1_r17(Encoder& enc, const CondTriggerConfig_r16_CondEventId_CondEventD1_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.distanceThreshFromReference1_r17), 0, 65525);
     enc.WriteConstrainedInteger((std::int64_t)(value.distanceThreshFromReference2_r17), 0, 65525);
     enc.WriteSemiConstrainedOctetString(value.referenceLocation1_r17.bytes, value.referenceLocation1_r17.length, 0, 0xFFFFFFFFu);
@@ -2791,7 +2757,6 @@ void Free_CondTriggerConfig_r16_CondEventId_CondEventD1_r17(CondTriggerConfig_r1
 // --------------------------------------------------------------------------
 ErrorCode Encode_CondTriggerConfig_r16_CondEventId_CondEventT1_r17(Encoder& enc, const CondTriggerConfig_r16_CondEventId_CondEventT1_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.t1_Threshold_r17), 0, 549755813887);
     enc.WriteConstrainedInteger((std::int64_t)(value.duration_r17), 1, 6000);
     return enc.Error();
@@ -2830,7 +2795,6 @@ void Free_CondTriggerConfig_r16_CondEventId_CondEventT1_r17(CondTriggerConfig_r1
 // --------------------------------------------------------------------------
 ErrorCode Encode_CondTriggerConfig_r16_CondEventId_CondEventD2_r18(Encoder& enc, const CondTriggerConfig_r16_CondEventId_CondEventD2_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.distanceThreshFromReference1_r18), 0, 65535);
     enc.WriteConstrainedInteger((std::int64_t)(value.distanceThreshFromReference2_r18), 0, 65535);
     enc.WriteSemiConstrainedOctetString(value.referenceLocation2_r18.bytes, value.referenceLocation2_r18.length, 0, 0xFFFFFFFFu);
@@ -3042,7 +3006,6 @@ void Free_CondTriggerConfig_r16_CondEventId(CondTriggerConfig_r16_CondEventId& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_CondTriggerConfig_r16(Encoder& enc, const CondTriggerConfig_r16& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     Encode_CondTriggerConfig_r16_CondEventId(enc, value.condEventId);
@@ -3123,7 +3086,6 @@ void Free_CondTriggerConfig_r16(CondTriggerConfig_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_ExtGroup3(Encoder& enc, const EventTriggerConfig_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_numberOfTriggeringCells_r18);
     enc.WriteBit(value.has_cellIndividualOffsetList_r18);
     enc.WriteBit(value.has_eventX1_SD_Threshold1_r18);
@@ -3220,7 +3182,6 @@ void Free_EventTriggerConfig_ExtGroup3(EventTriggerConfig_ExtGroup3& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasRSSI_ReportConfig_r16(Encoder& enc, const MeasRSSI_ReportConfig_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_channelOccupancyThreshold_r16);
     if (value.has_channelOccupancyThreshold_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.channelOccupancyThreshold_r16), 0, 76);
@@ -3260,7 +3221,6 @@ void Free_MeasRSSI_ReportConfig_r16(MeasRSSI_ReportConfig_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_ExtGroup1(Encoder& enc, const EventTriggerConfig_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measRSSI_ReportConfig_r16);
     enc.WriteBit(value.has_useT312_r16);
     enc.WriteBit(value.has_includeCommonLocationInfo_r16);
@@ -3359,7 +3319,6 @@ void Free_EventTriggerConfig_ExtGroup1(EventTriggerConfig_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_ExtGroup2(Encoder& enc, const EventTriggerConfig_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_coarseLocationRequest_r17);
     enc.WriteBit(value.has_reportQuantityRelay_r17);
     if (value.has_coarseLocationRequest_r17) {
@@ -3409,7 +3368,6 @@ void Free_EventTriggerConfig_ExtGroup2(EventTriggerConfig_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA1(Encoder& enc, const EventTriggerConfig_EventId_EventA1& value)
 {
-    (void)value;
     Encode_MeasTriggerQuantity(enc, value.a1_Threshold);
     enc.WriteBool(value.reportOnLeave);
     enc.WriteConstrainedInteger((std::int64_t)(value.hysteresis), 0, 30);
@@ -3459,7 +3417,6 @@ void Free_EventTriggerConfig_EventId_EventA1(EventTriggerConfig_EventId_EventA1&
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA2(Encoder& enc, const EventTriggerConfig_EventId_EventA2& value)
 {
-    (void)value;
     Encode_MeasTriggerQuantity(enc, value.a2_Threshold);
     enc.WriteBool(value.reportOnLeave);
     enc.WriteConstrainedInteger((std::int64_t)(value.hysteresis), 0, 30);
@@ -3509,7 +3466,6 @@ void Free_EventTriggerConfig_EventId_EventA2(EventTriggerConfig_EventId_EventA2&
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA3(Encoder& enc, const EventTriggerConfig_EventId_EventA3& value)
 {
-    (void)value;
     Encode_MeasTriggerQuantityOffset(enc, value.a3_Offset);
     enc.WriteBool(value.reportOnLeave);
     enc.WriteConstrainedInteger((std::int64_t)(value.hysteresis), 0, 30);
@@ -3565,7 +3521,6 @@ void Free_EventTriggerConfig_EventId_EventA3(EventTriggerConfig_EventId_EventA3&
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA4(Encoder& enc, const EventTriggerConfig_EventId_EventA4& value)
 {
-    (void)value;
     Encode_MeasTriggerQuantity(enc, value.a4_Threshold);
     enc.WriteBool(value.reportOnLeave);
     enc.WriteConstrainedInteger((std::int64_t)(value.hysteresis), 0, 30);
@@ -3621,7 +3576,6 @@ void Free_EventTriggerConfig_EventId_EventA4(EventTriggerConfig_EventId_EventA4&
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA5(Encoder& enc, const EventTriggerConfig_EventId_EventA5& value)
 {
-    (void)value;
     Encode_MeasTriggerQuantity(enc, value.a5_Threshold1);
     Encode_MeasTriggerQuantity(enc, value.a5_Threshold2);
     enc.WriteBool(value.reportOnLeave);
@@ -3682,7 +3636,6 @@ void Free_EventTriggerConfig_EventId_EventA5(EventTriggerConfig_EventId_EventA5&
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA6(Encoder& enc, const EventTriggerConfig_EventId_EventA6& value)
 {
-    (void)value;
     Encode_MeasTriggerQuantityOffset(enc, value.a6_Offset);
     enc.WriteBool(value.reportOnLeave);
     enc.WriteConstrainedInteger((std::int64_t)(value.hysteresis), 0, 30);
@@ -3738,7 +3691,6 @@ void Free_EventTriggerConfig_EventId_EventA6(EventTriggerConfig_EventId_EventA6&
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventX1_r17(Encoder& enc, const EventTriggerConfig_EventId_EventX1_r17& value)
 {
-    (void)value;
     Encode_SL_MeasTriggerQuantity_r16(enc, value.x1_Threshold1_Relay_r17);
     Encode_MeasTriggerQuantity(enc, value.x1_Threshold2_r17);
     enc.WriteBool(value.reportOnLeave_r17);
@@ -3799,7 +3751,6 @@ void Free_EventTriggerConfig_EventId_EventX1_r17(EventTriggerConfig_EventId_Even
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventX2_r17(Encoder& enc, const EventTriggerConfig_EventId_EventX2_r17& value)
 {
-    (void)value;
     Encode_SL_MeasTriggerQuantity_r16(enc, value.x2_Threshold_Relay_r17);
     enc.WriteBool(value.reportOnLeave_r17);
     enc.WriteConstrainedInteger((std::int64_t)(value.hysteresis_r17), 0, 30);
@@ -3849,7 +3800,6 @@ void Free_EventTriggerConfig_EventId_EventX2_r17(EventTriggerConfig_EventId_Even
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventD1_r17(Encoder& enc, const EventTriggerConfig_EventId_EventD1_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.distanceThreshFromReference1_r17), 1, 65525);
     enc.WriteConstrainedInteger((std::int64_t)(value.distanceThreshFromReference2_r17), 1, 65525);
     enc.WriteSemiConstrainedOctetString(value.referenceLocation1_r17.bytes, value.referenceLocation1_r17.length, 0, 0xFFFFFFFFu);
@@ -3928,7 +3878,6 @@ void Free_EventTriggerConfig_EventId_EventD1_r17(EventTriggerConfig_EventId_Even
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventH1_r18(Encoder& enc, const EventTriggerConfig_EventId_EventH1_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.h1_Threshold_r18), -420, 10000);
     enc.WriteConstrainedInteger((std::int64_t)(value.h1_Hysteresis_r18), 0, 64);
     enc.WriteBool(value.reportOnLeave_r18);
@@ -3991,7 +3940,6 @@ void Free_EventTriggerConfig_EventId_EventH1_r18(EventTriggerConfig_EventId_Even
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventH2_r18(Encoder& enc, const EventTriggerConfig_EventId_EventH2_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.h2_Threshold_r18), -420, 10000);
     enc.WriteConstrainedInteger((std::int64_t)(value.h2_Hysteresis_r18), 0, 64);
     enc.WriteBool(value.reportOnLeave_r18);
@@ -4054,7 +4002,6 @@ void Free_EventTriggerConfig_EventId_EventH2_r18(EventTriggerConfig_EventId_Even
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA3H1_r18(Encoder& enc, const EventTriggerConfig_EventId_EventA3H1_r18& value)
 {
-    (void)value;
     Encode_MeasTriggerQuantityOffset(enc, value.a3_Offset_r18);
     enc.WriteBool(value.reportOnLeave_r18);
     enc.WriteConstrainedInteger((std::int64_t)(value.a3_Hysteresis_r18), 0, 30);
@@ -4134,7 +4081,6 @@ void Free_EventTriggerConfig_EventId_EventA3H1_r18(EventTriggerConfig_EventId_Ev
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA3H2_r18(Encoder& enc, const EventTriggerConfig_EventId_EventA3H2_r18& value)
 {
-    (void)value;
     Encode_MeasTriggerQuantityOffset(enc, value.a3_Offset_r18);
     enc.WriteBool(value.reportOnLeave_r18);
     enc.WriteConstrainedInteger((std::int64_t)(value.a3_Hysteresis_r18), 0, 30);
@@ -4214,7 +4160,6 @@ void Free_EventTriggerConfig_EventId_EventA3H2_r18(EventTriggerConfig_EventId_Ev
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA4H1_r18(Encoder& enc, const EventTriggerConfig_EventId_EventA4H1_r18& value)
 {
-    (void)value;
     Encode_MeasTriggerQuantity(enc, value.a4_Threshold_r18);
     enc.WriteBool(value.reportOnLeave_r18);
     enc.WriteConstrainedInteger((std::int64_t)(value.a4_Hysteresis_r18), 0, 30);
@@ -4294,7 +4239,6 @@ void Free_EventTriggerConfig_EventId_EventA4H1_r18(EventTriggerConfig_EventId_Ev
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA4H2_r18(Encoder& enc, const EventTriggerConfig_EventId_EventA4H2_r18& value)
 {
-    (void)value;
     Encode_MeasTriggerQuantity(enc, value.a4_Threshold_r18);
     enc.WriteBool(value.reportOnLeave_r18);
     enc.WriteConstrainedInteger((std::int64_t)(value.a4_Hysteresis_r18), 0, 30);
@@ -4374,7 +4318,6 @@ void Free_EventTriggerConfig_EventId_EventA4H2_r18(EventTriggerConfig_EventId_Ev
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA5H1_r18(Encoder& enc, const EventTriggerConfig_EventId_EventA5H1_r18& value)
 {
-    (void)value;
     Encode_MeasTriggerQuantity(enc, value.a5_Threshold1_r18);
     Encode_MeasTriggerQuantity(enc, value.a5_Threshold2_r18);
     enc.WriteBool(value.reportOnLeave_r18);
@@ -4459,7 +4402,6 @@ void Free_EventTriggerConfig_EventId_EventA5H1_r18(EventTriggerConfig_EventId_Ev
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventA5H2_r18(Encoder& enc, const EventTriggerConfig_EventId_EventA5H2_r18& value)
 {
-    (void)value;
     Encode_MeasTriggerQuantity(enc, value.a5_Threshold1_r18);
     Encode_MeasTriggerQuantity(enc, value.a5_Threshold2_r18);
     enc.WriteBool(value.reportOnLeave_r18);
@@ -4544,7 +4486,6 @@ void Free_EventTriggerConfig_EventId_EventA5H2_r18(EventTriggerConfig_EventId_Ev
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig_EventId_EventD2_r18(Encoder& enc, const EventTriggerConfig_EventId_EventD2_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.distanceThreshFromReference1_r18), 1, 65535);
     enc.WriteConstrainedInteger((std::int64_t)(value.distanceThreshFromReference2_r18), 1, 65535);
     enc.WriteSemiConstrainedOctetString(value.referenceLocation2_r18.bytes, value.referenceLocation2_r18.length, 0, 0xFFFFFFFFu);
@@ -4882,7 +4823,6 @@ void Free_EventTriggerConfig_EventId(EventTriggerConfig_EventId& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfig(Encoder& enc, const EventTriggerConfig& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_reportQuantityRS_Indexes);
@@ -5074,7 +5014,6 @@ void Free_EventTriggerConfig(EventTriggerConfig& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_UL_DelayValueConfig_r16(Encoder& enc, const UL_DelayValueConfig_r16& value)
 {
-    (void)value;
 enc.WriteConstrainedLength(value.delay_DRBlist_r16_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.delay_DRBlist_r16_count; ++i) {
     enc.WriteConstrainedInteger((std::int64_t)(value.delay_DRBlist_r16_items[i]), 1, 32);
@@ -5191,7 +5130,6 @@ void Free_SetupRelease_UL_DelayValueConfig_r16(SetupRelease_UL_DelayValueConfig_
 // --------------------------------------------------------------------------
 ErrorCode Encode_PeriodicalReportConfig_ExtGroup1(Encoder& enc, const PeriodicalReportConfig_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measRSSI_ReportConfig_r16);
     enc.WriteBit(value.has_includeCommonLocationInfo_r16);
     enc.WriteBit(value.has_includeBT_Meas_r16);
@@ -5300,7 +5238,6 @@ void Free_PeriodicalReportConfig_ExtGroup1(PeriodicalReportConfig_ExtGroup1& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_UL_ExcessDelayConfig_r17(Encoder& enc, const UL_ExcessDelayConfig_r17& value)
 {
-    (void)value;
 enc.WriteConstrainedLength(value.excessDelay_DRBlist_r17_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.excessDelay_DRBlist_r17_count; ++i) {
     Encode_ExcessDelay_DRB_IdentityInfo_r17(enc, value.excessDelay_DRBlist_r17_items[i]);
@@ -5416,7 +5353,6 @@ void Free_SetupRelease_UL_ExcessDelayConfig_r17(SetupRelease_UL_ExcessDelayConfi
 // --------------------------------------------------------------------------
 ErrorCode Encode_PeriodicalReportConfig_ExtGroup2(Encoder& enc, const PeriodicalReportConfig_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ul_ExcessDelayConfig_r17);
     enc.WriteBit(value.has_coarseLocationRequest_r17);
     enc.WriteBit(value.has_reportQuantityRelay_r17);
@@ -5478,7 +5414,6 @@ void Free_PeriodicalReportConfig_ExtGroup2(PeriodicalReportConfig_ExtGroup2& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_PeriodicalReportConfig(Encoder& enc, const PeriodicalReportConfig& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_reportQuantityRS_Indexes);
@@ -5703,7 +5638,6 @@ void Free_MeasTriggerQuantityCLI_r16(MeasTriggerQuantityCLI_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CLI_EventTriggerConfig_r16_EventId_r16_EventI1_r16(Encoder& enc, const CLI_EventTriggerConfig_r16_EventId_r16_EventI1_r16& value)
 {
-    (void)value;
     Encode_MeasTriggerQuantityCLI_r16(enc, value.i1_Threshold_r16);
     enc.WriteBool(value.reportOnLeave_r16);
     enc.WriteConstrainedInteger((std::int64_t)(value.hysteresis_r16), 0, 30);
@@ -5846,7 +5780,6 @@ void Free_CLI_EventTriggerConfig_r16_EventId_r16(CLI_EventTriggerConfig_r16_Even
 // --------------------------------------------------------------------------
 ErrorCode Encode_CLI_EventTriggerConfig_r16(Encoder& enc, const CLI_EventTriggerConfig_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_CLI_EventTriggerConfig_r16_EventId_r16(enc, value.eventId_r16);
@@ -5903,7 +5836,6 @@ void Free_CLI_EventTriggerConfig_r16(CLI_EventTriggerConfig_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CLI_PeriodicalReportConfig_r16(Encoder& enc, const CLI_PeriodicalReportConfig_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.reportInterval_r16), 0, 13);
@@ -5961,7 +5893,6 @@ void Free_CLI_PeriodicalReportConfig_r16(CLI_PeriodicalReportConfig_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_RxTxPeriodical_r17(Encoder& enc, const RxTxPeriodical_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_rxTxReportInterval_r17);
@@ -6014,7 +5945,6 @@ void Free_RxTxPeriodical_r17(RxTxPeriodical_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ReportOnScellActivation_r18(Encoder& enc, const ReportOnScellActivation_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.rsType), 0, 1);
     Encode_MeasReportQuantity(enc, value.reportQuantityRS_Indexes);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNrofRS_IndexesToReport), 1, 32);
@@ -6244,7 +6174,6 @@ void Free_ReportConfigNR_ReportType(ReportConfigNR_ReportType& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ReportConfigNR(Encoder& enc, const ReportConfigNR& value)
 {
-    (void)value;
     Encode_ReportConfigNR_ReportType(enc, value.reportType);
     return enc.Error();
 }
@@ -6276,7 +6205,6 @@ void Free_ReportConfigNR(ReportConfigNR& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CellIndividualOffsetList_r18(Encoder& enc, const CellIndividualOffsetList_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.physCellId_r18), 0, 1007);
     Encode_Q_OffsetRangeList(enc, value.cellIndividualOffset_r18);
     return enc.Error();
@@ -6314,7 +6242,6 @@ void Free_CellIndividualOffsetList_r18(CellIndividualOffsetList_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasReportQuantity_r16(Encoder& enc, const MeasReportQuantity_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBool(value.cbr_r16);
@@ -6354,7 +6281,6 @@ void Free_MeasReportQuantity_r16(MeasReportQuantity_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigNR_SL_r16_EventId_r16_EventC1(Encoder& enc, const EventTriggerConfigNR_SL_r16_EventId_r16_EventC1& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.c1_Threshold_r16), 0, 100);
     enc.WriteConstrainedInteger((std::int64_t)(value.hysteresis_r16), 0, 30);
     enc.WriteConstrainedInteger((std::int64_t)(value.timeToTrigger_r16), 0, 15);
@@ -6399,7 +6325,6 @@ void Free_EventTriggerConfigNR_SL_r16_EventId_r16_EventC1(EventTriggerConfigNR_S
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigNR_SL_r16_EventId_r16_EventC2_r16(Encoder& enc, const EventTriggerConfigNR_SL_r16_EventId_r16_EventC2_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.c2_Threshold_r16), 0, 100);
     enc.WriteConstrainedInteger((std::int64_t)(value.hysteresis_r16), 0, 30);
     enc.WriteConstrainedInteger((std::int64_t)(value.timeToTrigger_r16), 0, 15);
@@ -6552,7 +6477,6 @@ void Free_EventTriggerConfigNR_SL_r16_EventId_r16(EventTriggerConfigNR_SL_r16_Ev
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventTriggerConfigNR_SL_r16(Encoder& enc, const EventTriggerConfigNR_SL_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_EventTriggerConfigNR_SL_r16_EventId_r16(enc, value.eventId_r16);
@@ -6608,7 +6532,6 @@ void Free_EventTriggerConfigNR_SL_r16(EventTriggerConfigNR_SL_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PeriodicalReportConfigNR_SL_r16(Encoder& enc, const PeriodicalReportConfigNR_SL_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.reportInterval_r16), 0, 13);
@@ -6723,7 +6646,6 @@ void Free_ReportConfigNR_SL_r16_ReportType_r16(ReportConfigNR_SL_r16_ReportType_
 // --------------------------------------------------------------------------
 ErrorCode Encode_ReportConfigNR_SL_r16(Encoder& enc, const ReportConfigNR_SL_r16& value)
 {
-    (void)value;
     Encode_ReportConfigNR_SL_r16_ReportType_r16(enc, value.reportType_r16);
     return enc.Error();
 }
@@ -6870,7 +6792,6 @@ void Free_ReportConfigToAddMod_ReportConfig(ReportConfigToAddMod_ReportConfig& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_ReportConfigToAddMod(Encoder& enc, const ReportConfigToAddMod& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.reportConfigId), 1, 64);
     Encode_ReportConfigToAddMod_ReportConfig(enc, value.reportConfig);
     return enc.Error();
@@ -6908,7 +6829,6 @@ void Free_ReportConfigToAddMod(ReportConfigToAddMod& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DL_AM_RLC_v1610(Encoder& enc, const DL_AM_RLC_v1610& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_t_StatusProhibit_v1610);
@@ -6955,7 +6875,6 @@ void Free_DL_AM_RLC_v1610(DL_AM_RLC_v1610& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_RLC_Config_v1610(Encoder& enc, const RLC_Config_v1610& value)
 {
-    (void)value;
     Encode_DL_AM_RLC_v1610(enc, value.dl_AM_RLC_v1610);
     return enc.Error();
 }
@@ -6987,7 +6906,6 @@ void Free_RLC_Config_v1610(RLC_Config_v1610& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_RLC_BearerConfig_ExtGroup1(Encoder& enc, const RLC_BearerConfig_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_rlc_Config_v1610);
     if (value.has_rlc_Config_v1610) {
         Encode_RLC_Config_v1610(enc, value.rlc_Config_v1610);
@@ -7026,7 +6944,6 @@ void Free_RLC_BearerConfig_ExtGroup1(RLC_BearerConfig_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MulticastRLC_BearerConfig_r17(Encoder& enc, const MulticastRLC_BearerConfig_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_isPTM_Entity_r17);
     enc.WriteConstrainedInteger((std::int64_t)(value.servedMBS_RadioBearer_r17), 1, 512);
     if (value.has_isPTM_Entity_r17) {
@@ -7070,7 +6987,6 @@ void Free_MulticastRLC_BearerConfig_r17(MulticastRLC_BearerConfig_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DL_AM_RLC_v1700(Encoder& enc, const DL_AM_RLC_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_t_ReassemblyExt_r17);
     if (value.has_t_ReassemblyExt_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.t_ReassemblyExt_r17), 0, 7);
@@ -7110,7 +7026,6 @@ void Free_DL_AM_RLC_v1700(DL_AM_RLC_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DL_UM_RLC_v1700(Encoder& enc, const DL_UM_RLC_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_t_ReassemblyExt_r17);
     if (value.has_t_ReassemblyExt_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.t_ReassemblyExt_r17), 0, 7);
@@ -7150,7 +7065,6 @@ void Free_DL_UM_RLC_v1700(DL_UM_RLC_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_RLC_Config_v1700(Encoder& enc, const RLC_Config_v1700& value)
 {
-    (void)value;
     Encode_DL_AM_RLC_v1700(enc, value.dl_AM_RLC_v1700);
     Encode_DL_UM_RLC_v1700(enc, value.dl_UM_RLC_v1700);
     return enc.Error();
@@ -7187,7 +7101,6 @@ void Free_RLC_Config_v1700(RLC_Config_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_RLC_BearerConfig_ExtGroup2(Encoder& enc, const RLC_BearerConfig_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_rlc_Config_v1700);
     enc.WriteBit(value.has_logicalChannelIdentityExt_r17);
     enc.WriteBit(value.has_multicastRLC_BearerConfig_r17);
@@ -7330,7 +7243,6 @@ void Free_RLC_BearerConfig_ServedRadioBearer(RLC_BearerConfig_ServedRadioBearer&
 // --------------------------------------------------------------------------
 ErrorCode Encode_RLC_BearerConfig(Encoder& enc, const RLC_BearerConfig& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_servedRadioBearer);
@@ -7476,7 +7388,6 @@ void Free_RLC_BearerConfig(RLC_BearerConfig& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SCellActivationRS_Config_r17(Encoder& enc, const SCellActivationRS_Config_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_gapBetweenBursts_r17);
@@ -7541,7 +7452,6 @@ void Free_SCellActivationRS_Config_r17(SCellActivationRS_Config_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SchedulingRequestToAddMod(Encoder& enc, const SchedulingRequestToAddMod& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sr_ProhibitTimer);
     enc.WriteConstrainedInteger((std::int64_t)(value.schedulingRequestId), 0, 7);
     if (value.has_sr_ProhibitTimer) {
@@ -7593,7 +7503,6 @@ void Free_SchedulingRequestToAddMod(SchedulingRequestToAddMod& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SchedulingRequestToAddModExt_v1700(Encoder& enc, const SchedulingRequestToAddModExt_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sr_ProhibitTimer_v1700);
     if (value.has_sr_ProhibitTimer_v1700) {
         enc.WriteConstrainedInteger((std::int64_t)(value.sr_ProhibitTimer_v1700), 0, 15);
@@ -7836,7 +7745,6 @@ void Free_SchedulingRequestResourceConfig_PeriodicityAndOffset(SchedulingRequest
 // --------------------------------------------------------------------------
 ErrorCode Encode_SchedulingRequestResourceConfig(Encoder& enc, const SchedulingRequestResourceConfig& value)
 {
-    (void)value;
     enc.WriteBit(value.has_periodicityAndOffset);
     enc.WriteBit(value.has_resource);
     enc.WriteConstrainedInteger((std::int64_t)(value.schedulingRequestResourceId), 1, 8);
@@ -7900,7 +7808,6 @@ void Free_SchedulingRequestResourceConfig(SchedulingRequestResourceConfig& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_SchedulingRequestResourceConfigExt_v1610(Encoder& enc, const SchedulingRequestResourceConfigExt_v1610& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_phy_PriorityIndex_r16);
@@ -8024,7 +7931,6 @@ void Free_SchedulingRequestResourceConfigExt_v1700_PeriodicityAndOffset_r17(Sche
 // --------------------------------------------------------------------------
 ErrorCode Encode_SchedulingRequestResourceConfigExt_v1700(Encoder& enc, const SchedulingRequestResourceConfigExt_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_periodicityAndOffset_r17);
     if (value.has_periodicityAndOffset_r17) {
         Encode_SchedulingRequestResourceConfigExt_v1700_PeriodicityAndOffset_r17(enc, value.periodicityAndOffset_r17);
@@ -8063,7 +7969,6 @@ void Free_SchedulingRequestResourceConfigExt_v1700(SchedulingRequestResourceConf
 // --------------------------------------------------------------------------
 ErrorCode Encode_SCS_SpecificCarrier_ExtGroup1(Encoder& enc, const SCS_SpecificCarrier_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_txDirectCurrentLocation);
     if (value.has_txDirectCurrentLocation) {
         enc.WriteConstrainedInteger((std::int64_t)(value.txDirectCurrentLocation), 0, 4095);
@@ -8103,7 +8008,6 @@ void Free_SCS_SpecificCarrier_ExtGroup1(SCS_SpecificCarrier_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SCS_SpecificCarrier(Encoder& enc, const SCS_SpecificCarrier& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.offsetToCarrier), 0, 2199);
@@ -8191,7 +8095,6 @@ void Free_SCS_SpecificCarrier(SCS_SpecificCarrier& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16_NrofCandidates_CI_r16(Encoder& enc, const SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16_NrofCandidates_CI_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_aggregationLevel1_r16);
     enc.WriteBit(value.has_aggregationLevel2_r16);
     enc.WriteBit(value.has_aggregationLevel4_r16);
@@ -8283,7 +8186,6 @@ void Free_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16_Nr
 // --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16(Encoder& enc, const SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16_NrofCandidates_CI_r16(enc, value.nrofCandidates_CI_r16);
@@ -8322,7 +8224,6 @@ void Free_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_4_r16(Se
 // --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_5_r16_NrofCandidates_IAB_r16(Encoder& enc, const SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_5_r16_NrofCandidates_IAB_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_aggregationLevel1_r16);
     enc.WriteBit(value.has_aggregationLevel2_r16);
     enc.WriteBit(value.has_aggregationLevel4_r16);
@@ -8414,7 +8315,6 @@ void Free_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_5_r16_Nr
 // --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_5_r16(Encoder& enc, const SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_5_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_SearchSpaceExt_r16_SearchSpaceType_r16_Common_r16_Dci_Format2_5_r16_NrofCandidates_IAB_r16(enc, value.nrofCandidates_IAB_r16);

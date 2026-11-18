@@ -24,7 +24,6 @@ namespace v1810 {
 // --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersCommon_ExtGroup1(Encoder& enc, const MAC_ParametersCommon_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_recommendedBitRate);
     enc.WriteBit(value.has_recommendedBitRateQuery);
     if (value.has_recommendedBitRate) {
@@ -73,7 +72,6 @@ void Free_MAC_ParametersCommon_ExtGroup1(MAC_ParametersCommon_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersCommon_ExtGroup2(Encoder& enc, const MAC_ParametersCommon_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_recommendedBitRateMultiplier_r16);
     enc.WriteBit(value.has_preEmptiveBSR_r16);
     enc.WriteBit(value.has_autonomousTransmission_r16);
@@ -210,7 +208,6 @@ void Free_MAC_ParametersCommon_ExtGroup2(MAC_ParametersCommon_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersCommon_ExtGroup3(Encoder& enc, const MAC_ParametersCommon_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_spCell_BFR_CBRA_r16);
     if (value.has_spCell_BFR_CBRA_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.spCell_BFR_CBRA_r16), 0, 0);
@@ -248,7 +245,6 @@ void Free_MAC_ParametersCommon_ExtGroup3(MAC_ParametersCommon_ExtGroup3& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersCommon_ExtGroup4(Encoder& enc, const MAC_ParametersCommon_ExtGroup4& value)
 {
-    (void)value;
     enc.WriteBit(value.has_srs_ResourceId_Ext_r16);
     if (value.has_srs_ResourceId_Ext_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.srs_ResourceId_Ext_r16), 0, 0);
@@ -286,7 +282,6 @@ void Free_MAC_ParametersCommon_ExtGroup4(MAC_ParametersCommon_ExtGroup4& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersCommon_ExtGroup5(Encoder& enc, const MAC_ParametersCommon_ExtGroup5& value)
 {
-    (void)value;
     enc.WriteBit(value.has_enhancedUuDRX_forSidelink_r17);
     enc.WriteBit(value.has_mg_ActivationRequestPRS_Meas_r17);
     enc.WriteBit(value.has_mg_ActivationCommPRS_Meas_r17);
@@ -456,7 +451,6 @@ void Free_MAC_ParametersCommon_ExtGroup5(MAC_ParametersCommon_ExtGroup5& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersCommon_ExtGroup6(Encoder& enc, const MAC_ParametersCommon_ExtGroup6& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sr_TriggeredByTA_ReportATG_r18);
     enc.WriteBit(value.has_uplinkTA_ReportingATG_r18);
     enc.WriteBit(value.has_extendedDRX_CycleInactive_r18);
@@ -560,7 +554,6 @@ void Free_MAC_ParametersCommon_ExtGroup6(MAC_ParametersCommon_ExtGroup6& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersCommon(Encoder& enc, const MAC_ParametersCommon& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3 || value.has_extGroup4 || value.has_extGroup5 || value.has_extGroup6;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_lcp_Restriction);
@@ -778,7 +771,6 @@ void Free_MAC_ParametersCommon(MAC_ParametersCommon& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersXDD_Diff_ExtGroup1(Encoder& enc, const MAC_ParametersXDD_Diff_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_secondaryDRX_Group_r16);
     if (value.has_secondaryDRX_Group_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.secondaryDRX_Group_r16), 0, 0);
@@ -816,7 +808,6 @@ void Free_MAC_ParametersXDD_Diff_ExtGroup1(MAC_ParametersXDD_Diff_ExtGroup1& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersXDD_Diff_ExtGroup2(Encoder& enc, const MAC_ParametersXDD_Diff_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_enhancedSkipUplinkTxDynamic_r16);
     enc.WriteBit(value.has_enhancedSkipUplinkTxConfigured_r16);
     if (value.has_enhancedSkipUplinkTxDynamic_r16) {
@@ -865,7 +856,6 @@ void Free_MAC_ParametersXDD_Diff_ExtGroup2(MAC_ParametersXDD_Diff_ExtGroup2& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersXDD_Diff_ExtGroup3(Encoder& enc, const MAC_ParametersXDD_Diff_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ptm_Retransmission_r18);
     enc.WriteBit(value.has_ptm_RetransmissionInactive_r18);
     if (value.has_ptm_Retransmission_r18) {
@@ -914,7 +904,6 @@ void Free_MAC_ParametersXDD_Diff_ExtGroup3(MAC_ParametersXDD_Diff_ExtGroup3& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersXDD_Diff(Encoder& enc, const MAC_ParametersXDD_Diff& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_skipUplinkTxDynamic);
@@ -1096,7 +1085,6 @@ void Free_MAC_ParametersXDD_Diff(MAC_ParametersXDD_Diff& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MAC_Parameters(Encoder& enc, const MAC_Parameters& value)
 {
-    (void)value;
     enc.WriteBit(value.has_mac_ParametersCommon);
     enc.WriteBit(value.has_mac_ParametersXDD_Diff);
     if (value.has_mac_ParametersCommon) {
@@ -1147,7 +1135,6 @@ void Free_MAC_Parameters(MAC_Parameters& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MinTimeGap_r16(Encoder& enc, const MinTimeGap_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_15kHz_r16);
     enc.WriteBit(value.has_scs_30kHz_r16);
     enc.WriteBit(value.has_scs_60kHz_r16);
@@ -1226,7 +1213,6 @@ void Free_MinTimeGap_r16(MinTimeGap_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersFRX_Diff_r16_Drx_Adaptation_r16(Encoder& enc, const MAC_ParametersFRX_Diff_r16_Drx_Adaptation_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_non_SharedSpectrumChAccess_r16);
     enc.WriteBit(value.has_sharedSpectrumChAccess_r16);
     if (value.has_non_SharedSpectrumChAccess_r16) {
@@ -1277,7 +1263,6 @@ void Free_MAC_ParametersFRX_Diff_r16_Drx_Adaptation_r16(MAC_ParametersFRX_Diff_r
 // --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersFRX_Diff_r16(Encoder& enc, const MAC_ParametersFRX_Diff_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_directMCG_SCellActivation_r16);
@@ -1367,7 +1352,6 @@ void Free_MAC_ParametersFRX_Diff_r16(MAC_ParametersFRX_Diff_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MAC_Parameters_v1610(Encoder& enc, const MAC_Parameters_v1610& value)
 {
-    (void)value;
     enc.WriteBit(value.has_mac_ParametersFRX_Diff_r16);
     if (value.has_mac_ParametersFRX_Diff_r16) {
         Encode_MAC_ParametersFRX_Diff_r16(enc, value.mac_ParametersFRX_Diff_r16);
@@ -1406,7 +1390,6 @@ void Free_MAC_Parameters_v1610(MAC_Parameters_v1610& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MinTimeGapFR2_2_r17(Encoder& enc, const MinTimeGapFR2_2_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_120kHz_r17);
     enc.WriteBit(value.has_scs_480kHz_r17);
     enc.WriteBit(value.has_scs_960kHz_r17);
@@ -1472,7 +1455,6 @@ void Free_MinTimeGapFR2_2_r17(MinTimeGapFR2_2_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersFR2_2_r17_Drx_Adaptation_r17(Encoder& enc, const MAC_ParametersFR2_2_r17_Drx_Adaptation_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_non_SharedSpectrumChAccess_r17);
     enc.WriteBit(value.has_sharedSpectrumChAccess_r17);
     if (value.has_non_SharedSpectrumChAccess_r17) {
@@ -1523,7 +1505,6 @@ void Free_MAC_ParametersFR2_2_r17_Drx_Adaptation_r17(MAC_ParametersFR2_2_r17_Drx
 // --------------------------------------------------------------------------
 ErrorCode Encode_MAC_ParametersFR2_2_r17(Encoder& enc, const MAC_ParametersFR2_2_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_directMCG_SCellActivation_r17);
@@ -1613,7 +1594,6 @@ void Free_MAC_ParametersFR2_2_r17(MAC_ParametersFR2_2_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MAC_Parameters_v1700(Encoder& enc, const MAC_Parameters_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_mac_ParametersFR2_2_r17);
     if (value.has_mac_ParametersFR2_2_r17) {
         Encode_MAC_ParametersFR2_2_r17(enc, value.mac_ParametersFR2_2_r17);
@@ -1652,7 +1632,6 @@ void Free_MAC_Parameters_v1700(MAC_Parameters_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup1(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_eventB_MeasAndReport);
     enc.WriteBit(value.has_handoverFDD_TDD);
     enc.WriteBit(value.has_eutra_CGI_Reporting);
@@ -1723,7 +1702,6 @@ void Free_MeasAndMobParametersCommon_ExtGroup1(MeasAndMobParametersCommon_ExtGro
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup2(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_independentGapConfig);
     enc.WriteBit(value.has_periodicEUTRA_MeasAndReport);
     enc.WriteBit(value.has_handoverFR1_FR2);
@@ -1796,7 +1774,6 @@ void Free_MeasAndMobParametersCommon_ExtGroup2(MeasAndMobParametersCommon_ExtGro
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup3(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_nr_CGI_Reporting_ENDC);
     if (value.has_nr_CGI_Reporting_ENDC) {
         enc.WriteConstrainedInteger((std::int64_t)(value.nr_CGI_Reporting_ENDC), 0, 0);
@@ -1834,7 +1811,6 @@ void Free_MeasAndMobParametersCommon_ExtGroup3(MeasAndMobParametersCommon_ExtGro
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup4(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup4& value)
 {
-    (void)value;
     enc.WriteBit(value.has_eutra_CGI_Reporting_NEDC);
     enc.WriteBit(value.has_eutra_CGI_Reporting_NRDC);
     enc.WriteBit(value.has_nr_CGI_Reporting_NEDC);
@@ -1905,7 +1881,6 @@ void Free_MeasAndMobParametersCommon_ExtGroup4(MeasAndMobParametersCommon_ExtGro
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup5_CondHandoverParametersCommon_r16(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup5_CondHandoverParametersCommon_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_condHandoverFDD_TDD_r16);
     enc.WriteBit(value.has_condHandoverFR1_FR2_r16);
     if (value.has_condHandoverFDD_TDD_r16) {
@@ -1954,7 +1929,6 @@ void Free_MeasAndMobParametersCommon_ExtGroup5_CondHandoverParametersCommon_r16(
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup5(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup5& value)
 {
-    (void)value;
     enc.WriteBit(value.has_reportAddNeighMeasForPeriodic_r16);
     enc.WriteBit(value.has_condHandoverParametersCommon_r16);
     enc.WriteBit(value.has_nr_NeedForGap_Reporting_r16);
@@ -2264,7 +2238,6 @@ void Free_MeasAndMobParametersCommon_ExtGroup6_ConcurrentMeasGap_r17(MeasAndMobP
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup6(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup6& value)
 {
-    (void)value;
     enc.WriteBit(value.has_concurrentMeasGap_r17);
     enc.WriteBit(value.has_nr_NeedForGapNCSG_Reporting_r17);
     enc.WriteBit(value.has_eutra_NeedForGapNCSG_Reporting_r17);
@@ -2517,7 +2490,6 @@ void Free_MeasAndMobParametersCommon_ExtGroup6(MeasAndMobParametersCommon_ExtGro
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup7(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup7& value)
 {
-    (void)value;
     enc.WriteBit(value.has_parallelSMTC_r17);
     enc.WriteBit(value.has_concurrentMeasGapEUTRA_r17);
     enc.WriteBit(value.has_serviceLinkPropDelayDiffReporting_r17);
@@ -2588,7 +2560,6 @@ void Free_MeasAndMobParametersCommon_ExtGroup7(MeasAndMobParametersCommon_ExtGro
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup8_IndependentGapConfig_maxCC_r17(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup8_IndependentGapConfig_maxCC_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_fr1_Only_r17);
     enc.WriteBit(value.has_fr2_Only_r17);
     enc.WriteBit(value.has_fr1_AndFR2_r17);
@@ -2654,7 +2625,6 @@ void Free_MeasAndMobParametersCommon_ExtGroup8_IndependentGapConfig_maxCC_r17(Me
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup8(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup8& value)
 {
-    (void)value;
     enc.WriteBit(value.has_eventD1_MeasReportTrigger_r17);
     enc.WriteBit(value.has_independentGapConfig_maxCC_r17);
     if (value.has_eventD1_MeasReportTrigger_r17) {
@@ -2704,7 +2674,6 @@ void Free_MeasAndMobParametersCommon_ExtGroup8(MeasAndMobParametersCommon_ExtGro
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup9(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup9& value)
 {
-    (void)value;
     enc.WriteBit(value.has_interSatMeas_r17);
     enc.WriteBit(value.has_deriveSSB_IndexFromCellInterNon_NCSG_r17);
     if (value.has_interSatMeas_r17) {
@@ -2753,7 +2722,6 @@ void Free_MeasAndMobParametersCommon_ExtGroup9(MeasAndMobParametersCommon_ExtGro
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup10_Ltm_FastUE_Processing_r18(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup10_Ltm_FastUE_Processing_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.fr1_r18), 0, 1);
     enc.WriteConstrainedInteger((std::int64_t)(value.fr2_r18), 0, 1);
     enc.WriteConstrainedInteger((std::int64_t)(value.fr1_AndFR2_r18), 0, 1);
@@ -2798,7 +2766,6 @@ void Free_MeasAndMobParametersCommon_ExtGroup10_Ltm_FastUE_Processing_r18(MeasAn
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon_ExtGroup10(Encoder& enc, const MeasAndMobParametersCommon_ExtGroup10& value)
 {
-    (void)value;
     enc.WriteBit(value.has_l3_MeasUnknownSCellActivation_r18);
     enc.WriteBit(value.has_shortMeasInterval_r18);
     enc.WriteBit(value.has_nr_NeedForInterruptionReport_r18);
@@ -3076,7 +3043,6 @@ void Free_MeasAndMobParametersCommon_ExtGroup10(MeasAndMobParametersCommon_ExtGr
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersCommon(Encoder& enc, const MeasAndMobParametersCommon& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3 || value.has_extGroup4 || value.has_extGroup5 || value.has_extGroup6 || value.has_extGroup7 || value.has_extGroup8 || value.has_extGroup9 || value.has_extGroup10;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_supportedGapPattern);
@@ -3394,7 +3360,6 @@ void Free_MeasAndMobParametersCommon(MeasAndMobParametersCommon& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersXDD_Diff_ExtGroup1(Encoder& enc, const MeasAndMobParametersXDD_Diff_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_handoverInterF);
     enc.WriteBit(value.has_handoverLTE_EPC);
     enc.WriteBit(value.has_handoverLTE_5GC);
@@ -3454,7 +3419,6 @@ void Free_MeasAndMobParametersXDD_Diff_ExtGroup1(MeasAndMobParametersXDD_Diff_Ex
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersXDD_Diff_ExtGroup2(Encoder& enc, const MeasAndMobParametersXDD_Diff_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sftd_MeasNR_Neigh);
     enc.WriteBit(value.has_sftd_MeasNR_Neigh_DRX);
     if (value.has_sftd_MeasNR_Neigh) {
@@ -3503,7 +3467,6 @@ void Free_MeasAndMobParametersXDD_Diff_ExtGroup2(MeasAndMobParametersXDD_Diff_Ex
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersXDD_Diff_ExtGroup3(Encoder& enc, const MeasAndMobParametersXDD_Diff_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dummy);
     if (value.has_dummy) {
         enc.WriteConstrainedInteger((std::int64_t)(value.dummy), 0, 0);
@@ -3541,7 +3504,6 @@ void Free_MeasAndMobParametersXDD_Diff_ExtGroup3(MeasAndMobParametersXDD_Diff_Ex
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersXDD_Diff(Encoder& enc, const MeasAndMobParametersXDD_Diff& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_intraAndInterF_MeasAndReport);
@@ -3679,7 +3641,6 @@ void Free_MeasAndMobParametersXDD_Diff(MeasAndMobParametersXDD_Diff& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersFRX_Diff_ExtGroup1(Encoder& enc, const MeasAndMobParametersFRX_Diff_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_handoverInterF);
     enc.WriteBit(value.has_handoverLTE_EPC);
     enc.WriteBit(value.has_handoverLTE_5GC);
@@ -3739,7 +3700,6 @@ void Free_MeasAndMobParametersFRX_Diff_ExtGroup1(MeasAndMobParametersFRX_Diff_Ex
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersFRX_Diff_ExtGroup2(Encoder& enc, const MeasAndMobParametersFRX_Diff_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxNumberResource_CSI_RS_RLM);
     if (value.has_maxNumberResource_CSI_RS_RLM) {
         enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberResource_CSI_RS_RLM), 0, 3);
@@ -3779,7 +3739,6 @@ void Free_MeasAndMobParametersFRX_Diff_ExtGroup2(MeasAndMobParametersFRX_Diff_Ex
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersFRX_Diff_ExtGroup3(Encoder& enc, const MeasAndMobParametersFRX_Diff_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_simultaneousRxDataSSB_DiffNumerology);
     if (value.has_simultaneousRxDataSSB_DiffNumerology) {
         enc.WriteConstrainedInteger((std::int64_t)(value.simultaneousRxDataSSB_DiffNumerology), 0, 0);
@@ -3817,7 +3776,6 @@ void Free_MeasAndMobParametersFRX_Diff_ExtGroup3(MeasAndMobParametersFRX_Diff_Ex
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersFRX_Diff_ExtGroup4(Encoder& enc, const MeasAndMobParametersFRX_Diff_ExtGroup4& value)
 {
-    (void)value;
     enc.WriteBit(value.has_nr_AutonomousGaps_r16);
     enc.WriteBit(value.has_nr_AutonomousGaps_ENDC_r16);
     enc.WriteBit(value.has_nr_AutonomousGaps_NEDC_r16);
@@ -3965,7 +3923,6 @@ void Free_MeasAndMobParametersFRX_Diff_ExtGroup4(MeasAndMobParametersFRX_Diff_Ex
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersFRX_Diff_ExtGroup5(Encoder& enc, const MeasAndMobParametersFRX_Diff_ExtGroup5& value)
 {
-    (void)value;
     enc.WriteBit(value.has_increasedNumberofCSIRSPerMO_r16);
     if (value.has_increasedNumberofCSIRSPerMO_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.increasedNumberofCSIRSPerMO_r16), 0, 0);
@@ -4003,7 +3960,6 @@ void Free_MeasAndMobParametersFRX_Diff_ExtGroup5(MeasAndMobParametersFRX_Diff_Ex
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersFRX_Diff(Encoder& enc, const MeasAndMobParametersFRX_Diff& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3 || value.has_extGroup4 || value.has_extGroup5;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_ss_SINR_Meas);
@@ -4220,7 +4176,6 @@ void Free_MeasAndMobParametersFRX_Diff(MeasAndMobParametersFRX_Diff& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParameters(Encoder& enc, const MeasAndMobParameters& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measAndMobParametersCommon);
     enc.WriteBit(value.has_measAndMobParametersXDD_Diff);
     enc.WriteBit(value.has_measAndMobParametersFRX_Diff);
@@ -4283,7 +4238,6 @@ void Free_MeasAndMobParameters(MeasAndMobParameters& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersFR2_2_r17(Encoder& enc, const MeasAndMobParametersFR2_2_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_handoverInterF_r17);
@@ -4361,7 +4315,6 @@ void Free_MeasAndMobParametersFR2_2_r17(MeasAndMobParametersFR2_2_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParameters_v1700(Encoder& enc, const MeasAndMobParameters_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measAndMobParametersFR2_2_r17);
     if (value.has_measAndMobParametersFR2_2_r17) {
         Encode_MeasAndMobParametersFR2_2_r17(enc, value.measAndMobParametersFR2_2_r17);
@@ -4400,7 +4353,6 @@ void Free_MeasAndMobParameters_v1700(MeasAndMobParameters_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_Common(Encoder& enc, const MeasAndMobParametersMRDC_Common& value)
 {
-    (void)value;
     enc.WriteBit(value.has_independentGapConfig);
     if (value.has_independentGapConfig) {
         enc.WriteConstrainedInteger((std::int64_t)(value.independentGapConfig), 0, 0);
@@ -4438,7 +4390,6 @@ void Free_MeasAndMobParametersMRDC_Common(MeasAndMobParametersMRDC_Common& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_XDD_Diff(Encoder& enc, const MeasAndMobParametersMRDC_XDD_Diff& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sftd_MeasPSCell);
     enc.WriteBit(value.has_sftd_MeasNR_Cell);
     if (value.has_sftd_MeasPSCell) {
@@ -4487,7 +4438,6 @@ void Free_MeasAndMobParametersMRDC_XDD_Diff(MeasAndMobParametersMRDC_XDD_Diff& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_FRX_Diff(Encoder& enc, const MeasAndMobParametersMRDC_FRX_Diff& value)
 {
-    (void)value;
     enc.WriteBit(value.has_simultaneousRxDataSSB_DiffNumerology);
     if (value.has_simultaneousRxDataSSB_DiffNumerology) {
         enc.WriteConstrainedInteger((std::int64_t)(value.simultaneousRxDataSSB_DiffNumerology), 0, 0);
@@ -4525,7 +4475,6 @@ void Free_MeasAndMobParametersMRDC_FRX_Diff(MeasAndMobParametersMRDC_FRX_Diff& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC(Encoder& enc, const MeasAndMobParametersMRDC& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measAndMobParametersMRDC_Common);
     enc.WriteBit(value.has_measAndMobParametersMRDC_XDD_Diff);
     enc.WriteBit(value.has_measAndMobParametersMRDC_FRX_Diff);
@@ -4588,7 +4537,6 @@ void Free_MeasAndMobParametersMRDC(MeasAndMobParametersMRDC& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_XDD_Diff_v1560(Encoder& enc, const MeasAndMobParametersMRDC_XDD_Diff_v1560& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sftd_MeasPSCell_NEDC);
     if (value.has_sftd_MeasPSCell_NEDC) {
         enc.WriteConstrainedInteger((std::int64_t)(value.sftd_MeasPSCell_NEDC), 0, 0);
@@ -4626,7 +4574,6 @@ void Free_MeasAndMobParametersMRDC_XDD_Diff_v1560(MeasAndMobParametersMRDC_XDD_D
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_v1560(Encoder& enc, const MeasAndMobParametersMRDC_v1560& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measAndMobParametersMRDC_XDD_Diff_v1560);
     if (value.has_measAndMobParametersMRDC_XDD_Diff_v1560) {
         Encode_MeasAndMobParametersMRDC_XDD_Diff_v1560(enc, value.measAndMobParametersMRDC_XDD_Diff_v1560);
@@ -4665,7 +4612,6 @@ void Free_MeasAndMobParametersMRDC_v1560(MeasAndMobParametersMRDC_v1560& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_Common_v1610_CondPSCellChangeParametersCommon_r16(Encoder& enc, const MeasAndMobParametersMRDC_Common_v1610_CondPSCellChangeParametersCommon_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_condPSCellChangeFDD_TDD_r16);
     enc.WriteBit(value.has_condPSCellChangeFR1_FR2_r16);
     if (value.has_condPSCellChangeFDD_TDD_r16) {
@@ -4714,7 +4660,6 @@ void Free_MeasAndMobParametersMRDC_Common_v1610_CondPSCellChangeParametersCommon
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_Common_v1610(Encoder& enc, const MeasAndMobParametersMRDC_Common_v1610& value)
 {
-    (void)value;
     enc.WriteBit(value.has_condPSCellChangeParametersCommon_r16);
     enc.WriteBit(value.has_pscellT312_r16);
     if (value.has_condPSCellChangeParametersCommon_r16) {
@@ -4764,7 +4709,6 @@ void Free_MeasAndMobParametersMRDC_Common_v1610(MeasAndMobParametersMRDC_Common_
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_v1610(Encoder& enc, const MeasAndMobParametersMRDC_v1610& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measAndMobParametersMRDC_Common_v1610);
     enc.WriteBit(value.has_interNR_MeasEUTRA_IAB_r16);
     if (value.has_measAndMobParametersMRDC_Common_v1610) {
@@ -4814,7 +4758,6 @@ void Free_MeasAndMobParametersMRDC_v1610(MeasAndMobParametersMRDC_v1610& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_Common_v1700_CondPSCellChangeParameters_r17(Encoder& enc, const MeasAndMobParametersMRDC_Common_v1700_CondPSCellChangeParameters_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_inter_SN_condPSCellChangeFDD_TDD_NRDC_r17);
     enc.WriteBit(value.has_inter_SN_condPSCellChangeFR1_FR2_NRDC_r17);
     enc.WriteBit(value.has_inter_SN_condPSCellChangeFDD_TDD_ENDC_r17);
@@ -4951,7 +4894,6 @@ void Free_MeasAndMobParametersMRDC_Common_v1700_CondPSCellChangeParameters_r17(M
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_Common_v1700(Encoder& enc, const MeasAndMobParametersMRDC_Common_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_condPSCellChangeParameters_r17);
     enc.WriteBit(value.has_condHandoverWithSCG_ENDC_r17);
     enc.WriteBit(value.has_condHandoverWithSCG_NEDC_r17);
@@ -5012,7 +4954,6 @@ void Free_MeasAndMobParametersMRDC_Common_v1700(MeasAndMobParametersMRDC_Common_
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_v1700(Encoder& enc, const MeasAndMobParametersMRDC_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measAndMobParametersMRDC_Common_v1700);
     if (value.has_measAndMobParametersMRDC_Common_v1700) {
         Encode_MeasAndMobParametersMRDC_Common_v1700(enc, value.measAndMobParametersMRDC_Common_v1700);
@@ -5051,7 +4992,6 @@ void Free_MeasAndMobParametersMRDC_v1700(MeasAndMobParametersMRDC_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_Common_v1730_IndependentGapConfig_maxCC_r17(Encoder& enc, const MeasAndMobParametersMRDC_Common_v1730_IndependentGapConfig_maxCC_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_fr1_Only_r17);
     enc.WriteBit(value.has_fr2_Only_r17);
     enc.WriteBit(value.has_fr1_AndFR2_r17);
@@ -5117,7 +5057,6 @@ void Free_MeasAndMobParametersMRDC_Common_v1730_IndependentGapConfig_maxCC_r17(M
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_Common_v1730(Encoder& enc, const MeasAndMobParametersMRDC_Common_v1730& value)
 {
-    (void)value;
     Encode_MeasAndMobParametersMRDC_Common_v1730_IndependentGapConfig_maxCC_r17(enc, value.independentGapConfig_maxCC_r17);
     return enc.Error();
 }
@@ -5149,7 +5088,6 @@ void Free_MeasAndMobParametersMRDC_Common_v1730(MeasAndMobParametersMRDC_Common_
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_v1730(Encoder& enc, const MeasAndMobParametersMRDC_v1730& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measAndMobParametersMRDC_Common_v1730);
     if (value.has_measAndMobParametersMRDC_Common_v1730) {
         Encode_MeasAndMobParametersMRDC_Common_v1730(enc, value.measAndMobParametersMRDC_Common_v1730);
@@ -5188,7 +5126,6 @@ void Free_MeasAndMobParametersMRDC_v1730(MeasAndMobParametersMRDC_v1730& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_Common_v1810(Encoder& enc, const MeasAndMobParametersMRDC_Common_v1810& value)
 {
-    (void)value;
     enc.WriteBit(value.has_mn_ConfiguredMN_TriggerSCPAC_r18);
     enc.WriteBit(value.has_mn_ConfiguredSN_TriggerSCPAC_r18);
     enc.WriteBit(value.has_sn_ConfiguredSCPAC_r18);
@@ -5281,7 +5218,6 @@ void Free_MeasAndMobParametersMRDC_Common_v1810(MeasAndMobParametersMRDC_Common_
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasAndMobParametersMRDC_v1810(Encoder& enc, const MeasAndMobParametersMRDC_v1810& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measAndMobParametersMRDC_Common_v1810);
     if (value.has_measAndMobParametersMRDC_Common_v1810) {
         Encode_MeasAndMobParametersMRDC_Common_v1810(enc, value.measAndMobParametersMRDC_Common_v1810);
@@ -5320,7 +5256,6 @@ void Free_MeasAndMobParametersMRDC_v1810(MeasAndMobParametersMRDC_v1810& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BeamManagementSSB_CSI_RS(Encoder& enc, const BeamManagementSSB_CSI_RS& value)
 {
-    (void)value;
     enc.WriteBit(value.has_supportedCSI_RS_Density);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSSB_CSI_RS_ResourceOneTx), 0, 4);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberCSI_RS_Resource), 0, 5);
@@ -5384,7 +5319,6 @@ void Free_BeamManagementSSB_CSI_RS(BeamManagementSSB_CSI_RS& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_RS_ForTracking(Encoder& enc, const CSI_RS_ForTracking& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxBurstLength), 1, 2);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxSimultaneousResourceSetsPerCC), 1, 8);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxConfiguredResourceSetsPerCC), 1, 64);
@@ -5435,7 +5369,6 @@ void Free_CSI_RS_ForTracking(CSI_RS_ForTracking& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_RS_IM_ReceptionForFeedback(Encoder& enc, const CSI_RS_IM_ReceptionForFeedback& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxConfigNumberNZP_CSI_RS_PerCC), 1, 64);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxConfigNumberPortsAcrossNZP_CSI_RS_PerCC), 2, 256);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxConfigNumberCSI_IM_PerCC), 0, 5);
@@ -5492,7 +5425,6 @@ void Free_CSI_RS_IM_ReceptionForFeedback(CSI_RS_IM_ReceptionForFeedback& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_RS_ProcFrameworkForSRS(Encoder& enc, const CSI_RS_ProcFrameworkForSRS& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberPeriodicSRS_AssocCSI_RS_PerBWP), 1, 4);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberAperiodicSRS_AssocCSI_RS_PerBWP), 1, 4);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSP_SRS_AssocCSI_RS_PerBWP), 0, 4);
@@ -5543,7 +5475,6 @@ void Free_CSI_RS_ProcFrameworkForSRS(CSI_RS_ProcFrameworkForSRS& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportFramework(Encoder& enc, const CSI_ReportFramework& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberPeriodicCSI_PerBWP_ForCSI_Report), 1, 4);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberAperiodicCSI_PerBWP_ForCSI_Report), 1, 4);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSemiPersistentCSI_PerBWP_ForCSI_Report), 0, 4);
@@ -5618,7 +5549,6 @@ void Free_CSI_ReportFramework(CSI_ReportFramework& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SpatialRelations(Encoder& enc, const SpatialRelations& value)
 {
-    (void)value;
     enc.WriteBit(value.has_additionalActiveSpatialRelationPUCCH);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberConfiguredSpatialRelations), 0, 5);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberActiveSpatialRelations), 0, 4);
@@ -5674,7 +5604,6 @@ void Free_SpatialRelations(SpatialRelations& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup1_BeamSwitchTiming(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup1_BeamSwitchTiming& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_60kHz);
     enc.WriteBit(value.has_scs_120kHz);
     if (value.has_scs_60kHz) {
@@ -5727,7 +5656,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup1_BeamSwitchTiming(MIMO_ParametersPerBa
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup1(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dummy6);
     enc.WriteBit(value.has_beamManagementSSB_CSI_RS);
     enc.WriteBit(value.has_beamSwitchTiming);
@@ -5894,7 +5822,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup1(MIMO_ParametersPerBand_ExtGroup1& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportFrameworkExt_r16(Encoder& enc, const CSI_ReportFrameworkExt_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberAperiodicCSI_PerBWP_ForCSI_ReportExt_r16), 5, 8);
     return enc.Error();
 }
@@ -5927,7 +5854,6 @@ void Free_CSI_ReportFrameworkExt_r16(CSI_ReportFrameworkExt_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup2_Ssb_csirs_SINR_measurement_r16(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup2_Ssb_csirs_SINR_measurement_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_supportedSINR_meas_r16);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSSB_CSIRS_OneTx_CMR_r16), 0, 3);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberCSI_IM_NZP_IMR_res_r16), 0, 3);
@@ -6009,7 +5935,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup2_Ssb_csirs_SINR_measurement_r16(MIMO_P
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_OutOfOrderOperationDL_r16(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_OutOfOrderOperationDL_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_supportPDCCH_ToPDSCH_r16);
     enc.WriteBit(value.has_supportPDSCH_ToHARQ_ACK_r16);
     if (value.has_supportPDCCH_ToPDSCH_r16) {
@@ -6058,7 +5983,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_OutO
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_MaxNumberActivatedTCI_States_r16(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_MaxNumberActivatedTCI_States_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberPerCORESET_Pool_r16), 0, 3);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxTotalNumberAcrossCORESET_Pool_r16), 0, 3);
     return enc.Error();
@@ -6097,7 +6021,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16_MaxN
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_overlapPDSCHsFullyFreqTime_r16);
     enc.WriteBit(value.has_overlapPDSCHsInTimePartiallyFreq_r16);
     enc.WriteBit(value.has_outOfOrderOperationDL_r16);
@@ -6205,7 +6128,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup2_MultiDCI_multiTRP_Parameters_r16(MIMO
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup2_SingleDCI_SDM_scheme_Parameters_r16(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup2_SingleDCI_SDM_scheme_Parameters_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_supportNewDMRS_Port_r16);
     enc.WriteBit(value.has_supportTwoPortDL_PTRS_r16);
     if (value.has_supportNewDMRS_Port_r16) {
@@ -6256,7 +6178,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup2_SingleDCI_SDM_scheme_Parameters_r16(M
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup2_SupportInter_slotTDM_r16(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup2_SupportInter_slotTDM_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.supportRepNumPDSCH_TDRA_r16), 0, 7);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxTBS_Size_r16), 0, 4);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberTCI_states_r16), 1, 2);
@@ -6301,7 +6222,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup2_SupportInter_slotTDM_r16(MIMO_Paramet
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup2_BeamSwitchTiming_r16(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup2_BeamSwitchTiming_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_60kHz_r16);
     enc.WriteBit(value.has_scs_120kHz_r16);
     if (value.has_scs_60kHz_r16) {
@@ -6354,7 +6274,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup2_BeamSwitchTiming_r16(MIMO_ParametersP
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup2(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_defaultQCL_TwoTCI_r16);
     enc.WriteBit(value.has_codebookParametersPerBand_r16);
     enc.WriteBit(value.has_simul_SpatialRelationUpdatePUCCHResGroup_r16);
@@ -6660,7 +6579,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup2(MIMO_ParametersPerBand_ExtGroup2& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup3_Semi_PersistentL1_SINR_Report_PUCCH_r16(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup3_Semi_PersistentL1_SINR_Report_PUCCH_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_supportReportFormat1_2OFDM_syms_r16);
     enc.WriteBit(value.has_supportReportFormat4_14OFDM_syms_r16);
     if (value.has_supportReportFormat1_2OFDM_syms_r16) {
@@ -6709,7 +6627,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup3_Semi_PersistentL1_SINR_Report_PUCCH_r
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup3(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_semi_PersistentL1_SINR_Report_PUCCH_r16);
     enc.WriteBit(value.has_semi_PersistentL1_SINR_Report_PUSCH_r16);
     if (value.has_semi_PersistentL1_SINR_Report_PUCCH_r16) {
@@ -6759,7 +6676,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup3(MIMO_ParametersPerBand_ExtGroup3& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup4_SpatialRelations_v1640(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup4_SpatialRelations_v1640& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberConfiguredSpatialRelations_v1640), 0, 7);
     return enc.Error();
 }
@@ -6792,7 +6708,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup4_SpatialRelations_v1640(MIMO_Parameter
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup4(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup4& value)
 {
-    (void)value;
     enc.WriteBit(value.has_spatialRelations_v1640);
     enc.WriteBit(value.has_support64CandidateBeamRS_BFR_r16);
     if (value.has_spatialRelations_v1640) {
@@ -6842,7 +6757,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup4(MIMO_ParametersPerBand_ExtGroup4& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup5(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup5& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxMIMO_LayersForMulti_DCI_mTRP_r16);
     if (value.has_maxMIMO_LayersForMulti_DCI_mTRP_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.maxMIMO_LayersForMulti_DCI_mTRP_r16), 0, 0);
@@ -6880,7 +6794,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup5(MIMO_ParametersPerBand_ExtGroup5& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup6(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup6& value)
 {
-    (void)value;
     enc.WriteBit(value.has_supportedSINR_meas_v1670);
     if (value.has_supportedSINR_meas_v1670) {
         enc.WriteFixedBitString(value.supportedSINR_meas_v1670.bytes, value.supportedSINR_meas_v1670.bitLength, 4, 4);
@@ -6926,7 +6839,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup6(MIMO_ParametersPerBand_ExtGroup6& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_MTRP_BFR_twoBFD_RS_Set_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_MTRP_BFR_twoBFD_RS_Set_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxBFD_RS_resourcesPerSetPerBWP_r17), 0, 1);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxBFR_r17), 1, 9);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxBFD_RS_resourcesAcrossSetsPerBWP_r17), 0, 2);
@@ -6971,7 +6883,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_MTRP_BFR_twoBFD_RS_Set_r17(MIMO_Param
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxConfiguredJointTCI_r17), 0, 7);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxActivatedTCIAcrossCC_r17), 0, 4);
     return enc.Error();
@@ -7010,7 +6921,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_r17(MIMO_ParametersPe
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_multiMAC_CE_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_multiMAC_CE_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_minBeamApplicationTime_r17);
     if (value.has_minBeamApplicationTime_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.minBeamApplicationTime_r17), 0, 13);
@@ -7056,7 +6966,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_multiMAC_CE_r17(MIMO_
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_InterCell_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_InterCell_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.additionalMAC_CE_PerCC_r17), 0, 3);
     enc.WriteConstrainedInteger((std::int64_t)(value.additionalMAC_CE_AcrossCC_r17), 0, 3);
     return enc.Error();
@@ -7095,7 +7004,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_InterCell_r17(MIMO_Pa
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxConfiguredDL_TCI_r17), 0, 8);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxConfiguredUL_TCI_r17), 0, 7);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxActivatedDL_TCIAcrossCC_r17), 0, 4);
@@ -7146,7 +7054,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_r17(MIMO_Parameter
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_multiMAC_CE_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_multiMAC_CE_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.minBeamApplicationTime_r17), 0, 13);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxActivatedDL_TCIPerCC_r17), 2, 8);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxActivatedUL_TCIPerCC_r17), 2, 8);
@@ -7191,7 +7098,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_multiMAC_CE_r17(MI
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_ListSharingCA_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_ListSharingCA_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxNumListDL_TCI_r17);
     enc.WriteBit(value.has_maxNumListUL_TCI_r17);
     if (value.has_maxNumListDL_TCI_r17) {
@@ -7244,7 +7150,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_ListSharingCA_r17(
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_InterCell_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_InterCell_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.k_DL_PerCC_r17), 0, 3);
     enc.WriteConstrainedInteger((std::int64_t)(value.k_UL_PerCC_r17), 0, 3);
     enc.WriteConstrainedInteger((std::int64_t)(value.k_DL_AcrossCC_r17), 0, 3);
@@ -7295,7 +7200,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedSeparateTCI_InterCell_r17(MIMO
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_mTRP_InterCell_BM_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_mTRP_InterCell_BM_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumAdditionalPCI_L1_RSRP_r17), 1, 7);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumSSB_ResourceL1_RSRP_AcrossCC_r17), 0, 3);
     return enc.Error();
@@ -7334,7 +7238,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_UnifiedJointTCI_mTRP_InterCell_BM_r17
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_Mpe_Mitigation_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_Mpe_Mitigation_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumP_MPR_RI_pairs_r17), 1, 4);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumConfRS_r17), 0, 9);
     return enc.Error();
@@ -7373,7 +7276,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_Mpe_Mitigation_r17(MIMO_ParametersPer
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_Srs_PortReport_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_Srs_PortReport_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_capVal1_r17);
     enc.WriteBit(value.has_capVal2_r17);
     enc.WriteBit(value.has_capVal3_r17);
@@ -7452,7 +7354,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_Srs_PortReport_r17(MIMO_ParametersPer
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_MTRP_PUSCH_CSI_RS_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_MTRP_PUSCH_CSI_RS_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumPeriodicSRS_r17), 1, 8);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumAperiodicSRS_r17), 1, 8);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumSP_SRS_r17), 0, 8);
@@ -7509,7 +7410,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_MTRP_PUSCH_CSI_RS_r17(MIMO_Parameters
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_MTRP_inter_Cell_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_MTRP_inter_Cell_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumAdditionalPCI_Case1_r17), 1, 7);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumAdditionalPCI_Case2_r17), 0, 7);
     return enc.Error();
@@ -7548,7 +7448,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_MTRP_inter_Cell_r17(MIMO_ParametersPe
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_MTRP_GroupBasedL1_RSRP_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_MTRP_GroupBasedL1_RSRP_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumBeamGroups_r17), 1, 4);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumRS_WithinSlot_r17), 0, 6);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumRS_AcrossSlot_r17), 0, 4);
@@ -7593,7 +7492,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_MTRP_GroupBasedL1_RSRP_r17(MIMO_Param
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_MTRP_CSI_EnhancementPerBand_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_MTRP_CSI_EnhancementPerBand_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumNZP_CSI_RS_r17), 2, 8);
     enc.WriteConstrainedInteger((std::int64_t)(value.cSI_Report_mode_r17), 0, 2);
 enc.WriteConstrainedLength(value.supportedComboAcrossCCs_r17_count, 0u, 0u);
@@ -7664,7 +7562,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_MTRP_CSI_EnhancementPerBand_r17(MIMO_
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_v1710(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_v1710& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_480kHz);
     enc.WriteBit(value.has_scs_960kHz);
     if (value.has_scs_480kHz) {
@@ -7717,7 +7614,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_v1710(MIMO_Parameter
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_r17(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_480kHz_r17);
     enc.WriteBit(value.has_scs_960kHz_r17);
     if (value.has_scs_480kHz_r17) {
@@ -7770,7 +7666,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_BeamSwitchTiming_r17(MIMO_ParametersP
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_BeamReportTiming_v1710(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_BeamReportTiming_v1710& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_480kHz_r17);
     enc.WriteBit(value.has_scs_960kHz_r17);
     if (value.has_scs_480kHz_r17) {
@@ -7823,7 +7718,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_BeamReportTiming_v1710(MIMO_Parameter
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7_MaxNumberRxTxBeamSwitchDL_v1710(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7_MaxNumberRxTxBeamSwitchDL_v1710& value)
 {
-    (void)value;
     enc.WriteBit(value.has_scs_480kHz_r17);
     enc.WriteBit(value.has_scs_960kHz_r17);
     if (value.has_scs_480kHz_r17) {
@@ -7876,7 +7770,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7_MaxNumberRxTxBeamSwitchDL_v1710(MIMO_
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup7(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup7& value)
 {
-    (void)value;
     enc.WriteBit(value.has_srs_increasedRepetition_r17);
     enc.WriteBit(value.has_srs_partialFrequencySounding_r17);
     enc.WriteBit(value.has_srs_startRB_locationHoppingPartial_r17);
@@ -8645,7 +8538,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup7(MIMO_ParametersPerBand_ExtGroup7& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup8(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup8& value)
 {
-    (void)value;
     enc.WriteBit(value.has_srs_PortReportSP_AP_r17);
     enc.WriteBit(value.has_maxNumberRxBeam_v1720);
     enc.WriteBit(value.has_sfn_ImplicitRS_twoTCI_r17);
@@ -8731,7 +8623,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup8(MIMO_ParametersPerBand_ExtGroup8& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup9(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup9& value)
 {
-    (void)value;
     enc.WriteBit(value.has_supportRepNumPDSCH_TDRA_DCI_1_2_r17);
     if (value.has_supportRepNumPDSCH_TDRA_DCI_1_2_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.supportRepNumPDSCH_TDRA_DCI_1_2_r17), 0, 7);
@@ -8771,7 +8662,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup9(MIMO_ParametersPerBand_ExtGroup9& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_PerCC_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_PerCC_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberConfigJointTCIPerCC_PerBWP_r18), 0, 7);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberActiveJointTCI_AcrossCC_r18), 0, 5);
     return enc.Error();
@@ -8810,7 +8700,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_P
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateMultiActiveTCI_PerCC_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateMultiActiveTCI_PerCC_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.tci_StateInd_r18), 0, 1);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberActiveJointTCI_PerCC_r18), 2, 8);
     return enc.Error();
@@ -8849,7 +8738,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateMultiActiveTCI_Pe
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTCI_PerCC_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTCI_PerCC_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumConfigDL_TCI_PerCC_PerBWP_r18), 0, 8);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumConfigUL_TCI_PerCC_PerBWP_r18), 0, 7);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumActiveDL_TCI_AcrossCC_r18), 0, 3);
@@ -8900,7 +8788,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTC
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI_PerCC_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI_PerCC_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumActiveDL_TCI_AcrossCC_r18), 0, 3);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumActiveUL_TCI_AcrossCC_r18), 0, 3);
     return enc.Error();
@@ -8939,7 +8826,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_PerCC_PerCORESET_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_PerCC_PerCORESET_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.mTRP_Operation_r18), 0, 1);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberConfigJointTCIPerCC_PerBWP_r18), 0, 7);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberActiveJointTCIAcrossCC_PerCORESET_r18), 0, 4);
@@ -8984,7 +8870,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup10_Tci_JointTCI_UpdateSingleActiveTCI_P
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTCI_PerCC_PerCORESET_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTCI_PerCC_PerCORESET_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.mTRP_Operation_r18), 0, 1);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumConfigDL_TCI_PerCC_PerBWP_r18), 0, 7);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumConfigUL_TCI_PerCC_PerBWP_r18), 0, 6);
@@ -9041,7 +8926,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateSingleActiveTC
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI_PerCC_PerCORESET_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI_PerCC_PerCORESET_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumConfigDL_TCI_PerCC_PerBWP_r18), 1, 8);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumConfigUL_TCI_PerCC_PerBWP_r18), 1, 8);
     return enc.Error();
@@ -9080,7 +8964,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup10_Tci_SeparateTCI_UpdateMultiActiveTCI
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Tdcp_Report_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Tdcp_Report_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.valueX_r18), 1, 2);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberActiveResource_r18), 2, 32);
     return enc.Error();
@@ -9119,7 +9002,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup10_Tdcp_Report_r18(MIMO_ParametersPerBa
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Tdcp_Resource_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Tdcp_Resource_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberConfigPerCC_r18), 0, 5);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberConfigAcrossCC_r18), 1, 32);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSimultaneousPerCC_r18), 0, 9);
@@ -9164,7 +9046,6 @@ void Free_MIMO_ParametersPerBand_ExtGroup10_Tdcp_Resource_r18(MIMO_ParametersPer
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIMO_ParametersPerBand_ExtGroup10_Pusch_NonCB_SingleDCI_STx2P_SDM_CSI_RS_SRS_r18(Encoder& enc, const MIMO_ParametersPerBand_ExtGroup10_Pusch_NonCB_SingleDCI_STx2P_SDM_CSI_RS_SRS_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberPeriodicSRS_Resource_PerBWP_r18), 1, 8);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberAperiodicSRS_Resource_PerBWP_r18), 1, 8);
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberSemiPersistentSRS_ResourcePerBWP_r18), 0, 8);

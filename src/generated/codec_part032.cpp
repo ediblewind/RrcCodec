@@ -24,7 +24,6 @@ namespace v1810 {
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_ReportConfigToRemoveList_r16(Encoder& enc, const SL_ReportConfigToRemoveList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 64u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 1, 64);
@@ -74,7 +73,6 @@ void Free_SL_ReportConfigToRemoveList_r16(SL_ReportConfigToRemoveList_r16& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_MeasIdToRemoveList_r16(Encoder& enc, const SL_MeasIdToRemoveList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 64u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 1, 64);
@@ -124,7 +122,6 @@ void Free_SL_MeasIdToRemoveList_r16(SL_MeasIdToRemoveList_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_MeasConfig_r16(Encoder& enc, const SL_MeasConfig_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_MeasObjectToRemoveList_r16);
@@ -242,7 +239,6 @@ void Free_SL_MeasConfig_r16(SL_MeasConfig_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_MeasConfigInfo_r16(Encoder& enc, const SL_MeasConfigInfo_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.sl_DestinationIndex_r16), 0, 31);
@@ -287,7 +283,6 @@ void Free_SL_MeasConfigInfo_r16(SL_MeasConfigInfo_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_MeasIdInfo_r16(Encoder& enc, const SL_MeasIdInfo_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.sl_MeasId_r16), 1, 64);
@@ -339,7 +334,6 @@ void Free_SL_MeasIdInfo_r16(SL_MeasIdInfo_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_MeasObjectInfo_r16(Encoder& enc, const SL_MeasObjectInfo_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.sl_MeasObjectId_r16), 1, 64);
@@ -384,7 +378,6 @@ void Free_SL_MeasObjectInfo_r16(SL_MeasObjectInfo_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_PDCP_Config_r16(Encoder& enc, const SL_PDCP_Config_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_DiscardTimer_r16);
@@ -455,7 +448,6 @@ void Free_SL_PDCP_Config_r16(SL_PDCP_Config_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_PosBWP_ConfigCommon_r18(Encoder& enc, const SL_PosBWP_ConfigCommon_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_BWP_Generic_r18);
@@ -579,7 +571,6 @@ void Free_SL_ReservationPeriodAllowedDedicatedSL_PRS_RP_r18(SL_ReservationPeriod
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_PRS_ResourceDedicatedSL_PRS_RP_r18(Encoder& enc, const SL_PRS_ResourceDedicatedSL_PRS_RP_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_PRS_ResourceID_r18);
     enc.WriteBit(value.has_sl_NumberOfSymbols_r18);
     enc.WriteBit(value.has_sl_CombSize_r18);
@@ -671,7 +662,6 @@ void Free_SL_PRS_ResourceDedicatedSL_PRS_RP_r18(SL_PRS_ResourceDedicatedSL_PRS_R
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_TxPercentageDedicatedSL_PRS_RP_Config_r18(Encoder& enc, const SL_TxPercentageDedicatedSL_PRS_RP_Config_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_TxPercentageDedicatedSL_PRS_RP_r18);
     enc.WriteBit(value.has_sl_Priority_DedicatedSL_PRS_RP);
     if (value.has_sl_TxPercentageDedicatedSL_PRS_RP_r18) {
@@ -724,7 +714,6 @@ void Free_SL_TxPercentageDedicatedSL_PRS_RP_Config_r18(SL_TxPercentageDedicatedS
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_PriorityTxConfigIndexDedicatedSL_PRS_RP_r18(Encoder& enc, const SL_PriorityTxConfigIndexDedicatedSL_PRS_RP_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_PriorityThresholdDedicatedSL_PRS_RP_r18);
     enc.WriteBit(value.has_sl_DefaultTxConfigIndexDedicatedSL_PRS_RP_r18);
     enc.WriteBit(value.has_sl_CBR_ConfigIndexDedicatedSL_PRS_RP_r18);
@@ -824,7 +813,6 @@ void Free_SL_PriorityTxConfigIndexDedicatedSL_PRS_RP_r18(SL_PriorityTxConfigInde
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_PSSCH_TxConfig_r16_ExtGroup1(Encoder& enc, const SL_PSSCH_TxConfig_r16_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_ParametersAboveThres_v1650);
     enc.WriteBit(value.has_sl_ParametersBelowThres_v1650);
     if (value.has_sl_ParametersAboveThres_v1650) {
@@ -875,7 +863,6 @@ void Free_SL_PSSCH_TxConfig_r16_ExtGroup1(SL_PSSCH_TxConfig_r16_ExtGroup1& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_PSSCH_TxConfig_r16(Encoder& enc, const SL_PSSCH_TxConfig_r16& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_TypeTxSync_r16);
@@ -974,7 +961,6 @@ void Free_SL_PSSCH_TxConfig_r16(SL_PSSCH_TxConfig_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_MappedQoS_FlowsListDedicated_r16(Encoder& enc, const SL_MappedQoS_FlowsListDedicated_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_MappedQoS_FlowsToAddList_r16);
     enc.WriteBit(value.has_sl_MappedQoS_FlowsToReleaseList_r16);
     if (value.has_sl_MappedQoS_FlowsToAddList_r16) {
@@ -1069,7 +1055,6 @@ void Free_SL_MappedQoS_FlowsListDedicated_r16(SL_MappedQoS_FlowsListDedicated_r1
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_SDAP_Config_r16_Sl_MappedQoS_Flows_r16_Sl_MappedQoS_FlowsList_r16(Encoder& enc, const SL_SDAP_Config_r16_Sl_MappedQoS_Flows_r16_Sl_MappedQoS_FlowsList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 2048u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_SL_QoS_Profile_r16(enc, value.items[i]);
@@ -1182,7 +1167,6 @@ void Free_SL_SDAP_Config_r16_Sl_MappedQoS_Flows_r16(SL_SDAP_Config_r16_Sl_Mapped
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_SDAP_Config_r16(Encoder& enc, const SL_SDAP_Config_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_MappedQoS_Flows_r16);
@@ -1253,7 +1237,6 @@ void Free_SL_SDAP_Config_r16(SL_SDAP_Config_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_RadioBearerConfig_r16(Encoder& enc, const SL_RadioBearerConfig_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_SDAP_Config_r16);
@@ -1330,7 +1313,6 @@ void Free_SL_RadioBearerConfig_r16(SL_RadioBearerConfig_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_RBSetConfig_r18(Encoder& enc, const SL_RBSetConfig_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_NumOfSSSBRepetition_r18);
     enc.WriteBit(value.has_sl_GapBetweenSSSBRepetition_r18);
     enc.WriteConstrainedInteger((std::int64_t)(value.sl_RBSetIndex_r18), 0, 4);
@@ -1389,7 +1371,6 @@ void Free_SL_RBSetConfig_r18(SL_RBSetConfig_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_PeriodicalReportConfig_r16(Encoder& enc, const SL_PeriodicalReportConfig_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.sl_ReportInterval_r16), 0, 13);
@@ -1446,7 +1427,6 @@ void Free_SL_PeriodicalReportConfig_r16(SL_PeriodicalReportConfig_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_EventTriggerConfig_r16_Sl_EventId_r16_EventS1_r16(Encoder& enc, const SL_EventTriggerConfig_r16_Sl_EventId_r16_EventS1_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_SL_MeasTriggerQuantity_r16(enc, value.s1_Threshold_r16);
@@ -1503,7 +1483,6 @@ void Free_SL_EventTriggerConfig_r16_Sl_EventId_r16_EventS1_r16(SL_EventTriggerCo
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_EventTriggerConfig_r16_Sl_EventId_r16_EventS2_r16(Encoder& enc, const SL_EventTriggerConfig_r16_Sl_EventId_r16_EventS2_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_SL_MeasTriggerQuantity_r16(enc, value.s2_Threshold_r16);
@@ -1668,7 +1647,6 @@ void Free_SL_EventTriggerConfig_r16_Sl_EventId_r16(SL_EventTriggerConfig_r16_Sl_
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_EventTriggerConfig_r16(Encoder& enc, const SL_EventTriggerConfig_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_SL_EventTriggerConfig_r16_Sl_EventId_r16(enc, value.sl_EventId_r16);
@@ -1838,7 +1816,6 @@ void Free_SL_ReportConfig_r16_Sl_ReportType_r16(SL_ReportConfig_r16_Sl_ReportTyp
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_ReportConfig_r16(Encoder& enc, const SL_ReportConfig_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_SL_ReportConfig_r16_Sl_ReportType_r16(enc, value.sl_ReportType_r16);
@@ -1877,7 +1854,6 @@ void Free_SL_ReportConfig_r16(SL_ReportConfig_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_ReportConfigInfo_r16(Encoder& enc, const SL_ReportConfigInfo_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.sl_ReportConfigId_r16), 1, 64);
@@ -1922,7 +1898,6 @@ void Free_SL_ReportConfigInfo_r16(SL_ReportConfigInfo_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_CPE_StartingPositionsPSCCH_PSSCH_r18(Encoder& enc, const SL_CPE_StartingPositionsPSCCH_PSSCH_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.sl_Priority_r18), 1, 8);
 enc.WriteConstrainedLength(value.sl_CPE_StartingPositions_r18_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.sl_CPE_StartingPositions_r18_count; ++i) {
@@ -1982,7 +1957,6 @@ void Free_SL_CPE_StartingPositionsPSCCH_PSSCH_r18(SL_CPE_StartingPositionsPSCCH_
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_ZoneConfig_r16(Encoder& enc, const SL_ZoneConfig_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.sl_ZoneLength_r16), 0, 7);
@@ -2022,7 +1996,6 @@ void Free_SL_ZoneConfig_r16(SL_ZoneConfig_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_ZoneConfigMCR_r16(Encoder& enc, const SL_ZoneConfigMCR_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_TransRange_r16);
@@ -2153,7 +2126,6 @@ void Free_SL_ResourceReservePeriod_r16(SL_ResourceReservePeriod_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_SelectionWindowConfig_r16(Encoder& enc, const SL_SelectionWindowConfig_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.sl_Priority_r16), 1, 8);
     enc.WriteConstrainedInteger((std::int64_t)(value.sl_SelectionWindow_r16), 0, 3);
     return enc.Error();
@@ -2192,7 +2164,6 @@ void Free_SL_SelectionWindowConfig_r16(SL_SelectionWindowConfig_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_TxPercentageConfig_r16(Encoder& enc, const SL_TxPercentageConfig_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.sl_Priority_r16), 1, 8);
     enc.WriteConstrainedInteger((std::int64_t)(value.sl_TxPercentage_r16), 0, 2);
     return enc.Error();
@@ -2231,7 +2202,6 @@ void Free_SL_TxPercentageConfig_r16(SL_TxPercentageConfig_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_MinMaxMCS_Config_r16(Encoder& enc, const SL_MinMaxMCS_Config_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.sl_MCS_Table_r16), 0, 2);
     enc.WriteConstrainedInteger((std::int64_t)(value.sl_MinMCS_PSSCH_r16), 0, 27);
     enc.WriteConstrainedInteger((std::int64_t)(value.sl_MaxMCS_PSSCH_r16), 0, 31);
@@ -2397,7 +2367,6 @@ void Free_SL_PRS_ResourceSharedSL_PRS_RP_r18_Sl_PRS_CombSizeN_AndReOffset_r18(SL
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_PRS_ResourceSharedSL_PRS_RP_r18(Encoder& enc, const SL_PRS_ResourceSharedSL_PRS_RP_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_PRS_CombSizeN_AndReOffset_r18);
     enc.WriteConstrainedInteger((std::int64_t)(value.sl_PRS_ResourceID_r18), 0, 16);
     enc.WriteConstrainedInteger((std::int64_t)(value.mNumberOfSymbols_r18), 1, 9);
@@ -2454,7 +2423,6 @@ void Free_SL_PRS_ResourceSharedSL_PRS_RP_r18(SL_PRS_ResourceSharedSL_PRS_RP_r18&
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_RLC_BearerConfig_r16_ExtGroup1(Encoder& enc, const SL_RLC_BearerConfig_r16_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_RLC_BearerConfigIndex_v1800);
     if (value.has_sl_RLC_BearerConfigIndex_v1800) {
         enc.WriteConstrainedInteger((std::int64_t)(value.sl_RLC_BearerConfigIndex_v1800), 513, 1024);
@@ -2494,7 +2462,6 @@ void Free_SL_RLC_BearerConfig_r16_ExtGroup1(SL_RLC_BearerConfig_r16_ExtGroup1& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_RLC_Config_r16_Sl_AM_RLC_r16(Encoder& enc, const SL_RLC_Config_r16_Sl_AM_RLC_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_SN_FieldLengthAM_r16);
@@ -2565,7 +2532,6 @@ void Free_SL_RLC_Config_r16_Sl_AM_RLC_r16(SL_RLC_Config_r16_Sl_AM_RLC_r16& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_RLC_Config_r16_Sl_UM_RLC_r16(Encoder& enc, const SL_RLC_Config_r16_Sl_UM_RLC_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_SN_FieldLengthUM_r16);
@@ -2720,7 +2686,6 @@ void Free_SL_RLC_Config_r16(SL_RLC_Config_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_RLC_BearerConfig_r16(Encoder& enc, const SL_RLC_BearerConfig_r16& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_ServedRadioBearer_r16);
@@ -2833,7 +2798,6 @@ void Free_SL_RLC_BearerConfig_r16(SL_RLC_BearerConfig_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_RLC_ChannelConfig_r17(Encoder& enc, const SL_RLC_ChannelConfig_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_RLC_Config_r17);
@@ -2910,7 +2874,6 @@ void Free_SL_RLC_ChannelConfig_r17(SL_RLC_ChannelConfig_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_ServingCellInfo_r17(Encoder& enc, const SL_ServingCellInfo_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.sl_PhysCellId_r17), 0, 1007);
     enc.WriteConstrainedInteger((std::int64_t)(value.sl_CarrierFreqNR_r17), 0, 3279165);
     return enc.Error();
@@ -2949,7 +2912,6 @@ void Free_SL_ServingCellInfo_r17(SL_ServingCellInfo_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_MappingToAddMod_r17(Encoder& enc, const SL_MappingToAddMod_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_EgressRLC_ChannelUu_r17);
@@ -3014,7 +2976,6 @@ void Free_SL_MappingToAddMod_r17(SL_MappingToAddMod_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_MappingConfig_U2U_r18(Encoder& enc, const SL_MappingConfig_U2U_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.sl_RemoteUE_SLRB_Identity_r18), 1, 512);
@@ -3060,7 +3021,6 @@ void Free_SL_MappingConfig_U2U_r18(SL_MappingConfig_U2U_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_SSB_TimeAllocation_r16(Encoder& enc, const SL_SSB_TimeAllocation_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_NumSSB_WithinPeriod_r16);
     enc.WriteBit(value.has_sl_TimeOffsetSSB_r16);
     enc.WriteBit(value.has_sl_TimeInterval_r16);
@@ -3126,7 +3086,6 @@ void Free_SL_SSB_TimeAllocation_r16(SL_SSB_TimeAllocation_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_SyncConfig_r16_TxParameters_r16(Encoder& enc, const SL_SyncConfig_r16_TxParameters_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_syncTxThreshIC_r16);
     enc.WriteBit(value.has_syncTxThreshOoC_r16);
     enc.WriteBit(value.has_syncInfoReserved_r16);
@@ -3198,7 +3157,6 @@ void Free_SL_SyncConfig_r16_TxParameters_r16(SL_SyncConfig_r16_TxParameters_r16&
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_SyncConfig_r16(Encoder& enc, const SL_SyncConfig_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_SyncRefMinHyst_r16);
@@ -3358,7 +3316,6 @@ void Free_SL_SyncConfig_r16(SL_SyncConfig_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MBS_NeighbourCell_r17(Encoder& enc, const MBS_NeighbourCell_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_carrierFreq_r17);
     enc.WriteConstrainedInteger((std::int64_t)(value.physCellId_r17), 0, 1007);
     if (value.has_carrierFreq_r17) {
@@ -3404,7 +3361,6 @@ void Free_MBS_NeighbourCell_r17(MBS_NeighbourCell_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FreqInfoMBS_r18(Encoder& enc, const FreqInfoMBS_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.carrierFreqMBS_r18), 0, 3279165);
     enc.WriteConstrainedInteger((std::int64_t)(value.freqBandIndicatorMBS_r18), 1, 1024);
     return enc.Error();
@@ -3443,7 +3399,6 @@ void Free_FreqInfoMBS_r18(FreqInfoMBS_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CFR_LocationAndBW_r18(Encoder& enc, const CFR_LocationAndBW_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_locationAndBandwidthMBS_r18);
     enc.WriteBit(value.has_absoluteFrequencyPointA_MBS_r18);
     enc.WriteBit(value.has_offsetToCarrierMBS_r18);
@@ -3574,7 +3529,6 @@ void Free_NonServingInfo_r18_Cfr_InfoMBS_r18(NonServingInfo_r18_Cfr_InfoMBS_r18&
 // --------------------------------------------------------------------------
 ErrorCode Encode_NonServingInfo_r18(Encoder& enc, const NonServingInfo_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_freqInfoMBS_r18);
     enc.WriteBit(value.has_cfr_InfoMBS_r18);
     enc.WriteBit(value.has_subcarrierSpacing_r18);
@@ -3638,7 +3592,6 @@ void Free_NonServingInfo_r18(NonServingInfo_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MBS_ServiceInfo_r17(Encoder& enc, const MBS_ServiceInfo_r17& value)
 {
-    (void)value;
     Encode_TMGI_r17(enc, value.tmgi_r17);
     return enc.Error();
 }
@@ -3670,7 +3623,6 @@ void Free_MBS_ServiceInfo_r17(MBS_ServiceInfo_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRB_ListBroadcast_r17(Encoder& enc, const MRB_ListBroadcast_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MRB_InfoBroadcast_r17(enc, value.items[i]);
@@ -3719,7 +3671,6 @@ void Free_MRB_ListBroadcast_r17(MRB_ListBroadcast_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MBS_SessionInfo_r17(Encoder& enc, const MBS_SessionInfo_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_mtch_SchedulingInfo_r17);
     enc.WriteBit(value.has_mtch_NeighbourCell_r17);
     enc.WriteBit(value.has_pdsch_ConfigIndex_r17);
@@ -3820,7 +3771,6 @@ void Free_MBS_SessionInfo_r17(MBS_SessionInfo_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRB_PDCP_ConfigBroadcast_r17_HeaderCompression_r17_Rohc_Profiles_r17(Encoder& enc, const MRB_PDCP_ConfigBroadcast_r17_HeaderCompression_r17_Rohc_Profiles_r17& value)
 {
-    (void)value;
     enc.WriteBool(value.profile0x0000_r17);
     enc.WriteBool(value.profile0x0001_r17);
     enc.WriteBool(value.profile0x0002_r17);
@@ -3865,7 +3815,6 @@ void Free_MRB_PDCP_ConfigBroadcast_r17_HeaderCompression_r17_Rohc_Profiles_r17(M
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRB_PDCP_ConfigBroadcast_r17_HeaderCompression_r17_Rohc(Encoder& enc, const MRB_PDCP_ConfigBroadcast_r17_HeaderCompression_r17_Rohc& value)
 {
-    (void)value;
     enc.WriteBit(value.maxCID_r17 != 15);
     if (value.maxCID_r17 != 15) {
         enc.WriteConstrainedInteger((std::int64_t)(value.maxCID_r17), 1, 16);
@@ -3973,7 +3922,6 @@ void Free_MRB_PDCP_ConfigBroadcast_r17_HeaderCompression_r17(MRB_PDCP_ConfigBroa
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRB_PDCP_ConfigBroadcast_r17(Encoder& enc, const MRB_PDCP_ConfigBroadcast_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pdcp_SN_SizeDL_r17);
     enc.WriteBit(value.has_t_Reordering_r17);
     if (value.has_pdcp_SN_SizeDL_r17) {
@@ -4029,7 +3977,6 @@ void Free_MRB_PDCP_ConfigBroadcast_r17(MRB_PDCP_ConfigBroadcast_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRB_RLC_ConfigBroadcast_r17(Encoder& enc, const MRB_RLC_ConfigBroadcast_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sn_FieldLength_r17);
     enc.WriteBit(value.has_t_Reassembly_r17);
     enc.WriteConstrainedInteger((std::int64_t)(value.logicalChannelIdentity_r17), 1, 32);
@@ -4086,7 +4033,6 @@ void Free_MRB_RLC_ConfigBroadcast_r17(MRB_RLC_ConfigBroadcast_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRB_InfoBroadcast_r17(Encoder& enc, const MRB_InfoBroadcast_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_MRB_PDCP_ConfigBroadcast_r17(enc, value.pdcp_Config_r17);
@@ -4130,7 +4076,6 @@ void Free_MRB_InfoBroadcast_r17(MRB_InfoBroadcast_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRB_ListMulticast_r18(Encoder& enc, const MRB_ListMulticast_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 32u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MRB_InfoMulticast_r18(enc, value.items[i]);
@@ -4179,7 +4124,6 @@ void Free_MRB_ListMulticast_r18(MRB_ListMulticast_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MBS_SessionInfoMulticast_r18(Encoder& enc, const MBS_SessionInfoMulticast_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_g_RNTI_r18);
@@ -4336,7 +4280,6 @@ void Free_MBS_SessionInfoMulticast_r18(MBS_SessionInfoMulticast_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRB_PDCP_ConfigMulticast_r18_HeaderCompression_r18_Rohc_Profiles_r18(Encoder& enc, const MRB_PDCP_ConfigMulticast_r18_HeaderCompression_r18_Rohc_Profiles_r18& value)
 {
-    (void)value;
     enc.WriteBool(value.profile0x0000_r18);
     enc.WriteBool(value.profile0x0001_r18);
     enc.WriteBool(value.profile0x0002_r18);
@@ -4381,7 +4324,6 @@ void Free_MRB_PDCP_ConfigMulticast_r18_HeaderCompression_r18_Rohc_Profiles_r18(M
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRB_PDCP_ConfigMulticast_r18_HeaderCompression_r18_Rohc(Encoder& enc, const MRB_PDCP_ConfigMulticast_r18_HeaderCompression_r18_Rohc& value)
 {
-    (void)value;
     enc.WriteBit(value.maxCID_r18 != 15);
     if (value.maxCID_r18 != 15) {
         enc.WriteConstrainedInteger((std::int64_t)(value.maxCID_r18), 1, 16);
@@ -4489,7 +4431,6 @@ void Free_MRB_PDCP_ConfigMulticast_r18_HeaderCompression_r18(MRB_PDCP_ConfigMult
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRB_PDCP_ConfigMulticast_r18(Encoder& enc, const MRB_PDCP_ConfigMulticast_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_t_Reordering_r17);
     enc.WriteConstrainedInteger((std::int64_t)(value.pdcp_SN_SizeDL_r18), 0, 1);
     Encode_MRB_PDCP_ConfigMulticast_r18_HeaderCompression_r18(enc, value.headerCompression_r18);
@@ -4606,7 +4547,6 @@ void Free_MRB_RLC_ConfigMulticast_r18_LogicalChannelIdentity_r18(MRB_RLC_ConfigM
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRB_RLC_ConfigMulticast_r18(Encoder& enc, const MRB_RLC_ConfigMulticast_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_t_Reassembly_r18);
     Encode_MRB_RLC_ConfigMulticast_r18_LogicalChannelIdentity_r18(enc, value.logicalChannelIdentity_r18);
     enc.WriteConstrainedInteger((std::int64_t)(value.sn_FieldLength_r18), 0, 1);
@@ -4657,7 +4597,6 @@ void Free_MRB_RLC_ConfigMulticast_r18(MRB_RLC_ConfigMulticast_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRB_InfoMulticast_r18(Encoder& enc, const MRB_InfoMulticast_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_MRB_PDCP_ConfigMulticast_r18(enc, value.pdcp_Config_r18);
@@ -4811,7 +4750,6 @@ void Free_MTCH_SSB_MappingWindowCycleOffset_r17(MTCH_SSB_MappingWindowCycleOffse
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDSCH_ConfigPTM_r17(Encoder& enc, const PDSCH_ConfigPTM_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dataScramblingIdentityPDSCH_r17);
     enc.WriteBit(value.has_dmrs_ScramblingID0_r17);
     enc.WriteBit(value.has_pdsch_AggregationFactor_r17);

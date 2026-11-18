@@ -88,7 +88,6 @@ void Free_LoggedMeasurementConfiguration_r16_CriticalExtensions(LoggedMeasuremen
 // --------------------------------------------------------------------------
 ErrorCode Encode_LoggedMeasurementConfiguration_r16(Encoder& enc, const LoggedMeasurementConfiguration_r16& value)
 {
-    (void)value;
     Encode_LoggedMeasurementConfiguration_r16_CriticalExtensions(enc, value.criticalExtensions);
     return enc.Error();
 }
@@ -120,7 +119,6 @@ void Free_LoggedMeasurementConfiguration_r16(LoggedMeasurementConfiguration_r16&
 // --------------------------------------------------------------------------
 ErrorCode Encode_MBS_NeighbourCellList_r17(Encoder& enc, const MBS_NeighbourCellList_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 0u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MBS_NeighbourCell_r17(enc, value.items[i]);
@@ -169,7 +167,6 @@ void Free_MBS_NeighbourCellList_r17(MBS_NeighbourCellList_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MBS_SessionInfoList_r17(Encoder& enc, const MBS_SessionInfoList_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 1024u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MBS_SessionInfo_r17(enc, value.items[i]);
@@ -218,7 +215,6 @@ void Free_MBS_SessionInfoList_r17(MBS_SessionInfoList_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MTCH_SSB_MappingWindowList_r17(Encoder& enc, const MTCH_SSB_MappingWindowList_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MTCH_SSB_MappingWindowCycleOffset_r17(enc, value.items[i]);
@@ -267,7 +263,6 @@ void Free_MTCH_SSB_MappingWindowList_r17(MTCH_SSB_MappingWindowList_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDSCH_TimeDomainResourceAllocationList_r16(Encoder& enc, const PDSCH_TimeDomainResourceAllocationList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_PDSCH_TimeDomainResourceAllocation_r16(enc, value.items[i]);
@@ -316,7 +311,6 @@ void Free_PDSCH_TimeDomainResourceAllocationList_r16(PDSCH_TimeDomainResourceAll
 // --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_MBSFN_SubframeConfigList(Encoder& enc, const EUTRA_MBSFN_SubframeConfigList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_EUTRA_MBSFN_SubframeConfig(enc, value.items[i]);
@@ -365,7 +359,6 @@ void Free_EUTRA_MBSFN_SubframeConfigList(EUTRA_MBSFN_SubframeConfigList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_RateMatchPatternLTE_CRS(Encoder& enc, const RateMatchPatternLTE_CRS& value)
 {
-    (void)value;
     enc.WriteBit(value.has_mbsfn_SubframeConfigList);
     enc.WriteConstrainedInteger((std::int64_t)(value.carrierFreqDL), 0, 16383);
     enc.WriteConstrainedInteger((std::int64_t)(value.carrierBandwidthDL), 0, 7);
@@ -428,7 +421,6 @@ void Free_RateMatchPatternLTE_CRS(RateMatchPatternLTE_CRS& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDSCH_ConfigBroadcast_r17(Encoder& enc, const PDSCH_ConfigBroadcast_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pdsch_TimeDomainAllocationList_r17);
     enc.WriteBit(value.has_rateMatchPatternToAddModList_r17);
     enc.WriteBit(value.has_lte_CRS_ToMatchAround_r17);
@@ -585,7 +577,6 @@ void Free_MBSBroadcastConfiguration_r17_IEs_NonCriticalExtension(MBSBroadcastCon
 // --------------------------------------------------------------------------
 ErrorCode Encode_MBSBroadcastConfiguration_r17_IEs(Encoder& enc, const MBSBroadcastConfiguration_r17_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_mbs_SessionInfoList_r17);
     enc.WriteBit(value.has_mbs_NeighbourCellList_r17);
     enc.WriteBit(value.has_drx_ConfigPTM_List_r17);
@@ -808,7 +799,6 @@ void Free_MBSBroadcastConfiguration_r17_CriticalExtensions(MBSBroadcastConfigura
 // --------------------------------------------------------------------------
 ErrorCode Encode_MBSBroadcastConfiguration_r17(Encoder& enc, const MBSBroadcastConfiguration_r17& value)
 {
-    (void)value;
     Encode_MBSBroadcastConfiguration_r17_CriticalExtensions(enc, value.criticalExtensions);
     return enc.Error();
 }
@@ -840,7 +830,6 @@ void Free_MBSBroadcastConfiguration_r17(MBSBroadcastConfiguration_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MBS_NonServingInfoList_r18(Encoder& enc, const MBS_NonServingInfoList_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_NonServingInfo_r18(enc, value.items[i]);
@@ -910,7 +899,6 @@ void Free_MBSInterestIndication_v1800_NonCriticalExtension(MBSInterestIndication
 // --------------------------------------------------------------------------
 ErrorCode Encode_MBSInterestIndication_v1800(Encoder& enc, const MBSInterestIndication_v1800& value)
 {
-    (void)value;
     enc.WriteBit(value.has_mbs_NonServingInfoList_r18);
     enc.WriteBit(value.has_nonCriticalExtension);
     if (value.has_mbs_NonServingInfoList_r18) {
@@ -961,7 +949,6 @@ void Free_MBSInterestIndication_v1800(MBSInterestIndication_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CarrierFreqListMBS_r17(Encoder& enc, const CarrierFreqListMBS_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 3279165);
@@ -1011,7 +998,6 @@ void Free_CarrierFreqListMBS_r17(CarrierFreqListMBS_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MBS_ServiceList_r17(Encoder& enc, const MBS_ServiceList_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MBS_ServiceInfo_r17(enc, value.items[i]);
@@ -1060,7 +1046,6 @@ void Free_MBS_ServiceList_r17(MBS_ServiceList_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MBSInterestIndication_r17_IEs(Encoder& enc, const MBSInterestIndication_r17_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_mbs_FreqList_r17);
     enc.WriteBit(value.has_mbs_Priority_r17);
     enc.WriteBit(value.has_mbs_ServiceList_r17);
@@ -1237,7 +1222,6 @@ void Free_MBSInterestIndication_r17_CriticalExtensions(MBSInterestIndication_r17
 // --------------------------------------------------------------------------
 ErrorCode Encode_MBSInterestIndication_r17(Encoder& enc, const MBSInterestIndication_r17& value)
 {
-    (void)value;
     Encode_MBSInterestIndication_r17_CriticalExtensions(enc, value.criticalExtensions);
     return enc.Error();
 }
@@ -1269,7 +1253,6 @@ void Free_MBSInterestIndication_r17(MBSInterestIndication_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MBS_SessionInfoListMulticast_r18(Encoder& enc, const MBS_SessionInfoListMulticast_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 1024u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MBS_SessionInfoMulticast_r18(enc, value.items[i]);
@@ -1339,7 +1322,6 @@ void Free_MBSMulticastConfiguration_r18_IEs_NonCriticalExtension(MBSMulticastCon
 // --------------------------------------------------------------------------
 ErrorCode Encode_MBSMulticastConfiguration_r18_IEs(Encoder& enc, const MBSMulticastConfiguration_r18_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_mbs_SessionInfoListMulticast_r18);
     enc.WriteBit(value.has_mbs_NeighbourCellList_r18);
     enc.WriteBit(value.has_drx_ConfigPTM_List_r18);
@@ -1595,7 +1577,6 @@ void Free_MBSMulticastConfiguration_r18_CriticalExtensions(MBSMulticastConfigura
 // --------------------------------------------------------------------------
 ErrorCode Encode_MBSMulticastConfiguration_r18(Encoder& enc, const MBSMulticastConfiguration_r18& value)
 {
-    (void)value;
     Encode_MBSMulticastConfiguration_r18_CriticalExtensions(enc, value.criticalExtensions);
     return enc.Error();
 }
@@ -1627,7 +1608,6 @@ void Free_MBSMulticastConfiguration_r18(MBSMulticastConfiguration_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ThresholdMBS_r18(Encoder& enc, const ThresholdMBS_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_rsrp_r18);
     enc.WriteBit(value.has_rsrq_r18);
     if (value.has_rsrp_r18) {
@@ -1680,7 +1660,6 @@ void Free_ThresholdMBS_r18(ThresholdMBS_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResultList2UTRA(Encoder& enc, const MeasResultList2UTRA& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MeasResult2UTRA_FDD_r16(enc, value.items[i]);
@@ -1729,7 +1708,6 @@ void Free_MeasResultList2UTRA(MeasResultList2UTRA& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResultList2EUTRA(Encoder& enc, const MeasResultList2EUTRA& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MeasResult2EUTRA_r16(enc, value.items[i]);
@@ -1778,7 +1756,6 @@ void Free_MeasResultList2EUTRA(MeasResultList2EUTRA& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResultList2NR(Encoder& enc, const MeasResultList2NR& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MeasResult2NR(enc, value.items[i]);
@@ -1827,7 +1804,6 @@ void Free_MeasResultList2NR(MeasResultList2NR& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FailureReportMCG_r16(Encoder& enc, const FailureReportMCG_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_failureType_r16);
@@ -1991,7 +1967,6 @@ void Free_MCGFailureInformation_r16_IEs_NonCriticalExtension(MCGFailureInformati
 // --------------------------------------------------------------------------
 ErrorCode Encode_MCGFailureInformation_r16_IEs(Encoder& enc, const MCGFailureInformation_r16_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_failureReportMCG_r16);
     enc.WriteBit(value.has_lateNonCriticalExtension);
     enc.WriteBit(value.has_nonCriticalExtension);
@@ -2145,7 +2120,6 @@ void Free_MCGFailureInformation_r16_CriticalExtensions(MCGFailureInformation_r16
 // --------------------------------------------------------------------------
 ErrorCode Encode_MCGFailureInformation_r16(Encoder& enc, const MCGFailureInformation_r16& value)
 {
-    (void)value;
     Encode_MCGFailureInformation_r16_CriticalExtensions(enc, value.criticalExtensions);
     return enc.Error();
 }
@@ -2177,7 +2151,6 @@ void Free_MCGFailureInformation_r16(MCGFailureInformation_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResultListUTRA_FDD_r16(Encoder& enc, const MeasResultListUTRA_FDD_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MeasResultUTRA_FDD_r16(enc, value.items[i]);
@@ -2226,7 +2199,6 @@ void Free_MeasResultListUTRA_FDD_r16(MeasResultListUTRA_FDD_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResult2UTRA_FDD_r16(Encoder& enc, const MeasResult2UTRA_FDD_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.carrierFreq_r16), 0, 16383);
     Encode_MeasResultListUTRA_FDD_r16(enc, value.measResultNeighCellList_r16);
     return enc.Error();
@@ -2264,7 +2236,6 @@ void Free_MeasResult2UTRA_FDD_r16(MeasResult2UTRA_FDD_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResultCellSFTD_NR(Encoder& enc, const MeasResultCellSFTD_NR& value)
 {
-    (void)value;
     enc.WriteBit(value.has_rsrp_Result);
     enc.WriteConstrainedInteger((std::int64_t)(value.physCellId), 0, 1007);
     enc.WriteConstrainedInteger((std::int64_t)(value.sfn_OffsetResult), 0, 1023);
@@ -2322,7 +2293,6 @@ void Free_MeasResultCellSFTD_NR(MeasResultCellSFTD_NR& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResultSFTD_EUTRA(Encoder& enc, const MeasResultSFTD_EUTRA& value)
 {
-    (void)value;
     enc.WriteBit(value.has_rsrp_Result);
     enc.WriteConstrainedInteger((std::int64_t)(value.eutra_PhysCellId), 0, 503);
     enc.WriteConstrainedInteger((std::int64_t)(value.sfn_OffsetResult), 0, 1023);
@@ -2380,7 +2350,6 @@ void Free_MeasResultSFTD_EUTRA(MeasResultSFTD_EUTRA& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResultServFreqListEUTRA_SCG(Encoder& enc, const MeasResultServFreqListEUTRA_SCG& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 32u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MeasResult2EUTRA(enc, value.items[i]);
@@ -2429,7 +2398,6 @@ void Free_MeasResultServFreqListEUTRA_SCG(MeasResultServFreqListEUTRA_SCG& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResultServFreqListNR_SCG(Encoder& enc, const MeasResultServFreqListNR_SCG& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 32u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MeasResult2NR(enc, value.items[i]);
@@ -2478,7 +2446,6 @@ void Free_MeasResultServFreqListNR_SCG(MeasResultServFreqListNR_SCG& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResults_ExtGroup1(Encoder& enc, const MeasResults_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measResultServFreqListEUTRA_SCG);
     enc.WriteBit(value.has_measResultServFreqListNR_SCG);
     enc.WriteBit(value.has_measResultSFTD_EUTRA);
@@ -2553,7 +2520,6 @@ void Free_MeasResults_ExtGroup1(MeasResults_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResultCellListSFTD_NR(Encoder& enc, const MeasResultCellListSFTD_NR& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 3u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MeasResultCellSFTD_NR(enc, value.items[i]);
@@ -2602,7 +2568,6 @@ void Free_MeasResultCellListSFTD_NR(MeasResultCellListSFTD_NR& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResults_ExtGroup2(Encoder& enc, const MeasResults_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measResultCellListSFTD_NR);
     if (value.has_measResultCellListSFTD_NR) {
         Encode_MeasResultCellListSFTD_NR(enc, value.measResultCellListSFTD_NR);
@@ -2641,7 +2606,6 @@ void Free_MeasResults_ExtGroup2(MeasResults_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CommonLocationInfo_r16(Encoder& enc, const CommonLocationInfo_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_gnss_TOD_msec_r16);
     enc.WriteBit(value.has_locationTimestamp_r16);
     enc.WriteBit(value.has_locationCoordinate_r16);
@@ -2776,7 +2740,6 @@ void Free_CommonLocationInfo_r16(CommonLocationInfo_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_Sensor_LocationInfo_r16(Encoder& enc, const Sensor_LocationInfo_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sensor_MeasurementInformation_r16);
@@ -2846,7 +2809,6 @@ void Free_Sensor_LocationInfo_r16(Sensor_LocationInfo_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_LogMeasResultListBT_r16(Encoder& enc, const LogMeasResultListBT_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 32u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_LogMeasResultBT_r16(enc, value.items[i]);
@@ -2895,7 +2857,6 @@ void Free_LogMeasResultListBT_r16(LogMeasResultListBT_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_LogMeasResultListWLAN_r16(Encoder& enc, const LogMeasResultListWLAN_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 32u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_LogMeasResultWLAN_r16(enc, value.items[i]);
@@ -2944,7 +2905,6 @@ void Free_LogMeasResultListWLAN_r16(LogMeasResultListWLAN_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_LocationInfo_r16(Encoder& enc, const LocationInfo_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_commonLocationInfo_r16);
@@ -3026,7 +2986,6 @@ void Free_LocationInfo_r16(LocationInfo_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResultForRSSI_r16(Encoder& enc, const MeasResultForRSSI_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.rssi_Result_r16), 0, 76);
     enc.WriteConstrainedInteger((std::int64_t)(value.channelOccupancy_r16), 0, 100);
     return enc.Error();
@@ -3065,7 +3024,6 @@ void Free_MeasResultForRSSI_r16(MeasResultForRSSI_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResultListSRS_RSRP_r16(Encoder& enc, const MeasResultListSRS_RSRP_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MeasResultSRS_RSRP_r16(enc, value.items[i]);
@@ -3114,7 +3072,6 @@ void Free_MeasResultListSRS_RSRP_r16(MeasResultListSRS_RSRP_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResultListCLI_RSSI_r16(Encoder& enc, const MeasResultListCLI_RSSI_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MeasResultCLI_RSSI_r16(enc, value.items[i]);
@@ -3163,7 +3120,6 @@ void Free_MeasResultListCLI_RSSI_r16(MeasResultListCLI_RSSI_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResultCLI_r16(Encoder& enc, const MeasResultCLI_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measResultListSRS_RSRP_r16);
     enc.WriteBit(value.has_measResultListCLI_RSSI_r16);
     if (value.has_measResultListSRS_RSRP_r16) {
@@ -3214,7 +3170,6 @@ void Free_MeasResultCLI_r16(MeasResultCLI_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_UL_PDCP_DelayValueResultList_r16(Encoder& enc, const UL_PDCP_DelayValueResultList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 29u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_UL_PDCP_DelayValueResult_r16(enc, value.items[i]);
@@ -3263,7 +3218,6 @@ void Free_UL_PDCP_DelayValueResultList_r16(UL_PDCP_DelayValueResultList_r16& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResultNR_SL_r16(Encoder& enc, const MeasResultNR_SL_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
 enc.WriteConstrainedLength(value.measResultListCBR_NR_r16_count, 0u, 0u);
@@ -3416,7 +3370,6 @@ void Free_MeasResultsSL_r16_MeasResultsListSL_r16(MeasResultsSL_r16_MeasResultsL
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResultsSL_r16(Encoder& enc, const MeasResultsSL_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_MeasResultsSL_r16_MeasResultsListSL_r16(enc, value.measResultsListSL_r16);
@@ -3455,7 +3408,6 @@ void Free_MeasResultsSL_r16(MeasResultsSL_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResults_ExtGroup3(Encoder& enc, const MeasResults_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measResultForRSSI_r16);
     enc.WriteBit(value.has_locationInfo_r16);
     enc.WriteBit(value.has_ul_PDCP_DelayValueResultList_r16);
@@ -3542,7 +3494,6 @@ void Free_MeasResults_ExtGroup3(MeasResults_ExtGroup3& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_UL_PDCP_ExcessDelayResultList_r17(Encoder& enc, const UL_PDCP_ExcessDelayResultList_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 29u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_UL_PDCP_ExcessDelayResult_r17(enc, value.items[i]);
@@ -3591,7 +3542,6 @@ void Free_UL_PDCP_ExcessDelayResultList_r17(UL_PDCP_ExcessDelayResultList_r17& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResultRxTxTimeDiff_r17(Encoder& enc, const MeasResultRxTxTimeDiff_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_rxTxTimeDiff_ue_r17);
@@ -3637,7 +3587,6 @@ void Free_MeasResultRxTxTimeDiff_r17(MeasResultRxTxTimeDiff_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResults_ExtGroup4(Encoder& enc, const MeasResults_ExtGroup4& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measResultRxTxTimeDiff_r17);
     enc.WriteBit(value.has_sl_MeasResultServingRelay_r17);
     enc.WriteBit(value.has_ul_PDCP_ExcessDelayResultList_r17);
@@ -3724,7 +3673,6 @@ void Free_MeasResults_ExtGroup4(MeasResults_ExtGroup4& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResults_ExtGroup5(Encoder& enc, const MeasResults_ExtGroup5& value)
 {
-    (void)value;
     enc.WriteBit(value.has_altitudeUE_r18);
     if (value.has_altitudeUE_r18) {
         enc.WriteConstrainedInteger((std::int64_t)(value.altitudeUE_r18), -420, 10000);
@@ -3764,7 +3712,6 @@ void Free_MeasResults_ExtGroup5(MeasResults_ExtGroup5& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResultServMOList(Encoder& enc, const MeasResultServMOList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 32u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MeasResultServMO(enc, value.items[i]);
@@ -3813,7 +3760,6 @@ void Free_MeasResultServMOList(MeasResultServMOList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResultListNR(Encoder& enc, const MeasResultListNR& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MeasResultNR(enc, value.items[i]);
@@ -3862,7 +3808,6 @@ void Free_MeasResultListNR(MeasResultListNR& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResultListEUTRA(Encoder& enc, const MeasResultListEUTRA& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MeasResultEUTRA(enc, value.items[i]);
@@ -4040,7 +3985,6 @@ void Free_MeasResults_MeasResultNeighCells(MeasResults_MeasResultNeighCells& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasResults(Encoder& enc, const MeasResults& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3 || value.has_extGroup4 || value.has_extGroup5;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_measResultNeighCells);
@@ -4246,7 +4190,6 @@ void Free_MeasurementReport_IEs_NonCriticalExtension(MeasurementReport_IEs_NonCr
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasurementReport_IEs(Encoder& enc, const MeasurementReport_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_lateNonCriticalExtension);
     enc.WriteBit(value.has_nonCriticalExtension);
     Encode_MeasResults(enc, value.measResults);
@@ -4393,7 +4336,6 @@ void Free_MeasurementReport_CriticalExtensions(MeasurementReport_CriticalExtensi
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasurementReport(Encoder& enc, const MeasurementReport& value)
 {
-    (void)value;
     Encode_MeasurementReport_CriticalExtensions(enc, value.criticalExtensions);
     return enc.Error();
 }
@@ -4425,7 +4367,6 @@ void Free_MeasurementReport(MeasurementReport& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasurementReportAppLayerList_v1800(Encoder& enc, const MeasurementReportAppLayerList_v1800& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MeasReportAppLayer_v1800(enc, value.items[i]);
@@ -4495,7 +4436,6 @@ void Free_MeasurementReportAppLayer_v1800_IEs_NonCriticalExtension(MeasurementRe
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasurementReportAppLayer_v1800_IEs(Encoder& enc, const MeasurementReportAppLayer_v1800_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measurementReportAppLayerList_v1800);
     enc.WriteBit(value.has_nonCriticalExtension);
     if (value.has_measurementReportAppLayerList_v1800) {
@@ -4546,7 +4486,6 @@ void Free_MeasurementReportAppLayer_v1800_IEs(MeasurementReportAppLayer_v1800_IE
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasurementReportAppLayerList_r17(Encoder& enc, const MeasurementReportAppLayerList_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_MeasReportAppLayer_r17(enc, value.items[i]);
@@ -4595,7 +4534,6 @@ void Free_MeasurementReportAppLayerList_r17(MeasurementReportAppLayerList_r17& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasurementReportAppLayer_r17_IEs(Encoder& enc, const MeasurementReportAppLayer_r17_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_lateNonCriticalExtension);
     enc.WriteBit(value.has_nonCriticalExtension);
     Encode_MeasurementReportAppLayerList_r17(enc, value.measurementReportAppLayerList_r17);
@@ -4742,7 +4680,6 @@ void Free_MeasurementReportAppLayer_r17_CriticalExtensions(MeasurementReportAppL
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasurementReportAppLayer_r17(Encoder& enc, const MeasurementReportAppLayer_r17& value)
 {
-    (void)value;
     Encode_MeasurementReportAppLayer_r17_CriticalExtensions(enc, value.criticalExtensions);
     return enc.Error();
 }
@@ -4774,7 +4711,6 @@ void Free_MeasurementReportAppLayer_r17(MeasurementReportAppLayer_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_RAN_VisibleMeasurements_r17_ExtGroup1(Encoder& enc, const RAN_VisibleMeasurements_r17_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pdu_SessionIdListExt_v1800);
     if (value.has_pdu_SessionIdListExt_v1800) {
 enc.WriteConstrainedLength(value.pdu_SessionIdListExt_v1800_count, 0u, 0u);
@@ -4834,7 +4770,6 @@ void Free_RAN_VisibleMeasurements_r17_ExtGroup1(RAN_VisibleMeasurements_r17_ExtG
 // --------------------------------------------------------------------------
 ErrorCode Encode_RAN_VisibleMeasurements_r17(Encoder& enc, const RAN_VisibleMeasurements_r17& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_appLayerBufferLevelList_r17);
@@ -4985,7 +4920,6 @@ void Free_RAN_VisibleMeasurements_r17(RAN_VisibleMeasurements_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasReportAppLayer_r17(Encoder& enc, const MeasReportAppLayer_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measReportAppLayerContainer_r17);
     enc.WriteBit(value.has_appLayerSessionStatus_r17);
     enc.WriteBit(value.has_ran_VisibleMeasurements_r17);
@@ -5189,7 +5123,6 @@ void Free_Qoe_AreaScope_r18(Qoe_AreaScope_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_AvailableRAN_VisibleMetrics_r18(Encoder& enc, const AvailableRAN_VisibleMetrics_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_appLayerBufferLevelList_r18);
@@ -5245,7 +5178,6 @@ void Free_AvailableRAN_VisibleMetrics_r18(AvailableRAN_VisibleMetrics_r18& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_AppLayerIdleInactiveConfig_r18(Encoder& enc, const AppLayerIdleInactiveConfig_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_serviceType_r18);
@@ -5386,7 +5318,6 @@ void Free_AppLayerIdleInactiveConfig_r18(AppLayerIdleInactiveConfig_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MeasReportAppLayer_v1800(Encoder& enc, const MeasReportAppLayer_v1800& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_appLayerIdleInactiveConfig_r18);
@@ -5471,7 +5402,6 @@ void Free_MeasReportAppLayer_v1800(MeasReportAppLayer_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_QFI_List_r18(Encoder& enc, const QFI_List_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 64u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 63);
@@ -5521,7 +5451,6 @@ void Free_QFI_List_r18(QFI_List_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigSIB1(Encoder& enc, const PDCCH_ConfigSIB1& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.controlResourceSetZero), 0, 15);
     enc.WriteConstrainedInteger((std::int64_t)(value.searchSpaceZero), 0, 15);
     return enc.Error();
@@ -5560,7 +5489,6 @@ void Free_PDCCH_ConfigSIB1(PDCCH_ConfigSIB1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MIB(Encoder& enc, const MIB& value)
 {
-    (void)value;
     enc.WriteFixedBitString(value.systemFrameNumber.bytes, value.systemFrameNumber.bitLength, 6, 6);
     enc.WriteConstrainedInteger((std::int64_t)(value.subCarrierSpacingCommon), 0, 1);
     enc.WriteConstrainedInteger((std::int64_t)(value.ssb_SubcarrierOffset), 0, 15);
@@ -5646,7 +5574,6 @@ void Free_MIB(MIB& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SuccessHO_Config_r17(Encoder& enc, const SuccessHO_Config_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_thresholdPercentageT304_r17);
@@ -5814,7 +5741,6 @@ void Free_MobilityFromNRCommand_v1800_IEs_NonCriticalExtension(MobilityFromNRCom
 // --------------------------------------------------------------------------
 ErrorCode Encode_MobilityFromNRCommand_v1800_IEs(Encoder& enc, const MobilityFromNRCommand_v1800_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_successHO_Config_r18);
     enc.WriteBit(value.has_nonCriticalExtension);
     if (value.has_successHO_Config_r18) {
@@ -5865,7 +5791,6 @@ void Free_MobilityFromNRCommand_v1800_IEs(MobilityFromNRCommand_v1800_IEs& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_MobilityFromNRCommand_v1610_IEs(Encoder& enc, const MobilityFromNRCommand_v1610_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_voiceFallbackIndication_r16);
     enc.WriteBit(value.has_nonCriticalExtension);
     if (value.has_voiceFallbackIndication_r16) {
@@ -5915,7 +5840,6 @@ void Free_MobilityFromNRCommand_v1610_IEs(MobilityFromNRCommand_v1610_IEs& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_MobilityFromNRCommand_IEs(Encoder& enc, const MobilityFromNRCommand_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_nas_SecurityParamFromNR);
     enc.WriteBit(value.has_lateNonCriticalExtension);
     enc.WriteBit(value.has_nonCriticalExtension);
@@ -6114,7 +6038,6 @@ void Free_MobilityFromNRCommand_CriticalExtensions(MobilityFromNRCommand_Critica
 // --------------------------------------------------------------------------
 ErrorCode Encode_MobilityFromNRCommand(Encoder& enc, const MobilityFromNRCommand& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.rrc_TransactionIdentifier), 0, 3);
     Encode_MobilityFromNRCommand_CriticalExtensions(enc, value.criticalExtensions);
     return enc.Error();
@@ -6152,7 +6075,6 @@ void Free_MobilityFromNRCommand(MobilityFromNRCommand& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PagingRecordList_v1800(Encoder& enc, const PagingRecordList_v1800& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 32u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_PagingRecord_v1800(enc, value.items[i]);
@@ -6201,7 +6123,6 @@ void Free_PagingRecordList_v1800(PagingRecordList_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PagingGroupList_v1800(Encoder& enc, const PagingGroupList_v1800& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 32u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_GroupPaging_r18(enc, value.items[i]);
@@ -6271,7 +6192,6 @@ void Free_Paging_v1800_IEs_NonCriticalExtension(Paging_v1800_IEs_NonCriticalExte
 // --------------------------------------------------------------------------
 ErrorCode Encode_Paging_v1800_IEs(Encoder& enc, const Paging_v1800_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pagingRecordList_v1800);
     enc.WriteBit(value.has_pagingGroupList_v1800);
     enc.WriteBit(value.has_nonCriticalExtension);
@@ -6334,7 +6254,6 @@ void Free_Paging_v1800_IEs(Paging_v1800_IEs& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PagingRecordList_v1700(Encoder& enc, const PagingRecordList_v1700& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 32u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_PagingRecord_v1700(enc, value.items[i]);
@@ -6383,7 +6302,6 @@ void Free_PagingRecordList_v1700(PagingRecordList_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PagingGroupList_r17(Encoder& enc, const PagingGroupList_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 32u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_TMGI_r17(enc, value.items[i]);
@@ -6432,7 +6350,6 @@ void Free_PagingGroupList_r17(PagingGroupList_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_Paging_v1700_IEs(Encoder& enc, const Paging_v1700_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pagingRecordList_v1700);
     enc.WriteBit(value.has_pagingGroupList_r17);
     enc.WriteBit(value.has_nonCriticalExtension);
@@ -6495,7 +6412,6 @@ void Free_Paging_v1700_IEs(Paging_v1700_IEs& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PagingRecordList(Encoder& enc, const PagingRecordList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 32u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_PagingRecord(enc, value.items[i]);
@@ -6544,7 +6460,6 @@ void Free_PagingRecordList(PagingRecordList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_Paging(Encoder& enc, const Paging& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pagingRecordList);
     enc.WriteBit(value.has_lateNonCriticalExtension);
     enc.WriteBit(value.has_nonCriticalExtension);
@@ -6731,7 +6646,6 @@ void Free_PagingUE_Identity(PagingUE_Identity& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PagingRecord(Encoder& enc, const PagingRecord& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_accessType);
@@ -6781,7 +6695,6 @@ void Free_PagingRecord(PagingRecord& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PagingRecord_v1700(Encoder& enc, const PagingRecord_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pagingCause_r17);
     if (value.has_pagingCause_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.pagingCause_r17), 0, 0);
@@ -6819,7 +6732,6 @@ void Free_PagingRecord_v1700(PagingRecord_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PagingRecord_v1800(Encoder& enc, const PagingRecord_v1800& value)
 {
-    (void)value;
     enc.WriteBit(value.has_mt_SDT);
     if (value.has_mt_SDT) {
         enc.WriteConstrainedInteger((std::int64_t)(value.mt_SDT), 0, 0);
@@ -6857,7 +6769,6 @@ void Free_PagingRecord_v1800(PagingRecord_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_GroupPaging_r18(Encoder& enc, const GroupPaging_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_inactiveReceptionAllowed_r18);
     if (value.has_inactiveReceptionAllowed_r18) {
         enc.WriteConstrainedInteger((std::int64_t)(value.inactiveReceptionAllowed_r18), 0, 0);
@@ -6895,7 +6806,6 @@ void Free_GroupPaging_r18(GroupPaging_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_L2RemoteUE_Config_r17_ExtGroup1(Encoder& enc, const SL_L2RemoteUE_Config_r17_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_U2U_RelayUE_ToAddModList_r18);
     enc.WriteBit(value.has_sl_U2U_RelayUE_ToReleaseList_r18);
     if (value.has_sl_U2U_RelayUE_ToAddModList_r18) {
@@ -6995,7 +6905,6 @@ void Free_SL_L2RemoteUE_Config_r17_ExtGroup1(SL_L2RemoteUE_Config_r17_ExtGroup1&
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_SRAP_Config_r17(Encoder& enc, const SL_SRAP_Config_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_LocalIdentity_r17);
@@ -7108,7 +7017,6 @@ void Free_SL_SRAP_Config_r17(SL_SRAP_Config_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SL_L2RemoteUE_Config_r17(Encoder& enc, const SL_L2RemoteUE_Config_r17& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_sl_SRAP_ConfigRemote_r17);

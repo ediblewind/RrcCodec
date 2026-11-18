@@ -3736,7 +3736,6 @@ ErrorCode DecodeContained_UE_NR_Capability_v15c0(Decoder& dec, UE_NR_Capability_
 // --------------------------------------------------------------------------
 ErrorCode Encode_DRB_CountMSB_InfoList(Encoder& enc, const DRB_CountMSB_InfoList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 29u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_DRB_CountMSB_Info(enc, value.items[i]);
@@ -3806,7 +3805,6 @@ void Free_CounterCheck_IEs_NonCriticalExtension(CounterCheck_IEs_NonCriticalExte
 // --------------------------------------------------------------------------
 ErrorCode Encode_CounterCheck_IEs(Encoder& enc, const CounterCheck_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_lateNonCriticalExtension);
     enc.WriteBit(value.has_nonCriticalExtension);
     Encode_DRB_CountMSB_InfoList(enc, value.drb_CountMSB_InfoList);
@@ -3953,7 +3951,6 @@ void Free_CounterCheck_CriticalExtensions(CounterCheck_CriticalExtensions& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_CounterCheck(Encoder& enc, const CounterCheck& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.rrc_TransactionIdentifier), 0, 3);
     Encode_CounterCheck_CriticalExtensions(enc, value.criticalExtensions);
     return enc.Error();
@@ -3991,7 +3988,6 @@ void Free_CounterCheck(CounterCheck& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DRB_CountMSB_Info(Encoder& enc, const DRB_CountMSB_Info& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.drb_Identity), 1, 32);
     enc.WriteConstrainedInteger((std::int64_t)(value.countMSB_Uplink), 0, 33554431);
     enc.WriteConstrainedInteger((std::int64_t)(value.countMSB_Downlink), 0, 33554431);
@@ -4036,7 +4032,6 @@ void Free_DRB_CountMSB_Info(DRB_CountMSB_Info& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DRB_CountInfoList(Encoder& enc, const DRB_CountInfoList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 0u, 29u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_DRB_CountInfo(enc, value.items[i]);
@@ -4106,7 +4101,6 @@ void Free_CounterCheckResponse_IEs_NonCriticalExtension(CounterCheckResponse_IEs
 // --------------------------------------------------------------------------
 ErrorCode Encode_CounterCheckResponse_IEs(Encoder& enc, const CounterCheckResponse_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_lateNonCriticalExtension);
     enc.WriteBit(value.has_nonCriticalExtension);
     Encode_DRB_CountInfoList(enc, value.drb_CountInfoList);
@@ -4253,7 +4247,6 @@ void Free_CounterCheckResponse_CriticalExtensions(CounterCheckResponse_CriticalE
 // --------------------------------------------------------------------------
 ErrorCode Encode_CounterCheckResponse(Encoder& enc, const CounterCheckResponse& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.rrc_TransactionIdentifier), 0, 3);
     Encode_CounterCheckResponse_CriticalExtensions(enc, value.criticalExtensions);
     return enc.Error();
@@ -4291,7 +4284,6 @@ void Free_CounterCheckResponse(CounterCheckResponse& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DRB_CountInfo(Encoder& enc, const DRB_CountInfo& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.drb_Identity), 1, 32);
     enc.WriteConstrainedInteger((std::int64_t)(value.count_Uplink), 0, 4294967295);
     enc.WriteConstrainedInteger((std::int64_t)(value.count_Downlink), 0, 4294967295);
@@ -4336,7 +4328,6 @@ void Free_DRB_CountInfo(DRB_CountInfo& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DedicatedSIBRequest_r16_IEs_OnDemandSIB_RequestList_r16(Encoder& enc, const DedicatedSIBRequest_r16_IEs_OnDemandSIB_RequestList_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_requestedSIB_List_r16);
     enc.WriteBit(value.has_requestedPosSIB_List_r16);
     if (value.has_requestedSIB_List_r16) {
@@ -4451,7 +4442,6 @@ void Free_DedicatedSIBRequest_r16_IEs_NonCriticalExtension(DedicatedSIBRequest_r
 // --------------------------------------------------------------------------
 ErrorCode Encode_DedicatedSIBRequest_r16_IEs(Encoder& enc, const DedicatedSIBRequest_r16_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_onDemandSIB_RequestList_r16);
     enc.WriteBit(value.has_lateNonCriticalExtension);
     enc.WriteBit(value.has_nonCriticalExtension);
@@ -4605,7 +4595,6 @@ void Free_DedicatedSIBRequest_r16_CriticalExtensions(DedicatedSIBRequest_r16_Cri
 // --------------------------------------------------------------------------
 ErrorCode Encode_DedicatedSIBRequest_r16(Encoder& enc, const DedicatedSIBRequest_r16& value)
 {
-    (void)value;
     Encode_DedicatedSIBRequest_r16_CriticalExtensions(enc, value.criticalExtensions);
     return enc.Error();
 }
@@ -4637,7 +4626,6 @@ void Free_DedicatedSIBRequest_r16(DedicatedSIBRequest_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_GNSS_ID_r16(Encoder& enc, const GNSS_ID_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     {
@@ -4699,7 +4687,6 @@ void Free_GNSS_ID_r16(GNSS_ID_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SBAS_ID_r16(Encoder& enc, const SBAS_ID_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     {
@@ -4761,7 +4748,6 @@ void Free_SBAS_ID_r16(SBAS_ID_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PosSIB_ReqInfo_r16(Encoder& enc, const PosSIB_ReqInfo_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_gnss_id_r16);
     enc.WriteBit(value.has_sbas_id_r16);
     if (value.has_gnss_id_r16) {
@@ -4861,7 +4847,6 @@ void Free_DLDedicatedMessageSegment_r16_IEs_NonCriticalExtension(DLDedicatedMess
 // --------------------------------------------------------------------------
 ErrorCode Encode_DLDedicatedMessageSegment_r16_IEs(Encoder& enc, const DLDedicatedMessageSegment_r16_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_lateNonCriticalExtension);
     enc.WriteBit(value.has_nonCriticalExtension);
     enc.WriteConstrainedInteger((std::int64_t)(value.segmentNumber_r16), 0, 4);
@@ -5026,7 +5011,6 @@ void Free_DLDedicatedMessageSegment_r16_CriticalExtensions(DLDedicatedMessageSeg
 // --------------------------------------------------------------------------
 ErrorCode Encode_DLDedicatedMessageSegment_r16(Encoder& enc, const DLDedicatedMessageSegment_r16& value)
 {
-    (void)value;
     Encode_DLDedicatedMessageSegment_r16_CriticalExtensions(enc, value.criticalExtensions);
     return enc.Error();
 }
@@ -5124,7 +5108,6 @@ void Free_ClockQualityMetrics_r18_ClockAccuracy_r18(ClockQualityMetrics_r18_Cloc
 // --------------------------------------------------------------------------
 ErrorCode Encode_ClockQualityMetrics_r18(Encoder& enc, const ClockQualityMetrics_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_synchronisationState_r18);
@@ -5327,7 +5310,6 @@ void Free_DLInformationTransfer_v1800_IEs_NonCriticalExtension(DLInformationTran
 // --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransfer_v1800_IEs(Encoder& enc, const DLInformationTransfer_v1800_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_eventID_TSS_r18);
     enc.WriteBit(value.has_clockQualityDetailsLevel_r18);
     enc.WriteBit(value.has_nonCriticalExtension);
@@ -5391,7 +5373,6 @@ void Free_DLInformationTransfer_v1800_IEs(DLInformationTransfer_v1800_IEs& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_RxTxTimeDiff_r17(Encoder& enc, const RxTxTimeDiff_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_result_k5_r17);
@@ -5438,7 +5419,6 @@ void Free_RxTxTimeDiff_r17(RxTxTimeDiff_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransfer_v1700_IEs(Encoder& enc, const DLInformationTransfer_v1700_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dedicatedInfoF1c_r17);
     enc.WriteBit(value.has_rxTxTimeDiff_gNB_r17);
     enc.WriteBit(value.has_ta_PDC_r17);
@@ -5531,7 +5511,6 @@ void Free_DLInformationTransfer_v1700_IEs(DLInformationTransfer_v1700_IEs& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_ReferenceTime_r16(Encoder& enc, const ReferenceTime_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.refDays_r16), 0, 72999);
     enc.WriteConstrainedInteger((std::int64_t)(value.refSeconds_r16), 0, 86399);
     enc.WriteConstrainedInteger((std::int64_t)(value.refMilliSeconds_r16), 0, 999);
@@ -5582,7 +5561,6 @@ void Free_ReferenceTime_r16(ReferenceTime_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ReferenceTimeInfo_r16(Encoder& enc, const ReferenceTimeInfo_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_uncertainty_r16);
     enc.WriteBit(value.has_timeInfoType_r16);
     enc.WriteBit(value.has_referenceSFN_r16);
@@ -5651,7 +5629,6 @@ void Free_ReferenceTimeInfo_r16(ReferenceTimeInfo_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransfer_v1610_IEs(Encoder& enc, const DLInformationTransfer_v1610_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_referenceTimeInfo_r16);
     enc.WriteBit(value.has_nonCriticalExtension);
     if (value.has_referenceTimeInfo_r16) {
@@ -5702,7 +5679,6 @@ void Free_DLInformationTransfer_v1610_IEs(DLInformationTransfer_v1610_IEs& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransfer_IEs(Encoder& enc, const DLInformationTransfer_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dedicatedNAS_Message);
     enc.WriteBit(value.has_lateNonCriticalExtension);
     enc.WriteBit(value.has_nonCriticalExtension);
@@ -5862,7 +5838,6 @@ void Free_DLInformationTransfer_CriticalExtensions(DLInformationTransfer_Critica
 // --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransfer(Encoder& enc, const DLInformationTransfer& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.rrc_TransactionIdentifier), 0, 3);
     Encode_DLInformationTransfer_CriticalExtensions(enc, value.criticalExtensions);
     return enc.Error();
@@ -5921,7 +5896,6 @@ void Free_DLInformationTransferMRDC_r16_IEs_NonCriticalExtension(DLInformationTr
 // --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransferMRDC_r16_IEs(Encoder& enc, const DLInformationTransferMRDC_r16_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dl_DCCH_MessageNR_r16);
     enc.WriteBit(value.has_dl_DCCH_MessageEUTRA_r16);
     enc.WriteBit(value.has_lateNonCriticalExtension);
@@ -6180,7 +6154,6 @@ void Free_DLInformationTransferMRDC_r16_CriticalExtensions(DLInformationTransfer
 // --------------------------------------------------------------------------
 ErrorCode Encode_DLInformationTransferMRDC_r16(Encoder& enc, const DLInformationTransferMRDC_r16& value)
 {
-    (void)value;
     Encode_DLInformationTransferMRDC_r16_CriticalExtensions(enc, value.criticalExtensions);
     return enc.Error();
 }
@@ -6212,7 +6185,6 @@ void Free_DLInformationTransferMRDC_r16(DLInformationTransferMRDC_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FailureInfoRLC_Bearer(Encoder& enc, const FailureInfoRLC_Bearer& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.cellGroupId), 0, 3);
     enc.WriteConstrainedInteger((std::int64_t)(value.logicalChannelIdentity), 1, 32);
     enc.WriteConstrainedInteger((std::int64_t)(value.failureType), 0, 3);
@@ -6257,7 +6229,6 @@ void Free_FailureInfoRLC_Bearer(FailureInfoRLC_Bearer& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FailureInfoDAPS_r16(Encoder& enc, const FailureInfoDAPS_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.failureType_r16), 0, 3);
     return enc.Error();
 }
@@ -6311,7 +6282,6 @@ void Free_FailureInformation_v1610_IEs_NonCriticalExtension(FailureInformation_v
 // --------------------------------------------------------------------------
 ErrorCode Encode_FailureInformation_v1610_IEs(Encoder& enc, const FailureInformation_v1610_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_failureInfoDAPS_r16);
     enc.WriteBit(value.has_nonCriticalExtension);
     if (value.has_failureInfoDAPS_r16) {
@@ -6362,7 +6332,6 @@ void Free_FailureInformation_v1610_IEs(FailureInformation_v1610_IEs& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FailureInformation_IEs(Encoder& enc, const FailureInformation_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_failureInfoRLC_Bearer);
     enc.WriteBit(value.has_lateNonCriticalExtension);
     enc.WriteBit(value.has_nonCriticalExtension);
@@ -6516,7 +6485,6 @@ void Free_FailureInformation_CriticalExtensions(FailureInformation_CriticalExten
 // --------------------------------------------------------------------------
 ErrorCode Encode_FailureInformation(Encoder& enc, const FailureInformation& value)
 {
-    (void)value;
     Encode_FailureInformation_CriticalExtensions(enc, value.criticalExtensions);
     return enc.Error();
 }
@@ -6548,7 +6516,6 @@ void Free_FailureInformation(FailureInformation& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IAB_IP_AddressNumReq_r16(Encoder& enc, const IAB_IP_AddressNumReq_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_all_Traffic_NumReq_r16);
@@ -6634,7 +6601,6 @@ void Free_IAB_IP_AddressNumReq_r16(IAB_IP_AddressNumReq_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IAB_IP_AddressPrefixReq_r16(Encoder& enc, const IAB_IP_AddressPrefixReq_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_all_Traffic_PrefixReq_r16);
@@ -6820,7 +6786,6 @@ void Free_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Request_r16_Iab_IPv
 // --------------------------------------------------------------------------
 ErrorCode Encode_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Request_r16(Encoder& enc, const IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Request_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_iab_IPv4_AddressNumReq_r16);
     enc.WriteBit(value.has_iab_IPv6_AddressReq_r16);
     if (value.has_iab_IPv4_AddressNumReq_r16) {
@@ -6871,7 +6836,6 @@ void Free_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Request_r16(IABOthe
 // --------------------------------------------------------------------------
 ErrorCode Encode_IAB_IP_AddressAndTraffic_r16(Encoder& enc, const IAB_IP_AddressAndTraffic_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_all_Traffic_IAB_IP_Address_r16);
     enc.WriteBit(value.has_f1_C_Traffic_IP_Address_r16);
     enc.WriteBit(value.has_f1_U_Traffic_IP_Address_r16);
@@ -7163,7 +7127,6 @@ void Free_IAB_IP_Address_r16(IAB_IP_Address_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_IAB_IP_PrefixAndTraffic_r16(Encoder& enc, const IAB_IP_PrefixAndTraffic_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_all_Traffic_IAB_IP_Address_r16);
     enc.WriteBit(value.has_f1_C_Traffic_IP_Address_r16);
     enc.WriteBit(value.has_f1_U_Traffic_IP_Address_r16);
@@ -7346,7 +7309,6 @@ void Free_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Report_r16_Iab_IPv6
 // --------------------------------------------------------------------------
 ErrorCode Encode_IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Report_r16(Encoder& enc, const IABOtherInformation_r16_IEs_Ip_InfoType_r16_Iab_IP_Report_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_iab_IPv4_AddressReport_r16);
     enc.WriteBit(value.has_iab_IPv6_Report_r16);
     if (value.has_iab_IPv4_AddressReport_r16) {
@@ -7526,7 +7488,6 @@ void Free_IABOtherInformation_r16_IEs_NonCriticalExtension(IABOtherInformation_r
 // --------------------------------------------------------------------------
 ErrorCode Encode_IABOtherInformation_r16_IEs(Encoder& enc, const IABOtherInformation_r16_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_lateNonCriticalExtension);
     enc.WriteBit(value.has_nonCriticalExtension);
     Encode_IABOtherInformation_r16_IEs_Ip_InfoType_r16(enc, value.ip_InfoType_r16);
@@ -7673,7 +7634,6 @@ void Free_IABOtherInformation_r16_CriticalExtensions(IABOtherInformation_r16_Cri
 // --------------------------------------------------------------------------
 ErrorCode Encode_IABOtherInformation_r16(Encoder& enc, const IABOtherInformation_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.rrc_TransactionIdentifier), 0, 3);
     Encode_IABOtherInformation_r16_CriticalExtensions(enc, value.criticalExtensions);
     return enc.Error();
@@ -7711,7 +7671,6 @@ void Free_IABOtherInformation_r16(IABOtherInformation_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FailureReportIndirectPath_r18(Encoder& enc, const FailureReportIndirectPath_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_failureTypeIndirectPath_r18);
@@ -7848,7 +7807,6 @@ void Free_IndirectPathFailureInformation_r18_IEs_NonCriticalExtension(IndirectPa
 // --------------------------------------------------------------------------
 ErrorCode Encode_IndirectPathFailureInformation_r18_IEs(Encoder& enc, const IndirectPathFailureInformation_r18_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_failureReportIndirectPath_r18);
     enc.WriteBit(value.has_lateNonCriticalExtension);
     enc.WriteBit(value.has_nonCriticalExtension);
@@ -8002,7 +7960,6 @@ void Free_IndirectPathFailureInformation_r18_CriticalExtensions(IndirectPathFail
 // --------------------------------------------------------------------------
 ErrorCode Encode_IndirectPathFailureInformation_r18(Encoder& enc, const IndirectPathFailureInformation_r18& value)
 {
-    (void)value;
     Encode_IndirectPathFailureInformation_r18_CriticalExtensions(enc, value.criticalExtensions);
     return enc.Error();
 }
@@ -8034,7 +7991,6 @@ void Free_IndirectPathFailureInformation_r18(IndirectPathFailureInformation_r18&
 // --------------------------------------------------------------------------
 ErrorCode Encode_EUTRA_RSTD_InfoList(Encoder& enc, const EUTRA_RSTD_InfoList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 3u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_EUTRA_RSTD_Info(enc, value.items[i]);
@@ -8083,7 +8039,6 @@ void Free_EUTRA_RSTD_InfoList(EUTRA_RSTD_InfoList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_NR_PRS_MeasurementInfoList_r16(Encoder& enc, const NR_PRS_MeasurementInfoList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_NR_PRS_MeasurementInfo_r16(enc, value.items[i]);
@@ -8330,7 +8285,6 @@ void Free_LocationMeasurementIndication_IEs_NonCriticalExtension(LocationMeasure
 // --------------------------------------------------------------------------
 ErrorCode Encode_LocationMeasurementIndication_IEs(Encoder& enc, const LocationMeasurementIndication_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_lateNonCriticalExtension);
     enc.WriteBit(value.has_nonCriticalExtension);
     Encode_SetupRelease_LocationMeasurementInfo(enc, value.measurementIndication);
@@ -8477,7 +8431,6 @@ void Free_LocationMeasurementIndication_CriticalExtensions(LocationMeasurementIn
 // --------------------------------------------------------------------------
 ErrorCode Encode_LocationMeasurementIndication(Encoder& enc, const LocationMeasurementIndication& value)
 {
-    (void)value;
     Encode_LocationMeasurementIndication_CriticalExtensions(enc, value.criticalExtensions);
     return enc.Error();
 }
@@ -8509,7 +8462,6 @@ void Free_LocationMeasurementIndication(LocationMeasurementIndication& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CAG_ConfigList_r18(Encoder& enc, const CAG_ConfigList_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 12u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_CAG_Config_r18(enc, value.items[i]);
@@ -8558,7 +8510,6 @@ void Free_CAG_ConfigList_r18(CAG_ConfigList_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SNPN_ConfigCellIdList_r18(Encoder& enc, const SNPN_ConfigCellIdList_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 32u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_SNPN_ConfigCellId_r18(enc, value.items[i]);
@@ -8607,7 +8558,6 @@ void Free_SNPN_ConfigCellIdList_r18(SNPN_ConfigCellIdList_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SNPN_ConfigTAIList_r18(Encoder& enc, const SNPN_ConfigTAIList_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_SNPN_ConfigTAI_r18(enc, value.items[i]);
@@ -8656,7 +8606,6 @@ void Free_SNPN_ConfigTAIList_r18(SNPN_ConfigTAIList_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SNPN_ConfigIDList_r18(Encoder& enc, const SNPN_ConfigIDList_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_SNPN_ConfigID_r18(enc, value.items[i]);
@@ -8779,7 +8728,6 @@ void Free_SNPN_ConfigList_r18(SNPN_ConfigList_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_AreaConfiguration_v1800(Encoder& enc, const AreaConfiguration_v1800& value)
 {
-    (void)value;
     enc.WriteBit(value.has_cag_ConfigList_r18);
     enc.WriteBit(value.has_snpn_ConfigList_r18);
     if (value.has_cag_ConfigList_r18) {
@@ -8851,7 +8799,6 @@ void Free_LoggedMeasurementConfiguration_v1800_IEs_NonCriticalExtension(LoggedMe
 // --------------------------------------------------------------------------
 ErrorCode Encode_LoggedMeasurementConfiguration_v1800_IEs(Encoder& enc, const LoggedMeasurementConfiguration_v1800_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_areaConfiguration_v1800);
     enc.WriteBit(value.has_nonCriticalExtension);
     if (value.has_areaConfiguration_v1800) {
@@ -8902,7 +8849,6 @@ void Free_LoggedMeasurementConfiguration_v1800_IEs(LoggedMeasurementConfiguratio
 // --------------------------------------------------------------------------
 ErrorCode Encode_CellGlobalIdList_r16(Encoder& enc, const CellGlobalIdList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 32u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_CGI_Info_Logging_r16(enc, value.items[i]);
@@ -8951,7 +8897,6 @@ void Free_CellGlobalIdList_r16(CellGlobalIdList_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_TrackingAreaCodeList_r16(Encoder& enc, const TrackingAreaCodeList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteFixedBitString(value.items[i].bytes, value.items[i].bitLength, 24, 24);
@@ -9007,7 +8952,6 @@ void Free_TrackingAreaCodeList_r16(TrackingAreaCodeList_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_TrackingAreaIdentityList_r16(Encoder& enc, const TrackingAreaIdentityList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_TrackingAreaIdentity_r16(enc, value.items[i]);
@@ -9130,7 +9074,6 @@ void Free_AreaConfig_r16(AreaConfig_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_AreaConfiguration_r17(Encoder& enc, const AreaConfiguration_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_areaConfig_r17);
     enc.WriteBit(value.has_interFreqTargetList_r17);
     if (value.has_areaConfig_r17) {
@@ -9202,7 +9145,6 @@ void Free_AreaConfiguration_r17(AreaConfiguration_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_LoggedMeasurementConfiguration_v1700_IEs(Encoder& enc, const LoggedMeasurementConfiguration_v1700_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sigLoggedMeasType_r17);
     enc.WriteBit(value.has_earlyMeasIndication_r17);
     enc.WriteBit(value.has_areaConfiguration_r17);
@@ -9275,7 +9217,6 @@ void Free_LoggedMeasurementConfiguration_v1700_IEs(LoggedMeasurementConfiguratio
 // --------------------------------------------------------------------------
 ErrorCode Encode_PLMN_IdentityList2_r16(Encoder& enc, const PLMN_IdentityList2_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_PLMN_Identity(enc, value.items[i]);
@@ -9324,7 +9265,6 @@ void Free_PLMN_IdentityList2_r16(PLMN_IdentityList2_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_AreaConfiguration_r16(Encoder& enc, const AreaConfiguration_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_interFreqTargetList_r16);
     Encode_AreaConfig_r16(enc, value.areaConfig_r16);
     if (value.has_interFreqTargetList_r16) {
@@ -9389,7 +9329,6 @@ void Free_AreaConfiguration_r16(AreaConfiguration_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MCC(Encoder& enc, const MCC& value)
 {
-    (void)value;
     if (value.count != 3u) {
         enc.Fail(ErrorCode_ValueOutOfRange);
     } else {
@@ -9442,7 +9381,6 @@ void Free_MCC(MCC& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MNC(Encoder& enc, const MNC& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 2u, 3u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 9);
@@ -9492,7 +9430,6 @@ void Free_MNC(MNC& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PLMN_Identity(Encoder& enc, const PLMN_Identity& value)
 {
-    (void)value;
     enc.WriteBit(value.has_mcc);
     if (value.has_mcc) {
         Encode_MCC(enc, value.mcc);
@@ -9536,7 +9473,6 @@ void Free_PLMN_Identity(PLMN_Identity& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_TraceReference_r16(Encoder& enc, const TraceReference_r16& value)
 {
-    (void)value;
     Encode_PLMN_Identity(enc, value.plmn_Identity_r16);
     enc.WriteFixedOctetString(value.traceId_r16.bytes, value.traceId_r16.length, 3, 3);
     return enc.Error();
@@ -9580,7 +9516,6 @@ void Free_TraceReference_r16(TraceReference_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BT_NameList_r16(Encoder& enc, const BT_NameList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedOctetString(value.items[i].bytes, value.items[i].length, 1, 248);
@@ -9698,7 +9633,6 @@ void Free_SetupRelease_BT_NameList_r16(SetupRelease_BT_NameList_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_WLAN_NameList_r16(Encoder& enc, const WLAN_NameList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedOctetString(value.items[i].bytes, value.items[i].length, 1, 32);
@@ -9816,7 +9750,6 @@ void Free_SetupRelease_WLAN_NameList_r16(SetupRelease_WLAN_NameList_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_Sensor_NameList_r16(Encoder& enc, const Sensor_NameList_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_measUncomBarPre_r16);
     enc.WriteBit(value.has_measUeSpeed);
     enc.WriteBit(value.has_measUeOrientation);
@@ -9939,7 +9872,6 @@ void Free_SetupRelease_Sensor_NameList_r16(SetupRelease_Sensor_NameList_r16& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_LoggedPeriodicalReportConfig_r16(Encoder& enc, const LoggedPeriodicalReportConfig_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.loggingInterval_r16), 0, 10);
@@ -10056,7 +9988,6 @@ void Free_MeasTriggerQuantity(MeasTriggerQuantity& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_EventType_r16_EventL1(Encoder& enc, const EventType_r16_EventL1& value)
 {
-    (void)value;
     Encode_MeasTriggerQuantity(enc, value.l1_Threshold);
     enc.WriteConstrainedInteger((std::int64_t)(value.hysteresis), 0, 30);
     enc.WriteConstrainedInteger((std::int64_t)(value.timeToTrigger), 0, 15);
@@ -10207,7 +10138,6 @@ void Free_EventType_r16(EventType_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_LoggedEventTriggerConfig_r16(Encoder& enc, const LoggedEventTriggerConfig_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_EventType_r16(enc, value.eventType_r16);
@@ -10360,7 +10290,6 @@ void Free_LoggedMeasurementConfiguration_r16_IEs_ReportType(LoggedMeasurementCon
 // --------------------------------------------------------------------------
 ErrorCode Encode_LoggedMeasurementConfiguration_r16_IEs(Encoder& enc, const LoggedMeasurementConfiguration_r16_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_areaConfiguration_r16);
     enc.WriteBit(value.has_plmn_IdentityList_r16);
     enc.WriteBit(value.has_bt_NameList_r16);

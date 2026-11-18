@@ -24,7 +24,6 @@ namespace v1810 {
 // --------------------------------------------------------------------------
 ErrorCode Encode_UAC_BarringInfoSet(Encoder& enc, const UAC_BarringInfoSet& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.uac_BarringFactor), 0, 15);
     enc.WriteConstrainedInteger((std::int64_t)(value.uac_BarringTime), 0, 7);
     enc.WriteFixedBitString(value.uac_BarringForAccessIdentity.bytes, value.uac_BarringForAccessIdentity.bitLength, 7, 7);
@@ -75,7 +74,6 @@ void Free_UAC_BarringInfoSet(UAC_BarringInfoSet& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_UAC_BarringInfoSet_v1700(Encoder& enc, const UAC_BarringInfoSet_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_uac_BarringFactorForAI3_r17);
     if (value.has_uac_BarringFactorForAI3_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.uac_BarringFactorForAI3_r17), 0, 15);
@@ -115,7 +113,6 @@ void Free_UAC_BarringInfoSet_v1700(UAC_BarringInfoSet_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_UAC_BarringPerCat(Encoder& enc, const UAC_BarringPerCat& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.accessCategory), 1, 63);
     enc.WriteConstrainedInteger((std::int64_t)(value.uac_barringInfoSetIndex), 1, 8);
     return enc.Error();
@@ -154,7 +151,6 @@ void Free_UAC_BarringPerCat(UAC_BarringPerCat& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_UAC_BarringPerPLMN_Uac_ACBarringListType_Uac_ImplicitACBarringList(Encoder& enc, const UAC_BarringPerPLMN_Uac_ACBarringListType_Uac_ImplicitACBarringList& value)
 {
-    (void)value;
     if (value.count != 63u) {
         enc.Fail(ErrorCode_ValueOutOfRange);
     } else {
@@ -271,7 +267,6 @@ void Free_UAC_BarringPerPLMN_Uac_ACBarringListType(UAC_BarringPerPLMN_Uac_ACBarr
 // --------------------------------------------------------------------------
 ErrorCode Encode_UAC_BarringPerPLMN(Encoder& enc, const UAC_BarringPerPLMN& value)
 {
-    (void)value;
     enc.WriteBit(value.has_uac_ACBarringListType);
     enc.WriteConstrainedInteger((std::int64_t)(value.plmn_IdentityIndex), 1, 12);
     if (value.has_uac_ACBarringListType) {
@@ -316,7 +311,6 @@ void Free_UAC_BarringPerPLMN(UAC_BarringPerPLMN& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ExcessDelay_DRB_IdentityInfo_r17(Encoder& enc, const ExcessDelay_DRB_IdentityInfo_r17& value)
 {
-    (void)value;
 enc.WriteConstrainedLength(value.drb_IdentityList_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.drb_IdentityList_count; ++i) {
     enc.WriteConstrainedInteger((std::int64_t)(value.drb_IdentityList_items[i]), 1, 32);
@@ -376,7 +370,6 @@ void Free_ExcessDelay_DRB_IdentityInfo_r17(ExcessDelay_DRB_IdentityInfo_r17& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_CI_ConfigurationPerServingCell_r16_TimeFrequencyRegion_r16(Encoder& enc, const CI_ConfigurationPerServingCell_r16_TimeFrequencyRegion_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_timeDurationForCI_r16);
@@ -441,7 +434,6 @@ void Free_CI_ConfigurationPerServingCell_r16_TimeFrequencyRegion_r16(CI_Configur
 // --------------------------------------------------------------------------
 ErrorCode Encode_CI_ConfigurationPerServingCell_r16(Encoder& enc, const CI_ConfigurationPerServingCell_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_positionInDCI_ForSUL_r16);
     enc.WriteBit(value.has_uplinkCancellationPriority_v1610);
     enc.WriteConstrainedInteger((std::int64_t)(value.servingCellId), 0, 31);
@@ -515,7 +507,6 @@ void Free_CI_ConfigurationPerServingCell_r16(CI_ConfigurationPerServingCell_r16&
 // --------------------------------------------------------------------------
 ErrorCode Encode_P0AlphaSet_r17(Encoder& enc, const P0AlphaSet_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_p0_r17);
     enc.WriteBit(value.has_alpha_r17);
     if (value.has_p0_r17) {
@@ -574,7 +565,6 @@ void Free_P0AlphaSet_r17(P0AlphaSet_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_Uplink_powerControl_r17(Encoder& enc, const Uplink_powerControl_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_p0AlphaSetforPUSCH_r17);
     enc.WriteBit(value.has_p0AlphaSetforPUCCH_r17);
     enc.WriteBit(value.has_p0AlphaSetforSRS_r17);
@@ -643,7 +633,6 @@ void Free_Uplink_powerControl_r17(Uplink_powerControl_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_Uu_RelayRLC_ChannelConfig_r17(Encoder& enc, const Uu_RelayRLC_ChannelConfig_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_uu_LogicalChannelIdentity_r17);
@@ -731,7 +720,6 @@ void Free_Uu_RelayRLC_ChannelConfig_r17(Uu_RelayRLC_ChannelConfig_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_UplinkTxDirectCurrentCell_ExtGroup1(Encoder& enc, const UplinkTxDirectCurrentCell_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_uplinkDirectCurrentBWP_SUL);
     if (value.has_uplinkDirectCurrentBWP_SUL) {
 enc.WriteConstrainedLength(value.uplinkDirectCurrentBWP_SUL_count, 0u, 0u);
@@ -791,7 +779,6 @@ void Free_UplinkTxDirectCurrentCell_ExtGroup1(UplinkTxDirectCurrentCell_ExtGroup
 // --------------------------------------------------------------------------
 ErrorCode Encode_UplinkTxDirectCurrentCell(Encoder& enc, const UplinkTxDirectCurrentCell& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.servCellIndex), 0, 31);
@@ -893,7 +880,6 @@ void Free_UplinkTxDirectCurrentCell(UplinkTxDirectCurrentCell& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_UplinkTxDirectCurrentBWP(Encoder& enc, const UplinkTxDirectCurrentBWP& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.bwp_Id), 0, 4);
     enc.WriteBool(value.shift7dot5kHz);
     enc.WriteConstrainedInteger((std::int64_t)(value.txDirectCurrentLocation), 0, 3301);
@@ -1015,7 +1001,6 @@ void Free_DefaultDC_Location_r17(DefaultDC_Location_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_OffsetValue_r17(Encoder& enc, const OffsetValue_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.offsetValue_r17), -20000, 20000);
     enc.WriteBool(value.shift7dot5kHz_r17);
     return enc.Error();
@@ -1054,7 +1039,6 @@ void Free_OffsetValue_r17(OffsetValue_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CC_Group_r17_OffsetToDefault_r17_Offsetlist(Encoder& enc, const CC_Group_r17_OffsetToDefault_r17_Offsetlist& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 128u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_OffsetValue_r17(enc, value.items[i]);
@@ -1167,7 +1151,6 @@ void Free_CC_Group_r17_OffsetToDefault_r17(CC_Group_r17_OffsetToDefault_r17& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_CC_Group_r17(Encoder& enc, const CC_Group_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_servCellIndexHigher_r17);
     enc.WriteBit(value.has_offsetToDefault_r17);
     enc.WriteConstrainedInteger((std::int64_t)(value.servCellIndexLower_r17), 0, 31);
@@ -1294,7 +1277,6 @@ void Free_UplinkTxDirectCurrentCarrierInfo_r16_ServCellInfo_r16(UplinkTxDirectCu
 // --------------------------------------------------------------------------
 ErrorCode Encode_UplinkTxDirectCurrentCarrierInfo_r16(Encoder& enc, const UplinkTxDirectCurrentCarrierInfo_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.servCellIndex_r16), 0, 31);
     Encode_UplinkTxDirectCurrentCarrierInfo_r16_ServCellInfo_r16(enc, value.servCellInfo_r16);
     return enc.Error();
@@ -1332,7 +1314,6 @@ void Free_UplinkTxDirectCurrentCarrierInfo_r16(UplinkTxDirectCurrentCarrierInfo_
 // --------------------------------------------------------------------------
 ErrorCode Encode_UplinkTxDirectCurrentTwoCarrierInfo_r16(Encoder& enc, const UplinkTxDirectCurrentTwoCarrierInfo_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.referenceCarrierIndex_r16), 0, 31);
     enc.WriteBool(value.shift7dot5kHz_r16);
     enc.WriteConstrainedInteger((std::int64_t)(value.txDirectCurrentLocation_r16), 0, 3301);
@@ -1377,7 +1358,6 @@ void Free_UplinkTxDirectCurrentTwoCarrierInfo_r16(UplinkTxDirectCurrentTwoCarrie
 // --------------------------------------------------------------------------
 ErrorCode Encode_UplinkTxDirectCurrentTwoCarrier_r16(Encoder& enc, const UplinkTxDirectCurrentTwoCarrier_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_secondPA_TxDirectCurrent_r16);
     Encode_UplinkTxDirectCurrentCarrierInfo_r16(enc, value.carrierOneInfo_r16);
     Encode_UplinkTxDirectCurrentCarrierInfo_r16(enc, value.carrierTwoInfo_r16);
@@ -1431,7 +1411,6 @@ void Free_UplinkTxDirectCurrentTwoCarrier_r16(UplinkTxDirectCurrentTwoCarrier_r1
 // --------------------------------------------------------------------------
 ErrorCode Encode_ZP_CSI_RS_Resource(Encoder& enc, const ZP_CSI_RS_Resource& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_periodicityAndOffset);
@@ -1488,7 +1467,6 @@ void Free_ZP_CSI_RS_Resource(ZP_CSI_RS_Resource& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_AerialParameters_r18(Encoder& enc, const AerialParameters_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_aerialUE_Capability_r18);
@@ -1634,7 +1612,6 @@ void Free_AerialParameters_r18(AerialParameters_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_AppLayerMeasParameters_r17_ExtGroup1(Encoder& enc, const AppLayerMeasParameters_r17_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_qoe_IdleInactiveMeasReport_r18);
     enc.WriteBit(value.has_qoe_NRDC_MeasReport_r18);
     enc.WriteBit(value.has_qoe_AdditionalMemoryMeasReport_r18);
@@ -1718,7 +1695,6 @@ void Free_AppLayerMeasParameters_r17_ExtGroup1(AppLayerMeasParameters_r17_ExtGro
 // --------------------------------------------------------------------------
 ErrorCode Encode_AppLayerMeasParameters_r17(Encoder& enc, const AppLayerMeasParameters_r17& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_qoe_Streaming_MeasReport_r17);
@@ -1854,7 +1830,6 @@ void Free_AppLayerMeasParameters_r17(AppLayerMeasParameters_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList(Encoder& enc, const BandCombinationList& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -1935,7 +1910,6 @@ void Free_BandCombinationList(BandCombinationList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1540(Encoder& enc, const BandCombinationList_v1540& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -2016,7 +1990,6 @@ void Free_BandCombinationList_v1540(BandCombinationList_v1540& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1550(Encoder& enc, const BandCombinationList_v1550& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -2097,7 +2070,6 @@ void Free_BandCombinationList_v1550(BandCombinationList_v1550& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1560(Encoder& enc, const BandCombinationList_v1560& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -2178,7 +2150,6 @@ void Free_BandCombinationList_v1560(BandCombinationList_v1560& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1570(Encoder& enc, const BandCombinationList_v1570& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -2259,7 +2230,6 @@ void Free_BandCombinationList_v1570(BandCombinationList_v1570& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1580(Encoder& enc, const BandCombinationList_v1580& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -2340,7 +2310,6 @@ void Free_BandCombinationList_v1580(BandCombinationList_v1580& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1590(Encoder& enc, const BandCombinationList_v1590& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -2421,7 +2390,6 @@ void Free_BandCombinationList_v1590(BandCombinationList_v1590& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v15g0(Encoder& enc, const BandCombinationList_v15g0& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -2502,7 +2470,6 @@ void Free_BandCombinationList_v15g0(BandCombinationList_v15g0& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v15n0(Encoder& enc, const BandCombinationList_v15n0& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -2583,7 +2550,6 @@ void Free_BandCombinationList_v15n0(BandCombinationList_v15n0& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1610(Encoder& enc, const BandCombinationList_v1610& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -2664,7 +2630,6 @@ void Free_BandCombinationList_v1610(BandCombinationList_v1610& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1630(Encoder& enc, const BandCombinationList_v1630& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -2745,7 +2710,6 @@ void Free_BandCombinationList_v1630(BandCombinationList_v1630& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1640(Encoder& enc, const BandCombinationList_v1640& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -2826,7 +2790,6 @@ void Free_BandCombinationList_v1640(BandCombinationList_v1640& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1650(Encoder& enc, const BandCombinationList_v1650& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -2907,7 +2870,6 @@ void Free_BandCombinationList_v1650(BandCombinationList_v1650& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1680(Encoder& enc, const BandCombinationList_v1680& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -2988,7 +2950,6 @@ void Free_BandCombinationList_v1680(BandCombinationList_v1680& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1690(Encoder& enc, const BandCombinationList_v1690& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -3069,7 +3030,6 @@ void Free_BandCombinationList_v1690(BandCombinationList_v1690& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v16a0(Encoder& enc, const BandCombinationList_v16a0& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -3150,7 +3110,6 @@ void Free_BandCombinationList_v16a0(BandCombinationList_v16a0& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1700(Encoder& enc, const BandCombinationList_v1700& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -3231,7 +3190,6 @@ void Free_BandCombinationList_v1700(BandCombinationList_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1720(Encoder& enc, const BandCombinationList_v1720& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -3312,7 +3270,6 @@ void Free_BandCombinationList_v1720(BandCombinationList_v1720& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1730(Encoder& enc, const BandCombinationList_v1730& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -3393,7 +3350,6 @@ void Free_BandCombinationList_v1730(BandCombinationList_v1730& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1740(Encoder& enc, const BandCombinationList_v1740& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -3474,7 +3430,6 @@ void Free_BandCombinationList_v1740(BandCombinationList_v1740& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1760(Encoder& enc, const BandCombinationList_v1760& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -3555,7 +3510,6 @@ void Free_BandCombinationList_v1760(BandCombinationList_v1760& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1770(Encoder& enc, const BandCombinationList_v1770& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -3636,7 +3590,6 @@ void Free_BandCombinationList_v1770(BandCombinationList_v1770& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1780(Encoder& enc, const BandCombinationList_v1780& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -3717,7 +3670,6 @@ void Free_BandCombinationList_v1780(BandCombinationList_v1780& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_v1800(Encoder& enc, const BandCombinationList_v1800& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -3798,7 +3750,6 @@ void Free_BandCombinationList_v1800(BandCombinationList_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_r16(Encoder& enc, const BandCombinationList_UplinkTxSwitch_r16& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -3879,7 +3830,6 @@ void Free_BandCombinationList_UplinkTxSwitch_r16(BandCombinationList_UplinkTxSwi
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1630(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1630& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -3960,7 +3910,6 @@ void Free_BandCombinationList_UplinkTxSwitch_v1630(BandCombinationList_UplinkTxS
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1640(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1640& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -4041,7 +3990,6 @@ void Free_BandCombinationList_UplinkTxSwitch_v1640(BandCombinationList_UplinkTxS
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1650(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1650& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -4122,7 +4070,6 @@ void Free_BandCombinationList_UplinkTxSwitch_v1650(BandCombinationList_UplinkTxS
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1670(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1670& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -4203,7 +4150,6 @@ void Free_BandCombinationList_UplinkTxSwitch_v1670(BandCombinationList_UplinkTxS
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1690(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1690& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -4284,7 +4230,6 @@ void Free_BandCombinationList_UplinkTxSwitch_v1690(BandCombinationList_UplinkTxS
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v16a0(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v16a0& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -4365,7 +4310,6 @@ void Free_BandCombinationList_UplinkTxSwitch_v16a0(BandCombinationList_UplinkTxS
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v16e0(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v16e0& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -4446,7 +4390,6 @@ void Free_BandCombinationList_UplinkTxSwitch_v16e0(BandCombinationList_UplinkTxS
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1700(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1700& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -4527,7 +4470,6 @@ void Free_BandCombinationList_UplinkTxSwitch_v1700(BandCombinationList_UplinkTxS
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1720(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1720& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -4608,7 +4550,6 @@ void Free_BandCombinationList_UplinkTxSwitch_v1720(BandCombinationList_UplinkTxS
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1730(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1730& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -4689,7 +4630,6 @@ void Free_BandCombinationList_UplinkTxSwitch_v1730(BandCombinationList_UplinkTxS
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1740(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1740& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -4770,7 +4710,6 @@ void Free_BandCombinationList_UplinkTxSwitch_v1740(BandCombinationList_UplinkTxS
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1760(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1760& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -4851,7 +4790,6 @@ void Free_BandCombinationList_UplinkTxSwitch_v1760(BandCombinationList_UplinkTxS
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1770(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1770& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -4932,7 +4870,6 @@ void Free_BandCombinationList_UplinkTxSwitch_v1770(BandCombinationList_UplinkTxS
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1780(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1780& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -5013,7 +4950,6 @@ void Free_BandCombinationList_UplinkTxSwitch_v1780(BandCombinationList_UplinkTxS
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombinationList_UplinkTxSwitch_v1800(Encoder& enc, const BandCombinationList_UplinkTxSwitch_v1800& value)
 {
-    (void)value;
 if (value.count > 4294967295u) { enc.Fail(ErrorCode_ValueOutOfRange); }
 std::uint32_t remaining = value.count;
 std::uint32_t element_index = 0;
@@ -5094,7 +5030,6 @@ void Free_BandCombinationList_UplinkTxSwitch_v1800(BandCombinationList_UplinkTxS
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersEUTRA(Encoder& enc, const CA_ParametersEUTRA& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_multipleTimingAdvance);
@@ -5208,7 +5143,6 @@ void Free_CA_ParametersEUTRA(CA_ParametersEUTRA& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR(Encoder& enc, const CA_ParametersNR& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_dummy);
@@ -5332,7 +5266,6 @@ void Free_CA_ParametersNR(CA_ParametersNR& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_ExtGroup1(Encoder& enc, const MRDC_Parameters_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dualPA_Architecture);
     enc.WriteBit(value.has_intraBandENDC_Support);
     enc.WriteBit(value.has_ul_TimingAlignmentEUTRA_NR);
@@ -5394,7 +5327,6 @@ void Free_MRDC_Parameters_ExtGroup1(MRDC_Parameters_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters(Encoder& enc, const MRDC_Parameters& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_singleUL_Transmission);
@@ -5545,7 +5477,6 @@ void Free_MRDC_Parameters(MRDC_Parameters& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination(Encoder& enc, const BandCombination& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersEUTRA);
     enc.WriteBit(value.has_ca_ParametersNR);
     enc.WriteBit(value.has_mrdc_Parameters);
@@ -5669,7 +5600,6 @@ void Free_BandCombination(BandCombination& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1540_Csi_RS_IM_ReceptionForFeedbackPerBandComb(Encoder& enc, const CA_ParametersNR_v1540_Csi_RS_IM_ReceptionForFeedbackPerBandComb& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxNumberSimultaneousNZP_CSI_RS_ActBWP_AllCC);
     enc.WriteBit(value.has_totalNumberPortsSimultaneousNZP_CSI_RS_ActBWP_AllCC);
     if (value.has_maxNumberSimultaneousNZP_CSI_RS_ActBWP_AllCC) {
@@ -5722,7 +5652,6 @@ void Free_CA_ParametersNR_v1540_Csi_RS_IM_ReceptionForFeedbackPerBandComb(CA_Par
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1540(Encoder& enc, const CA_ParametersNR_v1540& value)
 {
-    (void)value;
     enc.WriteBit(value.has_simultaneousSRS_AssocCSI_RS_AllCC);
     enc.WriteBit(value.has_csi_RS_IM_ReceptionForFeedbackPerBandComb);
     enc.WriteBit(value.has_simultaneousCSI_ReportsAllCC);
@@ -5798,7 +5727,6 @@ void Free_CA_ParametersNR_v1540(CA_ParametersNR_v1540& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1540(Encoder& enc, const BandCombination_v1540& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_v1540);
 enc.WriteConstrainedLength(value.bandList_v1540_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.bandList_v1540_count; ++i) {
@@ -5863,7 +5791,6 @@ void Free_BandCombination_v1540(BandCombination_v1540& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1550(Encoder& enc, const CA_ParametersNR_v1550& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dummy);
     if (value.has_dummy) {
         enc.WriteConstrainedInteger((std::int64_t)(value.dummy), 0, 0);
@@ -5901,7 +5828,6 @@ void Free_CA_ParametersNR_v1550(CA_ParametersNR_v1550& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1550(Encoder& enc, const BandCombination_v1550& value)
 {
-    (void)value;
     Encode_CA_ParametersNR_v1550(enc, value.ca_ParametersNR_v1550);
     return enc.Error();
 }
@@ -5933,7 +5859,6 @@ void Free_BandCombination_v1550(BandCombination_v1550& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersEUTRA_v1560(Encoder& enc, const CA_ParametersEUTRA_v1560& value)
 {
-    (void)value;
     enc.WriteBit(value.has_fd_MIMO_TotalWeightedLayers);
     if (value.has_fd_MIMO_TotalWeightedLayers) {
         enc.WriteConstrainedInteger((std::int64_t)(value.fd_MIMO_TotalWeightedLayers), 2, 128);
@@ -5973,7 +5898,6 @@ void Free_CA_ParametersEUTRA_v1560(CA_ParametersEUTRA_v1560& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1560(Encoder& enc, const CA_ParametersNR_v1560& value)
 {
-    (void)value;
     enc.WriteBit(value.has_diffNumerologyWithinPUCCH_GroupLargerSCS);
     if (value.has_diffNumerologyWithinPUCCH_GroupLargerSCS) {
         enc.WriteConstrainedInteger((std::int64_t)(value.diffNumerologyWithinPUCCH_GroupLargerSCS), 0, 0);
@@ -6011,7 +5935,6 @@ void Free_CA_ParametersNR_v1560(CA_ParametersNR_v1560& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNRDC(Encoder& enc, const CA_ParametersNRDC& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_ForDC);
     enc.WriteBit(value.has_ca_ParametersNR_ForDC_v1540);
     enc.WriteBit(value.has_ca_ParametersNR_ForDC_v1550);
@@ -6099,7 +6022,6 @@ void Free_CA_ParametersNRDC(CA_ParametersNRDC& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1560(Encoder& enc, const BandCombination_v1560& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ne_DC_BC);
     enc.WriteBit(value.has_ca_ParametersNRDC);
     enc.WriteBit(value.has_ca_ParametersEUTRA_v1560);
@@ -6173,7 +6095,6 @@ void Free_BandCombination_v1560(BandCombination_v1560& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersEUTRA_v1570(Encoder& enc, const CA_ParametersEUTRA_v1570& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dl_1024QAM_TotalWeightedLayers);
     if (value.has_dl_1024QAM_TotalWeightedLayers) {
         enc.WriteConstrainedInteger((std::int64_t)(value.dl_1024QAM_TotalWeightedLayers), 0, 10);
@@ -6213,7 +6134,6 @@ void Free_CA_ParametersEUTRA_v1570(CA_ParametersEUTRA_v1570& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1570(Encoder& enc, const BandCombination_v1570& value)
 {
-    (void)value;
     Encode_CA_ParametersEUTRA_v1570(enc, value.ca_ParametersEUTRA_v1570);
     return enc.Error();
 }
@@ -6245,7 +6165,6 @@ void Free_BandCombination_v1570(BandCombination_v1570& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_v1580(Encoder& enc, const MRDC_Parameters_v1580& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dynamicPowerSharingNEDC);
     if (value.has_dynamicPowerSharingNEDC) {
         enc.WriteConstrainedInteger((std::int64_t)(value.dynamicPowerSharingNEDC), 0, 0);
@@ -6283,7 +6202,6 @@ void Free_MRDC_Parameters_v1580(MRDC_Parameters_v1580& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1580(Encoder& enc, const BandCombination_v1580& value)
 {
-    (void)value;
     Encode_MRDC_Parameters_v1580(enc, value.mrdc_Parameters_v1580);
     return enc.Error();
 }
@@ -6315,7 +6233,6 @@ void Free_BandCombination_v1580(BandCombination_v1580& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_v1590(Encoder& enc, const MRDC_Parameters_v1590& value)
 {
-    (void)value;
     enc.WriteBit(value.has_interBandContiguousMRDC);
     if (value.has_interBandContiguousMRDC) {
         enc.WriteConstrainedInteger((std::int64_t)(value.interBandContiguousMRDC), 0, 0);
@@ -6353,7 +6270,6 @@ void Free_MRDC_Parameters_v1590(MRDC_Parameters_v1590& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1590(Encoder& enc, const BandCombination_v1590& value)
 {
-    (void)value;
     enc.WriteBit(value.has_supportedBandwidthCombinationSetIntraENDC);
     if (value.has_supportedBandwidthCombinationSetIntraENDC) {
         enc.WriteConstrainedBitString(value.supportedBandwidthCombinationSetIntraENDC.bytes, value.supportedBandwidthCombinationSetIntraENDC.bitLength, 1, 32);
@@ -6403,7 +6319,6 @@ void Free_BandCombination_v1590(BandCombination_v1590& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v15g0(Encoder& enc, const CA_ParametersNR_v15g0& value)
 {
-    (void)value;
     enc.WriteBit(value.has_simultaneousRxTxInterBandCAPerBandPair);
     enc.WriteBit(value.has_simultaneousRxTxSULPerBandPair);
     if (value.has_simultaneousRxTxInterBandCAPerBandPair) {
@@ -6466,7 +6381,6 @@ void Free_CA_ParametersNR_v15g0(CA_ParametersNR_v15g0& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNRDC_v15g0(Encoder& enc, const CA_ParametersNRDC_v15g0& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_ForDC_v15g0);
     if (value.has_ca_ParametersNR_ForDC_v15g0) {
         Encode_CA_ParametersNR_v15g0(enc, value.ca_ParametersNR_ForDC_v15g0);
@@ -6505,7 +6419,6 @@ void Free_CA_ParametersNRDC_v15g0(CA_ParametersNRDC_v15g0& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_v15g0(Encoder& enc, const MRDC_Parameters_v15g0& value)
 {
-    (void)value;
     enc.WriteBit(value.has_simultaneousRxTxInterBandENDCPerBandPair);
     if (value.has_simultaneousRxTxInterBandENDCPerBandPair) {
         enc.WriteConstrainedBitString(value.simultaneousRxTxInterBandENDCPerBandPair.bytes, value.simultaneousRxTxInterBandENDCPerBandPair.bitLength, 3, 496);
@@ -6550,7 +6463,6 @@ void Free_MRDC_Parameters_v15g0(MRDC_Parameters_v15g0& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v15g0(Encoder& enc, const BandCombination_v15g0& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_v15g0);
     enc.WriteBit(value.has_ca_ParametersNRDC_v15g0);
     enc.WriteBit(value.has_mrdc_Parameters_v15g0);
@@ -6613,7 +6525,6 @@ void Free_BandCombination_v15g0(BandCombination_v15g0& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_v15n0(Encoder& enc, const MRDC_Parameters_v15n0& value)
 {
-    (void)value;
     enc.WriteBit(value.has_intraBandENDC_Support_UL);
     if (value.has_intraBandENDC_Support_UL) {
         enc.WriteConstrainedInteger((std::int64_t)(value.intraBandENDC_Support_UL), 0, 1);
@@ -6653,7 +6564,6 @@ void Free_MRDC_Parameters_v15n0(MRDC_Parameters_v15n0& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v15n0(Encoder& enc, const BandCombination_v15n0& value)
 {
-    (void)value;
     Encode_MRDC_Parameters_v15n0(enc, value.mrdc_Parameters_v15n0);
     return enc.Error();
 }
@@ -6685,7 +6595,6 @@ void Free_BandCombination_v15n0(BandCombination_v15n0& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParameters_v1610_SupportedCSI_RS_ResourceListAlt_r16(Encoder& enc, const CodebookParameters_v1610_SupportedCSI_RS_ResourceListAlt_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_type1_SinglePanel_r16);
     enc.WriteBit(value.has_type1_MultiPanel_r16);
     enc.WriteBit(value.has_type2_r16);
@@ -6848,7 +6757,6 @@ void Free_CodebookParameters_v1610_SupportedCSI_RS_ResourceListAlt_r16(CodebookP
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParameters_v1610(Encoder& enc, const CodebookParameters_v1610& value)
 {
-    (void)value;
     enc.WriteBit(value.has_supportedCSI_RS_ResourceListAlt_r16);
     if (value.has_supportedCSI_RS_ResourceListAlt_r16) {
         Encode_CodebookParameters_v1610_SupportedCSI_RS_ResourceListAlt_r16(enc, value.supportedCSI_RS_ResourceListAlt_r16);
@@ -6887,7 +6795,6 @@ void Free_CodebookParameters_v1610(CodebookParameters_v1610& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookParametersAdditionPerBC_r16(Encoder& enc, const CodebookParametersAdditionPerBC_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_etype2R1_r16);
     enc.WriteBit(value.has_etype2R2_r16);
     enc.WriteBit(value.has_etype2R1_PortSelection_r16);
@@ -7050,7 +6957,6 @@ void Free_CodebookParametersAdditionPerBC_r16(CodebookParametersAdditionPerBC_r1
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookComboParametersAdditionPerBC_r16(Encoder& enc, const CodebookComboParametersAdditionPerBC_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_type1SP_Type2_null_r16);
     enc.WriteBit(value.has_type1SP_Type2PS_null_r16);
     enc.WriteBit(value.has_type1SP_eType2R1_null_r16);
@@ -7553,7 +7459,6 @@ void Free_CodebookComboParametersAdditionPerBC_r16(CodebookComboParametersAdditi
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1610_InterFreqDAPS_r16(Encoder& enc, const CA_ParametersNR_v1610_InterFreqDAPS_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_interFreqAsyncDAPS_r16);
     enc.WriteBit(value.has_interFreqDiffSCS_DAPS_r16);
     enc.WriteBit(value.has_interFreqMultiUL_TransmissionDAPS_r16);
@@ -7659,7 +7564,6 @@ void Free_CA_ParametersNR_v1610_InterFreqDAPS_r16(CA_ParametersNR_v1610_InterFre
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1610_Pdcch_MonitoringCA_r16(Encoder& enc, const CA_ParametersNR_v1610_Pdcch_MonitoringCA_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.maxNumberOfMonitoringCC_r16), 2, 16);
     enc.WriteConstrainedInteger((std::int64_t)(value.supportedSpanArrangement_r16), 0, 1);
     return enc.Error();
@@ -7698,7 +7602,6 @@ void Free_CA_ParametersNR_v1610_Pdcch_MonitoringCA_r16(CA_ParametersNR_v1610_Pdc
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1610_Pdcch_BlindDetectionCA_Mixed_r16(Encoder& enc, const CA_ParametersNR_v1610_Pdcch_BlindDetectionCA_Mixed_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.pdcch_BlindDetectionCA1_r16), 1, 15);
     enc.WriteConstrainedInteger((std::int64_t)(value.pdcch_BlindDetectionCA2_r16), 1, 15);
     enc.WriteConstrainedInteger((std::int64_t)(value.supportedSpanArrangement_r16), 0, 1);
@@ -7743,7 +7646,6 @@ void Free_CA_ParametersNR_v1610_Pdcch_BlindDetectionCA_Mixed_r16(CA_ParametersNR
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1610_Pdcch_BlindDetectionMCG_UE_Mixed_r16(Encoder& enc, const CA_ParametersNR_v1610_Pdcch_BlindDetectionMCG_UE_Mixed_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.pdcch_BlindDetectionMCG_UE1_r16), 0, 15);
     enc.WriteConstrainedInteger((std::int64_t)(value.pdcch_BlindDetectionMCG_UE2_r16), 0, 15);
     return enc.Error();
@@ -7782,7 +7684,6 @@ void Free_CA_ParametersNR_v1610_Pdcch_BlindDetectionMCG_UE_Mixed_r16(CA_Paramete
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1610_Pdcch_BlindDetectionSCG_UE_Mixed_r16(Encoder& enc, const CA_ParametersNR_v1610_Pdcch_BlindDetectionSCG_UE_Mixed_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.pdcch_BlindDetectionSCG_UE1_r16), 0, 15);
     enc.WriteConstrainedInteger((std::int64_t)(value.pdcch_BlindDetectionSCG_UE2_r16), 0, 15);
     return enc.Error();
@@ -7821,7 +7722,6 @@ void Free_CA_ParametersNR_v1610_Pdcch_BlindDetectionSCG_UE_Mixed_r16(CA_Paramete
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1610(Encoder& enc, const CA_ParametersNR_v1610& value)
 {
-    (void)value;
     enc.WriteBit(value.has_parallelTxMsgA_SRS_PUCCH_PUSCH_r16);
     enc.WriteBit(value.has_msgA_SUL_r16);
     enc.WriteBit(value.has_jointSearchSpaceSwitchAcrossCells_r16);
@@ -8147,7 +8047,6 @@ void Free_CA_ParametersNR_v1610(CA_ParametersNR_v1610& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNRDC_v1610(Encoder& enc, const CA_ParametersNRDC_v1610& value)
 {
-    (void)value;
     enc.WriteBit(value.has_intraFR_NR_DC_PwrSharingMode1_r16);
     enc.WriteBit(value.has_intraFR_NR_DC_PwrSharingMode2_r16);
     enc.WriteBit(value.has_intraFR_NR_DC_DynamicPwrSharing_r16);
@@ -8220,7 +8119,6 @@ void Free_CA_ParametersNRDC_v1610(CA_ParametersNRDC_v1610& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_v1620_MaxUplinkDutyCycle_interBandENDC_TDD_PC2_r16(Encoder& enc, const MRDC_Parameters_v1620_MaxUplinkDutyCycle_interBandENDC_TDD_PC2_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_eutra_TDD_Config0_r16);
     enc.WriteBit(value.has_eutra_TDD_Config1_r16);
     enc.WriteBit(value.has_eutra_TDD_Config2_r16);
@@ -8338,7 +8236,6 @@ void Free_MRDC_Parameters_v1620_MaxUplinkDutyCycle_interBandENDC_TDD_PC2_r16(MRD
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_v1620(Encoder& enc, const MRDC_Parameters_v1620& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxUplinkDutyCycle_interBandENDC_TDD_PC2_r16);
     enc.WriteBit(value.has_tdm_restrictionTDD_endc_r16);
     enc.WriteBit(value.has_tdm_restrictionFDD_endc_r16);
@@ -8421,7 +8318,6 @@ void Free_MRDC_Parameters_v1620(MRDC_Parameters_v1620& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1610(Encoder& enc, const BandCombination_v1610& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bandList_v1610);
     enc.WriteBit(value.has_ca_ParametersNR_v1610);
     enc.WriteBit(value.has_ca_ParametersNRDC_v1610);
@@ -8554,7 +8450,6 @@ void Free_BandCombination_v1610(BandCombination_v1610& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SimulSRS_ForAntennaSwitching_r16(Encoder& enc, const SimulSRS_ForAntennaSwitching_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_supportSRS_xTyR_xLessThanY_r16);
     enc.WriteBit(value.has_supportSRS_xTyR_xEqualToY_r16);
     enc.WriteBit(value.has_supportSRS_AntennaSwitching_r16);
@@ -8614,7 +8509,6 @@ void Free_SimulSRS_ForAntennaSwitching_r16(SimulSRS_ForAntennaSwitching_r16& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1630(Encoder& enc, const CA_ParametersNR_v1630& value)
 {
-    (void)value;
     enc.WriteBit(value.has_simulTX_SRS_AntSwitchingInterBandUL_CA_r16);
     enc.WriteBit(value.has_beamManagementType_r16);
     enc.WriteBit(value.has_intraBandFreqSeparationUL_AggBW_GapBW_r16);
@@ -8690,7 +8584,6 @@ void Free_CA_ParametersNR_v1630(CA_ParametersNR_v1630& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNRDC_v1630(Encoder& enc, const CA_ParametersNRDC_v1630& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_ForDC_v1610);
     enc.WriteBit(value.has_ca_ParametersNR_ForDC_v1630);
     if (value.has_ca_ParametersNR_ForDC_v1610) {
@@ -8741,7 +8634,6 @@ void Free_CA_ParametersNRDC_v1630(CA_ParametersNRDC_v1630& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_v1630_MaxUplinkDutyCycle_interBandENDC_FDD_TDD_PC2_r16(Encoder& enc, const MRDC_Parameters_v1630_MaxUplinkDutyCycle_interBandENDC_FDD_TDD_PC2_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxUplinkDutyCycle_FDD_TDD_EN_DC1_r16);
     enc.WriteBit(value.has_maxUplinkDutyCycle_FDD_TDD_EN_DC2_r16);
     if (value.has_maxUplinkDutyCycle_FDD_TDD_EN_DC1_r16) {
@@ -8794,7 +8686,6 @@ void Free_MRDC_Parameters_v1630_MaxUplinkDutyCycle_interBandENDC_FDD_TDD_PC2_r16
 // --------------------------------------------------------------------------
 ErrorCode Encode_MRDC_Parameters_v1630(Encoder& enc, const MRDC_Parameters_v1630& value)
 {
-    (void)value;
     enc.WriteBit(value.has_maxUplinkDutyCycle_interBandENDC_FDD_TDD_PC2_r16);
     enc.WriteBit(value.has_interBandMRDC_WithOverlapDL_Bands_r16);
     if (value.has_maxUplinkDutyCycle_interBandENDC_FDD_TDD_PC2_r16) {
@@ -8844,7 +8735,6 @@ void Free_MRDC_Parameters_v1630(MRDC_Parameters_v1630& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1630(Encoder& enc, const BandCombination_v1630& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_v1630);
     enc.WriteBit(value.has_ca_ParametersNRDC_v1630);
     enc.WriteBit(value.has_mrdc_Parameters_v1630);
@@ -9011,7 +8901,6 @@ void Free_BandCombination_v1630(BandCombination_v1630& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PUCCH_Grp_CarrierTypes_r16(Encoder& enc, const PUCCH_Grp_CarrierTypes_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_fr1_NonSharedTDD_r16);
     enc.WriteBit(value.has_fr1_SharedTDD_r16);
     enc.WriteBit(value.has_fr1_NonSharedFDD_r16);
@@ -9082,7 +8971,6 @@ void Free_PUCCH_Grp_CarrierTypes_r16(PUCCH_Grp_CarrierTypes_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1640_Pdcch_BlindDetectionCA_Mixed_NonAlignedSpan_r16(Encoder& enc, const CA_ParametersNR_v1640_Pdcch_BlindDetectionCA_Mixed_NonAlignedSpan_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.pdcch_BlindDetectionCA1_r16), 1, 15);
     enc.WriteConstrainedInteger((std::int64_t)(value.pdcch_BlindDetectionCA2_r16), 1, 15);
     return enc.Error();
@@ -9121,7 +9009,6 @@ void Free_CA_ParametersNR_v1640_Pdcch_BlindDetectionCA_Mixed_NonAlignedSpan_r16(
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNR_v1640(Encoder& enc, const CA_ParametersNR_v1640& value)
 {
-    (void)value;
     enc.WriteBit(value.has_uplinkTxDC_TwoCarrierReport_r16);
     enc.WriteBit(value.has_maxUpTo3Diff_NumerologiesConfigSinglePUCCH_grp_r16);
     enc.WriteBit(value.has_maxUpTo4Diff_NumerologiesConfigSinglePUCCH_grp_r16);
@@ -9274,7 +9161,6 @@ void Free_CA_ParametersNR_v1640(CA_ParametersNR_v1640& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNRDC_v1640(Encoder& enc, const CA_ParametersNRDC_v1640& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_ForDC_v1640);
     if (value.has_ca_ParametersNR_ForDC_v1640) {
         Encode_CA_ParametersNR_v1640(enc, value.ca_ParametersNR_ForDC_v1640);
@@ -9313,7 +9199,6 @@ void Free_CA_ParametersNRDC_v1640(CA_ParametersNRDC_v1640& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BandCombination_v1640(Encoder& enc, const BandCombination_v1640& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ca_ParametersNR_v1640);
     enc.WriteBit(value.has_ca_ParametersNRDC_v1640);
     if (value.has_ca_ParametersNR_v1640) {
@@ -9364,7 +9249,6 @@ void Free_BandCombination_v1640(BandCombination_v1640& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CA_ParametersNRDC_v1650(Encoder& enc, const CA_ParametersNRDC_v1650& value)
 {
-    (void)value;
     enc.WriteBit(value.has_supportedCellGrouping_r16);
     if (value.has_supportedCellGrouping_r16) {
         enc.WriteConstrainedBitString(value.supportedCellGrouping_r16.bytes, value.supportedCellGrouping_r16.bitLength, 1, 32);

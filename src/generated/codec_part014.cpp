@@ -24,7 +24,6 @@ namespace v1810 {
 // --------------------------------------------------------------------------
 ErrorCode Encode_SPS_ConfigDeactivationState_r16(Encoder& enc, const SPS_ConfigDeactivationState_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 7);
@@ -74,7 +73,6 @@ void Free_SPS_ConfigDeactivationState_r16(SPS_ConfigDeactivationState_r16& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_ConfiguredGrantConfigType2DeactivationStateList_r16(Encoder& enc, const ConfiguredGrantConfigType2DeactivationStateList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_ConfiguredGrantConfigType2DeactivationState_r16(enc, value.items[i]);
@@ -123,7 +121,6 @@ void Free_ConfiguredGrantConfigType2DeactivationStateList_r16(ConfiguredGrantCon
 // --------------------------------------------------------------------------
 ErrorCode Encode_DL_DataToUL_ACK_r16(Encoder& enc, const DL_DataToUL_ACK_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), -1, 15);
@@ -236,7 +233,6 @@ void Free_SetupRelease_DL_DataToUL_ACK_r16(SetupRelease_DL_DataToUL_ACK_r16& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_UL_AccessConfigListDCI_1_1_r16(Encoder& enc, const UL_AccessConfigListDCI_1_1_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 15);
@@ -415,7 +411,6 @@ void Free_PUCCH_Config_ExtGroup1_SubslotLengthForPUCCH_r16(PUCCH_Config_ExtGroup
 // --------------------------------------------------------------------------
 ErrorCode Encode_DL_DataToUL_ACK_DCI_1_2_r16(Encoder& enc, const DL_DataToUL_ACK_DCI_1_2_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 15);
@@ -528,7 +523,6 @@ void Free_SetupRelease_DL_DataToUL_ACK_DCI_1_2_r16(SetupRelease_DL_DataToUL_ACK_
 // --------------------------------------------------------------------------
 ErrorCode Encode_SPS_PUCCH_AN_List_r16(Encoder& enc, const SPS_PUCCH_AN_List_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_SPS_PUCCH_AN_r16(enc, value.items[i]);
@@ -640,7 +634,6 @@ void Free_SetupRelease_SPS_PUCCH_AN_List_r16(SetupRelease_SPS_PUCCH_AN_List_r16&
 // --------------------------------------------------------------------------
 ErrorCode Encode_PUCCH_Config_ExtGroup1(Encoder& enc, const PUCCH_Config_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_resourceToAddModListExt_v1610);
     enc.WriteBit(value.has_dl_DataToUL_ACK_r16);
     enc.WriteBit(value.has_ul_AccessConfigListDCI_1_1_r16);
@@ -1018,7 +1011,6 @@ void Free_PUCCH_Config_ExtGroup1(PUCCH_Config_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PUCCH_FormatConfig(Encoder& enc, const PUCCH_FormatConfig& value)
 {
-    (void)value;
     enc.WriteBit(value.has_interslotFrequencyHopping);
     enc.WriteBit(value.has_additionalDMRS);
     enc.WriteBit(value.has_maxCodeRate);
@@ -1178,7 +1170,6 @@ void Free_SetupRelease_PUCCH_FormatConfig(SetupRelease_PUCCH_FormatConfig& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_PUCCH_FormatConfigExt_r17(Encoder& enc, const PUCCH_FormatConfigExt_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_maxCodeRateLP_r17);
@@ -1288,7 +1279,6 @@ void Free_SetupRelease_PUCCH_FormatConfigExt_r17(SetupRelease_PUCCH_FormatConfig
 // --------------------------------------------------------------------------
 ErrorCode Encode_UL_AccessConfigListDCI_1_2_r17(Encoder& enc, const UL_AccessConfigListDCI_1_2_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 15);
@@ -1401,7 +1391,6 @@ void Free_SetupRelease_UL_AccessConfigListDCI_1_2_r17(SetupRelease_UL_AccessConf
 // --------------------------------------------------------------------------
 ErrorCode Encode_DL_DataToUL_ACK_r17(Encoder& enc, const DL_DataToUL_ACK_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), -1, 127);
@@ -1514,7 +1503,6 @@ void Free_SetupRelease_DL_DataToUL_ACK_r17(SetupRelease_DL_DataToUL_ACK_r17& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_DL_DataToUL_ACK_DCI_1_2_r17(Encoder& enc, const DL_DataToUL_ACK_DCI_1_2_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 127);
@@ -1627,7 +1615,6 @@ void Free_SetupRelease_DL_DataToUL_ACK_DCI_1_2_r17(SetupRelease_DL_DataToUL_ACK_
 // --------------------------------------------------------------------------
 ErrorCode Encode_UL_AccessConfigListDCI_1_1_r17(Encoder& enc, const UL_AccessConfigListDCI_1_1_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 3u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 2);
@@ -1740,7 +1727,6 @@ void Free_SetupRelease_UL_AccessConfigListDCI_1_1_r17(SetupRelease_UL_AccessConf
 // --------------------------------------------------------------------------
 ErrorCode Encode_DMRS_BundlingPUCCH_Config_r17(Encoder& enc, const DMRS_BundlingPUCCH_Config_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_pucch_DMRS_Bundling_r17);
@@ -1885,7 +1871,6 @@ void Free_SetupRelease_DMRS_BundlingPUCCH_Config_r17(SetupRelease_DMRS_BundlingP
 // --------------------------------------------------------------------------
 ErrorCode Encode_DL_DataToUL_ACK_v1700(Encoder& enc, const DL_DataToUL_ACK_v1700& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 16, 31);
@@ -1998,7 +1983,6 @@ void Free_SetupRelease_DL_DataToUL_ACK_v1700(SetupRelease_DL_DataToUL_ACK_v1700&
 // --------------------------------------------------------------------------
 ErrorCode Encode_DL_DataToUL_ACK_MulticastDCI_Format4_1_r17(Encoder& enc, const DL_DataToUL_ACK_MulticastDCI_Format4_1_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 15);
@@ -2111,7 +2095,6 @@ void Free_SetupRelease_DL_DataToUL_ACK_MulticastDCI_Format4_1_r17(SetupRelease_D
 // --------------------------------------------------------------------------
 ErrorCode Encode_PUCCH_Config_ExtGroup2(Encoder& enc, const PUCCH_Config_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_format0_r17);
     enc.WriteBit(value.has_format2Ext_r17);
     enc.WriteBit(value.has_format3Ext_r17);
@@ -2417,7 +2400,6 @@ void Free_PUCCH_Config_ExtGroup2(PUCCH_Config_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PathlossReferenceRSs_v1610(Encoder& enc, const PathlossReferenceRSs_v1610& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 60u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_PUCCH_PathlossReferenceRS_r16(enc, value.items[i]);
@@ -2529,7 +2511,6 @@ void Free_SetupRelease_PathlossReferenceRSs_v1610(SetupRelease_PathlossReference
 // --------------------------------------------------------------------------
 ErrorCode Encode_PUCCH_PowerControl_ExtGroup1(Encoder& enc, const PUCCH_PowerControl_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pathlossReferenceRSs_v1610);
     if (value.has_pathlossReferenceRSs_v1610) {
         Encode_SetupRelease_PathlossReferenceRSs_v1610(enc, value.pathlossReferenceRSs_v1610);
@@ -2568,7 +2549,6 @@ void Free_PUCCH_PowerControl_ExtGroup1(PUCCH_PowerControl_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PUCCH_PowerControl(Encoder& enc, const PUCCH_PowerControl& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_deltaF_PUCCH_f0);
@@ -2780,7 +2760,6 @@ void Free_PUCCH_PowerControl(PUCCH_PowerControl& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PUCCH_Config(Encoder& enc, const PUCCH_Config& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_resourceSetToAddModList);
@@ -3332,7 +3311,6 @@ void Free_SetupRelease_PUCCH_Config(SetupRelease_PUCCH_Config& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PUCCH_ConfigurationList_r16(Encoder& enc, const PUCCH_ConfigurationList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 2u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_PUCCH_Config(enc, value.items[i]);
@@ -3444,7 +3422,6 @@ void Free_SetupRelease_PUCCH_ConfigurationList_r16(SetupRelease_PUCCH_Configurat
 // --------------------------------------------------------------------------
 ErrorCode Encode_LBT_FailureRecoveryConfig_r16(Encoder& enc, const LBT_FailureRecoveryConfig_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.lbt_FailureInstanceMaxCount_r16), 0, 5);
@@ -3553,7 +3530,6 @@ void Free_SetupRelease_LBT_FailureRecoveryConfig_r16(SetupRelease_LBT_FailureRec
 // --------------------------------------------------------------------------
 ErrorCode Encode_BWP_UplinkDedicated_ExtGroup1(Encoder& enc, const BWP_UplinkDedicated_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sl_PUCCH_Config_r16);
     enc.WriteBit(value.has_cp_ExtensionC2_r16);
     enc.WriteBit(value.has_cp_ExtensionC3_r16);
@@ -3689,7 +3665,6 @@ void Free_BWP_UplinkDedicated_ExtGroup1(BWP_UplinkDedicated_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BWP_UplinkDedicated_ExtGroup2_Ul_TCI_StateList_r17_Explicitlist(Encoder& enc, const BWP_UplinkDedicated_ExtGroup2_Ul_TCI_StateList_r17_Explicitlist& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ul_TCI_ToAddModList_r17);
     enc.WriteBit(value.has_ul_TCI_ToReleaseList_r17);
     if (value.has_ul_TCI_ToAddModList_r17) {
@@ -3847,7 +3822,6 @@ void Free_BWP_UplinkDedicated_ExtGroup2_Ul_TCI_StateList_r17(BWP_UplinkDedicated
 // --------------------------------------------------------------------------
 ErrorCode Encode_BWP_UplinkDedicated_ExtGroup2(Encoder& enc, const BWP_UplinkDedicated_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ul_TCI_StateList_r17);
     enc.WriteBit(value.has_ul_powerControl_r17);
     enc.WriteBit(value.has_pucch_ConfigurationListMulticast1_r17);
@@ -3923,7 +3897,6 @@ void Free_BWP_UplinkDedicated_ExtGroup2(BWP_UplinkDedicated_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BWP_UplinkDedicated_ExtGroup3(Encoder& enc, const BWP_UplinkDedicated_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pucch_ConfigMulticast1_r17);
     enc.WriteBit(value.has_pucch_ConfigMulticast2_r17);
     if (value.has_pucch_ConfigMulticast1_r17) {
@@ -3974,7 +3947,6 @@ void Free_BWP_UplinkDedicated_ExtGroup3(BWP_UplinkDedicated_ExtGroup3& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BWP_UplinkDedicated_ExtGroup4(Encoder& enc, const BWP_UplinkDedicated_ExtGroup4& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pathlossReferenceRSToAddModList_r17);
     enc.WriteBit(value.has_pathlossReferenceRSToReleaseList_r17);
     if (value.has_pathlossReferenceRSToAddModList_r17) {
@@ -4068,7 +4040,6 @@ void Free_BWP_UplinkDedicated_ExtGroup4(BWP_UplinkDedicated_ExtGroup4& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CG_StartingOffsets_r16(Encoder& enc, const CG_StartingOffsets_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_cg_StartingFullBW_InsideCOT_r16);
     enc.WriteBit(value.has_cg_StartingFullBW_OutsideCOT_r16);
     enc.WriteBit(value.has_cg_StartingPartialBW_InsideCOT_r16);
@@ -4189,7 +4160,6 @@ void Free_CG_StartingOffsets_r16(CG_StartingOffsets_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ConfiguredGrantConfig_ExtGroup1(Encoder& enc, const ConfiguredGrantConfig_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_cg_RetransmissionTimer_r16);
     enc.WriteBit(value.has_cg_minDFI_Delay_r16);
     enc.WriteBit(value.has_cg_nrofPUSCH_InSlot_r16);
@@ -4452,7 +4422,6 @@ void Free_ConfiguredGrantConfig_ExtGroup1(ConfiguredGrantConfig_ExtGroup1& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_BetaOffsetsCrossPriSelCG_r17_Dynamic_r17(Encoder& enc, const BetaOffsetsCrossPriSelCG_r17_Dynamic_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_BetaOffsetsCrossPri_r17(enc, value.items[i]);
@@ -4628,7 +4597,6 @@ void Free_SetupRelease_BetaOffsetsCrossPriSelCG_r17(SetupRelease_BetaOffsetsCros
 // --------------------------------------------------------------------------
 ErrorCode Encode_ConfiguredGrantConfig_ExtGroup2(Encoder& enc, const ConfiguredGrantConfig_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_cg_betaOffsetsCrossPri0_r17);
     enc.WriteBit(value.has_cg_betaOffsetsCrossPri1_r17);
     enc.WriteBit(value.has_mappingPattern_r17);
@@ -4842,7 +4810,6 @@ void Free_ConfiguredGrantConfig_ExtGroup2(ConfiguredGrantConfig_ExtGroup2& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_ConfiguredGrantConfig_ExtGroup3(Encoder& enc, const ConfiguredGrantConfig_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_harq_ProcID_Offset_v1730);
     enc.WriteBit(value.has_cg_nrofSlots_r17);
     if (value.has_harq_ProcID_Offset_v1730) {
@@ -4895,7 +4862,6 @@ void Free_ConfiguredGrantConfig_ExtGroup3(ConfiguredGrantConfig_ExtGroup3& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_ConfiguredGrantConfig_ExtGroup4_Uto_UCI_Config_r18(Encoder& enc, const ConfiguredGrantConfig_ExtGroup4_Uto_UCI_Config_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.nrofBitsInUTO_UCI_r18), 3, 8);
@@ -4941,7 +4907,6 @@ void Free_ConfiguredGrantConfig_ExtGroup4_Uto_UCI_Config_r18(ConfiguredGrantConf
 // --------------------------------------------------------------------------
 ErrorCode Encode_ConfiguredGrantConfig_ExtGroup4(Encoder& enc, const ConfiguredGrantConfig_ExtGroup4& value)
 {
-    (void)value;
     enc.WriteBit(value.has_disableCG_RetransmissionMonitoring_r18);
     enc.WriteBit(value.has_nrofSlotsInCG_Period_r18);
     enc.WriteBit(value.has_uto_UCI_Config_r18);
@@ -5004,7 +4969,6 @@ void Free_ConfiguredGrantConfig_ExtGroup4(ConfiguredGrantConfig_ExtGroup4& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_CG_UCI_OnPUSCH_Dynamic(Encoder& enc, const CG_UCI_OnPUSCH_Dynamic& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_BetaOffsets(enc, value.items[i]);
@@ -5180,7 +5144,6 @@ void Free_SetupRelease_CG_UCI_OnPUSCH(SetupRelease_CG_UCI_OnPUSCH& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ConfiguredGrantConfig_Rrc_ConfiguredUplinkGrant_ExtGroup1(Encoder& enc, const ConfiguredGrantConfig_Rrc_ConfiguredUplinkGrant_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pusch_RepTypeIndicator_r16);
     enc.WriteBit(value.has_frequencyHoppingPUSCH_RepTypeB_r16);
     enc.WriteBit(value.has_timeReferenceSFN_r16);
@@ -5407,7 +5370,6 @@ void Free_CG_SDT_Configuration_r17_Sdt_DMRS_Ports_r17(CG_SDT_Configuration_r17_S
 // --------------------------------------------------------------------------
 ErrorCode Encode_CG_SDT_Configuration_r17(Encoder& enc, const CG_SDT_Configuration_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_cg_SDT_RetransmissionTimer);
     enc.WriteBit(value.has_sdt_SSB_Subset_r17);
     enc.WriteBit(value.has_sdt_SSB_PerCG_PUSCH_r17);
@@ -5523,7 +5485,6 @@ void Free_CG_SDT_Configuration_r17(CG_SDT_Configuration_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ConfiguredGrantConfig_Rrc_ConfiguredUplinkGrant_ExtGroup2(Encoder& enc, const ConfiguredGrantConfig_Rrc_ConfiguredUplinkGrant_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pathlossReferenceIndex2_r17);
     enc.WriteBit(value.has_srs_ResourceIndicator2_r17);
     enc.WriteBit(value.has_precodingAndNumberOfLayers2_r17);
@@ -5790,7 +5751,6 @@ void Free_CG_RRC_Configuration_r18_Rrc_DMRS_Ports_r18(CG_RRC_Configuration_r18_R
 // --------------------------------------------------------------------------
 ErrorCode Encode_CG_RRC_Configuration_r18(Encoder& enc, const CG_RRC_Configuration_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_cg_RRC_RetransmissionTimer_r18);
@@ -5926,7 +5886,6 @@ void Free_CG_RRC_Configuration_r18(CG_RRC_Configuration_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ConfiguredGrantConfig_Rrc_ConfiguredUplinkGrant_ExtGroup3(Encoder& enc, const ConfiguredGrantConfig_Rrc_ConfiguredUplinkGrant_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_srs_ResourceSetId_r18);
     enc.WriteBit(value.has_cg_LTM_Configuration_r18);
     enc.WriteBit(value.has_cg_SDT_PeriodicityExt_r18);
@@ -6029,7 +5988,6 @@ void Free_ConfiguredGrantConfig_Rrc_ConfiguredUplinkGrant_ExtGroup3(ConfiguredGr
 // --------------------------------------------------------------------------
 ErrorCode Encode_ConfiguredGrantConfig_Rrc_ConfiguredUplinkGrant(Encoder& enc, const ConfiguredGrantConfig_Rrc_ConfiguredUplinkGrant& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_dmrs_SeqInitialization);
@@ -6232,7 +6190,6 @@ void Free_ConfiguredGrantConfig_Rrc_ConfiguredUplinkGrant(ConfiguredGrantConfig_
 // --------------------------------------------------------------------------
 ErrorCode Encode_ConfiguredGrantConfig(Encoder& enc, const ConfiguredGrantConfig& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3 || value.has_extGroup4;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_frequencyHopping);
@@ -6588,7 +6545,6 @@ void Free_SetupRelease_ConfiguredGrantConfig(SetupRelease_ConfiguredGrantConfig&
 // --------------------------------------------------------------------------
 ErrorCode Encode_SRS_Config_ExtGroup1(Encoder& enc, const SRS_Config_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_srs_RequestDCI_1_2_r16);
     enc.WriteBit(value.has_srs_RequestDCI_0_2_r16);
     enc.WriteBit(value.has_srs_ResourceSetToAddModListDCI_0_2_r16);
@@ -6842,7 +6798,6 @@ void Free_SRS_Config_ExtGroup1(SRS_Config_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SRS_Config_ExtGroup2(Encoder& enc, const SRS_Config_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dci_TriggeringPosResourceSetLink_r18);
     if (value.has_dci_TriggeringPosResourceSetLink_r18) {
         enc.WriteConstrainedInteger((std::int64_t)(value.dci_TriggeringPosResourceSetLink_r18), 0, 0);
@@ -6880,7 +6835,6 @@ void Free_SRS_Config_ExtGroup2(SRS_Config_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SRS_Config(Encoder& enc, const SRS_Config& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_srs_ResourceSetToReleaseList);
@@ -7244,7 +7198,6 @@ void Free_SetupRelease_BeamFailureRecoveryConfig(SetupRelease_BeamFailureRecover
 // --------------------------------------------------------------------------
 ErrorCode Encode_BWP_UplinkDedicated(Encoder& enc, const BWP_UplinkDedicated& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3 || value.has_extGroup4;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_pucch_Config);
@@ -7443,7 +7396,6 @@ void Free_BWP_UplinkDedicated(BWP_UplinkDedicated& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_BWP_Uplink(Encoder& enc, const BWP_Uplink& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_bwp_Common);
@@ -7507,7 +7459,6 @@ void Free_BWP_Uplink(BWP_Uplink& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_AdditionalRACH_Config_r17(Encoder& enc, const AdditionalRACH_Config_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_rach_ConfigCommon_r17);
@@ -7565,7 +7516,6 @@ void Free_AdditionalRACH_Config_r17(AdditionalRACH_Config_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ConfiguredGrantConfigType2DeactivationState_r16(Encoder& enc, const ConfiguredGrantConfigType2DeactivationState_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 12u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 11);
@@ -7681,7 +7631,6 @@ void Free_CandidateBeamRS_r16_CandidateBeamConfig_r16(CandidateBeamRS_r16_Candid
 // --------------------------------------------------------------------------
 ErrorCode Encode_CandidateBeamRS_r16(Encoder& enc, const CandidateBeamRS_r16& value)
 {
-    (void)value;
     enc.WriteBit(value.has_servingCellId);
     Encode_CandidateBeamRS_r16_CandidateBeamConfig_r16(enc, value.candidateBeamConfig_r16);
     if (value.has_servingCellId) {
@@ -7792,7 +7741,6 @@ void Free_LTM_QCL_Info_r18_ReferenceSignal_r18(LTM_QCL_Info_r18_ReferenceSignal_
 // --------------------------------------------------------------------------
 ErrorCode Encode_LTM_QCL_Info_r18(Encoder& enc, const LTM_QCL_Info_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_LTM_QCL_Info_r18_ReferenceSignal_r18(enc, value.referenceSignal_r18);
@@ -7837,7 +7785,6 @@ void Free_LTM_QCL_Info_r18(LTM_QCL_Info_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CandidateTCI_State_r18(Encoder& enc, const CandidateTCI_State_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_qcl_Type2_r18);
@@ -7973,7 +7920,6 @@ void Free_CandidateTCI_UL_State_r18_ReferenceSignal_r18(CandidateTCI_UL_State_r1
 // --------------------------------------------------------------------------
 ErrorCode Encode_CandidateTCI_UL_State_r18(Encoder& enc, const CandidateTCI_UL_State_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_pathlossReferenceRS_Id_r18);
@@ -8031,7 +7977,6 @@ void Free_CandidateTCI_UL_State_r18(CandidateTCI_UL_State_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SNPN_AccessInfo_r17(Encoder& enc, const SNPN_AccessInfo_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_extCH_Supported_r17);
     enc.WriteBit(value.has_extCH_WithoutConfigAllowed_r17);
     enc.WriteBit(value.has_onboardingEnabled_r17);
@@ -8102,7 +8047,6 @@ void Free_SNPN_AccessInfo_r17(SNPN_AccessInfo_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PLMN_IdentityList_EUTRA_5GC(Encoder& enc, const PLMN_IdentityList_EUTRA_5GC& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 12u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_PLMN_Identity_EUTRA_5GC(enc, value.items[i]);
@@ -8221,7 +8165,6 @@ void Free_CellIdentity_EUTRA_5GC(CellIdentity_EUTRA_5GC& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CellAccessRelatedInfo_EUTRA_5GC(Encoder& enc, const CellAccessRelatedInfo_EUTRA_5GC& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ranac_5gc);
     Encode_PLMN_IdentityList_EUTRA_5GC(enc, value.plmn_IdentityList_eutra_5gc);
     enc.WriteFixedBitString(value.trackingAreaCode_eutra_5gc.bytes, value.trackingAreaCode_eutra_5gc.bitLength, 24, 24);
@@ -8348,7 +8291,6 @@ void Free_PLMN_Identity_EUTRA_5GC(PLMN_Identity_EUTRA_5GC& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PLMN_IdentityList_EUTRA_EPC(Encoder& enc, const PLMN_IdentityList_EUTRA_EPC& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 12u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_PLMN_Identity(enc, value.items[i]);
@@ -8397,7 +8339,6 @@ void Free_PLMN_IdentityList_EUTRA_EPC(PLMN_IdentityList_EUTRA_EPC& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CellAccessRelatedInfo_EUTRA_EPC(Encoder& enc, const CellAccessRelatedInfo_EUTRA_EPC& value)
 {
-    (void)value;
     Encode_PLMN_IdentityList_EUTRA_EPC(enc, value.plmn_IdentityList_eutra_epc);
     enc.WriteFixedBitString(value.trackingAreaCode_eutra_epc.bytes, value.trackingAreaCode_eutra_epc.bitLength, 16, 16);
     enc.WriteFixedBitString(value.cellIdentity_eutra_epc.bytes, value.cellIdentity_eutra_epc.bitLength, 28, 28);
@@ -8783,7 +8724,6 @@ void Free_CellDTXDRX_Config_r18_CellDTXDRX_CycleStartOffset_r18(CellDTXDRX_Confi
 // --------------------------------------------------------------------------
 ErrorCode Encode_CellDTXDRX_Config_r18(Encoder& enc, const CellDTXDRX_Config_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_cellDTXDRXactivationStatus_r18);
     Encode_CellDTXDRX_Config_r18_CellDTXDRX_onDurationTimer_r18(enc, value.cellDTXDRX_onDurationTimer_r18);
     Encode_CellDTXDRX_Config_r18_CellDTXDRX_CycleStartOffset_r18(enc, value.cellDTXDRX_CycleStartOffset_r18);
@@ -8845,7 +8785,6 @@ void Free_CellDTXDRX_Config_r18(CellDTXDRX_Config_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CellGroupConfig_ExtGroup1(Encoder& enc, const CellGroupConfig_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_reportUplinkTxDirectCurrent);
     if (value.has_reportUplinkTxDirectCurrent) {
         enc.WriteConstrainedInteger((std::int64_t)(value.reportUplinkTxDirectCurrent), 0, 0);
@@ -8883,7 +8822,6 @@ void Free_CellGroupConfig_ExtGroup1(CellGroupConfig_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CellGroupConfig_ExtGroup2(Encoder& enc, const CellGroupConfig_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_bap_Address_r16);
     enc.WriteBit(value.has_bh_RLC_ChannelToAddModList_r16);
     enc.WriteBit(value.has_bh_RLC_ChannelToReleaseList_r16);
@@ -9175,7 +9113,6 @@ void Free_CellGroupConfig_ExtGroup2(CellGroupConfig_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CellGroupConfig_ExtGroup3(Encoder& enc, const CellGroupConfig_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_reportUplinkTxDirectCurrentTwoCarrier_r16);
     if (value.has_reportUplinkTxDirectCurrentTwoCarrier_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.reportUplinkTxDirectCurrentTwoCarrier_r16), 0, 0);
@@ -9213,7 +9150,6 @@ void Free_CellGroupConfig_ExtGroup3(CellGroupConfig_ExtGroup3& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CellGroupConfig_ExtGroup4(Encoder& enc, const CellGroupConfig_ExtGroup4& value)
 {
-    (void)value;
     enc.WriteBit(value.has_f1c_TransferPathNRDC_r17);
     enc.WriteBit(value.has_uplinkTxSwitching_2T_Mode_r17);
     enc.WriteBit(value.has_uplinkTxSwitching_DualUL_TxState_r17);
@@ -9581,7 +9517,6 @@ void Free_CellGroupConfig_ExtGroup4(CellGroupConfig_ExtGroup4& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ReportUplinkTxDirectCurrentMoreCarrier_r17(Encoder& enc, const ReportUplinkTxDirectCurrentMoreCarrier_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 32u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_IntraBandCC_CombinationReqList_r17(enc, value.items[i]);
@@ -9630,7 +9565,6 @@ void Free_ReportUplinkTxDirectCurrentMoreCarrier_r17(ReportUplinkTxDirectCurrent
 // --------------------------------------------------------------------------
 ErrorCode Encode_CellGroupConfig_ExtGroup5(Encoder& enc, const CellGroupConfig_ExtGroup5& value)
 {
-    (void)value;
     enc.WriteBit(value.has_reportUplinkTxDirectCurrentMoreCarrier_r17);
     if (value.has_reportUplinkTxDirectCurrentMoreCarrier_r17) {
         Encode_ReportUplinkTxDirectCurrentMoreCarrier_r17(enc, value.reportUplinkTxDirectCurrentMoreCarrier_r17);
@@ -9669,7 +9603,6 @@ void Free_CellGroupConfig_ExtGroup5(CellGroupConfig_ExtGroup5& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CellGroupConfig_ExtGroup6(Encoder& enc, const CellGroupConfig_ExtGroup6& value)
 {
-    (void)value;
     enc.WriteBit(value.has_prioSCellPRACH_OverSP_PeriodicSRS_r17);
     if (value.has_prioSCellPRACH_OverSP_PeriodicSRS_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.prioSCellPRACH_OverSP_PeriodicSRS_r17), 0, 0);
@@ -9707,7 +9640,6 @@ void Free_CellGroupConfig_ExtGroup6(CellGroupConfig_ExtGroup6& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_NCR_AperiodicFwdConfig_r18(Encoder& enc, const NCR_AperiodicFwdConfig_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_aperiodicFwdTimeRsrcToAddModList_r18);
@@ -9910,7 +9842,6 @@ void Free_SetupRelease_NCR_AperiodicFwdConfig_r18(SetupRelease_NCR_AperiodicFwdC
 // --------------------------------------------------------------------------
 ErrorCode Encode_NCR_FwdConfig_r18(Encoder& enc, const NCR_FwdConfig_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_periodicFwdRsrcSetToAddModList_r18);
@@ -10153,7 +10084,6 @@ void Free_SetupRelease_NCR_FwdConfig_r18(SetupRelease_NCR_FwdConfig_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_AutonomousDenialParameters_r18(Encoder& enc, const AutonomousDenialParameters_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.autonomousDenialSlots_r18), 0, 7);
     enc.WriteConstrainedInteger((std::int64_t)(value.autonomousDenialValidity_r18), 0, 3);
     return enc.Error();
@@ -10255,7 +10185,6 @@ void Free_SetupRelease_AutonomousDenialParameters_r18(SetupRelease_AutonomousDen
 // --------------------------------------------------------------------------
 ErrorCode Encode_UplinkTxSwitchingBandPairList_r18(Encoder& enc, const UplinkTxSwitchingBandPairList_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 32u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_UplinkTxSwitchingBandPairConfig_r18(enc, value.items[i]);
@@ -10304,7 +10233,6 @@ void Free_UplinkTxSwitchingBandPairList_r18(UplinkTxSwitchingBandPairList_r18& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_UplinkTxSwitchingAssociatedBandDualUL_List_r18(Encoder& enc, const UplinkTxSwitchingAssociatedBandDualUL_List_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 0u, 32u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_UplinkTxSwitchingAssociatedBandDualUL_r18(enc, value.items[i]);
@@ -10353,7 +10281,6 @@ void Free_UplinkTxSwitchingAssociatedBandDualUL_List_r18(UplinkTxSwitchingAssoci
 // --------------------------------------------------------------------------
 ErrorCode Encode_UplinkTxSwitchingMoreBands_r18(Encoder& enc, const UplinkTxSwitchingMoreBands_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_uplinkTxSwitchingBandList_r18);
@@ -10508,7 +10435,6 @@ void Free_SetupRelease_UplinkTxSwitchingMoreBands_r18(SetupRelease_UplinkTxSwitc
 // --------------------------------------------------------------------------
 ErrorCode Encode_CellGroupConfig_ExtGroup7(Encoder& enc, const CellGroupConfig_ExtGroup7& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ncr_FwdConfig_r18);
     enc.WriteBit(value.has_autonomousDenialParameters_r18);
     enc.WriteBit(value.has_nonCollocatedTypeMRDC_r18);
@@ -10593,7 +10519,6 @@ void Free_CellGroupConfig_ExtGroup7(CellGroupConfig_ExtGroup7& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_GoodServingCellEvaluation_r17(Encoder& enc, const GoodServingCellEvaluation_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_offset_r17);
     if (value.has_offset_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.offset_r17), 0, 3);
@@ -10633,7 +10558,6 @@ void Free_GoodServingCellEvaluation_r17(GoodServingCellEvaluation_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SpCellConfig_ExtGroup1_LowMobilityEvaluationConnected_r17(Encoder& enc, const SpCellConfig_ExtGroup1_LowMobilityEvaluationConnected_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.s_SearchDeltaP_Connected_r17), 0, 7);
     enc.WriteConstrainedInteger((std::int64_t)(value.t_SearchDeltaP_Connected_r17), 0, 15);
     return enc.Error();
@@ -10672,7 +10596,6 @@ void Free_SpCellConfig_ExtGroup1_LowMobilityEvaluationConnected_r17(SpCellConfig
 // --------------------------------------------------------------------------
 ErrorCode Encode_DeactivatedSCG_Config_r17(Encoder& enc, const DeactivatedSCG_Config_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBool(value.bfd_and_RLM_r17);
@@ -10775,7 +10698,6 @@ void Free_SetupRelease_DeactivatedSCG_Config_r17(SetupRelease_DeactivatedSCG_Con
 // --------------------------------------------------------------------------
 ErrorCode Encode_SpCellConfig_ExtGroup1(Encoder& enc, const SpCellConfig_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_lowMobilityEvaluationConnected_r17);
     enc.WriteBit(value.has_goodServingCellEvaluationRLM_r17);
     enc.WriteBit(value.has_goodServingCellEvaluationBFD_r17);

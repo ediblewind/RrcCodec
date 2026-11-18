@@ -24,7 +24,6 @@ namespace v1810 {
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_CodebookType_Type1_SubType_TypeI_SinglePanel_NrOfAntennaPorts_Two(Encoder& enc, const CodebookConfig_CodebookType_Type1_SubType_TypeI_SinglePanel_NrOfAntennaPorts_Two& value)
 {
-    (void)value;
     enc.WriteFixedBitString(value.twoTX_CodebookSubsetRestriction.bytes, value.twoTX_CodebookSubsetRestriction.bitLength, 6, 6);
     return enc.Error();
 }
@@ -302,7 +301,6 @@ void Free_CodebookConfig_CodebookType_Type1_SubType_TypeI_SinglePanel_NrOfAntenn
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_CodebookType_Type1_SubType_TypeI_SinglePanel_NrOfAntennaPorts_MoreThanTwo(Encoder& enc, const CodebookConfig_CodebookType_Type1_SubType_TypeI_SinglePanel_NrOfAntennaPorts_MoreThanTwo& value)
 {
-    (void)value;
     enc.WriteBit(value.has_typeI_SinglePanel_codebookSubsetRestriction_i2);
     Encode_CodebookConfig_CodebookType_Type1_SubType_TypeI_SinglePanel_NrOfAntennaPorts_MoreThanTwo_N1_n2(enc, value.n1_n2);
     if (value.has_typeI_SinglePanel_codebookSubsetRestriction_i2) {
@@ -417,7 +415,6 @@ void Free_CodebookConfig_CodebookType_Type1_SubType_TypeI_SinglePanel_NrOfAntenn
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_CodebookType_Type1_SubType_TypeI_SinglePanel(Encoder& enc, const CodebookConfig_CodebookType_Type1_SubType_TypeI_SinglePanel& value)
 {
-    (void)value;
     Encode_CodebookConfig_CodebookType_Type1_SubType_TypeI_SinglePanel_NrOfAntennaPorts(enc, value.nrOfAntennaPorts);
     enc.WriteFixedBitString(value.typeI_SinglePanel_ri_Restriction.bytes, value.typeI_SinglePanel_ri_Restriction.bitLength, 8, 8);
     return enc.Error();
@@ -625,7 +622,6 @@ void Free_CodebookConfig_CodebookType_Type1_SubType_TypeI_MultiPanel_Ng_n1_n2(Co
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_CodebookType_Type1_SubType_TypeI_MultiPanel(Encoder& enc, const CodebookConfig_CodebookType_Type1_SubType_TypeI_MultiPanel& value)
 {
-    (void)value;
     Encode_CodebookConfig_CodebookType_Type1_SubType_TypeI_MultiPanel_Ng_n1_n2(enc, value.ng_n1_n2);
     enc.WriteFixedBitString(value.ri_Restriction.bytes, value.ri_Restriction.bitLength, 4, 4);
     return enc.Error();
@@ -733,7 +729,6 @@ void Free_CodebookConfig_CodebookType_Type1_SubType(CodebookConfig_CodebookType_
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_CodebookType_Type1(Encoder& enc, const CodebookConfig_CodebookType_Type1& value)
 {
-    (void)value;
     Encode_CodebookConfig_CodebookType_Type1_SubType(enc, value.subType);
     enc.WriteConstrainedInteger((std::int64_t)(value.codebookMode), 1, 2);
     return enc.Error();
@@ -1010,7 +1005,6 @@ void Free_CodebookConfig_CodebookType_Type2_SubType_TypeII_N1_n2_codebookSubsetR
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_CodebookType_Type2_SubType_TypeII(Encoder& enc, const CodebookConfig_CodebookType_Type2_SubType_TypeII& value)
 {
-    (void)value;
     Encode_CodebookConfig_CodebookType_Type2_SubType_TypeII_N1_n2_codebookSubsetRestriction(enc, value.n1_n2_codebookSubsetRestriction);
     enc.WriteFixedBitString(value.typeII_RI_Restriction.bytes, value.typeII_RI_Restriction.bitLength, 2, 2);
     return enc.Error();
@@ -1054,7 +1048,6 @@ void Free_CodebookConfig_CodebookType_Type2_SubType_TypeII(CodebookConfig_Codebo
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_CodebookType_Type2_SubType_TypeII_PortSelection(Encoder& enc, const CodebookConfig_CodebookType_Type2_SubType_TypeII_PortSelection& value)
 {
-    (void)value;
     enc.WriteBit(value.has_portSelectionSamplingSize);
     if (value.has_portSelectionSamplingSize) {
         enc.WriteConstrainedInteger((std::int64_t)(value.portSelectionSamplingSize), 0, 3);
@@ -1170,7 +1163,6 @@ void Free_CodebookConfig_CodebookType_Type2_SubType(CodebookConfig_CodebookType_
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_CodebookType_Type2(Encoder& enc, const CodebookConfig_CodebookType_Type2& value)
 {
-    (void)value;
     Encode_CodebookConfig_CodebookType_Type2_SubType(enc, value.subType);
     enc.WriteConstrainedInteger((std::int64_t)(value.phaseAlphabetSize), 0, 1);
     enc.WriteBool(value.subbandAmplitude);
@@ -1284,7 +1276,6 @@ void Free_CodebookConfig_CodebookType(CodebookConfig_CodebookType& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig(Encoder& enc, const CodebookConfig& value)
 {
-    (void)value;
     Encode_CodebookConfig_CodebookType(enc, value.codebookType);
     return enc.Error();
 }
@@ -1555,7 +1546,6 @@ void Free_CodebookConfig_r16_CodebookType_Type2_SubType_TypeII_r16_N1_n2_codeboo
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_r16_CodebookType_Type2_SubType_TypeII_r16(Encoder& enc, const CodebookConfig_r16_CodebookType_Type2_SubType_TypeII_r16& value)
 {
-    (void)value;
     Encode_CodebookConfig_r16_CodebookType_Type2_SubType_TypeII_r16_N1_n2_codebookSubsetRestriction_r16(enc, value.n1_n2_codebookSubsetRestriction_r16);
     enc.WriteFixedBitString(value.typeII_RI_Restriction_r16.bytes, value.typeII_RI_Restriction_r16.bitLength, 4, 4);
     return enc.Error();
@@ -1599,7 +1589,6 @@ void Free_CodebookConfig_r16_CodebookType_Type2_SubType_TypeII_r16(CodebookConfi
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_r16_CodebookType_Type2_SubType_TypeII_PortSelection_r16(Encoder& enc, const CodebookConfig_r16_CodebookType_Type2_SubType_TypeII_PortSelection_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.portSelectionSamplingSize_r16), 0, 3);
     enc.WriteFixedBitString(value.typeII_PortSelectionRI_Restriction_r16.bytes, value.typeII_PortSelectionRI_Restriction_r16.bitLength, 4, 4);
     return enc.Error();
@@ -1708,7 +1697,6 @@ void Free_CodebookConfig_r16_CodebookType_Type2_SubType(CodebookConfig_r16_Codeb
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_r16_CodebookType_Type2(Encoder& enc, const CodebookConfig_r16_CodebookType_Type2& value)
 {
-    (void)value;
     Encode_CodebookConfig_r16_CodebookType_Type2_SubType(enc, value.subType);
     enc.WriteConstrainedInteger((std::int64_t)(value.numberOfPMI_SubbandsPerCQI_Subband_r16), 1, 2);
     enc.WriteConstrainedInteger((std::int64_t)(value.paramCombination_r16), 1, 8);
@@ -1801,7 +1789,6 @@ void Free_CodebookConfig_r16_CodebookType(CodebookConfig_r16_CodebookType& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_r16(Encoder& enc, const CodebookConfig_r16& value)
 {
-    (void)value;
     Encode_CodebookConfig_r16_CodebookType(enc, value.codebookType);
     return enc.Error();
 }
@@ -1833,7 +1820,6 @@ void Free_CodebookConfig_r16(CodebookConfig_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group1_r17_NrOfAntennaPorts_Two(Encoder& enc, const CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group1_r17_NrOfAntennaPorts_Two& value)
 {
-    (void)value;
     enc.WriteFixedBitString(value.twoTX_CodebookSubsetRestriction1_r17.bytes, value.twoTX_CodebookSubsetRestriction1_r17.bitLength, 6, 6);
     return enc.Error();
 }
@@ -2111,7 +2097,6 @@ void Free_CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group1_r17_NrO
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group1_r17_NrOfAntennaPorts_MoreThanTwo(Encoder& enc, const CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group1_r17_NrOfAntennaPorts_MoreThanTwo& value)
 {
-    (void)value;
     Encode_CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group1_r17_NrOfAntennaPorts_MoreThanTwo_N1_n2(enc, value.n1_n2);
     return enc.Error();
 }
@@ -2207,7 +2192,6 @@ void Free_CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group1_r17_NrO
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group1_r17(Encoder& enc, const CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group1_r17& value)
 {
-    (void)value;
     Encode_CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group1_r17_NrOfAntennaPorts(enc, value.nrOfAntennaPorts);
     return enc.Error();
 }
@@ -2239,7 +2223,6 @@ void Free_CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group1_r17(Cod
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group2_r17_NrOfAntennaPorts_Two(Encoder& enc, const CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group2_r17_NrOfAntennaPorts_Two& value)
 {
-    (void)value;
     enc.WriteFixedBitString(value.twoTX_CodebookSubsetRestriction2_r17.bytes, value.twoTX_CodebookSubsetRestriction2_r17.bitLength, 6, 6);
     return enc.Error();
 }
@@ -2517,7 +2500,6 @@ void Free_CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group2_r17_NrO
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group2_r17_NrOfAntennaPorts_MoreThanTwo(Encoder& enc, const CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group2_r17_NrOfAntennaPorts_MoreThanTwo& value)
 {
-    (void)value;
     Encode_CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group2_r17_NrOfAntennaPorts_MoreThanTwo_N1_n2(enc, value.n1_n2);
     return enc.Error();
 }
@@ -2613,7 +2595,6 @@ void Free_CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group2_r17_NrO
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group2_r17(Encoder& enc, const CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group2_r17& value)
 {
-    (void)value;
     Encode_CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group2_r17_NrOfAntennaPorts(enc, value.nrOfAntennaPorts);
     return enc.Error();
 }
@@ -2645,7 +2626,6 @@ void Free_CodebookConfig_r17_CodebookType_Type1_TypeI_SinglePanel_Group2_r17(Cod
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_r17_CodebookType_Type1(Encoder& enc, const CodebookConfig_r17_CodebookType_Type1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_typeI_SinglePanel_Group1_r17);
     enc.WriteBit(value.has_typeI_SinglePanel_Group2_r17);
     enc.WriteBit(value.has_typeI_SinglePanel_ri_RestrictionSTRP_r17);
@@ -2734,7 +2714,6 @@ void Free_CodebookConfig_r17_CodebookType_Type1(CodebookConfig_r17_CodebookType_
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_r17_CodebookType_Type2_TypeII_PortSelection_r17(Encoder& enc, const CodebookConfig_r17_CodebookType_Type2_TypeII_PortSelection_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_valueOfN_r17);
     enc.WriteBit(value.has_numberOfPMI_SubbandsPerCQI_Subband_r17);
     enc.WriteConstrainedInteger((std::int64_t)(value.paramCombination_r17), 1, 8);
@@ -2805,7 +2784,6 @@ void Free_CodebookConfig_r17_CodebookType_Type2_TypeII_PortSelection_r17(Codeboo
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_r17_CodebookType_Type2(Encoder& enc, const CodebookConfig_r17_CodebookType_Type2& value)
 {
-    (void)value;
     Encode_CodebookConfig_r17_CodebookType_Type2_TypeII_PortSelection_r17(enc, value.typeII_PortSelection_r17);
     return enc.Error();
 }
@@ -2901,7 +2879,6 @@ void Free_CodebookConfig_r17_CodebookType(CodebookConfig_r17_CodebookType& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_r17(Encoder& enc, const CodebookConfig_r17& value)
 {
-    (void)value;
     Encode_CodebookConfig_r17_CodebookType(enc, value.codebookType);
     return enc.Error();
 }
@@ -2933,7 +2910,6 @@ void Free_CodebookConfig_r17(CodebookConfig_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_v1730_CodebookType_Type1(Encoder& enc, const CodebookConfig_v1730_CodebookType_Type1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_codebookMode);
     if (value.has_codebookMode) {
         enc.WriteConstrainedInteger((std::int64_t)(value.codebookMode), 1, 2);
@@ -3022,7 +2998,6 @@ void Free_CodebookConfig_v1730_CodebookType(CodebookConfig_v1730_CodebookType& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_v1730(Encoder& enc, const CodebookConfig_v1730& value)
 {
-    (void)value;
     Encode_CodebookConfig_v1730_CodebookType(enc, value.codebookType);
     return enc.Error();
 }
@@ -3054,7 +3029,6 @@ void Free_CodebookConfig_v1730(CodebookConfig_v1730& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_r18_CodebookType_Type2_TypeII_CJT_r18(Encoder& enc, const CodebookConfig_r18_CodebookType_Type2_TypeII_CJT_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_valueOfO3_r18);
 enc.WriteConstrainedLength(value.n1_n2_codebookSubsetRestrictionList_r18_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.n1_n2_codebookSubsetRestrictionList_r18_count; ++i) {
@@ -3181,7 +3155,6 @@ void Free_CodebookConfig_r18_CodebookType_Type2_TypeII_CJT_r18(CodebookConfig_r1
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_r18_CodebookType_Type2_TypeII_CJT_PortSelection_r18(Encoder& enc, const CodebookConfig_r18_CodebookType_Type2_TypeII_CJT_PortSelection_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_valueOfO3_r18);
     enc.WriteBit(value.has_valueOfN_CJT_r18);
     enc.WriteConstrainedInteger((std::int64_t)(value.paramCombination_CJT_PS_r18), 1, 5);
@@ -3534,7 +3507,6 @@ void Free_CBSR_r18(CBSR_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_TD_DD_Config_r18(Encoder& enc, const TD_DD_Config_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_unitDurationDD_r18);
     enc.WriteBit(value.has_aperiodicResourceOffset_r18);
     enc.WriteBit(value.has_tdCQI_r18);
@@ -3606,7 +3578,6 @@ void Free_TD_DD_Config_r18(TD_DD_Config_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_r18_CodebookType_Type2_TypeII_Doppler_r18(Encoder& enc, const CodebookConfig_r18_CodebookType_Type2_TypeII_Doppler_r18& value)
 {
-    (void)value;
     Encode_CBSR_r18(enc, value.n1_n2_codebookSubsetRestriction_r18);
     enc.WriteConstrainedInteger((std::int64_t)(value.paramCombination_Doppler_r18), 1, 9);
     Encode_TD_DD_Config_r18(enc, value.td_dd_config_r18);
@@ -3673,7 +3644,6 @@ void Free_CodebookConfig_r18_CodebookType_Type2_TypeII_Doppler_r18(CodebookConfi
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_r18_CodebookType_Type2_TypeII_DopplerPortSelection_r18(Encoder& enc, const CodebookConfig_r18_CodebookType_Type2_TypeII_DopplerPortSelection_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_valueOfN_Doppler_r18);
     enc.WriteConstrainedInteger((std::int64_t)(value.paramCombinationDoppler_PS_r18), 1, 8);
     Encode_TD_DD_Config_r18(enc, value.td_dd_config_r18);
@@ -3881,7 +3851,6 @@ void Free_CodebookConfig_r18_CodebookType(CodebookConfig_r18_CodebookType& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_CodebookConfig_r18(Encoder& enc, const CodebookConfig_r18& value)
 {
-    (void)value;
     Encode_CodebookConfig_r18_CodebookType(enc, value.codebookType);
     return enc.Error();
 }
@@ -3913,7 +3882,6 @@ void Free_CodebookConfig_r18(CodebookConfig_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CondReconfigToAddMod_r16_ExtGroup1(Encoder& enc, const CondReconfigToAddMod_r16_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.condExecutionCondSCG_r17 != nullptr);
     if (value.condExecutionCondSCG_r17 != nullptr) {
         if (value.condExecutionCondSCG_r17 == nullptr) {
@@ -3982,7 +3950,6 @@ void Free_CondReconfigToAddMod_r16_ExtGroup1(CondReconfigToAddMod_r16_ExtGroup1&
 // --------------------------------------------------------------------------
 ErrorCode Encode_CondExecutionCondToAddModList_r18(Encoder& enc, const CondExecutionCondToAddModList_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_CondExecutionCondToAddMod_r18(enc, value.items[i]);
@@ -4031,7 +3998,6 @@ void Free_CondExecutionCondToAddModList_r18(CondExecutionCondToAddModList_r18& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_CondExecutionCondToReleaseList_r18(Encoder& enc, const CondExecutionCondToReleaseList_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 1, 8);
@@ -4081,7 +4047,6 @@ void Free_CondExecutionCondToReleaseList_r18(CondExecutionCondToReleaseList_r18&
 // --------------------------------------------------------------------------
 ErrorCode Encode_SubsequentCondReconfig_r18(Encoder& enc, const SubsequentCondReconfig_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_condExecutionCondToReleaseList_r18);
@@ -4139,7 +4104,6 @@ void Free_SubsequentCondReconfig_r18(SubsequentCondReconfig_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CondReconfigToAddMod_r16_ExtGroup2(Encoder& enc, const CondReconfigToAddMod_r16_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_condExecutionCondPSCell_r18);
     enc.WriteBit(value.has_subsequentCondReconfig_r18);
     enc.WriteBit(value.has_securityCellSetId_r18);
@@ -4236,7 +4200,6 @@ void Free_CondReconfigToAddMod_r16_ExtGroup2(CondReconfigToAddMod_r16_ExtGroup2&
 // --------------------------------------------------------------------------
 ErrorCode Encode_CondReconfigToAddMod_r16(Encoder& enc, const CondReconfigToAddMod_r16& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_condExecutionCond_r16);
@@ -4411,7 +4374,6 @@ void Free_CondReconfigToAddMod_r16(CondReconfigToAddMod_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CondReconfigExecCondSCG_r17(Encoder& enc, const CondReconfigExecCondSCG_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 2u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 1, 64);
@@ -4461,7 +4423,6 @@ void Free_CondReconfigExecCondSCG_r17(CondReconfigExecCondSCG_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CondExecutionCondToAddMod_r18(Encoder& enc, const CondExecutionCondToAddMod_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_subsequentCondExecutionCond_r18);
@@ -4577,7 +4538,6 @@ void Free_CondExecutionCondToAddMod_r18(CondExecutionCondToAddMod_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SK_CounterConfig_r18(Encoder& enc, const SK_CounterConfig_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.securityCellSetId_r18), 1, 9);
 enc.WriteConstrainedLength(value.sk_CounterList_r18_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.sk_CounterList_r18_count; ++i) {
@@ -4637,7 +4597,6 @@ void Free_SK_CounterConfig_r18(SK_CounterConfig_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CG_COT_Sharing_r16_Cot_Sharing_r16(Encoder& enc, const CG_COT_Sharing_r16_Cot_Sharing_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.duration_r16), 1, 39);
     enc.WriteConstrainedInteger((std::int64_t)(value.offset_r16), 1, 39);
     enc.WriteConstrainedInteger((std::int64_t)(value.channelAccessPriority_r16), 1, 4);
@@ -4745,7 +4704,6 @@ void Free_CG_COT_Sharing_r16(CG_COT_Sharing_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CG_COT_Sharing_r17_Cot_Sharing_r17(Encoder& enc, const CG_COT_Sharing_r17_Cot_Sharing_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.duration_r17), 1, 319);
     enc.WriteConstrainedInteger((std::int64_t)(value.offset_r17), 1, 319);
     return enc.Error();
@@ -4847,7 +4805,6 @@ void Free_CG_COT_Sharing_r17(CG_COT_Sharing_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_AperiodicTriggerState_ExtGroup1(Encoder& enc, const CSI_AperiodicTriggerState_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ap_CSI_MultiplexingMode_r17);
     if (value.has_ap_CSI_MultiplexingMode_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.ap_CSI_MultiplexingMode_r17), 0, 0);
@@ -4885,7 +4842,6 @@ void Free_CSI_AperiodicTriggerState_ExtGroup1(CSI_AperiodicTriggerState_ExtGroup
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_AperiodicTriggerState_ExtGroup2(Encoder& enc, const CSI_AperiodicTriggerState_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ltm_AssociatedReportConfigInfo_r18);
     if (value.has_ltm_AssociatedReportConfigInfo_r18) {
         enc.WriteConstrainedInteger((std::int64_t)(value.ltm_AssociatedReportConfigInfo_r18), 0, 47);
@@ -4925,7 +4881,6 @@ void Free_CSI_AperiodicTriggerState_ExtGroup2(CSI_AperiodicTriggerState_ExtGroup
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_AperiodicTriggerState(Encoder& enc, const CSI_AperiodicTriggerState& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
 enc.WriteConstrainedLength(value.associatedReportConfigInfoList_count, 0u, 0u);
@@ -5044,7 +4999,6 @@ void Free_CSI_AperiodicTriggerState(CSI_AperiodicTriggerState& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_AssociatedReportConfigInfo_ExtGroup1_ResourcesForChannel2_r17_Nzp_CSI_RS2_r17(Encoder& enc, const CSI_AssociatedReportConfigInfo_ExtGroup1_ResourcesForChannel2_r17_Nzp_CSI_RS2_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_qcl_info2_r17);
     enc.WriteConstrainedInteger((std::int64_t)(value.resourceSet2_r17), 1, 16);
     if (value.has_qcl_info2_r17) {
@@ -5176,7 +5130,6 @@ void Free_CSI_AssociatedReportConfigInfo_ExtGroup1_ResourcesForChannel2_r17(CSI_
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_AssociatedReportConfigInfo_ExtGroup1(Encoder& enc, const CSI_AssociatedReportConfigInfo_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_resourcesForChannel2_r17);
     enc.WriteBit(value.has_csi_SSB_ResourceSetExt);
     if (value.has_resourcesForChannel2_r17) {
@@ -5228,7 +5181,6 @@ void Free_CSI_AssociatedReportConfigInfo_ExtGroup1(CSI_AssociatedReportConfigInf
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportSubConfigTriggerList_r18(Encoder& enc, const CSI_ReportSubConfigTriggerList_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 7);
@@ -5278,7 +5230,6 @@ void Free_CSI_ReportSubConfigTriggerList_r18(CSI_ReportSubConfigTriggerList_r18&
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_AssociatedReportConfigInfo_ExtGroup2_ResourcesForChannelTDCP_r18(Encoder& enc, const CSI_AssociatedReportConfigInfo_ExtGroup2_ResourcesForChannelTDCP_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_resourceSet3TDCP_r18);
     enc.WriteConstrainedInteger((std::int64_t)(value.resourceSet2TDCP_r18), 1, 16);
     if (value.has_resourceSet3TDCP_r18) {
@@ -5324,7 +5275,6 @@ void Free_CSI_AssociatedReportConfigInfo_ExtGroup2_ResourcesForChannelTDCP_r18(C
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_AssociatedReportConfigInfo_ExtGroup2_ApplyIndicatedTCI_State_r18_PerResource_r18(Encoder& enc, const CSI_AssociatedReportConfigInfo_ExtGroup2_ApplyIndicatedTCI_State_r18_PerResource_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 1);
@@ -5439,7 +5389,6 @@ void Free_CSI_AssociatedReportConfigInfo_ExtGroup2_ApplyIndicatedTCI_State_r18(C
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_AssociatedReportConfigInfo_ExtGroup2_ApplyIndicatedTCI_State2_r18_PerResource_r18(Encoder& enc, const CSI_AssociatedReportConfigInfo_ExtGroup2_ApplyIndicatedTCI_State2_r18_PerResource_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 16u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 1);
@@ -5554,7 +5503,6 @@ void Free_CSI_AssociatedReportConfigInfo_ExtGroup2_ApplyIndicatedTCI_State2_r18(
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_AssociatedReportConfigInfo_ExtGroup2(Encoder& enc, const CSI_AssociatedReportConfigInfo_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_resourcesForChannelTDCP_r18);
     enc.WriteBit(value.has_applyIndicatedTCI_State_r18);
     enc.WriteBit(value.has_applyIndicatedTCI_State2_r18);
@@ -5629,7 +5577,6 @@ void Free_CSI_AssociatedReportConfigInfo_ExtGroup2(CSI_AssociatedReportConfigInf
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_AssociatedReportConfigInfo_ResourcesForChannel_Nzp_CSI_RS(Encoder& enc, const CSI_AssociatedReportConfigInfo_ResourcesForChannel_Nzp_CSI_RS& value)
 {
-    (void)value;
     enc.WriteBit(value.has_qcl_info);
     enc.WriteConstrainedInteger((std::int64_t)(value.resourceSet), 1, 16);
     if (value.has_qcl_info) {
@@ -5761,7 +5708,6 @@ void Free_CSI_AssociatedReportConfigInfo_ResourcesForChannel(CSI_AssociatedRepor
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_AssociatedReportConfigInfo(Encoder& enc, const CSI_AssociatedReportConfigInfo& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_csi_IM_ResourcesForInterference);
@@ -5891,7 +5837,6 @@ void Free_CSI_AssociatedReportConfigInfo(CSI_AssociatedReportConfigInfo& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_FrequencyOccupation(Encoder& enc, const CSI_FrequencyOccupation& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.startingRB), 0, 274);
@@ -6124,7 +6069,6 @@ void Free_CSI_ResourcePeriodicityAndOffset(CSI_ResourcePeriodicityAndOffset& val
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_IM_Resource_Csi_IM_ResourceElementPattern_Pattern0(Encoder& enc, const CSI_IM_Resource_Csi_IM_ResourceElementPattern_Pattern0& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.subcarrierLocation_p0), 0, 5);
     enc.WriteConstrainedInteger((std::int64_t)(value.symbolLocation_p0), 0, 12);
     return enc.Error();
@@ -6163,7 +6107,6 @@ void Free_CSI_IM_Resource_Csi_IM_ResourceElementPattern_Pattern0(CSI_IM_Resource
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_IM_Resource_Csi_IM_ResourceElementPattern_Pattern1(Encoder& enc, const CSI_IM_Resource_Csi_IM_ResourceElementPattern_Pattern1& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.subcarrierLocation_p1), 0, 2);
     enc.WriteConstrainedInteger((std::int64_t)(value.symbolLocation_p1), 0, 13);
     return enc.Error();
@@ -6266,7 +6209,6 @@ void Free_CSI_IM_Resource_Csi_IM_ResourceElementPattern(CSI_IM_Resource_Csi_IM_R
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_IM_Resource(Encoder& enc, const CSI_IM_Resource& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_csi_IM_ResourceElementPattern);
@@ -6342,7 +6284,6 @@ void Free_CSI_IM_Resource(CSI_IM_Resource& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_IM_ResourceSet(Encoder& enc, const CSI_IM_ResourceSet& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.csi_IM_ResourceSetId), 0, 63);
@@ -6409,7 +6350,6 @@ void Free_CSI_IM_ResourceSet(CSI_IM_ResourceSet& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfig_ExtGroup1_SemiPersistentOnPUSCH_v1530(Encoder& enc, const CSI_ReportConfig_ExtGroup1_SemiPersistentOnPUSCH_v1530& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.reportSlotConfig_v1530), 0, 2);
     return enc.Error();
 }
@@ -6442,7 +6382,6 @@ void Free_CSI_ReportConfig_ExtGroup1_SemiPersistentOnPUSCH_v1530(CSI_ReportConfi
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfig_ExtGroup1(Encoder& enc, const CSI_ReportConfig_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_semiPersistentOnPUSCH_v1530);
     if (value.has_semiPersistentOnPUSCH_v1530) {
         Encode_CSI_ReportConfig_ExtGroup1_SemiPersistentOnPUSCH_v1530(enc, value.semiPersistentOnPUSCH_v1530);
@@ -6481,7 +6420,6 @@ void Free_CSI_ReportConfig_ExtGroup1(CSI_ReportConfig_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfig_ExtGroup2_SemiPersistentOnPUSCH_v1610(Encoder& enc, const CSI_ReportConfig_ExtGroup2_SemiPersistentOnPUSCH_v1610& value)
 {
-    (void)value;
     enc.WriteBit(value.has_reportSlotOffsetListDCI_0_2_r16);
     enc.WriteBit(value.has_reportSlotOffsetListDCI_0_1_r16);
     if (value.has_reportSlotOffsetListDCI_0_2_r16) {
@@ -6576,7 +6514,6 @@ void Free_CSI_ReportConfig_ExtGroup2_SemiPersistentOnPUSCH_v1610(CSI_ReportConfi
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfig_ExtGroup2_Aperiodic_v1610(Encoder& enc, const CSI_ReportConfig_ExtGroup2_Aperiodic_v1610& value)
 {
-    (void)value;
     enc.WriteBit(value.has_reportSlotOffsetListDCI_0_2_r16);
     enc.WriteBit(value.has_reportSlotOffsetListDCI_0_1_r16);
     if (value.has_reportSlotOffsetListDCI_0_2_r16) {
@@ -6733,7 +6670,6 @@ void Free_CSI_ReportConfig_ExtGroup2_ReportQuantity_r16(CSI_ReportConfig_ExtGrou
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfig_ExtGroup2(Encoder& enc, const CSI_ReportConfig_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_semiPersistentOnPUSCH_v1610);
     enc.WriteBit(value.has_aperiodic_v1610);
     enc.WriteBit(value.has_reportQuantity_r16);
@@ -6808,7 +6744,6 @@ void Free_CSI_ReportConfig_ExtGroup2(CSI_ReportConfig_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfig_ExtGroup3_GroupBasedBeamReporting_v1710(Encoder& enc, const CSI_ReportConfig_ExtGroup3_GroupBasedBeamReporting_v1710& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.nrofReportedGroups_r17), 0, 3);
     return enc.Error();
 }
@@ -6921,7 +6856,6 @@ void Free_CSI_ReportConfig_ExtGroup3_ReportQuantity_r17(CSI_ReportConfig_ExtGrou
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfig_ExtGroup3(Encoder& enc, const CSI_ReportConfig_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_cqi_BitsPerSubband_r17);
     enc.WriteBit(value.has_groupBasedBeamReporting_v1710);
     enc.WriteBit(value.has_codebookConfig_r17);
@@ -7032,7 +6966,6 @@ void Free_CSI_ReportConfig_ExtGroup3(CSI_ReportConfig_ExtGroup3& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfig_ExtGroup4_SemiPersistentOnPUSCH_v1720(Encoder& enc, const CSI_ReportConfig_ExtGroup4_SemiPersistentOnPUSCH_v1720& value)
 {
-    (void)value;
     enc.WriteBit(value.has_reportSlotOffsetList_r17);
     enc.WriteBit(value.has_reportSlotOffsetListDCI_0_2_r17);
     enc.WriteBit(value.has_reportSlotOffsetListDCI_0_1_r17);
@@ -7161,7 +7094,6 @@ void Free_CSI_ReportConfig_ExtGroup4_SemiPersistentOnPUSCH_v1720(CSI_ReportConfi
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfig_ExtGroup4_Aperiodic_v1720(Encoder& enc, const CSI_ReportConfig_ExtGroup4_Aperiodic_v1720& value)
 {
-    (void)value;
     enc.WriteBit(value.has_reportSlotOffsetList_r17);
     enc.WriteBit(value.has_reportSlotOffsetListDCI_0_2_r17);
     enc.WriteBit(value.has_reportSlotOffsetListDCI_0_1_r17);
@@ -7290,7 +7222,6 @@ void Free_CSI_ReportConfig_ExtGroup4_Aperiodic_v1720(CSI_ReportConfig_ExtGroup4_
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfig_ExtGroup4(Encoder& enc, const CSI_ReportConfig_ExtGroup4& value)
 {
-    (void)value;
     enc.WriteBit(value.has_semiPersistentOnPUSCH_v1720);
     enc.WriteBit(value.has_aperiodic_v1720);
     if (value.has_semiPersistentOnPUSCH_v1720) {
@@ -7341,7 +7272,6 @@ void Free_CSI_ReportConfig_ExtGroup4(CSI_ReportConfig_ExtGroup4& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_TDCP_r18(Encoder& enc, const TDCP_r18& value)
 {
-    (void)value;
     enc.WriteBit(value.has_phaseReporting_r18);
 enc.WriteConstrainedLength(value.delayDSetofLengthY_r18_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.delayDSetofLengthY_r18_count; ++i) {
@@ -7406,7 +7336,6 @@ void Free_TDCP_r18(TDCP_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfig_ExtGroup6_GroupBasedBeamReporting_v1800(Encoder& enc, const CSI_ReportConfig_ExtGroup6_GroupBasedBeamReporting_v1800& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.reportingMode_r18), 0, 1);
     return enc.Error();
 }
@@ -7439,7 +7368,6 @@ void Free_CSI_ReportConfig_ExtGroup6_GroupBasedBeamReporting_v1800(CSI_ReportCon
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfig_ExtGroup6(Encoder& enc, const CSI_ReportConfig_ExtGroup6& value)
 {
-    (void)value;
     enc.WriteBit(value.has_groupBasedBeamReporting_v1800);
     enc.WriteBit(value.has_reportQuantity_r18);
     enc.WriteBit(value.has_codebookConfig_r18);
@@ -7569,7 +7497,6 @@ void Free_CSI_ReportConfig_ExtGroup6(CSI_ReportConfig_ExtGroup6& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfig_ExtGroup5(Encoder& enc, const CSI_ReportConfig_ExtGroup5& value)
 {
-    (void)value;
     enc.WriteBit(value.has_codebookConfig_v1730);
     if (value.has_codebookConfig_v1730) {
         Encode_CodebookConfig_v1730(enc, value.codebookConfig_v1730);
@@ -7762,7 +7689,6 @@ void Free_CSI_ReportPeriodicityAndOffset(CSI_ReportPeriodicityAndOffset& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfigType_Periodic(Encoder& enc, const CSI_ReportConfigType_Periodic& value)
 {
-    (void)value;
     Encode_CSI_ReportPeriodicityAndOffset(enc, value.reportSlotConfig);
 enc.WriteConstrainedLength(value.pucch_CSI_ResourceList_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.pucch_CSI_ResourceList_count; ++i) {
@@ -7820,7 +7746,6 @@ void Free_CSI_ReportConfigType_Periodic(CSI_ReportConfigType_Periodic& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfigType_SemiPersistentOnPUCCH(Encoder& enc, const CSI_ReportConfigType_SemiPersistentOnPUCCH& value)
 {
-    (void)value;
     Encode_CSI_ReportPeriodicityAndOffset(enc, value.reportSlotConfig);
 enc.WriteConstrainedLength(value.pucch_CSI_ResourceList_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.pucch_CSI_ResourceList_count; ++i) {
@@ -7878,7 +7803,6 @@ void Free_CSI_ReportConfigType_SemiPersistentOnPUCCH(CSI_ReportConfigType_SemiPe
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfigType_SemiPersistentOnPUSCH(Encoder& enc, const CSI_ReportConfigType_SemiPersistentOnPUSCH& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.reportSlotConfig), 0, 6);
 enc.WriteConstrainedLength(value.reportSlotOffsetList_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.reportSlotOffsetList_count; ++i) {
@@ -7944,7 +7868,6 @@ void Free_CSI_ReportConfigType_SemiPersistentOnPUSCH(CSI_ReportConfigType_SemiPe
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfigType_Aperiodic(Encoder& enc, const CSI_ReportConfigType_Aperiodic& value)
 {
-    (void)value;
 enc.WriteConstrainedLength(value.reportSlotOffsetList_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.reportSlotOffsetList_count; ++i) {
     enc.WriteConstrainedInteger((std::int64_t)(value.reportSlotOffsetList_items[i]), 0, 32);
@@ -8082,7 +8005,6 @@ void Free_CSI_ReportConfigType(CSI_ReportConfigType& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfig_ReportQuantity_Cri_RI_i1_CQI(Encoder& enc, const CSI_ReportConfig_ReportQuantity_Cri_RI_i1_CQI& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pdsch_BundleSizeForCSI);
     if (value.has_pdsch_BundleSizeForCSI) {
         enc.WriteConstrainedInteger((std::int64_t)(value.pdsch_BundleSizeForCSI), 0, 1);
@@ -8584,7 +8506,6 @@ void Free_CSI_ReportConfig_ReportFreqConfiguration_Csi_ReportingBand(CSI_ReportC
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfig_ReportFreqConfiguration(Encoder& enc, const CSI_ReportConfig_ReportFreqConfiguration& value)
 {
-    (void)value;
     enc.WriteBit(value.has_cqi_FormatIndicator);
     enc.WriteBit(value.has_pmi_FormatIndicator);
     enc.WriteBit(value.has_csi_ReportingBand);
@@ -8649,7 +8570,6 @@ void Free_CSI_ReportConfig_ReportFreqConfiguration(CSI_ReportConfig_ReportFreqCo
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfig_GroupBasedBeamReporting_Disabled(Encoder& enc, const CSI_ReportConfig_GroupBasedBeamReporting_Disabled& value)
 {
-    (void)value;
     enc.WriteBit(value.has_nrofReportedRS);
     if (value.has_nrofReportedRS) {
         enc.WriteConstrainedInteger((std::int64_t)(value.nrofReportedRS), 0, 3);
@@ -8752,7 +8672,6 @@ void Free_CSI_ReportConfig_GroupBasedBeamReporting(CSI_ReportConfig_GroupBasedBe
 // --------------------------------------------------------------------------
 ErrorCode Encode_CSI_ReportConfig(Encoder& enc, const CSI_ReportConfig& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3 || value.has_extGroup4 || value.has_extGroup5 || value.has_extGroup6;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_carrier);
@@ -9104,7 +9023,6 @@ void Free_CSI_ReportConfig(CSI_ReportConfig& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PortIndexFor8Ranks_PortIndex8(Encoder& enc, const PortIndexFor8Ranks_PortIndex8& value)
 {
-    (void)value;
     enc.WriteBit(value.has_rank1_8);
     enc.WriteBit(value.has_rank2_8);
     enc.WriteBit(value.has_rank3_8);
@@ -9382,7 +9300,6 @@ void Free_PortIndexFor8Ranks_PortIndex8(PortIndexFor8Ranks_PortIndex8& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PortIndexFor8Ranks_PortIndex4(Encoder& enc, const PortIndexFor8Ranks_PortIndex4& value)
 {
-    (void)value;
     enc.WriteBit(value.has_rank1_4);
     enc.WriteBit(value.has_rank2_4);
     enc.WriteBit(value.has_rank3_4);
@@ -9524,7 +9441,6 @@ void Free_PortIndexFor8Ranks_PortIndex4(PortIndexFor8Ranks_PortIndex4& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PortIndexFor8Ranks_PortIndex2(Encoder& enc, const PortIndexFor8Ranks_PortIndex2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_rank1_2);
     enc.WriteBit(value.has_rank2_2);
     if (value.has_rank1_2) {

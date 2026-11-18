@@ -341,7 +341,9 @@ class CodecEmitter:
         additions: List[Addition],
     ) -> List[str]:
         lines = [f"ErrorCode Encode_{name}(Encoder& enc, const {name}& value)", "{"]
-        lines.append("    (void)value;")
+        if not root_fields and not additions:
+            # 无任何字段（含扩展添加项）时 value 不被读取，抑制未使用参数告警。
+            lines.append("    (void)value;")
         any_extension = ""
         if extensible:
             if additions:
@@ -1520,7 +1522,6 @@ class CodecEmitter:
         lines: List[str] = []
         # encode
         lines.extend([f"ErrorCode Encode_{name}(Encoder& enc, const {name}& value)", "{"])
-        lines.append("    (void)value;")
         if struct.size_fixed:
             lines.append(f"    if ({count} != {struct.size_lb}u) {{")
             lines.append("        enc.Fail(ErrorCode_ValueOutOfRange);")

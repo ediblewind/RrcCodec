@@ -24,7 +24,6 @@ namespace v1810 {
 // --------------------------------------------------------------------------
 ErrorCode Encode_SI_RequestConfigRepetition_r18(Encoder& enc, const SI_RequestConfigRepetition_r18& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_rach_OccasionsSI_r18);
@@ -169,7 +168,6 @@ void Free_SI_RequestConfigRepetition_r18(SI_RequestConfigRepetition_r18& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SI_SchedulingInfo_v1800(Encoder& enc, const SI_SchedulingInfo_v1800& value)
 {
-    (void)value;
     enc.WriteBit(value.has_si_RequestConfigMSG1_Repetition_r18);
     enc.WriteBit(value.has_si_RequestConfigRedCap_MSG1_Repetition_r18);
     enc.WriteBit(value.has_si_RequestConfigSUL_MSG1_Repetition_r18);
@@ -232,7 +230,6 @@ void Free_SI_SchedulingInfo_v1800(SI_SchedulingInfo_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB1_v1800_IEs_FeaturePriorities_v1800(Encoder& enc, const SIB1_v1800_IEs_FeaturePriorities_v1800& value)
 {
-    (void)value;
     enc.WriteBit(value.has_msg1_Repetitions_Priority_r18);
     enc.WriteBit(value.has_eRedCapPriority_r18);
     if (value.has_msg1_Repetitions_Priority_r18) {
@@ -306,7 +303,6 @@ void Free_SIB1_v1800_IEs_NonCriticalExtension(SIB1_v1800_IEs_NonCriticalExtensio
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB1_v1800_IEs(Encoder& enc, const SIB1_v1800_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ncr_Support_r18);
     enc.WriteBit(value.has_mt_SDT_ConfigCommonSIB_r18);
     enc.WriteBit(value.has_musim_CapRestrictionAllowed_r18);
@@ -559,7 +555,6 @@ void Free_SIB1_v1800_IEs(SIB1_v1800_IEs& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SI_RequestConfig_Rach_OccasionsSI(Encoder& enc, const SI_RequestConfig_Rach_OccasionsSI& value)
 {
-    (void)value;
     Encode_RACH_ConfigGeneric(enc, value.rach_ConfigSI);
     enc.WriteConstrainedInteger((std::int64_t)(value.ssb_perRACH_Occasion), 0, 7);
     return enc.Error();
@@ -597,7 +592,6 @@ void Free_SI_RequestConfig_Rach_OccasionsSI(SI_RequestConfig_Rach_OccasionsSI& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_SI_RequestConfig(Encoder& enc, const SI_RequestConfig& value)
 {
-    (void)value;
     enc.WriteBit(value.has_rach_OccasionsSI);
     enc.WriteBit(value.has_si_RequestPeriod);
     if (value.has_rach_OccasionsSI) {
@@ -675,7 +669,6 @@ void Free_SI_RequestConfig(SI_RequestConfig& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SI_SchedulingInfo_v1740(Encoder& enc, const SI_SchedulingInfo_v1740& value)
 {
-    (void)value;
     enc.WriteBit(value.has_si_RequestConfigRedCap_r17);
     if (value.has_si_RequestConfigRedCap_r17) {
         Encode_SI_RequestConfig(enc, value.si_RequestConfigRedCap_r17);
@@ -714,7 +707,6 @@ void Free_SI_SchedulingInfo_v1740(SI_SchedulingInfo_v1740& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB1_v1740_IEs(Encoder& enc, const SIB1_v1740_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_si_SchedulingInfo_v1740);
     enc.WriteBit(value.has_nonCriticalExtension);
     if (value.has_si_SchedulingInfo_v1740) {
@@ -765,7 +757,6 @@ void Free_SIB1_v1740_IEs(SIB1_v1740_IEs& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SDT_ConfigCommonSIB_r17(Encoder& enc, const SDT_ConfigCommonSIB_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sdt_RSRP_Threshold_r17);
     enc.WriteBit(value.has_sdt_LogicalChannelSR_DelayTimer_r17);
     if (value.has_sdt_RSRP_Threshold_r17) {
@@ -830,7 +821,6 @@ void Free_SDT_ConfigCommonSIB_r17(SDT_ConfigCommonSIB_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_RedCap_ConfigCommonSIB_r17_CellBarredRedCap_r17(Encoder& enc, const RedCap_ConfigCommonSIB_r17_CellBarredRedCap_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.cellBarredRedCap1Rx_r17), 0, 1);
     enc.WriteConstrainedInteger((std::int64_t)(value.cellBarredRedCap2Rx_r17), 0, 1);
     return enc.Error();
@@ -869,7 +859,6 @@ void Free_RedCap_ConfigCommonSIB_r17_CellBarredRedCap_r17(RedCap_ConfigCommonSIB
 // --------------------------------------------------------------------------
 ErrorCode Encode_RedCap_ConfigCommonSIB_r17(Encoder& enc, const RedCap_ConfigCommonSIB_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_halfDuplexRedCapAllowed_r17);
@@ -926,7 +915,6 @@ void Free_RedCap_ConfigCommonSIB_r17(RedCap_ConfigCommonSIB_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SI_SchedulingInfo_v1700(Encoder& enc, const SI_SchedulingInfo_v1700& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dummy);
 enc.WriteConstrainedLength(value.schedulingInfoList2_r17_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.schedulingInfoList2_r17_count; ++i) {
@@ -991,7 +979,6 @@ void Free_SI_SchedulingInfo_v1700(SI_SchedulingInfo_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_UAC_BarringInfoSetList_v1700(Encoder& enc, const UAC_BarringInfoSetList_v1700& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_UAC_BarringInfoSet_v1700(enc, value.items[i]);
@@ -1040,7 +1027,6 @@ void Free_UAC_BarringInfoSetList_v1700(UAC_BarringInfoSetList_v1700& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB1_v1700_IEs_Uac_BarringInfo_v1700(Encoder& enc, const SIB1_v1700_IEs_Uac_BarringInfo_v1700& value)
 {
-    (void)value;
     Encode_UAC_BarringInfoSetList_v1700(enc, value.uac_BarringInfoSetList_v1700);
     return enc.Error();
 }
@@ -1072,7 +1058,6 @@ void Free_SIB1_v1700_IEs_Uac_BarringInfo_v1700(SIB1_v1700_IEs_Uac_BarringInfo_v1
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB1_v1700_IEs_FeaturePriorities_r17(Encoder& enc, const SIB1_v1700_IEs_FeaturePriorities_r17& value)
 {
-    (void)value;
     enc.WriteBit(value.has_redCapPriority_r17);
     enc.WriteBit(value.has_slicingPriority_r17);
     enc.WriteBit(value.has_msg3_Repetitions_Priority_r17);
@@ -1151,7 +1136,6 @@ void Free_SIB1_v1700_IEs_FeaturePriorities_r17(SIB1_v1700_IEs_FeaturePriorities_
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB1_v1700_IEs(Encoder& enc, const SIB1_v1700_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_hsdn_Cell_r17);
     enc.WriteBit(value.has_uac_BarringInfo_v1700);
     enc.WriteBit(value.has_sdt_ConfigCommon_r17);
@@ -1328,7 +1312,6 @@ void Free_SIB1_v1700_IEs(SIB1_v1700_IEs& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB1_v1630_IEs_Uac_BarringInfo_v1630(Encoder& enc, const SIB1_v1630_IEs_Uac_BarringInfo_v1630& value)
 {
-    (void)value;
 enc.WriteConstrainedLength(value.uac_AC1_SelectAssistInfo_r16_count, 0u, 0u);
 for (std::uint32_t i = 0; i < value.uac_AC1_SelectAssistInfo_r16_count; ++i) {
     enc.WriteConstrainedInteger((std::int64_t)(value.uac_AC1_SelectAssistInfo_r16_items[i]), 0, 3);
@@ -1382,7 +1365,6 @@ void Free_SIB1_v1630_IEs_Uac_BarringInfo_v1630(SIB1_v1630_IEs_Uac_BarringInfo_v1
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB1_v1630_IEs(Encoder& enc, const SIB1_v1630_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_uac_BarringInfo_v1630);
     enc.WriteBit(value.has_nonCriticalExtension);
     if (value.has_uac_BarringInfo_v1630) {
@@ -1433,7 +1415,6 @@ void Free_SIB1_v1630_IEs(SIB1_v1630_IEs& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PosSI_SchedulingInfo_r16_ExtGroup2(Encoder& enc, const PosSI_SchedulingInfo_r16_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_posSI_RequestConfigMSG1_Repetition_r18);
     enc.WriteBit(value.has_posSI_RequestConfigSUL_MSG1_Repetition_r18);
     enc.WriteBit(value.has_posSI_RequestConfigRedCap_MSG1_Repetition_r18);
@@ -1496,7 +1477,6 @@ void Free_PosSI_SchedulingInfo_r16_ExtGroup2(PosSI_SchedulingInfo_r16_ExtGroup2&
 // --------------------------------------------------------------------------
 ErrorCode Encode_PosSI_SchedulingInfo_r16_ExtGroup1(Encoder& enc, const PosSI_SchedulingInfo_r16_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_posSI_RequestConfigRedCap_r17);
     if (value.has_posSI_RequestConfigRedCap_r17) {
         Encode_SI_RequestConfig(enc, value.posSI_RequestConfigRedCap_r17);
@@ -1535,7 +1515,6 @@ void Free_PosSI_SchedulingInfo_r16_ExtGroup1(PosSI_SchedulingInfo_r16_ExtGroup1&
 // --------------------------------------------------------------------------
 ErrorCode Encode_PosSI_SchedulingInfo_r16(Encoder& enc, const PosSI_SchedulingInfo_r16& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_posSI_RequestConfig_r16);
@@ -1678,7 +1657,6 @@ void Free_PosSI_SchedulingInfo_r16(PosSI_SchedulingInfo_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SIB1_v1610_IEs(Encoder& enc, const SIB1_v1610_IEs& value)
 {
-    (void)value;
     enc.WriteBit(value.has_idleModeMeasurementsEUTRA_r16);
     enc.WriteBit(value.has_idleModeMeasurementsNR_r16);
     enc.WriteBit(value.has_posSI_SchedulingInfo_r16);
@@ -1751,7 +1729,6 @@ void Free_SIB1_v1610_IEs(SIB1_v1610_IEs& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_NPN_IdentityInfoList_r16(Encoder& enc, const NPN_IdentityInfoList_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 12u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_NPN_IdentityInfo_r16(enc, value.items[i]);
@@ -1800,7 +1777,6 @@ void Free_NPN_IdentityInfoList_r16(NPN_IdentityInfoList_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CellAccessRelatedInfo_ExtGroup1(Encoder& enc, const CellAccessRelatedInfo_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_cellReservedForFutureUse_r16);
     enc.WriteBit(value.has_npn_IdentityInfoList_r16);
     if (value.has_cellReservedForFutureUse_r16) {
@@ -1850,7 +1826,6 @@ void Free_CellAccessRelatedInfo_ExtGroup1(CellAccessRelatedInfo_ExtGroup1& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_CellAccessRelatedInfo_ExtGroup2(Encoder& enc, const CellAccessRelatedInfo_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_snpn_AccessInfoList_r17);
     if (value.has_snpn_AccessInfoList_r17) {
 enc.WriteConstrainedLength(value.snpn_AccessInfoList_r17_count, 0u, 0u);
@@ -1910,7 +1885,6 @@ void Free_CellAccessRelatedInfo_ExtGroup2(CellAccessRelatedInfo_ExtGroup2& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_PLMN_IdentityInfoList(Encoder& enc, const PLMN_IdentityInfoList& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 12u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_PLMN_IdentityInfo(enc, value.items[i]);
@@ -1959,7 +1933,6 @@ void Free_PLMN_IdentityInfoList(PLMN_IdentityInfoList& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_CellAccessRelatedInfo(Encoder& enc, const CellAccessRelatedInfo& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_cellReservedForOtherUse);
@@ -2068,7 +2041,6 @@ void Free_CellAccessRelatedInfo(CellAccessRelatedInfo& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ConnEstFailureControl(Encoder& enc, const ConnEstFailureControl& value)
 {
-    (void)value;
     enc.WriteBit(value.has_connEstFailOffset);
     enc.WriteConstrainedInteger((std::int64_t)(value.connEstFailCount), 0, 3);
     enc.WriteConstrainedInteger((std::int64_t)(value.connEstFailOffsetValidity), 0, 7);
@@ -2120,7 +2092,6 @@ void Free_ConnEstFailureControl(ConnEstFailureControl& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ControlResourceSet_ExtGroup2(Encoder& enc, const ControlResourceSet_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_followUnifiedTCI_State_r17);
     if (value.has_followUnifiedTCI_State_r17) {
         enc.WriteConstrainedInteger((std::int64_t)(value.followUnifiedTCI_State_r17), 0, 0);
@@ -2158,7 +2129,6 @@ void Free_ControlResourceSet_ExtGroup2(ControlResourceSet_ExtGroup2& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ControlResourceSet_ExtGroup3(Encoder& enc, const ControlResourceSet_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_applyIndicatedTCI_State_r18);
     if (value.has_applyIndicatedTCI_State_r18) {
         enc.WriteConstrainedInteger((std::int64_t)(value.applyIndicatedTCI_State_r18), 0, 3);
@@ -2198,7 +2168,6 @@ void Free_ControlResourceSet_ExtGroup3(ControlResourceSet_ExtGroup3& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ControlResourceSet_ExtGroup1(Encoder& enc, const ControlResourceSet_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_rb_Offset_r16);
     enc.WriteBit(value.has_tci_PresentDCI_1_2_r16);
     enc.WriteBit(value.has_coresetPoolIndex_r16);
@@ -2277,7 +2246,6 @@ void Free_ControlResourceSet_ExtGroup1(ControlResourceSet_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_ControlResourceSet_Cce_REG_MappingType_Interleaved(Encoder& enc, const ControlResourceSet_Cce_REG_MappingType_Interleaved& value)
 {
-    (void)value;
     enc.WriteBit(value.has_shiftIndex);
     enc.WriteConstrainedInteger((std::int64_t)(value.reg_BundleSize), 0, 2);
     enc.WriteConstrainedInteger((std::int64_t)(value.interleaverSize), 0, 2);
@@ -2392,7 +2360,6 @@ void Free_ControlResourceSet_Cce_REG_MappingType(ControlResourceSet_Cce_REG_Mapp
 // --------------------------------------------------------------------------
 ErrorCode Encode_ControlResourceSet(Encoder& enc, const ControlResourceSet& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_tci_StatesPDCCH_ToAddList);
@@ -2635,7 +2602,6 @@ void Free_ControlResourceSet(ControlResourceSet& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS15KHZoneT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS15KHZoneT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 139);
@@ -2685,7 +2651,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS15KH
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS30KHZoneT_SCS15KHZhalfT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS30KHZoneT_SCS15KHZhalfT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 279);
@@ -2735,7 +2700,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS30KH
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS60KHZoneT_SCS30KHZhalfT_SCS15KHZquarterT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS60KHZoneT_SCS30KHZhalfT_SCS15KHZquarterT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 559);
@@ -2785,7 +2749,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS60KH
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneT_SCS60KHZhalfT_SCS30KHZq_c04df89c(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneT_SCS60KHZhalfT_SCS30KHZq_c04df89c& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 1119);
@@ -2835,7 +2798,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120K
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZhalfT_SCS60KHZquarterT_SCS30_400ca2d9(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZhalfT_SCS60KHZquarterT_SCS30_400ca2d9& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 2239);
@@ -2885,7 +2847,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120K
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZquarterT_SCS60KHZoneEighthT__0e19d5e0(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZquarterT_SCS60KHZoneEighthT__0e19d5e0& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 4479);
@@ -2935,7 +2896,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120K
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneEighthT_SCS60KHZoneSixteenthT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneEighthT_SCS60KHZoneSixteenthT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 8959);
@@ -2985,7 +2945,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120K
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneSixteenthT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneSixteenthT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 17919);
@@ -3159,7 +3118,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO(PDCCH_C
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup1(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_firstPDCCH_MonitoringOccasionOfPO);
     if (value.has_firstPDCCH_MonitoringOccasionOfPO) {
         Encode_PDCCH_ConfigCommon_ExtGroup1_FirstPDCCH_MonitoringOccasionOfPO(enc, value.firstPDCCH_MonitoringOccasionOfPO);
@@ -3198,7 +3156,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup1(PDCCH_ConfigCommon_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup2(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_commonSearchSpaceListExt_r16);
     if (value.has_commonSearchSpaceListExt_r16) {
 enc.WriteConstrainedLength(value.commonSearchSpaceListExt_r16_count, 0u, 0u);
@@ -3465,7 +3422,6 @@ void Free_SearchSpace_MonitoringSlotPeriodicityAndOffset(SearchSpace_MonitoringS
 // --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpace_NrofCandidates(Encoder& enc, const SearchSpace_NrofCandidates& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.aggregationLevel1), 0, 7);
     enc.WriteConstrainedInteger((std::int64_t)(value.aggregationLevel2), 0, 7);
     enc.WriteConstrainedInteger((std::int64_t)(value.aggregationLevel4), 0, 7);
@@ -3553,7 +3509,6 @@ void Free_SearchSpaceType_Common_Dci_Format0_0_AndFormat1_0(SearchSpaceType_Comm
 // --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceType_Common_Dci_Format2_0_NrofCandidates_SFI(Encoder& enc, const SearchSpaceType_Common_Dci_Format2_0_NrofCandidates_SFI& value)
 {
-    (void)value;
     enc.WriteBit(value.has_aggregationLevel1);
     enc.WriteBit(value.has_aggregationLevel2);
     enc.WriteBit(value.has_aggregationLevel4);
@@ -3645,7 +3600,6 @@ void Free_SearchSpaceType_Common_Dci_Format2_0_NrofCandidates_SFI(SearchSpaceTyp
 // --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceType_Common_Dci_Format2_0(Encoder& enc, const SearchSpaceType_Common_Dci_Format2_0& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     Encode_SearchSpaceType_Common_Dci_Format2_0_NrofCandidates_SFI(enc, value.nrofCandidates_SFI);
@@ -3746,7 +3700,6 @@ void Free_SearchSpaceType_Common_Dci_Format2_2(SearchSpaceType_Common_Dci_Format
 // --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceType_Common_Dci_Format2_3(Encoder& enc, const SearchSpaceType_Common_Dci_Format2_3& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_dummy1);
@@ -3799,7 +3752,6 @@ void Free_SearchSpaceType_Common_Dci_Format2_3(SearchSpaceType_Common_Dci_Format
 // --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceType_Common(Encoder& enc, const SearchSpaceType_Common& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dci_Format0_0_AndFormat1_0);
     enc.WriteBit(value.has_dci_Format2_0);
     enc.WriteBit(value.has_dci_Format2_1);
@@ -3886,7 +3838,6 @@ void Free_SearchSpaceType_Common(SearchSpaceType_Common& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceType_Ue_Specific_ExtGroup1(Encoder& enc, const SearchSpaceType_Ue_Specific_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dci_Formats_MT_r16);
     enc.WriteBit(value.has_dci_FormatsSL_r16);
     enc.WriteBit(value.has_dci_FormatsExt_r16);
@@ -3950,7 +3901,6 @@ void Free_SearchSpaceType_Ue_Specific_ExtGroup1(SearchSpaceType_Ue_Specific_ExtG
 // --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceType_Ue_Specific_ExtGroup2(Encoder& enc, const SearchSpaceType_Ue_Specific_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_dci_FormatsMC);
     enc.WriteBit(value.has_dci_FormatsNCR_r18);
     if (value.has_dci_FormatsMC) {
@@ -4001,7 +3951,6 @@ void Free_SearchSpaceType_Ue_Specific_ExtGroup2(SearchSpaceType_Ue_Specific_ExtG
 // --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpaceType_Ue_Specific(Encoder& enc, const SearchSpaceType_Ue_Specific& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.dci_Formats), 0, 1);
@@ -4164,7 +4113,6 @@ void Free_SearchSpaceType(SearchSpaceType& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SearchSpace(Encoder& enc, const SearchSpace& value)
 {
-    (void)value;
     enc.WriteBit(value.has_controlResourceSetId);
     enc.WriteBit(value.has_monitoringSlotPeriodicityAndOffset);
     enc.WriteBit(value.has_duration);
@@ -4343,7 +4291,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Sdt_SearchSpace_r17(PDCCH_ConfigCommon_Ex
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneEighthT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneEighthT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 35839);
@@ -4393,7 +4340,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710_S
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneSixteenthT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneSixteenthT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 71679);
@@ -4507,7 +4453,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_FirstPDCCH_MonitoringOccasionOfPO_v1710(P
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS15KHZoneT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS15KHZoneT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 139);
@@ -4557,7 +4502,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS30KHZoneT_SCS15KHZhalfT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS30KHZoneT_SCS15KHZhalfT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 279);
@@ -4607,7 +4551,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS60KHZoneT_e6741208(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS60KHZoneT_e6741208& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 559);
@@ -4657,7 +4600,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS120KHZone_26de7ad4(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS120KHZone_26de7ad4& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 1119);
@@ -4707,7 +4649,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS120KHZhal_fdd06d92(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS120KHZhal_fdd06d92& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 2239);
@@ -4757,7 +4698,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZone_fa6dd3e5(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZone_fa6dd3e5& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 4479);
@@ -4807,7 +4747,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZhal_10d37c5c(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZhal_10d37c5c& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 8959);
@@ -4857,7 +4796,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZqua_a3381043(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZqua_a3381043& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 17919);
@@ -4907,7 +4845,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZoneEighthT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZoneEighthT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 35839);
@@ -4957,7 +4894,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZoneSixteenthT(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17_SCS480KHZoneSixteenthT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 71679);
@@ -5151,7 +5087,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOc
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.pei_SearchSpace_r17), 0, 39);
     Encode_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17_FirstPDCCH_MonitoringOccasionOfPEI_O_r17(enc, value.firstPDCCH_MonitoringOccasionOfPEI_O_r17);
     return enc.Error();
@@ -5189,7 +5124,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup3_Pei_ConfigBWP_r17(PDCCH_ConfigCommon_ExtG
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup3(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup3& value)
 {
-    (void)value;
     enc.WriteBit(value.has_sdt_SearchSpace_r17);
     enc.WriteBit(value.has_searchSpaceMCCH_r17);
     enc.WriteBit(value.has_searchSpaceMTCH_r17);
@@ -5311,7 +5245,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup3(PDCCH_ConfigCommon_ExtGroup3& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup4(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup4& value)
 {
-    (void)value;
     enc.WriteBit(value.has_followUnifiedTCI_State_v1720);
     if (value.has_followUnifiedTCI_State_v1720) {
         enc.WriteConstrainedInteger((std::int64_t)(value.followUnifiedTCI_State_v1720), 0, 0);
@@ -5349,7 +5282,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup4(PDCCH_ConfigCommon_ExtGroup4& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon_ExtGroup5(Encoder& enc, const PDCCH_ConfigCommon_ExtGroup5& value)
 {
-    (void)value;
     enc.WriteBit(value.has_applyIndicatedTCI_State_r18);
     enc.WriteBit(value.has_commonSearchSpaceListExt_r18);
     enc.WriteBit(value.has_searchSpaceMulticastMCCH_r18);
@@ -5448,7 +5380,6 @@ void Free_PDCCH_ConfigCommon_ExtGroup5(PDCCH_ConfigCommon_ExtGroup5& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDCCH_ConfigCommon(Encoder& enc, const PDCCH_ConfigCommon& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2 || value.has_extGroup3 || value.has_extGroup4 || value.has_extGroup5;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_controlResourceSetZero);
@@ -5796,7 +5727,6 @@ void Free_SetupRelease_PDCCH_ConfigCommon(SetupRelease_PDCCH_ConfigCommon& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_PDSCH_ConfigCommon(Encoder& enc, const PDSCH_ConfigCommon& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_pdsch_TimeDomainAllocationList);
@@ -5905,7 +5835,6 @@ void Free_SetupRelease_PDSCH_ConfigCommon(SetupRelease_PDSCH_ConfigCommon& value
 // --------------------------------------------------------------------------
 ErrorCode Encode_BWP_DownlinkCommon(Encoder& enc, const BWP_DownlinkCommon& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_pdcch_ConfigCommon);
@@ -5968,7 +5897,6 @@ void Free_BWP_DownlinkCommon(BWP_DownlinkCommon& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SubgroupConfig_r17(Encoder& enc, const SubgroupConfig_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_subgroupsNumForUEID_r17);
@@ -6021,7 +5949,6 @@ void Free_SubgroupConfig_r17(SubgroupConfig_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PEI_Config_r17(Encoder& enc, const PEI_Config_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_lastUsedCellOnly_r17);
@@ -6089,7 +6016,6 @@ void Free_PEI_Config_r17(PEI_Config_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DownlinkConfigCommonSIB_ExtGroup1(Encoder& enc, const DownlinkConfigCommonSIB_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_pei_Config_r17);
     enc.WriteBit(value.has_initialDownlinkBWP_RedCap_r17);
     if (value.has_pei_Config_r17) {
@@ -6140,7 +6066,6 @@ void Free_DownlinkConfigCommonSIB_ExtGroup1(DownlinkConfigCommonSIB_ExtGroup1& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_MultiFrequencyBandListNR_Aerial_SIB_r18(Encoder& enc, const MultiFrequencyBandListNR_Aerial_SIB_r18& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_NR_MultiBandInfoAerial_r18(enc, value.items[i]);
@@ -6189,7 +6114,6 @@ void Free_MultiFrequencyBandListNR_Aerial_SIB_r18(MultiFrequencyBandListNR_Aeria
 // --------------------------------------------------------------------------
 ErrorCode Encode_FrequencyInfoDL_SIB_v1800(Encoder& enc, const FrequencyInfoDL_SIB_v1800& value)
 {
-    (void)value;
     Encode_MultiFrequencyBandListNR_Aerial_SIB_r18(enc, value.frequencyBandListAerial_r18);
     return enc.Error();
 }
@@ -6221,7 +6145,6 @@ void Free_FrequencyInfoDL_SIB_v1800(FrequencyInfoDL_SIB_v1800& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DownlinkConfigCommonSIB_ExtGroup2(Encoder& enc, const DownlinkConfigCommonSIB_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_frequencyInfoDL_v1800);
     if (value.has_frequencyInfoDL_v1800) {
         Encode_FrequencyInfoDL_SIB_v1800(enc, value.frequencyInfoDL_v1800);
@@ -6260,7 +6183,6 @@ void Free_DownlinkConfigCommonSIB_ExtGroup2(DownlinkConfigCommonSIB_ExtGroup2& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_BCCH_Config(Encoder& enc, const BCCH_Config& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteConstrainedInteger((std::int64_t)(value.modificationPeriodCoeff), 0, 3);
@@ -6300,7 +6222,6 @@ void Free_BCCH_Config(BCCH_Config& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_ExtGroup1(Encoder& enc, const PCCH_Config_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_nrofPDCCH_MonitoringOccasionPerSSB_InPO_r16);
     if (value.has_nrofPDCCH_MonitoringOccasionPerSSB_InPO_r16) {
         enc.WriteConstrainedInteger((std::int64_t)(value.nrofPDCCH_MonitoringOccasionPerSSB_InPO_r16), 2, 4);
@@ -6340,7 +6261,6 @@ void Free_PCCH_Config_ExtGroup1(PCCH_Config_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneEighthT(Encoder& enc, const PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneEighthT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 35839);
@@ -6390,7 +6310,6 @@ void Free_PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KH
 // --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneSixteenthT(Encoder& enc, const PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710_SCS480KHZoneSixteenthT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 71679);
@@ -6504,7 +6423,6 @@ void Free_PCCH_Config_ExtGroup2_FirstPDCCH_MonitoringOccasionOfPO_v1710(PCCH_Con
 // --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_ExtGroup2(Encoder& enc, const PCCH_Config_ExtGroup2& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ranPagingInIdlePO_r17);
     enc.WriteBit(value.has_firstPDCCH_MonitoringOccasionOfPO_v1710);
     if (value.has_ranPagingInIdlePO_r17) {
@@ -6651,7 +6569,6 @@ void Free_PCCH_Config_NAndPagingFrameOffset(PCCH_Config_NAndPagingFrameOffset& v
 // --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS15KHZoneT(Encoder& enc, const PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS15KHZoneT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 139);
@@ -6701,7 +6618,6 @@ void Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS15KHZoneT(PCCH_Config
 // --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS30KHZoneT_SCS15KHZhalfT(Encoder& enc, const PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS30KHZoneT_SCS15KHZhalfT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 279);
@@ -6751,7 +6667,6 @@ void Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS30KHZoneT_SCS15KHZhal
 // --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS60KHZoneT_SCS30KHZhalfT_SCS15KHZquarterT(Encoder& enc, const PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS60KHZoneT_SCS30KHZhalfT_SCS15KHZquarterT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 559);
@@ -6801,7 +6716,6 @@ void Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS60KHZoneT_SCS30KHZhal
 // --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneT_SCS60KHZhalfT_SCS30KHZquarterT_SCS15KHZoneEighthT(Encoder& enc, const PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneT_SCS60KHZhalfT_SCS30KHZquarterT_SCS15KHZoneEighthT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 1119);
@@ -6851,7 +6765,6 @@ void Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZoneT_SCS60KHZha
 // --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZhalfT_SCS60KHZquarterT_SCS30KHZoneEighthT_SCS15KHZoneSixteenthT(Encoder& enc, const PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZhalfT_SCS60KHZquarterT_SCS30KHZoneEighthT_SCS15KHZoneSixteenthT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 2239);
@@ -6901,7 +6814,6 @@ void Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS120KHZhalfT_SCS60KHZq
 // --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZoneT_SCS120KHZquarterT_SCS60KHZoneEighthT_SCS30KHZoneSixteenthT(Encoder& enc, const PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZoneT_SCS120KHZquarterT_SCS60KHZoneEighthT_SCS30KHZoneSixteenthT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 4479);
@@ -6951,7 +6863,6 @@ void Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZoneT_SCS120KHZq
 // --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZhalfT_SCS120KHZoneEighthT_SCS60KHZoneSixteenthT(Encoder& enc, const PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZhalfT_SCS120KHZoneEighthT_SCS60KHZoneSixteenthT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 8959);
@@ -7001,7 +6912,6 @@ void Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZhalfT_SCS120KHZ
 // --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZquarterT_SCS120KHZoneSixteenthT(Encoder& enc, const PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO_SCS480KHZquarterT_SCS120KHZoneSixteenthT& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 4u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         enc.WriteConstrainedInteger((std::int64_t)(value.items[i]), 0, 17919);
@@ -7175,7 +7085,6 @@ void Free_PCCH_Config_FirstPDCCH_MonitoringOccasionOfPO(PCCH_Config_FirstPDCCH_M
 // --------------------------------------------------------------------------
 ErrorCode Encode_PCCH_Config(Encoder& enc, const PCCH_Config& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_firstPDCCH_MonitoringOccasionOfPO);
@@ -7297,7 +7206,6 @@ void Free_PCCH_Config(PCCH_Config& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_MultiFrequencyBandListNR_SIB(Encoder& enc, const MultiFrequencyBandListNR_SIB& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_NR_MultiBandInfo(enc, value.items[i]);
@@ -7346,7 +7254,6 @@ void Free_MultiFrequencyBandListNR_SIB(MultiFrequencyBandListNR_SIB& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_FrequencyInfoDL_SIB(Encoder& enc, const FrequencyInfoDL_SIB& value)
 {
-    (void)value;
     Encode_MultiFrequencyBandListNR_SIB(enc, value.frequencyBandList);
     enc.WriteConstrainedInteger((std::int64_t)(value.offsetToPointA), 0, 2199);
 enc.WriteConstrainedLength(value.scs_SpecificCarrierList_count, 0u, 0u);
@@ -7410,7 +7317,6 @@ void Free_FrequencyInfoDL_SIB(FrequencyInfoDL_SIB& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_DownlinkConfigCommonSIB(Encoder& enc, const DownlinkConfigCommonSIB& value)
 {
-    (void)value;
     const bool any_extension = value.has_extGroup1 || value.has_extGroup2;
     enc.WriteBit(any_extension);
     Encode_FrequencyInfoDL_SIB(enc, value.frequencyInfoDL);
@@ -7523,7 +7429,6 @@ void Free_DownlinkConfigCommonSIB(DownlinkConfigCommonSIB& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_HighSpeedConfig_r16(Encoder& enc, const HighSpeedConfig_r16& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_highSpeedMeasFlag_r16);
@@ -7579,7 +7484,6 @@ void Free_HighSpeedConfig_r16(HighSpeedConfig_r16& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_SemiStaticChannelAccessConfig_r16(Encoder& enc, const SemiStaticChannelAccessConfig_r16& value)
 {
-    (void)value;
     enc.WriteConstrainedInteger((std::int64_t)(value.period_r16), 0, 5);
     return enc.Error();
 }
@@ -7675,7 +7579,6 @@ void Free_ServingCellConfigCommonSIB_ExtGroup1_ChannelAccessMode_r16(ServingCell
 // --------------------------------------------------------------------------
 ErrorCode Encode_ServingCellConfigCommonSIB_ExtGroup1(Encoder& enc, const ServingCellConfigCommonSIB_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_channelAccessMode_r16);
     enc.WriteBit(value.has_discoveryBurstWindowLength_r16);
     enc.WriteBit(value.has_highSpeedConfig_r16);
@@ -7739,7 +7642,6 @@ void Free_ServingCellConfigCommonSIB_ExtGroup1(ServingCellConfigCommonSIB_ExtGro
 // --------------------------------------------------------------------------
 ErrorCode Encode_HighSpeedConfigFR2_r17(Encoder& enc, const HighSpeedConfigFR2_r17& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_highSpeedMeasFlagFR2_r17);
@@ -7810,7 +7712,6 @@ void Free_HighSpeedConfigFR2_r17(HighSpeedConfigFR2_r17& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_RA_Prioritization(Encoder& enc, const RA_Prioritization& value)
 {
-    (void)value;
     const bool any_extension = false;
     enc.WriteBit(any_extension);
     enc.WriteBit(value.has_scalingFactorBI);
@@ -7863,7 +7764,6 @@ void Free_RA_Prioritization(RA_Prioritization& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_RACH_ConfigCommon_ExtGroup1_Ra_PrioritizationForAccessIdentity_r16(Encoder& enc, const RACH_ConfigCommon_ExtGroup1_Ra_PrioritizationForAccessIdentity_r16& value)
 {
-    (void)value;
     Encode_RA_Prioritization(enc, value.ra_Prioritization_r16);
     enc.WriteFixedBitString(value.ra_PrioritizationForAI_r16.bytes, value.ra_PrioritizationForAI_r16.bitLength, 2, 2);
     return enc.Error();
@@ -7973,7 +7873,6 @@ void Free_RACH_ConfigCommon_ExtGroup1_Prach_RootSequenceIndex_r16(RACH_ConfigCom
 // --------------------------------------------------------------------------
 ErrorCode Encode_RACH_ConfigCommon_ExtGroup1(Encoder& enc, const RACH_ConfigCommon_ExtGroup1& value)
 {
-    (void)value;
     enc.WriteBit(value.has_ra_PrioritizationForAccessIdentity_r16);
     enc.WriteBit(value.has_prach_RootSequenceIndex_r16);
     if (value.has_ra_PrioritizationForAccessIdentity_r16) {
@@ -8024,7 +7923,6 @@ void Free_RACH_ConfigCommon_ExtGroup1(RACH_ConfigCommon_ExtGroup1& value)
 // --------------------------------------------------------------------------
 ErrorCode Encode_RA_PrioritizationSliceInfoList_r17(Encoder& enc, const RA_PrioritizationSliceInfoList_r17& value)
 {
-    (void)value;
     enc.WriteConstrainedLength(value.count, 1u, 8u);
     for (std::uint32_t i = 0; i < value.count; ++i) {
         Encode_RA_PrioritizationSliceInfo_r17(enc, value.items[i]);
