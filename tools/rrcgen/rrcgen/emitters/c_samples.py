@@ -3,7 +3,7 @@
 为每个结构体生成 ``BuildSample_<T>(T&, int depth)``：把全部必填字段填入
 约束范围内的最小值、必填 CONTAINING 指针指向递归构造的内层对象、必填
 CHOICE 选择第 0 个备选；OPTIONAL 字段留空（depth==0 时的 optional CONTAINING
-会填一个样例以覆盖开放类型解码）。生成结果供 53 个消息的
+会填一个样例以覆盖开放类型解码）。生成结果供全部消息的
 “构造 → 编码 → 解码 → 再编码”比特一致性测试使用。
 """
 
@@ -54,7 +54,7 @@ def emit_samples_header(cmodel: CModel) -> str:
     lines.extend(
         [
             "",
-            "/* 53 个消息的样例入口。 */",
+            f"/* {len(cmodel.messages)} 个消息的样例入口。 */",
             "bool BuildSampleByKind(MessageKind kind, void* message);",
             "void FreeSampleByKind(MessageKind kind, void* message);",
             "std::size_t MessageStructSize(MessageKind kind);",

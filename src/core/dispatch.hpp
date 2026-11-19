@@ -1,7 +1,7 @@
 /* ============================================================================
  * dispatch.hpp — 按 MessageKind 分派的内部接口（不安装、不导出）
  *
- * 实现位于 src/core/dispatch.cpp：手写 switch(kind)（53 个消息入口），
+ * 实现位于 src/core/dispatch.cpp：按生成清单 switch(kind)（全部消息入口），
  * 将公共 C ABI 的 void* 转换为生成代码的具体结构体类型，调用
  * EncodeMessage_<Kind> / DecodeMessage_<Kind> / FreeMessage_<Kind>。
  *

@@ -6,7 +6,7 @@
 * ``ErrorCode Decode_<T>(Decoder&, <T>&)``（失败时内部释放并清零）
 * ``void Free_<T>(<T>&)``（递归释放 malloc 内存并清零）
 
-以及 53 个消息入口的 ``EncodeMessage_<Kind>`` / ``DecodeMessage_<Kind>`` /
+以及全部消息入口的 ``EncodeMessage_<Kind>`` / ``DecodeMessage_<Kind>`` /
 ``FreeMessage_<Kind>``（先写/读信道包装位，再调用消息体类型函数）。
 """
 
@@ -88,7 +88,7 @@ class CodecEmitter:
                     f"ErrorCode DecodeContained_{cname}(Decoder& dec, {cname}*& out);"
                 )
                 lines.append("")
-        lines.append("/* ---------- 53 个消息入口 ---------- */")
+        lines.append(f"/* ---------- {len(cm.messages)} 个消息入口 ---------- */")
         for message in cm.messages:
             cname = message.struct_cname
             suffix = message.kind_suffix

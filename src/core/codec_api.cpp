@@ -5,7 +5,7 @@
  *   EncodeMessage / FreeEncodedMessage / DecodeMessage / FreeMessage
  *
  * 职责（实现契约 §3）：
- *   1. 参数校验：kind 1–53、指针非空、解码输入 size 不超过
+ *   1. 参数校验：kind 1–RRC_CODEC_MESSAGE_KIND_COUNT、指针非空、解码输入 size 不超过
  *      RRC_CODEC_MAX_INPUT_BYTES；
  *   2. 解码前校验 channel 合法性及 ChannelOfMessageKind(kind) == channel；
  *   3. 按 MessageKind 调用 dispatch.hpp 的分派函数（void* ↔ 具体结构体转换由
@@ -27,10 +27,11 @@
 
 namespace {
 
-/** kind 是否为 1–53 中的实际消息类型（枚举连续，含首尾）。 */
+/** kind 是否为实际消息类型（数值连续 1..RRC_CODEC_MESSAGE_KIND_COUNT）。 */
 bool IsValidMessageKind(MessageKind kind) {
   return kind >= MessageKind_MIB &&
-         kind <= MessageKind_IndirectPathFailureInformation_r18;
+         static_cast<int>(kind) <
+             static_cast<int>(MessageKind_MIB) + RRC_CODEC_MESSAGE_KIND_COUNT;
 }
 
 /** channel 是否为 1–10 中的合法信道；0/越界均非法。 */

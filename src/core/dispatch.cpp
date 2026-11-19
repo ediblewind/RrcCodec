@@ -1,16 +1,16 @@
 /* ============================================================================
- * dispatch.cpp — 按 MessageKind 分派到生成代码的内部实现（53 路 switch）
+ * dispatch.cpp — 按 MessageKind 分派到生成代码的内部实现（按生成清单 switch）
  *
  * 生成函数声明位于 src/generated/codec_internal.h（由生成器产出）：
  *   ErrorCode EncodeMessage_<KindSuffix>(Encoder&, const <MsgType>&);
  *   ErrorCode DecodeMessage_<KindSuffix>(Decoder&, <MsgType>&);
  *   void      FreeMessage_<KindSuffix>(<MsgType>&);
- * 命名见 docs/实现契约.md §2.3；53 个 MessageKind ↔ 结构体名见
+ * 命名见 docs/实现契约.md §2.3；MessageKind ↔ 结构体名见
  * docs/RRC编解码库简化方案.md 附录 A（结构体名 = “MessageKind_”之后的拼写）。
  *
  * 本文件职责（实现契约 §3）：
- *   1. 完成 void* ↔ 具体结构体指针的类型转换（本文件是唯一需要知道全部 53 个
- *      消息结构体类型的地方）；
+ *   1. 完成 void* ↔ 具体结构体指针的类型转换（本文件是唯一需要知道全部消息
+ *      结构体类型的地方）；
  *   2. 构造 Encoder/Decoder、调用生成入口、取得编码字节/UPPER 有效位长；
  *   3. 编码成功时按“malloc + 复制”产出 EncodedMessage（所有权归 FreeEncodedMessage）；
  *   4. 解码入口按具体结构体大小清零；失败时调用生成 FreeMessage_<Kind> 清理并清零；
