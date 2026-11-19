@@ -67,9 +67,21 @@ jobs:
       - name: Configure
         run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DRRC_CODEC_WARNINGS_AS_ERRORS=ON
       - name: Build
-        run: cmake --build build --parallel 8
+        shell: pwsh
+        run: |
+          cmake --build build --parallel 8 2>&1 | Tee-Object -FilePath build.log
+          if ($LASTEXITCODE -ne 0) {
+            Get-Content build.log | Select-String -Pattern 'error|warning' | Select-Object -First 20 | ForEach-Object { Write-Host "::error::$_" }
+            exit 1
+          }
       - name: Test
-        run: ctest --test-dir build --output-on-failure
+        shell: pwsh
+        run: |
+          ctest --test-dir build --output-on-failure 2>&1 | Tee-Object -FilePath test.log
+          if ($LASTEXITCODE -ne 0) {
+            Get-Content test.log | Select-String -Pattern 'FAILED|failure|error|Failed' | Select-Object -First 20 | ForEach-Object { Write-Host "::error::$_" }
+            exit 1
+          }
       - name: Generated code consistency
         working-directory: tools/rrcgen
         shell: pwsh
