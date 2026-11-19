@@ -2,20 +2,23 @@
 
 从 38.331 ASN.1 生成 v2 C ABI 产物（方案第 5 章）：
 
+* ``include/rrc_codec/rrc_version.h``（版本单一来源：``data/version.txt`` + ``data/asn-version.txt``）
 * ``include/rrc_codec/types/rrc_types.h``
-* ``include/rrc_codec/messages/rrc_messages.h``
+* ``include/rrc_codec/messages/rrc_messages.h``（含 ``RRC_CODEC_MESSAGE_KIND_COUNT``）
 * ``src/generated/codec_internal.h``
 * ``src/generated/codec_partNNN.cpp``
 * ``generated/Sources.cmake``、``generated/rrc_stats.json``、``generated/rrc_message_index.md``
-* ``tests/generated/message_samples.{h,cpp}``
+* ``generated/rrc_manifest.json``、``generated/message_dispatch.inc``
+* ``tests/generated/message_samples.{h,cpp}``、``tests/generated/message_manifest.{h,cpp}``
 
 用法（在 ``tools/rrcgen`` 下）::
 
-    python -m rrcgen --input ../../data/38.331_v18.10.0.asn \
+    python -m rrcgen --input ../../data/38.331_v*.asn \
         --check-input-sha256 ../../data/asn-input.sha256 \
         --repo-root ../..
 
 ``--check`` 只生成到临时目录并与仓库现有文件逐字节比较（CI 用）。
+``--update-baseline`` 重写 ``data/message-set.txt``（消息集变化时用）。
 """
 
 from __future__ import annotations
@@ -33,8 +36,21 @@ from .cmodel import CModel
 from .diagnostics import DiagnosticCollector
 from .emitters.c_codec import CodecEmitter
 from .emitters.c_messages import emit_messages_header
+from .emitters.c_metadata import (
+    emit_dispatch_include,
+    emit_manifest_json,
+    emit_test_manifest_header,
+    emit_test_manifest_source,
+    emit_version_header,
+)
 from .emitters.c_samples import emit_samples_header, emit_samples_source
 from .emitters.c_types import emit_types_headers
+from .metadata import (
+    read_asn_version,
+    read_message_set,
+    read_versions,
+    write_message_set,
+)
 from .normalize import normalize_source
 from .parser import parse_source
 from .resolver import resolve_source
@@ -46,15 +62,20 @@ EXIT_USAGE = 2
 DEFAULT_MODULE = "NR-RRC-Definitions"
 
 #: 输出文件（相对 repo-root）。
+PATH_VERSION = "include/rrc_codec/rrc_version.h"
 PATH_TYPES_DIR = "include/rrc_codec/types"
 PATH_TYPES = PATH_TYPES_DIR + "/rrc_types.h"
 PATH_MESSAGES = "include/rrc_codec/messages/rrc_messages.h"
 PATH_INTERNAL = "src/generated/codec_internal.h"
 PATH_SOURCES_CMAKE = "generated/Sources.cmake"
 PATH_STATS = "generated/rrc_stats.json"
+PATH_MANIFEST = "generated/rrc_manifest.json"
 PATH_MESSAGE_INDEX = "generated/rrc_message_index.md"
+PATH_DISPATCH = "generated/message_dispatch.inc"
 PATH_SAMPLES_HEADER = "tests/generated/message_samples.h"
 PATH_SAMPLES_SOURCE = "tests/generated/message_samples.cpp"
+PATH_TEST_MANIFEST_HEADER = "tests/generated/message_manifest.h"
+PATH_TEST_MANIFEST_SOURCE = "tests/generated/message_manifest.cpp"
 
 
 def build_argument_parser() -> argparse.ArgumentParser:
@@ -89,8 +110,16 @@ def build_argument_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--module-version",
-        default="18.10.0",
-        help="ASN.1 version string (default 18.10.0)",
+        default=None,
+        help="ASN.1 version string (default: read data/asn-version.txt)",
+    )
+    parser.add_argument(
+        "--update-baseline",
+        action="store_true",
+        help=(
+            "regenerate generation and rewrite data/message-set.txt from the "
+            "extracted message set (review the diff before committing)"
+        ),
     )
     parser.add_argument(
         "--diagnostics-format",
@@ -105,6 +134,12 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     args = parser.parse_args(argv)
     if args.chunk_size <= 0:
         print("rrcgen: error: --chunk-size must be positive", file=sys.stderr)
+        return EXIT_USAGE
+    if args.check and args.update_baseline:
+        print(
+            "rrcgen: error: --check and --update-baseline are mutually exclusive",
+            file=sys.stderr,
+        )
         return EXIT_USAGE
     try:
         files = _generate(args)
@@ -123,9 +158,31 @@ class _GenerationError(Exception):
     pass
 
 
+def _resolve_input_path(raw: str) -> Path:
+    """支持版本通配（``data/38.331_v*.asn``），保证换版本不用改脚本/CMake。"""
+    candidate = Path(raw)
+    if any(char in raw for char in "*?["):
+        matches = sorted(candidate.parent.glob(candidate.name))
+        if len(matches) != 1:
+            raise _GenerationError(
+                f"input pattern '{raw}' must match exactly 1 file, got {len(matches)}"
+            )
+        return matches[0]
+    return candidate
+
+
 def _generate(args) -> Dict[str, str]:
     diagnostics = DiagnosticCollector()
-    input_path = Path(args.input)
+    repo_root = Path(args.repo_root).resolve()
+    try:
+        library_version, api_version = read_versions(repo_root)
+        asn_version = args.module_version or read_asn_version(repo_root)
+        expected_messages = (
+            None if args.update_baseline else read_message_set(repo_root)
+        )
+    except ValueError as error:
+        raise _GenerationError(str(error)) from error
+    input_path = _resolve_input_path(args.input)
     if not input_path.is_file():
         raise _GenerationError(f"input file not found: {input_path}")
     source = normalize_source(input_path, diagnostics)
@@ -143,20 +200,41 @@ def _generate(args) -> Dict[str, str]:
             )
     parsed = parse_source(source, diagnostics, DEFAULT_MODULE)
     resolved = resolve_source(
-        source, parsed, diagnostics, DEFAULT_MODULE, args.module_version
+        source, parsed, diagnostics, DEFAULT_MODULE, asn_version
     )
     if diagnostics.error_count():
         raise _GenerationError(_render_diagnostics(diagnostics))
-    cmodel = CModel(resolved)
+    cmodel = CModel(resolved, expected_messages=expected_messages)
+    if args.update_baseline:
+        path = write_message_set(
+            repo_root, [message.asn_name for message in cmodel.messages]
+        )
+        print(f"rrcgen {VERSION}: message-set baseline updated: {path}")
     codec = CodecEmitter(cmodel, chunk_size=args.chunk_size)
 
     files: Dict[str, str] = {
+        PATH_VERSION: emit_version_header(
+            library_version=library_version,
+            api_version=api_version,
+            asn_version=cmodel.asn_version,
+            input_sha256=cmodel.input_sha256,
+        ),
         PATH_MESSAGES: emit_messages_header(cmodel),
         PATH_INTERNAL: codec.emit_internal_header(),
-        PATH_STATS: _emit_stats(cmodel, args),
+        PATH_STATS: _emit_stats(cmodel, args, input_path.name),
+        PATH_MANIFEST: emit_manifest_json(
+            cmodel,
+            library_version=library_version,
+            api_version=api_version,
+            input_file=input_path.name,
+            chunk_size=args.chunk_size,
+        ),
         PATH_MESSAGE_INDEX: _emit_message_index(cmodel),
+        PATH_DISPATCH: emit_dispatch_include(cmodel),
         PATH_SAMPLES_HEADER: emit_samples_header(cmodel),
         PATH_SAMPLES_SOURCE: emit_samples_source(cmodel),
+        PATH_TEST_MANIFEST_HEADER: emit_test_manifest_header(cmodel),
+        PATH_TEST_MANIFEST_SOURCE: emit_test_manifest_source(cmodel),
     }
     for name, content in emit_types_headers(cmodel).items():
         files[f"{PATH_TYPES_DIR}/{name}"] = content
@@ -188,11 +266,11 @@ def _read_expected_sha256(path: Path) -> Optional[str]:
     return None
 
 
-def _emit_stats(cmodel: CModel, args) -> str:
+def _emit_stats(cmodel: CModel, args, input_file: str) -> str:
     stats = {
         "GeneratorVersion": VERSION,
         "Module": DEFAULT_MODULE,
-        "InputFile": "38.331_v18.10.0.asn",
+        "InputFile": input_file,
         "InputSha256": cmodel.input_sha256,
         "AsnVersion": cmodel.asn_version,
         "ChunkSize": args.chunk_size,
@@ -234,7 +312,7 @@ def _wrapper_bits(message) -> int:
 
 def _emit_message_index(cmodel: CModel) -> str:
     lines = [
-        "# 生成消息索引（53 个实际消息）",
+        f"# 生成消息索引（{len(cmodel.messages)} 个实际消息）",
         "",
         "> 自动生成，请勿手工修改。",
         f"> 生成器：rrcgen {VERSION}；ASN.1：{cmodel.asn_version}；"

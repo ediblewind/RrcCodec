@@ -1,0 +1,1077 @@
+{
+  "GeneratorVersion": "2.0.0",
+  "LibraryVersion": "2.0.0",
+  "CApiVersion": 1,
+  "Module": "NR-RRC-Definitions",
+  "AsnVersion": "18.10.0",
+  "InputFile": "38.331_v18.10.0.asn",
+  "InputSha256": "c56d55d553c94d7435015e04b3917e1672440f9e9d80259c48f81e7fcfa1187c",
+  "ChunkSize": 120,
+  "ChunkCount": 32,
+  "MessageCount": 53,
+  "TypeCounts": {
+    "GeneratedTypes": 10680,
+    "StructDefinitions": 3685,
+    "EmptySequences": 112,
+    "EnumDefinitions": 3324,
+    "SequenceDefinitions": 2115,
+    "ChoiceDefinitions": 632,
+    "SequenceOfDefinitions": 408,
+    "GroupDefinitions": 530,
+    "Messages": 53,
+    "Channels": 10,
+    "NamedPrimitives": 246,
+    "NamedAliases": 3,
+    "NameConflicts": 1,
+    "ContainingFields": 32
+  },
+  "Messages": [
+    {
+      "Kind": 1,
+      "KindName": "MessageKind_MIB",
+      "AsnName": "MIB",
+      "Struct": "MIB",
+      "Channel": "ChannelType_BCCH_BCH",
+      "ChannelValue": 1,
+      "WrapperBits": 1,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        }
+      ]
+    },
+    {
+      "Kind": 2,
+      "KindName": "MessageKind_SystemInformation",
+      "AsnName": "SystemInformation",
+      "Struct": "SystemInformation",
+      "Channel": "ChannelType_BCCH_DL_SCH",
+      "ChannelValue": 2,
+      "WrapperBits": 2,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 2
+        }
+      ]
+    },
+    {
+      "Kind": 3,
+      "KindName": "MessageKind_SIB1",
+      "AsnName": "SIB1",
+      "Struct": "SIB1",
+      "Channel": "ChannelType_BCCH_DL_SCH",
+      "ChannelValue": 2,
+      "WrapperBits": 2,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 1,
+          "Count": 2
+        }
+      ]
+    },
+    {
+      "Kind": 4,
+      "KindName": "MessageKind_RRCReject",
+      "AsnName": "RRCReject",
+      "Struct": "RRCReject",
+      "Channel": "ChannelType_DL_CCCH",
+      "ChannelValue": 3,
+      "WrapperBits": 3,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 4
+        }
+      ]
+    },
+    {
+      "Kind": 5,
+      "KindName": "MessageKind_RRCSetup",
+      "AsnName": "RRCSetup",
+      "Struct": "RRCSetup",
+      "Channel": "ChannelType_DL_CCCH",
+      "ChannelValue": 3,
+      "WrapperBits": 3,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 1,
+          "Count": 4
+        }
+      ]
+    },
+    {
+      "Kind": 6,
+      "KindName": "MessageKind_RRCReconfiguration",
+      "AsnName": "RRCReconfiguration",
+      "Struct": "RRCReconfiguration",
+      "Channel": "ChannelType_DL_DCCH",
+      "ChannelValue": 4,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 7,
+      "KindName": "MessageKind_RRCResume",
+      "AsnName": "RRCResume",
+      "Struct": "RRCResume",
+      "Channel": "ChannelType_DL_DCCH",
+      "ChannelValue": 4,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 1,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 8,
+      "KindName": "MessageKind_RRCRelease",
+      "AsnName": "RRCRelease",
+      "Struct": "RRCRelease",
+      "Channel": "ChannelType_DL_DCCH",
+      "ChannelValue": 4,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 2,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 9,
+      "KindName": "MessageKind_RRCReestablishment",
+      "AsnName": "RRCReestablishment",
+      "Struct": "RRCReestablishment",
+      "Channel": "ChannelType_DL_DCCH",
+      "ChannelValue": 4,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 3,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 10,
+      "KindName": "MessageKind_SecurityModeCommand",
+      "AsnName": "SecurityModeCommand",
+      "Struct": "SecurityModeCommand",
+      "Channel": "ChannelType_DL_DCCH",
+      "ChannelValue": 4,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 4,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 11,
+      "KindName": "MessageKind_DLInformationTransfer",
+      "AsnName": "DLInformationTransfer",
+      "Struct": "DLInformationTransfer",
+      "Channel": "ChannelType_DL_DCCH",
+      "ChannelValue": 4,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 5,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 12,
+      "KindName": "MessageKind_UECapabilityEnquiry",
+      "AsnName": "UECapabilityEnquiry",
+      "Struct": "UECapabilityEnquiry",
+      "Channel": "ChannelType_DL_DCCH",
+      "ChannelValue": 4,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 6,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 13,
+      "KindName": "MessageKind_CounterCheck",
+      "AsnName": "CounterCheck",
+      "Struct": "CounterCheck",
+      "Channel": "ChannelType_DL_DCCH",
+      "ChannelValue": 4,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 7,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 14,
+      "KindName": "MessageKind_MobilityFromNRCommand",
+      "AsnName": "MobilityFromNRCommand",
+      "Struct": "MobilityFromNRCommand",
+      "Channel": "ChannelType_DL_DCCH",
+      "ChannelValue": 4,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 8,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 15,
+      "KindName": "MessageKind_DLDedicatedMessageSegment_r16",
+      "AsnName": "DLDedicatedMessageSegment-r16",
+      "Struct": "DLDedicatedMessageSegment_r16",
+      "Channel": "ChannelType_DL_DCCH",
+      "ChannelValue": 4,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 9,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 16,
+      "KindName": "MessageKind_UEInformationRequest_r16",
+      "AsnName": "UEInformationRequest-r16",
+      "Struct": "UEInformationRequest_r16",
+      "Channel": "ChannelType_DL_DCCH",
+      "ChannelValue": 4,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 10,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 17,
+      "KindName": "MessageKind_DLInformationTransferMRDC_r16",
+      "AsnName": "DLInformationTransferMRDC-r16",
+      "Struct": "DLInformationTransferMRDC_r16",
+      "Channel": "ChannelType_DL_DCCH",
+      "ChannelValue": 4,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 11,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 18,
+      "KindName": "MessageKind_LoggedMeasurementConfiguration_r16",
+      "AsnName": "LoggedMeasurementConfiguration-r16",
+      "Struct": "LoggedMeasurementConfiguration_r16",
+      "Channel": "ChannelType_DL_DCCH",
+      "ChannelValue": 4,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 12,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 19,
+      "KindName": "MessageKind_MBSBroadcastConfiguration_r17",
+      "AsnName": "MBSBroadcastConfiguration-r17",
+      "Struct": "MBSBroadcastConfiguration_r17",
+      "Channel": "ChannelType_MCCH_r17",
+      "ChannelValue": 5,
+      "WrapperBits": 2,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 2
+        }
+      ]
+    },
+    {
+      "Kind": 20,
+      "KindName": "MessageKind_MBSMulticastConfiguration_r18",
+      "AsnName": "MBSMulticastConfiguration-r18",
+      "Struct": "MBSMulticastConfiguration_r18",
+      "Channel": "ChannelType_MulticastMCCH_r18",
+      "ChannelValue": 6,
+      "WrapperBits": 2,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 2
+        }
+      ]
+    },
+    {
+      "Kind": 21,
+      "KindName": "MessageKind_Paging",
+      "AsnName": "Paging",
+      "Struct": "Paging",
+      "Channel": "ChannelType_PCCH",
+      "ChannelValue": 7,
+      "WrapperBits": 2,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 2
+        }
+      ]
+    },
+    {
+      "Kind": 22,
+      "KindName": "MessageKind_RRCSetupRequest",
+      "AsnName": "RRCSetupRequest",
+      "Struct": "RRCSetupRequest",
+      "Channel": "ChannelType_UL_CCCH",
+      "ChannelValue": 8,
+      "WrapperBits": 3,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 4
+        }
+      ]
+    },
+    {
+      "Kind": 23,
+      "KindName": "MessageKind_RRCResumeRequest",
+      "AsnName": "RRCResumeRequest",
+      "Struct": "RRCResumeRequest",
+      "Channel": "ChannelType_UL_CCCH",
+      "ChannelValue": 8,
+      "WrapperBits": 3,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 1,
+          "Count": 4
+        }
+      ]
+    },
+    {
+      "Kind": 24,
+      "KindName": "MessageKind_RRCReestablishmentRequest",
+      "AsnName": "RRCReestablishmentRequest",
+      "Struct": "RRCReestablishmentRequest",
+      "Channel": "ChannelType_UL_CCCH",
+      "ChannelValue": 8,
+      "WrapperBits": 3,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 2,
+          "Count": 4
+        }
+      ]
+    },
+    {
+      "Kind": 25,
+      "KindName": "MessageKind_RRCSystemInfoRequest",
+      "AsnName": "RRCSystemInfoRequest",
+      "Struct": "RRCSystemInfoRequest",
+      "Channel": "ChannelType_UL_CCCH",
+      "ChannelValue": 8,
+      "WrapperBits": 3,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 3,
+          "Count": 4
+        }
+      ]
+    },
+    {
+      "Kind": 26,
+      "KindName": "MessageKind_RRCResumeRequest1",
+      "AsnName": "RRCResumeRequest1",
+      "Struct": "RRCResumeRequest1",
+      "Channel": "ChannelType_UL_CCCH1",
+      "ChannelValue": 9,
+      "WrapperBits": 3,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 4
+        }
+      ]
+    },
+    {
+      "Kind": 27,
+      "KindName": "MessageKind_MeasurementReport",
+      "AsnName": "MeasurementReport",
+      "Struct": "MeasurementReport",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 28,
+      "KindName": "MessageKind_RRCReconfigurationComplete",
+      "AsnName": "RRCReconfigurationComplete",
+      "Struct": "RRCReconfigurationComplete",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 1,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 29,
+      "KindName": "MessageKind_RRCSetupComplete",
+      "AsnName": "RRCSetupComplete",
+      "Struct": "RRCSetupComplete",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 2,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 30,
+      "KindName": "MessageKind_RRCReestablishmentComplete",
+      "AsnName": "RRCReestablishmentComplete",
+      "Struct": "RRCReestablishmentComplete",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 3,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 31,
+      "KindName": "MessageKind_RRCResumeComplete",
+      "AsnName": "RRCResumeComplete",
+      "Struct": "RRCResumeComplete",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 4,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 32,
+      "KindName": "MessageKind_SecurityModeComplete",
+      "AsnName": "SecurityModeComplete",
+      "Struct": "SecurityModeComplete",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 5,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 33,
+      "KindName": "MessageKind_SecurityModeFailure",
+      "AsnName": "SecurityModeFailure",
+      "Struct": "SecurityModeFailure",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 6,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 34,
+      "KindName": "MessageKind_ULInformationTransfer",
+      "AsnName": "ULInformationTransfer",
+      "Struct": "ULInformationTransfer",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 7,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 35,
+      "KindName": "MessageKind_LocationMeasurementIndication",
+      "AsnName": "LocationMeasurementIndication",
+      "Struct": "LocationMeasurementIndication",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 8,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 36,
+      "KindName": "MessageKind_UECapabilityInformation",
+      "AsnName": "UECapabilityInformation",
+      "Struct": "UECapabilityInformation",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 9,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 37,
+      "KindName": "MessageKind_CounterCheckResponse",
+      "AsnName": "CounterCheckResponse",
+      "Struct": "CounterCheckResponse",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 10,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 38,
+      "KindName": "MessageKind_UEAssistanceInformation",
+      "AsnName": "UEAssistanceInformation",
+      "Struct": "UEAssistanceInformation",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 11,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 39,
+      "KindName": "MessageKind_FailureInformation",
+      "AsnName": "FailureInformation",
+      "Struct": "FailureInformation",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 12,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 40,
+      "KindName": "MessageKind_ULInformationTransferMRDC",
+      "AsnName": "ULInformationTransferMRDC",
+      "Struct": "ULInformationTransferMRDC",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 13,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 41,
+      "KindName": "MessageKind_SCGFailureInformation",
+      "AsnName": "SCGFailureInformation",
+      "Struct": "SCGFailureInformation",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 14,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 42,
+      "KindName": "MessageKind_SCGFailureInformationEUTRA",
+      "AsnName": "SCGFailureInformationEUTRA",
+      "Struct": "SCGFailureInformationEUTRA",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 5,
+      "Path": [
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 15,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 43,
+      "KindName": "MessageKind_ULDedicatedMessageSegment_r16",
+      "AsnName": "ULDedicatedMessageSegment-r16",
+      "Struct": "ULDedicatedMessageSegment_r16",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 6,
+      "Path": [
+        {
+          "Index": 1,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 44,
+      "KindName": "MessageKind_DedicatedSIBRequest_r16",
+      "AsnName": "DedicatedSIBRequest-r16",
+      "Struct": "DedicatedSIBRequest_r16",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 6,
+      "Path": [
+        {
+          "Index": 1,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 1,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 45,
+      "KindName": "MessageKind_MCGFailureInformation_r16",
+      "AsnName": "MCGFailureInformation-r16",
+      "Struct": "MCGFailureInformation_r16",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 6,
+      "Path": [
+        {
+          "Index": 1,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 2,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 46,
+      "KindName": "MessageKind_UEInformationResponse_r16",
+      "AsnName": "UEInformationResponse-r16",
+      "Struct": "UEInformationResponse_r16",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 6,
+      "Path": [
+        {
+          "Index": 1,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 3,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 47,
+      "KindName": "MessageKind_SidelinkUEInformationNR_r16",
+      "AsnName": "SidelinkUEInformationNR-r16",
+      "Struct": "SidelinkUEInformationNR_r16",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 6,
+      "Path": [
+        {
+          "Index": 1,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 4,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 48,
+      "KindName": "MessageKind_ULInformationTransferIRAT_r16",
+      "AsnName": "ULInformationTransferIRAT-r16",
+      "Struct": "ULInformationTransferIRAT_r16",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 6,
+      "Path": [
+        {
+          "Index": 1,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 5,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 49,
+      "KindName": "MessageKind_IABOtherInformation_r16",
+      "AsnName": "IABOtherInformation-r16",
+      "Struct": "IABOtherInformation_r16",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 6,
+      "Path": [
+        {
+          "Index": 1,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 6,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 50,
+      "KindName": "MessageKind_MBSInterestIndication_r17",
+      "AsnName": "MBSInterestIndication-r17",
+      "Struct": "MBSInterestIndication_r17",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 6,
+      "Path": [
+        {
+          "Index": 1,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 7,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 51,
+      "KindName": "MessageKind_UEPositioningAssistanceInfo_r17",
+      "AsnName": "UEPositioningAssistanceInfo-r17",
+      "Struct": "UEPositioningAssistanceInfo_r17",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 6,
+      "Path": [
+        {
+          "Index": 1,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 8,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 52,
+      "KindName": "MessageKind_MeasurementReportAppLayer_r17",
+      "AsnName": "MeasurementReportAppLayer-r17",
+      "Struct": "MeasurementReportAppLayer_r17",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 6,
+      "Path": [
+        {
+          "Index": 1,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 9,
+          "Count": 16
+        }
+      ]
+    },
+    {
+      "Kind": 53,
+      "KindName": "MessageKind_IndirectPathFailureInformation_r18",
+      "AsnName": "IndirectPathFailureInformation-r18",
+      "Struct": "IndirectPathFailureInformation_r18",
+      "Channel": "ChannelType_UL_DCCH",
+      "ChannelValue": 10,
+      "WrapperBits": 6,
+      "Path": [
+        {
+          "Index": 1,
+          "Count": 2
+        },
+        {
+          "Index": 0,
+          "Count": 2
+        },
+        {
+          "Index": 10,
+          "Count": 16
+        }
+      ]
+    }
+  ]
+}

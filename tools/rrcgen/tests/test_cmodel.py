@@ -14,13 +14,22 @@ _PACKAGE_ROOT = Path(__file__).resolve().parents[1]
 if str(_PACKAGE_ROOT) not in sys.path:
     sys.path.insert(0, str(_PACKAGE_ROOT))
 
-from rrcgen.cmodel import CModel, EXPECTED_MESSAGES  # noqa: E402
+from rrcgen.cmodel import CModel  # noqa: E402
 from rrcgen.diagnostics import DiagnosticCollector  # noqa: E402
+from rrcgen.metadata import (  # noqa: E402
+    read_asn_version,
+    read_message_set,
+    read_versions,
+)
 from rrcgen.normalize import normalize_source  # noqa: E402
 from rrcgen.parser import parse_source  # noqa: E402
 from rrcgen.resolver import resolve_source  # noqa: E402
 
-_ASN_PATH = _REPO_ROOT / "data" / "38.331_v18.10.0.asn"
+_ASN_CANDIDATES = sorted((_REPO_ROOT / "data").glob("38.331_v*.asn"))
+_ASN_PATH = _ASN_CANDIDATES[0] if _ASN_CANDIDATES else (_REPO_ROOT / "data" / "38.331_v18.10.0.asn")
+_EXPECTED_MESSAGES = read_message_set(_REPO_ROOT)
+_ASN_VERSION = read_asn_version(_REPO_ROOT)
+_LIBRARY_VERSION, _C_API_VERSION = read_versions(_REPO_ROOT)
 
 
 class CModelTest(unittest.TestCase):
@@ -33,11 +42,11 @@ class CModelTest(unittest.TestCase):
         assert source is not None
         parsed = parse_source(source, diagnostics, "NR-RRC-Definitions")
         resolved = resolve_source(
-            source, parsed, diagnostics, "NR-RRC-Definitions", "18.10.0"
+            source, parsed, diagnostics, "NR-RRC-Definitions", _ASN_VERSION
         )
         cls.diagnostics = diagnostics
         cls.model = resolved
-        cls.cmodel = CModel(resolved)
+        cls.cmodel = CModel(resolved, expected_messages=_EXPECTED_MESSAGES)
         cls.by_cname = {
             struct.cname: struct for struct in cls.cmodel.ordered_structs
             if struct.kind != "group"
@@ -48,12 +57,15 @@ class CModelTest(unittest.TestCase):
 
     def test_message_extraction_matches_appendix_a(self) -> None:
         messages = self.cmodel.messages
-        self.assertEqual(len(messages), 53)
-        self.assertEqual([item.asn_name for item in messages], EXPECTED_MESSAGES)
-        self.assertEqual([item.kind_value for item in messages], list(range(1, 54)))
+        self.assertEqual(len(messages), len(_EXPECTED_MESSAGES))
+        self.assertEqual([item.asn_name for item in messages], _EXPECTED_MESSAGES)
+        self.assertEqual(
+            [item.kind_value for item in messages],
+            list(range(1, len(_EXPECTED_MESSAGES) + 1)),
+        )
         self.assertEqual(
             [item.kind_name for item in messages],
-            ["MessageKind_" + name.replace("-", "_") for name in EXPECTED_MESSAGES],
+            ["MessageKind_" + name.replace("-", "_") for name in _EXPECTED_MESSAGES],
         )
         channels = {item.channel_value for item in messages}
         self.assertEqual(channels, set(range(1, 11)))
@@ -155,11 +167,75 @@ class CModelTest(unittest.TestCase):
 
     def test_stable_counts(self) -> None:
         stats = self.cmodel.stats
-        self.assertEqual(stats["Messages"], 53)
+        self.assertEqual(stats["Messages"], len(_EXPECTED_MESSAGES))
         self.assertEqual(stats["Channels"], 10)
         self.assertGreater(stats["EnumDefinitions"], 3000)
         self.assertEqual(stats["NamedAliases"], 3)
         self.assertEqual(len(self.cmodel.chunks(120)), 32)
+
+    def test_derived_metadata_emitters(self) -> None:
+        import json
+
+        from rrcgen.emitters.c_metadata import (
+            emit_dispatch_include,
+            emit_manifest_json,
+            emit_test_manifest_header,
+            emit_version_header,
+        )
+
+        count = len(_EXPECTED_MESSAGES)
+        manifest = json.loads(
+            emit_manifest_json(
+                self.cmodel,
+                library_version=_LIBRARY_VERSION,
+                api_version=_C_API_VERSION,
+                input_file=_ASN_PATH.name,
+                chunk_size=120,
+            )
+        )
+        self.assertEqual(manifest["MessageCount"], count)
+        self.assertEqual(manifest["AsnVersion"], _ASN_VERSION)
+        self.assertEqual(manifest["LibraryVersion"], _LIBRARY_VERSION)
+        self.assertEqual(manifest["CApiVersion"], _C_API_VERSION)
+        self.assertEqual(manifest["InputFile"], _ASN_PATH.name)
+        self.assertEqual(len(manifest["Messages"]), count)
+        self.assertEqual(
+            [item["AsnName"] for item in manifest["Messages"]],
+            _EXPECTED_MESSAGES,
+        )
+
+        dispatch = emit_dispatch_include(self.cmodel)
+        entries = [
+            line.strip()
+            for line in dispatch.splitlines()
+            if line.strip().startswith("X(")
+        ]
+        self.assertEqual(len(entries), count)
+        self.assertEqual(
+            entries[0], "X(MIB)" + ("" if count == 1 else " \\")
+        )
+        self.assertIn("X(IndirectPathFailureInformation_r18)", dispatch)
+
+        test_header = emit_test_manifest_header(self.cmodel)
+        self.assertIn(f"kMessageKindCount = {count};", test_header)
+
+        version_header = emit_version_header(
+            library_version=_LIBRARY_VERSION,
+            api_version=_C_API_VERSION,
+            asn_version=_ASN_VERSION,
+            input_sha256=self.cmodel.input_sha256,
+        )
+        self.assertIn(
+            f'#define RRC_CODEC_VERSION_STRING "{_LIBRARY_VERSION}"',
+            version_header,
+        )
+        self.assertIn(
+            f'#define RRC_CODEC_ASN1_VERSION_STRING "{_ASN_VERSION}"',
+            version_header,
+        )
+        self.assertIn(
+            f"#define RRC_CODEC_C_API_VERSION {_C_API_VERSION}", version_header
+        )
     def test_type_headers_are_split_for_ides(self) -> None:
         # CLion/ReSharper 的默认分析阈值为 300KB、PSI 阈值为 2MB；单文件 6MB
         # 会暂停分析并导致 Go to Declaration 失效，因此类型头必须分块。

@@ -83,6 +83,13 @@ typedef enum MessageKind {
 } MessageKind;
 
 /**
+ * @brief 消息类型个数（53，= 最后一个 MessageKind 的数值）。
+ *
+ * 供测试循环、数组定长与消费方校验使用；随 ASN.1 消息集自动更新。
+ */
+#define RRC_CODEC_MESSAGE_KIND_COUNT 53
+
+/**
  * @brief 返回消息类型所属信道。
  *
  * @param[in] kind 实际消息类型。

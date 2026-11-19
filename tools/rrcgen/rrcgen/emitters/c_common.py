@@ -7,8 +7,12 @@ from typing import List, Optional
 from .. import VERSION
 from ..models import IntegerConstraint, SizeConstraint, TypeModel
 
-ASN_SPEC = "3GPP TS 38.331 v18.10.0"
 MODULE = "NR-RRC-Definitions"
+
+
+def asn_spec(asn_version: str) -> str:
+    """ASN.1 规范字符串（版本来自 data/asn-version.txt）。"""
+    return f"3GPP TS 38.331 v{asn_version}"
 
 
 def generated_banner(
@@ -21,7 +25,7 @@ def generated_banner(
         " *",
         " * 自动生成，请勿手工修改。",
         f" * Generator      : rrcgen {generator_version}",
-        f" * ASN.1          : {ASN_SPEC}（module {MODULE}）",
+        f" * ASN.1          : {asn_spec(asn_version)}（module {MODULE}）",
         f" * Input SHA-256  : {input_sha256}",
         " * 重生成命令     :",
         " *   cmake -S . -B build -DRRC_CODEC_REGENERATE=ON && cmake --build build --target rrc_codec_regenerate",

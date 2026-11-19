@@ -51,62 +51,10 @@ CHANNEL_BY_ACCESS_POINT: Dict[str, Tuple[int, str]] = {
     "UL-DCCH": (10, "ChannelType_UL_DCCH"),
 }
 
-#: 53 个实际消息（方案附录 A 的顺序；用于校验提取结果）。
-EXPECTED_MESSAGES: List[str] = [
-    "MIB",
-    "SystemInformation",
-    "SIB1",
-    "RRCReject",
-    "RRCSetup",
-    "RRCReconfiguration",
-    "RRCResume",
-    "RRCRelease",
-    "RRCReestablishment",
-    "SecurityModeCommand",
-    "DLInformationTransfer",
-    "UECapabilityEnquiry",
-    "CounterCheck",
-    "MobilityFromNRCommand",
-    "DLDedicatedMessageSegment-r16",
-    "UEInformationRequest-r16",
-    "DLInformationTransferMRDC-r16",
-    "LoggedMeasurementConfiguration-r16",
-    "MBSBroadcastConfiguration-r17",
-    "MBSMulticastConfiguration-r18",
-    "Paging",
-    "RRCSetupRequest",
-    "RRCResumeRequest",
-    "RRCReestablishmentRequest",
-    "RRCSystemInfoRequest",
-    "RRCResumeRequest1",
-    "MeasurementReport",
-    "RRCReconfigurationComplete",
-    "RRCSetupComplete",
-    "RRCReestablishmentComplete",
-    "RRCResumeComplete",
-    "SecurityModeComplete",
-    "SecurityModeFailure",
-    "ULInformationTransfer",
-    "LocationMeasurementIndication",
-    "UECapabilityInformation",
-    "CounterCheckResponse",
-    "UEAssistanceInformation",
-    "FailureInformation",
-    "ULInformationTransferMRDC",
-    "SCGFailureInformation",
-    "SCGFailureInformationEUTRA",
-    "ULDedicatedMessageSegment-r16",
-    "DedicatedSIBRequest-r16",
-    "MCGFailureInformation-r16",
-    "UEInformationResponse-r16",
-    "SidelinkUEInformationNR-r16",
-    "ULInformationTransferIRAT-r16",
-    "IABOtherInformation-r16",
-    "MBSInterestIndication-r17",
-    "UEPositioningAssistanceInfo-r17",
-    "MeasurementReportAppLayer-r17",
-    "IndirectPathFailureInformation-r18",
-]
+#: 53 个实际消息的校验基线从 ``data/message-set.txt`` 读取（见 ``metadata`` 模块）。
+#: 提取本身按结构进行（10 个入口包装层中的具名 SEQUENCE 备选），基线只用于校验
+#: "实现提取结果与人工确认的清单一致"，因此消息集变化时可用 ``--update-baseline``
+#: 自动重写基线，人工只需 review diff。
 
 
 # ============================================================================
@@ -301,8 +249,16 @@ class StructDef:
 class CModel:
     """把 ResolvedModel 转换为 C 发射模型。"""
 
-    def __init__(self, model: ResolvedModel) -> None:
+    def __init__(
+        self,
+        model: ResolvedModel,
+        expected_messages: Optional[Sequence[str]] = None,
+    ) -> None:
         self.model = model
+        #: 消息集基线（None 表示只提取、不校验，供 --update-baseline 使用）。
+        self._expected_messages: Optional[List[str]] = (
+            list(expected_messages) if expected_messages is not None else None
+        )
         self.by_id: Dict[int, TypeModel] = {item.id: item for item in model.types}
         self.registry = cnames.NameRegistry()
         # 生成的名字映射
@@ -329,7 +285,7 @@ class CModel:
         self.stats: Dict[str, int] = {}
         self.renames: List[Tuple[str, str]] = []
 
-        self._message_type_names: Dict[str, TypeModel] = {}
+        self._wrapper_root_ids: Set[int] = set()
         self._cname_registered: Dict[int, str] = {}
         self._anon_visited: Set[int] = set()
         self._resolver = _TypeResolver(self)
@@ -399,7 +355,7 @@ class CModel:
 
     def _classify_wrapper_alt(self, field: FieldModel) -> str:
         target = self.by_id[field.type_id]
-        if target.asn_name in self._message_type_names:
+        if self._is_message_type(target):
             return "message:" + target.asn_name
         if target.kind == KIND_NULL:
             return "spare"
@@ -423,10 +379,9 @@ class CModel:
         return f"anon<{type_model.id}>"
 
     def _extract_messages(self) -> None:
-        self._message_type_names = {
-            type_model.asn_name: type_model
-            for type_model in self.model.types
-            if type_model.asn_name in EXPECTED_MESSAGES
+        # 10 个 Uu 口包装层入口：这些具名 SEQUENCE 只是容器，不是消息本身。
+        self._wrapper_root_ids = {
+            entry.root_type_id for entry in self.model.messages
         }
         # 按 IR messages 顺序（Value 1..10，对应方案附录 A 的信道顺序）遍历。
         ordered_messages = sorted(self.model.messages, key=lambda item: item.value)
@@ -436,15 +391,26 @@ class CModel:
             channel_value, channel_name = CHANNEL_BY_ACCESS_POINT[entry.access_point]
             root = self.by_id[entry.root_type_id]
             self._walk_wrapper(root, [], channel_value, channel_name)
-        if [m.asn_name for m in self.messages] != EXPECTED_MESSAGES:
-            actual = [m.asn_name for m in self.messages]
+        actual = [message.asn_name for message in self.messages]
+        if self._expected_messages is not None and actual != self._expected_messages:
             raise ValueError(
                 "message extraction mismatch:\n"
-                f"  expected {EXPECTED_MESSAGES}\n  actual   {actual}"
+                f"  expected {self._expected_messages}\n  actual   {actual}\n"
+                "  若消息集确实变化：用 --update-baseline 重写 data/message-set.txt"
             )
+        if len(actual) != len(set(actual)):
+            raise ValueError(f"duplicate messages extracted: {actual}")
         for value, message in enumerate(self.messages, start=1):
             message.kind_value = value
             message.kind_name = "MessageKind_" + cnames.type_name(message.asn_name)
+
+    def _is_message_type(self, type_model: TypeModel) -> bool:
+        """包装层中的具名 SEQUENCE 备选即实际消息（包装容器本身除外）。"""
+        return (
+            bool(type_model.asn_name)
+            and type_model.id not in self._wrapper_root_ids
+            and type_model.kind == KIND_SEQUENCE
+        )
 
     def _walk_wrapper(
         self,
@@ -453,7 +419,7 @@ class CModel:
         channel_value: int,
         channel_name: str,
     ) -> None:
-        if type_model.asn_name in self._message_type_names:
+        if self._is_message_type(type_model):
             self.messages.append(
                 MessageInfo(
                     kind_value=0,
@@ -1252,7 +1218,6 @@ def declaration_type(ref: TypeRef) -> str:
 __all__ = [
     "UINT32_MAX",
     "CHANNEL_BY_ACCESS_POINT",
-    "EXPECTED_MESSAGES",
     "PathLevel",
     "MessageInfo",
     "EnumConstant",

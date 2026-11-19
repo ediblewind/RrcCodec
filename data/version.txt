@@ -1,0 +1,5 @@
+# RrcCodec 版本单一来源（data/ 下所有元数据均为生成器/CMake 的输入）。
+# 第 1 个非注释行：库语义版本（major.minor.patch），同时作为 CMake project VERSION。
+# 第 2 个非注释行：C API 版本（仅在 8 个导出函数签名/语义变化时递增）。
+2.0.0
+1
