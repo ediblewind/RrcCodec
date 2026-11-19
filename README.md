@@ -119,7 +119,10 @@ cc app.c $(pkg-config --cflags --libs rrc_codec) -o app
 
 ## 文档
 
-- `docs/RRC编解码库简化方案.md` — 方案（v0.5）
+> `docs/` 为本地维护文档，**不入库**（已加入 `.gitignore`）；本地保留即可，
+> 仓库内交付物以代码、生成物与 `README`/`CHANGELOG` 为准。
+
+- `docs/RRC编解码库简化方案.md` — 方案（v0.5，本地）
 - `docs/接口规范.md` — 公共 API 规范
 - `docs/实现契约.md` — 生成器 / 手写核心 / 测试的接口契约
 - `docs/实现决策记录.md` — 实现决策与方案澄清（ADR）
@@ -138,6 +141,7 @@ tools/rrcgen/        ASN.1 前端 + C 发射器（开发期，不安装）
 tests/               单元 / 黄金向量 / 消息级 / 安装消费
 examples/            C99 与 C++17 示例
 data/                ASN.1 输入与 SHA-256
+docs/                本地文档（不入库）
 ci/                  CI 脚本与基线
 ```
 
