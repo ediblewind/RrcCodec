@@ -34,6 +34,7 @@
       "Channel": "ChannelType_BCCH_BCH",
       "ChannelValue": 1,
       "WrapperBits": 1,
+      "SchemaHash": "811fc6d9aa6d15b8",
       "Path": [
         {
           "Index": 0,
@@ -49,6 +50,7 @@
       "Channel": "ChannelType_BCCH_DL_SCH",
       "ChannelValue": 2,
       "WrapperBits": 2,
+      "SchemaHash": "10cd6f7013be02e6",
       "Path": [
         {
           "Index": 0,
@@ -68,6 +70,7 @@
       "Channel": "ChannelType_BCCH_DL_SCH",
       "ChannelValue": 2,
       "WrapperBits": 2,
+      "SchemaHash": "a68827c9e395b99f",
       "Path": [
         {
           "Index": 0,
@@ -87,6 +90,7 @@
       "Channel": "ChannelType_DL_CCCH",
       "ChannelValue": 3,
       "WrapperBits": 3,
+      "SchemaHash": "2dbe26393de7fca7",
       "Path": [
         {
           "Index": 0,
@@ -106,6 +110,7 @@
       "Channel": "ChannelType_DL_CCCH",
       "ChannelValue": 3,
       "WrapperBits": 3,
+      "SchemaHash": "6b9cf3ee23305118",
       "Path": [
         {
           "Index": 0,
@@ -125,6 +130,7 @@
       "Channel": "ChannelType_DL_DCCH",
       "ChannelValue": 4,
       "WrapperBits": 5,
+      "SchemaHash": "af5b36011ccaf7a4",
       "Path": [
         {
           "Index": 0,
@@ -144,6 +150,7 @@
       "Channel": "ChannelType_DL_DCCH",
       "ChannelValue": 4,
       "WrapperBits": 5,
+      "SchemaHash": "383a93246eedb975",
       "Path": [
         {
           "Index": 0,
@@ -163,6 +170,7 @@
       "Channel": "ChannelType_DL_DCCH",
       "ChannelValue": 4,
       "WrapperBits": 5,
+      "SchemaHash": "21ac49d341fe3c74",
       "Path": [
         {
           "Index": 0,
@@ -182,6 +190,7 @@
       "Channel": "ChannelType_DL_DCCH",
       "ChannelValue": 4,
       "WrapperBits": 5,
+      "SchemaHash": "c0f4f3c9bac68d9a",
       "Path": [
         {
           "Index": 0,
@@ -201,6 +210,7 @@
       "Channel": "ChannelType_DL_DCCH",
       "ChannelValue": 4,
       "WrapperBits": 5,
+      "SchemaHash": "91c09a4e39a491d6",
       "Path": [
         {
           "Index": 0,
@@ -220,6 +230,7 @@
       "Channel": "ChannelType_DL_DCCH",
       "ChannelValue": 4,
       "WrapperBits": 5,
+      "SchemaHash": "0d1371ff22a3c7c3",
       "Path": [
         {
           "Index": 0,
@@ -239,6 +250,7 @@
       "Channel": "ChannelType_DL_DCCH",
       "ChannelValue": 4,
       "WrapperBits": 5,
+      "SchemaHash": "bc052a6c88df66d4",
       "Path": [
         {
           "Index": 0,
@@ -258,6 +270,7 @@
       "Channel": "ChannelType_DL_DCCH",
       "ChannelValue": 4,
       "WrapperBits": 5,
+      "SchemaHash": "a840d1003054162c",
       "Path": [
         {
           "Index": 0,
@@ -277,6 +290,7 @@
       "Channel": "ChannelType_DL_DCCH",
       "ChannelValue": 4,
       "WrapperBits": 5,
+      "SchemaHash": "a9d1aeadc99411a3",
       "Path": [
         {
           "Index": 0,
@@ -296,6 +310,7 @@
       "Channel": "ChannelType_DL_DCCH",
       "ChannelValue": 4,
       "WrapperBits": 5,
+      "SchemaHash": "2c16668f9e62898f",
       "Path": [
         {
           "Index": 0,
@@ -315,6 +330,7 @@
       "Channel": "ChannelType_DL_DCCH",
       "ChannelValue": 4,
       "WrapperBits": 5,
+      "SchemaHash": "8797c7dd31be6ca3",
       "Path": [
         {
           "Index": 0,
@@ -334,6 +350,7 @@
       "Channel": "ChannelType_DL_DCCH",
       "ChannelValue": 4,
       "WrapperBits": 5,
+      "SchemaHash": "af198d9390420092",
       "Path": [
         {
           "Index": 0,
@@ -353,6 +370,7 @@
       "Channel": "ChannelType_DL_DCCH",
       "ChannelValue": 4,
       "WrapperBits": 5,
+      "SchemaHash": "9e0ad11cd7cc4af9",
       "Path": [
         {
           "Index": 0,
@@ -372,6 +390,7 @@
       "Channel": "ChannelType_MCCH_r17",
       "ChannelValue": 5,
       "WrapperBits": 2,
+      "SchemaHash": "22261c6af06af5a7",
       "Path": [
         {
           "Index": 0,
@@ -391,6 +410,7 @@
       "Channel": "ChannelType_MulticastMCCH_r18",
       "ChannelValue": 6,
       "WrapperBits": 2,
+      "SchemaHash": "283fae0da53dfebc",
       "Path": [
         {
           "Index": 0,
@@ -410,6 +430,7 @@
       "Channel": "ChannelType_PCCH",
       "ChannelValue": 7,
       "WrapperBits": 2,
+      "SchemaHash": "1c7d97a45650b881",
       "Path": [
         {
           "Index": 0,
@@ -429,6 +450,7 @@
       "Channel": "ChannelType_UL_CCCH",
       "ChannelValue": 8,
       "WrapperBits": 3,
+      "SchemaHash": "521f426e177e2bae",
       "Path": [
         {
           "Index": 0,
@@ -448,6 +470,7 @@
       "Channel": "ChannelType_UL_CCCH",
       "ChannelValue": 8,
       "WrapperBits": 3,
+      "SchemaHash": "6a795a8cdf84386a",
       "Path": [
         {
           "Index": 0,
@@ -467,6 +490,7 @@
       "Channel": "ChannelType_UL_CCCH",
       "ChannelValue": 8,
       "WrapperBits": 3,
+      "SchemaHash": "2cf1f9ede149e64b",
       "Path": [
         {
           "Index": 0,
@@ -486,6 +510,7 @@
       "Channel": "ChannelType_UL_CCCH",
       "ChannelValue": 8,
       "WrapperBits": 3,
+      "SchemaHash": "c7095f3712e3894c",
       "Path": [
         {
           "Index": 0,
@@ -505,6 +530,7 @@
       "Channel": "ChannelType_UL_CCCH1",
       "ChannelValue": 9,
       "WrapperBits": 3,
+      "SchemaHash": "44c641390e83af44",
       "Path": [
         {
           "Index": 0,
@@ -524,6 +550,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 5,
+      "SchemaHash": "5b15027205c30dad",
       "Path": [
         {
           "Index": 0,
@@ -543,6 +570,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 5,
+      "SchemaHash": "5f9cffc1ce7f0d3d",
       "Path": [
         {
           "Index": 0,
@@ -562,6 +590,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 5,
+      "SchemaHash": "85b018910dd689cf",
       "Path": [
         {
           "Index": 0,
@@ -581,6 +610,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 5,
+      "SchemaHash": "e73c3869117426be",
       "Path": [
         {
           "Index": 0,
@@ -600,6 +630,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 5,
+      "SchemaHash": "e10dac71f3167968",
       "Path": [
         {
           "Index": 0,
@@ -619,6 +650,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 5,
+      "SchemaHash": "88e5e38504d05324",
       "Path": [
         {
           "Index": 0,
@@ -638,6 +670,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 5,
+      "SchemaHash": "bae29da058ea6170",
       "Path": [
         {
           "Index": 0,
@@ -657,6 +690,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 5,
+      "SchemaHash": "02276abed53b35c6",
       "Path": [
         {
           "Index": 0,
@@ -676,6 +710,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 5,
+      "SchemaHash": "c47d244e2aeb3b6a",
       "Path": [
         {
           "Index": 0,
@@ -695,6 +730,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 5,
+      "SchemaHash": "4264cb9f10d39555",
       "Path": [
         {
           "Index": 0,
@@ -714,6 +750,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 5,
+      "SchemaHash": "d0d12deb12bbeec3",
       "Path": [
         {
           "Index": 0,
@@ -733,6 +770,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 5,
+      "SchemaHash": "b2a5ecf2c1449cd7",
       "Path": [
         {
           "Index": 0,
@@ -752,6 +790,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 5,
+      "SchemaHash": "c7ebf27f2a7bbea5",
       "Path": [
         {
           "Index": 0,
@@ -771,6 +810,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 5,
+      "SchemaHash": "e24a288166066a4b",
       "Path": [
         {
           "Index": 0,
@@ -790,6 +830,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 5,
+      "SchemaHash": "a2ee9ce7f2d7d60f",
       "Path": [
         {
           "Index": 0,
@@ -809,6 +850,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 5,
+      "SchemaHash": "8ea07a42b41696a2",
       "Path": [
         {
           "Index": 0,
@@ -828,6 +870,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 6,
+      "SchemaHash": "92c941c9763da402",
       "Path": [
         {
           "Index": 1,
@@ -851,6 +894,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 6,
+      "SchemaHash": "b66356d3e181f99c",
       "Path": [
         {
           "Index": 1,
@@ -874,6 +918,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 6,
+      "SchemaHash": "f883ba6c5013ba90",
       "Path": [
         {
           "Index": 1,
@@ -897,6 +942,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 6,
+      "SchemaHash": "cf65f6a16ea196f8",
       "Path": [
         {
           "Index": 1,
@@ -920,6 +966,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 6,
+      "SchemaHash": "cff9db6ac1a52611",
       "Path": [
         {
           "Index": 1,
@@ -943,6 +990,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 6,
+      "SchemaHash": "1acd6c341f08402f",
       "Path": [
         {
           "Index": 1,
@@ -966,6 +1014,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 6,
+      "SchemaHash": "78f54f4c140bc1f4",
       "Path": [
         {
           "Index": 1,
@@ -989,6 +1038,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 6,
+      "SchemaHash": "8b6eb44d7ed19f73",
       "Path": [
         {
           "Index": 1,
@@ -1012,6 +1062,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 6,
+      "SchemaHash": "8b2199b633424a04",
       "Path": [
         {
           "Index": 1,
@@ -1035,6 +1086,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 6,
+      "SchemaHash": "3ee3258d871ef458",
       "Path": [
         {
           "Index": 1,
@@ -1058,6 +1110,7 @@
       "Channel": "ChannelType_UL_DCCH",
       "ChannelValue": 10,
       "WrapperBits": 6,
+      "SchemaHash": "3333ef0eac252b1a",
       "Path": [
         {
           "Index": 1,

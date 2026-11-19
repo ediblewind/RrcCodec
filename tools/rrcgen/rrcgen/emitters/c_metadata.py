@@ -13,11 +13,12 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
-from typing import List
+from typing import List, Optional
 
 from .. import VERSION
-from ..cmodel import CModel
+from ..cmodel import CModel, FieldLayout, StructDef
 from ..metadata import parse_semver
 from .c_common import generated_banner
 
@@ -97,6 +98,66 @@ def _wrapper_bits(message) -> int:
     return bits
 
 
+def _field_signature(field: FieldLayout) -> str:
+    """字段布局签名（名称/C 类型/presence/约束），用于迁移期结构变化比对。"""
+    ref = field.ref
+    parts = [
+        field.asn_name,
+        field.cname,
+        ref.kind,
+        ref.decl_type(),
+        "optional" if field.optional else "mandatory",
+        field.has_name,
+        field.default_expr or "",
+        "direct" if field.is_direct_addition else "",
+        f"{ref.integer_lb}:{ref.integer_ub}:{int(ref.integer_single)}",
+        f"{ref.size_lb}:{ref.size_ub}:{int(ref.size_fixed)}:{int(ref.size_unbounded)}",
+    ]
+    if ref.element is not None:
+        parts.append("element=" + ref.element.decl_type())
+    if ref.struct is not None:
+        parts.append("struct=" + ref.struct.cname)
+    return "|".join(parts)
+
+
+def _struct_signature(struct: Optional[StructDef]) -> str:
+    if struct is None:
+        return "missing"
+    parts = [
+        struct.kind,
+        struct.cname,
+        "extensible" if struct.extensible else "closed",
+        f"root={struct.root_count}",
+        f"ext={struct.extension_count}",
+    ]
+    if struct.kind == "seqof":
+        parts.append("element=" + struct.element.decl_type() if struct.element else "")
+        parts.append(
+            f"{struct.size_lb}:{struct.size_ub}:{int(struct.size_fixed)}:"
+            f"{int(struct.size_unbounded)}"
+        )
+        return "|".join(parts)
+    for field in struct.root_fields:
+        parts.append("field:" + _field_signature(field))
+    for field in struct.direct_additions:
+        parts.append("addition:" + _field_signature(field))
+    for group in struct.group_defs:
+        parts.append("group:" + group.cname)
+        for field in group.fields:
+            parts.append("  field:" + _field_signature(field))
+    for alternative in struct.alternatives:
+        parts.append(
+            "alt:" + _field_signature(alternative) + "|tag=" + alternative.tag_constant
+        )
+    return "|".join(parts)
+
+
+def _schema_hash(cmodel: CModel, type_id: int) -> str:
+    """消息结构自身布局的稳定哈希（嵌套类型单独由类型清单覆盖）。"""
+    signature = _struct_signature(cmodel.struct_defs.get(type_id))
+    return hashlib.sha256(signature.encode("utf-8")).hexdigest()[:16]
+
+
 def _message_records(cmodel: CModel) -> List[dict]:
     return [
         {
@@ -107,6 +168,7 @@ def _message_records(cmodel: CModel) -> List[dict]:
             "Channel": message.channel_name,
             "ChannelValue": message.channel_value,
             "WrapperBits": _wrapper_bits(message),
+            "SchemaHash": _schema_hash(cmodel, message.type_id),
             "Path": [
                 {"Index": level.index, "Count": level.count}
                 for level in message.path

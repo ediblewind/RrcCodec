@@ -203,6 +203,9 @@ class CModelTest(unittest.TestCase):
             [item["AsnName"] for item in manifest["Messages"]],
             _EXPECTED_MESSAGES,
         )
+        schema_hashes = [item["SchemaHash"] for item in manifest["Messages"]]
+        self.assertTrue(all(len(value) == 16 for value in schema_hashes))
+        self.assertEqual(len(schema_hashes), len(set(schema_hashes)))
 
         dispatch = emit_dispatch_include(self.cmodel)
         entries = [
