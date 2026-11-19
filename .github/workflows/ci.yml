@@ -20,7 +20,7 @@ jobs:
         run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DRRC_CODEC_WARNINGS_AS_ERRORS=ON
       - name: Build
         run: cmake --build build --parallel 8
-      - name: Test (ctest: unit/golden/messages/install/headers/examples)
+      - name: "Test (ctest: unit/golden/messages/install/headers/examples)"
         run: ctest --test-dir build --output-on-failure
       - name: Generator unit tests
         working-directory: tools/rrcgen
