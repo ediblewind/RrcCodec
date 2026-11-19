@@ -87,6 +87,117 @@ cmake --install build --prefix install
 要求：CMake ≥ 3.20、C++17 编译器（GCC/Clang/MSVC/MinGW）。库本身用 C++17 构建，
 公共头为 C99；C 消费方无需 C++ 源文件。
 
+## 重新生成与 ASN.1 迁移
+
+如果只需要使用本库，不需要关心本节。如果你需要修改或升级 ASN.1（例如裁剪不需要
+的消息、增加私有扩展、升级 38.331 版本），则必须重新生成库的 C 类型与编解码代码。
+
+### 为什么需要重新生成
+
+库的协议定义只来自 ASN.1 文件（`data/38.331_v*.asn`）。所有结构体、枚举和编解码
+函数都由生成器 `tools/rrcgen` 从该文件一次性生成，并**作为普通源码随仓库入库**：
+这样使用库时只需 C/C++ 编译器，不需要 Python 或 ASN.1 工具链。
+
+因此：
+
+- 不修改 ASN.1，只是使用库或改自己的业务代码：**不需要重新生成**；
+- 修改/替换了 `data/38.331_v*.asn`（升级版本、裁剪消息、加私有扩展等）：
+  **必须重新生成**，否则生成物与协议输入不一致；
+- 生成物必须与输入一致。`--check` 会逐字节校验，拦截“改了 ASN.1 却忘记重新
+  生成”和“手改生成物”两类错误。
+
+### 修改 ASN.1 之后需要做哪些事
+
+前置条件：Python 3.8+（仅重新生成时需要）。
+
+1. **更新输入与元数据**
+   - 把新的 `38.331_v<版本>.asn` 放进 `data/`；
+   - 更新 `data/asn-version.txt`；
+   - 更新 `data/asn-input.sha256`（`sha256sum` 格式）；
+   - 若消息集发生变化，在第 2 步生成时加 `--update-baseline`，它会重写
+     `data/message-set.txt`；完成后 review 该文件的 diff。
+2. **重新生成全部生成物**（二选一）：
+
+   ```powershell
+   # 方式一：CMake 目标
+   cmake -S . -B build -DRRC_CODEC_REGENERATE=ON
+   cmake --build build --target rrc_codec_regenerate
+
+   # 方式二：直接调用生成器（--input 支持版本通配）
+   cd tools/rrcgen
+   python -m rrcgen --input ../../data/38.331_v*.asn `
+       --check-input-sha256 ../../data/asn-input.sha256 --repo-root ../..
+   ```
+
+3. **校验生成物**：
+
+   ```powershell
+   python -m rrcgen --input ../../data/38.331_v*.asn ... --check
+   ```
+
+4. **编译并处理受影响的手写代码/测试**（以编译错误和迁移报告为准）：
+   - `tests/golden/` 的 MIB 黄金向量与字段断言（MIB 变化时需用参考实现重算）；
+   - `examples/`、`tests/install/` 的 MIB 构造与断言；
+   - `tests/messages/` 中针对具体消息/字段的用例；
+   - `tools/rrcgen/tests/` 的硬编码预期（包装路径、统计数字、命名示例）；
+   - README/文档中的版本号、消息数与统计数字。
+5. **决定并更新版本**
+   - ASN.1 升级视为 ABI 破坏：决定 `data/version.txt` 是否升主版本；
+   - 更新 `CHANGELOG.md` 与对外说明。
+6. **全量验证**
+   - 构建 + `ctest`，或直接运行 `ci/ci-windows.ps1` / `ci/ci-linux.sh`；
+   - 确认 `--check` 通过。
+7. **保存或提交**
+   - 若在仓库内维护：生成物、`data/` 输入与元数据、手写修改一起提交；
+   - 仅本地实验：至少保证生成物与 `data/` 输入一致，便于下次重建。
+
+### 重新生成的影响与生成产物
+
+生成器会整体重写以下文件，**请勿手工修改**：
+
+| 位置 | 内容 |
+|---|---|
+| `include/rrc_codec/types/rrc_types*.h` | 全部结构体/枚举/别名与类型注释 |
+| `include/rrc_codec/messages/rrc_messages.h` | `MessageKind`、消息数量宏、信道映射 |
+| `include/rrc_codec/rrc_version.h` | 库版本 / ASN.1 版本宏（来自 `data/` 单一来源） |
+| `src/generated/codec_internal.h`、`codec_partNNN.cpp` | 全部编解码函数 |
+| `generated/` | `Sources.cmake`、统计、消息索引、`rrc_manifest.json`、dispatch 清单 |
+| `tests/generated/` | 消息样例构造器与测试用消息清单 |
+
+影响：
+
+- 生成头文件变化会让包含它们的代码与测试重新编译；
+- 公共结构体/枚举随 ASN.1 变化时属于 **ABI 变化**，使用本库的程序需要重新编译；
+  ASN.1 版本升级按版本策略视为 ABI 破坏；
+- 消息集/字段变化可能使自带示例、测试或黄金向量编译失败或断言失配，需要按上面
+  第 4 步人工同步；
+- 若 ASN.1 未变化，重新生成应得到逐字节相同的结果（幂等）。
+
+手写部分（`src/core/`、手写公共头、CMake、手写测试/示例）不会被生成器修改。
+版本号、ASN.1 版本、消息集基线等输入统一放在 `data/`（`version.txt`、
+`asn-version.txt`、`message-set.txt`、`asn-input.sha256`），生成器与 CMake
+都从这里读取，避免多处手写。
+
+### 可选：用一键迁移工具减少手工步骤
+
+`tools/update_asn.py` 可以代替上面第 1–3 步中机械的部分：
+
+```powershell
+# 要求 git 工作区干净；版本号可从文件名推断
+python tools/update_asn.py path/to/38.331_v19.0.0.asn
+
+# 同时升库语义版本（否则保持当前版本）
+python tools/update_asn.py new.asn --library-version 3.0.0
+```
+
+它自动更新 `data/` 并重新生成、运行 `--check`，同时输出
+`generated/MIGRATION_NOTES.md`，供你完成第 4–5 步的判断：消息集增删/序号漂移、
+结构（`SchemaHash`）/信道/包装位变化、统计变化、生成物变更清单、自动检索到的
+受影响手写文件，以及仍需人工处理的 checklist 和回滚命令。生成失败时脚本会回滚
+`data/`。
+
+工具不替代人工 review、版本决策与提交：**第 4–7 步仍需使用者完成**。
+
 ## 安装后消费
 
 ```cmake
