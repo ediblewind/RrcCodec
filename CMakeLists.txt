@@ -112,6 +112,12 @@ else()
   endif()
 endif()
 
+# sanitizer 运行时不在静态库里：测试/示例等后续目标也要带同样的编译与链接选项。
+if(NOT MSVC AND RRC_CODEC_ENABLE_SANITIZERS)
+  add_compile_options(-fsanitize=address,undefined -fno-omit-frame-pointer)
+  add_link_options(-fsanitize=address,undefined)
+endif()
+
 # 生成代码优先编译速度与体积
 if(NOT MSVC AND RRC_CODEC_GENERATED_SOURCES)
   set_source_files_properties(${RRC_CODEC_GENERATED_SOURCES} PROPERTIES

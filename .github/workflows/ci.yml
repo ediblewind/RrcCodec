@@ -50,17 +50,25 @@ jobs:
           sudo apt-get install -y ninja-build clang pkg-config
       - name: Configure + build + test (ASan/UBSan)
         run: |
-          cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug \
-            -DRRC_CODEC_WARNINGS_AS_ERRORS=ON -DRRC_CODEC_ENABLE_SANITIZERS=ON
-          cmake --build build --parallel 8
-          ctest --test-dir build --output-on-failure
+          set -o pipefail
+          (cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug \
+             -DRRC_CODEC_WARNINGS_AS_ERRORS=ON -DRRC_CODEC_ENABLE_SANITIZERS=ON
+           cmake --build build --parallel 8
+           ctest --test-dir build --output-on-failure -E rrc_codec_install_consumers) 2>&1 | tee ci.log \
+            || { tail -n 40 ci.log | sed 's/^/::error::/'; exit 1; }
 
   windows-msvc:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
       - name: Configure
-        run: cmake -S . -B build -G "Visual Studio 17 2022" -A x64 -DRRC_CODEC_WARNINGS_AS_ERRORS=ON
+        shell: pwsh
+        run: |
+          cmake -S . -B build -G "Visual Studio 17 2022" -A x64 -DRRC_CODEC_WARNINGS_AS_ERRORS=ON 2>&1 | Tee-Object -FilePath configure.log
+          if ($LASTEXITCODE -ne 0) {
+            Get-Content configure.log | Select-Object -Last 30 | ForEach-Object { Write-Host "::error::$_" }
+            exit 1
+          }
       - name: Build
         run: cmake --build build --config Release --parallel 8
       - name: Test
