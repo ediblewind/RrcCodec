@@ -17,6 +17,10 @@
   `RRC_CODEC_VERSION_STRING` / `RRC_CODEC_ASN1_VERSION_STRING` 宏。
 - **生成器**：消息提取改为结构遍历（`data/message-set.txt` 仅作基线校验），
   新增 `--update-baseline` 自动维护消息集基线；`--input` 支持版本通配。
+- **一键迁移（ADR-014）**：新增 `tools/update_asn.py`，自动更新 `data/` 单一来源
+  （SHA、ASN.1 版本、可选库版本）、重生成、比对新旧 manifest 并输出
+  `generated/MIGRATION_NOTES.md`（消息/结构/统计变化、受影响手写文件、人工清单、
+  回滚命令）；失败自动回滚 `data/`。`rrc_manifest.json` 每条消息新增 `SchemaHash`。
 
 ### 说明
 

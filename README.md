@@ -95,6 +95,17 @@ python -m rrcgen --input ../../data/38.331_v*.asn ... --update-baseline
 `data/message-set.txt`；生成器据此产出 `rrc_version.h`、`generated/rrc_manifest.json`、
 `generated/message_dispatch.inc` 与测试用消息清单，避免多处手写同步。
 
+### ASN.1 迁移（一键）
+
+```powershell
+# 换版本：自动更新 data/、重生成并输出迁移报告（要求 git 工作区干净）
+python tools/update_asn.py path/to/38.331_v19.0.0.asn
+python tools/update_asn.py new.asn --library-version 3.0.0   # 同时升库版本
+```
+
+脚本生成 `generated/MIGRATION_NOTES.md`：消息集/结构/统计变化、生成物变更、
+受影响手写文件、仍需人工 review 的清单与回滚命令。失败时自动回滚 `data/`。
+
 ## 安装后消费
 
 ```cmake
