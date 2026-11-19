@@ -113,23 +113,24 @@ cmake --install build --prefix install
 
 1. **运行一键迁移**
 
-   ```powershell
-   # 要求 git 工作区干净；版本号可从文件名推断
-   python tools/update_asn.py path/to/38.331_v19.0.0.asn
+   基本用法（ASN.1 版本从文件名推断）：
 
-   # 同时升库语义版本（否则保持当前版本）
-   python tools/update_asn.py new.asn --library-version 3.0.0
+   ```powershell
+   python tools/update_asn.py path/to/38.331_v19.0.0.asn
    ```
 
-   参数说明：
+   常用写法与作用：
 
-   | 参数/选项 | 说明 |
+   | 命令 | 作用 |
    |---|---|
-   | `asn`（位置参数） | 新的 ASN.1 文件路径；脚本会把它作为 `data/38.331_v<版本>.asn` 落盘 |
-   | `--module-version X.Y.Z` | 显式指定 ASN.1 版本；默认从文件名推断（需形如 `38.331_v19.0.0.asn`） |
-   | `--library-version X.Y.Z` | 同时更新库语义版本（`data/version.txt`）；不传则保持当前版本 |
-   | `--allow-dirty` | 允许 git 工作区不干净（默认要求干净，便于 diff 与回滚）；脏工作区下不自动用 git 回滚生成物 |
-   | `-h` / `--help` | 查看帮助 |
+   | `python tools/update_asn.py <新ASN文件>` | 基本用法；ASN.1 版本从文件名推断，库版本保持不变 |
+   | `python tools/update_asn.py <新ASN文件> --module-version 19.0.0` | 文件名不含版本号时，显式指定 ASN.1 版本 |
+   | `python tools/update_asn.py <新ASN文件> --library-version 3.0.0` | 同时更新库语义版本（`data/version.txt`） |
+   | `python tools/update_asn.py <新ASN文件> --allow-dirty` | 工作区不干净时仍执行；此时不自动用 git 回滚生成物 |
+   | `python tools/update_asn.py -h` | 查看完整帮助 |
+
+   位置参数 `<新ASN文件>` 是新的 ASN.1 文件路径；默认要求 git 工作区干净，便于
+   diff 与回滚。
 
    脚本会自动：
    - 把新输入落盘为 `data/38.331_v<版本>.asn`，并删除旧输入；
