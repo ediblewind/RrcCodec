@@ -17,19 +17,6 @@ RrcCodec 是 3GPP TS 38.331（`NR-RRC-Definitions`，v18.10.0）RRC 消息的 UP
   `GetLastErrorInfo` / `SetErrorHandler` / `GetVersionString` / `GetAsn1VersionString`。
 - **一条生成链路**：ASN.1 → C 类型头 + 专用编解码函数 → 手写 PER 原语。
 
-## 状态
-
-| 项 | 结果 |
-|---|---|
-| 53 个消息 round-trip | 53/53 通过 |
-| MIB/BCCH-BCH 黄金向量 `5471ac` | 通过 |
-| CONTAINING 自动解析 + 深度上限 | 通过 |
-| 安装消费（find_package / pkg-config / add_subdirectory） | 通过（本机 pkg-config 缺失时自动跳过该项） |
-| 公共头 C99 / C++17 | 通过 |
-| 生成物可复现 | 通过 |
-| 全量构建（8 并发，Release，含测试/示例） | ≈ 9 s |
-| 静态库 / 共享库（Release，MinGW） | 8.34 MiB / 5.24 MiB |
-
 ## 快速开始（C99）
 
 ```c
@@ -60,6 +47,35 @@ DecodeMessage(ChannelType_BCCH_BCH, MessageKind_MIB,
 FreeMessage(MessageKind_MIB, &decoded);
 FreeEncodedMessage(&encoded);
 ```
+
+### 使用要点（所有权与释放）
+
+- **编码输入由调用方持有**：`EncodeMessage` 只读结构体，不接管任何指针。结构体里
+  你自己 `malloc` 的 `BitString.bytes` / `OctetString.bytes` / `SEQUENCE OF.items` /
+  `CONTAINING` 内层对象，需要你自己释放；示例使用静态缓冲，因此无需释放。
+- **编码结果由库分配**：`encoded.data` 是库 `malloc` 的，使用完必须调用
+  `FreeEncodedMessage(&encoded)`，不能直接 `free(encoded.data)`。
+- **解码结果由库分配**：`DecodeMessage` 成功后，输出结构体中的 `SEQUENCE OF` 数组、
+  `BIT/OCTET STRING` 字节、`CONTAINING` 内层结构体都由库分配，必须调用
+  `FreeMessage(kind, &decoded)` 递归释放。解码失败时库已释放并清零输出，不需要
+  再调用 `FreeMessage`。
+- **释放函数不可混用**：`FreeMessage` 只用于解码结果（对调用方自建的结构体调用会
+  释放非法指针）；`FreeEncodedMessage` 只用于库返回的 `EncodedMessage`。
+- **信道必须匹配**：`DecodeMessage` 的 `channel` 必须等于
+  `ChannelOfMessageKind(kind)`，否则返回 `ChannelMismatch`；编码时信道由 `kind`
+  自动确定。
+- **编码前填好必填字段**：位串要给 `bytes` + `bitLength`，`SEQUENCE OF` 要给
+  `items` + `count`，`CHOICE` 要给 `tag` 与实际选中的 union 成员；解码前输出结构体
+  建议先清零（库内部也会清零）。
+- **错误处理**：返回非 `ErrorCode_Ok` 时用 `GetLastErrorInfo` 取
+  `code` / `channel` / `bitOffset`；失败时 `encoded` 已被清零。
+- **不要浅拷贝含指针的结构体**：直接赋值会造成同一指针被释放两次；需要复制时请
+  自行深拷贝，或只移动所有权。
+- **线程模型**：库无全局可变状态，错误信息按线程保存（thread-local），不同线程可
+  并发处理各自的消息；同一结构体不得被并发读写。
+- **输入上限**：解码输入不超过 `RRC_CODEC_MAX_INPUT_BYTES`（默认 16 MiB），
+  `CONTAINING` 嵌套不超过 `RRC_CODEC_MAX_CONTAINING_DEPTH`（默认 16）；
+  可在 CMake 配置阶段覆盖。
 
 ## 构建
 
