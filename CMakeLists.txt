@@ -8,7 +8,15 @@
 # ============================================================================
 cmake_minimum_required(VERSION 3.20)
 
-project(RrcCodec VERSION 2.0.0 LANGUAGES C CXX)
+# 版本单一来源：data/version.txt 第 1 个版本行（生成器读写同一文件）。
+get_filename_component(RRC_CODEC_REPO_ROOT "${CMAKE_CURRENT_LIST_FILE}" DIRECTORY)
+file(STRINGS "${RRC_CODEC_REPO_ROOT}/data/version.txt"
+     RRC_CODEC_PROJECT_VERSION REGEX "^[0-9]+\\.[0-9]+\\.[0-9]+$" LIMIT_COUNT 1)
+if(NOT RRC_CODEC_PROJECT_VERSION)
+  message(FATAL_ERROR "data/version.txt 缺少语义版本行（如 2.0.0）")
+endif()
+
+project(RrcCodec VERSION ${RRC_CODEC_PROJECT_VERSION} LANGUAGES C CXX)
 
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
@@ -118,9 +126,17 @@ endif()
 # ---------------------------------------------------------------------------
 if(RRC_CODEC_REGENERATE)
   find_package(Python3 3.8 REQUIRED COMPONENTS Interpreter)
+  # 输入文件按版本通配：升级 ASN.1 只需替换 data/ 下的文件，不用改 CMake。
+  file(GLOB RRC_CODEC_ASN_INPUTS CONFIGURE_DEPENDS
+       "${CMAKE_CURRENT_SOURCE_DIR}/data/38.331_v*.asn")
+  list(LENGTH RRC_CODEC_ASN_INPUTS RRC_CODEC_ASN_INPUT_COUNT)
+  if(NOT RRC_CODEC_ASN_INPUT_COUNT EQUAL 1)
+    message(FATAL_ERROR
+      "data/ 下必须恰好有 1 个 38.331_v*.asn 输入（当前 ${RRC_CODEC_ASN_INPUT_COUNT} 个）")
+  endif()
   add_custom_target(rrc_codec_regenerate
     COMMAND ${Python3_EXECUTABLE} -m rrcgen
-            --input "${CMAKE_CURRENT_SOURCE_DIR}/data/38.331_v18.10.0.asn"
+            --input "${RRC_CODEC_ASN_INPUTS}"
             --check-input-sha256 "${CMAKE_CURRENT_SOURCE_DIR}/data/asn-input.sha256"
             --repo-root "${CMAKE_CURRENT_SOURCE_DIR}"
     WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/tools/rrcgen"

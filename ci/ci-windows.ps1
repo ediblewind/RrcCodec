@@ -83,7 +83,7 @@ try {
   Invoke-Step 'Generated code consistency (rrcgen --check)' {
     Push-Location (Join-Path $RepoRoot 'tools\rrcgen')
     try {
-      python -m rrcgen --input (Join-Path $RepoRoot 'data\38.331_v18.10.0.asn') `
+      python -m rrcgen --input (Join-Path $RepoRoot 'data\38.331_v*.asn') `
         --check-input-sha256 (Join-Path $RepoRoot 'data\asn-input.sha256') `
         --repo-root $RepoRoot --check
       if ($LASTEXITCODE -ne 0) { throw 'generated code differs from repository' }

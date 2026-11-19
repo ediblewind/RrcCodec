@@ -57,8 +57,9 @@ bool BuildGoldenMib(MIB& mib) {
 }
 
 void TestVersionAndNullSafety() {
-  CHECK(std::strcmp(GetVersionString(), "2.0.0") == 0);
-  CHECK(std::strcmp(GetAsn1VersionString(), "18.10.0") == 0);
+  /* 期望值来自生成头的版本宏（单一来源：data/version.txt + data/asn-version.txt）。 */
+  CHECK(std::strcmp(GetVersionString(), RRC_CODEC_VERSION_STRING) == 0);
+  CHECK(std::strcmp(GetAsn1VersionString(), RRC_CODEC_ASN1_VERSION_STRING) == 0);
   FreeEncodedMessage(nullptr); /* 空操作 */
   FreeMessage(MessageKind_MIB, nullptr);
   SetErrorHandler(nullptr, nullptr); /* 接口预留：只保存，不触发 */

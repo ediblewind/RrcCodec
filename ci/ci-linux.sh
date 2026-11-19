@@ -49,7 +49,7 @@ python3 -m unittest discover -s "${REPO_ROOT}/tools/rrcgen/tests"
 echo "== Generated code consistency =="
 (
   cd "${REPO_ROOT}/tools/rrcgen"
-  python3 -m rrcgen --input "${REPO_ROOT}/data/38.331_v18.10.0.asn" \
+  python3 -m rrcgen --input "${REPO_ROOT}/data/38.331_v*.asn" \
     --check-input-sha256 "${REPO_ROOT}/data/asn-input.sha256" \
     --repo-root "${REPO_ROOT}" --check
 )

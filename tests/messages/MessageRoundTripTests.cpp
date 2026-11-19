@@ -6,6 +6,7 @@
  * 范围内的最小值，必填 CONTAINING 指针递归构造内层对象，OPTIONAL 留空
  * （depth==0 的 optional CONTAINING 填一个样例以覆盖开放类型）。
  */
+#include "message_manifest.h"
 #include "message_samples.h"
 
 #include <rrc_codec/rrc_codec.h>
@@ -61,69 +62,11 @@ struct AlignedBuffer {
   AlignedBuffer& operator=(const AlignedBuffer&) = delete;
 };
 
-const char* KindName(MessageKind kind) {
-  switch (kind) {
-    case MessageKind_MIB: return "MIB";
-    case MessageKind_SystemInformation: return "SystemInformation";
-    case MessageKind_SIB1: return "SIB1";
-    case MessageKind_RRCReject: return "RRCReject";
-    case MessageKind_RRCSetup: return "RRCSetup";
-    case MessageKind_RRCReconfiguration: return "RRCReconfiguration";
-    case MessageKind_RRCResume: return "RRCResume";
-    case MessageKind_RRCRelease: return "RRCRelease";
-    case MessageKind_RRCReestablishment: return "RRCReestablishment";
-    case MessageKind_SecurityModeCommand: return "SecurityModeCommand";
-    case MessageKind_DLInformationTransfer: return "DLInformationTransfer";
-    case MessageKind_UECapabilityEnquiry: return "UECapabilityEnquiry";
-    case MessageKind_CounterCheck: return "CounterCheck";
-    case MessageKind_MobilityFromNRCommand: return "MobilityFromNRCommand";
-    case MessageKind_DLDedicatedMessageSegment_r16: return "DLDedicatedMessageSegment-r16";
-    case MessageKind_UEInformationRequest_r16: return "UEInformationRequest-r16";
-    case MessageKind_DLInformationTransferMRDC_r16: return "DLInformationTransferMRDC-r16";
-    case MessageKind_LoggedMeasurementConfiguration_r16: return "LoggedMeasurementConfiguration-r16";
-    case MessageKind_MBSBroadcastConfiguration_r17: return "MBSBroadcastConfiguration-r17";
-    case MessageKind_MBSMulticastConfiguration_r18: return "MBSMulticastConfiguration-r18";
-    case MessageKind_Paging: return "Paging";
-    case MessageKind_RRCSetupRequest: return "RRCSetupRequest";
-    case MessageKind_RRCResumeRequest: return "RRCResumeRequest";
-    case MessageKind_RRCReestablishmentRequest: return "RRCReestablishmentRequest";
-    case MessageKind_RRCSystemInfoRequest: return "RRCSystemInfoRequest";
-    case MessageKind_RRCResumeRequest1: return "RRCResumeRequest1";
-    case MessageKind_MeasurementReport: return "MeasurementReport";
-    case MessageKind_RRCReconfigurationComplete: return "RRCReconfigurationComplete";
-    case MessageKind_RRCSetupComplete: return "RRCSetupComplete";
-    case MessageKind_RRCReestablishmentComplete: return "RRCReestablishmentComplete";
-    case MessageKind_RRCResumeComplete: return "RRCResumeComplete";
-    case MessageKind_SecurityModeComplete: return "SecurityModeComplete";
-    case MessageKind_SecurityModeFailure: return "SecurityModeFailure";
-    case MessageKind_ULInformationTransfer: return "ULInformationTransfer";
-    case MessageKind_LocationMeasurementIndication: return "LocationMeasurementIndication";
-    case MessageKind_UECapabilityInformation: return "UECapabilityInformation";
-    case MessageKind_CounterCheckResponse: return "CounterCheckResponse";
-    case MessageKind_UEAssistanceInformation: return "UEAssistanceInformation";
-    case MessageKind_FailureInformation: return "FailureInformation";
-    case MessageKind_ULInformationTransferMRDC: return "ULInformationTransferMRDC";
-    case MessageKind_SCGFailureInformation: return "SCGFailureInformation";
-    case MessageKind_SCGFailureInformationEUTRA: return "SCGFailureInformationEUTRA";
-    case MessageKind_ULDedicatedMessageSegment_r16: return "ULDedicatedMessageSegment-r16";
-    case MessageKind_DedicatedSIBRequest_r16: return "DedicatedSIBRequest-r16";
-    case MessageKind_MCGFailureInformation_r16: return "MCGFailureInformation-r16";
-    case MessageKind_UEInformationResponse_r16: return "UEInformationResponse-r16";
-    case MessageKind_SidelinkUEInformationNR_r16: return "SidelinkUEInformationNR-r16";
-    case MessageKind_ULInformationTransferIRAT_r16: return "ULInformationTransferIRAT-r16";
-    case MessageKind_IABOtherInformation_r16: return "IABOtherInformation-r16";
-    case MessageKind_MBSInterestIndication_r17: return "MBSInterestIndication-r17";
-    case MessageKind_UEPositioningAssistanceInfo_r17: return "UEPositioningAssistanceInfo-r17";
-    case MessageKind_MeasurementReportAppLayer_r17: return "MeasurementReportAppLayer-r17";
-    case MessageKind_IndirectPathFailureInformation_r18: return "IndirectPathFailureInformation-r18";
-    default: return "?";
-  }
-}
-
 void TestAllMessagesRoundTrip() {
-  for (int value = 1; value <= 53; ++value) {
-    const MessageKind kind = static_cast<MessageKind>(value);
-    const char* name = KindName(kind);
+  for (std::size_t index = 0;
+       index < rrc::v1810::test::kMessageKindCount; ++index) {
+    const MessageKind kind = static_cast<MessageKind>(index + 1);
+    const char* name = rrc::v1810::test::kMessageKindNames[index];
     const std::size_t size = rrc::v1810::test::MessageStructSize(kind);
     const std::size_t alignment =
         rrc::v1810::test::MessageStructAlignment(kind);
@@ -368,7 +311,8 @@ int main() {
   TestContainingRoundTrip();
   TestContainingDepthExceeded();
   if (g_failures == 0) {
-    std::printf("messages: 53 round-trip + channel/containing tests passed\n");
+    std::printf("messages: %zu round-trip + channel/containing tests passed\n",
+                rrc::v1810::test::kMessageKindCount);
     return 0;
   }
   std::fprintf(stderr, "messages: %d failure(s)\n", g_failures);

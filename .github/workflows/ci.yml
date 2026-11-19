@@ -29,7 +29,7 @@ jobs:
       - name: Generated code consistency
         working-directory: tools/rrcgen
         run: |
-          python3 -m rrcgen --input ../../data/38.331_v18.10.0.asn \
+          python3 -m rrcgen --input "../../data/38.331_v*.asn" \
             --check-input-sha256 ../../data/asn-input.sha256 \
             --repo-root ../.. --check
       - name: Baseline sizes
@@ -69,6 +69,6 @@ jobs:
         working-directory: tools/rrcgen
         shell: pwsh
         run: |
-          python -m rrcgen --input ../../data/38.331_v18.10.0.asn `
+          python -m rrcgen --input "../../data/38.331_v*.asn" `
             --check-input-sha256 ../../data/asn-input.sha256 `
             --repo-root ../.. --check
