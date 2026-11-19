@@ -82,8 +82,11 @@ class UpdateAsnToolTest(unittest.TestCase):
             self.tool.detect_module_version(Path("input.asn"), "19.0.0"),
             "19.0.0",
         )
-        with self.assertRaises(SystemExit):
+        with self.assertRaises(ValueError):
+            self.tool.detect_module_version(Path("input.asn"), "bad")
+        self.assertIsNone(
             self.tool.detect_module_version(Path("input.asn"), None)
+        )
 
     def test_categorize_changes(self) -> None:
         groups = self.tool.categorize_changes(

@@ -120,16 +120,14 @@ def write_asn_version_file(version: str) -> None:
     replace_first_value(ASN_VERSION_FILE, version)
 
 
-def detect_module_version(path: Path, explicit: Optional[str]) -> str:
+def detect_module_version(path: Path, explicit: Optional[str]) -> Optional[str]:
+    """显式版本优先；否则从文件名推断；文件名不含版本号时返回 None（保持当前版本）。"""
     if explicit:
         parse_semver(explicit, "--module-version")
         return explicit
     match = re.search(r"(\d+\.\d+\.\d+)", path.name)
     if match is None:
-        raise SystemExit(
-            f"error: 无法从文件名 '{path.name}' 推断 ASN.1 版本，"
-            "请用 --module-version 指定（如 18.11.0）"
-        )
+        return None
     value = match.group(1)
     parse_semver(value, "ASN.1 version")
     return value
@@ -536,7 +534,10 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--module-version",
         default=None,
-        help="新的 ASN.1 版本（默认从文件名推断，如 38.331_v18.11.0.asn）",
+        help=(
+            "新的 ASN.1 版本；默认从文件名推断，"
+            "文件名不含版本号时保持当前版本"
+        ),
     )
     parser.add_argument(
         "--library-version",
@@ -570,9 +571,14 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     old_sha = read_first_value(SHA_FILE, "SHA-256")
     old_version = read_first_value(ASN_VERSION_FILE, "ASN.1 版本")
     library_version = read_first_value(VERSION_FILE, "库版本")
-    new_version = detect_module_version(new_input, args.module_version)
-    if args.library_version:
-        parse_semver(args.library_version, "--library-version")
+    try:
+        detected_version = detect_module_version(new_input, args.module_version)
+        if args.library_version:
+            parse_semver(args.library_version, "--library-version")
+    except ValueError as error:
+        print(f"error: {error}", file=sys.stderr)
+        return 2
+    new_version = detected_version or old_version
     old_manifest = read_manifest(MANIFEST_FILE)
 
     new_sha = sha256_file(new_input)
@@ -584,6 +590,8 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
 
     if clean:
         print(f"rrcgen update: {old_version} → {new_version}")
+        if detected_version is None:
+            print("  文件名未含版本号：保持当前 ASN.1 版本")
         print(f"  输入：{new_input.name} → data/{target.name}")
         print(f"  SHA-256：{old_sha[:12]}… → {new_sha[:12]}…")
         if old_inputs:

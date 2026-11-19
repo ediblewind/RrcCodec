@@ -113,18 +113,19 @@ cmake --install build --prefix install
 
 1. **运行一键迁移**
 
-   基本用法（ASN.1 版本从文件名推断）：
+   基本用法（ASN.1 版本从文件名推断；文件名不含版本号时保持当前版本）：
 
    ```powershell
    python tools/update_asn.py path/to/38.331_v19.0.0.asn
+   python tools/update_asn.py patched.asn   # 文件名不含版本：版本不变，仅更新内容
    ```
 
    常用写法与作用：
 
    | 命令 | 作用 |
    |---|---|
-   | `python tools/update_asn.py <新ASN文件>` | 基本用法；ASN.1 版本从文件名推断，库版本保持不变 |
-   | `python tools/update_asn.py <新ASN文件> --module-version 19.0.0` | 文件名不含版本号时，显式指定 ASN.1 版本 |
+   | `python tools/update_asn.py <新ASN文件>` | 基本用法；版本从文件名推断；文件名不含版本时保持当前版本，库版本不变 |
+   | `python tools/update_asn.py <新ASN文件> --module-version 19.0.0` | 文件名不含版本号或需要覆盖时，显式指定 ASN.1 版本 |
    | `python tools/update_asn.py <新ASN文件> --library-version 3.0.0` | 同时更新库语义版本（`data/version.txt`） |
    | `python tools/update_asn.py <新ASN文件> --allow-dirty` | 工作区不干净时仍执行；此时不自动用 git 回滚生成物 |
    | `python tools/update_asn.py -h` | 查看完整帮助 |
@@ -135,7 +136,7 @@ cmake --install build --prefix install
    脚本会自动：
    - 把新输入落盘为 `data/38.331_v<版本>.asn`，并删除旧输入；
    - 更新 `data/asn-input.sha256`、`data/asn-version.txt`
-     （及可选的 `data/version.txt`）；
+     （及可选的 `data/version.txt`；ASN.1 版本不变时 `asn-version.txt` 不变）；
    - 以 `--update-baseline` 重新生成全部生成物；
    - 运行一次 `--check`；
    - 输出迁移报告 `generated/MIGRATION_NOTES.md`。
