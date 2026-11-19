@@ -167,6 +167,10 @@ def restore_snapshot(snapshot: Dict[Path, Optional[bytes]]) -> None:
         else:
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_bytes(content)
+    # 迁移过程中新落盘的 38.331 输入也要清掉。
+    for path in DATA_DIR.glob(ASN_GLOB):
+        if path not in snapshot:
+            path.unlink()
 
 
 def format_path(path: List[dict]) -> str:
@@ -429,6 +433,15 @@ def render_notes(
 
     lines.extend(["## 6. 仍需人工 review", ""])
     manual_items: List[str] = []
+    if old_version != new_version:
+        manual_items.append(
+            f"ASN.1 版本 {old_version} → {new_version} 视为 ABI 破坏：确认 "
+            "`data/version.txt` 是否需要升主版本（可用 `--library-version`）、"
+            "更新 `CHANGELOG.md`"
+        )
+        manual_items.append(
+            "更新文档/脚本中的 ASN.1 版本引用（`grep` 旧版本号：README、docs、ci 注释）"
+        )
     if message_diff and (
         message_diff["added"]
         or message_diff["removed"]
@@ -591,7 +604,8 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         if rc != 0:
             raise RuntimeError(f"生成器失败（退出码 {rc}）")
     except Exception as error:  # noqa: BLE001 - CLI 边界需要回滚后报告
-        print(f"error: {error}", file=sys.stderr)
+        detail = str(error) or type(error).__name__
+        print(f"error: {detail}", file=sys.stderr)
         restore_snapshot(snapshot)
         if clean:
             restore = git("restore", "--worktree", "--", ".")
