@@ -82,12 +82,18 @@ ctest --preset mingw-debug
 ```powershell
 cmake -S . -B build -DRRC_CODEC_REGENERATE=ON
 cmake --build build --target rrc_codec_regenerate
-# 或（开发期，需要 Python 3.8+）
+# 或（开发期，需要 Python 3.8+；--input 支持版本通配，换 ASN.1 版本无需改命令）
 cd tools/rrcgen
-python -m rrcgen --input ../../data/38.331_v18.10.0.asn `
+python -m rrcgen --input ../../data/38.331_v*.asn `
     --check-input-sha256 ../../data/asn-input.sha256 --repo-root ../..
-python -m rrcgen ... --check     # CI：校验生成物与仓库一致
+python -m rrcgen --input ../../data/38.331_v*.asn ... --check   # CI：校验生成物一致
+# 消息集变化时：重生成基线（人工 review diff）
+python -m rrcgen --input ../../data/38.331_v*.asn ... --update-baseline
 ```
+
+版本与消息清单的单一来源：`data/version.txt`、`data/asn-version.txt`、
+`data/message-set.txt`；生成器据此产出 `rrc_version.h`、`generated/rrc_manifest.json`、
+`generated/message_dispatch.inc` 与测试用消息清单，避免多处手写同步。
 
 ## 安装后消费
 
@@ -109,11 +115,12 @@ cc app.c $(pkg-config --cflags --libs rrc_codec) -o app
 - `docs/测试报告.md` — 测试与验收记录
 - `generated/rrc_message_index.md` — 53 个消息的 MessageKind/结构体/信道/包装位索引
 - `generated/rrc_stats.json` — 生成统计
+- `generated/rrc_manifest.json` — 机器可读清单（版本/消息/包装位/统计）
 
 ## 目录
 
 ```
-include/rrc_codec/   公共头（手写 5 个 + 生成 2 个；类型头按 IDE 友好大小分块）
+include/rrc_codec/   公共头（手写 4 个 + 生成 3 类：版本/类型/消息；类型头按 IDE 友好大小分块）
 src/core/            PER 运行时、错误、C ABI、分派（手写）
 src/generated/       生成的编解码函数（32 个分块 + 内部头）
 tools/rrcgen/        ASN.1 前端 + C 发射器（开发期，不安装）

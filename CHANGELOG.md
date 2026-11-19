@@ -1,5 +1,28 @@
 # Changelog
 
+## 未发布
+
+### 变更
+
+- **单一来源元数据（ADR-013）**：新增 `data/version.txt`（库版本 + C API 版本）、
+  `data/asn-version.txt`、`data/message-set.txt`；CMake 从数据文件读取
+  `project(VERSION)`，`RRC_CODEC_REGENERATE` 输入改为 `data/38.331_v*.asn` 通配。
+- **生成物扩展**：`include/rrc_codec/rrc_version.h` 改为生成物；
+  `rrc_messages.h` 新增 `RRC_CODEC_MESSAGE_KIND_COUNT`；新增
+  `generated/message_dispatch.inc`（dispatch 的 X-macro 清单）、
+  `generated/rrc_manifest.json`（机器可读清单）、
+  `tests/generated/message_manifest.{h,cpp}`（测试用消息清单）。
+- **测试去硬编码**：`dispatch.cpp` 不再手写消息清单；`tests/messages` 使用生成的
+  数量/名称表（测试更名为 `messages.roundtrip_all`）；黄金向量的版本断言改用
+  `RRC_CODEC_VERSION_STRING` / `RRC_CODEC_ASN1_VERSION_STRING` 宏。
+- **生成器**：消息提取改为结构遍历（`data/message-set.txt` 仅作基线校验），
+  新增 `--update-baseline` 自动维护消息集基线；`--input` 支持版本通配。
+
+### 说明
+
+- 生成物仍入库并逐字节可复现（`python -m rrcgen --check` 覆盖所有新增产物）；
+  公开 C ABI 仍为 8 个函数，运行时行为不变。
+
 ## 2.0.0（2026-11-17）
 
 按 `docs/RRC编解码库简化方案.md`（v0.5）从零实现 v2 库：
