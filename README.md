@@ -101,19 +101,57 @@ ctest --preset mingw-debug
 
 ### 为什么需要重新生成
 
-协议的唯一来源是 ASN.1 文件（`data/38.331_v*.asn`）。所有结构体、枚举和编解码
-函数都由生成器 `tools/rrcgen` 从它产出，并**作为生成物随仓库入库**——这样消费
-方只需 C/C++ 编译器即可构建，不必安装 Python 或 ASN.1 工具链。
+本库的协议定义只来自 ASN.1 文件（`data/38.331_v*.asn`）。所有结构体、枚举和
+编解码函数都由生成器 `tools/rrcgen` 从该文件一次性生成，并**作为普通源码随仓库
+入库**：这样消费方只安装 C/C++ 编译器就能构建，不需要 Python 或 ASN.1 工具链。
 
-代价是：**ASN.1 一旦变化，生成物必须重新生成**，否则仓库里的代码与协议输入不
-一致。生成物同时在 CI 中用 `--check` 逐字节校验，用于拦截两类错误：
+因此，**只有修改了 ASN.1 之后才需要重新生成**：
 
-- 改了 ASN.1 却忘记重新生成；
-- 直接手改生成物（下次生成会被覆盖，且 `--check` 会失败）。
+- 只改手写核心、测试、CMake、示例脚本时，不需要重新生成；
+- 只有替换/修改 `data/38.331_v*.asn`（升级 38.331 版本，或修正协议定义）后，
+  才需要重新生成，使生成物与协议输入保持一致；
+- 生成物必须与输入一致。CI 用 `--check` 逐字节校验，拦截两类错误：
+  - 改了 ASN.1 却忘记重新生成；
+  - 直接手改生成物（下次生成会被覆盖，且 `--check` 会失败）。
 
-### 重新生成会修改什么
+### 重新生成需要做哪些操作
 
-以下内容全部由生成器整体重写，**请勿手工修改**：
+前置条件：Python 3.8+（仅开发期需要）。
+
+1. **更新输入与元数据**：把新的 `38.331_v*.asn` 放进 `data/`，并同步
+   `data/asn-version.txt`、`data/asn-input.sha256`；消息集若有变化，还需更新
+   `data/message-set.txt` 基线。换 38.331 版本时建议直接用下文的一键迁移，
+   这一步由脚本完成。
+2. **运行生成器**（二选一）：
+
+   ```powershell
+   # 方式一：CMake 目标
+   cmake -S . -B build -DRRC_CODEC_REGENERATE=ON
+   cmake --build build --target rrc_codec_regenerate
+
+   # 方式二：直接调用生成器（--input 支持版本通配）
+   cd tools/rrcgen
+   python -m rrcgen --input ../../data/38.331_v*.asn `
+       --check-input-sha256 ../../data/asn-input.sha256 --repo-root ../..
+   ```
+
+3. **校验生成物**（CI 同样执行）：
+
+   ```powershell
+   python -m rrcgen --input ../../data/38.331_v*.asn ... --check
+   ```
+
+4. **构建并跑测试**，按编译错误/测试失败同步手写代码。
+
+仅当消息集本身变化、需要重新确认基线时，才额外执行：
+
+```powershell
+python -m rrcgen --input ../../data/38.331_v*.asn ... --update-baseline
+```
+
+### 重新生成的影响与生成产物
+
+生成器会整体重写以下文件，**请勿手工修改**：
 
 | 位置 | 内容 |
 |---|---|
@@ -124,32 +162,19 @@ ctest --preset mingw-debug
 | `generated/` | `Sources.cmake`、统计、消息索引、`rrc_manifest.json`、dispatch 清单 |
 | `tests/generated/` | 消息样例构造器与测试用消息清单 |
 
-手写部分（`src/core/`、手写公共头、CMake、手写测试/示例）不会被生成器修改；
-若生成物导致手写代码编译失败或断言失配，需要人工同步。
+影响：
+
+- 生成头文件变化会让包含它们的代码与测试重新编译；
+- 公共结构体/枚举随 ASN.1 变化时属于 **ABI 变化**，消费方需要重新编译；
+  ASN.1 版本升级按版本策略视为 ABI 破坏；
+- 消息集/字段变化可能使手写示例、测试或黄金向量编译失败或断言失配，需要人工同步；
+- 若 ASN.1 未变化，重新生成应得到逐字节相同的结果（幂等）。
+
+手写部分（`src/core/`、手写公共头、CMake、手写测试/示例）不会被生成器修改。
 
 版本号、ASN.1 版本、消息集基线等输入统一放在 `data/`（`version.txt`、
 `asn-version.txt`、`message-set.txt`、`asn-input.sha256`），生成器与 CMake
 都从这里读取，避免多处手写。
-
-### 日常重新生成
-
-```powershell
-# 方式一：CMake 目标
-cmake -S . -B build -DRRC_CODEC_REGENERATE=ON
-cmake --build build --target rrc_codec_regenerate
-
-# 方式二：直接调用生成器（开发期，需要 Python 3.8+；--input 支持版本通配）
-cd tools/rrcgen
-python -m rrcgen --input ../../data/38.331_v*.asn `
-    --check-input-sha256 ../../data/asn-input.sha256 --repo-root ../..
-python -m rrcgen --input ../../data/38.331_v*.asn ... --check  # CI：校验生成物一致
-```
-
-仅当消息集本身变化、需要重新确认基线时，才使用：
-
-```powershell
-python -m rrcgen --input ../../data/38.331_v*.asn ... --update-baseline
-```
 
 ### ASN.1 迁移（一键）
 
