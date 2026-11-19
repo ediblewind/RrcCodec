@@ -18,7 +18,7 @@ def asn_spec(asn_version: str) -> str:
 def generated_banner(
     title: str, input_sha256: str, asn_version: str, generator_version: str = VERSION
 ) -> List[str]:
-    """生成文件头注释（方案 5.6：版本/输入哈希/重生成命令，无时间戳）。"""
+    """生成文件头注释（版本/输入哈希/重生成命令，无时间戳）。"""
     return [
         "/* ============================================================================",
         f" * {title}",

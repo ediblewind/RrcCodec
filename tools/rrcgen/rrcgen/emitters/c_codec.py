@@ -1,4 +1,4 @@
-"""Per-type codec emitter（方案 5.4/5.5）。
+"""Per-type codec emitter。
 
 为每个结构体/SEQUENCE OF 类型生成：
 
@@ -160,7 +160,7 @@ class CodecEmitter:
     def emit_sources_cmake(self, part_names: Sequence[str]) -> str:
         lines = [
             "# 生成源列表（由 rrcgen 生成；入库，请勿手工修改）",
-            "# 每个 codec_partNNN.cpp 为一个独立编译单元（方案 5.5）。",
+            "# 每个 codec_partNNN.cpp 为一个独立编译单元。",
             "set(RRC_CODEC_GENERATED_SOURCES",
         ]
         for name in part_names:

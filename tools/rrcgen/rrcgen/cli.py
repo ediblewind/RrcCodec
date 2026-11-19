@@ -1,6 +1,6 @@
 """rrcgen v2 command line interface.
 
-从 38.331 ASN.1 生成 v2 C ABI 产物（方案第 5 章）：
+从 38.331 ASN.1 生成 v2 C ABI 产物：
 
 * ``include/rrc_codec/rrc_version.h``（版本单一来源：``data/version.txt`` + ``data/asn-version.txt``）
 * ``include/rrc_codec/types/rrc_types.h``

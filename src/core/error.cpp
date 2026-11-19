@@ -4,7 +4,7 @@
  * 公共接口见 include/rrc_codec/rrc_error.h、include/rrc_codec/rrc_version.h：
  *   GetLastErrorInfo / SetErrorHandler / GetVersionString / GetAsn1VersionString
  *
- * 设计（方案 4.4、4.6、实现契约 §3）：
+ * 设计：
  *   - 最近一次错误按线程保存（thread_local），线程之间互不干扰；
  *   - 首版只填 code/channel/bitOffset，fieldPath/message 恒为 NULL；
  *   - 成功调用不会清空已记录的旧错误；
@@ -38,7 +38,7 @@ thread_local ErrorInfo g_last_error = {
  * 错误回调（接口预留）
  *
  * 首版只保存、不触发，因此正常路径上不会读取这两个值。SetErrorHandler 的
- * 调用约定（方案 4.6）是初始化阶段单线程调用，这里不加锁。
+ * 调用约定：初始化阶段单线程调用，这里不加锁。
  * ------------------------------------------------------------------------- */
 ErrorHandler g_error_handler = nullptr;
 void* g_error_handler_user_data = nullptr;
@@ -63,7 +63,7 @@ void StoreLastError(ErrorCode code, ChannelType channel, std::uint64_t bit_offse
 ErrorCode LoadLastError() { return g_last_error.code; }
 
 void NotifyErrorHandler(const ErrorInfo& info) {
-  /* 首版不触发回调（方案 4.4：接口预留）。保留入口形状，未来版本在此调用
+  /* 首版不触发回调（接口预留）。保留入口形状，未来版本在此调用
    * g_error_handler(&info, g_error_handler_user_data)。当前只读取保存值，
    * 以避免“未使用变量”告警并保持 ABI/行为稳定。 */
   (void)info;

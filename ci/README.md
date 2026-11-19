@@ -1,6 +1,6 @@
 # CI 与本地质量门禁
 
-方案第 7.8 / 9.4 节的质量门禁脚本。CI 定义见仓库根 `.github/workflows/ci.yml`；
+质量门禁脚本。CI 定义见仓库根 `.github/workflows/ci.yml`；
 本目录提供可直接在本地执行的等价脚本。
 
 ## 本地一键验证
@@ -44,7 +44,7 @@ bash ci/ci-linux.sh
 ## 说明
 
 - Windows 本机未安装 pkg-config / Doxygen；对应项在安装测试中自动跳过，Doxygen
-  告警检查未执行（见 `docs/测试报告.md` 第 6 节）。
+  告警检查未执行。
 - pycrate / 现行 v1 差分对拍需要额外环境，未纳入本脚本；建议在具备 pycrate 的
   Linux CI 中追加。
 - ASan/UBSan：MinGW 运行库不提供 UBSan 运行时；Linux 下可用

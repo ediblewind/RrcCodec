@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ============================================================================
-# ci-linux.sh — Linux CI 等价脚本（方案 7.8 / 9.4）
+# ci-linux.sh — Linux CI 等价脚本
 #
 # 依次执行：
 #   1. Release + -Werror 构建 + ctest

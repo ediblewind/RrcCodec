@@ -84,7 +84,7 @@ def write_message_set(repo_root: Path, message_names: List[str]) -> Path:
     """重写消息集基线（``--update-baseline``）；人工只需 review diff。"""
     path = repo_root / MESSAGE_SET_FILE
     text = (
-        "# 38.331 附录 A 的实际消息（ASN.1 名，按 MessageKind 1..N 顺序）。\n"
+        "# 38.331 的实际消息（ASN.1 名，按 MessageKind 顺序）。\n"
         "# 由 `python -m rrcgen ... --update-baseline` 自动维护；请 review diff 后提交。\n"
         + "\n".join(message_names)
         + "\n"

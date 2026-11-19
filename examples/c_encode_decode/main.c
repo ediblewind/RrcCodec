@@ -1,7 +1,7 @@
 /* ============================================================================
  * examples/c_encode_decode/main.c — 纯 C99 示例：编码并解码 MIB（BCCH-BCH）
  *
- * 对应 docs/RRC编解码库简化方案.md §4.7.1：
+ * 流程：
  *   构造 MIB（无信道容器层）→ EncodeMessage(MessageKind_MIB, ...)
  *   → DecodeMessage(ChannelType_BCCH_BCH, MessageKind_MIB, ...)
  *   → FreeMessage / FreeEncodedMessage。

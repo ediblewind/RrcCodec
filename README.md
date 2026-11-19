@@ -1,7 +1,7 @@
 # RrcCodec
 
 3GPP TS 38.331 v18.10.0（`NR-RRC-Definitions`）RRC 消息 UPER 编解码库，
-按 `docs/RRC编解码库简化方案.md`（v0.5）实现 v2：
+实现 v2：
 
 - **一种表示**：53 个实际消息各对应一个顶层 C 结构体；其余 IE 直接映射为
   C 结构体/枚举；不生成信道容器结构体；`OCTET STRING (CONTAINING Y)` 自动解析为
@@ -23,8 +23,6 @@
 | 生成物可复现 | 通过 |
 | 全量构建（8 并发，Release，含测试/示例） | ≈ 9 s |
 | 静态库 / 共享库（Release，MinGW） | 8.34 MiB / 5.24 MiB |
-
-详见 `docs/测试报告.md`。
 
 ## 快速开始（C99）
 
@@ -117,16 +115,8 @@ target_link_libraries(app PRIVATE RrcCodec::rrc_codec)
 cc app.c $(pkg-config --cflags --libs rrc_codec) -o app
 ```
 
-## 文档
+## 生成物与索引
 
-> `docs/` 为本地维护文档，**不入库**（已加入 `.gitignore`）；本地保留即可，
-> 仓库内交付物以代码、生成物与 `README`/`CHANGELOG` 为准。
-
-- `docs/RRC编解码库简化方案.md` — 方案（v0.5，本地）
-- `docs/接口规范.md` — 公共 API 规范
-- `docs/实现契约.md` — 生成器 / 手写核心 / 测试的接口契约
-- `docs/实现决策记录.md` — 实现决策与方案澄清（ADR）
-- `docs/测试报告.md` — 测试与验收记录
 - `generated/rrc_message_index.md` — 53 个消息的 MessageKind/结构体/信道/包装位索引
 - `generated/rrc_stats.json` — 生成统计
 - `generated/rrc_manifest.json` — 机器可读清单（版本/消息/包装位/统计）
@@ -141,7 +131,6 @@ tools/rrcgen/        ASN.1 前端 + C 发射器（开发期，不安装）
 tests/               单元 / 黄金向量 / 消息级 / 安装消费
 examples/            C99 与 C++17 示例
 data/                ASN.1 输入与 SHA-256
-docs/                本地文档（不入库）
 ci/                  CI 脚本与基线
 ```
 

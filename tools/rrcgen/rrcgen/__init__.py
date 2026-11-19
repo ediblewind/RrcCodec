@@ -2,7 +2,7 @@
 
 The generator parses the subset of ASN.1 used by 3GPP TS 38.331 v18.10.0,
 resolves it into a deterministic intermediate representation (IR) and emits the
-v2 C ABI artifacts described by ``docs/RRC编解码库简化方案.md``:
+v2 C ABI artifacts:
 
 * ``include/rrc_codec/rrc_version.h``            — 库/C API/ASN.1 版本宏（数据源 ``data/``）
 * ``include/rrc_codec/types/rrc_types.h``      — 消息/IE 的 C 结构体与枚举

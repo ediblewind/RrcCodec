@@ -8,7 +8,7 @@
  * 重生成命令     :
  *   cmake -S . -B build -DRRC_CODEC_REGENERATE=ON && cmake --build build --target rrc_codec_regenerate
  *
- * 版本策略（方案 7.4）：
+ * 版本策略：
  *   - 库语义版本：2.0.0，SOVERSION 2；
  *   - 结构体 ABI 与 ASN.1 v18.10.0 绑定，ASN.1 升级视为 ABI 破坏；
  *   - 2.x 内已有函数签名不变，新增消息只追加 MessageKind 数值。

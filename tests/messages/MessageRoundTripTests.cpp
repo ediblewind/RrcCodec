@@ -1,6 +1,6 @@
 /**
  * @file MessageRoundTripTests.cpp
- * @brief 53 个消息的“构造 → 编码 → 解码 → 再编码”比特一致性测试（方案 9.1）。
+ * @brief 53 个消息的“构造 → 编码 → 解码 → 再编码”比特一致性测试。
  *
  * 样例由生成器产出（tests/generated/message_samples.cpp）：必填字段填入约束
  * 范围内的最小值，必填 CONTAINING 指针递归构造内层对象，OPTIONAL 留空

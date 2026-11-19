@@ -1,8 +1,5 @@
 # ============================================================================
-# RrcCodec — 3GPP TS 38.331 v18.10.0 RRC UPER 编解码库（v2 简化方案）
-#
-# 方案：docs/RRC编解码库简化方案.md（v0.5）
-# 实现契约：docs/实现契约.md
+# RrcCodec — 3GPP TS 38.331 v18.10.0 RRC UPER 编解码库
 #
 # 默认构建静态库；-DRRC_CODEC_BUILD_SHARED=ON 构建动态库。
 # ============================================================================
@@ -32,7 +29,7 @@ option(RRC_CODEC_REGENERATE "Enable generator target (requires Python 3)" OFF)
 option(RRC_CODEC_WARNINGS_AS_ERRORS "Treat warnings as errors" OFF)
 option(RRC_CODEC_ENABLE_SANITIZERS "Enable ASan/UBSan (GCC/Clang)" OFF)
 
-# 安全上限（方案 4.5；可在此覆盖，库与消费者看到的取值保持一致）
+# 安全上限（可在此覆盖，库与消费者看到的取值保持一致）
 set(RRC_CODEC_MAX_INPUT_BYTES 16777216 CACHE STRING "Max decode input bytes")
 set(RRC_CODEC_MAX_OPEN_TYPE_BYTES 8388608 CACHE STRING "Max open type bytes")
 set(RRC_CODEC_MAX_SEQUENCE_OF_COUNT 65536 CACHE STRING "Max SEQUENCE OF elements")
@@ -115,7 +112,7 @@ else()
   endif()
 endif()
 
-# 生成代码优先编译速度与体积（方案 5.5）
+# 生成代码优先编译速度与体积
 if(NOT MSVC AND RRC_CODEC_GENERATED_SOURCES)
   set_source_files_properties(${RRC_CODEC_GENERATED_SOURCES} PROPERTIES
     COMPILE_OPTIONS "-O0;-g0")

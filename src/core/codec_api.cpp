@@ -4,7 +4,7 @@
  * 实现 include/rrc_codec/rrc_codec.h 中的 4 个编解码函数：
  *   EncodeMessage / FreeEncodedMessage / DecodeMessage / FreeMessage
  *
- * 职责（实现契约 §3）：
+ * 职责：
  *   1. 参数校验：kind 1–RRC_CODEC_MESSAGE_KIND_COUNT、指针非空、解码输入 size 不超过
  *      RRC_CODEC_MAX_INPUT_BYTES；
  *   2. 解码前校验 channel 合法性及 ChannelOfMessageKind(kind) == channel；

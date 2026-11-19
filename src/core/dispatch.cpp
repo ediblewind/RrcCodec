@@ -5,10 +5,9 @@
  *   ErrorCode EncodeMessage_<KindSuffix>(Encoder&, const <MsgType>&);
  *   ErrorCode DecodeMessage_<KindSuffix>(Decoder&, <MsgType>&);
  *   void      FreeMessage_<KindSuffix>(<MsgType>&);
- * 命名见 docs/实现契约.md §2.3；MessageKind ↔ 结构体名见
- * docs/RRC编解码库简化方案.md 附录 A（结构体名 = “MessageKind_”之后的拼写）。
+ * 命名：MessageKind_<KindSuffix> ↔ 结构体 <KindSuffix>（结构体名与消息名一致）。
  *
- * 本文件职责（实现契约 §3）：
+ * 本文件职责：
  *   1. 完成 void* ↔ 具体结构体指针的类型转换（本文件是唯一需要知道全部消息
  *      结构体类型的地方）；
  *   2. 构造 Encoder/Decoder、调用生成入口、取得编码字节/UPPER 有效位长；
@@ -99,7 +98,7 @@ ErrorCode DecodeAs(MessageKind kind, const std::uint8_t* data, std::size_t size,
                    ErrorCode (*decode)(Decoder&, MessageType&),
                    void (*free_message)(MessageType&)) {
   MessageType& value = *static_cast<MessageType*>(message);
-  std::memset(&value, 0, sizeof(value)); /* 解码入口清零（契约 §3/§5） */
+  std::memset(&value, 0, sizeof(value)); /* 解码入口清零 */
 
   Decoder decoder(data, size);
   ErrorCode rc = decode(decoder, value);

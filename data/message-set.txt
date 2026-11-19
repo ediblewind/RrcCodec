@@ -1,4 +1,4 @@
-# 38.331 附录 A 的实际消息（ASN.1 名，按 MessageKind 1..N 顺序）。
+# 38.331 的实际消息（ASN.1 名，按 MessageKind 顺序）。
 # 由 `python -m rrcgen ... --update-baseline` 自动维护；请 review diff 后提交。
 MIB
 SystemInformation

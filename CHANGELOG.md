@@ -4,7 +4,7 @@
 
 ### 变更
 
-- **单一来源元数据（ADR-013）**：新增 `data/version.txt`（库版本 + C API 版本）、
+- **单一来源元数据**：新增 `data/version.txt`（库版本 + C API 版本）、
   `data/asn-version.txt`、`data/message-set.txt`；CMake 从数据文件读取
   `project(VERSION)`，`RRC_CODEC_REGENERATE` 输入改为 `data/38.331_v*.asn` 通配。
 - **生成物扩展**：`include/rrc_codec/rrc_version.h` 改为生成物；
@@ -17,7 +17,7 @@
   `RRC_CODEC_VERSION_STRING` / `RRC_CODEC_ASN1_VERSION_STRING` 宏。
 - **生成器**：消息提取改为结构遍历（`data/message-set.txt` 仅作基线校验），
   新增 `--update-baseline` 自动维护消息集基线；`--input` 支持版本通配。
-- **一键迁移（ADR-014）**：新增 `tools/update_asn.py`，自动更新 `data/` 单一来源
+- **一键迁移**：新增 `tools/update_asn.py`，自动更新 `data/` 单一来源
   （SHA、ASN.1 版本、可选库版本）、重生成、比对新旧 manifest 并输出
   `generated/MIGRATION_NOTES.md`（消息/结构/统计变化、受影响手写文件、人工清单、
   回滚命令）；失败自动回滚 `data/`。`rrc_manifest.json` 每条消息新增 `SchemaHash`。
@@ -29,7 +29,7 @@
 
 ## 2.0.0（2026-11-17）
 
-按 `docs/RRC编解码库简化方案.md`（v0.5）从零实现 v2 库：
+从零实现 v2 库：
 
 ### 新增
 
@@ -51,12 +51,10 @@
   Runtime/Development 安装布局；C99 与 C++17 示例。
 - **测试**：PER 原语单元测试、MIB 黄金向量 `5471ac`、53 消息 round-trip、
   信道校验、CONTAINING 解析与深度上限、公共头 C99/C++17 检查、安装消费测试。
-- 文档：`docs/接口规范.md`、`docs/实现决策记录.md`、`docs/测试报告.md`、
-  `docs/实现契约.md`。
 
 ### 说明
 
 - 与 v1 不共享实现；v1 目录/代码保持不动。
-- 直接扩展添加项按标准 PER 逐项编码（见 ADR-004，方案 3.5.7 的澄清）。
-- 未实现（方案 1.4 非目标）：动态值树、Schema 内省、JSON、字段路径、句柄、
+- 直接扩展添加项按标准 PER 逐项编码（对直接扩展添加项的澄清）。
+- 未实现（非目标）：动态值树、Schema 内省、JSON、字段路径、句柄、
   流式/部分解码、aligned PER/BER、Phase 2 ASN.1 模块。

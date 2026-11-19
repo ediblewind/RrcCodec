@@ -1,6 +1,6 @@
 # tests/interop — 差分对拍（预留）
 
-方案 9.1/9.2 要求与 pycrate 参考实现、现行 v1 动态实现做差分：
+与 pycrate 参考实现、现行 v1 动态实现做差分：
 
 1. 同一码流分别用 v1 动态实现与 v2 解码，比较关键字段；
 2. 用两套实现分别重编码，逐比特比较；
@@ -20,4 +20,4 @@
 - 重点样例：MIB 黄金向量 `5471ac`、SIB1、RRCReconfiguration（扩展组、
   `masterCellGroup`/`secondaryCellGroup`）、SuspendConfig、Paging。
 
-在补齐之前，`docs/测试报告.md` 第 6 节如实记录该项未执行。
+在补齐之前，该项在测试记录中如实标记为未执行。

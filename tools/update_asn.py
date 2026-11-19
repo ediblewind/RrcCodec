@@ -440,7 +440,7 @@ def render_notes(
             "更新 `CHANGELOG.md`"
         )
         manual_items.append(
-            "更新文档/脚本中的 ASN.1 版本引用（`grep` 旧版本号：README、docs、ci 注释）"
+            "更新文档/脚本中的 ASN.1 版本引用（`grep` 旧版本号：README、ci 注释）"
         )
     if message_diff and (
         message_diff["added"]
@@ -449,12 +449,12 @@ def render_notes(
     ):
         manual_items.append(
             "消息集/MessageKind 变化属于 ABI 破坏：评估并更新 `data/version.txt` "
-            "主版本、`CHANGELOG.md`、`docs/测试报告.md` 的消息数"
+            "主版本、`CHANGELOG.md` 与文档中的消息数"
         )
     if message_diff and message_diff["changed"]:
         manual_items.append(
             "消息结构/信道/包装位变化：复核手写字段引用（见第 5 节）与 "
-            "`docs/实现契约.md` 的信道包装位表"
+            "`generated/rrc_message_index.md` 的包装位表"
         )
     if message_diff and any(
         item["AsnName"] == "MIB" for item, _ in message_diff["changed"]
@@ -465,7 +465,7 @@ def render_notes(
         )
     if stats_diff:
         manual_items.append(
-            "更新文档中的统计数字（`README.md`、`docs/测试报告.md`、"
+            "更新文档中的统计数字（`README.md`；"
             "`generated/rrc_message_index.md` 已自动更新）"
         )
     if references:

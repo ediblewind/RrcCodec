@@ -24,7 +24,7 @@ extern "C" {
  * 每个值对应一个顶层结构体（见 types/rrc_types.h）与一个所属信道。
  * 消息类型由 EncodeMessage / DecodeMessage / FreeMessage 的 kind 参数显式传入。
  *
- * @note 数值稳定：1–53，按方案附录 A 顺序分配；新增消息只追加。
+ * @note 数值稳定：1–53，按信道顺序分配；新增消息只追加。
  */
 typedef enum MessageKind {
     MessageKind_MIB = 1, /**< MIB（ChannelType_BCCH_BCH）；结构体 MIB */

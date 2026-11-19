@@ -100,7 +100,7 @@ RRC_TEST(constrained_integer_negative_lower) {
 }
 
 RRC_TEST(constrained_integer_wide_range_has_no_length_prefix) {
-  // range>64K 仍按固定位宽：1e5+1 个取值 → 17 bit，无长度前导（方案 6.3）。
+  // range>64K 仍按固定位宽：1e5+1 个取值 → 17 bit，无长度前导。
   {
     Encoder encoder;
     encoder.WriteConstrainedInteger(65535, 0, 100000);

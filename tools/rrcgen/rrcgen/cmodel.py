@@ -3,7 +3,7 @@
 把解析/解析后的 :class:`ResolvedModel` 转换为“发射模型”：
 
 * 从 10 个信道 ``*-Message`` 入口提取 53 个实际消息、所属信道与包装位路径；
-* 按方案第 3 章为顶层类型、匿名类型、``SetupRelease`` 实例、扩展组分配 C 名；
+* 为顶层类型、匿名类型、``SetupRelease`` 实例、扩展组分配 C 名；
 * 生成结构体布局（OPTIONAL/DEFAULT/CONTAINING/扩展组/直接扩展添加项）；
 * 计算类型定义拓扑序与生成分块。
 
@@ -37,7 +37,7 @@ from .models import (
 
 UINT32_MAX = 0xFFFFFFFF
 
-#: 信道入口顺序（38.331 的 10 个 *-Message）与方案附录 A 的包装位映射。
+#: 信道入口顺序（38.331 的 10 个 *-Message）与包装位映射。
 CHANNEL_BY_ACCESS_POINT: Dict[str, Tuple[int, str]] = {
     "BCCH-BCH": (1, "ChannelType_BCCH_BCH"),
     "BCCH-DL-SCH": (2, "ChannelType_BCCH_DL_SCH"),
@@ -306,7 +306,7 @@ class CModel:
         self.stats = self._collect_stats()
 
     def _validate_supported_subset(self) -> None:
-        """校验方案 6.1 声明的“38.331 实际使用范围”，遇到超出范围的构造直接报错。
+        """校验“38.331 实际使用范围”，遇到超出范围的构造直接报错。
 
         发射器只实现非可扩展的约束 INTEGER / SIZE 与三种扩展构造（SEQUENCE、CHOICE、
         ENUMERATED）；如果 38.331 未来版本引入可扩展整数/可扩展 SIZE，必须在生成器
@@ -383,7 +383,7 @@ class CModel:
         self._wrapper_root_ids = {
             entry.root_type_id for entry in self.model.messages
         }
-        # 按 IR messages 顺序（Value 1..10，对应方案附录 A 的信道顺序）遍历。
+        # 按 IR messages 顺序（Value 1..10，对应信道顺序）遍历。
         ordered_messages = sorted(self.model.messages, key=lambda item: item.value)
         for entry in ordered_messages:
             if entry.access_point not in CHANNEL_BY_ACCESS_POINT:
@@ -720,7 +720,7 @@ class CModel:
         if target.kind == KIND_SEQUENCE_OF and not target.asn_name:
             base = cnames.child_type_name(parent_cname, field_asn_name)
             if context == "field":
-                # 方案 3.4：匿名内联 SEQUENCE OF 字段展开为 items + count，
+                # 匿名内联 SEQUENCE OF 字段展开为 items + count，
                 # 不生成额外类型；但元素类型本身仍需 C 名。
                 element = self.by_id[target.element_type_id]
                 self._visit_element(element, base)

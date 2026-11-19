@@ -1,4 +1,4 @@
-# 消息级测试通过生成器的内部函数构造样例；共享库构建时生成符号按方案隐藏
+# 消息级测试通过生成器的内部函数构造样例；共享库构建时生成符号按约定隐藏
 # （只导出 8 个 C ABI 函数），因此该测试仅在静态库构建时启用。
 if(RRC_CODEC_BUILD_SHARED)
   message(STATUS "rrc_codec: skip messages.roundtrip_all in shared library build")

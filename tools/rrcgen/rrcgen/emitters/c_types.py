@@ -1,4 +1,4 @@
-"""``types/rrc_types.h`` emitter (方案 3.2/3.4/3.5/3.6)."""
+"""``types/rrc_types.h`` emitter."""
 
 from __future__ import annotations
 
@@ -31,7 +31,7 @@ _HEADER = "rrc_types.h"
 
 #: 单个生成头分块的目标大小（字节）。CLion/ReSharper 的默认“分析文件大小阈值”
 #: 为 300,000 字节、PSI 构建阈值为 2,000,000 字节；分块后每个头都能被 IDE 正常
-#: 解析，Go to Declaration 可用（方案 Q-10 的“实测不佳再拆”）。
+#: 解析，Go to Declaration 可用（“实测不佳再拆”）。
 TYPE_PART_LIMIT = 240_000
 
 

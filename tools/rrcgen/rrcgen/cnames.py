@@ -1,4 +1,4 @@
-"""C naming rules for the v2 emitter (方案第 3 章 N1–N10).
+"""C naming rules for the v2 emitter (N1–N10).
 
 与旧 v1 的 C++ 命名不同：v2 直接使用 ASN.1 原名，只做必要转义，不加 `Rrc_` 前缀。
 本模块只负责“名字”，不依赖 IR 类型模型，便于单独测试。
@@ -7,7 +7,7 @@
 
 * N1 顶层类型：ASN.1 原名，`-` -> `_`，其余字符与大小写不变；
 * N2 匿名类型：父类型名 + `_` + 字段/备选名首字母大写；若字段名以父类型名
-  最后一段为前缀，则合并（方案 3.2 的 `RRCReconfiguration_CriticalExtensionsFuture`）；
+  最后一段为前缀，则合并（如 `RRCReconfiguration_CriticalExtensionsFuture`）；
 * N3 字段名：ASN.1 原名，`-` -> `_`；
 * N4 枚举常量：`<枚举类型名>_<ASN.1 值名>`；
 * N7 冲突：追加 `_2`、`_3` …；
@@ -22,7 +22,7 @@ from typing import Iterable, List, Optional
 MAX_NAME_LENGTH = 120
 TRUNCATE_LENGTH = 100
 
-#: C99 + C++17 关键字（生成的标识符与它们冲突时追加 `_`，方案 N8）。
+#: C99 + C++17 关键字（生成的标识符与它们冲突时追加 `_`）。
 C_KEYWORDS = frozenset(
     {
         "alignas", "alignof", "and", "and_eq", "asm", "auto", "bitand", "bitor",
@@ -112,7 +112,7 @@ def item_type_name(base: str) -> str:
 
 
 def setup_release_name(target_cname: str) -> str:
-    """参数化类型实例名：`SetupRelease { X }` -> `SetupRelease_X`（方案 3.2）。"""
+    """参数化类型实例名：`SetupRelease { X }` -> `SetupRelease_X`。"""
     return limit_name("SetupRelease_" + target_cname)
 
 

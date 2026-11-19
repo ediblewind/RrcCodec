@@ -138,7 +138,7 @@ public:
    * @brief 写约束整数 lb..ub。
    *
    * range=1（lb==ub）→ 0 bit；否则固定 ceil(log2(range)) bit，写 (value-lb)。
-   * 方案 6.3：38.331 的 INTEGER 均按固定位宽编码（即使 range>64K 也不加长度前导）。
+   * 38.331 的 INTEGER 均按固定位宽编码（即使 range>64K 也不加长度前导）。
    * value 超出 [lb,ub] → ValueOutOfRange。
    */
   void WriteConstrainedInteger(std::int64_t value, std::int64_t lower,

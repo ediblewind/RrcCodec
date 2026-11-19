@@ -8,7 +8,7 @@
  *   - 动态库：库自身定义 RRC_CODEC_BUILDING_LIBRARY，导出 RRC_CODEC_API 符号；
  *     消费者包含本头时自动使用 dllimport（Windows）。
  *
- * 宏前缀统一为 RRC_CODEC_，避免污染用户宏空间（方案 N10）。
+ * 宏前缀统一为 RRC_CODEC_，避免污染用户宏空间。
  * ========================================================================== */
 #ifndef RRC_CODEC_EXPORT_H
 #define RRC_CODEC_EXPORT_H

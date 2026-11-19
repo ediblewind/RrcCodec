@@ -1,6 +1,6 @@
 /**
  * @file GoldenVectorTests.cpp
- * @brief 黄金比特向量（方案 9.1）：BCCH-BCH / MIB。
+ * @brief 黄金比特向量：BCCH-BCH / MIB。
  *
  * 手工复算（MSB-first、无对齐）：
  *   0 | 101010 | 0 | 0111 | 0 | 0011 0101 | 1 | 0 | 0

@@ -1,4 +1,4 @@
-"""rrcgen 命名规则单元测试（方案第 3 章 / 5.6）。"""
+"""rrcgen 命名规则单元测试（N1–N10）。"""
 
 from __future__ import annotations
 
@@ -45,7 +45,7 @@ class TypeNamingTest(unittest.TestCase):
             cnames.child_type_name("RRCReconfiguration", "criticalExtensions"),
             "RRCReconfiguration_CriticalExtensions",
         )
-        # 重叠合并：方案 3.2 的第二个示例。
+        # 重叠合并：第二个示例。
         self.assertEqual(
             cnames.child_type_name(
                 "RRCReconfiguration_CriticalExtensions", "criticalExtensionsFuture"

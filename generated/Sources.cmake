@@ -1,5 +1,5 @@
 # 生成源列表（由 rrcgen 生成；入库，请勿手工修改）
-# 每个 codec_partNNN.cpp 为一个独立编译单元（方案 5.5）。
+# 每个 codec_partNNN.cpp 为一个独立编译单元。
 set(RRC_CODEC_GENERATED_SOURCES
   "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part001.cpp"
   "${CMAKE_CURRENT_SOURCE_DIR}/src/generated/codec_part002.cpp"

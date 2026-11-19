@@ -8,7 +8,7 @@
  *
  * 每个 X(suffix) 同时用作：
  *   - MessageKind 枚举名的一部分：MessageKind_##suffix
- *   - 生成结构体类型名：suffix（附录 A 中与 KindSuffix 完全一致）
+ *   - 生成结构体类型名：suffix（与 MessageKind 后缀完全一致）
  *   - 生成入口函数名的一部分：EncodeMessage_##suffix 等
  * ========================================================================== */
 #define RRC_CODEC_MESSAGE_TYPE_LIST(X) \
