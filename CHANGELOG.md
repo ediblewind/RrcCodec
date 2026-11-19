@@ -4,6 +4,7 @@
 
 ### 变更
 
+- **许可证**：由 Apache-2.0 改为 MIT（见 `LICENSE`）。
 - **单一来源元数据**：新增 `data/version.txt`（库版本 + C API 版本）、
   `data/asn-version.txt`、`data/message-set.txt`；CMake 从数据文件读取
   `project(VERSION)`，`RRC_CODEC_REGENERATE` 输入改为 `data/38.331_v*.asn` 通配。
