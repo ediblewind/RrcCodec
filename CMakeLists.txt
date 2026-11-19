@@ -122,6 +122,10 @@ endif()
 if(NOT MSVC AND RRC_CODEC_GENERATED_SOURCES)
   set_source_files_properties(${RRC_CODEC_GENERATED_SOURCES} PROPERTIES
     COMPILE_OPTIONS "-O0;-g0")
+elseif(MSVC AND RRC_CODEC_GENERATED_SOURCES)
+  # 生成代码不参与人工维护，关闭其 MSVC 警告（与 GCC 下 -O0 -g0 对应）。
+  set_source_files_properties(${RRC_CODEC_GENERATED_SOURCES} PROPERTIES
+    COMPILE_OPTIONS "/w")
 endif()
 
 # ---------------------------------------------------------------------------
