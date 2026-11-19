@@ -109,9 +109,9 @@ cmake --install build --prefix install
 ### 修改 ASN.1 之后需要做哪些事
 
 前置条件：Python 3.8+。默认使用一键迁移工具完成重新生成；它会处理输入与元数据
-更新、生成物重写和一致性校验，不需要手工改 `data/` 或单独运行生成器。
+更新、生成物重写和一致性校验。
 
-1. **运行一键迁移（默认方式）**
+1. **运行一键迁移**
 
    ```powershell
    # 要求 git 工作区干净；版本号可从文件名推断
@@ -120,6 +120,16 @@ cmake --install build --prefix install
    # 同时升库语义版本（否则保持当前版本）
    python tools/update_asn.py new.asn --library-version 3.0.0
    ```
+
+   参数说明：
+
+   | 参数/选项 | 说明 |
+   |---|---|
+   | `asn`（位置参数） | 新的 ASN.1 文件路径；脚本会把它作为 `data/38.331_v<版本>.asn` 落盘 |
+   | `--module-version X.Y.Z` | 显式指定 ASN.1 版本；默认从文件名推断（需形如 `38.331_v19.0.0.asn`） |
+   | `--library-version X.Y.Z` | 同时更新库语义版本（`data/version.txt`）；不传则保持当前版本 |
+   | `--allow-dirty` | 允许 git 工作区不干净（默认要求干净，便于 diff 与回滚）；脏工作区下不自动用 git 回滚生成物 |
+   | `-h` / `--help` | 查看帮助 |
 
    脚本会自动：
    - 把新输入落盘为 `data/38.331_v<版本>.asn`，并删除旧输入；
