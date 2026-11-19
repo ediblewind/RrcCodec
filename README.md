@@ -147,20 +147,17 @@ cmake --install build --prefix install
    - `tests/golden/` 的 MIB 黄金向量与字段断言（MIB 变化时需用参考实现重算）；
    - `examples/`、`tests/install/` 的 MIB 构造与断言；
    - `tests/messages/` 中针对具体消息/字段的用例；
-   - `tools/rrcgen/tests/` 的硬编码预期（包装路径、统计数字、命名示例）；
-   - README/文档中的版本号、消息数与统计数字。
+   - `tools/rrcgen/tests/` 的硬编码预期（包装路径、统计数字、命名示例）。
 
    迁移报告会列出：消息集增删/序号漂移、消息结构（`SchemaHash`）/信道/包装位
    变化、统计变化、生成物变更清单、自动检索到的受影响手写文件，以及仍需人工
    处理的 checklist 和回滚命令。
 
-3. **决定并更新版本**
-   - ASN.1 升级视为 ABI 破坏：决定 `data/version.txt` 是否升主版本；
-   - 更新 `CHANGELOG.md` 与对外说明。
-4. **全量验证**
+3**全量验证**
    - 构建 + `ctest`，或直接运行 `ci/ci-windows.ps1` / `ci/ci-linux.sh`；
    - 确认 `--check` 通过。
-5. **保存或提交**
+
+4**保存或提交**
    - 若在仓库内维护：生成物、`data/` 输入与元数据、手写修改一起提交；
    - 仅本地实验：至少保证生成物与 `data/` 输入一致，便于下次重建。
 
