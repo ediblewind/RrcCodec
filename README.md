@@ -107,22 +107,23 @@ ctest --preset mingw-debug
 
 因此，**只有修改了 ASN.1 之后才需要重新生成**：
 
-- 只改手写核心、测试、CMake、示例脚本时，不需要重新生成；
+- 只改手写核心、测试、CMake、示例或文档时，不需要重新生成；
 - 只有替换/修改 `data/38.331_v*.asn`（升级 38.331 版本，或修正协议定义）后，
   才需要重新生成，使生成物与协议输入保持一致；
-- 生成物必须与输入一致。CI 用 `--check` 逐字节校验，拦截两类错误：
-  - 改了 ASN.1 却忘记重新生成；
-  - 直接手改生成物（下次生成会被覆盖，且 `--check` 会失败）。
+- 生成物必须与输入一致。CI 用 `--check` 逐字节校验，拦截两类错误：改了 ASN.1
+  却忘记重新生成；直接手改生成物。
 
-### 重新生成需要做哪些操作
+### 修改 ASN.1 之后需要做哪些事
 
-前置条件：Python 3.8+（仅开发期需要）。
+以下操作由使用者（开发者）执行，按顺序完成：
 
-1. **更新输入与元数据**：把新的 `38.331_v*.asn` 放进 `data/`，并同步
-   `data/asn-version.txt`、`data/asn-input.sha256`；消息集若有变化，还需更新
-   `data/message-set.txt` 基线。换 38.331 版本时建议直接用下文的一键迁移，
-   这一步由脚本完成。
-2. **运行生成器**（二选一）：
+1. **更新输入与元数据**
+   - 把新的 `38.331_v<版本>.asn` 放进 `data/`；
+   - 更新 `data/asn-version.txt`；
+   - 更新 `data/asn-input.sha256`（`sha256sum` 格式）；
+   - 若消息集发生变化，在第 2 步生成时加 `--update-baseline`，它会重写
+     `data/message-set.txt`；完成后 review 该文件的 diff。
+2. **重新生成全部生成物**（二选一）：
 
    ```powershell
    # 方式一：CMake 目标
@@ -135,19 +136,26 @@ ctest --preset mingw-debug
        --check-input-sha256 ../../data/asn-input.sha256 --repo-root ../..
    ```
 
-3. **校验生成物**（CI 同样执行）：
+3. **校验生成物**（与 CI 一致）：
 
    ```powershell
    python -m rrcgen --input ../../data/38.331_v*.asn ... --check
    ```
 
-4. **构建并跑测试**，按编译错误/测试失败同步手写代码。
-
-仅当消息集本身变化、需要重新确认基线时，才额外执行：
-
-```powershell
-python -m rrcgen --input ../../data/38.331_v*.asn ... --update-baseline
-```
+4. **处理受影响的手写代码**（以编译错误和迁移报告为准）：
+   - `tests/golden/` 的 MIB 黄金向量与字段断言（MIB 变化时需用参考实现重算）；
+   - `examples/`、`tests/install/` 的 MIB 构造与断言；
+   - `tests/messages/` 中针对具体消息/字段的用例；
+   - `tools/rrcgen/tests/` 的硬编码预期（包装路径、统计数字、命名示例）；
+   - README/文档中的版本号、消息数与统计数字。
+5. **决定并更新版本**
+   - ASN.1 升级视为 ABI 破坏：决定 `data/version.txt` 是否升主版本；
+   - 更新 `CHANGELOG.md` 与对外说明。
+6. **全量验证**
+   - 构建 + `ctest`，或直接运行 `ci/ci-windows.ps1` / `ci/ci-linux.sh`；
+   - 确认 `--check` 通过。
+7. **提交**
+   - 生成物、`data/` 输入与元数据、手写修改一起提交。
 
 ### 重新生成的影响与生成产物
 
@@ -167,20 +175,18 @@ python -m rrcgen --input ../../data/38.331_v*.asn ... --update-baseline
 - 生成头文件变化会让包含它们的代码与测试重新编译；
 - 公共结构体/枚举随 ASN.1 变化时属于 **ABI 变化**，消费方需要重新编译；
   ASN.1 版本升级按版本策略视为 ABI 破坏；
-- 消息集/字段变化可能使手写示例、测试或黄金向量编译失败或断言失配，需要人工同步；
+- 消息集/字段变化可能使手写示例、测试或黄金向量编译失败或断言失配，需要按上面
+  第 4 步人工同步；
 - 若 ASN.1 未变化，重新生成应得到逐字节相同的结果（幂等）。
 
 手写部分（`src/core/`、手写公共头、CMake、手写测试/示例）不会被生成器修改。
-
 版本号、ASN.1 版本、消息集基线等输入统一放在 `data/`（`version.txt`、
 `asn-version.txt`、`message-set.txt`、`asn-input.sha256`），生成器与 CMake
 都从这里读取，避免多处手写。
 
-### ASN.1 迁移（一键）
+### 可选：用一键迁移工具减少手工步骤
 
-换 38.331 版本不只是重新生成：还要更新输入文件、SHA-256、ASN.1 版本、消息集
-基线，并判断哪些生成物/手写代码受影响。`tools/update_asn.py` 把这些步骤串成一条
-命令，并在最后输出一份迁移报告：
+`tools/update_asn.py` 可以代替上面第 1–3 步中机械的部分：
 
 ```powershell
 # 要求 git 工作区干净；版本号可从文件名推断
@@ -190,20 +196,13 @@ python tools/update_asn.py path/to/38.331_v19.0.0.asn
 python tools/update_asn.py new.asn --library-version 3.0.0
 ```
 
-脚本自动完成：
+它自动更新 `data/` 并重新生成、运行 `--check`，同时输出
+`generated/MIGRATION_NOTES.md`，供你完成第 4–5 步的判断：消息集增删/序号漂移、
+结构（`SchemaHash`）/信道/包装位变化、统计变化、生成物变更清单、自动检索到的
+受影响手写文件，以及仍需人工处理的 checklist 和回滚命令。生成失败时脚本会回滚
+`data/`。
 
-1. 新输入落盘为 `data/38.331_v<版本>.asn`，删除旧 38.331 输入；
-2. 更新 `data/asn-input.sha256`、`data/asn-version.txt`（及可选的 `data/version.txt`）；
-3. 以 `--update-baseline` 重新生成全部生成物；
-4. 比对新旧 `generated/rrc_manifest.json`，写出 `generated/MIGRATION_NOTES.md`；
-5. 运行一次 `--check` 并把结果写入报告。
-
-`MIGRATION_NOTES.md` 会列出：消息集增删/序号漂移、消息结构（`SchemaHash`）/
-信道/包装位变化、统计变化、生成物变更清单、自动检索到的受影响手写文件，以及
-仍需人工处理的 checklist（版本号、CHANGELOG、MIB 黄金向量、文档统计等）和回滚
-命令。生成失败时脚本自动回滚 `data/`。
-
-迁移完成后按报告第 6 节人工 review，再跑全量 CI 并提交生成物与数据文件。
+工具不替代人工 review、版本决策与提交：**第 4–7 步仍需使用者完成**。
 
 ## 安装后消费
 
