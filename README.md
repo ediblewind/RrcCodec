@@ -190,14 +190,75 @@ cmake --install build --prefix install
 
 ## 安装后消费
 
+### 安装
+
+```powershell
+# 单配置生成器（Ninja/Makefile）：构建并安装到指定前缀
+cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+cmake --build build --parallel 8
+cmake --install build --prefix D:/RrcCodec-install
+
+# 多配置生成器（Visual Studio/Xcode）：安装时指定配置
+cmake --install build --config Release --prefix D:/RrcCodec-install
+```
+
+也可以把前缀放在 configure 阶段（`-DCMAKE_INSTALL_PREFIX=D:/RrcCodec-install`），
+之后直接执行 `cmake --install build`。默认构建静态库；如需共享库，configure 时
+加 `-DRRC_CODEC_BUILD_SHARED=ON`（Windows 下 DLL 安装到 `bin/`，运行时需能加载）。
+
+安装布局：
+
+```
+D:/RrcCodec-install/
+├── include/rrc_codec/           公共头
+├── lib/                         静态库 / 共享库（Windows 为 bin/*.dll）
+├── lib/cmake/RrcCodec/          CMake package
+├── lib/pkgconfig/rrc_codec.pc   pkg-config
+└── share/doc/rrc_codec/         LICENSE、README
+```
+
+### CMake 消费（find_package）
+
+消费方 `CMakeLists.txt`：
+
 ```cmake
+cmake_minimum_required(VERSION 3.20)
+project(app LANGUAGES C)
+
 find_package(RrcCodec 2 CONFIG REQUIRED)
+add_executable(app app.c)
 target_link_libraries(app PRIVATE RrcCodec::rrc_codec)
 ```
 
+构建时把安装前缀告诉 CMake：
+
+```powershell
+cmake -S . -B build -G Ninja -DCMAKE_PREFIX_PATH=D:/RrcCodec-install
+cmake --build build
+```
+
+C++ 消费方把 `LANGUAGES C` 改为 `CXX`（或同时启用 C/C++）即可。
+
+### pkg-config 消费
+
 ```sh
+export PKG_CONFIG_PATH=/path/to/install/lib/pkgconfig
+
+# 静态库（默认构建）
+cc app.c $(pkg-config --cflags --libs --static rrc_codec) -o app
+
+# 共享库（configure 时加 -DRRC_CODEC_BUILD_SHARED=ON）
 cc app.c $(pkg-config --cflags --libs rrc_codec) -o app
 ```
+
+Windows PowerShell：
+
+```powershell
+$env:PKG_CONFIG_PATH = "D:/RrcCodec-install/lib/pkgconfig"
+cc app.c $(pkg-config --cflags --libs --static rrc_codec) -o app.exe
+```
+
+> 静态链接时用 `--static`，它会把 `-lstdc++` 等私有依赖（`Libs.private`）一起带上。
 
 ## 许可
 
